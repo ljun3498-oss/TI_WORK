@@ -551,7 +551,7 @@ __interrupt void adc_ppb_isr(void)
     ADC_disableConverter(ADCA_BASE);
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
 }
-//github测试第二次更新
+//github测试第二次更新手机
 
 
 
