@@ -1,0 +1,36 @@
+SECTIONS
+{
+    /* 其他sections */
+
+    /* 定义Cla1Prog段，指定加载地址在FLASH，运行地址在CLA1_MSGRAMLOW */
+    .Cla1Prog : 
+    LOAD = FLASH, RUN = CLA1_MSGRAMLOW, 
+    LOAD_START(_Cla1Prog_LoadStart), 
+    RUN_START(_Cla1Prog_RunStart), 
+    SIZE(_Cla1Prog_LoadSize) 
+    {
+        *(.Cla1Prog)
+    }
+
+    /* 定义ramfuncs段，指定加载地址和运行地址 */
+    .ramfuncs : LOAD = FLASH, 
+    RUN = RAM, LOAD_START(_ramfuncsLoadStart), 
+    RUN_START(_ramfuncsRunStart), 
+    SIZE(_ramfuncsSize)
+    {
+        *(.ramfuncs)
+    }
+    
+    /* TI ramfunc段也需要类似定义 */
+    .TI.ramfunc :
+    LOAD = FLASH,
+     RUN = RAM, 
+     LOAD_START(_TI_ramfunc_LoadStart), 
+     RUN_START(_TI_ramfunc_RunStart), 
+     SIZE(_TI_ramfunc_Size)
+    {
+        *(.TI.ramfunc)
+    }
+
+    /* 其他sections */
+}
