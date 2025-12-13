@@ -93,7 +93,7 @@
                         </toolChain>
                     </folderInfo>
                     <sourceEntries>
-                        <entry excluding="FOC.C|PWM_4.C|PWM_7.C|EQEP1.C|ADC_1.C|PWM_6.C|PWM_5.C|device/driverlib|device/driverlib/ccs/Release/driverlib_coff.lib|device/driverlib/ccs/Debug/driverlib_coff.lib|PWM_3.C|empty_driverlib_main.c|2837xD_FLASH_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="FOC.C|FOCana.C|PWM_4.C|PWM_7.C|EQEP1.C|ADC_1.C|PWM_6.C|PWM_5.C|device/driverlib|device/driverlib/ccs/Release/driverlib_coff.lib|device/driverlib/ccs/Debug/driverlib_coff.lib|PWM_3.C|empty_driverlib_main.c|2837xD_FLASH_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                     </sourceEntries>
                 </configuration>
             </storageModule>
