@@ -1,4 +1,4 @@
-"./FOC_sensor_test.obj"
+"./FOC_EQEP.obj"
 "./syscfg/board.obj"
 "./syscfg/c2000ware_libraries.obj"
 "./device/F2837xD_CodeStartBranch.obj"

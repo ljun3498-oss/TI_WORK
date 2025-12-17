@@ -22,6 +22,6 @@
    {
       "directory" : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib/CPU1_RAM",
       "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DDEBUG -DCPU1 -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib/CPU1_RAM/syscfg\" -DF2837xD=1 -xc",
-      "file"      : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib/FOC_sensor_test.C"
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib/FOC_EQEP.C"
    }
 ]
