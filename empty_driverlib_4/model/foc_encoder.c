@@ -39,7 +39,7 @@ void Encoder_Init(void)
     EQEP_setIndexConfig(EQEP1_BASE, EQEP_INDEX_FLAG_RISING);
 
     // 启用中断
-    EQEP_enableInterrupt(EQEP1_BASE, EQEP_INT_INDEX);
+    EQEP_enableInterrupt(EQEP1_BASE, EQEP_INT_INDEX_EVNT_LATCH);
 
     // 注册中断处理函数
     Interrupt_register(INT_EQEP1, &eqep_index_isr);

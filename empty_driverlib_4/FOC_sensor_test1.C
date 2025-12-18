@@ -145,6 +145,6 @@ __interrupt void eqep_index_isr(void)
     index_detected = true;
 
     // 清除中断标志
-    EQEP_clearInterruptStatus(EQEP1_BASE, EQEP_INT_INDEX);
+    EQEP_clearInterruptStatus(EQEP1_BASE, EQEP_INT_INDEX_EVNT_LATCH);
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP6);
 }
