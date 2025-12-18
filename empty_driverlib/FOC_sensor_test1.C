@@ -1,7 +1,7 @@
 #include "driverlib.h"
 #include "device.h"
 #include "model/foc.h"
-
+//12trae测试
 // 全局变量
 SVPWM_Handle svpwm_handle = {
     .Vdc = BUS_VOLTAGE,
