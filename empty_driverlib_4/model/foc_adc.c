@@ -14,7 +14,8 @@ void ADC_Init(void)
     ADC_disableConverter(ADCA_BASE);
 
     // 配置ADC参考电压
-    ADC_setVREF(ADCA_BASE, ADC_REF_EXT_3V3);
+    // 配置ADC参考电压为外部3.3V
+    // ADC_setVREF(ADCA_BASE, ADC_REF_EXT_3V3);
 
     // 配置ADC时钟
     ADC_setPrescaler(ADCA_BASE, ADC_CLK_DIV_4_0);
@@ -52,7 +53,8 @@ void ADC_Init(void)
 void ADC_Read_Current(void)
 {
     // 触发ADC转换
-    EPWM_forceADCTrigger(EPWM1_BASE, EPWM_SOCB);
+    // 强制触发一次ADC采样
+    EPWM_forceADCTrigger(EPWM1_BASE, EPWM_SOCB_TRIGGER);
 
     // 等待转换完成
     while(!ADC_getInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1));
