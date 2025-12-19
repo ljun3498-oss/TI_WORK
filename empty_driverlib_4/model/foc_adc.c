@@ -54,7 +54,7 @@ void ADC_Read_Current(void)
 {
     // 触发ADC转换
     // 强制触发一次ADC采样
-    EPWM_forceADCTrigger(EPWM1_BASE, EPWM_SOCB_TRIGGER);
+    EPWM_forceADCTrigger(EPWM1_BASE, EPWM_SOC_B);
 
     // 等待转换完成
     while(!ADC_getInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1));

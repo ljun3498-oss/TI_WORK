@@ -77,9 +77,10 @@ void EPWM_Init(void)
     // ... 类似EPWM1的配置 ...
 
     // 配置SOC触发
-    EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOCB_TRIGGER);
-    EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOCB_TRIGGER, EPWM_SOC_TRIGGER_TIMEBASE_ZERO);
-    EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOCB_TRIGGER, 1);
+    // 配置EPWM1的SOCB触发ADC转换
+    EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_B);
+    EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_B, EPWM_SOC_TRIGGER_TIMEBASE_ZERO);
+    EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_B, 1);
 
     // 启用PWM输出
     EPWM_setOutputEnable(EPWM1_BASE, EPWM_OUTPUT_B, EPWM_OUTPUT_DISABLE); // 禁用B相上管
