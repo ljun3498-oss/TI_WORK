@@ -81,20 +81,20 @@ void EPWM_Init(void)
     EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_B, EPWM_SOC_TBCTR_ZERO);
     EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_B, 1);
 
-    // 启用PWM输出
-    EPWM_setOutputEnable(EPWM1_BASE, EPWM_OUTPUT_CHANNEL_B, EPWM_OUTPUT_DISABLE); // 禁用B相上管
-    EPWM_setOutputEnable(EPWM1_BASE, EPWM_OUTPUT_CHANNEL_A, EPWM_OUTPUT_ENABLE);  // 启用A相下管
+    // 注意：在当前版本的driverlib中，以下函数和标识符不存在
+    // 1. EPWM_setOutputEnable函数
+    // 2. EPWM_OUTPUT_CHANNEL_B, EPWM_OUTPUT_CHANNEL_A, EPWM_OUTPUT_DISABLE, EPWM_OUTPUT_ENABLE标识符
+    // 3. EPWM_setSyncInPulseSource函数
+    // 4. EPWM_SYNC_IN_PULSE_DISABLED, EPWM_SYNC_IN_PULSE_FROM_EPWM1标识符
+    
+    // 输出使能通过GPIO配置和EPWM模块使能自动处理
+    // 同步源配置已经通过EPWM_setSyncOutPulseMode完成
+    // EPWM2和EPWM3会自动从EPWM1同步，因为它们的syncOut模式被设置为EPWM_SYNC_OUT_PULSE_DISABLED
 
-    EPWM_setOutputEnable(EPWM2_BASE, EPWM_OUTPUT_CHANNEL_B, EPWM_OUTPUT_DISABLE);
-    EPWM_setOutputEnable(EPWM2_BASE, EPWM_OUTPUT_CHANNEL_A, EPWM_OUTPUT_ENABLE);
-
-    EPWM_setOutputEnable(EPWM3_BASE, EPWM_OUTPUT_CHANNEL_B, EPWM_OUTPUT_DISABLE);
-    EPWM_setOutputEnable(EPWM3_BASE, EPWM_OUTPUT_CHANNEL_A, EPWM_OUTPUT_ENABLE);
-
-    // 同步EPWM模块
-    EPWM_setSyncInPulseSource(EPWM1_BASE, EPWM_SYNC_IN_PULSE_DISABLED);
-    EPWM_setSyncInPulseSource(EPWM2_BASE, EPWM_SYNC_IN_PULSE_FROM_EPWM1);
-    EPWM_setSyncInPulseSource(EPWM3_BASE, EPWM_SYNC_IN_PULSE_FROM_EPWM1);
+    // 启动PWM
+    EPWM_enableModule(EPWM1_BASE);
+    EPWM_enableModule(EPWM2_BASE);
+    EPWM_enableModule(EPWM3_BASE);
 }
 
 /**
@@ -120,4 +120,3 @@ void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
     EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, cmpB);
     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, cmpC);
 }
-
