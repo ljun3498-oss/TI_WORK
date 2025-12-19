@@ -120,3 +120,4 @@ void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
     EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, cmpB);
     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, cmpC);
 }
+

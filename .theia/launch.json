@@ -81,6 +81,15 @@
                     "C28xx_CPU1"
                 ]
             }
+        },
+        {
+            "name": "empty_driverlib_4",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "empty_driverlib_4",
+                "resourceId": "/empty_driverlib_4"
+            }
         }
     ]
 }
