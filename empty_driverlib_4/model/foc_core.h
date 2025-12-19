@@ -63,3 +63,4 @@ float pi_id(float err);
 float pi_iq(float err);
 
 #endif // FOC_CORE_H
+
