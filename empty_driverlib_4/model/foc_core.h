@@ -5,6 +5,9 @@
 #include <stdbool.h>
 #include <math.h>
 
+// 包含TI DriverLib头文件
+#include "driverlib.h"
+
 // 系统/硬件参数
 #define SYSCLK_HZ           200000000.0f            // 系统时钟频率：200MHz
 #define PWM_FREQ_HZ         10000.0f                // PWM频率：10kHz
@@ -40,7 +43,7 @@
 #define ADC_COUNTS_TO_AMP   0.0122f                 // ADC计数到安培的转换系数
 
 // 全局变量声明
-extern static uint16_t TBPRD;                        // PWM周期值
+extern uint16_t TBPRD;                        // PWM周期值
 extern volatile int32_t encoder_raw_pos;             // 编码器原始位置
 extern volatile bool index_detected;                 // 索引信号检测标志
 extern volatile bool encoder_calibrated;             // 编码器校准标志
@@ -49,9 +52,9 @@ extern volatile float motor_angle_elec_rad;          // 电机电角度(弧度)
 extern volatile float motor_rpm;                     // 电机转速
 extern volatile float Ia_meas, Ib_meas, Ic_meas;     // 三相电流测量值
 extern volatile float Id_ref, Iq_ref;                // D/Q轴电流参考值
-extern static float Id_int, Iq_int;                  // D/Q轴积分项
-extern static float KP_ID, KI_ID;                    // D轴PI参数
-extern static float KP_IQ, KI_IQ;                    // Q轴PI参数
+extern float Id_int, Iq_int;                  // D/Q轴积分项
+extern float KP_ID, KI_ID;                    // D轴PI参数
+extern float KP_IQ, KI_IQ;                    // Q轴PI参数
 extern volatile bool overcurrent_fault;              // 过流故障标志
 
 // 函数声明
@@ -63,4 +66,5 @@ float pi_id(float err);
 float pi_iq(float err);
 
 #endif // FOC_CORE_H
+
 
