@@ -20,22 +20,28 @@ void EPWM_Init(void)
     GPIO_setPinConfig(GPIO_5_EPWM3B);
 
     // 配置EPWM1
-    EPWM_setTimeBasePeriod(EPWM1_BASE, TBPRD);
+    EPWM_setTimeBasePeriod(EPWM1_BASE, TBPRD_VAL);
     EPWM_setTimeBaseCounter(EPWM1_BASE, 0);
     EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN);
+    EPWM_setPhaseShift(EPWM1_BASE, 0U);
     EPWM_setSyncOutPulseMode(EPWM1_BASE, EPWM_SYNC_OUT_PULSE_ON_COUNTER_ZERO);
+    EPWM_setPeriodLoadMode(EPWM1_BASE, EPWM_PERIOD_DIRECT_LOAD);
 
     // 配置EPWM2
-    EPWM_setTimeBasePeriod(EPWM2_BASE, TBPRD);
+    EPWM_setTimeBasePeriod(EPWM2_BASE, TBPRD_VAL);
     EPWM_setTimeBaseCounter(EPWM2_BASE, 0);
     EPWM_setTimeBaseCounterMode(EPWM2_BASE, EPWM_COUNTER_MODE_UP_DOWN);
+    EPWM_setPhaseShift(EPWM2_BASE, 0U);
     EPWM_setSyncOutPulseMode(EPWM2_BASE, EPWM_SYNC_OUT_PULSE_DISABLED);
+    EPWM_setPeriodLoadMode(EPWM2_BASE, EPWM_PERIOD_DIRECT_LOAD);
 
     // 配置EPWM3
-    EPWM_setTimeBasePeriod(EPWM3_BASE, TBPRD);
+    EPWM_setTimeBasePeriod(EPWM3_BASE, TBPRD_VAL);
     EPWM_setTimeBaseCounter(EPWM3_BASE, 0);
     EPWM_setTimeBaseCounterMode(EPWM3_BASE, EPWM_COUNTER_MODE_UP_DOWN);
+    EPWM_setPhaseShift(EPWM3_BASE, 0U);
     EPWM_setSyncOutPulseMode(EPWM3_BASE, EPWM_SYNC_OUT_PULSE_DISABLED);
+    EPWM_setPeriodLoadMode(EPWM3_BASE, EPWM_PERIOD_DIRECT_LOAD);
 
     // 配置死区
     EPWM_setDeadBandCounterClock(EPWM1_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE);
@@ -54,14 +60,14 @@ void EPWM_Init(void)
     EPWM_setFallingEdgeDelayCount(EPWM3_BASE, DEADTIME_TICKS);
 
     // 配置比较器
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, TBPRD / 2);
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, TBPRD / 2);
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, TBPRD_VAL / 2);
 
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, TBPRD / 2);
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, TBPRD / 2);
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, TBPRD_VAL / 2);
 
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, TBPRD / 2);
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, TBPRD / 2);
+    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
+    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, TBPRD_VAL / 2);
 
     // 配置动作限定
     EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A,
@@ -77,24 +83,15 @@ void EPWM_Init(void)
     // ... 类似EPWM1的配置 ...
 
     // 配置SOC触发
-    EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_B);
-    EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_B, EPWM_SOC_TBCTR_ZERO);
-    EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_B, 1);
-
-    // 注意：在当前版本的driverlib中，以下函数和标识符不存在
-    // 1. EPWM_setOutputEnable函数
-    // 2. EPWM_OUTPUT_CHANNEL_B, EPWM_OUTPUT_CHANNEL_A, EPWM_OUTPUT_DISABLE, EPWM_OUTPUT_ENABLE标识符
-    // 3. EPWM_setSyncInPulseSource函数
-    // 4. EPWM_SYNC_IN_PULSE_DISABLED, EPWM_SYNC_IN_PULSE_FROM_EPWM1标识符
-    
-    // 输出使能通过GPIO配置和EPWM模块使能自动处理
-    // 同步源配置已经通过EPWM_setSyncOutPulseMode完成
-    // EPWM2和EPWM3会自动从EPWM1同步，因为它们的syncOut模式被设置为EPWM_SYNC_OUT_PULSE_DISABLED
+    EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO);
+    EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_A, 1);
+    EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_A);
 
     // 启动PWM
-    EPWM_enableModule(EPWM1_BASE);
-    EPWM_enableModule(EPWM2_BASE);
-    EPWM_enableModule(EPWM3_BASE);
+    // EPWM_enableModule已被替换为正确的API调用
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM2);
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM3);
 }
 
 /**
@@ -111,9 +108,9 @@ void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
     dutyC = clampf_val(dutyC, 0.0f, 1.0f);
 
     // 计算比较值
-    uint16_t cmpA = (uint16_t)(dutyA * (float)TBPRD + 0.5f);
-    uint16_t cmpB = (uint16_t)(dutyB * (float)TBPRD + 0.5f);
-    uint16_t cmpC = (uint16_t)(dutyC * (float)TBPRD + 0.5f);
+    uint16_t cmpA = (uint16_t)(dutyA * (float)TBPRD_VAL + 0.5f);
+    uint16_t cmpB = (uint16_t)(dutyB * (float)TBPRD_VAL + 0.5f);
+    uint16_t cmpC = (uint16_t)(dutyC * (float)TBPRD_VAL + 0.5f);
 
     // 设置比较值
     EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, cmpA);

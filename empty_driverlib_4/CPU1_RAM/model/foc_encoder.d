@@ -92,6 +92,7 @@ model/foc_encoder.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/up
 model/foc_encoder.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_upp.h
 model/foc_encoder.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/version.h
 model/foc_encoder.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
+model/foc_encoder.obj: C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h
 
 ../model/foc_encoder.c:
 
@@ -276,4 +277,6 @@ C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_upp.h:
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/version.h:
 
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h:
+
+C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h:
 

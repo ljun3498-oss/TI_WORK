@@ -43,7 +43,7 @@
 #define ADC_COUNTS_TO_AMP   0.0122f                 // ADC计数到安培的转换系数
 
 // 全局变量声明
-extern uint16_t TBPRD;                        // PWM周期值
+// 删除了错误的TBPRD声明，使用TBPRD_VAL宏定义代替
 extern volatile int32_t encoder_raw_pos;             // 编码器原始位置
 extern volatile bool index_detected;                 // 索引信号检测标志
 extern volatile bool encoder_calibrated;             // 编码器校准标志
@@ -66,5 +66,3 @@ float pi_id(float err);
 float pi_iq(float err);
 
 #endif // FOC_CORE_H
-
-

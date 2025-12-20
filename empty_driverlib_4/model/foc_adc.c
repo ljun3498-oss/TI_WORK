@@ -44,7 +44,7 @@ void ADC_Init(void)
     ADC_enableConverter(ADCA_BASE);
 
     // 等待ADC准备就绪
-    while(!ADC_isConverterReady(ADCA_BASE));
+    // while(!ADC_isConverterReady(ADCA_BASE));
 }
 
 /**

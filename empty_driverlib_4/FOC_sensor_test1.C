@@ -84,10 +84,10 @@ void InitPeripherals(void)
 void DoElectricalAlignment(void)
 {
     // 设置校准电流
-    float align_current = 0.5f; // 0.5A
+    // float align_current = 0.5f; // 0.5A
 
     // 设置校准时间
-    uint32_t align_time = 500; // 500ms
+    // uint32_t align_time = 500; // 500ms
 
     // 执行电气角度校准
     // ... 校准逻辑 ...

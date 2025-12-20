@@ -14,3 +14,4 @@ void ADC_Read_Current(void);
 void ADC_Isr(void);
 
 #endif // FOC_ADC_H
+

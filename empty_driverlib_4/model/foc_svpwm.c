@@ -72,9 +72,9 @@ void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta)
     dutyC = clampf_val(dutyC, 0.0f, 1.0f);
 
     // 计算比较值
-    handle->CMPA1 = (uint16_t)(dutyA * (float)TBPRD + 0.5f);
-    handle->CMPA2 = (uint16_t)(dutyB * (float)TBPRD + 0.5f);
-    handle->CMPA3 = (uint16_t)(dutyC * (float)TBPRD + 0.5f);
+    handle->CMPA1 = (uint16_t)(dutyA * (float)TBPRD_VAL + 0.5f);
+    handle->CMPA2 = (uint16_t)(dutyB * (float)TBPRD_VAL + 0.5f);
+    handle->CMPA3 = (uint16_t)(dutyC * (float)TBPRD_VAL + 0.5f);
 
     // 记录三相电压值
     handle->Va = dutyA * handle->Vdc;
