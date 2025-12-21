@@ -72,7 +72,7 @@ void EPWM_Init(void)
     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, TBPRD_VAL / 2);
 
-    // 配置动作限定
+    // 配置动作限定 - EPWM1
     EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A,
                                  EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
     EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A,
@@ -82,13 +82,35 @@ void EPWM_Init(void)
     EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B,
                                  EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB);
 
-    // 配置EPWM2和EPWM3的动作限定
-    // ... 类似EPWM1的配置 ...
+    // 配置动作限定 - EPWM2
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A,
+                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A,
+                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B,
+                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B,
+                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB);
+
+    // 配置动作限定 - EPWM3
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A,
+                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A,
+                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B,
+                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B,
+                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB);
 
     // 配置SOC触发
     EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO);
     EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_A, 1);
     EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_A);
+
+    // 启用PWM输出
+    EPWM_enableOutputs(EPWM1_BASE);
+    EPWM_enableOutputs(EPWM2_BASE);
+    EPWM_enableOutputs(EPWM3_BASE);
 
     // 启动PWM
     // EPWM_enableModule已被替换为正确的API调用
@@ -117,7 +139,9 @@ void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
 
     // 设置比较值
     EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, cmpA);
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, cmpA); // 互补输出使用相同的占空比
     EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, cmpB);
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, cmpB); // 互补输出使用相同的占空比
     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, cmpC);
+    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, cmpC); // 互补输出使用相同的占空比
 }
-
