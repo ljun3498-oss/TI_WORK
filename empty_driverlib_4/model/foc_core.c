@@ -1,7 +1,7 @@
 #include "foc_core.h"
 
 // 全局变量定义
-static uint16_t TBPRD = TBPRD_VAL;
+uint16_t TBPRD = TBPRD_VAL;
 volatile int32_t encoder_raw_pos = 0;
 volatile bool index_detected = false;
 volatile bool encoder_calibrated = false;
@@ -10,9 +10,9 @@ volatile float motor_angle_elec_rad = 0.0f;
 volatile float motor_rpm = 0.0f;
 volatile float Ia_meas = 0.0f, Ib_meas = 0.0f, Ic_meas = 0.0f;
 volatile float Id_ref = 0.0f, Iq_ref = 0.0f;
-static float Id_int = 0.0f, Iq_int = 0.0f;
-static float KP_ID = KP_ID_INIT, KI_ID = KI_ID_INIT;
-static float KP_IQ = KP_IQ_INIT, KI_IQ = KI_IQ_INIT;
+float Id_int = 0.0f, Iq_int = 0.0f;
+ float KP_ID = KP_ID_INIT, KI_ID = KI_ID_INIT;
+float KP_IQ = KP_IQ_INIT, KI_IQ = KI_IQ_INIT;
 volatile bool overcurrent_fault = false;
 
 /**
