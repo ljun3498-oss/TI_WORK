@@ -44,18 +44,22 @@ void EPWM_Init(void)
     EPWM_setPeriodLoadMode(EPWM3_BASE, EPWM_PERIOD_DIRECT_LOAD);
 
     // 配置死区
+    // 配置死区
     EPWM_setDeadBandCounterClock(EPWM1_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE);
     EPWM_setDeadBandDelayMode(EPWM1_BASE, EPWM_DB_RED, true);
+    EPWM_setDeadBandDelayMode(EPWM1_BASE, EPWM_DB_FED, true);
     EPWM_setRisingEdgeDelayCount(EPWM1_BASE, DEADTIME_TICKS);
     EPWM_setFallingEdgeDelayCount(EPWM1_BASE, DEADTIME_TICKS);
 
     EPWM_setDeadBandCounterClock(EPWM2_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE);
     EPWM_setDeadBandDelayMode(EPWM2_BASE, EPWM_DB_RED, true);
+    EPWM_setDeadBandDelayMode(EPWM2_BASE, EPWM_DB_FED, true);
     EPWM_setRisingEdgeDelayCount(EPWM2_BASE, DEADTIME_TICKS);
     EPWM_setFallingEdgeDelayCount(EPWM2_BASE, DEADTIME_TICKS);
 
     EPWM_setDeadBandCounterClock(EPWM3_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE);
     EPWM_setDeadBandDelayMode(EPWM3_BASE, EPWM_DB_RED, true);
+    EPWM_setDeadBandDelayMode(EPWM3_BASE, EPWM_DB_FED, true);
     EPWM_setRisingEdgeDelayCount(EPWM3_BASE, DEADTIME_TICKS);
     EPWM_setFallingEdgeDelayCount(EPWM3_BASE, DEADTIME_TICKS);
 
@@ -117,3 +121,4 @@ void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
     EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, cmpB);
     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, cmpC);
 }
+

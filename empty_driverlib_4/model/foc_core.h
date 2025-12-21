@@ -25,8 +25,8 @@
 #define MOTOR_POLE_PAIRS    4U                      // 电机极对数：4对极
 
 // 安全参数
-#define BUS_VOLTAGE         48.0f                   // 母线电压：48V
-#define MAX_PHASE_CURRENT_A 50.0f                   // 最大相电流：50A
+#define BUS_VOLTAGE         24.0f                   // 母线电压：24V
+#define MAX_PHASE_CURRENT_A 7.8f                    // 最大相电流：7.8A
 #define I_OVERCURRENT_TRIP  (MAX_PHASE_CURRENT_A * 1.05f) // 过流保护阈值
 
 // 控制环路参数
@@ -35,12 +35,12 @@
 
 // PI控制器参数
 #define KP_ID_INIT  0.5f                            // D轴电流环比例增益
-#define KI_ID_INIT  200.0f                          // D轴电流环积分增益
+#define KI_ID_INIT  80.0f                           // D轴电流环积分增益（调整为适应7.8A电流）
 #define KP_IQ_INIT  0.5f                            // Q轴电流环比例增益
-#define KI_IQ_INIT  200.0f                          // Q轴电流环积分增益
+#define KI_IQ_INIT  80.0f                           // Q轴电流环积分增益（调整为适应7.8A电流）
 
 // ADC到电流的转换系数
-#define ADC_COUNTS_TO_AMP   0.0122f                 // ADC计数到安培的转换系数
+#define ADC_COUNTS_TO_AMP   0.001904f               // ADC计数到安培的转换系数（7.8A/4096≈0.001904）
 
 // 全局变量声明
 // 删除了错误的TBPRD声明，使用TBPRD_VAL宏定义代替
