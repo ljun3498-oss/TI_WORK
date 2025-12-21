@@ -14,7 +14,7 @@
 #define TBPRD_VAL           ((uint16_t)(SYSCLK_HZ / (2.0f * PWM_FREQ_HZ) + 0.5f))
 
 // 死区参数
-#define DEADTIME_NS         1000U                   // 死区时间：1000ns
+#define DEADTIME_NS         400U                   // 死区时间：400ns
 #define DEADTIME_TICKS      ((uint16_t)((DEADTIME_NS * 1e-9f) * SYSCLK_HZ + 0.5f))
 #define DEADTIME_COMP_VOLTAGE 0.0f                  // 死区补偿电压
 
