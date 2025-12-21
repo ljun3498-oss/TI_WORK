@@ -107,10 +107,7 @@ void EPWM_Init(void)
     EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_A, 1);
     EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_A);
 
-    // 启用PWM输出
-    EPWM_enableOutputs(EPWM1_BASE);
-    EPWM_enableOutputs(EPWM2_BASE);
-    EPWM_enableOutputs(EPWM3_BASE);
+
 
     // 启动PWM
     // EPWM_enableModule已被替换为正确的API调用
