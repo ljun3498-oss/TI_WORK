@@ -44,7 +44,6 @@ void EPWM_Init(void)
     EPWM_setPeriodLoadMode(EPWM3_BASE, EPWM_PERIOD_DIRECT_LOAD);
 
     // 配置死区
-    // 配置死区
     EPWM_setDeadBandCounterClock(EPWM1_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE);
     EPWM_setDeadBandDelayMode(EPWM1_BASE, EPWM_DB_RED, true);
     EPWM_setDeadBandDelayMode(EPWM1_BASE, EPWM_DB_FED, true);

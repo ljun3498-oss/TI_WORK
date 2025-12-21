@@ -15,7 +15,7 @@ void ADC_Init(void)
 
     // 配置ADC参考电压
     // 配置ADC参考电压为外部3.3V
-    // ADC_setVREF(ADCA_BASE, ADC_REF_EXT_3V3);
+    ADC_setVREF(ADCA_BASE, ADC_REF_EXT_3V3);
 
     // 配置ADC时钟
     ADC_setPrescaler(ADCA_BASE, ADC_CLK_DIV_4_0);
@@ -35,16 +35,31 @@ void ADC_Init(void)
     ADC_setupSOC(ADCA_BASE, ADC_SOC_NUMBER2, ADC_TRIGGER_EPWM1_SOCB,
                  ADC_CH_ADCIN2, 15);
 
-    // 配置中断
+    // 配置SOC优先级
+    ADC_setSOCPriority(ADCA_BASE, ADC_PRIORITY_SEQ);
+
+    // 配置ADC中断
     ADC_setInterruptSource(ADCA_BASE, ADC_INT_NUMBER1, ADC_SOC_NUMBER2);
     ADC_enableInterrupt(ADCA_BASE, ADC_INT_NUMBER1);
     ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
+
+    // 配置ADC采样模式
+    ADC_setInterruptPulseMode(ADCA_BASE, ADC_PULSE_END_OF_CONV);
 
     // 启用ADC模块
     ADC_enableConverter(ADCA_BASE);
 
     // 等待ADC准备就绪
-    // while(!ADC_isConverterReady(ADCA_BASE));
+    while(!ADC_isConverterReady(ADCA_BASE));
+
+    // 配置PPB进行过流保护
+    // 配置PPB0与SOC0关联
+    ADC_setupPPB(ADCA_BASE, ADC_PPB_NUMBER0, ADC_SOC_NUMBER0);
+    // 配置过流保护阈值
+    uint16_t overcurrent_trip_counts = (uint16_t)(2048 + I_OVERCURRENT_TRIP / ADC_COUNTS_TO_AMP);
+    ADC_setPPBTripLimits(ADCA_BASE, ADC_PPB_NUMBER0, overcurrent_trip_counts, 0);
+    // 启用PPB0事件
+    ADC_enablePPBEvent(ADCA_BASE, ADC_PPB_NUMBER0);
 }
 
 /**
@@ -110,3 +125,4 @@ __interrupt void ADC_Isr(void)
     ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
 }
+
