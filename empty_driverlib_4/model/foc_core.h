@@ -186,6 +186,12 @@ extern volatile float motor_angle_elec_rad;          // 电机电角度(弧度)
 extern volatile float motor_rpm;                     // 电机转速
 
 /**
+ * @brief 电机转速
+ * @details 单位为rad/s（弧度/秒）
+ */
+extern volatile float motor_speed_rad;               // 电机转速(rad/s)
+
+/**
  * @brief 三相电流测量值
  * @details 单位为安培
  */
