@@ -27,10 +27,10 @@ void EPWM_Init(void);
  * @brief 设置PWM占空比函数
  * @details 根据给定的占空比设置三相PWM输出，
  *          用于控制电机的相电压。
- * @param dutyA A相占空比（范围：-1.0到1.0）
- * @param dutyB B相占空比（范围：-1.0到1.0）
- * @param dutyC C相占空比（范围：-1.0到1.0）
+ * @param dutyA A相占空比（范围：0.0到1.0）
+ * @param dutyB B相占空比（范围：0.0到1.0）
+ * @param dutyC C相占空比（范围：0.0到1.0）
  */
 void EPWM_SetDuty(float dutyA, float dutyB, float dutyC);
 
-#endif // FOC_PWM_H
+#endif // FOC_PWM_H

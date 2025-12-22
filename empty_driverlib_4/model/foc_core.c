@@ -106,14 +106,6 @@ float clampf_val(float v, float lo, float hi)
 }
 
 /**
- * @brief Clarke变换函数 - 将三相电流转换为αβ坐标系
- * @param ia A相电流
- * @param ib B相电流
- * @param ic C相电流
- * @param alpha 输出α轴电流
- * @param beta 输出β轴电流
- */
-/**
  * @brief Clarke变换
  * @param[in] Ia A相电流
  * @param[in] Ib B相电流
@@ -207,3 +199,4 @@ float pi_iq(float err)
 
     return output;                              // 返回PI控制器输出
 }
+

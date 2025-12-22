@@ -128,9 +128,11 @@ void EPWM_Init(void)
 
 /**
  * @brief 设置PWM占空比
- * @param dutyA A相占空比
- * @param dutyB B相占空比
- * @param dutyC C相占空比
+ * @details 根据输入的占空比计算PWM比较器值，并设置到相应的EPWM模块中，
+ *          用于控制电机的三相电压输出。
+ * @param dutyA A相占空比，范围为0.0到1.0
+ * @param dutyB B相占空比，范围为0.0到1.0
+ * @param dutyC C相占空比，范围为0.0到1.0
  */
 void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
 {
