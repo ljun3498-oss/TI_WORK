@@ -1,19 +1,8 @@
-/**
- * @file foc_svpwm.c
- * @brief SVPWM（空间矢量脉宽调制）模块源文件
- * @details 该文件实现了SVPWM算法，根据αβ坐标系下的电压指令计算PWM比较值
- */
-
+// SVPWM（空间矢量脉宽调制）模块源文件
 #include "foc_svpwm.h"
 #include <math.h>
 
-/**
- * @brief SVPWM计算函数
- * @details 根据αβ坐标系下的电压指令计算SVPWM的比较值
- * @param[in,out] handle SVPWM结构体指针
- * @param[in] Valpha α轴电压指令，单位：V
- * @param[in] Vbeta β轴电压指令，单位：V
- */
+// SVPWM计算函数 - 根据αβ坐标系下的电压指令计算SVPWM的比较值
 void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta)
 {
     // 计算电压矢量幅值和角度
@@ -21,16 +10,12 @@ void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta)
     float angle = atan2f(Vbeta, Valpha);
     
     // 角度归一化到[0, 2π]
-    if (angle < 0.0f) {
-        angle += 2.0f * M_PI;
-    }
+    if (angle < 0.0f) angle += 2.0f * M_PI;
     
     // 计算扇区号 (0-5)
     float angle_sector = angle / (M_PI / 3.0f);  // π/3 = 60°
     uint8_t sector = (uint8_t)floorf(angle_sector);
-    if (sector >= 6) {
-        sector = 0;
-    }
+    if (sector >= 6) sector = 0;
     handle->sector = sector;
     
     // 计算占空比

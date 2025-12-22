@@ -1,36 +1,19 @@
-/**
- * @file foc_pwm.h
- * @brief PWM（脉宽调制）模块头文件
- * @details 该文件定义了PWM模块的函数原型，用于初始化和配置PWM模块，
- *          生成控制电机的脉冲信号。
- */
-
+// FOC (Field Oriented Control) PWM模块头文件
 #ifndef FOC_PWM_H
 #define FOC_PWM_H
 
-/**
- * @brief 包含FOC核心控制模块头文件
- * @details 提供PWM模块所需的系统参数和全局变量
- */
-#include "foc_core.h"
+// 包含标准C库头文件
+#include <stdint.h>     // 包含标准整数类型定义
+
+// 包含TI DriverLib头文件
+#include "driverlib.h"   // 提供对TI C2000系列处理器外设的访问函数
 
 // 函数声明
 
-/**
- * @brief PWM模块初始化函数
- * @details 配置PWM模块的时基、死区、GPIO、动作限定器等参数，
- *          为电机控制做准备。
- */
+// PWM初始化函数 - 配置EPWM模块以输出PWM信号
 void EPWM_Init(void);
 
-/**
- * @brief 设置PWM占空比函数
- * @details 根据给定的占空比设置三相PWM输出，
- *          用于控制电机的相电压。
- * @param dutyA A相占空比（范围：0.0到1.0）
- * @param dutyB B相占空比（范围：0.0到1.0）
- * @param dutyC C相占空比（范围：0.0到1.0）
- */
-void EPWM_SetDuty(float dutyA, float dutyB, float dutyC);
+// PWM占空比设置函数 - 设置EPWM模块的占空比
+void EPWM_SetDuty(uint16_t epwm_base, uint16_t duty);
 
-#endif // FOC_PWM_H
+#endif // FOC_PWM_H

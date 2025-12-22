@@ -1,21 +1,11 @@
-/**
- * @file foc_svpwm.h
- * @brief SVPWM（空间矢量脉宽调制）模块头文件
- * @details 该文件定义了SVPWM模块的结构体和函数声明，
- *          用于实现FOC控制中的空间矢量脉宽调制算法。
- */
-
+// SVPWM（空间矢量脉宽调制）模块头文件
 #ifndef FOC_SVPWM_H
 #define FOC_SVPWM_H
 
 #include "foc_core.h"  // 包含FOC核心模块头文件，提供系统参数和全局变量
 
 // SVPWM相关结构体
-
-/**
- * @brief SVPWM结构体
- * @details 包含SVPWM计算所需的参数和结果
- */
+// SVPWM结构体 - 包含SVPWM计算所需的参数和结果
 typedef struct {
     float Vdc;             // 母线电压，单位：V
     float Va, Vb, Vc;      // 三相电压，单位：V
@@ -27,14 +17,7 @@ typedef struct {
 } SVPWM_Handle;
 
 // 函数声明
-
-/**
- * @brief SVPWM计算函数
- * @details 根据αβ坐标系下的电压指令计算SVPWM的比较值
- * @param[in,out] handle SVPWM结构体指针
- * @param[in] Valpha α轴电压指令，单位：V
- * @param[in] Vbeta β轴电压指令，单位：V
- */
+// SVPWM计算函数 - 根据αβ坐标系下的电压指令计算SVPWM的比较值
 void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta);
 
 #endif // FOC_SVPWM_H

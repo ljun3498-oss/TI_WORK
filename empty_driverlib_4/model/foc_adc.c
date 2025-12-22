@@ -1,26 +1,12 @@
-/**
- * @file foc_adc.c
- * @brief ADC（模数转换）模块实现
- * @details 该文件实现了ADC模块的初始化、电流读取和中断处理功能，
- *          用于读取电机相电流等模拟信号。
- */
-
+// ADC（模数转换）模块实现
 #include "foc_adc.h"       // 包含FOC控制的ADC模块头文件
 #include "driverlib.h"     // 包含C2000系列芯片的驱动库头文件
 #include "device.h"        // 包含设备配置头文件
 
 // 全局变量
-
-/**
- * @brief ADC采样结果数组
- * @details 存储三相电流的ADC转换值
- */
 static uint16_t adcResult[3]; // ADC采样结果数组，存储三相电流的ADC转换值
 
-/**
- * @brief 处理ADC转换结果
- * @details 读取ADC转换结果，计算电流值，并进行过流检查
- */
+// 处理ADC转换结果 - 读取ADC转换结果，计算电流值，并进行过流检查
 static void Process_ADC_Results(void)
 {
     // 读取转换结果
@@ -47,11 +33,7 @@ static void Process_ADC_Results(void)
     }
 }
 
-/**
- * @brief ADC初始化函数
- * @details 配置ADC模块的时钟、分辨率、通道、触发源等参数，
- *          为电流测量做准备。
- */
+// ADC初始化函数 - 配置ADC模块的时钟、分辨率、通道、触发源等参数，为电流测量做准备
 void ADC_Init(void)
 {
     // 禁用ADC模块，准备进行配置
@@ -64,16 +46,13 @@ void ADC_Init(void)
     ADC_setMode(ADCA_BASE, ADC_RESOLUTION_12BIT, ADC_MODE_SINGLE_ENDED); // 设置ADCA为12位分辨率，单端输入模式
 
     // 配置SOC0 - A相电流采样
-    ADC_setupSOC(ADCA_BASE, ADC_SOC_NUMBER0, ADC_TRIGGER_EPWM1_SOCB,
-                 ADC_CH_ADCIN0, 15); // 使用EPWM1的SOCB触发，通道为ADCIN0，采样窗口为15个ADCCLK周期
+    ADC_setupSOC(ADCA_BASE, ADC_SOC_NUMBER0, ADC_TRIGGER_EPWM1_SOCB, ADC_CH_ADCIN0, 15); // 使用EPWM1的SOCB触发，通道为ADCIN0，采样窗口为15个ADCCLK周期
 
     // 配置SOC1 - B相电流采样
-    ADC_setupSOC(ADCA_BASE, ADC_SOC_NUMBER1, ADC_TRIGGER_EPWM1_SOCB,
-                 ADC_CH_ADCIN1, 15); // 使用EPWM1的SOCB触发，通道为ADCIN1，采样窗口为15个ADCCLK周期
+    ADC_setupSOC(ADCA_BASE, ADC_SOC_NUMBER1, ADC_TRIGGER_EPWM1_SOCB, ADC_CH_ADCIN1, 15); // 使用EPWM1的SOCB触发，通道为ADCIN1，采样窗口为15个ADCCLK周期
 
     // 配置SOC2 - C相电流采样
-    ADC_setupSOC(ADCA_BASE, ADC_SOC_NUMBER2, ADC_TRIGGER_EPWM1_SOCB,
-                 ADC_CH_ADCIN2, 15); // 使用EPWM1的SOCB触发，通道为ADCIN2，采样窗口为15个ADCCLK周期
+    ADC_setupSOC(ADCA_BASE, ADC_SOC_NUMBER2, ADC_TRIGGER_EPWM1_SOCB, ADC_CH_ADCIN2, 15); // 使用EPWM1的SOCB触发，通道为ADCIN2，采样窗口为15个ADCCLK周期
 
     // 配置SOC优先级，设置所有SOC为高优先级
     ADC_setSOCPriority(ADCA_BASE, ADC_PRI_ALL_HIPRI); // 设置ADCA的所有SOC为高优先级
@@ -103,11 +82,7 @@ void ADC_Init(void)
     DEVICE_DELAY_US(100); // 延时100微秒，确保ADC稳定工作
 }
 
-/**
- * @brief 读取电流函数
- * @details 触发ADC转换并读取三相电流值，
- *          将ADC计数转换为实际电流值。
- */
+// 读取电流函数 - 触发ADC转换并读取三相电流值，将ADC计数转换为实际电流值
 void ADC_Read_Current(void)
 {
     // 触发ADC转换
@@ -124,11 +99,7 @@ void ADC_Read_Current(void)
     ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1); // 清除ADC中断1的状态标志，准备下次转换
 }
 
-/**
- * @brief ADC中断服务程序
- * @details 处理ADC转换完成中断，读取转换结果，
- *          计算电流值并进行过流检查。
- */
+// ADC中断服务程序 - 处理ADC转换完成中断，读取转换结果，计算电流值并进行过流检查
 __interrupt void ADC_Isr(void)
 {
     // 处理ADC结果

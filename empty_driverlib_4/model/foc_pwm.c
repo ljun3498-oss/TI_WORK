@@ -1,156 +1,108 @@
-/**
- * @file foc_pwm.c
- * @brief PWM（脉宽调制）模块实现
- * @details 该文件实现了PWM模块的初始化和占空比设置功能，
- *          用于生成控制电机的脉冲信号。
- */
-
+// FOC (Field Oriented Control) PWM模块实现
 #include "foc_pwm.h"
-#include "driverlib.h"
-#include "device.h"
 
-/**
- * @brief EPWM初始化函数
- * @details 配置PWM模块的时基、死区、GPIO、动作限定器等参数，
- *          为电机控制做准备。
- */
+// 包含其他必要的头文件
+#include "foc_core.h"   // 包含FOC核心控制模块头文件
+
+// PWM初始化函数 - 配置EPWM模块以输出PWM信号
 void EPWM_Init(void)
 {
-    // 配置EPWM1 - A相
-    GPIO_setPinConfig(GPIO_0_EPWM1A);      // 配置GPIO0为EPWM1A功能
-    GPIO_setPinConfig(GPIO_1_EPWM1B);      // 配置GPIO1为EPWM1B功能
+    // 初始化EPWM1的GPIO引脚
+    GPIO_setPinConfig(GPIO_0_EPWM1A);            // 配置GPIO0为EPWM1A
+    GPIO_setPinConfig(GPIO_1_EPWM1B);            // 配置GPIO1为EPWM1B
 
-    // 配置EPWM2 - B相
-    GPIO_setPinConfig(GPIO_2_EPWM2A);      // 配置GPIO2为EPWM2A功能
-    GPIO_setPinConfig(GPIO_3_EPWM2B);      // 配置GPIO3为EPWM2B功能
+    // 初始化EPWM2的GPIO引脚
+    GPIO_setPinConfig(GPIO_2_EPWM2A);            // 配置GPIO2为EPWM2A
+    GPIO_setPinConfig(GPIO_3_EPWM2B);            // 配置GPIO3为EPWM2B
 
-    // 配置EPWM3 - C相
-    GPIO_setPinConfig(GPIO_4_EPWM3A);      // 配置GPIO4为EPWM3A功能
-    GPIO_setPinConfig(GPIO_5_EPWM3B);      // 配置GPIO5为EPWM3B功能
+    // 初始化EPWM3的GPIO引脚
+    GPIO_setPinConfig(GPIO_4_EPWM3A);            // 配置GPIO4为EPWM3A
+    GPIO_setPinConfig(GPIO_5_EPWM3B);            // 配置GPIO5为EPWM3B
 
-    // 配置EPWM1
-    EPWM_setTimeBasePeriod(EPWM1_BASE, TBPRD_VAL);               // 设置时基周期
-    EPWM_setTimeBaseCounter(EPWM1_BASE, 0);                      // 重置时基计数器
-    EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN); // 设置计数模式为上下计数
-    EPWM_setPhaseShift(EPWM1_BASE, 0U);                          // 设置相移为0
-    EPWM_setSyncOutPulseMode(EPWM1_BASE, EPWM_SYNC_OUT_PULSE_ON_COUNTER_ZERO); // 在计数器为0时输出同步脉冲
-    EPWM_setPeriodLoadMode(EPWM1_BASE, EPWM_PERIOD_DIRECT_LOAD); // 直接加载周期值
+    // 使能EPWM1-3模块的GPIO引脚
+    GPIO_setMasterCore(GPIO_0, GPIO_CORE_CPU1);  // 设置GPIO0的主核心为CPU1
+    GPIO_setMasterCore(GPIO_1, GPIO_CORE_CPU1);  // 设置GPIO1的主核心为CPU1
+    GPIO_setMasterCore(GPIO_2, GPIO_CORE_CPU1);  // 设置GPIO2的主核心为CPU1
+    GPIO_setMasterCore(GPIO_3, GPIO_CORE_CPU1);  // 设置GPIO3的主核心为CPU1
+    GPIO_setMasterCore(GPIO_4, GPIO_CORE_CPU1);  // 设置GPIO4的主核心为CPU1
+    GPIO_setMasterCore(GPIO_5, GPIO_CORE_CPU1);  // 设置GPIO5的主核心为CPU1
 
-    // 配置EPWM2
-    EPWM_setTimeBasePeriod(EPWM2_BASE, TBPRD_VAL);               // 设置时基周期
-    EPWM_setTimeBaseCounter(EPWM2_BASE, 0);                      // 重置时基计数器
-    EPWM_setTimeBaseCounterMode(EPWM2_BASE, EPWM_COUNTER_MODE_UP_DOWN); // 设置计数模式为上下计数
-    EPWM_setPhaseShift(EPWM2_BASE, 0U);                          // 设置相移为0
-    EPWM_setSyncOutPulseMode(EPWM2_BASE, EPWM_SYNC_OUT_PULSE_DISABLED); // 禁用同步脉冲输出
-    EPWM_setPeriodLoadMode(EPWM2_BASE, EPWM_PERIOD_DIRECT_LOAD); // 直接加载周期值
+    // 使能EPWM1-3模块的时钟
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_TBCLKSYNC); // 使能时间基准时钟同步
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);     // 使能EPWM1模块的时钟
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM2);     // 使能EPWM2模块的时钟
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM3);     // 使能EPWM3模块的时钟
 
-    // 配置EPWM3
-    EPWM_setTimeBasePeriod(EPWM3_BASE, TBPRD_VAL);               // 设置时基周期
-    EPWM_setTimeBaseCounter(EPWM3_BASE, 0);                      // 重置时基计数器
-    EPWM_setTimeBaseCounterMode(EPWM3_BASE, EPWM_COUNTER_MODE_UP_DOWN); // 设置计数模式为上下计数
-    EPWM_setPhaseShift(EPWM3_BASE, 0U);                          // 设置相移为0
-    EPWM_setSyncOutPulseMode(EPWM3_BASE, EPWM_SYNC_OUT_PULSE_DISABLED); // 禁用同步脉冲输出
-    EPWM_setPeriodLoadMode(EPWM3_BASE, EPWM_PERIOD_DIRECT_LOAD); // 直接加载周期值
+    // 配置EPWM1模块
+    EPWM_setTimeBasePeriod(EPWM1_BASE, TBPRD_VAL);       // 设置时基周期
+    EPWM_setTimeBaseCounter(EPWM1_BASE, 0);              // 设置时基计数器初始值
+    EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN); // 上下计数模式
 
-    // 配置死区 - EPWM1
-    EPWM_setDeadBandCounterClock(EPWM1_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE); // 设置死区计数器时钟
-    EPWM_setDeadBandDelayMode(EPWM1_BASE, EPWM_DB_RED, true);                  // 启用上升沿延迟
-    EPWM_setDeadBandDelayMode(EPWM1_BASE, EPWM_DB_FED, true);                  // 启用下降沿延迟
-    EPWM_setRisingEdgeDelayCount(EPWM1_BASE, DEADTIME_TICKS);                  // 设置上升沿延迟计数
-    EPWM_setFallingEdgeDelayCount(EPWM1_BASE, DEADTIME_TICKS);                 // 设置下降沿延迟计数
+    // 配置EPWM1的死区
+    EPWM_setDeadBandCounterClock(EPWM1_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE); // 全周期时钟
+    EPWM_setRisingEdgeDelayCount(EPWM1_BASE, DEADTIME_TICKS); // 设置上升沿延迟计数
+    EPWM_setFallingEdgeDelayCount(EPWM1_BASE, DEADTIME_TICKS); // 设置下降沿延迟计数
 
-    // 配置死区 - EPWM2
-    EPWM_setDeadBandCounterClock(EPWM2_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE); // 设置死区计数器时钟
-    EPWM_setDeadBandDelayMode(EPWM2_BASE, EPWM_DB_RED, true);                  // 启用上升沿延迟
-    EPWM_setDeadBandDelayMode(EPWM2_BASE, EPWM_DB_FED, true);                  // 启用下降沿延迟
-    EPWM_setRisingEdgeDelayCount(EPWM2_BASE, DEADTIME_TICKS);                  // 设置上升沿延迟计数
-    EPWM_setFallingEdgeDelayCount(EPWM2_BASE, DEADTIME_TICKS);                 // 设置下降沿延迟计数
+    // 配置EPWM1的比较器
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, 0); // 初始值为0
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, 0); // 初始值为0
 
-    // 配置死区 - EPWM3
-    EPWM_setDeadBandCounterClock(EPWM3_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE); // 设置死区计数器时钟
-    EPWM_setDeadBandDelayMode(EPWM3_BASE, EPWM_DB_RED, true);                  // 启用上升沿延迟
-    EPWM_setDeadBandDelayMode(EPWM3_BASE, EPWM_DB_FED, true);                  // 启用下降沿延迟
-    EPWM_setRisingEdgeDelayCount(EPWM3_BASE, DEADTIME_TICKS);                  // 设置上升沿延迟计数
-    EPWM_setFallingEdgeDelayCount(EPWM3_BASE, DEADTIME_TICKS);                 // 设置下降沿延迟计数
+    // 配置EPWM1的动作限定器
+    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_ACTION_ZERO, EPWM_AQ_OUTPUT_HIGH); // 零计数时输出高电平
+    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_ACTION_CAU, EPWM_AQ_OUTPUT_LOW);  // 计数器等于比较器A上计数时输出低电平
+    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_ACTION_ZERO, EPWM_AQ_OUTPUT_HIGH); // 零计数时输出高电平
+    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_ACTION_CBU, EPWM_AQ_OUTPUT_LOW);  // 计数器等于比较器B上计数时输出低电平
 
-    // 配置比较器 - EPWM1
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2); // 设置比较器A的值为周期的一半
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, TBPRD_VAL / 2); // 设置比较器B的值为周期的一半
+    // 配置EPWM2模块（与EPWM1类似）
+    EPWM_setTimeBasePeriod(EPWM2_BASE, TBPRD_VAL);       // 设置时基周期
+    EPWM_setTimeBaseCounter(EPWM2_BASE, 0);              // 设置时基计数器初始值
+    EPWM_setTimeBaseCounterMode(EPWM2_BASE, EPWM_COUNTER_MODE_UP_DOWN); // 上下计数模式
 
-    // 配置比较器 - EPWM2
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2); // 设置比较器A的值为周期的一半
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, TBPRD_VAL / 2); // 设置比较器B的值为周期的一半
+    // 配置EPWM2的死区
+    EPWM_setDeadBandCounterClock(EPWM2_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE); // 全周期时钟
+    EPWM_setRisingEdgeDelayCount(EPWM2_BASE, DEADTIME_TICKS); // 设置上升沿延迟计数
+    EPWM_setFallingEdgeDelayCount(EPWM2_BASE, DEADTIME_TICKS); // 设置下降沿延迟计数
 
-    // 配置比较器 - EPWM3
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2); // 设置比较器A的值为周期的一半
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, TBPRD_VAL / 2); // 设置比较器B的值为周期的一半
+    // 配置EPWM2的比较器
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, 0); // 初始值为0
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, 0); // 初始值为0
 
-    // 配置动作限定 - EPWM1
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A,
-                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO); // 时基为0时，EPWM1A输出高电平
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A,
-                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA); // 时基向上计数到CMPA时，EPWM1A输出低电平
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B,
-                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO); // 时基为0时，EPWM1B输出高电平
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B,
-                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB); // 时基向上计数到CMPB时，EPWM1B输出低电平
+    // 配置EPWM2的动作限定器
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_ACTION_ZERO, EPWM_AQ_OUTPUT_HIGH); // 零计数时输出高电平
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_ACTION_CAU, EPWM_AQ_OUTPUT_LOW);  // 计数器等于比较器A上计数时输出低电平
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_ACTION_ZERO, EPWM_AQ_OUTPUT_HIGH); // 零计数时输出高电平
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_ACTION_CBU, EPWM_AQ_OUTPUT_LOW);  // 计数器等于比较器B上计数时输出低电平
 
-    // 配置动作限定 - EPWM2
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A,
-                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO); // 时基为0时，EPWM2A输出高电平
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A,
-                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA); // 时基向上计数到CMPA时，EPWM2A输出低电平
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B,
-                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO); // 时基为0时，EPWM2B输出高电平
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B,
-                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB); // 时基向上计数到CMPB时，EPWM2B输出低电平
+    // 配置EPWM3模块（与EPWM1类似）
+    EPWM_setTimeBasePeriod(EPWM3_BASE, TBPRD_VAL);       // 设置时基周期
+    EPWM_setTimeBaseCounter(EPWM3_BASE, 0);              // 设置时基计数器初始值
+    EPWM_setTimeBaseCounterMode(EPWM3_BASE, EPWM_COUNTER_MODE_UP_DOWN); // 上下计数模式
 
-    // 配置动作限定 - EPWM3
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A,
-                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO); // 时基为0时，EPWM3A输出高电平
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A,
-                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA); // 时基向上计数到CMPA时，EPWM3A输出低电平
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B,
-                                 EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO); // 时基为0时，EPWM3B输出高电平
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B,
-                                 EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB); // 时基向上计数到CMPB时，EPWM3B输出低电平
+    // 配置EPWM3的死区
+    EPWM_setDeadBandCounterClock(EPWM3_BASE, EPWM_DB_COUNTER_CLOCK_FULL_CYCLE); // 全周期时钟
+    EPWM_setRisingEdgeDelayCount(EPWM3_BASE, DEADTIME_TICKS); // 设置上升沿延迟计数
+    EPWM_setFallingEdgeDelayCount(EPWM3_BASE, DEADTIME_TICKS); // 设置下降沿延迟计数
 
-    // 配置SOC触发
-    EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO); // 设置ADC触发源为EPWM1计数器为0时
-    EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_A, 1);           // 设置触发事件的预分频为1
-    EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_A);                         // 启用ADC触发
+    // 配置EPWM3的比较器
+    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, 0); // 初始值为0
+    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, 0); // 初始值为0
 
-    // 启动PWM
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM2);
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM3);
+    // 配置EPWM3的动作限定器
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_ACTION_ZERO, EPWM_AQ_OUTPUT_HIGH); // 零计数时输出高电平
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_ACTION_CAU, EPWM_AQ_OUTPUT_LOW);  // 计数器等于比较器A上计数时输出低电平
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_ACTION_ZERO, EPWM_AQ_OUTPUT_HIGH); // 零计数时输出高电平
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_ACTION_CBU, EPWM_AQ_OUTPUT_LOW);  // 计数器等于比较器B上计数时输出低电平
+
+    // 使能EPWM1-3模块
+    EPWM_enableModule(EPWM1_BASE);                     // 使能EPWM1模块
+    EPWM_enableModule(EPWM2_BASE);                     // 使能EPWM2模块
+    EPWM_enableModule(EPWM3_BASE);                     // 使能EPWM3模块
 }
 
-/**
- * @brief 设置PWM占空比
- * @details 根据输入的占空比计算PWM比较器值，并设置到相应的EPWM模块中，
- *          用于控制电机的三相电压输出。
- * @param dutyA A相占空比，范围为0.0到1.0
- * @param dutyB B相占空比，范围为0.0到1.0
- * @param dutyC C相占空比，范围为0.0到1.0
- */
-void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
+// PWM占空比设置函数 - 设置EPWM模块的占空比
+void EPWM_SetDuty(uint16_t epwm_base, uint16_t duty)
 {
-    // 限幅处理
-    dutyA = clampf_val(dutyA, 0.0f, 1.0f); // 将A相占空比限制在0.0到1.0之间
-    dutyB = clampf_val(dutyB, 0.0f, 1.0f); // 将B相占空比限制在0.0到1.0之间
-    dutyC = clampf_val(dutyC, 0.0f, 1.0f); // 将C相占空比限制在0.0到1.0之间
-
-    // 计算比较值
-    uint16_t cmpA = (uint16_t)(dutyA * (float)TBPRD_VAL + 0.5f); // 计算A相的比较值
-    uint16_t cmpB = (uint16_t)(dutyB * (float)TBPRD_VAL + 0.5f); // 计算B相的比较值
-    uint16_t cmpC = (uint16_t)(dutyC * (float)TBPRD_VAL + 0.5f); // 计算C相的比较值
-
-    // 设置比较值
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, cmpA); // 设置EPWM1比较器A的值
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, cmpA); // 互补输出使用相同的占空比，设置EPWM1比较器B的值
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, cmpB); // 设置EPWM2比较器A的值
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, cmpB); // 互补输出使用相同的占空比，设置EPWM2比较器B的值
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, cmpC); // 设置EPWM3比较器A的值
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, cmpC); // 互补输出使用相同的占空比，设置EPWM3比较器B的值
+    // 设置EPWM模块的比较器值
+    EPWM_setCounterCompareValue(epwm_base, EPWM_COUNTER_COMPARE_A, duty); // 占空比
+    EPWM_setCounterCompareValue(epwm_base, EPWM_COUNTER_COMPARE_B, duty); // 占空比
 }
