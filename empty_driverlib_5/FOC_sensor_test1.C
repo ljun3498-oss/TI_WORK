@@ -74,6 +74,8 @@ void park_transform(float alpha, float beta, float theta, float *d, float *q);
 void inv_park_transform(float vd, float vq, float theta, float *alpha, float *beta);
 float pi_id(float err);
 float pi_iq(float err);
+void InitPeripherals(void);
+void DoElectricalAlignment(void);
 
 #endif // FOC_CORE_H
 /**
@@ -394,7 +396,8 @@ void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta)
 
     // 计算调制波
     float Va, Vb, Vc;
-    float T1, T2, T0; // 有效矢量和零矢量的作用时间
+    // 移除未使用的变量 T1, T2, T0
+    // float T1, T2, T0; // 有效矢量和零矢量的作用时间
 
     // 根据扇区计算三相电压
     switch (sector)
@@ -849,6 +852,14 @@ void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
     uint16_t cmpA = (uint16_t)(dutyA * (float)TBPRD_VAL + 0.5f); // 计算A相的比较值
     uint16_t cmpB = (uint16_t)(dutyB * (float)TBPRD_VAL + 0.5f); // 计算B相的比较值
     uint16_t cmpC = (uint16_t)(dutyC * (float)TBPRD_VAL + 0.5f); // 计算C相的比较值
+    
+    // 设置EPWM比较值
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, cmpA);
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, (uint16_t)(TBPRD_VAL - cmpA));
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, cmpB);
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, (uint16_t)(TBPRD_VAL - cmpB));
+    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, cmpC);
+    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, (uint16_t)(TBPRD_VAL - cmpC));
 }
 
 /**
