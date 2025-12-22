@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.2                     
 ******************************************************************************
->> Linked Mon Dec 22 09:59:24 2025
+>> Linked Mon Dec 22 10:03:36 2025
 
 OUTPUT FILE NAME:   <empty_driverlib_4.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -13,9 +13,9 @@ MEMORY CONFIGURATION
 ----------------------  --------  ---------  --------  --------  ----  --------
 PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
-  RAMM0                 00000123   000002dd  0000002c  000002b1  RWIX
+  RAMM0                 00000123   000002dd  0000002e  000002af  RWIX
   RAMLS0                00008000   00000800  00000800  00000000  RWIX
-  RAMLS1                00008800   00000800  000007ff  00000001  RWIX
+  RAMLS1                00008800   00000800  00000800  00000000  RWIX
   RAMLS2                00009000   00000800  00000800  00000000  RWIX
   RAMLS3                00009800   00000800  000007ff  00000001  RWIX
   RAMLS4                0000a000   00000800  000004aa  00000356  RWIX
@@ -49,7 +49,7 @@ PAGE 1:
   RAMLS5                0000a800   00000400  000003fe  00000002  RWIX
   Cla1DataRam           0000ac00   00000400  00000000  00000400  RWIX
   RAMD1                 0000b800   00000800  00000000  00000800  RWIX
-  RAMGS0_PAGE1          0000c000   00001000  0000004b  00000fb5  RWIX
+  RAMGS0_PAGE1          0000c000   00001000  0000004d  00000fb3  RWIX
   RAMGS1_PAGE1          0000d000   00001000  00000007  00000ff9  RWIX
   RAMGS2_PAGE1          0000e000   00001000  00000000  00001000  RWIX
   RAMGS3_PAGE1          0000f000   00001000  00000000  00001000  RWIX
@@ -80,11 +80,11 @@ codestart
 *          0    00000000    00000002     
                   00000000    00000002     F2837xD_CodeStartBranch.obj (codestart)
 
-.cinit     0    00000128    00000028     
-                  00000128    00000016     (.cinit..data.load) [load image, compression = lzss]
-                  0000013e    00000006     (__TI_handler_table)
-                  00000144    00000004     (.cinit..bss.load) [load image, compression = zero_init]
-                  00000148    00000008     (__TI_cinit_table)
+.cinit     0    00000128    0000002a     
+                  00000128    00000018     (.cinit..data.load) [load image, compression = lzss]
+                  00000140    00000006     (__TI_handler_table)
+                  00000146    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  0000014a    00000008     (__TI_cinit_table)
 
 .reset     0    003fffc0    00000000     DSECT
 
@@ -123,15 +123,15 @@ codestart
                   0000abf6    00000004                            : s_cos.c.obj (.const)
                   0000abfa    00000004                            : s_sin.c.obj (.const)
 
-.data      1    0000c000    0000004b     UNINITIALIZED
-                  0000c000    00000022     foc_core.obj (.data)
-                  0000c022    00000016     FOC_sensor_test1.obj (.data)
-                  0000c038    00000006     device.obj (.data)
-                  0000c03e    00000002     rts2800_fpu32_eabi.lib : _lock.c.obj (.data:_lock)
-                  0000c040    00000006                            : exit.c.obj (.data)
-                  0000c046    00000002                            : _lock.c.obj (.data:_unlock)
-                  0000c048    00000002     foc_encoder.obj (.data)
-                  0000c04a    00000001     rts2800_fpu32_eabi.lib : errno.c.obj (.data)
+.data      1    0000c000    0000004d     UNINITIALIZED
+                  0000c000    00000024     foc_core.obj (.data)
+                  0000c024    00000016     FOC_sensor_test1.obj (.data)
+                  0000c03a    00000006     device.obj (.data)
+                  0000c040    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
+                  0000c046    00000002                            : _lock.c.obj (.data:_lock)
+                  0000c048    00000002                            : _lock.c.obj (.data:_unlock)
+                  0000c04a    00000002     foc_encoder.obj (.data)
+                  0000c04c    00000001     rts2800_fpu32_eabi.lib : errno.c.obj (.data)
 
 GETBUFFER 
 *          0    0003f800    00000000     DSECT
@@ -155,12 +155,12 @@ Cla1funcs
                   00008789    0000006f     driverlib_eabi.lib : adc.obj (.text:ADC_setINLTrim)
                   000087f8    00000008     F2837xD_CodeStartBranch.obj (.text)
 
-.text.2    0    00008800    000007ff     
+.text.2    0    00008800    00000800     
                   00008800    00000413     foc_svpwm.obj (.text)
                   00008c13    00000209     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
-                  00008e1c    000001b0     foc_pwm.obj (.text)
-                  00008fcc    00000031     driverlib_eabi.lib : gpio.obj (.text:GPIO_setDirectionMode)
-                  00008ffd    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  00008e1c    000001b1     foc_pwm.obj (.text)
+                  00008fcd    00000031     driverlib_eabi.lib : gpio.obj (.text:GPIO_setDirectionMode)
+                  00008ffe    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
 
 .text.3    0    00009000    00000800     
                   00009000    00000145     foc_core.obj (.text)
@@ -263,12 +263,12 @@ MODULE SUMMARY
                                                               
     .\model\
        foc_svpwm.obj                 1043    16        0      
-       foc_pwm.obj                   432     0         0      
-       foc_core.obj                  325     0         34     
+       foc_pwm.obj                   433     0         0      
+       foc_core.obj                  325     0         36     
        foc_encoder.obj               335     12        6      
        foc_adc.obj                   309     0         3      
     +--+-----------------------------+-------+---------+---------+
-       Total:                        2444    28        43     
+       Total:                        2445    28        45     
                                                               
     C:\TI\C2000Ware_6_00_01_00\driverlib\f2837xd\driverlib\ccs\Debug\driverlib_eabi.lib
        sysctl.obj                    1187    194       0      
@@ -322,21 +322,21 @@ MODULE SUMMARY
        Total:                        5888    514       11     
                                                               
        Stack:                        0       0         256    
-       Linker Generated:             0       40        0      
+       Linker Generated:             0       42        0      
     +--+-----------------------------+-------+---------+---------+
-       Grand Total:                  11437   1057      338    
+       Grand Total:                  11438   1059      340    
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00000148 records: 2, size/record: 4, table size: 8
-	.data: load addr=00000128, load size=00000016 bytes, run addr=0000c000, run size=0000004b bytes, compression=lzss
-	.bss: load addr=00000144, load size=00000004 bytes, run addr=0000d000, run size=00000007 bytes, compression=zero_init
+__TI_cinit_table @ 0000014a records: 2, size/record: 4, table size: 8
+	.data: load addr=00000128, load size=00000018 bytes, run addr=0000c000, run size=0000004d bytes, compression=lzss
+	.bss: load addr=00000146, load size=00000004 bytes, run addr=0000d000, run size=00000007 bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 0000013e records: 3, size/record: 2, table size: 6
+__TI_handler_table @ 00000140 records: 3, size/record: 2, table size: 6
 	index: 0, handler: __TI_zero_init
 	index: 1, handler: __TI_decompress_lzss
 	index: 2, handler: __TI_decompress_none
@@ -367,17 +367,18 @@ address     data page           name
 0000c01c     300 (0000c000)     KI_ID
 0000c01e     300 (0000c000)     KP_IQ
 0000c020     300 (0000c000)     KI_IQ
-0000c022     300 (0000c000)     svpwm_handle
-0000c038     300 (0000c000)     Example_Result
-0000c03a     300 (0000c000)     Example_PassCount
-0000c03c     300 (0000c000)     Example_Fail
-0000c03e     300 (0000c000)     _lock
+0000c022     300 (0000c000)     motor_speed_rad
+0000c024     300 (0000c000)     svpwm_handle
+0000c03a     300 (0000c000)     Example_Result
+0000c03c     300 (0000c000)     Example_PassCount
+0000c03e     300 (0000c000)     Example_Fail
 
 0000c040     301 (0000c040)     __TI_enable_exit_profile_output
 0000c042     301 (0000c040)     __TI_cleanup_ptr
 0000c044     301 (0000c040)     __TI_dtors_ptr
-0000c046     301 (0000c040)     _unlock
-0000c04a     301 (0000c040)     errno
+0000c046     301 (0000c040)     _lock
+0000c048     301 (0000c040)     _unlock
+0000c04c     301 (0000c040)     errno
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -406,18 +407,17 @@ abs   00000000  Cla1funcsLoadSize
 0     00009f7f  DoElectricalAlignment                    
 0     00008e77  EPWM_Init                                
 0     00008e1c  EPWM_SetDuty                             
-n/a   UNDEFED   EPWM_enableModule                        
 0     0000b76b  Encoder_Init                             
 0     0000b691  Encoder_Read                             
 0     0000b67d  Encoder_Reset                            
-1     0000c03c  Example_Fail                             
-1     0000c03a  Example_PassCount                        
-1     0000c038  Example_Result                           
+1     0000c03e  Example_Fail                             
+1     0000c03c  Example_PassCount                        
+1     0000c03a  Example_Result                           
 0     0000843e  Example_done                             
 0     00008439  Example_setResultFail                    
 0     00008434  Example_setResultPass                    
 0     0000a000  GPIO_setControllerCore                   
-0     00008fcc  GPIO_setDirectionMode                    
+0     00008fcd  GPIO_setDirectionMode                    
 0     0000a037  GPIO_setPinConfig                        
 0     0000a06e  GPIO_setQualificationMode                
 1     0000c00c  Ia_meas                                  
@@ -446,11 +446,11 @@ n/a   UNDEFED   EPWM_enableModule
 0     00009b8a  SysCtl_selectXTAL                        
 0     00008c13  SysCtl_setClock                          
 1     0000c000  TBPRD                                    
-0     00000148  __TI_CINIT_Base                          
-0     00000150  __TI_CINIT_Limit                         
-0     00000150  __TI_CINIT_Warm                          
-0     0000013e  __TI_Handler_Table_Base                  
-0     00000144  __TI_Handler_Table_Limit                 
+0     0000014a  __TI_CINIT_Base                          
+0     00000152  __TI_CINIT_Limit                         
+0     00000152  __TI_CINIT_Warm                          
+0     00000140  __TI_Handler_Table_Base                  
+0     00000146  __TI_Handler_Table_Limit                 
 1     00000500  __TI_STACK_END                           
 abs   00000100  __TI_STACK_SIZE                          
 0     0000a139  __TI_auto_init_nobinit_nopinit           
@@ -489,13 +489,13 @@ n/a   UNDEFED   __c_args__
 1     00000400  __stack                                  
 0     0000a455  _args_main                               
 0     0000a38d  _c_int00                                 
-1     0000c03e  _lock                                    
+1     0000c046  _lock                                    
 0     0000a491  _nop                                     
 0     0000a48d  _register_lock                           
 0     0000a489  _register_unlock                         
 0     0000b7ff  _system_post_cinit                       
-0     00008ffd  _system_pre_init                         
-1     0000c046  _unlock                                  
+0     00008ffe  _system_pre_init                         
+1     0000c048  _unlock                                  
 0     0000a18e  abort                                    
 0     000099ad  adc_isr                                  
 0     00009645  atan2f                                   
@@ -511,7 +511,7 @@ n/a   UNDEFED   __c_args__
 1     0000c002  encoder_calibrated                       
 1     0000c004  encoder_raw_pos                          
 0     00009995  eqep_index_isr                           
-1     0000c04a  errno                                    
+1     0000c04c  errno                                    
 0     0000a190  exit                                     
 0     0000947f  floor                                    
 0     0000947f  floorl                                   
@@ -524,7 +524,7 @@ n/a   UNDEFED   __c_args__
 1     0000c008  motor_angle_elec_rad                     
 1     0000c006  motor_angle_mech_rad                     
 1     0000c00a  motor_rpm                                
-n/a   UNDEFED   motor_speed_rad                          
+1     0000c022  motor_speed_rad                          
 1     0000c003  overcurrent_fault                        
 0     00009079  park_transform                           
 0     00009045  pi_id                                    
@@ -537,7 +537,7 @@ n/a   UNDEFED   motor_speed_rad
 0     0000a1e0  sqrtf                                    
 0     00009567  sqrtl                                    
 0     00008800  svpwm_compute                            
-1     0000c022  svpwm_handle                             
+1     0000c024  svpwm_handle                             
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -546,11 +546,11 @@ page  address   name
 ----  -------   ----                                     
 0     00000000  code_start                               
 0     00000123  SysCtl_delay                             
-0     0000013e  __TI_Handler_Table_Base                  
-0     00000144  __TI_Handler_Table_Limit                 
-0     00000148  __TI_CINIT_Base                          
-0     00000150  __TI_CINIT_Limit                         
-0     00000150  __TI_CINIT_Warm                          
+0     00000140  __TI_Handler_Table_Base                  
+0     00000146  __TI_Handler_Table_Limit                 
+0     0000014a  __TI_CINIT_Base                          
+0     00000152  __TI_CINIT_Limit                         
+0     00000152  __TI_CINIT_Warm                          
 0     00008000  Cla1funcsLoadStart                       
 0     00008000  Cla1funcsRunStart                        
 0     00008000  __rem_pio2                               
@@ -571,8 +571,8 @@ page  address   name
 0     00008c13  SysCtl_setClock                          
 0     00008e1c  EPWM_SetDuty                             
 0     00008e77  EPWM_Init                                
-0     00008fcc  GPIO_setDirectionMode                    
-0     00008ffd  _system_pre_init                         
+0     00008fcd  GPIO_setDirectionMode                    
+0     00008ffe  _system_pre_init                         
 0     00009000  clampf_val                               
 0     00009011  pi_iq                                    
 0     00009045  pi_id                                    
@@ -680,23 +680,22 @@ page  address   name
 1     0000c01c  KI_ID                                    
 1     0000c01e  KP_IQ                                    
 1     0000c020  KI_IQ                                    
-1     0000c022  svpwm_handle                             
-1     0000c038  Example_Result                           
-1     0000c03a  Example_PassCount                        
-1     0000c03c  Example_Fail                             
-1     0000c03e  _lock                                    
+1     0000c022  motor_speed_rad                          
+1     0000c024  svpwm_handle                             
+1     0000c03a  Example_Result                           
+1     0000c03c  Example_PassCount                        
+1     0000c03e  Example_Fail                             
 1     0000c040  __TI_enable_exit_profile_output          
 1     0000c042  __TI_cleanup_ptr                         
 1     0000c044  __TI_dtors_ptr                           
-1     0000c046  _unlock                                  
-1     0000c04a  errno                                    
+1     0000c046  _lock                                    
+1     0000c048  _unlock                                  
+1     0000c04c  errno                                    
 abs   00000000  Cla1funcsLoadSize                        
 abs   00000100  __TI_STACK_SIZE                          
 abs   ffffffff  __TI_pprof_out_hndl                      
 abs   ffffffff  __TI_prof_data_size                      
 abs   ffffffff  __TI_prof_data_start                     
-n/a   UNDEFED   EPWM_enableModule                        
 n/a   UNDEFED   __c_args__                               
-n/a   UNDEFED   motor_speed_rad                          
 
-[154 symbols]
+[153 symbols]

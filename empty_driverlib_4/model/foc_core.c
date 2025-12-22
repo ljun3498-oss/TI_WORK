@@ -86,6 +86,12 @@ float KP_IQ = KP_IQ_INIT, KI_IQ = KI_IQ_INIT;    // Q轴PI参数
 volatile bool overcurrent_fault = false;         // 过流故障标志
 
 /**
+ * @brief 电机转速（弧度/秒）
+ * @details 单位为rad/s，初始化为0.0f
+ */
+volatile float motor_speed_rad = 0.0f;           // 电机转速(rad/s)
+
+/**
  * @brief 浮点数饱和限制函数
  * @param v 输入值
  * @param lo 下限
