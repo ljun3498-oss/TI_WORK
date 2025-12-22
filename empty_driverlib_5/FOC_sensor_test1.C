@@ -86,11 +86,7 @@ float pi_iq(float err);
 #ifndef FOC_ADC_H
 #define FOC_ADC_H
 
-/**
- * @brief 包含FOC核心控制模块头文件
- * @details 提供ADC模块所需的系统参数和全局变量
- */
-#include "foc_core.h"
+
 
 // ADC通道定义
 
@@ -344,7 +340,6 @@ float pi_iq(float err)
 #ifndef FOC_SVPWM_H
 #define FOC_SVPWM_H
 
-#include "foc_core.h"  // 包含FOC核心模块头文件，提供系统参数和全局变量
 
 // SVPWM相关结构体
 
