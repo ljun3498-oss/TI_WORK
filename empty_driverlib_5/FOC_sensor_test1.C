@@ -76,81 +76,152 @@ float pi_id(float err);
 float pi_iq(float err);
 
 #endif // FOC_CORE_H
+/**
+ * @file foc_adc.h
+ * @brief ADC（模数转换）模块头文件
+ * @details 该文件定义了ADC模块的宏定义和函数原型，用于初始化ADC模块，
+ *          读取电机相电流等模拟信号。
+ */
 
-/* ======================== SVPWM头文件定义 ======================== */
-#ifndef FOC_SVPWM_H
-#define FOC_SVPWM_H
-
-// SVPWM相关结构体
-typedef struct {
-    float Vdc;                    // 母线电压，单位：V
-    float Va, Vb, Vc;             // 三相电压，单位：V
-    float Va_offset, Vb_offset, Vc_offset; // 偏移电压，用于中心对齐PWM
-    uint16_t CMPA1, CMPB1;        // EPWM1比较值，用于生成A相PWM信号
-    uint16_t CMPA2, CMPB2;        // EPWM2比较值，用于生成B相PWM信号
-    uint16_t CMPA3, CMPB3;        // EPWM3比较值，用于生成C相PWM信号
-    uint8_t sector;               // 扇区，0-5，表示空间矢量所在的扇区
-} SVPWM_Handle;
-
-// 函数声明
-void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta);
-
-#endif // FOC_SVPWM_H
-
-/* ======================== 编码器头文件定义 ======================== */
-#ifndef FOC_ENCODER_H
-#define FOC_ENCODER_H
-
-// 函数声明
-void Encoder_Init(void);
-void Encoder_Read(void);
-void Encoder_Reset(void);
-
-#endif // FOC_ENCODER_H
-
-/* ======================== ADC头文件定义 ======================== */
 #ifndef FOC_ADC_H
 #define FOC_ADC_H
 
+/**
+ * @brief 包含FOC核心控制模块头文件
+ * @details 提供ADC模块所需的系统参数和全局变量
+ */
+#include "foc_core.h"
+
 // ADC通道定义
-#define ADC_CH_CURRENT_A ADC_CH_ADCIN0  // A相电流
-#define ADC_CH_CURRENT_B ADC_CH_ADCIN1  // B相电流
-#define ADC_CH_CURRENT_C ADC_CH_ADCIN2  // C相电流
+
+/**
+ * @brief A相电流ADC通道
+ * @details 定义为ADC_CH_ADCIN0，用于测量A相电流
+ */
+#define ADC_CH_CURRENT_A    ADC_CH_ADCIN0    // A相电流
+
+/**
+ * @brief B相电流ADC通道
+ * @details 定义为ADC_CH_ADCIN1，用于测量B相电流
+ */
+#define ADC_CH_CURRENT_B    ADC_CH_ADCIN1    // B相电流
+
+/**
+ * @brief C相电流ADC通道
+ * @details 定义为ADC_CH_ADCIN2，用于测量C相电流
+ */
+#define ADC_CH_CURRENT_C    ADC_CH_ADCIN2    // C相电流
 
 // 函数声明
+
+/**
+ * @brief ADC模块初始化函数
+ * @details 配置ADC模块的时钟、分辨率、通道、触发源等参数，
+ *          为电流测量做准备。
+ */
 void ADC_Init(void);
+
+/**
+ * @brief 读取电流值函数
+ * @details 触发ADC转换并读取三相电流值，
+ *          将ADC计数转换为实际电流值。
+ */
 void ADC_Read_Current(void);
+
+/**
+ * @brief ADC中断服务函数
+ * @details 处理ADC转换完成中断，读取转换结果，
+ *          计算电流值并进行过流检查。
+ */
 void ADC_Isr(void);
 
 #endif // FOC_ADC_H
 
-/* ======================== PWM头文件定义 ======================== */
-#ifndef FOC_PWM_H
-#define FOC_PWM_H
-
-// 函数声明
-void EPWM_Init(void);
-void EPWM_SetDuty(float dutyA, float dutyB, float dutyC);
-
-#endif // FOC_PWM_H
-
-/* ======================== FOC核心实现 ======================== */
+// 添加缺失的foc_core.c实现
+/**
+ * @file foc_core.c
+ * @brief FOC (Field Oriented Control)核心控制模块实现
+ * @details 该文件实现了FOC控制系统的核心功能，包括坐标变换、PI控制等
+ */
 
 // 全局变量定义
-uint16_t TBPRD = TBPRD_VAL;             // PWM时基周期值
-volatile int32_t encoder_raw_pos = 0;   // 编码器原始位置
-volatile bool index_detected = false;  // 索引信号检测标志
-volatile bool encoder_calibrated = false; // 编码器校准标志
-volatile float motor_angle_mech_rad = 0.0f; // 电机机械角度(弧度)
-volatile float motor_angle_elec_rad = 0.0f; // 电机电角度(弧度)
-volatile float motor_rpm = 0.0f;        // 电机转速
-volatile float motor_speed_rad = 0.0f;  // 电机转速(rad/s)
+/**
+ * @brief 编码器原始位置
+ * @details 初始化为0
+ */
+volatile int32_t encoder_raw_pos = 0;            // 编码器原始位置
+
+/**
+ * @brief 索引信号检测标志
+ * @details 初始化为false
+ */
+volatile bool index_detected = false;            // 索引信号检测标志
+
+/**
+ * @brief 编码器校准标志
+ * @details 初始化为false
+ */
+volatile bool encoder_calibrated = false;        // 编码器校准标志
+
+/**
+ * @brief 电机机械角度
+ * @details 单位为弧度，初始化为0.0f
+ */
+volatile float motor_angle_mech_rad = 0.0f;      // 电机机械角度(弧度)
+
+/**
+ * @brief 电机电角度
+ * @details 单位为弧度，初始化为0.0f
+ */
+volatile float motor_angle_elec_rad = 0.0f;      // 电机电角度(弧度)
+
+/**
+ * @brief 电机转速
+ * @details 单位为RPM，初始化为0.0f
+ */
+volatile float motor_rpm = 0.0f;                 // 电机转速
+
+/**
+ * @brief 三相电流测量值
+ * @details 单位为安培，初始化为0.0f
+ */
 volatile float Ia_meas = 0.0f, Ib_meas = 0.0f, Ic_meas = 0.0f; // 三相电流测量值
-volatile float Id_ref = 0.0f, Iq_ref = 0.0f; // D/Q轴电流参考值
-float Id_int = 0.0f, Iq_int = 0.0f;     // D/Q轴积分项
-float KP_ID = KP_ID_INIT, KI_ID = KI_ID_INIT; // D轴PI参数
-float KP_IQ = KP_IQ_INIT, KI_IQ = KI_IQ_INIT; // Q轴PI参数
-volatile bool overcurrent_fault = false; // 过流故障标志
+
+/**
+ * @brief D/Q轴电流参考值
+ * @details 单位为安培，初始化为0.0f
+ */
+volatile float Id_ref = 0.0f, Iq_ref = 0.0f;     // D/Q轴电流参考值
+
+/**
+ * @brief D/Q轴积分项
+ * @details 用于PI控制器的积分计算，初始化为0.0f
+ */
+float Id_int = 0.0f, Iq_int = 0.0f;              // D/Q轴积分项
+
+/**
+ * @brief D轴PI参数
+ * @details 使用KP_ID_INIT和KI_ID_INIT宏定义初始化
+ */
+float KP_ID = KP_ID_INIT, KI_ID = KI_ID_INIT;    // D轴PI参数
+
+/**
+ * @brief Q轴PI参数
+ * @details 使用KP_IQ_INIT和KI_IQ_INIT宏定义初始化
+ */
+float KP_IQ = KP_IQ_INIT, KI_IQ = KI_IQ_INIT;    // Q轴PI参数
+
+/**
+ * @brief 过流故障标志
+ * @details 初始化为false
+ */
+volatile bool overcurrent_fault = false;         // 过流故障标志
+
+/**
+ * @brief 电机转速（弧度/秒）
+ * @details 单位为rad/s，初始化为0.0f
+ */
+volatile float motor_speed_rad = 0.0f;           // 电机转速(rad/s)
 
 /**
  * @brief 浮点数饱和限制函数
@@ -161,9 +232,9 @@ volatile bool overcurrent_fault = false; // 过流故障标志
  */
 float clampf_val(float v, float lo, float hi)
 {
-    if (v < lo) return lo;  // 如果输入值小于下限，返回下限
-    if (v > hi) return hi;  // 如果输入值大于上限，返回上限
-    return v;               // 如果输入值在范围内，返回原值
+    if (v < lo) return lo;    // 如果输入值小于下限，返回下限
+    if (v > hi) return hi;    // 如果输入值大于上限，返回上限
+    return v;                 // 如果输入值在范围内，返回原值
 }
 
 /**
@@ -191,9 +262,9 @@ void clarke_transform(float Ia, float Ib, float Ic, float* Valpha, float* Vbeta)
  */
 void park_transform(float alpha, float beta, float theta, float *d, float *q)
 {
-    float cos_theta = cos(theta);  // 计算电角度的余弦值
-    float sin_theta = sin(theta);  // 计算电角度的正弦值
-    
+    float cos_theta = cos(theta);              // 计算电角度的余弦值
+    float sin_theta = sin(theta);              // 计算电角度的正弦值
+
     // 两相静止到旋转坐标系的Park变换
     *d = alpha * cos_theta + beta * sin_theta;  // d轴电流计算
     *q = -alpha * sin_theta + beta * cos_theta; // q轴电流计算
@@ -209,12 +280,12 @@ void park_transform(float alpha, float beta, float theta, float *d, float *q)
  */
 void inv_park_transform(float vd, float vq, float theta, float *alpha, float *beta)
 {
-    float cos_theta = cos(theta);  // 计算电角度的余弦值
-    float sin_theta = sin(theta);  // 计算电角度的正弦值
-    
+    float cos_theta = cos(theta);              // 计算电角度的余弦值
+    float sin_theta = sin(theta);              // 计算电角度的正弦值
+
     // 旋转到两相静止坐标系的逆Park变换
-    *alpha = vd * cos_theta - vq * sin_theta; // α轴电压计算
-    *beta = vd * sin_theta + vq * cos_theta;  // β轴电压计算
+    *alpha = vd * cos_theta - vq * sin_theta;  // α轴电压计算
+    *beta = vd * sin_theta + vq * cos_theta;   // β轴电压计算
 }
 
 /**
@@ -225,43 +296,90 @@ void inv_park_transform(float vd, float vq, float theta, float *alpha, float *be
 float pi_id(float err)
 {
     // 计算积分项
-    Id_int += KI_ID * err * DT;  // 积分项累加：KI_ID * 误差 * 控制周期
-    
+    Id_int += KI_ID * err * DT;                // 积分项累加：KI_ID * 误差 * 控制周期
+
     // 积分限幅
     Id_int = clampf_val(Id_int, -BUS_VOLTAGE, BUS_VOLTAGE); // 将积分项限制在±母线电压范围内
-    
+
     // PI输出
-    float output = KP_ID * err + Id_int;  // PI控制器输出：比例项 + 积分项
-    
+    float output = KP_ID * err + Id_int;       // PI控制器输出：比例项 + 积分项
+
     // 输出限幅
     output = clampf_val(output, -BUS_VOLTAGE, BUS_VOLTAGE); // 将输出限制在±母线电压范围内
-    
-    return output;  // 返回PI控制器输出
+
+    return output;                              // 返回PI控制器输出
 }
 
 /**
  * @brief Q轴电流PI控制器
- * @param err 电流误差
- * @return 控制输出
+ * @details 计算Q轴电流误差的PI控制输出
+ * @param err Q轴电流误差（参考值减去实际值）
+ * @return PI控制器输出
  */
 float pi_iq(float err)
 {
     // 计算积分项
-    Iq_int += KI_IQ * err * DT;  // 积分项累加：KI_IQ * 误差 * 控制周期
-    
+    Iq_int += KI_IQ * err * DT;                // 积分项累加：KI_IQ * 误差 * 控制周期
+
     // 积分限幅
     Iq_int = clampf_val(Iq_int, -BUS_VOLTAGE, BUS_VOLTAGE); // 将积分项限制在±母线电压范围内
-    
+
     // PI输出
-    float output = KP_IQ * err + Iq_int;  // PI控制器输出：比例项 + 积分项
-    
+    float output = KP_IQ * err + Iq_int;       // PI控制器输出：比例项 + 积分项
+
     // 输出限幅
     output = clampf_val(output, -BUS_VOLTAGE, BUS_VOLTAGE); // 将输出限制在±母线电压范围内
-    
-    return output;  // 返回PI控制器输出
+
+    return output;                              // 返回PI控制器输出
 }
 
-/* ======================== SVPWM实现 ======================== */
+// 添加SVPWM实现
+/**
+ * @file foc_svpwm.h
+ * @brief SVPWM（空间矢量脉宽调制）模块头文件
+ * @details 该文件定义了SVPWM模块的结构体和函数声明，
+ *          用于实现FOC控制中的空间矢量脉宽调制算法。
+ */
+
+#ifndef FOC_SVPWM_H
+#define FOC_SVPWM_H
+
+#include "foc_core.h"  // 包含FOC核心模块头文件，提供系统参数和全局变量
+
+// SVPWM相关结构体
+
+/**
+ * @brief SVPWM结构体
+ * @details 包含SVPWM计算所需的参数和结果
+ */
+typedef struct {
+    float Vdc;             // 母线电压，单位：V
+    float Va, Vb, Vc;      // 三相电压，单位：V
+    float Va_offset, Vb_offset, Vc_offset; // 偏移电压，用于中心对齐PWM
+    uint16_t CMPA1, CMPB1; // EPWM1比较值，用于生成A相PWM信号
+    uint16_t CMPA2, CMPB2; // EPWM2比较值，用于生成B相PWM信号
+    uint16_t CMPA3, CMPB3; // EPWM3比较值，用于生成C相PWM信号
+    uint8_t sector;        // 扇区，0-5，表示空间矢量所在的扇区
+} SVPWM_Handle;
+
+// 函数声明
+
+/**
+ * @brief SVPWM计算函数
+ * @details 根据αβ坐标系下的电压指令计算SVPWM的比较值
+ * @param[in,out] handle SVPWM结构体指针
+ * @param[in] Valpha α轴电压指令，单位：V
+ * @param[in] Vbeta β轴电压指令，单位：V
+ */
+void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta);
+
+#endif // FOC_SVPWM_H
+
+/**
+ * @file foc_svpwm.c
+ * @brief SVPWM（空间矢量脉宽调制）模块实现
+ * @details 该文件实现了SVPWM算法，用于生成PWM控制信号
+ */
 
 /**
  * @brief SVPWM计算函数
@@ -272,79 +390,85 @@ float pi_iq(float err)
  */
 void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta)
 {
-    float Vref = sqrt(Valpha * Valpha + Vbeta * Vbeta); // 参考电压矢量幅值
-    float theta = atan2f(Vbeta, Valpha); // 参考电压矢量角度，单位：弧度
-    
+    // 计算中间变量
+    float Vref = sqrtf(Valpha * Valpha + Vbeta * Vbeta); // 参考电压幅值
+    float theta = atan2f(Vbeta, Valpha);                  // 参考电压角度
+
     // 计算扇区
-    float sec = theta / (M_PI / 3.0f); // 将角度转换为扇区数（0-6）
-    if (sec < 0) sec += 6; // 处理负角度情况
-    handle->sector = (uint8_t)(sec + 0.5f); // 四舍五入确定扇区
-    if (handle->sector >= 6) handle->sector = 0; // 确保扇区在0-5范围内
-    
-    // 计算占空比
-    float Ts = 1.0f / PWM_FREQ_HZ; // 开关周期，单位：秒
-    float Ta, Tb, Tc; // 各相导通时间，单位：秒
-    
-    // 根据所在扇区计算各相导通时间
-    switch (handle->sector)
+    uint8_t sector = (uint8_t)(theta / (M_PI / 3.0f)) % 6;
+
+    // 计算调制波
+    float Va, Vb, Vc;
+    float T1, T2, T0; // 有效矢量和零矢量的作用时间
+
+    // 根据扇区计算三相电压
+    switch (sector)
     {
         case 0: // 扇区1
-            Ta = (Valpha * Ts) / handle->Vdc; // A相导通时间
-            Tb = (Valpha * Ts + sqrt(3.0f) * Vbeta * Ts) / handle->Vdc / 2.0f; // B相导通时间
-            Tc = 0.0f; // C相导通时间
+            Va = Vref * cosf(theta);
+            Vb = Vref * cosf(theta - 2.0f * M_PI / 3.0f);
+            Vc = Vref * cosf(theta + 2.0f * M_PI / 3.0f);
             break;
         case 1: // 扇区2
-            Ta = (Valpha * Ts - sqrt(3.0f) * Vbeta * Ts) / handle->Vdc / 2.0f; // A相导通时间
-            Tb = (sqrt(3.0f) * Vbeta * Ts) / handle->Vdc; // B相导通时间
-            Tc = 0.0f; // C相导通时间
+            Va = Vref * cosf(theta - 2.0f * M_PI / 3.0f);
+            Vb = Vref * cosf(theta);
+            Vc = Vref * cosf(theta + 2.0f * M_PI / 3.0f);
             break;
         case 2: // 扇区3
-            Ta = 0.0f; // A相导通时间
-            Tb = (Valpha * Ts + sqrt(3.0f) * Vbeta * Ts) / handle->Vdc / 2.0f; // B相导通时间
-            Tc = (-Valpha * Ts) / handle->Vdc; // C相导通时间
+            Va = Vref * cosf(theta + 2.0f * M_PI / 3.0f);
+            Vb = Vref * cosf(theta);
+            Vc = Vref * cosf(theta - 2.0f * M_PI / 3.0f);
             break;
         case 3: // 扇区4
-            Ta = 0.0f; // A相导通时间
-            Tb = (Valpha * Ts - sqrt(3.0f) * Vbeta * Ts) / handle->Vdc / 2.0f; // B相导通时间
-            Tc = (-Valpha * Ts + sqrt(3.0f) * Vbeta * Ts) / handle->Vdc / 2.0f; // C相导通时间
+            Va = Vref * cosf(theta + 2.0f * M_PI / 3.0f);
+            Vb = Vref * cosf(theta - 2.0f * M_PI / 3.0f);
+            Vc = Vref * cosf(theta);
             break;
         case 4: // 扇区5
-            Ta = (-Valpha * Ts) / handle->Vdc; // A相导通时间
-            Tb = 0.0f; // B相导通时间
-            Tc = (-Valpha * Ts - sqrt(3.0f) * Vbeta * Ts) / handle->Vdc / 2.0f; // C相导通时间
+            Va = Vref * cosf(theta);
+            Vb = Vref * cosf(theta + 2.0f * M_PI / 3.0f);
+            Vc = Vref * cosf(theta - 2.0f * M_PI / 3.0f);
             break;
         case 5: // 扇区6
-            Ta = (-Valpha * Ts + sqrt(3.0f) * Vbeta * Ts) / handle->Vdc / 2.0f; // A相导通时间
-            Tb = 0.0f; // B相导通时间
-            Tc = (-sqrt(3.0f) * Vbeta * Ts) / handle->Vdc; // C相导通时间
+            Va = Vref * cosf(theta - 2.0f * M_PI / 3.0f);
+            Vb = Vref * cosf(theta + 2.0f * M_PI / 3.0f);
+            Vc = Vref * cosf(theta);
             break;
         default:
-            Ta = Tb = Tc = 0.0f; // 默认情况，所有相导通时间为0
+            Va = 0.0f;
+            Vb = 0.0f;
+            Vc = 0.0f;
             break;
     }
-    
-    // 计算偏移量，确保所有占空比在0-1之间
-    float offset = (Ta + Tb + Tc) / 3.0f; // 计算平均偏移量
-    
-    // 计算最终的占空比
-    float dutyA = (Ta - offset) / Ts + 0.5f; // A相占空比，0-1之间
-    float dutyB = (Tb - offset) / Ts + 0.5f; // B相占空比，0-1之间
-    float dutyC = (Tc - offset) / Ts + 0.5f; // C相占空比，0-1之间
-    
-    // 限幅处理，确保占空比在0-1范围内
-    dutyA = clampf_val(dutyA, 0.0f, 1.0f); // A相占空比限幅
-    dutyB = clampf_val(dutyB, 0.0f, 1.0f); // B相占空比限幅
-    dutyC = clampf_val(dutyC, 0.0f, 1.0f); // C相占空比限幅
-    
-    // 计算PWM比较值（同时设置A和B比较器，用于互补输出）
-    handle->CMPA1 = handle->CMPB1 = (uint16_t)(dutyA * (float)TBPRD_VAL + 0.5f); // A相PWM比较值
-    handle->CMPA2 = handle->CMPB2 = (uint16_t)(dutyB * (float)TBPRD_VAL + 0.5f); // B相PWM比较值
-    handle->CMPA3 = handle->CMPB3 = (uint16_t)(dutyC * (float)TBPRD_VAL + 0.5f); // C相PWM比较值
-    
-    // 记录三相电压值
-    handle->Va = dutyA * handle->Vdc; // A相电压，单位：V
-    handle->Vb = dutyB * handle->Vdc; // B相电压，单位：V
-    handle->Vc = dutyC * handle->Vdc; // C相电压，单位：V
+
+    // 计算偏移电压（用于中心对齐PWM）
+    float V_offset = (Va + Vb + Vc) / 3.0f;
+
+    // 调整电压，加入偏移量
+    Va -= V_offset;
+    Vb -= V_offset;
+    Vc -= V_offset;
+
+    // 计算占空比
+    float dutyA = 0.5f + Va / handle->Vdc;
+    float dutyB = 0.5f + Vb / handle->Vdc;
+    float dutyC = 0.5f + Vc / handle->Vdc;
+
+    // 限幅处理
+    dutyA = clampf_val(dutyA, 0.0f, 1.0f);
+    dutyB = clampf_val(dutyB, 0.0f, 1.0f);
+    dutyC = clampf_val(dutyC, 0.0f, 1.0f);
+
+    // 计算比较值
+    handle->CMPA1 = (uint16_t)(dutyA * (float)TBPRD_VAL);
+    handle->CMPB1 = (uint16_t)((1.0f - dutyA) * (float)TBPRD_VAL);
+    handle->CMPA2 = (uint16_t)(dutyB * (float)TBPRD_VAL);
+    handle->CMPB2 = (uint16_t)((1.0f - dutyB) * (float)TBPRD_VAL);
+    handle->CMPA3 = (uint16_t)(dutyC * (float)TBPRD_VAL);
+    handle->CMPB3 = (uint16_t)((1.0f - dutyC) * (float)TBPRD_VAL);
+
+    // 保存扇区
+    handle->sector = sector;
 }
 
 /* ======================== 编码器实现 ======================== */
@@ -729,4 +853,120 @@ void EPWM_SetDuty(float dutyA, float dutyB, float dutyC)
     // 计算比较值
     uint16_t cmpA = (uint16_t)(dutyA * (float)TBPRD_VAL + 0.5f); // 计算A相的比较值
     uint16_t cmpB = (uint16_t)(dutyB * (float)TBPRD_VAL + 0.5f); // 计算B相的比较值
-    uint16_t cmpC = (uint16_t)(dutyC * (float)TBPRD
+    uint16_t cmpC = (uint16_t)(dutyC * (float)TBPRD_VAL + 0.5f); // 计算C相的比较值
+}
+
+/**
+ * @brief 主函数
+ * @details 程序的主入口点，初始化系统和外设，执行电气角度校准，
+ *          然后进入主循环。
+ */
+int main(void)
+{
+    // 初始化系统
+    Device_init();              // 初始化设备
+    Device_initGPIO();          // 初始化GPIO
+    Interrupt_initModule();     // 初始化中断模块
+    Interrupt_initVectorTable(); // 初始化中断向量表
+
+    // 初始化外设
+    InitPeripherals();
+
+    // 进行电气角度校准
+    DoElectricalAlignment();
+
+    // 使能全局中断
+    EINT;  // 使能全局中断
+    ERTM;  // 使能实时模式
+
+    // 主循环
+    while(1)
+    {
+        // 这里可以添加控制逻辑
+        // 例如：设置参考电流、运行FOC算法等
+
+        // 软件延时
+        uint32_t i;
+        for(i = 0; i < 1000000; i++)
+        {
+            // 空循环
+        }
+    }
+}
+
+/**
+ * @brief 初始化所有外设
+ * @details 初始化EPWM、ADC、编码器等外设，并注册ADC中断。
+ */
+void InitPeripherals(void)
+{
+    // 初始化EPWM
+    EPWM_Init();
+
+    // 初始化ADC
+    ADC_Init();
+
+    // 初始化编码器
+    Encoder_Init();
+
+    // 注册ADC中断
+    Interrupt_register(INT_ADCA1, &ADC_Isr);
+    Interrupt_enable(INT_ADCA1);
+}
+
+/**
+ * @brief 电气角度校准
+ * @details 执行电机的电气角度校准过程，确保编码器的机械角度
+ *          与电机的电气角度对应正确。
+ */
+void DoElectricalAlignment(void)
+{
+    // 设置校准电流
+    // float align_current = 0.5f; // 0.5A
+
+    // 设置校准时间
+    // uint32_t align_time = 500; // 500ms
+
+    // 执行电气角度校准
+    // ... 校准逻辑 ...
+
+    // 标记编码器已校准
+    encoder_calibrated = true;
+}
+
+/**
+ * @brief 编码器索引中断服务程序
+ * @details 处理编码器索引信号中断，标记索引信号已检测，
+ *          并清除相应的中断标志。
+ */
+__interrupt void eqep_index_isr(void)
+{
+    // 标记索引信号已检测
+    index_detected = true;
+
+    // 清除中断标志
+    EQEP_clearInterruptStatus(EQEP1_BASE, EQEP_INT_INDEX_EVNT_LATCH);
+    Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP6);
+}
+
+/**
+ * @brief 电气角度校准函数
+ * @details 等待编码器索引信号，检测到后重置编码器位置，
+ *          并计算初始的机械角度和电气角度。
+ */
+void calibrate_electrical_angle(void)
+{
+    // 等待编码器索引信号
+    index_detected = false;
+    while(!index_detected)
+    {
+        // 可以在这里添加一个超时机制，防止无限等待
+        // 例如：如果超过一定时间没有检测到索引信号，使用当前位置作为参考
+    }
+
+    // 索引信号检测到后，重置编码器位置
+    Encoder_Reset();
+
+    // 设置机械角度为0
+    motor_angle_mech_rad = 0.0f;
+}
