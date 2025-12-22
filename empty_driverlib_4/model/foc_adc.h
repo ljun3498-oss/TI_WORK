@@ -18,21 +18,21 @@
 
 /**
  * @brief A相电流ADC通道
- * @details 定义为ADC_ADCSOC00_CHANNEL_0，用于测量A相电流
+ * @details 定义为ADC_CH_ADCIN0，用于测量A相电流
  */
-#define ADC_CH_CURRENT_A    ADC_ADCSOC00_CHANNEL_0    // A相电流
+#define ADC_CH_CURRENT_A    ADC_CH_ADCIN0    // A相电流
 
 /**
  * @brief B相电流ADC通道
- * @details 定义为ADC_ADCSOC01_CHANNEL_1，用于测量B相电流
+ * @details 定义为ADC_CH_ADCIN1，用于测量B相电流
  */
-#define ADC_CH_CURRENT_B    ADC_ADCSOC01_CHANNEL_1    // B相电流
+#define ADC_CH_CURRENT_B    ADC_CH_ADCIN1    // B相电流
 
 /**
  * @brief C相电流ADC通道
- * @details 定义为ADC_ADCSOC02_CHANNEL_2，用于测量C相电流
+ * @details 定义为ADC_CH_ADCIN2，用于测量C相电流
  */
-#define ADC_CH_CURRENT_C    ADC_ADCSOC02_CHANNEL_2    // C相电流
+#define ADC_CH_CURRENT_C    ADC_CH_ADCIN2    // C相电流
 
 // 函数声明
 

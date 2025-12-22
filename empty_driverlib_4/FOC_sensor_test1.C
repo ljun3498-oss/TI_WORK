@@ -128,10 +128,13 @@ __interrupt void adc_isr(void)
     // SVPWM计算
     svpwm_compute(&svpwm_handle, Valpha, Vbeta);
 
-    // 设置PWM占空比
+    // 设置PWM占空比（同时设置比较器A和B，用于互补输出）
     EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, svpwm_handle.CMPA1);
+    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, svpwm_handle.CMPB1);
     EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, svpwm_handle.CMPA2);
+    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, svpwm_handle.CMPB2);
     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, svpwm_handle.CMPA3);
+    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, svpwm_handle.CMPB3);
 
     // 清除中断标志
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
@@ -148,4 +151,27 @@ __interrupt void eqep_index_isr(void)
     // 清除中断标志
     EQEP_clearInterruptStatus(EQEP1_BASE, EQEP_INT_INDEX_EVNT_LATCH);
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP6);
+}
+
+/**
+ * @brief 电气角度校准函数
+ */
+void calibrate_electrical_angle(void)
+{
+    // 等待编码器索引信号
+    index_detected = false;
+    while(!index_detected)
+    {
+        // 可以在这里添加一个超时机制，防止无限等待
+        // 例如：如果超过一定时间没有检测到索引信号，使用当前位置作为参考
+    }
+
+    // 索引信号检测到后，重置编码器位置
+    Encoder_Reset();
+
+    // 设置机械角度为0
+    motor_angle_mech_rad = 0.0f;
+
+    // 计算电气角度（考虑极对数）
+    motor_angle_elec_rad = motor_angle_mech_rad * MOTOR_POLE_PAIRS;
 }

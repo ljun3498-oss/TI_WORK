@@ -121,10 +121,10 @@ void EPWM_Init(void)
     EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_A);                         // 启用ADC触发
 
     // 启动PWM
-    // EPWM_enableModule已被替换为正确的API调用
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1); // 启用EPWM1外设时钟
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM2); // 启用EPWM2外设时钟
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM3); // 启用EPWM3外设时钟
+    // 启用PWM模块
+    EPWM_enableModule(EPWM1_BASE); // 启用EPWM1模块
+    EPWM_enableModule(EPWM2_BASE); // 启用EPWM2模块
+    EPWM_enableModule(EPWM3_BASE); // 启用EPWM3模块
 }
 
 /**

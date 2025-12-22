@@ -80,10 +80,10 @@ void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta)
     dutyB = clampf_val(dutyB, 0.0f, 1.0f); // B相占空比限幅
     dutyC = clampf_val(dutyC, 0.0f, 1.0f); // C相占空比限幅
 
-    // 计算PWM比较值
-    handle->CMPA1 = (uint16_t)(dutyA * (float)TBPRD_VAL + 0.5f); // A相PWM比较值
-    handle->CMPA2 = (uint16_t)(dutyB * (float)TBPRD_VAL + 0.5f); // B相PWM比较值
-    handle->CMPA3 = (uint16_t)(dutyC * (float)TBPRD_VAL + 0.5f); // C相PWM比较值
+    // 计算PWM比较值（同时设置A和B比较器，用于互补输出）
+    handle->CMPA1 = handle->CMPB1 = (uint16_t)(dutyA * (float)TBPRD_VAL + 0.5f); // A相PWM比较值
+    handle->CMPA2 = handle->CMPB2 = (uint16_t)(dutyB * (float)TBPRD_VAL + 0.5f); // B相PWM比较值
+    handle->CMPA3 = handle->CMPB3 = (uint16_t)(dutyC * (float)TBPRD_VAL + 0.5f); // C相PWM比较值
 
     // 记录三相电压值
     handle->Va = dutyA * handle->Vdc; // A相电压，单位：V

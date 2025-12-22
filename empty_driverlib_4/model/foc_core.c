@@ -107,11 +107,19 @@ float clampf_val(float v, float lo, float hi)
  * @param alpha 输出α轴电流
  * @param beta 输出β轴电流
  */
-void clarke_transform(float ia, float ib, float ic, float *alpha, float *beta)
+/**
+ * @brief Clarke变换
+ * @param[in] Ia A相电流
+ * @param[in] Ib B相电流
+ * @param[in] Ic C相电流
+ * @param[out] Valpha α轴电流
+ * @param[out] Vbeta β轴电流
+ */
+void clarke_transform(float Ia, float Ib, float Ic, float* Valpha, float* Vbeta)
 {
-    // 三相到两相静止坐标系的Clarke变换
-    *alpha = ia;                              // α轴电流等于A相电流
-    *beta = (ia + 2.0f * ib) / 1.7320508075688772f; // β轴电流计算，1.7320508075688772 = √3
+    // Clarke变换公式（考虑三相电流之和为零的情况，只需要Ia和Ib即可）
+    *Valpha = Ia;
+    *Vbeta = (Ia + 2.0f * Ib) / sqrtf(3.0f);
 }
 
 /**

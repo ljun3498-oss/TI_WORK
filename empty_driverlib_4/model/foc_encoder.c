@@ -16,11 +16,10 @@
  */
 __interrupt void eqep_index_isr(void);
 
-/*全局变量
-static uint32_t prev_pos = 0; // 上一次编码器位置
-static uint32_t delta_pos = 0; // 位置变化量
-static uint32_t tick_count = 0; // 时间计数
-*/
+/*全局变量*/
+static uint32_t prev_pos_latch = 0; // 上一次编码器位置锁存值
+static uint32_t curr_pos_latch;     // 当前编码器位置锁存值
+static int32_t delta_pos;           // 位置变化量
 
 /**
  * @brief 编码器初始化函数
@@ -49,6 +48,23 @@ void Encoder_Init(void)
 
     // 配置单元定时器
     EQEP_loadUnitTimer(EQEP1_BASE, (uint32_t)(SYSCLK_HZ * 0.001f)); // 1ms，用于速度计算
+    
+    // 配置捕获单元，用于速度测量
+    EQEP_setCaptureConfig(EQEP1_BASE, 
+                         EQEP_CAPTURE_CLK_DIV_64,  // 捕获时钟预分频
+                         EQEP_UNIT_POS_EVNT_DIV_16); // 单位位置事件预分频
+    
+    // 配置锁存模式
+    EQEP_setLatchMode(EQEP1_BASE, 
+                     EQEP_LATCH_UNIT_TIME_OUT |  // 单位超时事件时锁存
+                     EQEP_LATCH_RISING_INDEX |   // 索引上升沿时锁存
+                     EQEP_LATCH_RISING_STROBE);  // 选通上升沿时锁存
+    
+    // 启用看门狗计时器，防止编码器故障
+    EQEP_enableWatchdog(EQEP1_BASE, 5000); // 5000 * 64 个系统时钟周期
+    
+    // 启用捕获单元
+    EQEP_enableCapture(EQEP1_BASE);
 
     // 使能eQEP1模块
     EQEP_enableModule(EQEP1_BASE); // 启用eQEP1模块，开始工作
@@ -59,18 +75,21 @@ void Encoder_Init(void)
     // 注册中断处理函数
     Interrupt_register(INT_EQEP1, eqep_index_isr); // 注册eQEP1中断处理函数
     Interrupt_enable(INT_EQEP1); // 启用eQEP1中断
+    
+    // 初始化位置锁存值
+    prev_pos_latch = EQEP_getPosition(EQEP1_BASE);
 }
 
 /**
  * @brief 读取编码器数据
- * @details 读取编码器的位置值，计算电机的机械角度和电角度。
+ * @details 读取编码器的位置值，计算电机的机械角度、电角度和速度。
  */
 void Encoder_Read(void)
 {
     // 读取当前位置
     encoder_raw_pos = (int32_t)EQEP_getPosition(EQEP1_BASE); // 读取eQEP1的位置计数器值
     
-    // 如果已完成校准，计算电机角度
+    // 如果已完成校准，计算电机角度和速度
     if (encoder_calibrated)
     {
         // 计算机械角度(弧度)
@@ -84,6 +103,19 @@ void Encoder_Read(void)
         // 角度归一化到0~2π范围
         while (motor_angle_elec_rad >= 2.0f * M_PI) motor_angle_elec_rad -= 2.0f * M_PI;
         while (motor_angle_elec_rad < 0.0f) motor_angle_elec_rad += 2.0f * M_PI;
+        
+        // 读取位置锁存值
+        curr_pos_latch = EQEP_getPositionLatch(EQEP1_BASE);
+        
+        // 计算位置变化量（处理溢出）
+        delta_pos = (int32_t)(curr_pos_latch - prev_pos_latch);
+        
+        // 计算速度（单位：rad/s）
+        motor_speed_rad = (float)delta_pos / (float)(ENCODER_LINES * QUADRATURE_MULT) * 2.0f * M_PI * 1000.0f;
+        // 速度计算公式：(位置变化量 / 总分辨率) * 2π * 1000ms/1s
+        
+        // 更新前一个位置
+        prev_pos_latch = curr_pos_latch;
     }
 }
 
@@ -96,4 +128,6 @@ void Encoder_Reset(void)
     EQEP_setInitialPosition(EQEP1_BASE, 0U); // 设置eQEP1的初始位置为0
     EQEP_setPosition(EQEP1_BASE, 0U); // 设置eQEP1的当前位置为0
     encoder_raw_pos = 0; // 重置全局编码器位置变量为0
+    prev_pos_latch = 0;  // 重置前一个位置锁存值
+    motor_speed_rad = 0.0f; // 重置速度值
 }
