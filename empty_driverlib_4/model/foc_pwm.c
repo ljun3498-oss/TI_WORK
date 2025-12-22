@@ -116,15 +116,14 @@ void EPWM_Init(void)
                                  EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB); // 时基向上计数到CMPB时，EPWM3B输出低电平
 
     // 配置SOC触发
-    EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO); // 设置ADC触发源为EPWM1计数器为0时
-    EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_A, 1);           // 设置触发事件的预分频为1
-    EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_A);                         // 启用ADC触发
+    EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO);
+    EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_A, 1);
+    EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_A);
 
     // 启动PWM
-    // 启用PWM模块
-    EPWM_enableModule(EPWM1_BASE); // 启用EPWM1模块
-    EPWM_enableModule(EPWM2_BASE); // 启用EPWM2模块
-    EPWM_enableModule(EPWM3_BASE); // 启用EPWM3模块
+    EPWM_enableModule(EPWM1_BASE);
+    EPWM_enableModule(EPWM2_BASE);
+    EPWM_enableModule(EPWM3_BASE);
 }
 
 /**
