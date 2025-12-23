@@ -92,6 +92,7 @@ model/foc_pwm.obj: ../model/foc_core.h
 model/foc_pwm.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h
 model/foc_pwm.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h
 model/foc_pwm.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h
+model/foc_pwm.obj: C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h
 
 ../model/foc_pwm.c:
 
@@ -276,4 +277,6 @@ D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h:
 D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h:
 
 D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h:
+
+C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h:
 

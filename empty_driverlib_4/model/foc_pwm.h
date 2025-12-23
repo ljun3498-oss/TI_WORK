@@ -14,6 +14,7 @@
 void EPWM_Init(void);
 
 // PWM占空比设置函数 - 设置EPWM模块的占空比
-void EPWM_SetDuty(uint16_t epwm_base, uint16_t duty);
+void EPWM_SetDuty(float dutyA, float dutyB, float dutyC);
 
 #endif // FOC_PWM_H
+
