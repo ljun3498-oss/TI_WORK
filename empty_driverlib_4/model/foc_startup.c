@@ -89,9 +89,9 @@ void Startup_exec(void)
                 open_loop_angle += startup_params.open_loop_speed * DT;
                 
                 // 确保角度在0到2π之间
-                if(open_loop_angle >= 2.0f * M_PI)
+                if(open_loop_angle >= 2.0f * M_PI_F)
                 {
-                    open_loop_angle -= 2.0f * M_PI;
+                    open_loop_angle -= 2.0f * M_PI_F;
                 }
                 
                 // 这里需要在主控制循环中使用这个计算出的电角度
@@ -103,7 +103,7 @@ void Startup_exec(void)
         case STARTUP_STATE_CLOSE_LOOP:
         {
             // 检查是否达到切换到闭环的条件
-            if(fabsf(motor_rpm) >= startup_params.transition_speed * 60.0f / (2.0f * M_PI))
+            if(fabsf(motor_rpm) >= startup_params.transition_speed * 60.0f / (2.0f * M_PI_F))
             {
                 // 达到条件，启动完成
                 startup_params.state = STARTUP_STATE_COMPLETE;

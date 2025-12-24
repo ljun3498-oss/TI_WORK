@@ -173,7 +173,7 @@ void InitPeripherals(void)
     ADC_Init();
 
     // 初始化编码器
-    Encoder_Init();
+    Encoder_init();
 
     // 注册ADC中断
     Interrupt_register(INT_ADCA1, &adc_isr);
@@ -187,8 +187,8 @@ void InitPeripherals(void)
 // 校准电气角度函数
 void calibrate_electrical_angle(void)
 {
-    // 读取编码器位置 (注意：Encoder_Read()函数没有返回值，它会更新全局变量)
-    Encoder_Read();
+    // 读取编码器位置 (注意：Encoder_update()函数没有返回值，它会更新全局变量)
+    Encoder_update();
     
     // 计算机械角度 (使用正确的ENCODER_CPR宏)
     float mechanical_angle = (float)encoder_raw_pos / ENCODER_CPR * 2.0f * M_PI;
@@ -204,7 +204,7 @@ __interrupt void adc_isr(void)
     ADC_Read_Current();
 
     // 读取编码器
-    Encoder_Read();
+    Encoder_update();
 
     // 执行FOC算法
     float Valpha, Vbeta, Id_meas, Iq_meas, Vd, Vq;
@@ -257,6 +257,9 @@ __interrupt void eqep_index_isr(void)
     EQEP_clearInterruptStatus(EQEP1_BASE, EQEP_INT_INDEX_EVNT_LATCH);
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP6);
 }
+
+
+
 
 
 

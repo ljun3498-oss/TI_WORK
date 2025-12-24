@@ -7,6 +7,11 @@
 #include <stdbool.h>    // 包含布尔类型定义
 #include <math.h>       // 包含数学函数库
 
+// 数学常量定义
+#ifndef M_PI_F
+#define M_PI_F 3.14159265358979323846f  // PI常量的float版本
+#endif
+
 // 包含TI DriverLib头文件 - 提供对TI C2000系列处理器外设的访问函数
 #include "driverlib.h"
 
@@ -73,6 +78,21 @@
 // Q轴电流环积分增益初始值 - 已调整为适应7.8A电流
 #define KI_IQ_INIT  80.0f                           // Q轴电流环积分增益（调整为适应7.8A电流）
 
+// 速度环PI参数初始值
+#define KP_SPEED_INIT  0.1f                         // 速度环比例增益
+#define KI_SPEED_INIT  0.5f                         // 速度环积分增益
+
+// 位置环P参数初始值
+#define KP_POS_INIT    0.01f                        // 位置环比例增益
+
+// 速度限制参数
+#define MAX_SPEED_RAD   100.0f                      // 最大速度(rad/s)
+#define MIN_SPEED_RAD   -100.0f                     // 最小速度(rad/s)
+
+// 位置限制参数
+#define MAX_POS_RAD     (2.0f * M_PI)               // 最大位置(rad)
+#define MIN_POS_RAD     0.0f                        // 最小位置(rad)
+
 // ADC到电流的转换系数
 // ADC计数到安培的转换系数 - 计算方法：最大相电流(7.8A)除以ADC最大值(4096)，约等于0.001904
 #define ADC_COUNTS_TO_AMP   0.001904f               // ADC计数到安培的转换系数（7.8A/4096≈0.001904）
@@ -110,11 +130,22 @@ extern volatile float Id_ref, Iq_ref;                // D/Q轴电流参考值
 // D/Q轴积分项 - 用于PI控制器的积分计算
 extern float Id_int, Iq_int;                  // D/Q轴积分项
 
-// D轴PI参数 - KP_ID为比例增益，KI_ID为积分增益
+// D/Q轴PI参数 - KP_ID为比例增益，KI_ID为积分增益
 extern float KP_ID, KI_ID;                    // D轴PI参数
 
 // Q轴PI参数 - KP_IQ为比例增益，KI_IQ为积分增益
 extern float KP_IQ, KI_IQ;                    // Q轴PI参数
+
+// 速度环PI参数
+extern float KP_SPEED, KI_SPEED;              // 速度环PI参数
+extern float speed_int;                       // 速度环积分项
+
+// 位置环P参数
+extern float KP_POS;                          // 位置环P参数
+
+// 目标位置和速度
+extern volatile float target_pos_rad;         // 目标位置(rad)
+extern volatile float target_speed_rad;       // 目标速度(rad/s)
 
 // 过流故障标志 - 当检测到过流时设置为true
 extern volatile bool overcurrent_fault;              // 过流故障标志
@@ -138,5 +169,14 @@ float pi_id(float err);
 
 // Q轴电流PI控制器 - 计算Q轴电流误差的PI控制输出
 float pi_iq(float err);
+
+// 速度环PI控制器 - 计算速度误差的PI控制输出
+float pi_speed(float err);
+
+// 位置环P控制器 - 计算位置误差的P控制输出
+float p_position(float err);
+
+// 位置控制函数 - 实现位置环和速度环的级联控制
+void position_control(void);
 
 #endif // FOC_CORE_H
