@@ -17,4 +17,7 @@
 // 包含PWM模块头文件 - 用于初始化和配置PWM模块，生成控制电机的脉冲信号
 #include "foc_pwm.h"
 
+// 包含启动模块头文件 - 用于处理电机启动序列，解决编码器位置未知和电机机械位置未知的问题
+#include "foc_startup.h"
+
 #endif // FOC_H

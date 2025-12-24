@@ -37,7 +37,12 @@
    {
       "directory" : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/CPU1_RAM",
       "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DDEBUG -DCPU1 -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/CPU1_RAM/syscfg\" -DF2837xD=1 -xc",
-      "file"      : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/FOC_sensor_test1.C"
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/model/foc_startup.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DDEBUG -DCPU1 -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/CPU1_RAM/syscfg\" -DF2837xD=1 -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/FOC_auto_start.C"
    },
    {
       "directory" : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/CPU1_RAM",

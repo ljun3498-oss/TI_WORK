@@ -10,7 +10,7 @@ GEN_OPTS__FLAG := --cmd_file="syscfg/board.opt" --cmd_file="syscfg/c2000ware_lib
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./FOC_sensor_test1.obj" \
+"./FOC_auto_start.obj" \
 "./syscfg/board.obj" \
 "./syscfg/c2000ware_libraries.obj" \
 "./device/F2837xD_CodeStartBranch.obj" \
@@ -19,6 +19,7 @@ ORDERED_OBJS += \
 "./model/foc_core.obj" \
 "./model/foc_encoder.obj" \
 "./model/foc_pwm.obj" \
+"./model/foc_startup.obj" \
 "./model/foc_svpwm.obj" \
 "../2837xD_RAM_lnk_cpu1.cmd" \
 "C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib.lib" \
@@ -155,9 +156,9 @@ empty_driverlib_4.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "FOC_sensor_test1.obj" "syscfg\board.obj" "syscfg\c2000ware_libraries.obj" "device\F2837xD_CodeStartBranch.obj" "device\device.obj" "model\foc_adc.obj" "model\foc_core.obj" "model\foc_encoder.obj" "model\foc_pwm.obj" "model\foc_svpwm.obj" 
-	-$(RM) "syscfg\board.d" "syscfg\c2000ware_libraries.d" "device\device.d" "model\foc_adc.d" "model\foc_core.d" "model\foc_encoder.d" "model\foc_pwm.d" "model\foc_svpwm.d" 
-	-$(RM) "FOC_sensor_test1.d" 
+	-$(RM) "FOC_auto_start.obj" "syscfg\board.obj" "syscfg\c2000ware_libraries.obj" "device\F2837xD_CodeStartBranch.obj" "device\device.obj" "model\foc_adc.obj" "model\foc_core.obj" "model\foc_encoder.obj" "model\foc_pwm.obj" "model\foc_startup.obj" "model\foc_svpwm.obj" 
+	-$(RM) "syscfg\board.d" "syscfg\c2000ware_libraries.d" "device\device.d" "model\foc_adc.d" "model\foc_core.d" "model\foc_encoder.d" "model\foc_pwm.d" "model\foc_startup.d" "model\foc_svpwm.d" 
+	-$(RM) "FOC_auto_start.d" 
 	-$(RM) "device\F2837xD_CodeStartBranch.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
