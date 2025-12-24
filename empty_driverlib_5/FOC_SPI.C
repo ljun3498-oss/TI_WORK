@@ -7,21 +7,27 @@
 #define DATA_FRAME_SIZE     10
 #define FRAME_HEADER        0xABCD
 
+// --- 数据结构 ---
+typedef struct {
+    float v_a, v_b, v_c;    // 三相电压
+    float i_a, i_b, i_c;    // 三相电流
+    float speed;            // 电机转速
+    float torque;           // 电机转矩
+} MotorParams;
+
 // --- 全局变量 ---
+MotorParams motorParams = {220.5, 220.1, 219.8, 5.2, 5.1, 5.3, 1500.0, 12.5};
 uint16_t spiTxBuffer[DATA_FRAME_SIZE];
 uint16_t spiRxBuffer[DATA_FRAME_SIZE]; // 必须提供，用于存放同步接收的数据
-
-// 模拟电机参数
-float v_a = 220.5, v_b = 220.1, v_c = 219.8;
-float i_a = 5.2, i_b = 5.1, i_c = 5.3;
-float motor_speed = 1500.0;
-float motor_torque = 12.5;
+volatile bool spiDataReceived = false;
 
 // --- 函数声明 ---
 void initGPIO(void);
 void initMotorSPI(void);
 void sendMotorData(void);
+void processReceivedData(void);
 __interrupt void cpu_timer0_isr(void);
+__interrupt void spiA_isr(void);
 
 // --- 主函数 ---
 void main(void)
@@ -53,15 +59,24 @@ void main(void)
 
     // 6. 使能中断
     IER |= INTERRUPT_CPU_INT1;
+    IER |= INTERRUPT_CPU_INT6; // SPI中断所在组
     Interrupt_enable(INT_TIMER0);
+    Interrupt_enable(INT_SPIA_RX);
     EINT;
     ERTM;
 
     // 主循环
     while(1)
     {
-        // 实际电机算法通常放在中断中
-        // 此处可处理低优先级任务
+        // 处理接收到的SPI数据
+        if(spiDataReceived)
+        {
+            processReceivedData();
+            spiDataReceived = false;
+        }
+        
+        // 其他低优先级任务
+        // 例如LED闪烁、状态监控等
     }
 }
 
@@ -73,6 +88,16 @@ void initMotorSPI(void)
     SPI_setConfig(MOTOR_SPI_BASE, DEVICE_LSPCLK_FREQ, SPI_PROT_POL0PHA0,
                   SPI_MODE_CONTROLLER, 10000000, 16);
 
+    // 配置FIFO中断级别
+    SPI_setFIFOInterruptLevel(MOTOR_SPI_BASE, SPI_FIFO_TX8, SPI_FIFO_RX8);
+    
+    // 启用SPI中断
+    SPI_enableInterrupt(MOTOR_SPI_BASE, SPI_INT_RX_DATA_TX_EMPTY | SPI_INT_RX_OVERRUN);
+    
+    // 注册SPI中断处理函数
+    Interrupt_register(INT_SPIA_RX, &spiA_isr);
+    
+    // 其他配置
     SPI_enableFIFO(MOTOR_SPI_BASE);
     SPI_setEmulationMode(MOTOR_SPI_BASE, SPI_EMULATION_FREE_RUN);
     SPI_enableModule(MOTOR_SPI_BASE);
@@ -99,17 +124,38 @@ void sendMotorData(void)
 {
     uint16_t i;
     uint16_t checksum = 0;
+    
+    // 参数范围检查
+    if(motorParams.v_a > 400.0f) motorParams.v_a = 400.0f;
+    if(motorParams.v_a < 0.0f) motorParams.v_a = 0.0f;
+    if(motorParams.v_b > 400.0f) motorParams.v_b = 400.0f;
+    if(motorParams.v_b < 0.0f) motorParams.v_b = 0.0f;
+    if(motorParams.v_c > 400.0f) motorParams.v_c = 400.0f;
+    if(motorParams.v_c < 0.0f) motorParams.v_c = 0.0f;
+    
+    if(motorParams.i_a > 20.0f) motorParams.i_a = 20.0f;
+    if(motorParams.i_a < -20.0f) motorParams.i_a = -20.0f;
+    if(motorParams.i_b > 20.0f) motorParams.i_b = 20.0f;
+    if(motorParams.i_b < -20.0f) motorParams.i_b = -20.0f;
+    if(motorParams.i_c > 20.0f) motorParams.i_c = 20.0f;
+    if(motorParams.i_c < -20.0f) motorParams.i_c = -20.0f;
+    
+    if(motorParams.speed > 3000.0f) motorParams.speed = 3000.0f;
+    if(motorParams.speed < 0.0f) motorParams.speed = 0.0f;
+    
+    if(motorParams.torque > 50.0f) motorParams.torque = 50.0f;
+    if(motorParams.torque < -50.0f) motorParams.torque = -50.0f;
 
     // 数据填充与比例缩放
     spiTxBuffer[0] = FRAME_HEADER;
-    spiTxBuffer[1] = (uint16_t)(v_a * 10.0f);
-    spiTxBuffer[2] = (uint16_t)(v_b * 10.0f);
-    spiTxBuffer[3] = (uint16_t)(v_c * 10.0f);
-    spiTxBuffer[4] = (uint16_t)(i_a * 100.0f);
-    spiTxBuffer[5] = (uint16_t)(i_b * 100.0f);
-    spiTxBuffer[6] = (uint16_t)(i_c * 100.0f);
-    spiTxBuffer[7] = (uint16_t)motor_speed;
-    spiTxBuffer[8] = (uint16_t)(motor_torque * 100.0f);
+    spiTxBuffer[1] = (uint16_t)(motorParams.v_a * 10.0f);
+    spiTxBuffer[2] = (uint16_t)(motorParams.v_b * 10.0f);
+    spiTxBuffer[3] = (uint16_t)(motorParams.v_c * 10.0f);
+    spiTxBuffer[4] = (uint16_t)(motorParams.i_a * 100.0f);
+    spiTxBuffer[5] = (uint16_t)(motorParams.i_b * 100.0f);
+    spiTxBuffer[6] = (uint16_t)(motorParams.i_c * 100.0f);
+    spiTxBuffer[7] = (uint16_t)motorParams.speed;
+    spiTxBuffer[8] = (uint16_t)(motorParams.torque * 100.0f);
 
     // 计算校验和
     for(i = 1; i < 9; i++) checksum += spiTxBuffer[i];
@@ -119,15 +165,72 @@ void sendMotorData(void)
     SPI_transmitN16BitWord(MOTOR_SPI_BASE, spiTxBuffer, DATA_FRAME_SIZE, 0);
 }
 
+// --- 处理接收到的数据 ---
+void processReceivedData(void)
+{
+    uint16_t checksum = 0;
+    uint16_t i;
+    
+    // 验证接收到的数据
+    for(i = 1; i < 9; i++)
+    {
+        checksum += spiRxBuffer[i];
+    }
+    
+    // 检查校验和和帧头
+    if(spiRxBuffer[9] == checksum && spiRxBuffer[0] == FRAME_HEADER)
+    {
+        // 数据有效，处理响应
+        // 例如这里可以解析从设备返回的控制命令
+        // 实际应用中根据通信协议定义处理
+    }
+    else
+    {
+        // 数据无效，处理错误
+        // 可以记录错误次数，超过阈值时采取措施
+    }
+}
+
 // --- 定时器中断服务函数 ---
 __interrupt void cpu_timer0_isr(void)
 {
     // 1. 在此处更新电机参数 (实际应用中来自 ADC 采样或编码器计算)
-    v_a += 0.1f; // 模拟动态变化
+    motorParams.v_a += 0.1f; // 模拟动态变化
     
     // 2. 发送数据
     sendMotorData();
 
     // 3. 应答中断
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
+}
+
+// --- SPI中断服务函数 ---
+__interrupt void spiA_isr(void)
+{
+    uint16_t intStatus;
+    
+    // 读取中断状态
+    intStatus = SPI_getInterruptStatus(MOTOR_SPI_BASE);
+    
+    // 处理接收数据中断
+    if(intStatus & SPI_INT_RX_DATA_TX_EMPTY)
+    {
+        // 读取接收的数据
+        SPI_receiveN16BitWord(MOTOR_SPI_BASE, spiRxBuffer, DATA_FRAME_SIZE, 0);
+        spiDataReceived = true;
+        
+        // 清除中断标志
+        SPI_clearInterruptStatus(MOTOR_SPI_BASE, SPI_INT_RX_DATA_TX_EMPTY);
+    }
+    
+    // 处理接收溢出中断
+    if(intStatus & SPI_INT_RX_OVERRUN)
+    {
+        // 清除溢出标志
+        SPI_clearInterruptStatus(MOTOR_SPI_BASE, SPI_INT_RX_OVERRUN);
+        // 可以添加错误处理代码
+    }
+    
+    // 应答中断
+    Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP6);
 }

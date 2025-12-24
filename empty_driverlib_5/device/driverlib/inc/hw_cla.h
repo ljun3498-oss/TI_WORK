@@ -2,7 +2,7 @@
 //
 // FILE:    hw_cla.h
 //
-// TITLE:   Definitions for the CLA registers.
+// TITLE:   CLA寄存器定义
 //
 //###########################################################################
 // 
@@ -45,195 +45,195 @@
 
 //*************************************************************************************************
 //
-// The following are defines for the CLA register offsets
+// 以下是CLA寄存器偏移量的定义
 //
 //*************************************************************************************************
 #ifndef __TMS320C28XX_CLA__
-#define CLA_O_MVECT1     0x0U    // Task Interrupt Vector
-#define CLA_O_MVECT2     0x1U    // Task Interrupt Vector
-#define CLA_O_MVECT3     0x2U    // Task Interrupt Vector
-#define CLA_O_MVECT4     0x3U    // Task Interrupt Vector
-#define CLA_O_MVECT5     0x4U    // Task Interrupt Vector
-#define CLA_O_MVECT6     0x5U    // Task Interrupt Vector
-#define CLA_O_MVECT7     0x6U    // Task Interrupt Vector
-#define CLA_O_MVECT8     0x7U    // Task Interrupt Vector
-#define CLA_O_MCTL       0x10U   // Control Register
-#define CLA_O_MIFR       0x20U   // Interrupt Flag Register
-#define CLA_O_MIOVF      0x21U   // Interrupt Overflow Flag Register
-#define CLA_O_MIFRC      0x22U   // Interrupt Force Register
-#define CLA_O_MICLR      0x23U   // Interrupt Flag Clear Register
-#define CLA_O_MICLROVF   0x24U   // Interrupt Overflow Flag Clear Register
-#define CLA_O_MIER       0x25U   // Interrupt Enable Register
-#define CLA_O_MIRUN      0x26U   // Interrupt Run Status Register
-#define CLA_O_MPC        0x28U   // CLA Program Counter
-#define CLA_O_MAR0       0x2AU   // CLA Auxiliary Register 0
-#define CLA_O_MAR1       0x2BU   // CLA Auxiliary Register 1
-#define CLA_O_MSTF       0x2EU   // CLA Floating-Point Status Register
-#define CLA_O_MR0        0x30U   // CLA Floating-Point Result Register 0
-#define CLA_O_MR1        0x34U   // CLA Floating-Point Result Register 1
-#define CLA_O_MR2        0x38U   // CLA Floating-Point Result Register 2
-#define CLA_O_MR3        0x3CU   // CLA Floating-Point Result Register 3
+#define CLA_O_MVECT1     0x0U    // 任务中断向量
+#define CLA_O_MVECT2     0x1U    // 任务中断向量
+#define CLA_O_MVECT3     0x2U    // 任务中断向量
+#define CLA_O_MVECT4     0x3U    // 任务中断向量
+#define CLA_O_MVECT5     0x4U    // 任务中断向量
+#define CLA_O_MVECT6     0x5U    // 任务中断向量
+#define CLA_O_MVECT7     0x6U    // 任务中断向量
+#define CLA_O_MVECT8     0x7U    // 任务中断向量
+#define CLA_O_MCTL       0x10U   // 控制寄存器
+#define CLA_O_MIFR       0x20U   // 中断标志寄存器
+#define CLA_O_MIOVF      0x21U   // 中断溢出标志寄存器
+#define CLA_O_MIFRC      0x22U   // 中断强制寄存器
+#define CLA_O_MICLR      0x23U   // 中断标志清除寄存器
+#define CLA_O_MICLROVF   0x24U   // 中断溢出标志清除寄存器
+#define CLA_O_MIER       0x25U   // 中断使能寄存器
+#define CLA_O_MIRUN      0x26U   // 中断运行状态寄存器
+#define CLA_O_MPC        0x28U   // CLA程序计数器
+#define CLA_O_MAR0       0x2AU   // CLA辅助寄存器0
+#define CLA_O_MAR1       0x2BU   // CLA辅助寄存器1
+#define CLA_O_MSTF       0x2EU   // CLA浮点状态寄存器
+#define CLA_O_MR0        0x30U   // CLA浮点结果寄存器0
+#define CLA_O_MR1        0x34U   // CLA浮点结果寄存器1
+#define CLA_O_MR2        0x38U   // CLA浮点结果寄存器2
+#define CLA_O_MR3        0x3CU   // CLA浮点结果寄存器3
 #endif
 
 #ifdef __TMS320C28XX_CLA__
-#define CLA_O_SOFTINTEN    0x0U   // CLA Software Interrupt Enable Register
-#define CLA_O_SOFTINTFRC   0x2U   // CLA Software Interrupt Force Register
+#define CLA_O_SOFTINTEN    0x0U   // CLA软件中断使能寄存器
+#define CLA_O_SOFTINTFRC   0x2U   // CLA软件中断强制寄存器
 #endif
 
 
 #ifndef __TMS320C28XX_CLA__
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the MCTL register
+// 以下是MCTL寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MCTL_HARDRESET   0x1U   // Hard Reset
-#define CLA_MCTL_SOFTRESET   0x2U   // Soft Reset
-#define CLA_MCTL_IACKE       0x4U   // IACK enable
+#define CLA_MCTL_HARDRESET   0x1U   // 硬复位
+#define CLA_MCTL_SOFTRESET   0x2U   // 软复位
+#define CLA_MCTL_IACKE       0x4U   // IACK使能
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the MIFR register
+// 以下是MIFR寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MIFR_INT1   0x1U    // Task 1 Interrupt Flag
-#define CLA_MIFR_INT2   0x2U    // Task 2 Interrupt Flag
-#define CLA_MIFR_INT3   0x4U    // Task 3 Interrupt Flag
-#define CLA_MIFR_INT4   0x8U    // Task 4 Interrupt Flag
-#define CLA_MIFR_INT5   0x10U   // Task 5 Interrupt Flag
-#define CLA_MIFR_INT6   0x20U   // Task 6 Interrupt Flag
-#define CLA_MIFR_INT7   0x40U   // Task 7 Interrupt Flag
-#define CLA_MIFR_INT8   0x80U   // Task 8 Interrupt Flag
+#define CLA_MIFR_INT1   0x1U    // 任务1中断标志
+#define CLA_MIFR_INT2   0x2U    // 任务2中断标志
+#define CLA_MIFR_INT3   0x4U    // 任务3中断标志
+#define CLA_MIFR_INT4   0x8U    // 任务4中断标志
+#define CLA_MIFR_INT5   0x10U   // 任务5中断标志
+#define CLA_MIFR_INT6   0x20U   // 任务6中断标志
+#define CLA_MIFR_INT7   0x40U   // 任务7中断标志
+#define CLA_MIFR_INT8   0x80U   // 任务8中断标志
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the MIOVF register
+// 以下是MIOVF寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MIOVF_INT1   0x1U    // Task 1 Interrupt Overflow Flag
-#define CLA_MIOVF_INT2   0x2U    // Task 2 Interrupt Overflow Flag
-#define CLA_MIOVF_INT3   0x4U    // Task 3 Interrupt Overflow Flag
-#define CLA_MIOVF_INT4   0x8U    // Task 4 Interrupt Overflow Flag
-#define CLA_MIOVF_INT5   0x10U   // Task 5 Interrupt Overflow Flag
-#define CLA_MIOVF_INT6   0x20U   // Task 6 Interrupt Overflow Flag
-#define CLA_MIOVF_INT7   0x40U   // Task 7 Interrupt Overflow Flag
-#define CLA_MIOVF_INT8   0x80U   // Task 8 Interrupt Overflow Flag
+#define CLA_MIOVF_INT1   0x1U    // 任务1中断溢出标志
+#define CLA_MIOVF_INT2   0x2U    // 任务2中断溢出标志
+#define CLA_MIOVF_INT3   0x4U    // 任务3中断溢出标志
+#define CLA_MIOVF_INT4   0x8U    // 任务4中断溢出标志
+#define CLA_MIOVF_INT5   0x10U   // 任务5中断溢出标志
+#define CLA_MIOVF_INT6   0x20U   // 任务6中断溢出标志
+#define CLA_MIOVF_INT7   0x40U   // 任务7中断溢出标志
+#define CLA_MIOVF_INT8   0x80U   // 任务8中断溢出标志
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the MIFRC register
+// 以下是MIFRC寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MIFRC_INT1   0x1U    // Task 1 Interrupt Force
-#define CLA_MIFRC_INT2   0x2U    // Task 2 Interrupt Force
-#define CLA_MIFRC_INT3   0x4U    // Task 3 Interrupt Force
-#define CLA_MIFRC_INT4   0x8U    // Task 4 Interrupt Force
-#define CLA_MIFRC_INT5   0x10U   // Task 5 Interrupt Force
-#define CLA_MIFRC_INT6   0x20U   // Task 6 Interrupt Force
-#define CLA_MIFRC_INT7   0x40U   // Task 7 Interrupt Force
-#define CLA_MIFRC_INT8   0x80U   // Task 8 Interrupt Force
+#define CLA_MIFRC_INT1   0x1U    // 任务1中断强制
+#define CLA_MIFRC_INT2   0x2U    // 任务2中断强制
+#define CLA_MIFRC_INT3   0x4U    // 任务3中断强制
+#define CLA_MIFRC_INT4   0x8U    // 任务4中断强制
+#define CLA_MIFRC_INT5   0x10U   // 任务5中断强制
+#define CLA_MIFRC_INT6   0x20U   // 任务6中断强制
+#define CLA_MIFRC_INT7   0x40U   // 任务7中断强制
+#define CLA_MIFRC_INT8   0x80U   // 任务8中断强制
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the MICLR register
+// 以下是MICLR寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MICLR_INT1   0x1U    // Task 1 Interrupt Flag Clear
-#define CLA_MICLR_INT2   0x2U    // Task 2 Interrupt Flag Clear
-#define CLA_MICLR_INT3   0x4U    // Task 3 Interrupt Flag Clear
-#define CLA_MICLR_INT4   0x8U    // Task 4 Interrupt Flag Clear
-#define CLA_MICLR_INT5   0x10U   // Task 5 Interrupt Flag Clear
-#define CLA_MICLR_INT6   0x20U   // Task 6 Interrupt Flag Clear
-#define CLA_MICLR_INT7   0x40U   // Task 7 Interrupt Flag Clear
-#define CLA_MICLR_INT8   0x80U   // Task 8 Interrupt Flag Clear
+#define CLA_MICLR_INT1   0x1U    // 任务1中断标志清除
+#define CLA_MICLR_INT2   0x2U    // 任务2中断标志清除
+#define CLA_MICLR_INT3   0x4U    // 任务3中断标志清除
+#define CLA_MICLR_INT4   0x8U    // 任务4中断标志清除
+#define CLA_MICLR_INT5   0x10U   // 任务5中断标志清除
+#define CLA_MICLR_INT6   0x20U   // 任务6中断标志清除
+#define CLA_MICLR_INT7   0x40U   // 任务7中断标志清除
+#define CLA_MICLR_INT8   0x80U   // 任务8中断标志清除
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the MICLROVF register
+// 以下是MICLROVF寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MICLROVF_INT1   0x1U    // Task 1 Interrupt Overflow Flag Clear
-#define CLA_MICLROVF_INT2   0x2U    // Task 2 Interrupt Overflow Flag Clear
-#define CLA_MICLROVF_INT3   0x4U    // Task 3 Interrupt Overflow Flag Clear
-#define CLA_MICLROVF_INT4   0x8U    // Task 4 Interrupt Overflow Flag Clear
-#define CLA_MICLROVF_INT5   0x10U   // Task 5 Interrupt Overflow Flag Clear
-#define CLA_MICLROVF_INT6   0x20U   // Task 6 Interrupt Overflow Flag Clear
-#define CLA_MICLROVF_INT7   0x40U   // Task 7 Interrupt Overflow Flag Clear
-#define CLA_MICLROVF_INT8   0x80U   // Task 8 Interrupt Overflow Flag Clear
+#define CLA_MICLROVF_INT1   0x1U    // 任务1中断溢出标志清除
+#define CLA_MICLROVF_INT2   0x2U    // 任务2中断溢出标志清除
+#define CLA_MICLROVF_INT3   0x4U    // 任务3中断溢出标志清除
+#define CLA_MICLROVF_INT4   0x8U    // 任务4中断溢出标志清除
+#define CLA_MICLROVF_INT5   0x10U   // 任务5中断溢出标志清除
+#define CLA_MICLROVF_INT6   0x20U   // 任务6中断溢出标志清除
+#define CLA_MICLROVF_INT7   0x40U   // 任务7中断溢出标志清除
+#define CLA_MICLROVF_INT8   0x80U   // 任务8中断溢出标志清除
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the MIER register
+// 以下是MIER寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MIER_INT1   0x1U    // Task 1 Interrupt Enable
-#define CLA_MIER_INT2   0x2U    // Task 2 Interrupt Enable
-#define CLA_MIER_INT3   0x4U    // Task 3 Interrupt Enable
-#define CLA_MIER_INT4   0x8U    // Task 4 Interrupt Enable
-#define CLA_MIER_INT5   0x10U   // Task 5 Interrupt Enable
-#define CLA_MIER_INT6   0x20U   // Task 6 Interrupt Enable
-#define CLA_MIER_INT7   0x40U   // Task 7 Interrupt Enable
-#define CLA_MIER_INT8   0x80U   // Task 8 Interrupt Enable
+#define CLA_MIER_INT1   0x1U    // 任务1中断使能
+#define CLA_MIER_INT2   0x2U    // 任务2中断使能
+#define CLA_MIER_INT3   0x4U    // 任务3中断使能
+#define CLA_MIER_INT4   0x8U    // 任务4中断使能
+#define CLA_MIER_INT5   0x10U   // 任务5中断使能
+#define CLA_MIER_INT6   0x20U   // 任务6中断使能
+#define CLA_MIER_INT7   0x40U   // 任务7中断使能
+#define CLA_MIER_INT8   0x80U   // 任务8中断使能
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the MIRUN register
+// 以下是MIRUN寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MIRUN_INT1   0x1U    // Task 1 Run Status
-#define CLA_MIRUN_INT2   0x2U    // Task 2 Run Status
-#define CLA_MIRUN_INT3   0x4U    // Task 3 Run Status
-#define CLA_MIRUN_INT4   0x8U    // Task 4 Run Status
-#define CLA_MIRUN_INT5   0x10U   // Task 5 Run Status
-#define CLA_MIRUN_INT6   0x20U   // Task 6 Run Status
-#define CLA_MIRUN_INT7   0x40U   // Task 7 Run Status
-#define CLA_MIRUN_INT8   0x80U   // Task 8 Run Status
+#define CLA_MIRUN_INT1   0x1U    // 任务1运行状态
+#define CLA_MIRUN_INT2   0x2U    // 任务2运行状态
+#define CLA_MIRUN_INT3   0x4U    // 任务3运行状态
+#define CLA_MIRUN_INT4   0x8U    // 任务4运行状态
+#define CLA_MIRUN_INT5   0x10U   // 任务5运行状态
+#define CLA_MIRUN_INT6   0x20U   // 任务6运行状态
+#define CLA_MIRUN_INT7   0x40U   // 任务7运行状态
+#define CLA_MIRUN_INT8   0x80U   // 任务8运行状态
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the _MSTF register
+// 以下是MSTF寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_MSTF_LVF       0x1U         // Latched Overflow Flag
-#define CLA_MSTF_LUF       0x2U         // Latched Underflow Flag
-#define CLA_MSTF_NF        0x4U         // Negative Float Flag
-#define CLA_MSTF_ZF        0x8U         // Zero Float Flag
-#define CLA_MSTF_TF        0x40U        // Test Flag
-#define CLA_MSTF_RNDF32    0x200U       // Round 32-bit Floating-Point Mode
-#define CLA_MSTF_MEALLOW   0x800U       // MEALLOW Status
+#define CLA_MSTF_LVF       0x1U         // 锁定溢出标志
+#define CLA_MSTF_LUF       0x2U         // 锁定下溢标志
+#define CLA_MSTF_NF        0x4U         // 负浮点数标志
+#define CLA_MSTF_ZF        0x8U         // 零浮点数标志
+#define CLA_MSTF_TF        0x40U        // 测试标志
+#define CLA_MSTF_RNDF32    0x200U       // 32位浮点数舍入模式
+#define CLA_MSTF_MEALLOW   0x800U       // MEALLOW状态
 #define CLA_MSTF_RPC_S     12U
-#define CLA_MSTF_RPC_M     0xFFFF000U   // Return PC
+#define CLA_MSTF_RPC_M     0xFFFF000U   // 返回PC
 
 #endif
 
 #ifdef __TMS320C28XX_CLA__
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the SOFTINTEN register
+// 以下是SOFTINTEN寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_SOFTINTEN_TASK1   0x1U    // Configure Software Interrupt or End of Task interrupt.
-#define CLA_SOFTINTEN_TASK2   0x2U    // Configure Software Interrupt or End of Task interrupt.
-#define CLA_SOFTINTEN_TASK3   0x4U    // Configure Software Interrupt or End of Task interrupt.
-#define CLA_SOFTINTEN_TASK4   0x8U    // Configure Software Interrupt or End of Task interrupt.
-#define CLA_SOFTINTEN_TASK5   0x10U   // Configure Software Interrupt or End of Task interrupt.
-#define CLA_SOFTINTEN_TASK6   0x20U   // Configure Software Interrupt or End of Task interrupt.
-#define CLA_SOFTINTEN_TASK7   0x40U   // Configure Software Interrupt or End of Task interrupt.
-#define CLA_SOFTINTEN_TASK8   0x80U   // Configure Software Interrupt or End of Task interrupt.
+#define CLA_SOFTINTEN_TASK1   0x1U    // 配置软件中断或任务结束中断
+#define CLA_SOFTINTEN_TASK2   0x2U    // 配置软件中断或任务结束中断
+#define CLA_SOFTINTEN_TASK3   0x4U    // 配置软件中断或任务结束中断
+#define CLA_SOFTINTEN_TASK4   0x8U    // 配置软件中断或任务结束中断
+#define CLA_SOFTINTEN_TASK5   0x10U   // 配置软件中断或任务结束中断
+#define CLA_SOFTINTEN_TASK6   0x20U   // 配置软件中断或任务结束中断
+#define CLA_SOFTINTEN_TASK7   0x40U   // 配置软件中断或任务结束中断
+#define CLA_SOFTINTEN_TASK8   0x80U   // 配置软件中断或任务结束中断
 
 //*************************************************************************************************
 //
-// The following are defines for the bit fields in the SOFTINTFRC register
+// 以下是SOFTINTFRC寄存器位字段的定义
 //
 //*************************************************************************************************
-#define CLA_SOFTINTFRC_TASK1   0x1U    // Force CLA software interrupt for the corresponding task.
-#define CLA_SOFTINTFRC_TASK2   0x2U    // Force CLA software interrupt for the corresponding task.
-#define CLA_SOFTINTFRC_TASK3   0x4U    // Force CLA software interrupt for the corresponding task.
-#define CLA_SOFTINTFRC_TASK4   0x8U    // Force CLA software interrupt for the corresponding task.
-#define CLA_SOFTINTFRC_TASK5   0x10U   // Force CLA software interrupt for the corresponding task.
-#define CLA_SOFTINTFRC_TASK6   0x20U   // Force CLA software interrupt for the corresponding task.
-#define CLA_SOFTINTFRC_TASK7   0x40U   // Force CLA software interrupt for the corresponding task.
-#define CLA_SOFTINTFRC_TASK8   0x80U   // Force CLA software interrupt for the corresponding task.
+#define CLA_SOFTINTFRC_TASK1   0x1U    // 为对应任务强制产生CLA软件中断
+#define CLA_SOFTINTFRC_TASK2   0x2U    // 为对应任务强制产生CLA软件中断
+#define CLA_SOFTINTFRC_TASK3   0x4U    // 为对应任务强制产生CLA软件中断
+#define CLA_SOFTINTFRC_TASK4   0x8U    // 为对应任务强制产生CLA软件中断
+#define CLA_SOFTINTFRC_TASK5   0x10U   // 为对应任务强制产生CLA软件中断
+#define CLA_SOFTINTFRC_TASK6   0x20U   // 为对应任务强制产生CLA软件中断
+#define CLA_SOFTINTFRC_TASK7   0x40U   // 为对应任务强制产生CLA软件中断
+#define CLA_SOFTINTFRC_TASK8   0x80U   // 为对应任务强制产生CLA软件中断
 
 #endif
 

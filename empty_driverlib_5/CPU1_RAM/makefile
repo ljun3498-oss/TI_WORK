@@ -10,7 +10,7 @@ GEN_OPTS__FLAG := --cmd_file="syscfg/board.opt" --cmd_file="syscfg/c2000ware_lib
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./FOC_CLA_SVPWM.obj" \
+"./FOC_SPI.obj" \
 "./syscfg/board.obj" \
 "./syscfg/c2000ware_libraries.obj" \
 "./device/F2837xD_CodeStartBranch.obj" \
@@ -148,9 +148,9 @@ empty_driverlib_5.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "FOC_CLA_SVPWM.obj" "syscfg\board.obj" "syscfg\c2000ware_libraries.obj" "device\F2837xD_CodeStartBranch.obj" "device\device.obj" 
+	-$(RM) "FOC_SPI.obj" "syscfg\board.obj" "syscfg\c2000ware_libraries.obj" "device\F2837xD_CodeStartBranch.obj" "device\device.obj" 
 	-$(RM) "syscfg\board.d" "syscfg\c2000ware_libraries.d" "device\device.d" 
-	-$(RM) "FOC_CLA_SVPWM.d" 
+	-$(RM) "FOC_SPI.d" 
 	-$(RM) "device\F2837xD_CodeStartBranch.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'

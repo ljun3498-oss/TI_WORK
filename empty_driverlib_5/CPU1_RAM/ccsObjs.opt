@@ -1,4 +1,4 @@
-"./FOC_CLA_SVPWM.obj"
+"./FOC_SPI.obj"
 "./syscfg/board.obj"
 "./syscfg/c2000ware_libraries.obj"
 "./device/F2837xD_CodeStartBranch.obj"

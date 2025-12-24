@@ -197,8 +197,7 @@ typedef enum
 //! It is also used with ADC_setBurstModeConfig() and
 //! ADC_triggerRepeaterSelect().
 //
-//*****************************************************************************
-typedef enum
+//*****************************************************************************typedef enum
 {
     ADC_TRIGGER_SW_ONLY     = 0U,     //!< Software only
     ADC_TRIGGER_CPU1_TINT0  = 1U,     //!< CPU1 Timer 0, TINT0
@@ -598,8 +597,7 @@ ADC_setInterruptSOCTrigger(uint32_t base, ADC_SOCNumber socNumber,
     EDIS;
 }
 
-//*****************************************************************************
-//
+//*****************************************************************************//
 //! Sets the timing of the end-of-conversion pulse
 //!
 //! \param base is the base address of the ADC module.
@@ -2096,3 +2094,5 @@ ADC_setPPBTripLimits(uint32_t base, ADC_PPBNumber ppbNumber,
 #endif
 
 #endif // ADC_H
+
+

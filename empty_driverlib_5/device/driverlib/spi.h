@@ -2,7 +2,7 @@
 //
 // FILE:   spi.h
 //
-// TITLE:  C28x SPI driver.
+// TITLE:  C28x SPI驱动程序。
 //
 //###########################################################################
 // 
@@ -45,8 +45,7 @@
 
 //*****************************************************************************
 //
-// If building with a C++ compiler, make all of the definitions in this header
-// have a C binding.
+// 如果使用C++编译器构建，请使此头文件中的所有定义具有C绑定。
 //
 //*****************************************************************************
 #ifdef __cplusplus
@@ -57,7 +56,7 @@ extern "C"
 //*****************************************************************************
 //
 //! \addtogroup spi_api SPI
-//! \brief This module is used for SPI configurations.
+//! \brief 此模块用于SPI配置。
 //! @{
 //
 //*****************************************************************************
@@ -73,32 +72,30 @@ extern "C"
 #ifndef DOXYGEN_PDF_IGNORE
 //*****************************************************************************
 //
-// Values that can be passed to SPI_enableInterrupt(), SPI_disableInterrupt(),
-// and SPI_clearInterruptStatus() as the intFlags parameter, and returned by
-// SPI_getInterruptStatus().
+// 可传递给SPI_enableInterrupt()、SPI_disableInterrupt()和SPI_clearInterruptStatus()
+// 作为intFlags参数的值，以及由SPI_getInterruptStatus()返回的值。
 //
 //*****************************************************************************
-#define SPI_INT_RX_OVERRUN        0x0001U //!< Receive overrun interrupt
-#define SPI_INT_RX_DATA_TX_EMPTY  0x0002U //!< Data received, transmit empty
-#define SPI_INT_RXFF              0x0004U //!< RX FIFO level interrupt
-#define SPI_INT_TXFF              0x0008U //!< TX FIFO level interrupt
-#define SPI_INT_RXFF_OVERFLOW     0x0010U //!< RX FIFO overflow
+#define SPI_INT_RX_OVERRUN        0x0001U //!< 接收溢出中断
+#define SPI_INT_RX_DATA_TX_EMPTY  0x0002U //!< 数据接收，发送空
+#define SPI_INT_RXFF              0x0004U //!< RX FIFO级别中断
+#define SPI_INT_TXFF              0x0008U //!< TX FIFO级别中断
+#define SPI_INT_RXFF_OVERFLOW     0x0010U //!< RX FIFO溢出
 #endif
 
 
 //*****************************************************************************
 //
-//! This macro definition is used to transmit a byte of data
+//! 此宏定义用于发送一个字节的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param txData is the data to be transmitted over SPI
+//! \param base 指定SPI模块基地址。
+//! \param txData 要通过SPI传输的数据
 //!
-//! This macro definition is to transmit a byte of data.
-//! This macro uses SPI_pollingNonFIFOTransaction function
-//! SPI character length must be configured to 8 bits BEFORE calling the
-//! function
+//! 此宏定义用于发送一个字节的数据。
+//! 此宏使用SPI_pollingNonFIFOTransaction函数
+//! 在调用此函数之前，SPI字符长度必须配置为8位
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 #define SPI_transmitByte(base, txData)                                         \
@@ -106,17 +103,16 @@ extern "C"
 
 //*****************************************************************************
 //
-//! This macro definition is used to transmit a 16-bit word of data
+//! 此宏定义用于发送一个16位字的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param txData is the data to be transmitted over SPI
+//! \param base 指定SPI模块基地址。
+//! \param txData 要通过SPI传输的数据
 //!
-//! This macro definition is to transmit a 16-bit word of data.
-//! This macro uses SPI_pollingNonFIFOTransaction function
-//! SPI character length must be configured to 16 bits BEFORE calling the
-//! function
+//! 此宏定义用于发送一个16位字的数据。
+//! 此宏使用SPI_pollingNonFIFOTransaction函数
+//! 在调用此函数之前，SPI字符长度必须配置为16位
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 #define SPI_transmit16Bits(base, txData)                                       \
@@ -124,21 +120,19 @@ extern "C"
 
 //*****************************************************************************
 //
-//! This macro definition can be used to transmit 'N' bytes of data
+//! 此宏定义可用于发送'N'个字节的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param txBuffer is the transmit buffer to be transmitted over SPI
-//! \param numOfWords is the number of bytes to be transmitted
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param txBuffer 要通过SPI传输的发送缓冲区
+//! \param numOfWords 要传输的字节数
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This macro definition can be used to transmit 'N' bytes of data.
-//! This macro definition uses SPI_pollingFIFOTransaction function.
+//! 此宏定义可用于发送'N'个字节的数据。
+//! 此宏定义使用SPI_pollingFIFOTransaction函数。
 //!
-//! SPI character length must be configured to 8 bits BEFORE calling the
-//! function
+//! 在调用此函数之前，SPI字符长度必须配置为8位
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 #define SPI_transmitNBytes(base, txBuffer, numOfWords, txDelay)                \
@@ -146,20 +140,18 @@ extern "C"
 
 //*****************************************************************************
 //
-//! This macro definition can be used to transmit 'N' 16-bit words of data
+//! 此宏定义可用于发送'N'个16位字的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param txBuffer is the transmit buffer to be transmitted over SPI
-//! \param numOfWords is the number of 16-bit word to be transmitted
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param txBuffer 要通过SPI传输的发送缓冲区
+//! \param numOfWords 要传输的16位字的数量
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function can be used to transmit 'N' 16-bit words of data.
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to 16 bits BEFORE calling the
-//! function
+//! 此函数可用于发送'N'个16位字的数据。
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为16位
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 #define SPI_transmitN16BitWord(base, txBuffer, numOfWords, txDelay)            \
@@ -167,24 +159,20 @@ extern "C"
 
 //*****************************************************************************
 //
-//! This macro definition can be used to transmit 'N' with previously
-//! configured SPI character length
+//! 此宏定义可用于使用先前配置的SPI字符长度发送'N'个数据
 //!
-//! \param base specifies the SPI module base address
-//! \param charLength specifies the SPI character length
-//! \param txBuffer is the transmit buffer to be transmitted over SPI
-//! \param numOfWords is the number of 16-bit word to be transmitted
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址
+//! \param charLength 指定SPI字符长度
+//! \param txBuffer 要通过SPI传输的发送缓冲区
+//! \param numOfWords 要传输的16位字的数量
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This macro definition can be used to transmit 'N' with configurable
-//! SPI character length.
+//! 此宏定义可用于发送具有可配置SPI字符长度的'N'个数据。
 //!
-//! This macro uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to required value BEFORE calling
-//! the function, and passed as the charLength parameter.
+//! 此宏使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为所需值，并作为charLength参数传递。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 #define SPI_transmitNWordsWithCharLength(base, charLength, txBuffer,           \
@@ -194,18 +182,16 @@ extern "C"
 
 //*****************************************************************************
 //
-//! This macro definition is used to receive a byte of data
+//! 此宏定义用于接收一个字节的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param dummyData is the data which is transmitted to initiate
-//!        SPI transaction to receive SPI data
+//! \param base 指定SPI模块基地址。
+//! \param dummyData 用于启动SPI事务以接收SPI数据的传输数据
 //!
-//! This macro definition is to receive a byte of data.
-//! This macro uses SPI_pollingNonFIFOTransaction function
-//! SPI character length must be configured to 8 bits BEFORE calling the
-//! function
+//! 此宏定义用于接收一个字节的数据。
+//! 此宏使用SPI_pollingNonFIFOTransaction函数
+//! 在调用此函数之前，SPI字符长度必须配置为8位
 //!
-//! \return the received byte.
+//! \return 接收到的字节。
 //
 //*****************************************************************************
 #define SPI_receiveByte(base, dummyData)                                       \
@@ -213,20 +199,18 @@ extern "C"
 
 //*****************************************************************************
 //
-//! This macro is used to receive 'N' bytes of data
+//! 此宏用于接收'N'个字节的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param rxBuffer specifies receive buffer which will store the received bytes
-//! \param numOfWords specifies the number of bytes to be received
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param rxBuffer 指定将存储接收到的字节的接收缓冲区
+//! \param numOfWords 指定要接收的字节数
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function is used to receive 'N' bytes of data
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to 8 bits BEFORE calling the
-//! function
+//! 此函数用于接收'N'个字节的数据
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为8位
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 #define SPI_receiveNBytes(base, rxBuffer, numOfWords, txDelay)                 \
@@ -234,20 +218,18 @@ extern "C"
 
 //*****************************************************************************
 //
-//! This macro is used to receive 'N' 16-bits words of data
+//! 此宏用于接收'N'个16位字的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param rxBuffer specifies receive buffer which will store the received bytes
-//! \param numOfWords specifies the number of 16-bit words to be received
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param rxBuffer 指定将存储接收到的字节的接收缓冲区
+//! \param numOfWords 指定要接收的16位字的数量
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function is used to receive 'N' 16-bit words of data
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to 16 bits BEFORE calling the
-//! function
+//! 此函数用于接收'N'个16位字的数据
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为16位
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 #define SPI_receiveN16BitWord(base, rxBuffer, numOfWords, txDelay)             \
@@ -255,23 +237,19 @@ extern "C"
 
 //*****************************************************************************
 //
-//! This macro is used to receive 'N' words with previously configured character
-//! length
+//! 此宏用于接收具有先前配置的字符长度的'N'个数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param charLength specifies the SPI character length of SPI transaction
-//! \param rxBuffer specifies receive buffer which will store the received bytes
-//! \param numOfWords specifies the number of words with specified character
-//!        length
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param charLength 指定SPI事务的SPI字符长度
+//! \param rxBuffer 指定将存储接收到的字节的接收缓冲区
+//! \param numOfWords 指定具有指定字符长度的字的数量
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function is used to receive 'N' words with specified character length
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to required value BEFORE calling
-//! the function, and passed as the charLength parameter.
+//! 此函数用于接收具有指定字符长度的'N'个数据
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为所需值，并作为charLength参数传递。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 #define SPI_receiveNWordsWithcharLength(base, charLength, rxBuffer,            \
@@ -281,151 +259,147 @@ extern "C"
 
 //*****************************************************************************
 //
-//! Values that can be passed to SPI_setConfig() as the \e protocol parameter.
+//! 可传递给SPI_setConfig()作为\e protocol参数的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    //! Mode 0. Polarity 0, phase 0. Rising edge without delay.
+    //! 模式0。极性0，相位0。上升沿无延迟。
     SPI_PROT_POL0PHA0   = 0x0000U,
-    //! Mode 1. Polarity 0, phase 1. Rising edge with delay.
+    //! 模式1。极性0，相位1。上升沿有延迟。
     SPI_PROT_POL0PHA1   = 0x0002U,
-    //! Mode 2. Polarity 1, phase 0. Falling edge without delay.
+    //! 模式2。极性1，相位0。下降沿无延迟。
     SPI_PROT_POL1PHA0   = 0x0001U,
-    //! Mode 3. Polarity 1, phase 1. Falling edge with delay.
+    //! 模式3。极性1，相位1。下降沿有延迟。
     SPI_PROT_POL1PHA1   = 0x0003U
 } SPI_TransferProtocol;
 
 //*****************************************************************************
 //
-//! Values that can be passed to SPI_setConfig() as the \e mode parameter.
+//! 可传递给SPI_setConfig()作为\e mode参数的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    SPI_MODE_PERIPHERAL     = 0x0002U,   //!< SPI peripheral
-    SPI_MODE_CONTROLLER     = 0x0006U,   //!< SPI controller
-    SPI_MODE_PERIPHERAL_OD  = 0x0000U,   //!< SPI peripheral w/ output disabled
-    SPI_MODE_CONTROLLER_OD  = 0x0004U    //!< SPI controller w/ output disabled
+    SPI_MODE_PERIPHERAL     = 0x0002U,   //!< SPI外设
+    SPI_MODE_CONTROLLER     = 0x0006U,   //!< SPI控制器
+    SPI_MODE_PERIPHERAL_OD  = 0x0000U,   //!< SPI外设（输出禁用）
+    SPI_MODE_CONTROLLER_OD  = 0x0004U    //!< SPI控制器（输出禁用）
 } SPI_Mode;
 
 //*****************************************************************************
 //
-//! Values that can be passed to SPI_setFIFOInterruptLevel() as the \e txLevel
-//! parameter, returned by SPI_getFIFOInterruptLevel() in the \e txLevel
-//! parameter, and returned by SPI_getTxFIFOStatus().
+//! 可传递给SPI_setFIFOInterruptLevel()作为\e txLevel参数的值，
+//! 由SPI_getFIFOInterruptLevel()在\e txLevel参数中返回，
+//! 并由SPI_getTxFIFOStatus()返回。
 //
 //*****************************************************************************
 typedef enum
 {
-    SPI_FIFO_TXEMPTY    = 0x0000U,      //!< Transmit FIFO empty
-    SPI_FIFO_TX0        = 0x0000U,      //!< Transmit FIFO empty
-    SPI_FIFO_TX1        = 0x0001U,      //!< Transmit FIFO 1/16 full
-    SPI_FIFO_TX2        = 0x0002U,      //!< Transmit FIFO 2/16 full
-    SPI_FIFO_TX3        = 0x0003U,      //!< Transmit FIFO 3/16 full
-    SPI_FIFO_TX4        = 0x0004U,      //!< Transmit FIFO 4/16 full
-    SPI_FIFO_TX5        = 0x0005U,      //!< Transmit FIFO 5/16 full
-    SPI_FIFO_TX6        = 0x0006U,      //!< Transmit FIFO 6/16 full
-    SPI_FIFO_TX7        = 0x0007U,      //!< Transmit FIFO 7/16 full
-    SPI_FIFO_TX8        = 0x0008U,      //!< Transmit FIFO 8/16 full
-    SPI_FIFO_TX9        = 0x0009U,      //!< Transmit FIFO 9/16 full
-    SPI_FIFO_TX10       = 0x000AU,      //!< Transmit FIFO 10/16 full
-    SPI_FIFO_TX11       = 0x000BU,      //!< Transmit FIFO 11/16 full
-    SPI_FIFO_TX12       = 0x000CU,      //!< Transmit FIFO 12/16 full
-    SPI_FIFO_TX13       = 0x000DU,      //!< Transmit FIFO 13/16 full
-    SPI_FIFO_TX14       = 0x000EU,      //!< Transmit FIFO 14/16 full
-    SPI_FIFO_TX15       = 0x000FU,      //!< Transmit FIFO 15/16 full
-    SPI_FIFO_TX16       = 0x0010U,      //!< Transmit FIFO full
-    SPI_FIFO_TXFULL     = 0x0010U       //!< Transmit FIFO full
+    SPI_FIFO_TXEMPTY    = 0x0000U,      //!< 发送FIFO为空
+    SPI_FIFO_TX0        = 0x0000U,      //!< 发送FIFO为空
+    SPI_FIFO_TX1        = 0x0001U,      //!< 发送FIFO 1/16满
+    SPI_FIFO_TX2        = 0x0002U,      //!< 发送FIFO 2/16满
+    SPI_FIFO_TX3        = 0x0003U,      //!< 发送FIFO 3/16满
+    SPI_FIFO_TX4        = 0x0004U,      //!< 发送FIFO 4/16满
+    SPI_FIFO_TX5        = 0x0005U,      //!< 发送FIFO 5/16满
+    SPI_FIFO_TX6        = 0x0006U,      //!< 发送FIFO 6/16满
+    SPI_FIFO_TX7        = 0x0007U,      //!< 发送FIFO 7/16满
+    SPI_FIFO_TX8        = 0x0008U,      //!< 发送FIFO 8/16满
+    SPI_FIFO_TX9        = 0x0009U,      //!< 发送FIFO 9/16满
+    SPI_FIFO_TX10       = 0x000AU,      //!< 发送FIFO 10/16满
+    SPI_FIFO_TX11       = 0x000BU,      //!< 发送FIFO 11/16满
+    SPI_FIFO_TX12       = 0x000CU,      //!< 发送FIFO 12/16满
+    SPI_FIFO_TX13       = 0x000DU,      //!< 发送FIFO 13/16满
+    SPI_FIFO_TX14       = 0x000EU,      //!< 发送FIFO 14/16满
+    SPI_FIFO_TX15       = 0x000FU,      //!< 发送FIFO 15/16满
+    SPI_FIFO_TX16       = 0x0010U,      //!< 发送FIFO满
+    SPI_FIFO_TXFULL     = 0x0010U       //!< 发送FIFO满
 } SPI_TxFIFOLevel;
 
 //*****************************************************************************
 //
-//! Values that can be passed to SPI_setFIFOInterruptLevel() as the \e rxLevel
-//! parameter, returned by SPI_getFIFOInterruptLevel() in the \e rxLevel
-//! parameter, and returned by SPI_getRxFIFOStatus().
+//! 可传递给SPI_setFIFOInterruptLevel()作为\e rxLevel参数的值，
+//! 由SPI_getFIFOInterruptLevel()在\e rxLevel参数中返回，
+//! 并由SPI_getRxFIFOStatus()返回。
 //
 //*****************************************************************************
 typedef enum
 {
-    SPI_FIFO_RXEMPTY    = 0x0000U,      //!< Receive FIFO empty
-    SPI_FIFO_RX0        = 0x0000U,      //!< Receive FIFO empty
-    SPI_FIFO_RX1        = 0x0001U,      //!< Receive FIFO 1/16 full
-    SPI_FIFO_RX2        = 0x0002U,      //!< Receive FIFO 2/16 full
-    SPI_FIFO_RX3        = 0x0003U,      //!< Receive FIFO 3/16 full
-    SPI_FIFO_RX4        = 0x0004U,      //!< Receive FIFO 4/16 full
-    SPI_FIFO_RX5        = 0x0005U,      //!< Receive FIFO 5/16 full
-    SPI_FIFO_RX6        = 0x0006U,      //!< Receive FIFO 6/16 full
-    SPI_FIFO_RX7        = 0x0007U,      //!< Receive FIFO 7/16 full
-    SPI_FIFO_RX8        = 0x0008U,      //!< Receive FIFO 8/16 full
-    SPI_FIFO_RX9        = 0x0009U,      //!< Receive FIFO 9/16 full
-    SPI_FIFO_RX10       = 0x000AU,      //!< Receive FIFO 10/16 full
-    SPI_FIFO_RX11       = 0x000BU,      //!< Receive FIFO 11/16 full
-    SPI_FIFO_RX12       = 0x000CU,      //!< Receive FIFO 12/16 full
-    SPI_FIFO_RX13       = 0x000DU,      //!< Receive FIFO 13/16 full
-    SPI_FIFO_RX14       = 0x000EU,      //!< Receive FIFO 14/16 full
-    SPI_FIFO_RX15       = 0x000FU,      //!< Receive FIFO 15/16 full
-    SPI_FIFO_RX16       = 0x0010U,      //!< Receive FIFO full
-    SPI_FIFO_RXFULL     = 0x0010U,      //!< Receive FIFO full
-    SPI_FIFO_RXDEFAULT  = 0x001FU       //!< To prevent interrupt at reset
+    SPI_FIFO_RXEMPTY    = 0x0000U,      //!< 接收FIFO为空
+    SPI_FIFO_RX0        = 0x0000U,      //!< 接收FIFO为空
+    SPI_FIFO_RX1        = 0x0001U,      //!< 接收FIFO 1/16满
+    SPI_FIFO_RX2        = 0x0002U,      //!< 接收FIFO 2/16满
+    SPI_FIFO_RX3        = 0x0003U,      //!< 接收FIFO 3/16满
+    SPI_FIFO_RX4        = 0x0004U,      //!< 接收FIFO 4/16满
+    SPI_FIFO_RX5        = 0x0005U,      //!< 接收FIFO 5/16满
+    SPI_FIFO_RX6        = 0x0006U,      //!< 接收FIFO 6/16满
+    SPI_FIFO_RX7        = 0x0007U,      //!< 接收FIFO 7/16满
+    SPI_FIFO_RX8        = 0x0008U,      //!< 接收FIFO 8/16满
+    SPI_FIFO_RX9        = 0x0009U,      //!< 接收FIFO 9/16满
+    SPI_FIFO_RX10       = 0x000AU,      //!< 接收FIFO 10/16满
+    SPI_FIFO_RX11       = 0x000BU,      //!< 接收FIFO 11/16满
+    SPI_FIFO_RX12       = 0x000CU,      //!< 接收FIFO 12/16满
+    SPI_FIFO_RX13       = 0x000DU,      //!< 接收FIFO 13/16满
+    SPI_FIFO_RX14       = 0x000EU,      //!< 接收FIFO 14/16满
+    SPI_FIFO_RX15       = 0x000FU,      //!< 接收FIFO 15/16满
+    SPI_FIFO_RX16       = 0x0010U,      //!< 接收FIFO满
+    SPI_FIFO_RXFULL     = 0x0010U,      //!< 接收FIFO满
+    SPI_FIFO_RXDEFAULT  = 0x001FU       //!< 防止复位时中断
 } SPI_RxFIFOLevel;
 
 //*****************************************************************************
 //
-//! Values that can be passed to SPI_setEmulationMode() as the \e mode
-//! parameter.
+//! 可传递给SPI_setEmulationMode()作为\e mode参数的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    //! Transmission stops after midway in the bit stream
+    //! 传输在位流中途停止
     SPI_EMULATION_STOP_MIDWAY         = 0x0000U,
-    //! Continue SPI operation regardless
+    //! 无论如何继续SPI操作
     SPI_EMULATION_FREE_RUN            = 0x0010U,
-    //! Transmission will stop after a started transmission completes
+    //! 传输将在已启动的传输完成后停止
     SPI_EMULATION_STOP_AFTER_TRANSMIT = 0x0020U
 } SPI_EmulationMode;
 
 //*****************************************************************************
 //
-//! Values that can be passed to SPI_setPTESignalPolarity() as the \e polarity
-//! parameter.
+//! 可传递给SPI_setPTESignalPolarity()作为\e polarity参数的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    SPI_PTE_ACTIVE_LOW  = 0x0000U,        //!< SPIPTE is active low (normal)
-    SPI_PTE_ACTIVE_HIGH = SPI_PRI_PTEINV  //!< SPIPTE is active high (inverted)
+    SPI_PTE_ACTIVE_LOW  = 0x0000U,        //!< SPIPTE为低电平有效（正常）
+    SPI_PTE_ACTIVE_HIGH = SPI_PRI_PTEINV  //!< SPIPTE为高电平有效（反相）
 } SPI_PTEPolarity;
 
 //*****************************************************************************
 //
-//! Values that can be passed to SPI_receive16Bits(), SPI_receive24Bits(),
-//! SPI_receive32Bits()
+//! 可传递给SPI_receive16Bits()、SPI_receive24Bits()、SPI_receive32Bits()的值
 //
 //*****************************************************************************
 typedef enum
 {
-    SPI_DATA_LITTLE_ENDIAN   = 0U, //!< LITTLE ENDIAN
-    SPI_DATA_BIG_ENDIAN   = 1U,    //!< BIG ENDIAN
+    SPI_DATA_LITTLE_ENDIAN   = 0U, //!< 小端序
+    SPI_DATA_BIG_ENDIAN   = 1U,    //!< 大端序
 } SPI_endianess;
 
 //*****************************************************************************
 //
-// Prototypes for the APIs.
+// API的原型。
 //
 //*****************************************************************************
 //*****************************************************************************
 //
 //! \internal
-//! Checks an SPI base address.
+//! 检查SPI基地址。
 //!
-//! \param base specifies the SPI module base address.
+//! \param base 指定SPI模块基地址。
 //!
-//! This function determines if a SPI module base address is valid.
+//! 此函数确定SPI模块基地址是否有效。
 //!
-//! \return Returns \b true if the base address is valid and \b false
-//! otherwise.
+//! \return 如果基地址有效则返回\b true，否则返回\b false。
 //
 //*****************************************************************************
 #ifdef DEBUG
@@ -442,21 +416,20 @@ SPI_isBaseValid(uint32_t base)
 
 //*****************************************************************************
 //
-//! Enables the serial peripheral interface.
+//! 启用串行外设接口。
 //!
-//! \param base specifies the SPI module base address.
+//! \param base 指定SPI模块基地址。
 //!
-//! This function enables operation of the serial peripheral interface.  The
-//! serial peripheral interface must be configured before it is enabled.
+//! 此函数启用串行外设接口的操作。在启用之前，串行外设接口必须已配置。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_enableModule(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
@@ -465,21 +438,20 @@ SPI_enableModule(uint32_t base)
 
 //*****************************************************************************
 //
-//! Disables the serial peripheral interface.
+//! 禁用串行外设接口。
 //!
-//! \param base specifies the SPI module base address.
+//! \param base 指定SPI模块基地址。
 //!
-//! This function disables operation of the serial peripheral interface. Call
-//! this function before doing any configuration.
+//! 此函数禁用串行外设接口的操作。在进行任何配置之前调用此函数。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_disableModule(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
@@ -488,23 +460,22 @@ SPI_disableModule(uint32_t base)
 
 //*****************************************************************************
 //
-//! Sets the character length of SPI transaction
+//! 设置SPI事务的字符长度
 //!
-//! \param base specifies the SPI module base address.
-//! \param charLength specifies the character length of SPI transaction
+//! \param base 指定SPI模块基地址。
+//! \param charLength 指定SPI事务的字符长度
 //!
-//! This function configures the character length of SPI transaction.
-//! SPI character length can be from anywhere between 1-bit word to 16 bit word
-//! of character length
+//! 此函数配置SPI事务的字符长度。
+//! SPI字符长度可以在1位字到16位字之间的任何长度
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_setcharLength(uint32_t base, uint16_t charLength)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT((charLength >= 1U) && (charLength <= 16U));
 
@@ -515,7 +486,7 @@ SPI_setcharLength(uint32_t base, uint16_t charLength)
     HWREGH(base + SPI_O_CCR) = (HWREGH(base + SPI_O_CCR) & ~SPI_CCR_SPICHAR_M) |
                                (charLength - 1U);
     //
-    // Restore original status
+    // 恢复原始状态
     //
     if(originalStatus){
         SPI_enableModule(base);
@@ -525,25 +496,25 @@ SPI_setcharLength(uint32_t base, uint16_t charLength)
 
 //*****************************************************************************
 //
-//! Enables the transmit and receive FIFOs.
+//! 启用发送和接收FIFO。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This functions enables the transmit and receive FIFOs in the SPI.
+//! 此函数启用SPI中的发送和接收FIFO。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_enableFIFO(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Enable the FIFO.
+    // 启用FIFO。
     //
     HWREGH(base + SPI_O_FFTX) |= SPI_FFTX_SPIFFENA | SPI_FFTX_TXFIFO;
     HWREGH(base + SPI_O_FFRX) |= SPI_FFRX_RXFIFORESET;
@@ -551,25 +522,25 @@ SPI_enableFIFO(uint32_t base)
 
 //*****************************************************************************
 //
-//! Disables the transmit and receive FIFOs.
+//! 禁用发送和接收FIFO。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This functions disables the transmit and receive FIFOs in the SPI.
+//! 此函数禁用SPI中的发送和接收FIFO。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_disableFIFO(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Disable the FIFO.
+    // 禁用FIFO。
     //
     HWREGH(base + SPI_O_FFTX) &= ~(SPI_FFTX_SPIFFENA | SPI_FFTX_TXFIFO);
     HWREGH(base + SPI_O_FFRX) &= ~SPI_FFRX_RXFIFORESET;
@@ -577,26 +548,25 @@ SPI_disableFIFO(uint32_t base)
 
 //*****************************************************************************
 //
-//! Resets the transmit FIFO.
+//! 重置发送FIFO。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function resets the transmit FIFO, setting the FIFO pointer back to
-//! zero.
+//! 此函数重置发送FIFO，将FIFO指针设置回零。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_resetTxFIFO(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Reset the TX FIFO.
+    // 重置TX FIFO。
     //
     HWREGH(base + SPI_O_FFTX) &= ~SPI_FFTX_TXFIFO;
     HWREGH(base + SPI_O_FFTX) |= SPI_FFTX_TXFIFO;
@@ -604,26 +574,25 @@ SPI_resetTxFIFO(uint32_t base)
 
 //*****************************************************************************
 //
-//! Resets the receive FIFO.
+//! 重置接收FIFO。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function resets the receive FIFO, setting the FIFO pointer back to
-//! zero.
+//! 此函数重置接收FIFO，将FIFO指针设置回零。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_resetRxFIFO(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Reset the RX FIFO.
+    // 重置RX FIFO。
     //
     HWREGH(base + SPI_O_FFRX) &= ~SPI_FFRX_RXFIFORESET;
     HWREGH(base + SPI_O_FFRX) |= SPI_FFRX_RXFIFORESET;
@@ -631,20 +600,19 @@ SPI_resetRxFIFO(uint32_t base)
 
 //*****************************************************************************
 //
-//! Sets the FIFO level at which interrupts are generated.
+//! 设置生成中断的FIFO级别。
 //!
-//! \param base is the base address of the SPI port.
-//! \param txLevel is the transmit FIFO interrupt level, specified as
-//! \b SPI_FIFO_TX0, \b SPI_FIFO_TX1, \b SPI_FIFO_TX2, . . . or
-//! \b SPI_FIFO_TX16.
-//! \param rxLevel is the receive FIFO interrupt level, specified as
-//! \b SPI_FIFO_RX0, \b SPI_FIFO_RX1, \b SPI_FIFO_RX2, . . . or
-//! \b SPI_FIFO_RX16.
+//! \param base 是SPI端口的基地址。
+//! \param txLevel 是发送FIFO中断级别，指定为
+//! \b SPI_FIFO_TX0、\b SPI_FIFO_TX1、\b SPI_FIFO_TX2、... 或
+//! \b SPI_FIFO_TX16。
+//! \param rxLevel 是接收FIFO中断级别，指定为
+//! \b SPI_FIFO_RX0、\b SPI_FIFO_RX1、\b SPI_FIFO_RX2、... 或
+//! \b SPI_FIFO_RX16。
 //!
-//! This function sets the FIFO level at which transmit and receive interrupts
-//! are generated.
+//! 此函数设置生成发送和接收中断的FIFO级别。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
@@ -652,12 +620,12 @@ SPI_setFIFOInterruptLevel(uint32_t base, SPI_TxFIFOLevel txLevel,
                           SPI_RxFIFOLevel rxLevel)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Set the FIFO interrupt levels.
+    // 设置FIFO中断级别。
     //
     HWREGH(base + SPI_O_FFTX) = (HWREGH(base + SPI_O_FFTX) &
                                  (~SPI_FFTX_TXFFIL_M)) | (uint16_t)txLevel;
@@ -667,20 +635,19 @@ SPI_setFIFOInterruptLevel(uint32_t base, SPI_TxFIFOLevel txLevel,
 
 //*****************************************************************************
 //
-//! Gets the FIFO level at which interrupts are generated.
+//! 获取生成中断的FIFO级别。
 //!
-//! \param base is the base address of the SPI port.
-//! \param txLevel is a pointer to storage for the transmit FIFO level,
-//! returned as one of \b SPI_FIFO_TX0, \b SPI_FIFO_TX1,
-//! \b SPI_FIFO_TX2, . . . or \b SPI_FIFO_TX16.
-//! \param rxLevel is a pointer to storage for the receive FIFO level,
-//! returned as one of \b SPI_FIFO_RX0, \b SPI_FIFO_RX1,
-//! \b SPI_FIFO_RX2, . . . or \b SPI_FIFO_RX16.
+//! \param base 是SPI端口的基地址。
+//! \param txLevel 是指向存储发送FIFO级别的指针，
+//! 返回为\b SPI_FIFO_TX0、\b SPI_FIFO_TX1、
+//! \b SPI_FIFO_TX2、... 或 \b SPI_FIFO_TX16之一。
+//! \param rxLevel 是指向存储接收FIFO级别的指针，
+//! 返回为\b SPI_FIFO_RX0、\b SPI_FIFO_RX1、
+//! \b SPI_FIFO_RX2、... 或 \b SPI_FIFO_RX16之一。
 //!
-//! This function gets the FIFO level at which transmit and receive interrupts
-//! are generated.
+//! 此函数获取生成发送和接收中断的FIFO级别。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
@@ -688,12 +655,12 @@ SPI_getFIFOInterruptLevel(uint32_t base, SPI_TxFIFOLevel *txLevel,
                           SPI_RxFIFOLevel *rxLevel)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Extract the transmit and receive FIFO levels.
+    // 提取发送和接收FIFO级别。
     //
     *txLevel = (SPI_TxFIFOLevel)((uint16_t)(HWREGH(base + SPI_O_FFTX) &
                                             SPI_FFTX_TXFFIL_M));
@@ -703,28 +670,27 @@ SPI_getFIFOInterruptLevel(uint32_t base, SPI_TxFIFOLevel *txLevel,
 
 //*****************************************************************************
 //
-//! Get the transmit FIFO status
+//! 获取发送FIFO状态
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function gets the current number of words in the transmit FIFO.
+//! 此函数获取发送FIFO中的当前字数。
 //!
-//! \return Returns the current number of words in the transmit FIFO specified
-//! as one of the following:
-//! \b SPI_FIFO_TX0, \b SPI_FIFO_TX1, \b SPI_FIFO_TX2, \b SPI_FIFO_TX3,
-//! ..., or \b SPI_FIFO_TX16
+//! \return 返回发送FIFO中的当前字数，指定为以下之一：
+//! \b SPI_FIFO_TX0、\b SPI_FIFO_TX1、\b SPI_FIFO_TX2、\b SPI_FIFO_TX3、
+//! ... 或 \b SPI_FIFO_TX16
 //
 //*****************************************************************************
 static inline SPI_TxFIFOLevel
 SPI_getTxFIFOStatus(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Get the current FIFO status
+    // 获取当前FIFO状态
     //
     return((SPI_TxFIFOLevel)((uint16_t)((HWREGH(base + SPI_O_FFTX) & SPI_FFTX_TXFFST_M) >>
                                         SPI_FFTX_TXFFST_S)));
@@ -732,28 +698,27 @@ SPI_getTxFIFOStatus(uint32_t base)
 
 //*****************************************************************************
 //
-//! Get the receive FIFO status
+//! 获取接收FIFO状态
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function gets the current number of words in the receive FIFO.
+//! 此函数获取接收FIFO中的当前字数。
 //!
-//! \return Returns the current number of words in the receive FIFO specified
-//! as one of the following:
-//! \b SPI_FIFO_RX0, \b SPI_FIFO_RX1, \b SPI_FIFO_RX2, \b SPI_FIFO_RX3,
-//! ..., or \b SPI_FIFO_RX16
+//! \return 返回接收FIFO中的当前字数，指定为以下之一：
+//! \b SPI_FIFO_RX0、\b SPI_FIFO_RX1、\b SPI_FIFO_RX2、\b SPI_FIFO_RX3、
+//! ... 或 \b SPI_FIFO_RX16
 //
 //*****************************************************************************
 static inline SPI_RxFIFOLevel
 SPI_getRxFIFOStatus(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Get the current FIFO status
+    // 获取当前FIFO状态
     //
     return((SPI_RxFIFOLevel)((uint16_t)((HWREGH(base + SPI_O_FFRX) & SPI_FFRX_RXFFST_M) >>
                                         SPI_FFRX_RXFFST_S)));
@@ -761,389 +726,370 @@ SPI_getRxFIFOStatus(uint32_t base)
 
 //*****************************************************************************
 //
-//! Determines whether the SPI transmitter is busy or not.
+//! 确定SPI发送器是否忙碌。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function allows the caller to determine whether all transmitted bytes
-//! have cleared the transmitter hardware.  If \b false is returned, then the
-//! transmit FIFO is empty and all bits of the last transmitted word have left
-//! the hardware shift register. This function is only valid when operating in
-//! FIFO mode.
+//! 此函数允许调用者确定所有发送的字节是否已清除发送器硬件。
+//! 如果返回\b false，则发送FIFO为空，并且最后发送的字的所有位都已离开
+//! 硬件移位寄存器。此函数仅在FIFO模式下操作时有效。
 //!
-//! \return Returns \b true if the SPI is transmitting or \b false if all
-//! transmissions are complete.
+//! \return 如果SPI正在发送则返回\b true，如果所有传输完成则返回\b false。
 //
 //*****************************************************************************
 static inline bool
 SPI_isBusy(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Determine if the SPI is busy.
+    // 确定SPI是否忙碌。
     //
     return((HWREGH(base + SPI_O_FFTX) & SPI_FFTX_TXFFST_M) != 0U);
 }
 
 //*****************************************************************************
 //
-//! Puts a data element into the SPI transmit buffer.
+//! 将数据元素放入SPI发送缓冲区。
 //!
-//! \param base specifies the SPI module base address.
-//! \param data is the left-justified data to be transmitted over SPI.
+//! \param base 指定SPI模块基地址。
+//! \param data 是要通过SPI传输的左对齐数据。
 //!
-//! This function places the supplied data into the transmit buffer of the
-//! specified SPI module.
+//! 此函数将提供的数据放入指定SPI模块的发送缓冲区。
 //!
-//! \note The data being sent must be left-justified in \e data. The lower
-//! 16 - N bits will be discarded where N is the data width selected in
-//! SPI_setConfig(). For example, if configured for a 6-bit data width, the
-//! lower 10 bits of data will be discarded.
+//! \note 发送的数据必须在\e data中左对齐。较低的16 - N位将被丢弃，其中N是
+//! 在SPI_setConfig()中选择的数据宽度。例如，如果配置为6位数据宽度，
+//! 则数据的低10位将被丢弃。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_writeDataNonBlocking(uint32_t base, uint16_t data)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Write data to the transmit buffer.
+    // 将数据写入发送缓冲区。
     //
     HWREGH(base + SPI_O_TXBUF) = data;
 }
 
 //*****************************************************************************
 //
-//! Gets a data element from the SPI receive buffer.
+//! 从SPI接收缓冲区获取数据元素。
 //!
-//! \param base specifies the SPI module base address.
+//! \param base 指定SPI模块基地址。
 //!
-//! This function gets received data from the receive buffer of the specified
-//! SPI module and returns it.
+//! 此函数从指定SPI模块的接收缓冲区获取接收的数据并返回。
 //!
-//! \note Only the lower N bits of the value written to \e data contain valid
-//! data, where N is the data width as configured by SPI_setConfig(). For
-//! example, if the interface is configured for 8-bit data width, only the
-//! lower 8 bits of the value written to \e data contain valid data.
+//! \note 写入\e data的值的仅低N位包含有效数据，其中N是
+//! 由SPI_setConfig()配置的数据宽度。例如，如果接口配置为8位数据宽度，
+//! 则写入\e data的值的仅低8位包含有效数据。
 //!
-//! \return Returns the word of data read from the SPI receive buffer.
+//! \return 返回从SPI接收缓冲区读取的数据字。
 //
 //*****************************************************************************
 static inline uint16_t
 SPI_readDataNonBlocking(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Check for data to read.
+    // 检查是否有数据可读。
     //
     return(HWREGH(base + SPI_O_RXBUF));
 }
 
 //*****************************************************************************
 //
-//! Waits for space in the FIFO and then puts data into the transmit buffer.
+//! 等待FIFO中的空间，然后将数据放入发送缓冲区。
 //!
-//! \param base specifies the SPI module base address.
-//! \param data is the left-justified data to be transmitted over SPI.
+//! \param base 指定SPI模块基地址。
+//! \param data 是要通过SPI传输的左对齐数据。
 //!
-//! This function places the supplied data into the transmit buffer of the
-//! specified SPI module once space is available in the transmit FIFO. This
-//! function should only be used when the FIFO is enabled.
+//! 此函数一旦发送FIFO中有可用空间，就将提供的数据放入指定SPI模块的发送缓冲区。
+//! 此函数仅应在启用FIFO时使用。
 //!
-//! \note The data being sent must be left-justified in \e data. The lower
-//! 16 - N bits will be discarded where N is the data width selected in
-//! SPI_setConfig(). For example, if configured for a 6-bit data width, the
-//! lower 10 bits of data will be discarded.
+//! \note 发送的数据必须在\e data中左对齐。较低的16 - N位将被丢弃，其中N是
+//! 在SPI_setConfig()中选择的数据宽度。例如，如果配置为6位数据宽度，
+//! 则数据的低10位将被丢弃。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_writeDataBlockingFIFO(uint32_t base, uint16_t data)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Wait until space is available in the receive FIFO.
+    // 等待直到接收FIFO中有可用空间。
     //
     while(SPI_getTxFIFOStatus(base) == SPI_FIFO_TXFULL)
     {
     }
 
     //
-    // Write data to the transmit buffer.
+    // 将数据写入发送缓冲区。
     //
     HWREGH(base + SPI_O_TXBUF) = data;
 }
 
 //*****************************************************************************
 //
-//! Waits for data in the FIFO and then reads it from the receive buffer.
+//! 等待FIFO中的数据，然后从接收缓冲区读取。
 //!
-//! \param base specifies the SPI module base address.
+//! \param base 指定SPI模块基地址。
 //!
-//! This function waits until there is data in the receive FIFO and then reads
-//! received data from the receive buffer.  This function should only be used
-//! when FIFO mode is enabled.
+//! 此函数等待直到接收FIFO中有数据，然后从接收缓冲区读取接收的数据。
+//! 此函数仅应在启用FIFO模式时使用。
 //!
-//! \note Only the lower N bits of the value written to \e data contain valid
-//! data, where N is the data width as configured by SPI_setConfig(). For
-//! example, if the interface is configured for 8-bit data width, only the
-//! lower 8 bits of the value written to \e data contain valid data.
+//! \note 写入\e data的值的仅低N位包含有效数据，其中N是
+//! 由SPI_setConfig()配置的数据宽度。例如，如果接口配置为8位数据宽度，
+//! 则写入\e data的值的仅低8位包含有效数据。
 //!
-//! \return Returns the word of data read from the SPI receive buffer.
+//! \return 返回从SPI接收缓冲区读取的数据字。
 //
 //*****************************************************************************
 static inline uint16_t
 SPI_readDataBlockingFIFO(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Wait until data is available in the receive FIFO.
+    // 等待直到接收FIFO中有数据。
     //
     while(SPI_getRxFIFOStatus(base) == SPI_FIFO_RXEMPTY)
     {
     }
 
     //
-    // Check for data to read.
+    // 检查是否有数据可读。
     //
     return(HWREGH(base + SPI_O_RXBUF));
 }
 
 //*****************************************************************************
 //
-//! Waits for the transmit buffer to empty and then writes data to it.
+//! 等待发送缓冲区为空，然后向其中写入数据。
 //!
-//! \param base specifies the SPI module base address.
-//! \param data is the left-justified data to be transmitted over SPI.
+//! \param base 指定SPI模块基地址。
+//! \param data 是要通过SPI传输的左对齐数据。
 //!
-//! This function places the supplied data into the transmit buffer of the
-//! specified SPI module once it is empty. This function should not be used
-//! when FIFO mode is enabled.
+//! 此函数一旦发送缓冲区为空，就将提供的数据放入指定SPI模块的发送缓冲区。
+//! 此函数不应在启用FIFO模式时使用。
 //!
-//! \note The data being sent must be left-justified in \e data. The lower
-//! 16 - N bits will be discarded where N is the data width selected in
-//! SPI_setConfig(). For example, if configured for a 6-bit data width, the
-//! lower 10 bits of data will be discarded.
+//! \note 发送的数据必须在\e data中左对齐。较低的16 - N位将被丢弃，其中N是
+//! 在SPI_setConfig()中选择的数据宽度。例如，如果配置为6位数据宽度，
+//! 则数据的低10位将被丢弃。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_writeDataBlockingNonFIFO(uint32_t base, uint16_t data)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Wait until the transmit buffer is not full.
+    // 等待直到发送缓冲区不满。
     //
     while((HWREGH(base + SPI_O_STS) & SPI_STS_BUFFULL_FLAG) != 0U)
     {
     }
 
     //
-    // Write data to the transmit buffer.
+    // 将数据写入发送缓冲区。
     //
     HWREGH(base + SPI_O_TXBUF) = data;
 }
 
 //*****************************************************************************
 //
-//! Waits for data to be received and then reads it from the buffer.
+//! 等待数据被接收，然后从缓冲区读取。
 //!
-//! \param base specifies the SPI module base address.
+//! \param base 指定SPI模块基地址。
 //!
-//! This function waits for data to be received and then reads it from the
-//! receive buffer of the specified SPI module. This function should not be
-//! used when FIFO mode is enabled.
+//! 此函数等待数据被接收，然后从指定SPI模块的接收缓冲区读取。
+//! 此函数不应在启用FIFO模式时使用。
 //!
-//! \note Only the lower N bits of the value written to \e data contain valid
-//! data, where N is the data width as configured by SPI_setConfig(). For
-//! example, if the interface is configured for 8-bit data width, only the
-//! lower 8 bits of the value written to \e data contain valid data.
+//! \note 写入\e data的值的仅低N位包含有效数据，其中N是
+//! 由SPI_setConfig()配置的数据宽度。例如，如果接口配置为8位数据宽度，
+//! 则写入\e data的值的仅低8位包含有效数据。
 //!
-//! \return Returns the word of data read from the SPI receive buffer.
+//! \return 返回从SPI接收缓冲区读取的数据字。
 //
 //*****************************************************************************
 static inline uint16_t
 SPI_readDataBlockingNonFIFO(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Wait until data has been received.
+    // 等待直到数据被接收。
     //
     while((HWREGH(base + SPI_O_STS) & SPI_STS_INT_FLAG) == 0U)
     {
     }
 
     //
-    // Check for data to read.
+    // 检查是否有数据可读。
     //
     return(HWREGH(base + SPI_O_RXBUF));
 }
 
 //*****************************************************************************
 //
-//! Enables SPI 3-wire mode.
+//! 启用SPI 3线模式。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function enables 3-wire mode. When in controller mode, this allows
-//! SPIPICO to become SPICOCI and SPIPOCI to become free for non-SPI use.
-//! When in peripheral mode, SPIPOCI because the SPIPIPO pin and SPIPICO is
-//! free for non-SPI use.
+//! 此函数启用3线模式。在控制器模式下，这允许SPIPICO成为SPICOCI，
+//! 而SPIPOCI变为可用于非SPI用途。在外设模式下，SPIPOCI成为SPIPIPO引脚，
+//! 而SPIPICO变为可用于非SPI用途。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_enableTriWire(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Set the tri-wire bit to enable 3-wire mode.
+    // 设置三线位以启用3线模式。
     //
     HWREGH(base + SPI_O_PRI) |= SPI_PRI_TRIWIRE;
 }
 
 //*****************************************************************************
 //
-//! Disables SPI 3-wire mode.
+//! 禁用SPI 3线模式。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function disables 3-wire mode. SPI will operate in normal 4-wire mode.
+//! 此函数禁用3线模式。SPI将以正常的4线模式运行。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_disableTriWire(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Clear the tri-wire bit to disable 3-wire mode.
+    // 清除三线位以禁用3线模式。
     //
     HWREGH(base + SPI_O_PRI) &= ~SPI_PRI_TRIWIRE;
 }
 
 //*****************************************************************************
 //
-//! Enables SPI loopback mode.
+//! 启用SPI回环模式。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function enables loopback mode. This mode is only valid during
-//! controller mode and is helpful during device testing as it internally
-//! connects PICO and POCI.
+//! 此函数启用回环模式。此模式仅在控制器模式下有效，
+//! 在设备测试期间很有帮助，因为它内部连接PICO和POCI。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_enableLoopback(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Set the bit that enables loopback mode.
+    // 设置启用回环模式的位。
     //
     HWREGH(base + SPI_O_CCR) |= SPI_CCR_SPILBK;
 }
 
 //*****************************************************************************
 //
-//! Disables SPI loopback mode.
+//! 禁用SPI回环模式。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function disables loopback mode. Loopback mode is disabled by default
-//! after reset.
+//! 此函数禁用回环模式。复位后默认禁用回环模式。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_disableLoopback(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Clear the bit that enables loopback mode.
+    // 清除启用回环模式的位。
     //
     HWREGH(base + SPI_O_CCR) &= ~SPI_CCR_SPILBK;
 }
 
 //*****************************************************************************
 //
-//! Set the peripheral select (SPIPTE) signal polarity.
+//! 设置外设选择（SPIPTE）信号极性。
 //!
-//! \param base is the base address of the SPI port.
-//! \param polarity is the SPIPTE signal polarity.
+//! \param base 是SPI端口的基地址。
+//! \param polarity 是SPIPTE信号极性。
 //!
-//! This function sets the polarity of the peripheral select (SPIPTE) signal.
-//! The two modes to choose from for the \e polarity parameter are
-//! \b SPI_PTE_ACTIVE_LOW for active-low polarity (typical) and
-//! \b SPI_PTE_ACTIVE_HIGH for active-high polarity (considered inverted).
+//! 此函数设置外设选择（SPIPTE）信号的极性。
+//! \e polarity参数的两种选择模式是
+//! \b SPI_PTE_ACTIVE_LOW用于低电平有效极性（典型）和
+//! \b SPI_PTE_ACTIVE_HIGH用于高电平有效极性（被视为反相）。
 //!
-//! \note This has no effect on the PTE signal when in controller mode. It is
-//! only applicable to peripheral mode.
+//! \note 在控制器模式下，这对PTE信号没有影响。它仅适用于外设模式。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_setPTESignalPolarity(uint32_t base, SPI_PTEPolarity polarity)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Write the polarity of the SPIPTE signal to the register.
+    // 将SPIPTE信号的极性写入寄存器。
     //
     HWREGH(base + SPI_O_PRI) = (HWREGH(base + SPI_O_PRI) & ~SPI_PRI_PTEINV) |
                                (uint16_t)polarity;
@@ -1151,87 +1097,83 @@ SPI_setPTESignalPolarity(uint32_t base, SPI_PTEPolarity polarity)
 
 //*****************************************************************************
 //
-//! Enables SPI high speed mode.
+//! 启用SPI高速模式。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function enables high speed mode.
+//! 此函数启用高速模式。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_enableHighSpeedMode(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Set the bit that enables high speed mode.
+    // 设置启用高速模式的位。
     //
     HWREGH(base + SPI_O_CCR) |= SPI_CCR_HS_MODE;
 }
 
 //*****************************************************************************
 //
-//! Disables SPI high speed mode.
+//! 禁用SPI高速模式。
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function disables high speed mode. High speed mode is disabled by
-//! default after reset.
+//! 此函数禁用高速模式。复位后默认禁用高速模式。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_disableHighSpeedMode(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Clear the bit that enables high speed mode.
+    // 清除启用高速模式的位。
     //
     HWREGH(base + SPI_O_CCR) &= ~SPI_CCR_HS_MODE;
 }
 
 //*****************************************************************************
 //
-//! Sets SPI emulation mode.
+//! 设置SPI仿真模式。
 //!
-//! \param base is the base address of the SPI port.
-//! \param mode is the emulation mode.
+//! \param base 是SPI端口的基地址。
+//! \param mode 是仿真模式。
 //!
-//! This function sets the behavior of the SPI operation when an emulation
-//! suspend occurs. The \e mode parameter can be one of the following:
+//! 此函数设置发生仿真挂起时SPI操作的行为。\e mode参数可以是以下之一：
 //!
-//! - \b SPI_EMULATION_STOP_MIDWAY - Transmission stops midway through the bit
-//!   stream. The rest of the bits will be transmitting after the suspend is
-//!   deasserted.
-//! - \b SPI_EMULATION_STOP_AFTER_TRANSMIT - If the suspend occurs before the
-//!   first SPICLK pulse, the transmission will not start. If it occurs later,
-//!   the transmission will be completed.
-//! - \b SPI_EMULATION_FREE_RUN - SPI operation continues regardless of a
-//!   the suspend.
+//! - \b SPI_EMULATION_STOP_MIDWAY - 传输在位流中途停止。
+//!   其余位将在挂起被解除断言后传输。
+//! - \b SPI_EMULATION_STOP_AFTER_TRANSMIT - 如果挂起发生在
+//!   第一个SPICLK脉冲之前，传输将不会开始。如果稍后发生，
+//!   传输将完成。
+//! - \b SPI_EMULATION_FREE_RUN - SPI操作继续，无论是否有挂起。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 static inline void
 SPI_setEmulationMode(uint32_t base, SPI_EmulationMode mode)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Write the desired emulation mode to the register.
+    // 将所需的仿真模式写入寄存器。
     //
     HWREGH(base + SPI_O_PRI) = (HWREGH(base + SPI_O_PRI) &
                                 ~(SPI_PRI_FREE | SPI_PRI_SOFT)) |
@@ -1240,134 +1182,132 @@ SPI_setEmulationMode(uint32_t base, SPI_EmulationMode mode)
 
 //*****************************************************************************
 //
-//! Configures the FIFO Transmit Delay
+//! 配置FIFO传输延迟
 //!
-//! \param base is the base address of the SPI port.
-//! \param delay Tx FIFO delay to be configured in cycles (0..0xFF)
+//! \param base 是SPI端口的基地址。
+//! \param delay 要配置的Tx FIFO延迟（以周期为单位）（0..0xFF）
 //!
-//! This function sets the delay between every transfer from FIFO
-//! transmit buffer to transmit shift register. The delay is defined in
-//! number SPI serial clock cycles.
+//! 此函数设置从FIFO发送缓冲区到发送移位寄存器的每次传输之间的延迟。
+//! 延迟以SPI串行时钟周期数定义。
 //!
-//! \return None
+//! \return 无
 //
 //*****************************************************************************
 static inline void
 SPI_setTxFifoTransmitDelay(uint32_t base, uint16_t delay)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
     ASSERT(delay <= 0xFFU);
 
     //
-    // Configure the FIFO Transmit Delay Bits
+    // 配置FIFO传输延迟位
     //
     HWREGH(base + SPI_O_FFCT) = delay;
 }
 
 //*****************************************************************************
 //
-//! Returns the Emulation Buffer Received Data
+//! 返回仿真缓冲区接收的数据
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function returns the Emulation Buffer Received Data
+//! 此函数返回仿真缓冲区接收的数据
 //!
-//! \return Rx emulation buffer data
+//! \return Rx仿真缓冲区数据
 //
 //*****************************************************************************
 static inline uint16_t
 SPI_readRxEmulationBuffer(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Return Emulation Buffer Received Data
+    // 返回仿真缓冲区接收的数据
     //
     return(HWREGH(base + SPI_O_RXEMU));
 }
 
 //*****************************************************************************
 //
-//! Enable Trasnmit
+//! 启用传输
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function sets the TALK bit enabling the data trasnmission.
-//! This bit is enabled by SPI_setConfig if the parameter \r mode is selected as
-//! SPI_MODE_PERIPHERAL or SPI_MODE_CONTROLLER.
+//! 此函数设置TALK位以启用数据传输。
+//! 如果参数\e mode选择为SPI_MODE_PERIPHERAL或SPI_MODE_CONTROLLER，
+//! 此位由SPI_setConfig启用。
 //!
-//! \return None
+//! \return 无
 //
 //*****************************************************************************
 static inline void
 SPI_enableTalk(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Set the TALK bit
+    // 设置TALK位
     //
     HWREGH(base + SPI_O_CTL) |= SPI_CTL_TALK;
 }
 
 //*****************************************************************************
 //
-//! Disable Trasnmit
+//! 禁用传输
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function clears the TALK bit disabling the data trasnmission. The
-//! output pin will be put in high-impedance state.
-//! This bit is enabled by SPI_setConfig if the parameter \r mode is selected as
-//! SPI_MODE_PERIPHERAL or SPI_MODE_CONTROLLER.
+//! 此函数清除TALK位以禁用数据传输。输出引脚将被置于高阻抗状态。
+//! 如果参数\e mode选择为SPI_MODE_PERIPHERAL或SPI_MODE_CONTROLLER，
+//! 此位由SPI_setConfig启用。
 //!
-//! \return None
+//! \return 无
 //
 //*****************************************************************************
 static inline void
 SPI_disableTalk(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Set the TALK bit
+    // 设置TALK位
     //
     HWREGH(base + SPI_O_CTL) &= ~SPI_CTL_TALK;
 }
 
 //*****************************************************************************
 //
-//! Reset SPI transmit and receive channels
+//! 重置SPI发送和接收通道
 //!
-//! \param base is the base address of the SPI port.
+//! \param base 是SPI端口的基地址。
 //!
-//! This function resets the SPI transmit and receive channels.
+//! 此函数重置SPI发送和接收通道。
 //!
-//! \return None
+//! \return 无
 //
 //*****************************************************************************
 static inline void
 SPI_reset(uint32_t base)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Write to SPRST bit the TX FIFO.
+    // 写入SPRST位到TX FIFO。
     //
     HWREGH(base + SPI_O_FFTX) &= ~SPI_FFTX_SPIRST;
     HWREGH(base + SPI_O_FFTX) |= SPI_FFTX_SPIRST;
@@ -1375,58 +1315,48 @@ SPI_reset(uint32_t base)
 
 //*****************************************************************************
 //
-//! Configures the serial peripheral interface.
+//! 配置串行外设接口。
 //!
-//! \param base specifies the SPI module base address.
-//! \param lspclkHz is the rate of the clock supplied to the SPI module
-//! (LSPCLK) in Hz.
-//! \param protocol specifies the data transfer protocol.
-//! \param mode specifies the mode of operation.
-//! \param bitRate specifies the clock rate in Hz.
-//! \param dataWidth specifies number of bits transferred per frame.
+//! \param base 指定SPI模块基地址。
+//! \param lspclkHz 是提供给SPI模块的时钟（LSPCLK）的速率，单位为Hz。
+//! \param protocol 指定数据传输协议。
+//! \param mode 指定操作模式。
+//! \param bitRate 指定时钟速率，单位为Hz。
+//! \param dataWidth 指定每帧传输的位数。
 //!
-//! This function configures the serial peripheral interface.  It sets the SPI
-//! protocol, mode of operation, bit rate, and data width.
+//! 此函数配置串行外设接口。它设置SPI协议、操作模式、位速率和数据宽度。
 //!
-//! The \e protocol parameter defines the data frame format.  The \e protocol
-//! parameter can be one of the following values: \b SPI_PROT_POL0PHA0,
-//! \b SPI_PROT_POL0PHA1, \b SPI_PROT_POL1PHA0, or
-//! \b SPI_PROT_POL1PHA1. These frame formats encode the following polarity
-//! and phase configurations:
+//! \e protocol参数定义数据帧格式。\e protocol参数可以是以下值之一：
+//! \b SPI_PROT_POL0PHA0、\b SPI_PROT_POL0PHA1、\b SPI_PROT_POL1PHA0或
+//! \b SPI_PROT_POL1PHA1。这些帧格式编码以下极性和相位配置：
 //!
 //! <pre>
-//! Polarity Phase       Mode
+//! 极性 相位       模式
 //!   0       0   SPI_PROT_POL0PHA0
 //!   0       1   SPI_PROT_POL0PHA1
 //!   1       0   SPI_PROT_POL1PHA0
 //!   1       1   SPI_PROT_POL1PHA1
 //! </pre>
 //!
-//! The \e mode parameter defines the operating mode of the SPI module.  The
-//! SPI module can operate as a controller or peripheral; the SPI can also be be
-//! configured to disable output on its serial output line.  The \e mode
-//! parameter can be one of the following values: \b SPI_MODE_CONTROLLER,
-//! \b SPI_MODE_PERIPHERAL, \b SPI_MODE_CONTROLLER_OD or
-//! \b SPI_MODE_PERIPHERAL_OD ("OD" indicates "output disabled").
+//! \e mode参数定义SPI模块的操作模式。SPI模块可以作为控制器或外设运行；
+//! SPI也可以配置为在其串行输出线上禁用输出。\e mode参数可以是以下值之一：
+//! \b SPI_MODE_CONTROLLER、\b SPI_MODE_PERIPHERAL、\b SPI_MODE_CONTROLLER_OD或
+//! \b SPI_MODE_PERIPHERAL_OD（"OD"表示"输出禁用"）。
 //!
-//! The \e bitRate parameter defines the bit rate for the SPI.  This bit rate
-//! must satisfy the following clock ratio criteria:
+//! \e bitRate参数定义SPI的位速率。此位速率必须满足以下时钟比率标准：
 //!
-//! - \e bitRate can be no greater than lspclkHz divided by 4.
-//! - \e lspclkHz / \e bitRate cannot be greater than 128.
+//! - \e bitRate不能大于lspclkHz除以4。
+//! - \e lspclkHz / \e bitRate不能大于128。
 //!
-//! The \e dataWidth parameter defines the width of the data transfers and
-//! can be a value between 1 and 16, inclusive.
+//! \e dataWidth参数定义数据传输的宽度，可以是1到16之间的值（含1和16）。
 //!
-//! The peripheral clock is the low speed peripheral clock.  This value is
-//! returned by SysCtl_getLowSpeedClock(), or it can be explicitly hard coded
-//! if it is constant and known (to save the code/execution overhead of a call
-//! to SysCtl_getLowSpeedClock()).
+//! 外设时钟是低速外设时钟。此值由SysCtl_getLowSpeedClock()返回，
+//! 或者如果它是恒定且已知的，则可以显式硬编码（以节省调用
+//! SysCtl_getLowSpeedClock()的代码/执行开销）。
 //!
-//! \note SPI operation should be disabled via SPI_disableModule() before any
-//! changes to its configuration.
+//! \note 在对其配置进行任何更改之前，应通过SPI_disableModule()禁用SPI操作。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 extern void
@@ -1435,29 +1365,26 @@ SPI_setConfig(uint32_t base, uint32_t lspclkHz, SPI_TransferProtocol protocol,
 
 //*****************************************************************************
 //
-//! Configures the baud rate of the serial peripheral interface.
+//! 配置串行外设接口的波特率。
 //!
-//! \param base specifies the SPI module base address.
-//! \param lspclkHz is the rate of the clock supplied to the SPI module
-//! (LSPCLK) in Hz.
-//! \param bitRate specifies the clock rate in Hz.
+//! \param base 指定SPI模块基地址。
+//! \param lspclkHz 是提供给SPI模块的时钟（LSPCLK）的速率，单位为Hz。
+//! \param bitRate 指定时钟速率，单位为Hz。
 //!
-//! This function configures the SPI baud rate. The \e bitRate parameter
-//! defines the bit rate for the SPI.  This bit rate must satisfy the following
-//! clock ratio criteria:
+//! 此函数配置SPI波特率。\e bitRate参数定义SPI的位速率。
+//! 此位速率必须满足以下时钟比率标准：
 //!
-//! - \e bitRate can be no greater than \e lspclkHz divided by 4.
-//! - \e lspclkHz / \e bitRate cannot be greater than 128.
+//! - \e bitRate不能大于\e lspclkHz除以4。
+//! - \e lspclkHz / \e bitRate不能大于128。
 //!
-//! The peripheral clock is the low speed peripheral clock.  This value is
-//! returned by SysCtl_getLowSpeedClock(), or it can be explicitly hard coded
-//! if it is constant and known (to save the code/execution overhead of a call
-//! to SysCtl_getLowSpeedClock()).
+//! 外设时钟是低速外设时钟。此值由SysCtl_getLowSpeedClock()返回，
+//! 或者如果它是恒定且已知的，则可以显式硬编码（以节省调用
+//! SysCtl_getLowSpeedClock()的代码/执行开销）。
 //!
-//! \note SPI_setConfig() also sets the baud rate. Use SPI_setBaudRate()
-//! if you wish to configure it separately from protocol and mode.
+//! \note SPI_setConfig()也设置波特率。如果您希望将其与协议和模式分开配置，
+//! 请使用SPI_setBaudRate()。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 extern void
@@ -1465,26 +1392,23 @@ SPI_setBaudRate(uint32_t base, uint32_t lspclkHz, uint32_t bitRate);
 
 //*****************************************************************************
 //
-//! Enables individual SPI interrupt sources.
+//! 启用单个SPI中断源。
 //!
-//! \param base specifies the SPI module base address.
-//! \param intFlags is a bit mask of the interrupt sources to be enabled.
+//! \param base 指定SPI模块基地址。
+//! \param intFlags 是要启用的中断源的位掩码。
 //!
-//! This function enables the indicated SPI interrupt sources. Only the sources
-//! that are enabled can be reflected to the processor interrupt; disabled
-//! sources have no effect on the processor.  The \e intFlags parameter can be
-//! any of the following values:
-//! - \b SPI_INT_RX_OVERRUN - Receive overrun interrupt
-//! - \b SPI_INT_RX_DATA_TX_EMPTY - Data received, transmit empty
-//! - \b SPI_INT_RXFF (also enables \b SPI_INT_RXFF_OVERFLOW) - RX FIFO level
-//!   interrupt (and RX FIFO overflow)
-//! - \b SPI_INT_TXFF - TX FIFO level interrupt
+//! 此函数启用指定的SPI中断源。只有启用的源才能反映到处理器中断；
+//! 禁用的源对处理器没有影响。\e intFlags参数可以是以下值的任意组合：
+//! - \b SPI_INT_RX_OVERRUN - 接收溢出中断
+//! - \b SPI_INT_RX_DATA_TX_EMPTY - 数据接收，发送空
+//! - \b SPI_INT_RXFF（也启用\b SPI_INT_RXFF_OVERFLOW）- RX FIFO级别中断（和RX FIFO溢出）
+//! - \b SPI_INT_TXFF - TX FIFO级别中断
 //!
-//! \note \b SPI_INT_RX_OVERRUN, \b SPI_INT_RX_DATA_TX_EMPTY,
-//! \b SPI_INT_RXFF_OVERFLOW, and \b SPI_INT_RXFF are associated with
-//! \b SPIRXINT; \b SPI_INT_TXFF is associated with \b SPITXINT.
+//! \note \b SPI_INT_RX_OVERRUN、\b SPI_INT_RX_DATA_TX_EMPTY、
+//! \b SPI_INT_RXFF_OVERFLOW和\b SPI_INT_RXFF与\b SPIRXINT关联；
+//! \b SPI_INT_TXFF与\b SPITXINT关联。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 extern void
@@ -1492,23 +1416,22 @@ SPI_enableInterrupt(uint32_t base, uint32_t intFlags);
 
 //*****************************************************************************
 //
-//! Disables individual SPI interrupt sources.
+//! 禁用单个SPI中断源。
 //!
-//! \param base specifies the SPI module base address.
-//! \param intFlags is a bit mask of the interrupt sources to be disabled.
+//! \param base 指定SPI模块基地址。
+//! \param intFlags 是要禁用的中断源的位掩码。
 //!
-//! This function disables the indicated SPI interrupt sources.  The
-//! \e intFlags parameter can be any of the following values:
+//! 此函数禁用指定的SPI中断源。\e intFlags参数可以是以下值的任意组合：
 //! - \b SPI_INT_RX_OVERRUN
 //! - \b SPI_INT_RX_DATA_TX_EMPTY
-//! - \b SPI_INT_RXFF (also disables \b SPI_INT_RXFF_OVERFLOW)
+//! - \b SPI_INT_RXFF（也禁用\b SPI_INT_RXFF_OVERFLOW）
 //! - \b SPI_INT_TXFF
 //!
-//! \note \b SPI_INT_RX_OVERRUN, \b SPI_INT_RX_DATA_TX_EMPTY,
-//! \b SPI_INT_RXFF_OVERFLOW, and \b SPI_INT_RXFF are associated with
-//! \b SPIRXINT; \b SPI_INT_TXFF is associated with \b SPITXINT.
+//! \note \b SPI_INT_RX_OVERRUN、\b SPI_INT_RX_DATA_TX_EMPTY、
+//! \b SPI_INT_RXFF_OVERFLOW和\b SPI_INT_RXFF与\b SPIRXINT关联；
+//! \b SPI_INT_TXFF与\b SPITXINT关联。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 extern void
@@ -1516,19 +1439,18 @@ SPI_disableInterrupt(uint32_t base, uint32_t intFlags);
 
 //*****************************************************************************
 //
-//! Gets the current interrupt status.
+//! 获取当前中断状态。
 //!
-//! \param base specifies the SPI module base address.
+//! \param base 指定SPI模块基地址。
 //!
-//! This function returns the interrupt status for the SPI module.
+//! 此函数返回SPI模块的中断状态。
 //!
-//! \return The current interrupt status, enumerated as a bit field of the
-//! following values:
-//! - \b SPI_INT_RX_OVERRUN - Receive overrun interrupt
-//! - \b SPI_INT_RX_DATA_TX_EMPTY - Data received, transmit empty
-//! - \b SPI_INT_RXFF - RX FIFO level interrupt
-//! - \b SPI_INT_RXFF_OVERFLOW - RX FIFO overflow
-//! - \b SPI_INT_TXFF - TX FIFO level interrupt
+//! \return 当前中断状态，枚举为以下值的位字段：
+//! - \b SPI_INT_RX_OVERRUN - 接收溢出中断
+//! - \b SPI_INT_RX_DATA_TX_EMPTY - 数据接收，发送空
+//! - \b SPI_INT_RXFF - RX FIFO级别中断
+//! - \b SPI_INT_RXFF_OVERFLOW - RX FIFO溢出
+//! - \b SPI_INT_TXFF - TX FIFO级别中断
 //
 //*****************************************************************************
 extern uint32_t
@@ -1536,30 +1458,27 @@ SPI_getInterruptStatus(uint32_t base);
 
 //*****************************************************************************
 //
-//! Clears SPI interrupt sources.
+//! 清除SPI中断源。
 //!
-//! \param base specifies the SPI module base address.
-//! \param intFlags is a bit mask of the interrupt sources to be cleared.
+//! \param base 指定SPI模块基地址。
+//! \param intFlags 是要清除的中断源的位掩码。
 //!
-//! This function clears the specified SPI interrupt sources so that they no
-//! longer assert.  This function must be called in the interrupt handler to
-//! keep the interrupts from being triggered again immediately upon exit.  The
-//! \e intFlags parameter can consist of a bit field of the following values:
+//! 此函数清除指定的SPI中断源，使它们不再断言。此函数必须在中断处理程序中调用，
+//! 以防止中断在退出后立即再次触发。\e intFlags参数可以由以下值的位字段组成：
 //! - \b SPI_INT_RX_OVERRUN
 //! - \b SPI_INT_RX_DATA_TX_EMPTY
 //! - \b SPI_INT_RXFF
 //! - \b SPI_INT_RXFF_OVERFLOW
 //! - \b SPI_INT_TXFF
 //!
-//! \note \b SPI_INT_RX_DATA_TX_EMPTY is cleared by a read of the receive
-//! receive buffer, so it usually doesn't need to be cleared using this
-//! function.
+//! \note \b SPI_INT_RX_DATA_TX_EMPTY通过读取接收缓冲区来清除，
+//! 因此通常不需要使用此函数来清除它。
 //!
-//! \note Also note that \b SPI_INT_RX_OVERRUN, \b SPI_INT_RX_DATA_TX_EMPTY,
-//! \b SPI_INT_RXFF_OVERFLOW, and \b SPI_INT_RXFF are associated with
-//! \b SPIRXINT; \b SPI_INT_TXFF is associated with \b SPITXINT.
+//! \note 还请注意，\b SPI_INT_RX_OVERRUN、\b SPI_INT_RX_DATA_TX_EMPTY、
+//! \b SPI_INT_RXFF_OVERFLOW和\b SPI_INT_RXFF与\b SPIRXINT关联；
+//! \b SPI_INT_TXFF与\b SPITXINT关联。
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 extern void
@@ -1568,21 +1487,19 @@ SPI_clearInterruptStatus(uint32_t base, uint32_t intFlags);
 
 //*****************************************************************************
 //
-//! This function can be used to transmit a 24-bit word of data
+//! 此函数可用于发送24位字的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param txData is the data to be transmitted over SPI
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param txData 要通过SPI传输的数据
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function can be used to transmit a 24-bit word of data.
-//! 24-bit word data is divided into three bytes of data.
+//! 此函数可用于发送24位字的数据。
+//! 24位字数据被分为三个字节的数据。
 //!
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to 8 bits BEFORE calling the
-//! function
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为8位
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 extern void
@@ -1590,21 +1507,19 @@ SPI_transmit24Bits(uint32_t base, uint32_t data, uint16_t txDelay);
 
 //*****************************************************************************
 //
-//! This function can be used to transmit a 32-bit word of data
+//! 此函数可用于发送32位字的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param txData is the data to be transmitted over SPI
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param txData 要通过SPI传输的数据
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function can be used to transmit a 32-bit word of data.
-//! 32-bit word data is divided into four bytes of data.
+//! 此函数可用于发送32位字的数据。
+//! 32位字数据被分为四个字节的数据。
 //!
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to 16 bits BEFORE calling the
-//! function
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为16位
 //!
-//! \return None.
+//! \return 无。
 //
 //*****************************************************************************
 extern void
@@ -1614,21 +1529,18 @@ SPI_transmit32Bits(uint32_t base, uint32_t data, uint16_t txDelay);
 
 //*****************************************************************************
 //
-//! This function is used to receive a 16-bit word of data
+//! 此函数用于接收16位字的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param endianness specifies the endianess of received data
-//! \param dummyData is the data which is transmitted to initiate
-//!        SPI transaction to receive SPI data
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param endianness 指定接收数据的字节序
+//! \param dummyData 用于启动SPI事务以接收SPI数据的传输数据
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function is used to receive a 16-bit word of data.
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to 8 bits BEFORE calling the
-//! function
+//! 此函数用于接收16位字的数据。
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为8位
 //!
-//! \return the received 16-bit word.
+//! \return 接收到的16位字。
 //
 //*****************************************************************************
 extern uint16_t
@@ -1637,21 +1549,18 @@ SPI_receive16Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
 
 //*****************************************************************************
 //
-//! This function is used to receive a 24-bit word of data
+//! 此函数用于接收24位字的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param endianness specifies the endianess of received data
-//! \param dummyData is the data which is transmitted to initiate
-//!        SPI transaction to receive SPI data
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param endianness 指定接收数据的字节序
+//! \param dummyData 用于启动SPI事务以接收SPI数据的传输数据
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function is used to receive a 24-bit word of data.
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to 8 bits BEFORE calling the
-//! function
+//! 此函数用于接收24位字的数据。
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为8位
 //!
-//! \return the received 24-bit word.
+//! \return 接收到的24位字。
 //
 //*****************************************************************************
 extern uint32_t
@@ -1660,21 +1569,18 @@ SPI_receive24Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
 
 //*****************************************************************************
 //
-//! This function is used to receive a 32-bit word of data
+//! 此函数用于接收32位字的数据
 //!
-//! \param base specifies the SPI module base address.
-//! \param endianness specifies the endianess of received data
-//! \param dummyData is the data which is transmitted to initiate
-//!        SPI transaction to receive SPI data
-//! \param txDelay specifies the number of serial clock cycles delay time after
-//!        completion of perious word
+//! \param base 指定SPI模块基地址。
+//! \param endianness 指定接收数据的字节序
+//! \param dummyData 用于启动SPI事务以接收SPI数据的传输数据
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数
 //!
-//! This function is used to receive a 32-bit word of data.
-//! This function uses SPI_pollingFIFOTransaction function.
-//! SPI character length must be configured to 8 bits BEFORE calling the
-//! function
+//! 此函数用于接收32位字的数据。
+//! 此函数使用SPI_pollingFIFOTransaction函数。
+//! 在调用此函数之前，SPI字符长度必须配置为8位
 //!
-//! \return the received 32-bit word.
+//! \return 接收到的32位字。
 //
 //*****************************************************************************
 extern uint32_t
@@ -1685,15 +1591,14 @@ SPI_receive32Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
 
 //*****************************************************************************
 //
-//! This function is used to initiate SPI transaction of specified character
-//! length
+//! 此函数用于启动指定字符长度的SPI事务
 //!
-//! \param base specifies the SPI module base address.
-//! \param charLength specifies the SPI character length of SPI transaction
-//! \param data specified the data to be transmitted
+//! \param base 指定SPI模块基地址。
+//! \param charLength 指定SPI事务的SPI字符长度
+//! \param data 指定要传输的数据
 //!
-//! The SPI must be configured to the provided charLength BEFORE the function
-//! is called. This function does not set/change the SPI char length.
+//! 在调用此函数之前，SPI必须配置为提供的charLength。
+//! 此函数不设置/更改SPI字符长度。
 //!
 //! \return .
 //
@@ -1704,19 +1609,18 @@ SPI_pollingNonFIFOTransaction(uint32_t base, uint16_t charLength,
 
 //*****************************************************************************
 //
-//! This function is used to initiate SPI transaction of specified character
-//! length and 'N' words of transaction
+//! 此函数用于启动指定字符长度和'N'个字事务的SPI事务
 //!
-//! \param base specifies the SPI module base address.
-//! \param charLength specifies the SPI character length of SPI transaction
-//! \param pTxBuffer specifies the pointer to transmit buffer
-//! \param pRxBuffer specifies the pointer to receive buffer
-//! \param numOfWords specified the number of data to be transmitted / received
+//! \param base 指定SPI模块基地址。
+//! \param charLength 指定SPI事务的SPI字符长度
+//! \param pTxBuffer 指定发送缓冲区的指针
+//! \param pRxBuffer 指定接收缓冲区的指针
+//! \param numOfWords 指定要传输/接收的数据数量
 //!
-//! The SPI must be configured to the provided charLength BEFORE the function
-//! is called. This function does not set/change the SPI char length.
+//! 在调用此函数之前，SPI必须配置为提供的charLength。
+//! 此函数不设置/更改SPI字符长度。
 //!
-//! \return none
+//! \return 无
 //
 //*****************************************************************************
 extern void
@@ -1726,14 +1630,14 @@ SPI_pollingFIFOTransaction(uint32_t base, uint16_t charLength,
 
 //*****************************************************************************
 //
-// Close the Doxygen group.
+// 关闭Doxygen组。
 //! @}
 //
 //*****************************************************************************
 
 //*****************************************************************************
 //
-// Mark the end of the C bindings section for C++ compilers.
+// 标记C++编译器C绑定部分的结束。
 //
 //*****************************************************************************
 #ifdef __cplusplus

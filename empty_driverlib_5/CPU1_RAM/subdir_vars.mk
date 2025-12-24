@@ -15,14 +15,14 @@ LIB_SRCS += \
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib.lib 
 
 C_UPPER_SRCS += \
-../FOC_CLA_SVPWM.C 
+../FOC_SPI.C 
 
 C_SRCS += \
 ./syscfg/board.c \
 ./syscfg/c2000ware_libraries.c 
 
 C_UPPER_DEPS += \
-./FOC_CLA_SVPWM.d 
+./FOC_SPI.d 
 
 GEN_FILES += \
 ./syscfg/board.c \
@@ -42,7 +42,7 @@ GEN_OPTS += \
 ./syscfg/c2000ware_libraries.opt 
 
 OBJS += \
-./FOC_CLA_SVPWM.obj \
+./FOC_SPI.obj \
 ./syscfg/board.obj \
 ./syscfg/c2000ware_libraries.obj 
 
@@ -59,7 +59,7 @@ GEN_MISC_DIRS__QUOTED += \
 "syscfg" 
 
 OBJS__QUOTED += \
-"FOC_CLA_SVPWM.obj" \
+"FOC_SPI.obj" \
 "syscfg\board.obj" \
 "syscfg\c2000ware_libraries.obj" 
 
@@ -77,7 +77,7 @@ C_DEPS__QUOTED += \
 "syscfg\c2000ware_libraries.d" 
 
 C_UPPER_DEPS__QUOTED += \
-"FOC_CLA_SVPWM.d" 
+"FOC_SPI.d" 
 
 GEN_FILES__QUOTED += \
 "syscfg\board.c" \
@@ -86,7 +86,7 @@ GEN_FILES__QUOTED += \
 "syscfg\c2000ware_libraries.c" 
 
 C_UPPER_SRCS__QUOTED += \
-"../FOC_CLA_SVPWM.C" 
+"../FOC_SPI.C" 
 
 SYSCFG_SRCS__QUOTED += \
 "../c2000.syscfg" 

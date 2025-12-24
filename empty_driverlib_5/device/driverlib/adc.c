@@ -2,7 +2,7 @@
 //
 // FILE:   adc.c
 //
-// TITLE:  C28x ADC driver.
+// TITLE:  C28x ADC驱动程序。
 //
 //###########################################################################
 // 
@@ -44,13 +44,12 @@
 
 //*****************************************************************************
 //
-// Defines for locations of ADC calibration functions in OTP for use in
-// ADC_setMode() ONLY. Not intended for use by application code.
+// 用于ADC_setMode()中OTP内ADC校准函数位置的定义。
+// 不适用于应用程序代码。
 //
 //*****************************************************************************
 //
-// The following functions calibrate the ADC linearity.  Use them in the
-// ADC_setMode() function only.
+// 以下函数用于校准ADC线性度。仅在ADC_setMode()函数中使用。
 //
 #define ADC_calADCAINL          0x0703B4U
 #define ADC_calADCBINL          0x0703B2U
@@ -58,14 +57,14 @@
 #define ADC_calADCDINL          0x0703AEU
 
 //
-// This function looks up the ADC offset trim for a given condition. Use this
-// in the ADC_setMode() function only.
+// 此函数根据给定条件查找ADC偏移校准值。仅在ADC_setMode()函数中使用。
 //
 #define ADC_getOffsetTrim       0x0703ACU
 
 //*****************************************************************************
 //
 // ADC_setMode
+// 设置ADC模式
 //
 //*****************************************************************************
 void
@@ -73,14 +72,14 @@ ADC_setMode(uint32_t base, ADC_Resolution resolution,
             ADC_SignalMode signalMode)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(ADC_isBaseValid(base));
 
     //
-    // Check for correct signal mode & resolution. In this device:
-    // Single ended signal conversions are supported in 12-bit mode only
-    // Differential signal conversions are supported in 16-bit mode only
+    // 检查信号模式和分辨率是否正确。在此设备中：
+    // 单端信号转换仅在12位模式下支持
+    // 差分信号转换仅在16位模式下支持
     //
     if(signalMode == ADC_MODE_SINGLE_ENDED)
     {
@@ -93,7 +92,7 @@ ADC_setMode(uint32_t base, ADC_Resolution resolution,
 
 
     //
-    // Apply the resolution and signalMode to the specified ADC.
+    // 为指定的ADC应用分辨率和信号模式。
     //
     EALLOW;
     HWREGH(base + ADC_O_CTL2) = (HWREGH(base + ADC_O_CTL2) &
@@ -102,7 +101,7 @@ ADC_setMode(uint32_t base, ADC_Resolution resolution,
     EDIS;
 
     //
-    // Apply INL and offset trims
+    // 应用INL和偏移校准
     //
     ADC_setINLTrim(base);
     ADC_setOffsetTrim(base);
@@ -111,6 +110,7 @@ ADC_setMode(uint32_t base, ADC_Resolution resolution,
 //*****************************************************************************
 //
 // ADC_setINLTrim
+// 设置ADC INL校准
 //
 //*****************************************************************************
 void
@@ -119,7 +119,7 @@ ADC_setINLTrim(uint32_t base)
     ADC_Resolution resolution;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(ADC_isBaseValid(base));
 
@@ -133,14 +133,14 @@ ADC_setINLTrim(uint32_t base)
             if(HWREGH(ADC_calADCAINL) != 0xFFFFU)
             {
                 //
-                // Trim function is programmed into OTP, so call it
+                // 校准函数已编程到OTP中，因此调用它
                 //
                 (*((void (*)(void))ADC_calADCAINL))();
             }
             else
             {
                 //
-                // Do nothing, no INL trim function populated
+                // 不执行任何操作，未填充INL校准函数
                 //
             }
             break;
@@ -148,14 +148,14 @@ ADC_setINLTrim(uint32_t base)
             if(HWREGH(ADC_calADCBINL) != 0xFFFFU)
             {
                 //
-                // Trim function is programmed into OTP, so call it
+                // 校准函数已编程到OTP中，因此调用它
                 //
                 (*((void (*)(void))ADC_calADCBINL))();
             }
             else
             {
                 //
-                // Do nothing, no INL trim function populated
+                // 不执行任何操作，未填充INL校准函数
                 //
             }
             break;
@@ -163,14 +163,14 @@ ADC_setINLTrim(uint32_t base)
             if(HWREGH(ADC_calADCCINL) != 0xFFFFU)
             {
                 //
-                // Trim function is programmed into OTP, so call it
+                // 校准函数已编程到OTP中，因此调用它
                 //
                 (*((void (*)(void))ADC_calADCCINL))();
             }
             else
             {
                 //
-                // Do nothing, no INL trim function populated
+                // 不执行任何操作，未填充INL校准函数
                 //
             }
             break;
@@ -178,31 +178,31 @@ ADC_setINLTrim(uint32_t base)
             if(HWREGH(ADC_calADCDINL) != 0xFFFFU)
             {
                 //
-                // Trim function is programmed into OTP, so call it
+                // 校准函数已编程到OTP中，因此调用它
                 //
                 (*((void (*)(void))ADC_calADCDINL))();
             }
             else
             {
                 //
-                // Do nothing, no INL trim function populated
+                // 不执行任何操作，未填充INL校准函数
                 //
             }
             break;
         default:
             //
-            // Invalid base address! Do nothing!
+            // 无效的基地址！不执行任何操作！
             //
             break;
     }
 
     //
-    // Apply linearity trim workaround for 12-bit resolution
+    // 为12位分辨率应用线性度校准修复
     //
     if(resolution == ADC_RESOLUTION_12BIT)
     {
         //
-        // 12-bit linearity trim workaround
+        // 12位线性度校准修复
         //
         HWREG(base + ADC_O_INLTRIM1) &= 0xFFFF0000U;
         HWREG(base + ADC_O_INLTRIM2) &= 0xFFFF0000U;
@@ -215,6 +215,7 @@ ADC_setINLTrim(uint32_t base)
 //*****************************************************************************
 //
 // ADC_setOffsetTrim
+// 设置ADC偏移校准
 //
 //*****************************************************************************
 void
@@ -226,7 +227,7 @@ ADC_setOffsetTrim(uint32_t base)
     ADC_SignalMode signalMode;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(ADC_isBaseValid(base));
 
@@ -251,20 +252,19 @@ ADC_setOffsetTrim(uint32_t base)
             break;
         default:
             //
-            // Invalid base address!
+            // 无效的基地址！
             //
             offsetIndex = 0U;
             break;
     }
 
     //
-    // Offset trim function is programmed into OTP, so call it
+    // 偏移校准函数已编程到OTP中，因此调用它
     //
     if(HWREGH(ADC_getOffsetTrim) != 0xFFFFU)
     {
         //
-        // Calculate the index into OTP table of offset trims and call
-        // function to return the correct offset trim
+        // 计算偏移校准OTP表的索引并调用函数返回正确的偏移校准值
         //
         offsetIndex += ((signalMode == ADC_MODE_DIFFERENTIAL) ? 1U : 0U) +
                        (2U * ((resolution == ADC_RESOLUTION_16BIT) ? 1U : 0U));
@@ -275,16 +275,15 @@ ADC_setOffsetTrim(uint32_t base)
     else
     {
         //
-        // Offset trim function is not populated, so set offset trim to 0
+        // 偏移校准函数未填充，因此将偏移校准设置为0
         //
         offsetTrim = 0U;
     }
 
     //
-    // Apply the offset trim. Offset Trim is not updated here in case of TMX or
-    // untrimmed devices. The default trims for TMX devices should be handled in
-    // Device_init(). Refer to Device_init() and Device_configureTMXAnalogTrim()
-    // APIs for more details.
+    // 应用偏移校准。在TMX或未校准设备的情况下，此处不更新偏移校准。
+    // TMX设备的默认校准应在Device_init()中处理。
+    // 有关更多详细信息，请参阅Device_init()和Device_configureTMXAnalogTrim() API。
     //
     if(offsetTrim > 0x0U)
     {
@@ -298,6 +297,7 @@ ADC_setOffsetTrim(uint32_t base)
 //*****************************************************************************
 //
 // ADC_setPPBTripLimits
+// 设置ADC PPB触发限制
 //
 //*****************************************************************************
 void
@@ -308,14 +308,14 @@ ADC_setPPBTripLimits(uint32_t base, ADC_PPBNumber ppbNumber,
     uint32_t ppbLoOffset;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(ADC_isBaseValid(base));
     ASSERT((tripHiLimit <= 65535) && (tripHiLimit >= -65536));
     ASSERT((tripLoLimit <= 65535) && (tripLoLimit >= -65536));
 
     //
-    // Get the offset to the appropriate trip limit registers.
+    // 获取适当的触发限制寄存器的偏移量。
     //
     ppbHiOffset = (ADC_PPBxTRIPHI_STEP * (uint32_t)ppbNumber) +
                   ADC_O_PPB1TRIPHI;
@@ -325,14 +325,14 @@ ADC_setPPBTripLimits(uint32_t base, ADC_PPBNumber ppbNumber,
     EALLOW;
 
     //
-    // Set the trip high limit.
+    // 设置触发高限制。
     //
     HWREG(base + ppbHiOffset) =
         (HWREG(base + ppbHiOffset) & ~ADC_PPBTRIP_MASK) |
         ((uint32_t)tripHiLimit & ADC_PPBTRIP_MASK);
 
     //
-    // Set the trip low limit.
+    // 设置触发低限制。
     //
     HWREG(base + ppbLoOffset) =
         (HWREG(base + ppbLoOffset) & ~ADC_PPBTRIP_MASK) |

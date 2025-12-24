@@ -1,0 +1,1 @@
+"D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\cl2000.exe" --compile_only --silicon_version=28 --define=CPU1 --define=DEBUG --define=F2837XD -i"../device" -i"../device/driverlib" -i"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib" -i"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" "../FOC_SPI.C"
