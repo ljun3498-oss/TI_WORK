@@ -9,6 +9,15 @@
                 "name": "empty_driverlib_4",
                 "resourceId": "/empty_driverlib_4"
             }
+        },
+        {
+            "name": "empty_driverlib (1)",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "empty_driverlib",
+                "resourceId": "/empty_driverlib"
+            }
         }
     ]
 }
