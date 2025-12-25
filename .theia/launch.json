@@ -8,6 +8,11 @@
             "projectInfo": {
                 "name": "empty_driverlib_4",
                 "resourceId": "/empty_driverlib_4"
+            },
+            "launchSettings": {
+                "coresToLoadForProjectLaunch": [
+                    "C28xx_CPU1"
+                ]
             }
         },
         {

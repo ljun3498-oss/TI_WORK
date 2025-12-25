@@ -50,3 +50,4 @@ float Encoder_getSpeedRad(void);
 float Encoder_getSpeedRPM(void);
 
 #endif // FOC_ENCODER_H
+

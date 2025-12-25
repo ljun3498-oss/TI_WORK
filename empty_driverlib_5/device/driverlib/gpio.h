@@ -2,7 +2,7 @@
 //
 // FILE:   gpio.h
 //
-// TITLE:  C28x GPIO driver.
+// TITLE:  C28x GPIO驱动程序。
 //
 //###########################################################################
 // 
@@ -45,8 +45,7 @@
 
 //*****************************************************************************
 //
-// If building with a C++ compiler, make all of the definitions in this header
-// have a C binding.
+// 如果使用C++编译器构建，请使此头文件中的所有定义具有C绑定。
 //
 //*****************************************************************************
 #ifdef __cplusplus
@@ -73,10 +72,10 @@ extern "C"
 
 //*****************************************************************************
 //
-// Useful defines used within the driver functions to access gpio registers.
-// Not intended for use by application code.
+// 驱动程序函数内用于访问gpio寄存器的有用定义。
+// 不适用于应用程序代码。
 //
-// Divide by 2 is for C28x which has word access
+// 除以2是因为C28x使用字访问
 //
 //*****************************************************************************
 #define GPIO_CTRL_REGS_STEP     ((GPIO_O_GPBCTRL - GPIO_O_GPACTRL) / 2U)
@@ -109,90 +108,89 @@ extern "C"
 // and returned by GPIO_getPadConfig().
 //
 //*****************************************************************************
-#define GPIO_PIN_TYPE_STD       0x0000U //!< Push-pull output or floating input
-#define GPIO_PIN_TYPE_PULLUP    0x0001U //!< Pull-up enable for input
-#define GPIO_PIN_TYPE_INVERT    0x0002U //!< Invert polarity on input
-#define GPIO_PIN_TYPE_OD        0x0004U //!< Open-drain on output
+#define GPIO_PIN_TYPE_STD       0x0000U //!< 推挽输出或浮空输入
+#define GPIO_PIN_TYPE_PULLUP    0x0001U //!< 输入使能上拉
+#define GPIO_PIN_TYPE_INVERT    0x0002U //!< 输入极性反转
+#define GPIO_PIN_TYPE_OD        0x0004U //!< 输出开漏
 #endif
 
 //*****************************************************************************
 //
-//! Values that can be passed to GPIO_setDirectionMode() as the \e pinIO
-//! parameter and returned from GPIO_getDirectionMode().
+//! 可作为\e pinIO参数传递给GPIO_setDirectionMode()的值，
+//! 以及由GPIO_getDirectionMode()返回的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    GPIO_DIR_MODE_IN,                   //!< Pin is a GPIO input
-    GPIO_DIR_MODE_OUT                   //!< Pin is a GPIO output
+    GPIO_DIR_MODE_IN,                   //!< 引脚为GPIO输入
+    GPIO_DIR_MODE_OUT                   //!< 引脚为GPIO输出
 } GPIO_Direction;
 
 //*****************************************************************************
 //
-//! Values that can be passed to GPIO_setInterruptType() as the \e intType
-//! parameter and returned from GPIO_getInterruptType().
+//! 可作为\e intType参数传递给GPIO_setInterruptType()的值，
+//! 以及由GPIO_getInterruptType()返回的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    GPIO_INT_TYPE_FALLING_EDGE = 0x00,   //!< Interrupt on falling edge
-    GPIO_INT_TYPE_RISING_EDGE  = 0x04,   //!< Interrupt on rising edge
-    GPIO_INT_TYPE_BOTH_EDGES   = 0x0C    //!< Interrupt on both edges
+    GPIO_INT_TYPE_FALLING_EDGE = 0x00,   //!< 下降沿中断
+    GPIO_INT_TYPE_RISING_EDGE  = 0x04,   //!< 上升沿中断
+    GPIO_INT_TYPE_BOTH_EDGES   = 0x0C    //!< 双边沿中断
 } GPIO_IntType;
 
 //*****************************************************************************
 //
-//! Values that can be passed to GPIO_setQualificationMode() as the
-//! \e qualification parameter and returned by GPIO_getQualificationMode().
+//! 可作为\e qualification参数传递给GPIO_setQualificationMode()的值，
+//! 以及由GPIO_getQualificationMode()返回的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    GPIO_QUAL_SYNC,                     //!< Synchronization to SYSCLK
-    GPIO_QUAL_3SAMPLE,                  //!< Qualified with 3 samples
-    GPIO_QUAL_6SAMPLE,                  //!< Qualified with 6 samples
-    GPIO_QUAL_ASYNC                     //!< No synchronization
+    GPIO_QUAL_SYNC,                     //!< 同步到SYSCLK
+    GPIO_QUAL_3SAMPLE,                  //!< 3次采样限定
+    GPIO_QUAL_6SAMPLE,                  //!< 6次采样限定
+    GPIO_QUAL_ASYNC                     //!< 无同步
 } GPIO_QualificationMode;
 
 //*****************************************************************************
 //
-//! Values that can be passed to GPIO_setAnalogMode() as the \e mode parameter.
+//! 可作为\e mode参数传递给GPIO_setAnalogMode()的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    GPIO_ANALOG_DISABLED,       //!< Pin is in digital mode
-    GPIO_ANALOG_ENABLED         //!< Pin is in analog mode
+    GPIO_ANALOG_DISABLED,       //!< 引脚为数字模式
+    GPIO_ANALOG_ENABLED         //!< 引脚为模拟模式
 } GPIO_AnalogMode;
 
 //*****************************************************************************
 //
-//! Values that can be passed to GPIO_setControllerCore() as the \e core
-//! parameter.
+//! 可作为\e core参数传递给GPIO_setControllerCore()的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    GPIO_CORE_CPU1,             //!< CPU1 selected as controller core
-    GPIO_CORE_CPU1_CLA1,        //!< CPU1's CLA1 selected as controller core
-    GPIO_CORE_CPU2,             //!< CPU2 selected as controller core
-    GPIO_CORE_CPU2_CLA1         //!< CPU2's CLA1 selected as controller core
+    GPIO_CORE_CPU1,             //!< CPU1被选为控制核心
+    GPIO_CORE_CPU1_CLA1,        //!< CPU1的CLA1被选为控制核心
+    GPIO_CORE_CPU2,             //!< CPU2被选为控制核心
+    GPIO_CORE_CPU2_CLA1         //!< CPU2的CLA1被选为控制核心
 } GPIO_CoreSelect;
 
 //*****************************************************************************
 //
-//! Values that can be passed to GPIO_readPortData(), GPIO_setPortPins(),
-//! GPIO_clearPortPins(), and GPIO_togglePortPins() as the \e port parameter.
+//! 可作为\e port参数传递给GPIO_readPortData()、GPIO_setPortPins()、
+//! GPIO_clearPortPins()和GPIO_togglePortPins()的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    GPIO_PORT_A = 0,                    //!< GPIO port A
-    GPIO_PORT_B = 1,                    //!< GPIO port B
-    GPIO_PORT_C = 2,                    //!< GPIO port C
-    GPIO_PORT_D = 3,                    //!< GPIO port D
-    GPIO_PORT_E = 4,                    //!< GPIO port E
-    GPIO_PORT_F = 5                     //!< GPIO port F
+    GPIO_PORT_A = 0,                    //!< GPIO端口A
+    GPIO_PORT_B = 1,                    //!< GPIO端口B
+    GPIO_PORT_C = 2,                    //!< GPIO端口C
+    GPIO_PORT_D = 3,                    //!< GPIO端口D
+    GPIO_PORT_E = 4,                    //!< GPIO端口E
+    GPIO_PORT_F = 5                     //!< GPIO端口F
 } GPIO_Port;
 
 //*****************************************************************************

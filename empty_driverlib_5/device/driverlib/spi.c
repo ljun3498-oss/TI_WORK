@@ -2,7 +2,7 @@
 //
 // FILE:   spi.c
 //
-// TITLE:  C28x SPI driver.
+// TITLE:  C28x SPI驱动程序。
 //
 //###########################################################################
 // 
@@ -44,7 +44,18 @@
 
 //*****************************************************************************
 //
-// SPI_setConfig
+//! SPI配置函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param lspclkHz 是提供给SPI模块的时钟（LSPCLK）的速率，单位为Hz。
+//! \param protocol 指定数据传输协议。
+//! \param mode 指定操作模式。
+//! \param bitRate 指定时钟速率，单位为Hz。
+//! \param dataWidth 指定每帧传输的位数。
+//!
+//! 此函数配置串行外设接口，设置SPI协议、操作模式、位速率和数据宽度。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
@@ -55,7 +66,7 @@ SPI_setConfig(uint32_t base, uint32_t lspclkHz, SPI_TransferProtocol protocol,
     uint32_t baud;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
     ASSERT(bitRate <= (lspclkHz / 4U));
@@ -64,7 +75,7 @@ SPI_setConfig(uint32_t base, uint32_t lspclkHz, SPI_TransferProtocol protocol,
     ASSERT((HWREGH(base + SPI_O_CCR) & SPI_CCR_SPISWRESET) == 0U);
 
     //
-    // Set polarity and data width.
+    // 设置极性和数据宽度。
     //
     regValue = (((uint16_t)protocol << 6U) & SPI_CCR_CLKPOLARITY) |
                (dataWidth - 1U);
@@ -74,7 +85,7 @@ SPI_setConfig(uint32_t base, uint32_t lspclkHz, SPI_TransferProtocol protocol,
                                regValue;
 
     //
-    // Set the mode and phase.
+    // 设置模式和相位。
     //
     regValue = (uint16_t)mode | (((uint16_t)protocol << 2U) &
                                  SPI_CTL_CLK_PHASE);
@@ -84,7 +95,7 @@ SPI_setConfig(uint32_t base, uint32_t lspclkHz, SPI_TransferProtocol protocol,
                                   SPI_CTL_CLK_PHASE)) | regValue;
 
     //
-    // Set the clock.
+    // 设置时钟。
     //
     baud = (lspclkHz / bitRate) - 1U;
     HWREGH(base + SPI_O_BRR) = (uint16_t)baud;
@@ -92,7 +103,15 @@ SPI_setConfig(uint32_t base, uint32_t lspclkHz, SPI_TransferProtocol protocol,
 
 //*****************************************************************************
 //
-// SPI_setBaudRate
+//! SPI波特率设置函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param lspclkHz 是提供给SPI模块的时钟（LSPCLK）的速率，单位为Hz。
+//! \param bitRate 指定时钟速率，单位为Hz。
+//!
+//! 此函数配置SPI波特率。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
@@ -101,14 +120,14 @@ SPI_setBaudRate(uint32_t base, uint32_t lspclkHz, uint32_t bitRate)
     uint32_t baud;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
     ASSERT(bitRate <= (lspclkHz / 4U));
     ASSERT((lspclkHz / bitRate) <= 128U);
 
     //
-    // Set the clock.
+    // 设置时钟。
     //
     baud = (lspclkHz / bitRate) - 1U;
     HWREGH(base + SPI_O_BRR) = (uint16_t)baud;
@@ -116,19 +135,26 @@ SPI_setBaudRate(uint32_t base, uint32_t lspclkHz, uint32_t bitRate)
 
 //*****************************************************************************
 //
-// SPI_enableInterrupt
+//! SPI中断使能函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param intFlags 是要启用的中断源的位掩码。
+//!
+//! 此函数启用指定的SPI中断源。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
 SPI_enableInterrupt(uint32_t base, uint32_t intFlags)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Enable the specified non-FIFO interrupts.
+    // 启用指定的非FIFO中断。
     //
     if((intFlags & SPI_INT_RX_DATA_TX_EMPTY) != 0U)
     {
@@ -141,7 +167,7 @@ SPI_enableInterrupt(uint32_t base, uint32_t intFlags)
     }
 
     //
-    // Enable the specified FIFO-mode interrupts.
+    // 启用指定的FIFO模式中断。
     //
     if((intFlags & SPI_INT_TXFF) != 0U)
     {
@@ -156,19 +182,26 @@ SPI_enableInterrupt(uint32_t base, uint32_t intFlags)
 
 //*****************************************************************************
 //
-// SPI_disableInterrupt
+//! SPI中断禁用函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param intFlags 是要禁用的中断源的位掩码。
+//!
+//! 此函数禁用指定的SPI中断源。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
 SPI_disableInterrupt(uint32_t base, uint32_t intFlags)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Disable the specified non-FIFO interrupts.
+    // 禁用指定的非FIFO中断。
     //
     if((intFlags & SPI_INT_RX_DATA_TX_EMPTY) != 0U)
     {
@@ -181,7 +214,7 @@ SPI_disableInterrupt(uint32_t base, uint32_t intFlags)
     }
 
     //
-    // Disable the specified FIFO-mode interrupts.
+    // 禁用指定的FIFO模式中断。
     //
     if((intFlags & SPI_INT_TXFF) != 0U)
     {
@@ -196,7 +229,13 @@ SPI_disableInterrupt(uint32_t base, uint32_t intFlags)
 
 //*****************************************************************************
 //
-// SPI_getInterruptStatus
+//! SPI中断状态获取函数
+//!
+//! \param base 指定SPI模块基地址。
+//!
+//! 此函数返回SPI模块的中断状态。
+//!
+//! \return 当前中断状态的位字段。
 //
 //*****************************************************************************
 uint32_t
@@ -205,7 +244,7 @@ SPI_getInterruptStatus(uint32_t base)
     uint32_t temp = 0;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
@@ -239,19 +278,26 @@ SPI_getInterruptStatus(uint32_t base)
 
 //*****************************************************************************
 //
-// SPI_clearInterruptStatus
+//! SPI中断状态清除函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param intFlags 是要清除的中断源的位掩码。
+//!
+//! 此函数清除指定的SPI中断源。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
 SPI_clearInterruptStatus(uint32_t base, uint32_t intFlags)
 {
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(SPI_isBaseValid(base));
 
     //
-    // Clear the specified non-FIFO interrupt sources.
+    // 清除指定的非FIFO中断源。
     //
     if((intFlags & SPI_INT_RX_DATA_TX_EMPTY) != 0U)
     {
@@ -265,7 +311,7 @@ SPI_clearInterruptStatus(uint32_t base, uint32_t intFlags)
     }
 
     //
-    // Clear the specified FIFO-mode interrupt sources.
+    // 清除指定的FIFO模式中断源。
     //
     if((intFlags & SPI_INT_TXFF) != 0U)
     {
@@ -284,7 +330,15 @@ SPI_clearInterruptStatus(uint32_t base, uint32_t intFlags)
 }
 //*****************************************************************************
 //
-// SPI_pollingNonFIFOTransaction
+//! SPI非FIFO模式轮询事务函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param charLength 指定SPI事务的字符长度。
+//! \param data 指定要传输的数据。
+//!
+//! 此函数用于启动指定字符长度的SPI事务（非FIFO模式）。
+//!
+//! \return 接收到的数据。
 //
 //*****************************************************************************
 uint16_t
@@ -296,12 +350,12 @@ SPI_pollingNonFIFOTransaction(uint32_t base, uint16_t charLength, uint16_t data)
     ASSERT(data < ((uint32_t)1U << charLength));
 
     //
-    // Write to SPI Transmit buffer
+    // 写入SPI发送缓冲区
     //
     SPI_writeDataBlockingNonFIFO(base, data << (16U - charLength));
 
     //
-    // Read SPI Receive buffer
+    // 读取SPI接收缓冲区
     //
     rxData = SPI_readDataBlockingNonFIFO(base);
 
@@ -309,7 +363,18 @@ SPI_pollingNonFIFOTransaction(uint32_t base, uint16_t charLength, uint16_t data)
 }
 //*****************************************************************************
 //
-// SPI_pollingFIFOTransaction
+//! SPIFIFO模式轮询事务函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param charLength 指定SPI事务的字符长度。
+//! \param pTxBuffer 指定发送缓冲区的指针。
+//! \param pRxBuffer 指定接收缓冲区的指针。
+//! \param numOfWords 指定要传输/接收的数据数量。
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数。
+//!
+//! 此函数用于启动指定字符长度和'N'个字事务的SPI事务（FIFO模式）。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 
@@ -321,25 +386,23 @@ SPI_pollingFIFOTransaction(uint32_t base, uint16_t charLength,
     ASSERT(((HWREGH(base + SPI_O_CCR) & SPI_CCR_SPICHAR_M) + 1U) == charLength);
 
     //
-    // Reset the TX / RX FIFO buffers to default state
+    // 将TX / RX FIFO缓冲区重置为默认状态
     //
-    SPI_disableFIFO(base); // Disable FIFO register
-    SPI_enableFIFO(base);  // Enable FIFO register
+    SPI_disableFIFO(base); // 禁用FIFO寄存器
+    SPI_enableFIFO(base);  // 启用FIFO寄存器
 
     //
-    // Configure the FIFO Transmit Delay
+    // 配置FIFO发送延迟
     //
     SPI_setTxFifoTransmitDelay(base, txDelay);
 
     //
-    // Determine the number of 16-level words from number of words to be
-    // transmitted / received
+    // 根据要传输/接收的字数确定16级字的数量
     //
     uint16_t numOfSixteenWords = numOfWords / (uint16_t)SPI_FIFO_TXFULL;
 
     //
-    // Determine the number of remaining words from number of words to be
-    // transmitted / received
+    // 根据要传输/接收的字数确定剩余字数
     //
     uint16_t remainingWords = numOfWords % (uint16_t)SPI_FIFO_TXFULL;
 
@@ -349,13 +412,13 @@ SPI_pollingFIFOTransaction(uint32_t base, uint16_t charLength,
     uint16_t rxBuffer_pos = 0;
 
     //
-    // Number of transactions is based on numOfSixteenWords
-    // Each transaction will transmit and receive 16 words.
+    // 事务数量基于numOfSixteenWords
+    // 每个事务将传输和接敶16个字。
     //
     while(count < numOfSixteenWords)
     {
         //
-        // Fill-up the SPI Transmit FIFO buffers
+        // 填充SPI发送FIFO缓冲区
         //
         for(i = 1; i <= (uint16_t)SPI_FIFO_TXFULL; i++)
         {
@@ -365,14 +428,14 @@ SPI_pollingFIFOTransaction(uint32_t base, uint16_t charLength,
         }
 
         //
-        // Wait till SPI Receive FIFO buffer is full
+        // 等待直到SPI接收FIFO缓冲区满
         //
         while(SPI_getRxFIFOStatus(base) < SPI_FIFO_RXFULL)
         {
         }
 
         //
-        // Read the SPI Receive FIFO buffers
+        // 读取SPI接收FIFO缓冲区
         //
         for(i = 1U; i <= (uint16_t)SPI_FIFO_RXFULL; i++)
         {
@@ -391,7 +454,7 @@ SPI_pollingFIFOTransaction(uint32_t base, uint16_t charLength,
     }
 
     //
-    // Number of transactions is based on remainingWords
+    // 事务数量基于remainingWords
     //
     for(i = 0U; i < remainingWords; i++)
     {
@@ -401,14 +464,14 @@ SPI_pollingFIFOTransaction(uint32_t base, uint16_t charLength,
     }
 
     //
-    // Wait till SPI Receive FIFO buffer remaining words
+    // 等待直到SPI接收FIFO缓冲区剩余字
     //
     while((uint16_t)SPI_getRxFIFOStatus(base) < remainingWords)
     {
     }
 
     //
-    // Read the SPI Receive FIFO buffers
+    // 读取SPI接收FIFO缓冲区
     //
     for(i = 0; i < remainingWords; i++)
     {
@@ -424,14 +487,22 @@ SPI_pollingFIFOTransaction(uint32_t base, uint16_t charLength,
     }
 
     //
-    // Disable SPI FIFO
+    // 禁用SPI FIFO
     //
     SPI_disableFIFO(base);
 }
 
 //*****************************************************************************
 //
-// SPI_transmit24Bits
+//! SPI发送24位数据函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param data 要通过SPI传输的24位数据。
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数。
+//!
+//! 此函数用于发送24位字的数据，24位数据被分为三个字节。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
@@ -444,7 +515,7 @@ SPI_transmit24Bits(uint32_t base, uint32_t data, uint16_t txDelay)
     ASSERT(data < ((uint32_t)1U << 24U));
 
     //
-    // Empty Receive buffer
+    // 清空接收缓冲区
     //
     for(i = 0U; i < 3U; i++)
     {
@@ -452,22 +523,31 @@ SPI_transmit24Bits(uint32_t base, uint32_t data, uint16_t txDelay)
     }
 
     //
-    // Fill Transmit buffer with appropriate data
+    // 用适当的数据填充发送缓冲区
     //
     txBuffer[0] = (uint16_t)(data >> 16U);   // data[23:16]
     txBuffer[1] = (uint16_t)(data) >> 8U;    // data[15:8]
     txBuffer[2] = (uint16_t)(data) & 0x00FFU; // data[7:0]
 
     //
-    // Three 8-bits make a 24-bit
-    // Character length = 8
-    // number of bytes = 3
+    // 三个8位构成24位
+    // 字符长度 = 8
+    // 字节数 = 3
     //
     SPI_pollingFIFOTransaction(base, 8U, txBuffer, rxBuffer, 3U, txDelay);
 }
 //*****************************************************************************
 //
-// SPI_receive16Bits
+//! SPI接敶16位数据函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param endianness 指定接收数据的字节序。
+//! \param dummyData 用于启动SPI事务以接收SPI数据的传输数据。
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数。
+//!
+//! 此函数用于接敶16位字的数据。
+//!
+//! \return 接收到的16位数据。
 //
 //*****************************************************************************
 
@@ -483,7 +563,7 @@ SPI_receive16Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
     ASSERT(dummyData <= 0xFFU);
 
     //
-    // Empty Transmit buffer
+    // 清空发送缓冲区
     //
     for(i = 0U; i < 2U; i++)
     {
@@ -492,21 +572,21 @@ SPI_receive16Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
     }
 
     //
-    // Send dummy words to receive data from peripheral
+    // 发送虚拟字以从外设接收数据
     //
     SPI_pollingFIFOTransaction(base, 8U, txBuffer, rxBuffer, 2U, txDelay);
 
     if(endianness == SPI_DATA_LITTLE_ENDIAN)
     {
         //
-        // LITTLE_ENDIAN
+        // 小端序
         //
         rxData = (rxBuffer[1] << 8) | rxBuffer[0];
     }
     else
     {
         //
-        // BIG_ENDIAN
+        // 大端序
         //
         rxData = (rxBuffer[0] << 8) | rxBuffer[1];
     }
@@ -515,7 +595,16 @@ SPI_receive16Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
 }
 //*****************************************************************************
 //
-// SPI_receive24Bits
+//! SPI接敶24位数据函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param endianness 指定接收数据的字节序。
+//! \param dummyData 用于启动SPI事务以接收SPI数据的传输数据。
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数。
+//!
+//! 此函数用于接敶24位字的数据。
+//!
+//! \return 接收到的24位数据。
 //
 //*****************************************************************************
 
@@ -531,7 +620,7 @@ SPI_receive24Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
     ASSERT(dummyData <= 0xFFU);
 
     //
-    // Empty Transmit buffer
+    // 清空发送缓冲区
     //
     for(i = 0U; i < 3U; i++)
     {
@@ -540,17 +629,17 @@ SPI_receive24Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
     }
 
     //
-    // Send dummy words to receive data from peripheral
-    // Two 8-bits make a 16-bit
-    // Character length = 8
-    // number of bytes = 2
+    // 发送虚拟字以从外设接收数据
+    // 两个8位构成16位
+    // 字符长度 = 8
+    // 字节数 = 2
     //
     SPI_pollingFIFOTransaction(base, 8U, txBuffer, rxBuffer, 3U, txDelay);
 
     if(endianness == SPI_DATA_LITTLE_ENDIAN)
     {
         //
-        // LITTLE_ENDIAN
+        // 小端序
         //
         rxData = ((uint32_t)rxBuffer[2] << 16) |
                  ((uint32_t)rxBuffer[1] << 8)  |
@@ -559,7 +648,7 @@ SPI_receive24Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
     else
     {
         //
-        // BIG_ENDIAN
+        // 大端序
         //
         rxData = ((uint32_t)rxBuffer[0] << 16) |
                  ((uint32_t)rxBuffer[1] << 8)  |
@@ -570,7 +659,15 @@ SPI_receive24Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
 }
 //*****************************************************************************
 //
-// SPI_transmit32Bits
+//! SPI发送32位数据函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param data 要通过SPI传输的32位数据。
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数。
+//!
+//! 此函数用于发送32位字的数据，32位数据被分为两个16位字。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 
@@ -582,7 +679,7 @@ SPI_transmit32Bits(uint32_t base, uint32_t data, uint16_t txDelay)
     uint16_t rxBuffer[2];
 
     //
-    // Empty Receive buffer
+    // 清空接收缓冲区
     //
     for(i = 0U; i < 2U; i++)
     {
@@ -590,21 +687,30 @@ SPI_transmit32Bits(uint32_t base, uint32_t data, uint16_t txDelay)
     }
 
     //
-    // Fill Transmit buffer with appropriate data
+    // 用适当的数据填充发送缓冲区
     //
     txBuffer[0] = (uint16_t)(data >> 16U);  // data[31:16]
     txBuffer[1] = (uint16_t)(data);         // data[15:0]
 
     //
-    // Two 16-bits make a 32-bit
-    // Character length = 16
-    // number of bytes = 2
+    // 两个16位构成32位
+    // 字符长度 = 16
+    // 字节数 = 2
     //
     SPI_pollingFIFOTransaction(base, 16U, txBuffer, rxBuffer, 2U, txDelay);
 }
 //*****************************************************************************
 //
-// SPI_receive32Bits
+//! SPI接敶32位数据函数
+//!
+//! \param base 指定SPI模块基地址。
+//! \param endianness 指定接收数据的字节序。
+//! \param dummyData 用于启动SPI事务以接收SPI数据的传输数据。
+//! \param txDelay 指定前一个字完成后延迟的串行时钟周期数。
+//!
+//! 此函数用于接敶32位字的数据。
+//!
+//! \return 接收到的32位数据。
 //
 //*****************************************************************************
 
@@ -620,7 +726,7 @@ SPI_receive32Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
     ASSERT(dummyData <= 0xFFU);
 
     //
-    // Empty Transmit buffer
+    // 清空发送缓冲区
     //
     for(i = 0U; i < 4U; i++)
     {
@@ -629,17 +735,17 @@ SPI_receive32Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
     }
 
     //
-    // Send dummy words to receive data from peripheral
-    // Four 8-bits make a 32-bit
-    // Character length = 8
-    // number of bytes = 4
+    // 发送虚拟字以从外设接收数据
+    // 四个8位构成32位
+    // 字符长度 = 8
+    // 字节数 = 4
     //
     SPI_pollingFIFOTransaction(base, 8U, txBuffer, rxBuffer, 4U, txDelay);
 
     if(endianness == SPI_DATA_LITTLE_ENDIAN)
     {
         //
-        // LITTLE_ENDIAN
+        // 小端序
         //
         rxData = ((uint32_t)rxBuffer[3] << 24U) |
                  ((uint32_t)rxBuffer[2] << 16U) |
@@ -649,7 +755,7 @@ SPI_receive32Bits(uint32_t base, SPI_endianess endianness, uint16_t dummyData,
     else
     {
         //
-        // BIG_ENDIAN
+        // 大端序
         //
         rxData = ((uint32_t)rxBuffer[0] << 24U) |
                  ((uint32_t)rxBuffer[1] << 16U) |

@@ -2,7 +2,7 @@
 //
 // FILE:   gpio.c
 //
-// TITLE:  C28x GPIO driver.
+// TITLE:  C28x GPIO驱动程序。
 //
 //###########################################################################
 // 
@@ -44,7 +44,14 @@
 
 //*****************************************************************************
 //
-// GPIO_setDirectionMode
+//! GPIO设置方向模式函数
+//!
+//! \param pin 指定GPIO引脚号。
+//! \param pinIO 指定引脚方向（输入或输出）。
+//!
+//! 此函数设置GPIO引脚的方向为输入或输出。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
@@ -54,7 +61,7 @@ GPIO_setDirectionMode(uint32_t pin, GPIO_Direction pinIO)
     uint32_t pinMask;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(GPIO_isPinValid(pin));
 
@@ -65,19 +72,19 @@ GPIO_setDirectionMode(uint32_t pin, GPIO_Direction pinIO)
     EALLOW;
 
     //
-    // Set the data direction
+    // 设置数据方向
     //
     if(pinIO == GPIO_DIR_MODE_OUT)
     {
         //
-        // Output
+        // 输出
         //
         gpioBaseAddr[GPIO_GPxDIR_INDEX] |= pinMask;
     }
     else
     {
         //
-        // Input
+        // 输入
         //
         gpioBaseAddr[GPIO_GPxDIR_INDEX] &= ~pinMask;
     }
@@ -87,7 +94,13 @@ GPIO_setDirectionMode(uint32_t pin, GPIO_Direction pinIO)
 
 //*****************************************************************************
 //
-// GPIO_getDirectionMode
+//! GPIO获取方向模式函数
+//!
+//! \param pin 指定GPIO引脚号。
+//!
+//! 此函数获取GPIO引脚的方向设置。
+//!
+//! \return 返回GPIO引脚方向（输入或输出）。
 //
 //*****************************************************************************
 GPIO_Direction
@@ -96,7 +109,7 @@ GPIO_getDirectionMode(uint32_t pin)
     volatile uint32_t *gpioBaseAddr;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(GPIO_isPinValid(pin));
 
@@ -110,7 +123,14 @@ GPIO_getDirectionMode(uint32_t pin)
 
 //*****************************************************************************
 //
-// GPIO_setInterruptPin
+//! GPIO设置中断引脚函数
+//!
+//! \param pin 指定GPIO引脚号。
+//! \param extIntNum 指定外部中断号。
+//!
+//! 此函数将GPIO引脚连接到指定的外部中断。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
@@ -119,12 +139,12 @@ GPIO_setInterruptPin(uint32_t pin, GPIO_ExternalIntNum extIntNum)
     XBAR_InputNum input;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(GPIO_isPinValid(pin));
 
     //
-    // Pick the X-BAR input that corresponds to the requested XINT.
+    // 选择与请求的XINT对应的X-BAR输入。
     //
     switch(extIntNum)
     {
@@ -150,9 +170,8 @@ GPIO_setInterruptPin(uint32_t pin, GPIO_ExternalIntNum extIntNum)
 
         default:
             //
-            // Invalid interrupt. Shouldn't happen if enum value is used.
-            // XBAR_INPUT1 isn't tied to an XINT, so we'll use it to check for
-            // a bad value.
+            // 无效的中断。如果使用枚举值，则不应发生。
+            // XBAR_INPUT1未连接到XINT，因此我们将使用它来检查坏值。
             //
             input = XBAR_INPUT1;
             break;
@@ -166,7 +185,14 @@ GPIO_setInterruptPin(uint32_t pin, GPIO_ExternalIntNum extIntNum)
 
 //*****************************************************************************
 //
-// GPIO_setPadConfig
+//! GPIO设置引脚配置函数
+//!
+//! \param pin 指定GPIO引脚号。
+//! \param pinType 指定引脚类型（标准、上拉、反转、开漏）。
+//!
+//! 此函数配置GPIO引脚的电气特性。
+//!
+//! \return 无。
 //
 //*****************************************************************************
 void
@@ -176,7 +202,7 @@ GPIO_setPadConfig(uint32_t pin, uint32_t pinType)
     uint32_t pinMask;
 
     //
-    // Check the arguments.
+    // 检查参数。
     //
     ASSERT(GPIO_isPinValid(pin));
 
@@ -187,7 +213,7 @@ GPIO_setPadConfig(uint32_t pin, uint32_t pinType)
     EALLOW;
 
     //
-    // Enable open drain if necessary
+    // 如果需要，启用开漏
     //
     if((pinType & GPIO_PIN_TYPE_OD) != 0U)
     {

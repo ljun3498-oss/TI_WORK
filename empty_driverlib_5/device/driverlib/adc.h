@@ -2,7 +2,7 @@
 //
 // FILE:   adc.h
 //
-// TITLE:  C28x ADC driver.
+// TITLE:  C28x ADC驱动程序。
 //
 //###########################################################################
 // 
@@ -45,8 +45,7 @@
 
 //*****************************************************************************
 //
-// If building with a C++ compiler, make all of the definitions in this header
-// have a C binding.
+// 如果使用C++编译器构建，请使此头文件中的所有定义具有C绑定。
 //
 //*****************************************************************************
 #ifdef __cplusplus
@@ -71,8 +70,7 @@ extern "C"
 #include "debug.h"
 //*****************************************************************************
 //
-// Useful defines used within the driver functions. Not intended for use by
-// application code.
+// 驱动程序函数内使用的有用定义。不适用于应用程序代码。
 //
 //*****************************************************************************
 #define ADC_NUM_INTERRUPTS          4U
@@ -111,93 +109,89 @@ extern "C"
 // make up the enumerated bit field returned by ADC_getPPBEventStatus().
 //
 //*****************************************************************************
-#define ADC_EVT_TRIPHI              0x0001U //!< Trip High Event
-#define ADC_EVT_TRIPLO              0x0002U //!< Trip Low Event
-#define ADC_EVT_ZERO                0x0004U //!< Zero Crossing Event
+#define ADC_EVT_TRIPHI              0x0001U //!< 高电平触发事件
+#define ADC_EVT_TRIPLO              0x0002U //!< 低电平触发事件
+#define ADC_EVT_ZERO                0x0004U //!< 过零点事件
 #endif
 
 //*****************************************************************************
 //
-// Values that can be passed to ADC_forceMultipleSOC() as socMask parameter.
-// These values can be OR'd together to trigger multiple SOCs at a time.
+// 可作为socMask参数传递给ADC_forceMultipleSOC()的值。
+// 这些值可以进行或运算以同时触发多个SOC。
 //
 //*****************************************************************************
-#define ADC_FORCE_SOC0              0x0001U //!< SW trigger ADC SOC 0
-#define ADC_FORCE_SOC1              0x0002U //!< SW trigger ADC SOC 1
-#define ADC_FORCE_SOC2              0x0004U //!< SW trigger ADC SOC 2
-#define ADC_FORCE_SOC3              0x0008U //!< SW trigger ADC SOC 3
-#define ADC_FORCE_SOC4              0x0010U //!< SW trigger ADC SOC 4
-#define ADC_FORCE_SOC5              0x0020U //!< SW trigger ADC SOC 5
-#define ADC_FORCE_SOC6              0x0040U //!< SW trigger ADC SOC 6
-#define ADC_FORCE_SOC7              0x0080U //!< SW trigger ADC SOC 7
-#define ADC_FORCE_SOC8              0x0100U //!< SW trigger ADC SOC 8
-#define ADC_FORCE_SOC9              0x0200U //!< SW trigger ADC SOC 9
-#define ADC_FORCE_SOC10             0x0400U //!< SW trigger ADC SOC 10
-#define ADC_FORCE_SOC11             0x0800U //!< SW trigger ADC SOC 11
-#define ADC_FORCE_SOC12             0x1000U //!< SW trigger ADC SOC 12
-#define ADC_FORCE_SOC13             0x2000U //!< SW trigger ADC SOC 13
-#define ADC_FORCE_SOC14             0x4000U //!< SW trigger ADC SOC 14
-#define ADC_FORCE_SOC15             0x8000U //!< SW trigger ADC SOC 15
+#define ADC_FORCE_SOC0              0x0001U //!< 软件触发ADC SOC 0
+#define ADC_FORCE_SOC1              0x0002U //!< 软件触发ADC SOC 1
+#define ADC_FORCE_SOC2              0x0004U //!< 软件触发ADC SOC 2
+#define ADC_FORCE_SOC3              0x0008U //!< 软件触发ADC SOC 3
+#define ADC_FORCE_SOC4              0x0010U //!< 软件触发ADC SOC 4
+#define ADC_FORCE_SOC5              0x0020U //!< 软件触发ADC SOC 5
+#define ADC_FORCE_SOC6              0x0040U //!< 软件触发ADC SOC 6
+#define ADC_FORCE_SOC7              0x0080U //!< 软件触发ADC SOC 7
+#define ADC_FORCE_SOC8              0x0100U //!< 软件触发ADC SOC 8
+#define ADC_FORCE_SOC9              0x0200U //!< 软件触发ADC SOC 9
+#define ADC_FORCE_SOC10             0x0400U //!< 软件触发ADC SOC 10
+#define ADC_FORCE_SOC11             0x0800U //!< 软件触发ADC SOC 11
+#define ADC_FORCE_SOC12             0x1000U //!< 软件触发ADC SOC 12
+#define ADC_FORCE_SOC13             0x2000U //!< 软件触发ADC SOC 13
+#define ADC_FORCE_SOC14             0x4000U //!< 软件触发ADC SOC 14
+#define ADC_FORCE_SOC15             0x8000U //!< 软件触发ADC SOC 15
 
 
 
 //*****************************************************************************
 //
-//! Values that can be passed to ADC_setPrescaler() as the \e clkPrescale
-//! parameter.
+//! 可作为\e clkPrescale参数传递给ADC_setPrescaler()的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    ADC_CLK_DIV_1_0 = 0U,            //!< ADCCLK = (input clock) / 1.0
-    ADC_CLK_DIV_2_0 = 2U,            //!< ADCCLK = (input clock) / 2.0
-    ADC_CLK_DIV_2_5 = 3U,            //!< ADCCLK = (input clock) / 2.5
-    ADC_CLK_DIV_3_0 = 4U,            //!< ADCCLK = (input clock) / 3.0
-    ADC_CLK_DIV_3_5 = 5U,            //!< ADCCLK = (input clock) / 3.5
-    ADC_CLK_DIV_4_0 = 6U,            //!< ADCCLK = (input clock) / 4.0
-    ADC_CLK_DIV_4_5 = 7U,            //!< ADCCLK = (input clock) / 4.5
-    ADC_CLK_DIV_5_0 = 8U,            //!< ADCCLK = (input clock) / 5.0
-    ADC_CLK_DIV_5_5 = 9U,            //!< ADCCLK = (input clock) / 5.5
-    ADC_CLK_DIV_6_0 = 10U,           //!< ADCCLK = (input clock) / 6.0
-    ADC_CLK_DIV_6_5 = 11U,           //!< ADCCLK = (input clock) / 6.5
-    ADC_CLK_DIV_7_0 = 12U,           //!< ADCCLK = (input clock) / 7.0
-    ADC_CLK_DIV_7_5 = 13U,           //!< ADCCLK = (input clock) / 7.5
-    ADC_CLK_DIV_8_0 = 14U,           //!< ADCCLK = (input clock) / 8.0
-    ADC_CLK_DIV_8_5 = 15U            //!< ADCCLK = (input clock) / 8.5
+    ADC_CLK_DIV_1_0 = 0U,            //!< ADCCLK = (输入时钟) / 1.0
+    ADC_CLK_DIV_2_0 = 2U,            //!< ADCCLK = (输入时钟) / 2.0
+    ADC_CLK_DIV_2_5 = 3U,            //!< ADCCLK = (输入时钟) / 2.5
+    ADC_CLK_DIV_3_0 = 4U,            //!< ADCCLK = (输入时钟) / 3.0
+    ADC_CLK_DIV_3_5 = 5U,            //!< ADCCLK = (输入时钟) / 3.5
+    ADC_CLK_DIV_4_0 = 6U,            //!< ADCCLK = (输入时钟) / 4.0
+    ADC_CLK_DIV_4_5 = 7U,            //!< ADCCLK = (输入时钟) / 4.5
+    ADC_CLK_DIV_5_0 = 8U,            //!< ADCCLK = (输入时钟) / 5.0
+    ADC_CLK_DIV_5_5 = 9U,            //!< ADCCLK = (输入时钟) / 5.5
+    ADC_CLK_DIV_6_0 = 10U,           //!< ADCCLK = (输入时钟) / 6.0
+    ADC_CLK_DIV_6_5 = 11U,           //!< ADCCLK = (输入时钟) / 6.5
+    ADC_CLK_DIV_7_0 = 12U,           //!< ADCCLK = (输入时钟) / 7.0
+    ADC_CLK_DIV_7_5 = 13U,           //!< ADCCLK = (输入时钟) / 7.5
+    ADC_CLK_DIV_8_0 = 14U,           //!< ADCCLK = (输入时钟) / 8.0
+    ADC_CLK_DIV_8_5 = 15U            //!< ADCCLK = (输入时钟) / 8.5
 } ADC_ClkPrescale;
 
 //*****************************************************************************
 //
-//! Values that can be passed to ADC_setMode() as the \e resolution
-//! parameter.
+//! 可作为\e resolution参数传递给ADC_setMode()的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    ADC_RESOLUTION_12BIT = 0x00U,    //!< 12-bit conversion resolution
-    ADC_RESOLUTION_16BIT = 0x40U     //!< 16-bit conversion resolution
+    ADC_RESOLUTION_12BIT = 0x00U,    //!< 12位转换分辨率
+    ADC_RESOLUTION_16BIT = 0x40U     //!< 16位转换分辨率
 } ADC_Resolution;
 
 //*****************************************************************************
 //
-//! Values that can be passed to ADC_setMode() as the \e signalMode
-//! parameter.
+//! 可作为\e signalMode参数传递给ADC_setMode()的值。
 //
 //*****************************************************************************
 typedef enum
 {
-    ADC_MODE_SINGLE_ENDED = 0x00U,   //!< Sample on single pin with VREFLO
-    ADC_MODE_DIFFERENTIAL = 0x80U    //!< Sample on pair of pins
+    ADC_MODE_SINGLE_ENDED = 0x00U,   //!< 在单个引脚上VREFLO采样
+    ADC_MODE_DIFFERENTIAL = 0x80U    //!< 在成对引脚上采样
 } ADC_SignalMode;
 
 //*****************************************************************************
 //
-//! Values that can be passed to ADC_setupSOC() as the \e trigger
-//! parameter to specify the event that will trigger a conversion to start.
-//! It is also used with ADC_setBurstModeConfig() and
-//! ADC_triggerRepeaterSelect().
+//! 可作为\e trigger参数传递给ADC_setupSOC()的值，用于指定将触发转换启动的事件。
+//! 它还用于ADC_setBurstModeConfig()和ADC_triggerRepeaterSelect()。
 //
-//*****************************************************************************typedef enum
+//*****************************************************************************
+typedef enum
 {
     ADC_TRIGGER_SW_ONLY     = 0U,     //!< Software only
     ADC_TRIGGER_CPU1_TINT0  = 1U,     //!< CPU1 Timer 0, TINT0
