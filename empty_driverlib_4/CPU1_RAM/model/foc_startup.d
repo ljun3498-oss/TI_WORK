@@ -93,6 +93,7 @@ model/foc_startup.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/ve
 model/foc_startup.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
 model/foc_startup.obj: ../model/foc_core.h
 model/foc_startup.obj: ../model/foc_svpwm.h
+model/foc_startup.obj: ../model/foc_encoder.h
 
 ../model/foc_startup.c:
 
@@ -279,4 +280,6 @@ C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_inclusive_terminol
 ../model/foc_core.h:
 
 ../model/foc_svpwm.h:
+
+../model/foc_encoder.h:
 

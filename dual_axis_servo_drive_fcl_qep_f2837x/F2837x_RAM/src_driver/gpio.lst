@@ -1,0 +1,2169 @@
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
+       3              ;* Date/Time created: Sat Dec 27 15:00:19 2025                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("../src_driver/gpio.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f28
+      13              
+      14              $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                      .dwattr $C$DW$1, DW_AT_name("__eallow")
+      16                      .dwattr $C$DW$1, DW_AT_linkage_name("__eallow")
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19                      .dwendtag $C$DW$1
+      20              
+      21              
+      22              $C$DW$2 .dwtag  DW_TAG_subprogram
+      23                      .dwattr $C$DW$2, DW_AT_name("__edis")
+      24                      .dwattr $C$DW$2, DW_AT_linkage_name("__edis")
+      25                      .dwattr $C$DW$2, DW_AT_declaration
+      26                      .dwattr $C$DW$2, DW_AT_external
+      27                      .dwendtag $C$DW$2
+      28              
+      29              ;       D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Te
+      30              ;       D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\
+      31 00000000               .sect   ".text:GPIO_setQualificationPeriod"
+      32                      .clink
+      33                      .global ||GPIO_setQualificationPeriod||
+      34              
+      35              $C$DW$3 .dwtag  DW_TAG_subprogram
+      36                      .dwattr $C$DW$3, DW_AT_name("GPIO_setQualificationPeriod")
+      37                      .dwattr $C$DW$3, DW_AT_low_pc(||GPIO_setQualificationPeriod||)
+      38                      .dwattr $C$DW$3, DW_AT_high_pc(0x00)
+      39                      .dwattr $C$DW$3, DW_AT_linkage_name("GPIO_setQualificationPeriod")
+      40                      .dwattr $C$DW$3, DW_AT_external
+      41                      .dwattr $C$DW$3, DW_AT_decl_file("../src_driver/gpio.c")
+      42                      .dwattr $C$DW$3, DW_AT_decl_line(0x15d)
+      43                      .dwattr $C$DW$3, DW_AT_decl_column(0x01)
+      44                      .dwattr $C$DW$3, DW_AT_TI_max_frame_size(-2)
+      45                      .dwpsn  file "../src_driver/gpio.c",line 350,column 1,is_stmt,address ||GPIO_setQualificationPeriod||
+      46              
+      47                      .dwfde $C$DW$CIE, ||GPIO_setQualificationPeriod||
+      48              $C$DW$4 .dwtag  DW_TAG_formal_parameter
+      49                      .dwattr $C$DW$4, DW_AT_name("pin")
+      50                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$25)
+      51                      .dwattr $C$DW$4, DW_AT_location[DW_OP_reg0]
+      52              
+      53              $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      54                      .dwattr $C$DW$5, DW_AT_name("divider")
+      55                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$25)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    2
+
+      56                      .dwattr $C$DW$5, DW_AT_location[DW_OP_breg20 -4]
+      57              
+      58              
+      59              ;***************************************************************
+      60              ;* FNAME: GPIO_setQualificationPeriod   FR SIZE:   0           *
+      61              ;*                                                             *
+      62              ;* FUNCTION ENVIRONMENT                                        *
+      63              ;*                                                             *
+      64              ;* FUNCTION PROPERTIES                                         *
+      65              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      66              ;***************************************************************
+      67              
+      68              ||GPIO_setQualificationPeriod||:
+      69              ;* AR4   assigned to $O$C1
+      70              ;* AR6   assigned to $O$C2
+      71              ;* AR4   assigned to pin
+      72              $C$DW$6 .dwtag  DW_TAG_variable
+      73                      .dwattr $C$DW$6, DW_AT_name("pin")
+      74                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$64)
+      75                      .dwattr $C$DW$6, DW_AT_location[DW_OP_reg12]
+      76              
+      77              ;* AR7   assigned to divider
+      78              $C$DW$7 .dwtag  DW_TAG_variable
+      79                      .dwattr $C$DW$7, DW_AT_name("divider")
+      80                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$64)
+      81                      .dwattr $C$DW$7, DW_AT_location[DW_OP_reg18]
+      82              
+      83                      .dwcfi  cfa_offset, -2
+      84                      .dwcfi  save_reg_to_mem, 26, 0
+      85 00000000 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |350| 
+      86 00000001 C544          MOVL      XAR7,*-SP[4]          ; [CPU_ALU] |350| 
+      87                      .dwpsn  file "../src_driver/gpio.c",line 375,column 5,is_stmt,isa 0
+      88 00000002 7622          EALLOW    ; [CPU_ALU] |375| 
+      89                      .dwpsn  file "../src_driver/gpio.c",line 376,column 5,is_stmt,isa 0
+      90 00000003 9018          ANDB      AL,#0x18              ; [CPU_ALU] |376| 
+      91 00000004 9B00          MOVB      AH,#0                 ; [CPU_FPU] |376| 
+      92 00000005 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |376| 
+      93 00000006 2901          CLRC      SXM                   ; [CPU_ALU] 
+      94 00000007 2DA6          MOV       T,AR6                 ; [CPU_ALU] |376| 
+      95 00000008 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |376| 
+      96 00000009 18A9          AND       AL,#65504             ; [CPU_ALU] |376| 
+         0000000a FFE0 
+      97 0000000b FF30          LSL       ACC,1                 ; [CPU_ALU] |376| 
+      98 0000000c FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |376| 
+         0000000d 001F 
+      99 0000000e 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |376| 
+     100 0000000f 02FF          MOVB      ACC,#255              ; [CPU_ALU] |376| 
+     101 00000010 563B          LSLL      ACC,T                 ; [CPU_ALU] |376| 
+     102 00000011 FF55          NOT       ACC                   ; [CPU_ALU] |376| 
+     103 00000012 C0C4          AND       *+XAR4[0],AL          ; [CPU_ALU] |376| 
+     104 00000013 C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |376| 
+     105                      .dwpsn  file "../src_driver/gpio.c",line 377,column 5,is_stmt,isa 0
+     106 00000014 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] |377| 
+     107 00000015 FF40          SFR       ACC,1                 ; [CPU_ALU] |377| 
+     108 00000016 563B          LSLL      ACC,T                 ; [CPU_ALU] |377| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    3
+
+     109 00000017 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |377| 
+     110 00000018 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |377| 
+     111                      .dwpsn  file "../src_driver/gpio.c",line 378,column 5,is_stmt,isa 0
+     112 00000019 761A          EDIS      ; [CPU_ALU] |378| 
+     113              $C$DW$8 .dwtag  DW_TAG_TI_branch
+     114                      .dwattr $C$DW$8, DW_AT_low_pc(0x00)
+     115                      .dwattr $C$DW$8, DW_AT_TI_return
+     116              
+     117 0000001a 0006          LRETR     ; [CPU_ALU] 
+     118                      ; return occurs ; [] 
+     119                      .dwattr $C$DW$3, DW_AT_TI_end_file("../src_driver/gpio.c")
+     120                      .dwattr $C$DW$3, DW_AT_TI_end_line(0x17b)
+     121                      .dwattr $C$DW$3, DW_AT_TI_end_column(0x01)
+     122                      .dwendentry
+     123                      .dwendtag $C$DW$3
+     124              
+     125 00000000               .sect   ".text:GPIO_setQualificationMode"
+     126                      .clink
+     127                      .global ||GPIO_setQualificationMode||
+     128              
+     129              $C$DW$9 .dwtag  DW_TAG_subprogram
+     130                      .dwattr $C$DW$9, DW_AT_name("GPIO_setQualificationMode")
+     131                      .dwattr $C$DW$9, DW_AT_low_pc(||GPIO_setQualificationMode||)
+     132                      .dwattr $C$DW$9, DW_AT_high_pc(0x00)
+     133                      .dwattr $C$DW$9, DW_AT_linkage_name("GPIO_setQualificationMode")
+     134                      .dwattr $C$DW$9, DW_AT_external
+     135                      .dwattr $C$DW$9, DW_AT_decl_file("../src_driver/gpio.c")
+     136                      .dwattr $C$DW$9, DW_AT_decl_line(0x11c)
+     137                      .dwattr $C$DW$9, DW_AT_decl_column(0x01)
+     138                      .dwattr $C$DW$9, DW_AT_TI_max_frame_size(-2)
+     139                      .dwpsn  file "../src_driver/gpio.c",line 285,column 1,is_stmt,address ||GPIO_setQualificationMode||,i
+     140              
+     141                      .dwfde $C$DW$CIE, ||GPIO_setQualificationMode||
+     142              $C$DW$10        .dwtag  DW_TAG_formal_parameter
+     143                      .dwattr $C$DW$10, DW_AT_name("pin")
+     144                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$25)
+     145                      .dwattr $C$DW$10, DW_AT_location[DW_OP_reg0]
+     146              
+     147              $C$DW$11        .dwtag  DW_TAG_formal_parameter
+     148                      .dwattr $C$DW$11, DW_AT_name("qualification")
+     149                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$32)
+     150                      .dwattr $C$DW$11, DW_AT_location[DW_OP_reg12]
+     151              
+     152              
+     153              ;***************************************************************
+     154              ;* FNAME: GPIO_setQualificationMode     FR SIZE:   0           *
+     155              ;*                                                             *
+     156              ;* FUNCTION ENVIRONMENT                                        *
+     157              ;*                                                             *
+     158              ;* FUNCTION PROPERTIES                                         *
+     159              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     160              ;***************************************************************
+     161              
+     162              ||GPIO_setQualificationMode||:
+     163              ;* AR5   assigned to $O$C1
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    4
+
+     164              ;* T     assigned to $O$C2
+     165              ;* AR5   assigned to pin
+     166              $C$DW$12        .dwtag  DW_TAG_variable
+     167                      .dwattr $C$DW$12, DW_AT_name("pin")
+     168                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$64)
+     169                      .dwattr $C$DW$12, DW_AT_location[DW_OP_reg14]
+     170              
+     171              ;* AR4   assigned to qualification
+     172              $C$DW$13        .dwtag  DW_TAG_variable
+     173                      .dwattr $C$DW$13, DW_AT_name("qualification")
+     174                      .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$33)
+     175                      .dwattr $C$DW$13, DW_AT_location[DW_OP_reg12]
+     176              
+     177                      .dwcfi  cfa_offset, -2
+     178                      .dwcfi  save_reg_to_mem, 26, 0
+     179 00000000 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |285| 
+     180                      .dwpsn  file "../src_driver/gpio.c",line 303,column 5,is_stmt,isa 0
+     181 00000001 7622          EALLOW    ; [CPU_ALU] |303| 
+     182 00000002 2901          CLRC      SXM                   ; [CPU_ALU] 
+     183                      .dwpsn  file "../src_driver/gpio.c",line 305,column 5,is_stmt,isa 0
+     184 00000003 5603          MOV       ACC,AR5 << #1         ; [CPU_ALU] |305| 
+         00000004 01A5 
+     185 00000005 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |305| 
+     186 00000006 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |305| 
+     187 00000007 16A9          MOVP      T,AL                  ; [CPU_ALU] 
+     188 00000008 FF43          SFR       ACC,4                 ; [CPU_ALU] |305| 
+     189 00000009 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |305| 
+     190 0000000a 92AB          MOV       AL,PL                 ; [CPU_ALU] |305| 
+     191 0000000b 2BAA          MOV       PH,#0                 ; [CPU_ALU] |305| 
+     192 0000000c 9001          ANDB      AL,#0x01              ; [CPU_ALU] |305| 
+     193 0000000d 27A9          MOV       PL,AL                 ; [CPU_ALU] |305| 
+     194 0000000e A0A9          MOVL      ACC,XAR5              ; [CPU_ALU] |305| 
+     195 0000000f 18A9          AND       AL,#65504             ; [CPU_ALU] |305| 
+         00000010 FFE0 
+     196 00000011 07AB          ADDL      ACC,P                 ; [CPU_ALU] |305| 
+     197 00000012 0901          ADDB      ACC,#1                ; [CPU_ALU] |305| 
+     198 00000013 FF30          LSL       ACC,1                 ; [CPU_ALU] |305| 
+     199 00000014 FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |305| 
+         00000015 001F 
+     200 00000016 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |305| 
+     201 00000017 0203          MOVB      ACC,#3                ; [CPU_ALU] |305| 
+     202 00000018 563B          LSLL      ACC,T                 ; [CPU_ALU] |305| 
+     203 00000019 FF55          NOT       ACC                   ; [CPU_ALU] |305| 
+     204 0000001a C0C5          AND       *+XAR5[0],AL          ; [CPU_ALU] |305| 
+     205 0000001b C1CD          AND       *+XAR5[1],AH          ; [CPU_ALU] |305| 
+     206                      .dwpsn  file "../src_driver/gpio.c",line 306,column 5,is_stmt,isa 0
+     207 0000001c 0EA4          MOVU      ACC,AR4               ; [CPU_ALU] |306| 
+     208 0000001d 563B          LSLL      ACC,T                 ; [CPU_ALU] |306| 
+     209 0000001e 98C5          OR        *+XAR5[0],AL          ; [CPU_ALU] |306| 
+     210 0000001f 99CD          OR        *+XAR5[1],AH          ; [CPU_ALU] |306| 
+     211                      .dwpsn  file "../src_driver/gpio.c",line 308,column 5,is_stmt,isa 0
+     212 00000020 761A          EDIS      ; [CPU_ALU] |308| 
+     213              $C$DW$14        .dwtag  DW_TAG_TI_branch
+     214                      .dwattr $C$DW$14, DW_AT_low_pc(0x00)
+     215                      .dwattr $C$DW$14, DW_AT_TI_return
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    5
+
+     216              
+     217 00000021 0006          LRETR     ; [CPU_ALU] 
+     218                      ; return occurs ; [] 
+     219                      .dwattr $C$DW$9, DW_AT_TI_end_file("../src_driver/gpio.c")
+     220                      .dwattr $C$DW$9, DW_AT_TI_end_line(0x135)
+     221                      .dwattr $C$DW$9, DW_AT_TI_end_column(0x01)
+     222                      .dwendentry
+     223                      .dwendtag $C$DW$9
+     224              
+     225 00000000               .sect   ".text:GPIO_setPinConfig"
+     226                      .clink
+     227                      .global ||GPIO_setPinConfig||
+     228              
+     229              $C$DW$15        .dwtag  DW_TAG_subprogram
+     230                      .dwattr $C$DW$15, DW_AT_name("GPIO_setPinConfig")
+     231                      .dwattr $C$DW$15, DW_AT_low_pc(||GPIO_setPinConfig||)
+     232                      .dwattr $C$DW$15, DW_AT_high_pc(0x00)
+     233                      .dwattr $C$DW$15, DW_AT_linkage_name("GPIO_setPinConfig")
+     234                      .dwattr $C$DW$15, DW_AT_external
+     235                      .dwattr $C$DW$15, DW_AT_decl_file("../src_driver/gpio.c")
+     236                      .dwattr $C$DW$15, DW_AT_decl_line(0x1cd)
+     237                      .dwattr $C$DW$15, DW_AT_decl_column(0x01)
+     238                      .dwattr $C$DW$15, DW_AT_TI_max_frame_size(-4)
+     239                      .dwpsn  file "../src_driver/gpio.c",line 462,column 1,is_stmt,address ||GPIO_setPinConfig||,isa 0
+     240              
+     241                      .dwfde $C$DW$CIE, ||GPIO_setPinConfig||
+     242              $C$DW$16        .dwtag  DW_TAG_formal_parameter
+     243                      .dwattr $C$DW$16, DW_AT_name("pinConfig")
+     244                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$25)
+     245                      .dwattr $C$DW$16, DW_AT_location[DW_OP_reg0]
+     246              
+     247              
+     248              ;***************************************************************
+     249              ;* FNAME: GPIO_setPinConfig             FR SIZE:   2           *
+     250              ;*                                                             *
+     251              ;* FUNCTION ENVIRONMENT                                        *
+     252              ;*                                                             *
+     253              ;* FUNCTION PROPERTIES                                         *
+     254              ;*                            0 Parameter,  0 Auto,  2 SOE     *
+     255              ;***************************************************************
+     256              
+     257              ||GPIO_setPinConfig||:
+     258              ;* AR4   assigned to $O$C1
+     259              ;* AR2   assigned to $O$C2
+     260              ;* PL    assigned to $O$C3
+     261              ;* AR6   assigned to pinConfig
+     262              $C$DW$17        .dwtag  DW_TAG_variable
+     263                      .dwattr $C$DW$17, DW_AT_name("pinConfig")
+     264                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$64)
+     265                      .dwattr $C$DW$17, DW_AT_location[DW_OP_reg16]
+     266              
+     267                      .dwcfi  cfa_offset, -2
+     268                      .dwcfi  save_reg_to_mem, 26, 0
+     269 00000000 AABD          MOVL      *SP++,XAR2            ; [CPU_ALU] 
+     270                      .dwcfi  save_reg_to_mem, 9, 2
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    6
+
+     271                      .dwcfi  cfa_offset, -4
+     272 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |462| 
+     273                      .dwpsn  file "../src_driver/gpio.c",line 470,column 5,is_stmt,isa 0
+     274 00000002 7622          EALLOW    ; [CPU_ALU] |470| 
+     275 00000003 2901          CLRC      SXM                   ; [CPU_ALU] 
+     276                      .dwpsn  file "../src_driver/gpio.c",line 475,column 5,is_stmt,isa 0
+     277 00000004 FF47          SFR       ACC,8                 ; [CPU_ALU] |475| 
+     278 00000005 9B00          MOVB      AH,#0                 ; [CPU_ALU] |475| 
+     279 00000006 90FF          ANDB      AL,#0xff              ; [CPU_ALU] |475| 
+     280 00000007 86A9          MOVL      XAR2,ACC              ; [CPU_ALU] |475| 
+     281                      .dwpsn  file "../src_driver/gpio.c",line 480,column 5,is_stmt,isa 0
+     282 00000008 D01A          MOVB      XAR0,#26              ; [CPU_ALU] |480| 
+     283                      .dwpsn  file "../src_driver/gpio.c",line 475,column 5,is_stmt,isa 0
+     284 00000009 2DA2          MOV       T,AR2                 ; [CPU_ALU] |475| 
+     285 0000000a 0203          MOVB      ACC,#3                ; [CPU_ALU] |475| 
+     286 0000000b 563B          LSLL      ACC,T                 ; [CPU_ALU] |475| 
+     287 0000000c FF55          NOT       ACC                   ; [CPU_ALU] |475| 
+     288 0000000d FF5A          MOVL      P,ACC                 ; [CPU_ALU] |475| 
+     289 0000000e 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |475| 
+     290 0000000f 0EA8          MOVU      ACC,AH                ; [CPU_ALU] |475| 
+     291 00000010 FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |475| 
+         00000011 001F 
+     292 00000012 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |475| 
+     293 00000013 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |475| 
+     294 00000014 92AB          MOV       AL,PL                 ; [CPU_ALU] |475| 
+     295 00000015 93AA          MOV       AH,PH                 ; [CPU_ALU] |475| 
+     296 00000016 C0C4          AND       *+XAR4[0],AL          ; [CPU_ALU] |475| 
+     297                      .dwpsn  file "../src_driver/gpio.c",line 480,column 5,is_stmt,isa 0
+     298 00000017 DD1A          ADDB      XAR5,#26              ; [CPU_ALU] |480| 
+     299                      .dwpsn  file "../src_driver/gpio.c",line 475,column 5,is_stmt,isa 0
+     300 00000018 C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |475| 
+     301 00000019 A9A9          MOVL      ACC,P                 ; [CPU_ALU] |475| 
+     302                      .dwpsn  file "../src_driver/gpio.c",line 480,column 5,is_stmt,isa 0
+     303 0000001a CEC5          AND       AL,*+XAR5[0]          ; [CPU_ALU] |480| 
+     304 0000001b CFCD          AND       AH,*+XAR5[1]          ; [CPU_ALU] |480| 
+     305 0000001c 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |480| 
+     306 0000001d 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |480| 
+     307 0000001e FF41          SFR       ACC,2                 ; [CPU_ALU] |480| 
+     308 0000001f 9B00          MOVB      AH,#0                 ; [CPU_ALU] |480| 
+     309 00000020 9003          ANDB      AL,#0x03              ; [CPU_ALU] |480| 
+     310 00000021 563B          LSLL      ACC,T                 ; [CPU_ALU] |480| 
+     311 00000022 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |480| 
+     312 00000023 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] |480| 
+     313 00000024 CAAB          OR        AL,PL                 ; [CPU_ALU] |480| 
+     314 00000025 CBAA          OR        AH,PH                 ; [CPU_ALU] |480| 
+     315 00000026 1E94          MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |480| 
+     316                      .dwpsn  file "../src_driver/gpio.c",line 487,column 5,is_stmt,isa 0
+     317 00000027 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |487| 
+     318 00000028 9B00          MOVB      AH,#0                 ; [CPU_ALU] |487| 
+     319 00000029 9003          ANDB      AL,#0x03              ; [CPU_ALU] |487| 
+     320 0000002a 563B          LSLL      ACC,T                 ; [CPU_ALU] |487| 
+     321 0000002b 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |487| 
+     322 0000002c 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |487| 
+     323                      .dwpsn  file "../src_driver/gpio.c",line 488,column 5,is_stmt,isa 0
+     324 0000002d 761A          EDIS      ; [CPU_ALU] |488| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    7
+
+     325 0000002e 86BE          MOVL      XAR2,*--SP            ; [CPU_ALU] 
+     326                      .dwcfi  cfa_offset, -2
+     327                      .dwcfi  restore_reg, 9
+     328              $C$DW$18        .dwtag  DW_TAG_TI_branch
+     329                      .dwattr $C$DW$18, DW_AT_low_pc(0x00)
+     330                      .dwattr $C$DW$18, DW_AT_TI_return
+     331              
+     332 0000002f 0006          LRETR     ; [CPU_ALU] 
+     333                      ; return occurs ; [] 
+     334                      .dwattr $C$DW$15, DW_AT_TI_end_file("../src_driver/gpio.c")
+     335                      .dwattr $C$DW$15, DW_AT_TI_end_line(0x1e9)
+     336                      .dwattr $C$DW$15, DW_AT_TI_end_column(0x01)
+     337                      .dwendentry
+     338                      .dwendtag $C$DW$15
+     339              
+     340 00000000               .sect   ".text:GPIO_setPadConfig"
+     341                      .clink
+     342                      .global ||GPIO_setPadConfig||
+     343              
+     344              $C$DW$19        .dwtag  DW_TAG_subprogram
+     345                      .dwattr $C$DW$19, DW_AT_name("GPIO_setPadConfig")
+     346                      .dwattr $C$DW$19, DW_AT_low_pc(||GPIO_setPadConfig||)
+     347                      .dwattr $C$DW$19, DW_AT_high_pc(0x00)
+     348                      .dwattr $C$DW$19, DW_AT_linkage_name("GPIO_setPadConfig")
+     349                      .dwattr $C$DW$19, DW_AT_external
+     350                      .dwattr $C$DW$19, DW_AT_decl_file("../src_driver/gpio.c")
+     351                      .dwattr $C$DW$19, DW_AT_decl_line(0xad)
+     352                      .dwattr $C$DW$19, DW_AT_decl_column(0x01)
+     353                      .dwattr $C$DW$19, DW_AT_TI_max_frame_size(-2)
+     354                      .dwpsn  file "../src_driver/gpio.c",line 174,column 1,is_stmt,address ||GPIO_setPadConfig||,isa 0
+     355              
+     356                      .dwfde $C$DW$CIE, ||GPIO_setPadConfig||
+     357              $C$DW$20        .dwtag  DW_TAG_formal_parameter
+     358                      .dwattr $C$DW$20, DW_AT_name("pin")
+     359                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$25)
+     360                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg0]
+     361              
+     362              $C$DW$21        .dwtag  DW_TAG_formal_parameter
+     363                      .dwattr $C$DW$21, DW_AT_name("pinType")
+     364                      .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$25)
+     365                      .dwattr $C$DW$21, DW_AT_location[DW_OP_breg20 -4]
+     366              
+     367              
+     368              ;***************************************************************
+     369              ;* FNAME: GPIO_setPadConfig             FR SIZE:   0           *
+     370              ;*                                                             *
+     371              ;* FUNCTION ENVIRONMENT                                        *
+     372              ;*                                                             *
+     373              ;* FUNCTION PROPERTIES                                         *
+     374              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     375              ;***************************************************************
+     376              
+     377              ||GPIO_setPadConfig||:
+     378              ;* AL    assigned to $O$K13
+     379              ;* AR4   assigned to $O$K8
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    8
+
+     380              ;* AR7   assigned to pin
+     381              $C$DW$22        .dwtag  DW_TAG_variable
+     382                      .dwattr $C$DW$22, DW_AT_name("pin")
+     383                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$64)
+     384                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg18]
+     385              
+     386              ;* AR6   assigned to pinType
+     387              $C$DW$23        .dwtag  DW_TAG_variable
+     388                      .dwattr $C$DW$23, DW_AT_name("pinType")
+     389                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$64)
+     390                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg16]
+     391              
+     392              ;* AR4   assigned to gpioBaseAddr
+     393              $C$DW$24        .dwtag  DW_TAG_variable
+     394                      .dwattr $C$DW$24, DW_AT_name("gpioBaseAddr")
+     395                      .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$63)
+     396                      .dwattr $C$DW$24, DW_AT_location[DW_OP_reg12]
+     397              
+     398              ;* PL    assigned to pinMask
+     399              $C$DW$25        .dwtag  DW_TAG_variable
+     400                      .dwattr $C$DW$25, DW_AT_name("pinMask")
+     401                      .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$25)
+     402                      .dwattr $C$DW$25, DW_AT_location[DW_OP_reg2]
+     403              
+     404                      .dwcfi  cfa_offset, -2
+     405                      .dwcfi  save_reg_to_mem, 26, 0
+     406 00000000 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |174| 
+     407                      .dwpsn  file "../src_driver/gpio.c",line 183,column 5,is_stmt,isa 0
+     408 00000001 18A9          AND       AL,#65504             ; [CPU_ALU] |183| 
+         00000002 FFE0 
+     409 00000003 FF30          LSL       ACC,1                 ; [CPU_ALU] |183| 
+     410                      .dwpsn  file "../src_driver/gpio.c",line 174,column 1,is_stmt,isa 0
+     411 00000004 C444          MOVL      XAR6,*-SP[4]          ; [CPU_FPU] |174| 
+     412                      .dwpsn  file "../src_driver/gpio.c",line 183,column 5,is_stmt,isa 0
+     413 00000005 FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |183| 
+         00000006 001F 
+     414 00000007 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |183| 
+     415                      .dwpsn  file "../src_driver/gpio.c",line 185,column 5,is_stmt,isa 0
+     416 00000008 92A7          MOV       AL,AR7                ; [CPU_ALU] |185| 
+     417 00000009 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |185| 
+     418 0000000a 2DA9          MOV       T,AL                  ; [CPU_ALU] |185| 
+     419 0000000b 0201          MOVB      ACC,#1                ; [CPU_ALU] |185| 
+     420 0000000c 563B          LSLL      ACC,T                 ; [CPU_ALU] |185| 
+     421 0000000d FF5A          MOVL      P,ACC                 ; [CPU_ALU] |185| 
+     422                      .dwpsn  file "../src_driver/gpio.c",line 187,column 5,is_stmt,isa 0
+     423 0000000e 7622          EALLOW    ; [CPU_ALU] |187| 
+     424 0000000f 92A6          MOV       AL,AR6                ; [CPU_ALU] |187| 
+     425                      .dwpsn  file "../src_driver/gpio.c",line 192,column 5,is_stmt,isa 0
+     426 00000010 42A9          TBIT      AL,#2                 ; [CPU_ALU] |192| 
+     427 00000011 6D08          B         ||$C$L1||,TC          ; [CPU_ALU] |192| 
+     428                      ; branchcc occurs ; [] |192| 
+     429                      .dwpsn  file "../src_driver/gpio.c",line 198,column 9,is_stmt,isa 0
+     430 00000012 83A4          MOVL      XAR5,XAR4             ; [CPU_ALU] |198| 
+     431 00000013 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     432 00000014 FF55          NOT       ACC                   ; [CPU_ALU] |198| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE    9
+
+     433 00000015 DD12          ADDB      XAR5,#18              ; [CPU_ALU] |198| 
+     434 00000016 C0C5          AND       *+XAR5[0],AL          ; [CPU_ALU] |198| 
+     435 00000017 C1CD          AND       *+XAR5[1],AH          ; [CPU_ALU] |198| 
+     436                      .dwpsn  file "../src_driver/gpio.c",line 204,column 5,is_stmt,isa 0
+     437 00000018 6F07          B         ||$C$L2||,UNC         ; [CPU_ALU] |204| 
+     438                      ; branch occurs ; [] |204| 
+     439 00000019       ||$C$L1||:    
+     440                      .dwpsn  file "../src_driver/gpio.c",line 194,column 9,is_stmt,isa 0
+     441 00000019 83A4          MOVL      XAR5,XAR4             ; [CPU_ALU] |194| 
+     442 0000001a 92AB          MOV       AL,PL                 ; [CPU_ALU] |194| 
+     443 0000001b 93AA          MOV       AH,PH                 ; [CPU_ALU] |194| 
+     444 0000001c DD12          ADDB      XAR5,#18              ; [CPU_ALU] |194| 
+     445 0000001d 98C5          OR        *+XAR5[0],AL          ; [CPU_ALU] |194| 
+     446 0000001e 99CD          OR        *+XAR5[1],AH          ; [CPU_ALU] |194| 
+     447 0000001f       ||$C$L2||:    
+     448                      .dwpsn  file "../src_driver/gpio.c",line 204,column 5,is_stmt,isa 0
+     449 0000001f 92A6          MOV       AL,AR6                ; [CPU_ALU] |204| 
+     450 00000020 40A9          TBIT      AL,#0                 ; [CPU_ALU] |204| 
+     451 00000021 6D08          B         ||$C$L3||,TC          ; [CPU_ALU] |204| 
+     452                      ; branchcc occurs ; [] |204| 
+     453                      .dwpsn  file "../src_driver/gpio.c",line 210,column 9,is_stmt,isa 0
+     454 00000022 83A4          MOVL      XAR5,XAR4             ; [CPU_ALU] |210| 
+     455 00000023 92AB          MOV       AL,PL                 ; [CPU_ALU] |210| 
+     456 00000024 93AA          MOV       AH,PH                 ; [CPU_ALU] |210| 
+     457 00000025 DD0C          ADDB      XAR5,#12              ; [CPU_ALU] |210| 
+     458 00000026 98C5          OR        *+XAR5[0],AL          ; [CPU_ALU] |210| 
+     459 00000027 99CD          OR        *+XAR5[1],AH          ; [CPU_ALU] |210| 
+     460                      .dwpsn  file "../src_driver/gpio.c",line 216,column 5,is_stmt,isa 0
+     461 00000028 6F07          B         ||$C$L4||,UNC         ; [CPU_ALU] |216| 
+     462                      ; branch occurs ; [] |216| 
+     463 00000029       ||$C$L3||:    
+     464                      .dwpsn  file "../src_driver/gpio.c",line 206,column 9,is_stmt,isa 0
+     465 00000029 83A4          MOVL      XAR5,XAR4             ; [CPU_ALU] |206| 
+     466 0000002a A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     467 0000002b FF55          NOT       ACC                   ; [CPU_ALU] |206| 
+     468 0000002c DD0C          ADDB      XAR5,#12              ; [CPU_ALU] |206| 
+     469 0000002d C0C5          AND       *+XAR5[0],AL          ; [CPU_ALU] |206| 
+     470 0000002e C1CD          AND       *+XAR5[1],AH          ; [CPU_ALU] |206| 
+     471 0000002f       ||$C$L4||:    
+     472 0000002f 92A6          MOV       AL,AR6                ; [CPU_ALU] 
+     473                      .dwpsn  file "../src_driver/gpio.c",line 216,column 5,is_stmt,isa 0
+     474 00000030 41A9          TBIT      AL,#1                 ; [CPU_ALU] |216| 
+     475 00000031 6D07          B         ||$C$L5||,TC          ; [CPU_ALU] |216| 
+     476                      ; branchcc occurs ; [] |216| 
+     477 00000032 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     478                      .dwpsn  file "../src_driver/gpio.c",line 222,column 9,is_stmt,isa 0
+     479 00000033 DC10          ADDB      XAR4,#16              ; [CPU_ALU] |222| 
+     480 00000034 FF55          NOT       ACC                   ; [CPU_ALU] |222| 
+     481 00000035 C0C4          AND       *+XAR4[0],AL          ; [CPU_ALU] |222| 
+     482 00000036 C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |222| 
+     483 00000037 6F06          B         ||$C$L6||,UNC         ; [CPU_ALU] |222| 
+     484                      ; branch occurs ; [] |222| 
+     485 00000038       ||$C$L5||:    
+     486                      .dwpsn  file "../src_driver/gpio.c",line 218,column 9,is_stmt,isa 0
+     487 00000038 DC10          ADDB      XAR4,#16              ; [CPU_ALU] |218| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   10
+
+     488 00000039 92AB          MOV       AL,PL                 ; [CPU_FPU] |218| 
+     489 0000003a 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |218| 
+     490 0000003b 92AA          MOV       AL,PH                 ; [CPU_ALU] |218| 
+     491 0000003c 98CC          OR        *+XAR4[1],AL          ; [CPU_ALU] |218| 
+     492 0000003d       ||$C$L6||:    
+     493                      .dwpsn  file "../src_driver/gpio.c",line 225,column 5,is_stmt,isa 0
+     494 0000003d 761A          EDIS      ; [CPU_ALU] |225| 
+     495              $C$DW$26        .dwtag  DW_TAG_TI_branch
+     496                      .dwattr $C$DW$26, DW_AT_low_pc(0x00)
+     497                      .dwattr $C$DW$26, DW_AT_TI_return
+     498              
+     499 0000003e 0006          LRETR     ; [CPU_ALU] 
+     500                      ; return occurs ; [] 
+     501                      .dwattr $C$DW$19, DW_AT_TI_end_file("../src_driver/gpio.c")
+     502                      .dwattr $C$DW$19, DW_AT_TI_end_line(0xe2)
+     503                      .dwattr $C$DW$19, DW_AT_TI_end_column(0x01)
+     504                      .dwendentry
+     505                      .dwendtag $C$DW$19
+     506              
+     507 00000000               .sect   ".text:GPIO_setInterruptPin"
+     508                      .clink
+     509                      .global ||GPIO_setInterruptPin||
+     510              
+     511              $C$DW$27        .dwtag  DW_TAG_subprogram
+     512                      .dwattr $C$DW$27, DW_AT_name("GPIO_setInterruptPin")
+     513                      .dwattr $C$DW$27, DW_AT_low_pc(||GPIO_setInterruptPin||)
+     514                      .dwattr $C$DW$27, DW_AT_high_pc(0x00)
+     515                      .dwattr $C$DW$27, DW_AT_linkage_name("GPIO_setInterruptPin")
+     516                      .dwattr $C$DW$27, DW_AT_external
+     517                      .dwattr $C$DW$27, DW_AT_decl_file("../src_driver/gpio.c")
+     518                      .dwattr $C$DW$27, DW_AT_decl_line(0x75)
+     519                      .dwattr $C$DW$27, DW_AT_decl_column(0x01)
+     520                      .dwattr $C$DW$27, DW_AT_TI_max_frame_size(-2)
+     521                      .dwpsn  file "../src_driver/gpio.c",line 118,column 1,is_stmt,address ||GPIO_setInterruptPin||,isa 0
+     522              
+     523                      .dwfde $C$DW$CIE, ||GPIO_setInterruptPin||
+     524              $C$DW$28        .dwtag  DW_TAG_formal_parameter
+     525                      .dwattr $C$DW$28, DW_AT_name("pin")
+     526                      .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$25)
+     527                      .dwattr $C$DW$28, DW_AT_location[DW_OP_reg0]
+     528              
+     529              $C$DW$29        .dwtag  DW_TAG_formal_parameter
+     530                      .dwattr $C$DW$29, DW_AT_name("extIntNum")
+     531                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$29)
+     532                      .dwattr $C$DW$29, DW_AT_location[DW_OP_reg12]
+     533              
+     534              
+     535              ;***************************************************************
+     536              ;* FNAME: GPIO_setInterruptPin          FR SIZE:   0           *
+     537              ;*                                                             *
+     538              ;* FUNCTION ENVIRONMENT                                        *
+     539              ;*                                                             *
+     540              ;* FUNCTION PROPERTIES                                         *
+     541              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     542              ;***************************************************************
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   11
+
+     543              
+     544              ||GPIO_setInterruptPin||:
+     545              ;* AR6   assigned to pin
+     546              $C$DW$30        .dwtag  DW_TAG_variable
+     547                      .dwattr $C$DW$30, DW_AT_name("pin")
+     548                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$64)
+     549                      .dwattr $C$DW$30, DW_AT_location[DW_OP_reg16]
+     550              
+     551              ;* AL    assigned to extIntNum
+     552              $C$DW$31        .dwtag  DW_TAG_variable
+     553                      .dwattr $C$DW$31, DW_AT_name("extIntNum")
+     554                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$30)
+     555                      .dwattr $C$DW$31, DW_AT_location[DW_OP_reg0]
+     556              
+     557              ;* AL    assigned to input
+     558              $C$DW$32        .dwtag  DW_TAG_variable
+     559                      .dwattr $C$DW$32, DW_AT_name("input")
+     560                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$20)
+     561                      .dwattr $C$DW$32, DW_AT_location[DW_OP_reg0]
+     562              
+     563                      .dwcfi  cfa_offset, -2
+     564                      .dwcfi  save_reg_to_mem, 26, 0
+     565 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |118| 
+     566 00000001 92A4          MOV       AL,AR4                ; [CPU_ALU] |118| 
+     567                      .dwpsn  file "../src_driver/gpio.c",line 129,column 5,is_stmt,isa 0
+     568 00000002 5202          CMPB      AL,#2                 ; [CPU_ALU] |129| 
+     569 00000003 6208          B         ||$C$L7||,GT          ; [CPU_ALU] |129| 
+     570                      ; branchcc occurs ; [] |129| 
+     571 00000004 5202          CMPB      AL,#2                 ; [CPU_ALU] |129| 
+     572 00000005 610E          B         ||$C$L9||,EQ          ; [CPU_ALU] |129| 
+     573                      ; branchcc occurs ; [] |129| 
+     574 00000006 5200          CMPB      AL,#0                 ; [CPU_ALU] |129| 
+     575 00000007 6110          B         ||$C$L11||,EQ         ; [CPU_ALU] |129| 
+     576                      ; branchcc occurs ; [] |129| 
+     577 00000008 5201          CMPB      AL,#1                 ; [CPU_ALU] |129| 
+     578 00000009 610C          B         ||$C$L10||,EQ         ; [CPU_ALU] |129| 
+     579                      ; branchcc occurs ; [] |129| 
+     580                      .dwcfi  remember_state
+     581              $C$DW$33        .dwtag  DW_TAG_TI_branch
+     582                      .dwattr $C$DW$33, DW_AT_low_pc(0x00)
+     583                      .dwattr $C$DW$33, DW_AT_TI_return
+     584              
+     585 0000000a 0006          LRETR     ; [CPU_ALU] 
+     586                      ; return occurs ; [] 
+     587                      .dwcfi  restore_state
+     588 0000000b       ||$C$L7||:    
+     589 0000000b 5203          CMPB      AL,#3                 ; [CPU_ALU] |129| 
+     590 0000000c 6105          B         ||$C$L8||,EQ          ; [CPU_ALU] |129| 
+     591                      ; branchcc occurs ; [] |129| 
+     592 0000000d 5204          CMPB      AL,#4                 ; [CPU_ALU] |129| 
+     593 0000000e 6011          B         ||$C$L13||,NEQ        ; [CPU_ALU] |129| 
+     594                      ; branchcc occurs ; [] |129| 
+     595                      .dwpsn  file "../src_driver/gpio.c",line 148,column 13,is_stmt,isa 0
+     596 0000000f 9A0D          MOVB      AL,#13                ; [CPU_ALU] |148| 
+     597                      .dwpsn  file "../src_driver/gpio.c",line 161,column 5,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   12
+
+     598 00000010 6F08          B         ||$C$L12||,UNC        ; [CPU_ALU] |161| 
+     599                      ; branch occurs ; [] |161| 
+     600 00000011       ||$C$L8||:    
+     601                      .dwpsn  file "../src_driver/gpio.c",line 144,column 13,is_stmt,isa 0
+     602 00000011 9A0C          MOVB      AL,#12                ; [CPU_ALU] |144| 
+     603                      .dwpsn  file "../src_driver/gpio.c",line 161,column 5,is_stmt,isa 0
+     604 00000012 6F06          B         ||$C$L12||,UNC        ; [CPU_ALU] |161| 
+     605                      ; branch occurs ; [] |161| 
+     606 00000013       ||$C$L9||:    
+     607                      .dwpsn  file "../src_driver/gpio.c",line 140,column 13,is_stmt,isa 0
+     608 00000013 9A05          MOVB      AL,#5                 ; [CPU_ALU] |140| 
+     609                      .dwpsn  file "../src_driver/gpio.c",line 161,column 5,is_stmt,isa 0
+     610 00000014 6F04          B         ||$C$L12||,UNC        ; [CPU_ALU] |161| 
+     611                      ; branch occurs ; [] |161| 
+     612 00000015       ||$C$L10||:    
+     613                      .dwpsn  file "../src_driver/gpio.c",line 136,column 13,is_stmt,isa 0
+     614 00000015 9A04          MOVB      AL,#4                 ; [CPU_ALU] |136| 
+     615                      .dwpsn  file "../src_driver/gpio.c",line 137,column 13,is_stmt,isa 0
+     616 00000016 6F02          B         ||$C$L12||,UNC        ; [CPU_ALU] |137| 
+     617                      ; branch occurs ; [] |137| 
+     618 00000017       ||$C$L11||:    
+     619                      .dwpsn  file "../src_driver/gpio.c",line 132,column 13,is_stmt,isa 0
+     620 00000017 9A03          MOVB      AL,#3                 ; [CPU_ALU] |132| 
+     621 00000018       ||$C$L12||:    
+     622                      .dwpsn  file "D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib
+     623 00000018 7622          EALLOW    ; [CPU_ALU] |969| 
+     624                      .dwpsn  file "D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib
+     625 00000019 28A8          MOV       AH,#30976             ; [CPU_ALU] |971| 
+         0000001a 7900 
+     626 0000001b 95A9          ADD       AH,AL                 ; [CPU_ALU] |971| 
+     627 0000001c 5CA8          MOVZ      AR4,AH                ; [CPU_ALU] |971| 
+     628 0000001d 7EC4          MOV       *+XAR4[0],AR6         ; [CPU_ALU] |971| 
+     629                      .dwpsn  file "D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib
+     630 0000001e 761A          EDIS      ; [CPU_ALU] |973| 
+     631              ||$C$L13||:    
+     632              $C$DW$34        .dwtag  DW_TAG_TI_branch
+     633                      .dwattr $C$DW$34, DW_AT_low_pc(0x00)
+     634                      .dwattr $C$DW$34, DW_AT_TI_return
+     635              
+     636 0000001f 0006          LRETR     ; [CPU_ALU] 
+     637                      ; return occurs ; [] 
+     638                      .dwattr $C$DW$27, DW_AT_TI_end_file("../src_driver/gpio.c")
+     639                      .dwattr $C$DW$27, DW_AT_TI_end_line(0xa5)
+     640                      .dwattr $C$DW$27, DW_AT_TI_end_column(0x01)
+     641                      .dwendentry
+     642                      .dwendtag $C$DW$27
+     643              
+     644 00000000               .sect   ".text:GPIO_setDirectionMode"
+     645                      .clink
+     646                      .global ||GPIO_setDirectionMode||
+     647              
+     648              $C$DW$35        .dwtag  DW_TAG_subprogram
+     649                      .dwattr $C$DW$35, DW_AT_name("GPIO_setDirectionMode")
+     650                      .dwattr $C$DW$35, DW_AT_low_pc(||GPIO_setDirectionMode||)
+     651                      .dwattr $C$DW$35, DW_AT_high_pc(0x00)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   13
+
+     652                      .dwattr $C$DW$35, DW_AT_linkage_name("GPIO_setDirectionMode")
+     653                      .dwattr $C$DW$35, DW_AT_external
+     654                      .dwattr $C$DW$35, DW_AT_decl_file("../src_driver/gpio.c")
+     655                      .dwattr $C$DW$35, DW_AT_decl_line(0x33)
+     656                      .dwattr $C$DW$35, DW_AT_decl_column(0x01)
+     657                      .dwattr $C$DW$35, DW_AT_TI_max_frame_size(-2)
+     658                      .dwpsn  file "../src_driver/gpio.c",line 52,column 1,is_stmt,address ||GPIO_setDirectionMode||,isa 0
+     659              
+     660                      .dwfde $C$DW$CIE, ||GPIO_setDirectionMode||
+     661              $C$DW$36        .dwtag  DW_TAG_formal_parameter
+     662                      .dwattr $C$DW$36, DW_AT_name("pin")
+     663                      .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$25)
+     664                      .dwattr $C$DW$36, DW_AT_location[DW_OP_reg0]
+     665              
+     666              $C$DW$37        .dwtag  DW_TAG_formal_parameter
+     667                      .dwattr $C$DW$37, DW_AT_name("pinIO")
+     668                      .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$22)
+     669                      .dwattr $C$DW$37, DW_AT_location[DW_OP_reg12]
+     670              
+     671              
+     672              ;***************************************************************
+     673              ;* FNAME: GPIO_setDirectionMode         FR SIZE:   0           *
+     674              ;*                                                             *
+     675              ;* FUNCTION ENVIRONMENT                                        *
+     676              ;*                                                             *
+     677              ;* FUNCTION PROPERTIES                                         *
+     678              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     679              ;***************************************************************
+     680              
+     681              ||GPIO_setDirectionMode||:
+     682              ;* AL    assigned to $O$K13
+     683              ;* AR6   assigned to $O$K8
+     684              ;* AR7   assigned to pin
+     685              $C$DW$38        .dwtag  DW_TAG_variable
+     686                      .dwattr $C$DW$38, DW_AT_name("pin")
+     687                      .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$64)
+     688                      .dwattr $C$DW$38, DW_AT_location[DW_OP_reg18]
+     689              
+     690              ;* AR4   assigned to pinIO
+     691              $C$DW$39        .dwtag  DW_TAG_variable
+     692                      .dwattr $C$DW$39, DW_AT_name("pinIO")
+     693                      .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$23)
+     694                      .dwattr $C$DW$39, DW_AT_location[DW_OP_reg12]
+     695              
+     696              ;* AR6   assigned to gpioBaseAddr
+     697              $C$DW$40        .dwtag  DW_TAG_variable
+     698                      .dwattr $C$DW$40, DW_AT_name("gpioBaseAddr")
+     699                      .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$63)
+     700                      .dwattr $C$DW$40, DW_AT_location[DW_OP_reg16]
+     701              
+     702              ;* PL    assigned to pinMask
+     703              $C$DW$41        .dwtag  DW_TAG_variable
+     704                      .dwattr $C$DW$41, DW_AT_name("pinMask")
+     705                      .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$25)
+     706                      .dwattr $C$DW$41, DW_AT_location[DW_OP_reg2]
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   14
+
+     707              
+     708                      .dwcfi  cfa_offset, -2
+     709                      .dwcfi  save_reg_to_mem, 26, 0
+     710 00000000 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |52| 
+     711                      .dwpsn  file "../src_driver/gpio.c",line 61,column 5,is_stmt,isa 0
+     712 00000001 18A9          AND       AL,#65504             ; [CPU_ALU] |61| 
+         00000002 FFE0 
+     713 00000003 FF30          LSL       ACC,1                 ; [CPU_ALU] |61| 
+     714 00000004 FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |61| 
+         00000005 001F 
+     715 00000006 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |61| 
+     716                      .dwpsn  file "../src_driver/gpio.c",line 63,column 5,is_stmt,isa 0
+     717 00000007 92A7          MOV       AL,AR7                ; [CPU_ALU] |63| 
+     718 00000008 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |63| 
+     719 00000009 2DA9          MOV       T,AL                  ; [CPU_ALU] |63| 
+     720 0000000a 0201          MOVB      ACC,#1                ; [CPU_ALU] |63| 
+     721 0000000b 563B          LSLL      ACC,T                 ; [CPU_ALU] |63| 
+     722 0000000c FF5A          MOVL      P,ACC                 ; [CPU_ALU] |63| 
+     723                      .dwpsn  file "../src_driver/gpio.c",line 65,column 5,is_stmt,isa 0
+     724 0000000d 7622          EALLOW    ; [CPU_ALU] |65| 
+     725 0000000e 92A4          MOV       AL,AR4                ; [CPU_ALU] |65| 
+     726                      .dwpsn  file "../src_driver/gpio.c",line 70,column 5,is_stmt,isa 0
+     727 0000000f 5201          CMPB      AL,#1                 ; [CPU_ALU] |70| 
+     728 00000010 6108          B         ||$C$L14||,EQ         ; [CPU_ALU] |70| 
+     729                      ; branchcc occurs ; [] |70| 
+     730                      .dwpsn  file "../src_driver/gpio.c",line 82,column 9,is_stmt,isa 0
+     731 00000011 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |82| 
+     732 00000012 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     733 00000013 FF55          NOT       ACC                   ; [CPU_ALU] |82| 
+     734 00000014 DC0A          ADDB      XAR4,#10              ; [CPU_ALU] |82| 
+     735 00000015 C0C4          AND       *+XAR4[0],AL          ; [CPU_ALU] |82| 
+     736 00000016 C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |82| 
+     737 00000017 6F07          B         ||$C$L15||,UNC        ; [CPU_ALU] |82| 
+     738                      ; branch occurs ; [] |82| 
+     739 00000018       ||$C$L14||:    
+     740                      .dwpsn  file "../src_driver/gpio.c",line 75,column 9,is_stmt,isa 0
+     741 00000018 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |75| 
+     742 00000019 92AB          MOV       AL,PL                 ; [CPU_ALU] |75| 
+     743 0000001a DC0A          ADDB      XAR4,#10              ; [CPU_ALU] |75| 
+     744 0000001b 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |75| 
+     745 0000001c 92AA          MOV       AL,PH                 ; [CPU_ALU] |75| 
+     746 0000001d 98CC          OR        *+XAR4[1],AL          ; [CPU_ALU] |75| 
+     747 0000001e       ||$C$L15||:    
+     748                      .dwpsn  file "../src_driver/gpio.c",line 85,column 5,is_stmt,isa 0
+     749 0000001e 761A          EDIS      ; [CPU_ALU] |85| 
+     750              $C$DW$42        .dwtag  DW_TAG_TI_branch
+     751                      .dwattr $C$DW$42, DW_AT_low_pc(0x00)
+     752                      .dwattr $C$DW$42, DW_AT_TI_return
+     753              
+     754 0000001f 0006          LRETR     ; [CPU_ALU] 
+     755                      ; return occurs ; [] 
+     756                      .dwattr $C$DW$35, DW_AT_TI_end_file("../src_driver/gpio.c")
+     757                      .dwattr $C$DW$35, DW_AT_TI_end_line(0x56)
+     758                      .dwattr $C$DW$35, DW_AT_TI_end_column(0x01)
+     759                      .dwendentry
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   15
+
+     760                      .dwendtag $C$DW$35
+     761              
+     762 00000000               .sect   ".text:GPIO_setControllerCore"
+     763                      .clink
+     764                      .global ||GPIO_setControllerCore||
+     765              
+     766              $C$DW$43        .dwtag  DW_TAG_subprogram
+     767                      .dwattr $C$DW$43, DW_AT_name("GPIO_setControllerCore")
+     768                      .dwattr $C$DW$43, DW_AT_low_pc(||GPIO_setControllerCore||)
+     769                      .dwattr $C$DW$43, DW_AT_high_pc(0x00)
+     770                      .dwattr $C$DW$43, DW_AT_linkage_name("GPIO_setControllerCore")
+     771                      .dwattr $C$DW$43, DW_AT_external
+     772                      .dwattr $C$DW$43, DW_AT_decl_file("../src_driver/gpio.c")
+     773                      .dwattr $C$DW$43, DW_AT_decl_line(0x183)
+     774                      .dwattr $C$DW$43, DW_AT_decl_column(0x01)
+     775                      .dwattr $C$DW$43, DW_AT_TI_max_frame_size(-2)
+     776                      .dwpsn  file "../src_driver/gpio.c",line 388,column 1,is_stmt,address ||GPIO_setControllerCore||,isa 
+     777              
+     778                      .dwfde $C$DW$CIE, ||GPIO_setControllerCore||
+     779              $C$DW$44        .dwtag  DW_TAG_formal_parameter
+     780                      .dwattr $C$DW$44, DW_AT_name("pin")
+     781                      .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$25)
+     782                      .dwattr $C$DW$44, DW_AT_location[DW_OP_reg0]
+     783              
+     784              $C$DW$45        .dwtag  DW_TAG_formal_parameter
+     785                      .dwattr $C$DW$45, DW_AT_name("core")
+     786                      .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$37)
+     787                      .dwattr $C$DW$45, DW_AT_location[DW_OP_reg12]
+     788              
+     789              
+     790              ;***************************************************************
+     791              ;* FNAME: GPIO_setControllerCore        FR SIZE:   0           *
+     792              ;*                                                             *
+     793              ;* FUNCTION ENVIRONMENT                                        *
+     794              ;*                                                             *
+     795              ;* FUNCTION PROPERTIES                                         *
+     796              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     797              ;***************************************************************
+     798              
+     799              ||GPIO_setControllerCore||:
+     800              ;* AR5   assigned to $O$C1
+     801              ;* T     assigned to $O$C2
+     802              ;* AR5   assigned to pin
+     803              $C$DW$46        .dwtag  DW_TAG_variable
+     804                      .dwattr $C$DW$46, DW_AT_name("pin")
+     805                      .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$64)
+     806                      .dwattr $C$DW$46, DW_AT_location[DW_OP_reg14]
+     807              
+     808              ;* AR4   assigned to core
+     809              $C$DW$47        .dwtag  DW_TAG_variable
+     810                      .dwattr $C$DW$47, DW_AT_name("core")
+     811                      .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$38)
+     812                      .dwattr $C$DW$47, DW_AT_location[DW_OP_reg12]
+     813              
+     814                      .dwcfi  cfa_offset, -2
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   16
+
+     815                      .dwcfi  save_reg_to_mem, 26, 0
+     816 00000000 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |388| 
+     817                      .dwpsn  file "../src_driver/gpio.c",line 406,column 5,is_stmt,isa 0
+     818 00000001 7622          EALLOW    ; [CPU_ALU] |406| 
+     819 00000002 2901          CLRC      SXM                   ; [CPU_ALU] 
+     820                      .dwpsn  file "../src_driver/gpio.c",line 407,column 5,is_stmt,isa 0
+     821 00000003 5603          MOV       ACC,AR5 << #2         ; [CPU_ALU] |407| 
+         00000004 02A5 
+     822 00000005 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |407| 
+     823 00000006 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |407| 
+     824 00000007 16A9          MOVP      T,AL                  ; [CPU_ALU] 
+     825 00000008 FF42          SFR       ACC,3                 ; [CPU_ALU] |407| 
+     826 00000009 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |407| 
+     827 0000000a 92AB          MOV       AL,PL                 ; [CPU_ALU] |407| 
+     828 0000000b 2BAA          MOV       PH,#0                 ; [CPU_ALU] |407| 
+     829 0000000c 9003          ANDB      AL,#0x03              ; [CPU_ALU] |407| 
+     830 0000000d 27A9          MOV       PL,AL                 ; [CPU_ALU] |407| 
+     831 0000000e A0A9          MOVL      ACC,XAR5              ; [CPU_ALU] |407| 
+     832 0000000f 18A9          AND       AL,#65504             ; [CPU_ALU] |407| 
+         00000010 FFE0 
+     833 00000011 07AB          ADDL      ACC,P                 ; [CPU_ALU] |407| 
+     834 00000012 0914          ADDB      ACC,#20               ; [CPU_ALU] |407| 
+     835 00000013 FF30          LSL       ACC,1                 ; [CPU_ALU] |407| 
+     836 00000014 FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |407| 
+         00000015 001F 
+     837 00000016 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |407| 
+     838 00000017 020F          MOVB      ACC,#15               ; [CPU_ALU] |407| 
+     839 00000018 563B          LSLL      ACC,T                 ; [CPU_ALU] |407| 
+     840 00000019 FF55          NOT       ACC                   ; [CPU_ALU] |407| 
+     841 0000001a C0C5          AND       *+XAR5[0],AL          ; [CPU_ALU] |407| 
+     842 0000001b C1CD          AND       *+XAR5[1],AH          ; [CPU_ALU] |407| 
+     843                      .dwpsn  file "../src_driver/gpio.c",line 408,column 5,is_stmt,isa 0
+     844 0000001c 0EA4          MOVU      ACC,AR4               ; [CPU_ALU] |408| 
+     845 0000001d 563B          LSLL      ACC,T                 ; [CPU_ALU] |408| 
+     846 0000001e 98C5          OR        *+XAR5[0],AL          ; [CPU_ALU] |408| 
+     847 0000001f 99CD          OR        *+XAR5[1],AH          ; [CPU_ALU] |408| 
+     848                      .dwpsn  file "../src_driver/gpio.c",line 409,column 5,is_stmt,isa 0
+     849 00000020 761A          EDIS      ; [CPU_ALU] |409| 
+     850              $C$DW$48        .dwtag  DW_TAG_TI_branch
+     851                      .dwattr $C$DW$48, DW_AT_low_pc(0x00)
+     852                      .dwattr $C$DW$48, DW_AT_TI_return
+     853              
+     854 00000021 0006          LRETR     ; [CPU_ALU] 
+     855                      ; return occurs ; [] 
+     856                      .dwattr $C$DW$43, DW_AT_TI_end_file("../src_driver/gpio.c")
+     857                      .dwattr $C$DW$43, DW_AT_TI_end_line(0x19a)
+     858                      .dwattr $C$DW$43, DW_AT_TI_end_column(0x01)
+     859                      .dwendentry
+     860                      .dwendtag $C$DW$43
+     861              
+     862 00000000               .sect   ".text:GPIO_setAnalogMode"
+     863                      .clink
+     864                      .global ||GPIO_setAnalogMode||
+     865              
+     866              $C$DW$49        .dwtag  DW_TAG_subprogram
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   17
+
+     867                      .dwattr $C$DW$49, DW_AT_name("GPIO_setAnalogMode")
+     868                      .dwattr $C$DW$49, DW_AT_low_pc(||GPIO_setAnalogMode||)
+     869                      .dwattr $C$DW$49, DW_AT_high_pc(0x00)
+     870                      .dwattr $C$DW$49, DW_AT_linkage_name("GPIO_setAnalogMode")
+     871                      .dwattr $C$DW$49, DW_AT_external
+     872                      .dwattr $C$DW$49, DW_AT_decl_file("../src_driver/gpio.c")
+     873                      .dwattr $C$DW$49, DW_AT_decl_line(0x1a2)
+     874                      .dwattr $C$DW$49, DW_AT_decl_column(0x01)
+     875                      .dwattr $C$DW$49, DW_AT_TI_max_frame_size(-2)
+     876                      .dwpsn  file "../src_driver/gpio.c",line 419,column 1,is_stmt,address ||GPIO_setAnalogMode||,isa 0
+     877              
+     878                      .dwfde $C$DW$CIE, ||GPIO_setAnalogMode||
+     879              $C$DW$50        .dwtag  DW_TAG_formal_parameter
+     880                      .dwattr $C$DW$50, DW_AT_name("pin")
+     881                      .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$25)
+     882                      .dwattr $C$DW$50, DW_AT_location[DW_OP_reg0]
+     883              
+     884              $C$DW$51        .dwtag  DW_TAG_formal_parameter
+     885                      .dwattr $C$DW$51, DW_AT_name("mode")
+     886                      .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$40)
+     887                      .dwattr $C$DW$51, DW_AT_location[DW_OP_reg12]
+     888              
+     889              
+     890              ;***************************************************************
+     891              ;* FNAME: GPIO_setAnalogMode            FR SIZE:   0           *
+     892              ;*                                                             *
+     893              ;* FUNCTION ENVIRONMENT                                        *
+     894              ;*                                                             *
+     895              ;* FUNCTION PROPERTIES                                         *
+     896              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     897              ;***************************************************************
+     898              
+     899              ||GPIO_setAnalogMode||:
+     900              ;* PL    assigned to $O$K5
+     901              ;* AL    assigned to $O$K13
+     902              ;* AR6   assigned to pin
+     903              $C$DW$52        .dwtag  DW_TAG_variable
+     904                      .dwattr $C$DW$52, DW_AT_name("pin")
+     905                      .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$64)
+     906                      .dwattr $C$DW$52, DW_AT_location[DW_OP_reg16]
+     907              
+     908              ;* AR4   assigned to mode
+     909              $C$DW$53        .dwtag  DW_TAG_variable
+     910                      .dwattr $C$DW$53, DW_AT_name("mode")
+     911                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$41)
+     912                      .dwattr $C$DW$53, DW_AT_location[DW_OP_reg12]
+     913              
+     914              ;* AR6   assigned to gpioBaseAddr
+     915              $C$DW$54        .dwtag  DW_TAG_variable
+     916                      .dwattr $C$DW$54, DW_AT_name("gpioBaseAddr")
+     917                      .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$63)
+     918                      .dwattr $C$DW$54, DW_AT_location[DW_OP_reg16]
+     919              
+     920              ;* PL    assigned to pinMask
+     921              $C$DW$55        .dwtag  DW_TAG_variable
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   18
+
+     922                      .dwattr $C$DW$55, DW_AT_name("pinMask")
+     923                      .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$25)
+     924                      .dwattr $C$DW$55, DW_AT_location[DW_OP_reg2]
+     925              
+     926                      .dwcfi  cfa_offset, -2
+     927                      .dwcfi  save_reg_to_mem, 26, 0
+     928 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |419| 
+     929                      .dwpsn  file "../src_driver/gpio.c",line 428,column 5,is_stmt,isa 0
+     930 00000001 92A6          MOV       AL,AR6                ; [CPU_ALU] |428| 
+     931 00000002 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |428| 
+     932 00000003 2DA9          MOV       T,AL                  ; [CPU_ALU] |428| 
+     933 00000004 0201          MOVB      ACC,#1                ; [CPU_ALU] |428| 
+     934 00000005 563B          LSLL      ACC,T                 ; [CPU_ALU] |428| 
+     935 00000006 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |428| 
+     936                      .dwpsn  file "../src_driver/gpio.c",line 429,column 5,is_stmt,isa 0
+     937 00000007 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |429| 
+     938 00000008 18A9          AND       AL,#65504             ; [CPU_ALU] |429| 
+         00000009 FFE0 
+     939 0000000a FF30          LSL       ACC,1                 ; [CPU_ALU] |429| 
+     940 0000000b FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |429| 
+         0000000c 001F 
+     941 0000000d 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |429| 
+     942                      .dwpsn  file "../src_driver/gpio.c",line 432,column 5,is_stmt,isa 0
+     943 0000000e 7622          EALLOW    ; [CPU_ALU] |432| 
+     944 0000000f 92A4          MOV       AL,AR4                ; [CPU_ALU] |432| 
+     945                      .dwpsn  file "../src_driver/gpio.c",line 437,column 5,is_stmt,isa 0
+     946 00000010 5201          CMPB      AL,#1                 ; [CPU_ALU] |437| 
+     947 00000011 6108          B         ||$C$L16||,EQ         ; [CPU_ALU] |437| 
+     948                      ; branchcc occurs ; [] |437| 
+     949                      .dwpsn  file "../src_driver/gpio.c",line 449,column 9,is_stmt,isa 0
+     950 00000012 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |449| 
+     951 00000013 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     952 00000014 FF55          NOT       ACC                   ; [CPU_ALU] |449| 
+     953 00000015 DC14          ADDB      XAR4,#20              ; [CPU_ALU] |449| 
+     954 00000016 C0C4          AND       *+XAR4[0],AL          ; [CPU_ALU] |449| 
+     955 00000017 C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |449| 
+     956 00000018 6F07          B         ||$C$L17||,UNC        ; [CPU_ALU] |449| 
+     957                      ; branch occurs ; [] |449| 
+     958 00000019       ||$C$L16||:    
+     959                      .dwpsn  file "../src_driver/gpio.c",line 442,column 9,is_stmt,isa 0
+     960 00000019 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |442| 
+     961 0000001a 92AB          MOV       AL,PL                 ; [CPU_ALU] |442| 
+     962 0000001b DC14          ADDB      XAR4,#20              ; [CPU_ALU] |442| 
+     963 0000001c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |442| 
+     964 0000001d 92AA          MOV       AL,PH                 ; [CPU_ALU] |442| 
+     965 0000001e 98CC          OR        *+XAR4[1],AL          ; [CPU_ALU] |442| 
+     966 0000001f       ||$C$L17||:    
+     967                      .dwpsn  file "../src_driver/gpio.c",line 452,column 5,is_stmt,isa 0
+     968 0000001f 761A          EDIS      ; [CPU_ALU] |452| 
+     969              $C$DW$56        .dwtag  DW_TAG_TI_branch
+     970                      .dwattr $C$DW$56, DW_AT_low_pc(0x00)
+     971                      .dwattr $C$DW$56, DW_AT_TI_return
+     972              
+     973 00000020 0006          LRETR     ; [CPU_ALU] 
+     974                      ; return occurs ; [] 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   19
+
+     975                      .dwattr $C$DW$49, DW_AT_TI_end_file("../src_driver/gpio.c")
+     976                      .dwattr $C$DW$49, DW_AT_TI_end_line(0x1c5)
+     977                      .dwattr $C$DW$49, DW_AT_TI_end_column(0x01)
+     978                      .dwendentry
+     979                      .dwendtag $C$DW$49
+     980              
+     981 00000000               .sect   ".text:GPIO_getQualificationMode"
+     982                      .clink
+     983                      .global ||GPIO_getQualificationMode||
+     984              
+     985              $C$DW$57        .dwtag  DW_TAG_subprogram
+     986                      .dwattr $C$DW$57, DW_AT_name("GPIO_getQualificationMode")
+     987                      .dwattr $C$DW$57, DW_AT_low_pc(||GPIO_getQualificationMode||)
+     988                      .dwattr $C$DW$57, DW_AT_high_pc(0x00)
+     989                      .dwattr $C$DW$57, DW_AT_linkage_name("GPIO_getQualificationMode")
+     990                      .dwattr $C$DW$57, DW_AT_external
+     991                      .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$32)
+     992                      .dwattr $C$DW$57, DW_AT_decl_file("../src_driver/gpio.c")
+     993                      .dwattr $C$DW$57, DW_AT_decl_line(0x13d)
+     994                      .dwattr $C$DW$57, DW_AT_decl_column(0x01)
+     995                      .dwattr $C$DW$57, DW_AT_TI_max_frame_size(-2)
+     996                      .dwpsn  file "../src_driver/gpio.c",line 318,column 1,is_stmt,address ||GPIO_getQualificationMode||,i
+     997              
+     998                      .dwfde $C$DW$CIE, ||GPIO_getQualificationMode||
+     999              $C$DW$58        .dwtag  DW_TAG_formal_parameter
+    1000                      .dwattr $C$DW$58, DW_AT_name("pin")
+    1001                      .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$25)
+    1002                      .dwattr $C$DW$58, DW_AT_location[DW_OP_reg0]
+    1003              
+    1004              
+    1005              ;***************************************************************
+    1006              ;* FNAME: GPIO_getQualificationMode     FR SIZE:   0           *
+    1007              ;*                                                             *
+    1008              ;* FUNCTION ENVIRONMENT                                        *
+    1009              ;*                                                             *
+    1010              ;* FUNCTION PROPERTIES                                         *
+    1011              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1012              ;***************************************************************
+    1013              
+    1014              ||GPIO_getQualificationMode||:
+    1015              ;* AR6   assigned to pin
+    1016              $C$DW$59        .dwtag  DW_TAG_variable
+    1017                      .dwattr $C$DW$59, DW_AT_name("pin")
+    1018                      .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$64)
+    1019                      .dwattr $C$DW$59, DW_AT_location[DW_OP_reg16]
+    1020              
+    1021                      .dwcfi  cfa_offset, -2
+    1022                      .dwcfi  save_reg_to_mem, 26, 0
+    1023 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |318| 
+    1024 00000001 2901          CLRC      SXM                   ; [CPU_ALU] 
+    1025                      .dwpsn  file "../src_driver/gpio.c",line 338,column 5,is_stmt,isa 0
+    1026 00000002 FF43          SFR       ACC,4                 ; [CPU_ALU] |338| 
+    1027 00000003 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |338| 
+    1028 00000004 9B00          MOVB      AH,#0                 ; [CPU_ALU] |338| 
+    1029 00000005 92AB          MOV       AL,PL                 ; [CPU_ALU] |338| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   20
+
+    1030 00000006 2FA8          MOV       PH,AH                 ; [CPU_ALU] |338| 
+    1031 00000007 9001          ANDB      AL,#0x01              ; [CPU_ALU] |338| 
+    1032 00000008 27A9          MOV       PL,AL                 ; [CPU_ALU] |338| 
+    1033 00000009 A9A9          MOVL      ACC,P                 ; [CPU_ALU] |338| 
+    1034 0000000a 0901          ADDB      ACC,#1                ; [CPU_ALU] |338| 
+    1035 0000000b FF30          LSL       ACC,1                 ; [CPU_ALU] |338| 
+    1036 0000000c FF5A          MOVL      P,ACC                 ; [CPU_ALU] |338| 
+    1037 0000000d 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |338| 
+    1038 0000000e FF30          LSL       ACC,1                 ; [CPU_ALU] |338| 
+    1039 0000000f FF45          SFR       ACC,6                 ; [CPU_ALU] |338| 
+    1040 00000010 FF35          LSL       ACC,6                 ; [CPU_ALU] |338| 
+    1041 00000011 07AB          ADDL      ACC,P                 ; [CPU_ALU] |338| 
+    1042 00000012 FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |338| 
+         00000013 001F 
+    1043 00000014 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |338| 
+    1044 00000015 92A6          MOV       AL,AR6                ; [CPU_ALU] |338| 
+    1045 00000016 5603          MOV       ACC,AL << #1          ; [CPU_ALU] |338| 
+         00000017 01A9 
+    1046 00000018 A3C4          MOVL      P,*+XAR4[0]           ; [CPU_ALU] |338| 
+    1047 00000019 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |338| 
+    1048 0000001a 16A9          MOVP      T,AL                  ; [CPU_ALU] 
+    1049 0000001b 5622          LSRL      ACC,T                 ; [CPU_ALU] |338| 
+    1050 0000001c FF5A          MOVL      P,ACC                 ; [CPU_ALU] |338| 
+    1051 0000001d 92AB          MOV       AL,PL                 ; [CPU_ALU] |338| 
+    1052 0000001e 9003          ANDB      AL,#0x03              ; [CPU_ALU] |338| 
+    1053              $C$DW$60        .dwtag  DW_TAG_TI_branch
+    1054                      .dwattr $C$DW$60, DW_AT_low_pc(0x00)
+    1055                      .dwattr $C$DW$60, DW_AT_TI_return
+    1056              
+    1057 0000001f 0006          LRETR     ; [CPU_FPU] 
+    1058                      ; return occurs ; [] 
+    1059                      .dwattr $C$DW$57, DW_AT_TI_end_file("../src_driver/gpio.c")
+    1060                      .dwattr $C$DW$57, DW_AT_TI_end_line(0x155)
+    1061                      .dwattr $C$DW$57, DW_AT_TI_end_column(0x01)
+    1062                      .dwendentry
+    1063                      .dwendtag $C$DW$57
+    1064              
+    1065 00000000               .sect   ".text:GPIO_getPadConfig"
+    1066                      .clink
+    1067                      .global ||GPIO_getPadConfig||
+    1068              
+    1069              $C$DW$61        .dwtag  DW_TAG_subprogram
+    1070                      .dwattr $C$DW$61, DW_AT_name("GPIO_getPadConfig")
+    1071                      .dwattr $C$DW$61, DW_AT_low_pc(||GPIO_getPadConfig||)
+    1072                      .dwattr $C$DW$61, DW_AT_high_pc(0x00)
+    1073                      .dwattr $C$DW$61, DW_AT_linkage_name("GPIO_getPadConfig")
+    1074                      .dwattr $C$DW$61, DW_AT_external
+    1075                      .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$25)
+    1076                      .dwattr $C$DW$61, DW_AT_decl_file("../src_driver/gpio.c")
+    1077                      .dwattr $C$DW$61, DW_AT_decl_line(0xea)
+    1078                      .dwattr $C$DW$61, DW_AT_decl_column(0x01)
+    1079                      .dwattr $C$DW$61, DW_AT_TI_max_frame_size(-2)
+    1080                      .dwpsn  file "../src_driver/gpio.c",line 235,column 1,is_stmt,address ||GPIO_getPadConfig||,isa 0
+    1081              
+    1082                      .dwfde $C$DW$CIE, ||GPIO_getPadConfig||
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   21
+
+    1083              $C$DW$62        .dwtag  DW_TAG_formal_parameter
+    1084                      .dwattr $C$DW$62, DW_AT_name("pin")
+    1085                      .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$25)
+    1086                      .dwattr $C$DW$62, DW_AT_location[DW_OP_reg0]
+    1087              
+    1088              
+    1089              ;***************************************************************
+    1090              ;* FNAME: GPIO_getPadConfig             FR SIZE:   0           *
+    1091              ;*                                                             *
+    1092              ;* FUNCTION ENVIRONMENT                                        *
+    1093              ;*                                                             *
+    1094              ;* FUNCTION PROPERTIES                                         *
+    1095              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1096              ;***************************************************************
+    1097              
+    1098              ||GPIO_getPadConfig||:
+    1099              ;* AR6   assigned to pin
+    1100              $C$DW$63        .dwtag  DW_TAG_variable
+    1101                      .dwattr $C$DW$63, DW_AT_name("pin")
+    1102                      .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$64)
+    1103                      .dwattr $C$DW$63, DW_AT_location[DW_OP_reg16]
+    1104              
+    1105              ;* AR4   assigned to gpioBaseAddr
+    1106              $C$DW$64        .dwtag  DW_TAG_variable
+    1107                      .dwattr $C$DW$64, DW_AT_name("gpioBaseAddr")
+    1108                      .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$63)
+    1109                      .dwattr $C$DW$64, DW_AT_location[DW_OP_reg12]
+    1110              
+    1111              ;* AR7   assigned to pinMask
+    1112              $C$DW$65        .dwtag  DW_TAG_variable
+    1113                      .dwattr $C$DW$65, DW_AT_name("pinMask")
+    1114                      .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$25)
+    1115                      .dwattr $C$DW$65, DW_AT_location[DW_OP_reg18]
+    1116              
+    1117              ;* AR6   assigned to pinTypeRes
+    1118              $C$DW$66        .dwtag  DW_TAG_variable
+    1119                      .dwattr $C$DW$66, DW_AT_name("pinTypeRes")
+    1120                      .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$25)
+    1121                      .dwattr $C$DW$66, DW_AT_location[DW_OP_reg16]
+    1122              
+    1123                      .dwcfi  cfa_offset, -2
+    1124                      .dwcfi  save_reg_to_mem, 26, 0
+    1125 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |235| 
+    1126                      .dwpsn  file "../src_driver/gpio.c",line 245,column 5,is_stmt,isa 0
+    1127 00000001 18A9          AND       AL,#65504             ; [CPU_ALU] |245| 
+         00000002 FFE0 
+    1128 00000003 FF30          LSL       ACC,1                 ; [CPU_ALU] |245| 
+    1129 00000004 FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |245| 
+         00000005 001F 
+    1130 00000006 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |245| 
+    1131 00000007 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |245| 
+    1132                      .dwpsn  file "../src_driver/gpio.c",line 247,column 5,is_stmt,isa 0
+    1133 00000008 92A6          MOV       AL,AR6                ; [CPU_ALU] |247| 
+    1134 00000009 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |247| 
+    1135 0000000a 2DA9          MOV       T,AL                  ; [CPU_ALU] |247| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   22
+
+    1136 0000000b 0201          MOVB      ACC,#1                ; [CPU_ALU] |247| 
+    1137                      .dwpsn  file "../src_driver/gpio.c",line 254,column 5,is_stmt,isa 0
+    1138 0000000c DD12          ADDB      XAR5,#18              ; [CPU_ALU] |254| 
+    1139                      .dwpsn  file "../src_driver/gpio.c",line 247,column 5,is_stmt,isa 0
+    1140 0000000d 563B          LSLL      ACC,T                 ; [CPU_ALU] |247| 
+    1141 0000000e 1EA7          MOVL      XAR7,ACC              ; [CPU_FPU] |247| 
+    1142                      .dwpsn  file "../src_driver/gpio.c",line 254,column 5,is_stmt,isa 0
+    1143 0000000f CEC5          AND       AL,*+XAR5[0]          ; [CPU_ALU] |254| 
+    1144 00000010 CFCD          AND       AH,*+XAR5[1]          ; [CPU_ALU] |254| 
+    1145 00000011 FF58          TEST      ACC                   ; [CPU_ALU] |254| 
+    1146 00000012 6003          B         ||$C$L18||,NEQ        ; [CPU_ALU] |254| 
+    1147                      ; branchcc occurs ; [] |254| 
+    1148                      .dwpsn  file "../src_driver/gpio.c",line 249,column 5,is_stmt,isa 0
+    1149 00000013 0200          MOVB      ACC,#0                ; [CPU_ALU] |249| 
+    1150 00000014 6F02          B         ||$C$L19||,UNC        ; [CPU_ALU] 
+    1151                      ; branch occurs ; [] 
+    1152 00000015       ||$C$L18||:    
+    1153                      .dwpsn  file "../src_driver/gpio.c",line 256,column 9,is_stmt,isa 0
+    1154 00000015 0204          MOVB      ACC,#4                ; [CPU_ALU] |256| 
+    1155 00000016       ||$C$L19||:    
+    1156                      .dwpsn  file "../src_driver/gpio.c",line 262,column 5,is_stmt,isa 0
+    1157 00000016 83A4          MOVL      XAR5,XAR4             ; [CPU_ALU] |262| 
+    1158                      .dwpsn  file "../src_driver/gpio.c",line 256,column 9,is_stmt,isa 0
+    1159 00000017 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |256| 
+    1160                      .dwpsn  file "../src_driver/gpio.c",line 262,column 5,is_stmt,isa 0
+    1161 00000018 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] |262| 
+    1162 00000019 DD0C          ADDB      XAR5,#12              ; [CPU_ALU] |262| 
+    1163 0000001a CEC5          AND       AL,*+XAR5[0]          ; [CPU_ALU] |262| 
+    1164 0000001b CFCD          AND       AH,*+XAR5[1]          ; [CPU_ALU] |262| 
+    1165 0000001c FF58          TEST      ACC                   ; [CPU_ALU] |262| 
+    1166 0000001d 6004          B         ||$C$L20||,NEQ        ; [CPU_ALU] |262| 
+    1167                      ; branchcc occurs ; [] |262| 
+    1168 0000001e 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1169                      .dwpsn  file "../src_driver/gpio.c",line 264,column 9,is_stmt,isa 0
+    1170 0000001f 5001          ORB       AL,#0x01              ; [CPU_ALU] |264| 
+    1171 00000020 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |264| 
+    1172 00000021       ||$C$L20||:    
+    1173                      .dwpsn  file "../src_driver/gpio.c",line 270,column 5,is_stmt,isa 0
+    1174 00000021 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] |270| 
+    1175 00000022 DC10          ADDB      XAR4,#16              ; [CPU_ALU] |270| 
+    1176 00000023 CEC4          AND       AL,*+XAR4[0]          ; [CPU_ALU] |270| 
+    1177 00000024 CFCC          AND       AH,*+XAR4[1]          ; [CPU_ALU] |270| 
+    1178 00000025 FF58          TEST      ACC                   ; [CPU_ALU] |270| 
+    1179 00000026 6104          B         ||$C$L21||,EQ         ; [CPU_ALU] |270| 
+    1180                      ; branchcc occurs ; [] |270| 
+    1181 00000027 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1182                      .dwpsn  file "../src_driver/gpio.c",line 272,column 9,is_stmt,isa 0
+    1183 00000028 5002          ORB       AL,#0x02              ; [CPU_ALU] |272| 
+    1184 00000029 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |272| 
+    1185 0000002a       ||$C$L21||:    
+    1186 0000002a 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1187              $C$DW$67        .dwtag  DW_TAG_TI_branch
+    1188                      .dwattr $C$DW$67, DW_AT_low_pc(0x00)
+    1189                      .dwattr $C$DW$67, DW_AT_TI_return
+    1190              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   23
+
+    1191 0000002b 0006          LRETR     ; [CPU_ALU] 
+    1192                      ; return occurs ; [] 
+    1193                      .dwattr $C$DW$61, DW_AT_TI_end_file("../src_driver/gpio.c")
+    1194                      .dwattr $C$DW$61, DW_AT_TI_end_line(0x114)
+    1195                      .dwattr $C$DW$61, DW_AT_TI_end_column(0x01)
+    1196                      .dwendentry
+    1197                      .dwendtag $C$DW$61
+    1198              
+    1199 00000000               .sect   ".text:GPIO_getDirectionMode"
+    1200                      .clink
+    1201                      .global ||GPIO_getDirectionMode||
+    1202              
+    1203              $C$DW$68        .dwtag  DW_TAG_subprogram
+    1204                      .dwattr $C$DW$68, DW_AT_name("GPIO_getDirectionMode")
+    1205                      .dwattr $C$DW$68, DW_AT_low_pc(||GPIO_getDirectionMode||)
+    1206                      .dwattr $C$DW$68, DW_AT_high_pc(0x00)
+    1207                      .dwattr $C$DW$68, DW_AT_linkage_name("GPIO_getDirectionMode")
+    1208                      .dwattr $C$DW$68, DW_AT_external
+    1209                      .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$22)
+    1210                      .dwattr $C$DW$68, DW_AT_decl_file("../src_driver/gpio.c")
+    1211                      .dwattr $C$DW$68, DW_AT_decl_line(0x5e)
+    1212                      .dwattr $C$DW$68, DW_AT_decl_column(0x01)
+    1213                      .dwattr $C$DW$68, DW_AT_TI_max_frame_size(-2)
+    1214                      .dwpsn  file "../src_driver/gpio.c",line 95,column 1,is_stmt,address ||GPIO_getDirectionMode||,isa 0
+    1215              
+    1216                      .dwfde $C$DW$CIE, ||GPIO_getDirectionMode||
+    1217              $C$DW$69        .dwtag  DW_TAG_formal_parameter
+    1218                      .dwattr $C$DW$69, DW_AT_name("pin")
+    1219                      .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$25)
+    1220                      .dwattr $C$DW$69, DW_AT_location[DW_OP_reg0]
+    1221              
+    1222              
+    1223              ;***************************************************************
+    1224              ;* FNAME: GPIO_getDirectionMode         FR SIZE:   0           *
+    1225              ;*                                                             *
+    1226              ;* FUNCTION ENVIRONMENT                                        *
+    1227              ;*                                                             *
+    1228              ;* FUNCTION PROPERTIES                                         *
+    1229              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1230              ;***************************************************************
+    1231              
+    1232              ||GPIO_getDirectionMode||:
+    1233              ;* AR6   assigned to pin
+    1234              $C$DW$70        .dwtag  DW_TAG_variable
+    1235                      .dwattr $C$DW$70, DW_AT_name("pin")
+    1236                      .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$64)
+    1237                      .dwattr $C$DW$70, DW_AT_location[DW_OP_reg16]
+    1238              
+    1239                      .dwcfi  cfa_offset, -2
+    1240                      .dwcfi  save_reg_to_mem, 26, 0
+    1241 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |95| 
+    1242 00000001 2901          CLRC      SXM                   ; [CPU_ALU] 
+    1243                      .dwpsn  file "../src_driver/gpio.c",line 106,column 5,is_stmt,isa 0
+    1244 00000002 FF44          SFR       ACC,5                 ; [CPU_ALU] |106| 
+    1245 00000003 D00A          MOVB      XAR0,#10              ; [CPU_FPU] |106| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   24
+
+    1246 00000004 FF34          LSL       ACC,5                 ; [CPU_ALU] |106| 
+    1247 00000005 FF30          LSL       ACC,1                 ; [CPU_ALU] |106| 
+    1248 00000006 FF1A          ADD       ACC,#31 << 10         ; [CPU_ALU] |106| 
+         00000007 001F 
+    1249 00000008 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |106| 
+    1250 00000009 92A6          MOV       AL,AR6                ; [CPU_ALU] |106| 
+    1251 0000000a 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |106| 
+    1252 0000000b 2DA9          MOV       T,AL                  ; [CPU_ALU] |106| 
+    1253 0000000c 0694          MOVL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |106| 
+    1254 0000000d 5622          LSRL      ACC,T                 ; [CPU_ALU] |106| 
+    1255 0000000e 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |106| 
+    1256 0000000f 92A7          MOV       AL,AR7                ; [CPU_ALU] |106| 
+    1257 00000010 9001          ANDB      AL,#0x01              ; [CPU_ALU] |106| 
+    1258              $C$DW$71        .dwtag  DW_TAG_TI_branch
+    1259                      .dwattr $C$DW$71, DW_AT_low_pc(0x00)
+    1260                      .dwattr $C$DW$71, DW_AT_TI_return
+    1261              
+    1262 00000011 0006          LRETR     ; [CPU_FPU] 
+    1263                      ; return occurs ; [] 
+    1264                      .dwattr $C$DW$68, DW_AT_TI_end_file("../src_driver/gpio.c")
+    1265                      .dwattr $C$DW$68, DW_AT_TI_end_line(0x6d)
+    1266                      .dwattr $C$DW$68, DW_AT_TI_end_column(0x01)
+    1267                      .dwendentry
+    1268                      .dwendtag $C$DW$68
+    1269              
+    1270              
+    1271              ;***************************************************************
+    1272              ;* BUILD ATTRIBUTES                                            *
+    1273              ;***************************************************************
+    1274                      .battr "c28xabi", Tag_File, 1, Tag_float_args(0)
+    1275                      .battr "c28xabi", Tag_File, 1, Tag_double_args(0)
+    1276                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1277              
+    1278              ;***************************************************************
+    1279              ;* DWARF CIE ENTRIES                                           *
+    1280              ;***************************************************************
+    1281              
+    1282              $C$DW$CIE       .dwcie 26
+    1283                      .dwcfi  cfa_register, 20
+    1284                      .dwcfi  cfa_offset, 0
+    1285                      .dwcfi  same_value, 28
+    1286                      .dwcfi  same_value, 6
+    1287                      .dwcfi  same_value, 7
+    1288                      .dwcfi  same_value, 8
+    1289                      .dwcfi  same_value, 9
+    1290                      .dwcfi  same_value, 10
+    1291                      .dwcfi  same_value, 11
+    1292                      .dwcfi  same_value, 59
+    1293                      .dwcfi  same_value, 63
+    1294                      .dwcfi  same_value, 67
+    1295                      .dwcfi  same_value, 71
+    1296                      .dwendentry
+    1297                      .dwendtag $C$DW$CU
+    1298              
+    1299              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   25
+
+    1300              ;***************************************************************
+    1301              ;* TYPE INFORMATION                                            *
+    1302              ;***************************************************************
+    1303              
+    1304              $C$DW$TU$19     .dwtag  DW_TAG_type_unit
+    1305                      .dwmtype  $C$DW$T$19
+    1306              
+    1307              $C$DW$T$19      .dwtag  DW_TAG_enumeration_type
+    1308                      .dwattr $C$DW$T$19, DW_AT_byte_size(0x01)
+    1309              $C$DW$72        .dwtag  DW_TAG_enumerator
+    1310                      .dwattr $C$DW$72, DW_AT_name("XBAR_INPUT1")
+    1311                      .dwattr $C$DW$72, DW_AT_const_value(0x00)
+    1312                      .dwattr $C$DW$72, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1313                      .dwattr $C$DW$72, DW_AT_decl_line(0xcb)
+    1314                      .dwattr $C$DW$72, DW_AT_decl_column(0x05)
+    1315              
+    1316              $C$DW$73        .dwtag  DW_TAG_enumerator
+    1317                      .dwattr $C$DW$73, DW_AT_name("XBAR_INPUT2")
+    1318                      .dwattr $C$DW$73, DW_AT_const_value(0x01)
+    1319                      .dwattr $C$DW$73, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1320                      .dwattr $C$DW$73, DW_AT_decl_line(0xcc)
+    1321                      .dwattr $C$DW$73, DW_AT_decl_column(0x05)
+    1322              
+    1323              $C$DW$74        .dwtag  DW_TAG_enumerator
+    1324                      .dwattr $C$DW$74, DW_AT_name("XBAR_INPUT3")
+    1325                      .dwattr $C$DW$74, DW_AT_const_value(0x02)
+    1326                      .dwattr $C$DW$74, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1327                      .dwattr $C$DW$74, DW_AT_decl_line(0xcd)
+    1328                      .dwattr $C$DW$74, DW_AT_decl_column(0x05)
+    1329              
+    1330              $C$DW$75        .dwtag  DW_TAG_enumerator
+    1331                      .dwattr $C$DW$75, DW_AT_name("XBAR_INPUT4")
+    1332                      .dwattr $C$DW$75, DW_AT_const_value(0x03)
+    1333                      .dwattr $C$DW$75, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1334                      .dwattr $C$DW$75, DW_AT_decl_line(0xce)
+    1335                      .dwattr $C$DW$75, DW_AT_decl_column(0x05)
+    1336              
+    1337              $C$DW$76        .dwtag  DW_TAG_enumerator
+    1338                      .dwattr $C$DW$76, DW_AT_name("XBAR_INPUT5")
+    1339                      .dwattr $C$DW$76, DW_AT_const_value(0x04)
+    1340                      .dwattr $C$DW$76, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1341                      .dwattr $C$DW$76, DW_AT_decl_line(0xcf)
+    1342                      .dwattr $C$DW$76, DW_AT_decl_column(0x05)
+    1343              
+    1344              $C$DW$77        .dwtag  DW_TAG_enumerator
+    1345                      .dwattr $C$DW$77, DW_AT_name("XBAR_INPUT6")
+    1346                      .dwattr $C$DW$77, DW_AT_const_value(0x05)
+    1347                      .dwattr $C$DW$77, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1348                      .dwattr $C$DW$77, DW_AT_decl_line(0xd0)
+    1349                      .dwattr $C$DW$77, DW_AT_decl_column(0x05)
+    1350              
+    1351              $C$DW$78        .dwtag  DW_TAG_enumerator
+    1352                      .dwattr $C$DW$78, DW_AT_name("XBAR_INPUT7")
+    1353                      .dwattr $C$DW$78, DW_AT_const_value(0x06)
+    1354                      .dwattr $C$DW$78, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   26
+
+    1355                      .dwattr $C$DW$78, DW_AT_decl_line(0xd1)
+    1356                      .dwattr $C$DW$78, DW_AT_decl_column(0x05)
+    1357              
+    1358              $C$DW$79        .dwtag  DW_TAG_enumerator
+    1359                      .dwattr $C$DW$79, DW_AT_name("XBAR_INPUT8")
+    1360                      .dwattr $C$DW$79, DW_AT_const_value(0x07)
+    1361                      .dwattr $C$DW$79, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1362                      .dwattr $C$DW$79, DW_AT_decl_line(0xd2)
+    1363                      .dwattr $C$DW$79, DW_AT_decl_column(0x05)
+    1364              
+    1365              $C$DW$80        .dwtag  DW_TAG_enumerator
+    1366                      .dwattr $C$DW$80, DW_AT_name("XBAR_INPUT9")
+    1367                      .dwattr $C$DW$80, DW_AT_const_value(0x08)
+    1368                      .dwattr $C$DW$80, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1369                      .dwattr $C$DW$80, DW_AT_decl_line(0xd3)
+    1370                      .dwattr $C$DW$80, DW_AT_decl_column(0x05)
+    1371              
+    1372              $C$DW$81        .dwtag  DW_TAG_enumerator
+    1373                      .dwattr $C$DW$81, DW_AT_name("XBAR_INPUT10")
+    1374                      .dwattr $C$DW$81, DW_AT_const_value(0x09)
+    1375                      .dwattr $C$DW$81, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1376                      .dwattr $C$DW$81, DW_AT_decl_line(0xd4)
+    1377                      .dwattr $C$DW$81, DW_AT_decl_column(0x05)
+    1378              
+    1379              $C$DW$82        .dwtag  DW_TAG_enumerator
+    1380                      .dwattr $C$DW$82, DW_AT_name("XBAR_INPUT11")
+    1381                      .dwattr $C$DW$82, DW_AT_const_value(0x0a)
+    1382                      .dwattr $C$DW$82, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1383                      .dwattr $C$DW$82, DW_AT_decl_line(0xd5)
+    1384                      .dwattr $C$DW$82, DW_AT_decl_column(0x05)
+    1385              
+    1386              $C$DW$83        .dwtag  DW_TAG_enumerator
+    1387                      .dwattr $C$DW$83, DW_AT_name("XBAR_INPUT12")
+    1388                      .dwattr $C$DW$83, DW_AT_const_value(0x0b)
+    1389                      .dwattr $C$DW$83, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1390                      .dwattr $C$DW$83, DW_AT_decl_line(0xd6)
+    1391                      .dwattr $C$DW$83, DW_AT_decl_column(0x05)
+    1392              
+    1393              $C$DW$84        .dwtag  DW_TAG_enumerator
+    1394                      .dwattr $C$DW$84, DW_AT_name("XBAR_INPUT13")
+    1395                      .dwattr $C$DW$84, DW_AT_const_value(0x0c)
+    1396                      .dwattr $C$DW$84, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1397                      .dwattr $C$DW$84, DW_AT_decl_line(0xd7)
+    1398                      .dwattr $C$DW$84, DW_AT_decl_column(0x05)
+    1399              
+    1400              $C$DW$85        .dwtag  DW_TAG_enumerator
+    1401                      .dwattr $C$DW$85, DW_AT_name("XBAR_INPUT14")
+    1402                      .dwattr $C$DW$85, DW_AT_const_value(0x0d)
+    1403                      .dwattr $C$DW$85, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driver
+    1404                      .dwattr $C$DW$85, DW_AT_decl_line(0xd8)
+    1405                      .dwattr $C$DW$85, DW_AT_decl_column(0x05)
+    1406              
+    1407                      .dwattr $C$DW$T$19, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driv
+    1408                      .dwattr $C$DW$T$19, DW_AT_decl_line(0xca)
+    1409                      .dwattr $C$DW$T$19, DW_AT_decl_column(0x01)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   27
+
+    1410                      .dwendtag $C$DW$T$19
+    1411              
+    1412                      .dwendtag $C$DW$TU$19
+    1413              
+    1414              
+    1415              $C$DW$TU$20     .dwtag  DW_TAG_type_unit
+    1416                      .dwmtype  $C$DW$T$20
+    1417              $C$DW$T$20      .dwtag  DW_TAG_typedef
+    1418                      .dwattr $C$DW$T$20, DW_AT_name("XBAR_InputNum")
+    1419                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+    1420                      .dwattr $C$DW$T$20, DW_AT_decl_file("D:\TI\c2000\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driv
+    1421                      .dwattr $C$DW$T$20, DW_AT_decl_line(0xd9)
+    1422                      .dwattr $C$DW$T$20, DW_AT_decl_column(0x03)
+    1423              
+    1424                      .dwendtag $C$DW$TU$20
+    1425              
+    1426              
+    1427              $C$DW$TU$21     .dwtag  DW_TAG_type_unit
+    1428                      .dwmtype  $C$DW$T$21
+    1429              
+    1430              $C$DW$T$21      .dwtag  DW_TAG_enumeration_type
+    1431                      .dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
+    1432              $C$DW$86        .dwtag  DW_TAG_enumerator
+    1433                      .dwattr $C$DW$86, DW_AT_name("GPIO_DIR_MODE_IN")
+    1434                      .dwattr $C$DW$86, DW_AT_const_value(0x00)
+    1435                      .dwattr $C$DW$86, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1436                      .dwattr $C$DW$86, DW_AT_decl_line(0x7e)
+    1437                      .dwattr $C$DW$86, DW_AT_decl_column(0x05)
+    1438              
+    1439              $C$DW$87        .dwtag  DW_TAG_enumerator
+    1440                      .dwattr $C$DW$87, DW_AT_name("GPIO_DIR_MODE_OUT")
+    1441                      .dwattr $C$DW$87, DW_AT_const_value(0x01)
+    1442                      .dwattr $C$DW$87, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1443                      .dwattr $C$DW$87, DW_AT_decl_line(0x7f)
+    1444                      .dwattr $C$DW$87, DW_AT_decl_column(0x05)
+    1445              
+    1446                      .dwattr $C$DW$T$21, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1447                      .dwattr $C$DW$T$21, DW_AT_decl_line(0x7d)
+    1448                      .dwattr $C$DW$T$21, DW_AT_decl_column(0x01)
+    1449                      .dwendtag $C$DW$T$21
+    1450              
+    1451                      .dwendtag $C$DW$TU$21
+    1452              
+    1453              
+    1454              $C$DW$TU$22     .dwtag  DW_TAG_type_unit
+    1455                      .dwmtype  $C$DW$T$22
+    1456              $C$DW$T$22      .dwtag  DW_TAG_typedef
+    1457                      .dwattr $C$DW$T$22, DW_AT_name("GPIO_Direction")
+    1458                      .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+    1459                      .dwattr $C$DW$T$22, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1460                      .dwattr $C$DW$T$22, DW_AT_decl_line(0x80)
+    1461                      .dwattr $C$DW$T$22, DW_AT_decl_column(0x03)
+    1462              
+    1463                      .dwendtag $C$DW$TU$22
+    1464              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   28
+
+    1465              
+    1466              $C$DW$TU$23     .dwtag  DW_TAG_type_unit
+    1467                      .dwmtype  $C$DW$T$23
+    1468              $C$DW$88        .dwtag  DW_TAG_TI_far_type
+    1469                      .dwattr $C$DW$88, DW_AT_type(*$C$DW$T$22)
+    1470              
+    1471              $C$DW$T$23      .dwtag  DW_TAG_const_type
+    1472                      .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$88)
+    1473              
+    1474                      .dwendtag $C$DW$TU$23
+    1475              
+    1476              
+    1477              $C$DW$TU$28     .dwtag  DW_TAG_type_unit
+    1478                      .dwmtype  $C$DW$T$28
+    1479              
+    1480              $C$DW$T$28      .dwtag  DW_TAG_enumeration_type
+    1481                      .dwattr $C$DW$T$28, DW_AT_byte_size(0x01)
+    1482              $C$DW$89        .dwtag  DW_TAG_enumerator
+    1483                      .dwattr $C$DW$89, DW_AT_name("GPIO_INT_XINT1")
+    1484                      .dwattr $C$DW$89, DW_AT_const_value(0x00)
+    1485                      .dwattr $C$DW$89, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1486                      .dwattr $C$DW$89, DW_AT_decl_line(0xcf)
+    1487                      .dwattr $C$DW$89, DW_AT_decl_column(0x05)
+    1488              
+    1489              $C$DW$90        .dwtag  DW_TAG_enumerator
+    1490                      .dwattr $C$DW$90, DW_AT_name("GPIO_INT_XINT2")
+    1491                      .dwattr $C$DW$90, DW_AT_const_value(0x01)
+    1492                      .dwattr $C$DW$90, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1493                      .dwattr $C$DW$90, DW_AT_decl_line(0xd0)
+    1494                      .dwattr $C$DW$90, DW_AT_decl_column(0x05)
+    1495              
+    1496              $C$DW$91        .dwtag  DW_TAG_enumerator
+    1497                      .dwattr $C$DW$91, DW_AT_name("GPIO_INT_XINT3")
+    1498                      .dwattr $C$DW$91, DW_AT_const_value(0x02)
+    1499                      .dwattr $C$DW$91, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1500                      .dwattr $C$DW$91, DW_AT_decl_line(0xd1)
+    1501                      .dwattr $C$DW$91, DW_AT_decl_column(0x05)
+    1502              
+    1503              $C$DW$92        .dwtag  DW_TAG_enumerator
+    1504                      .dwattr $C$DW$92, DW_AT_name("GPIO_INT_XINT4")
+    1505                      .dwattr $C$DW$92, DW_AT_const_value(0x03)
+    1506                      .dwattr $C$DW$92, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1507                      .dwattr $C$DW$92, DW_AT_decl_line(0xd2)
+    1508                      .dwattr $C$DW$92, DW_AT_decl_column(0x05)
+    1509              
+    1510              $C$DW$93        .dwtag  DW_TAG_enumerator
+    1511                      .dwattr $C$DW$93, DW_AT_name("GPIO_INT_XINT5")
+    1512                      .dwattr $C$DW$93, DW_AT_const_value(0x04)
+    1513                      .dwattr $C$DW$93, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1514                      .dwattr $C$DW$93, DW_AT_decl_line(0xd3)
+    1515                      .dwattr $C$DW$93, DW_AT_decl_column(0x05)
+    1516              
+    1517                      .dwattr $C$DW$T$28, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1518                      .dwattr $C$DW$T$28, DW_AT_decl_line(0xce)
+    1519                      .dwattr $C$DW$T$28, DW_AT_decl_column(0x01)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   29
+
+    1520                      .dwendtag $C$DW$T$28
+    1521              
+    1522                      .dwendtag $C$DW$TU$28
+    1523              
+    1524              
+    1525              $C$DW$TU$29     .dwtag  DW_TAG_type_unit
+    1526                      .dwmtype  $C$DW$T$29
+    1527              $C$DW$T$29      .dwtag  DW_TAG_typedef
+    1528                      .dwattr $C$DW$T$29, DW_AT_name("GPIO_ExternalIntNum")
+    1529                      .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$28)
+    1530                      .dwattr $C$DW$T$29, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1531                      .dwattr $C$DW$T$29, DW_AT_decl_line(0xd4)
+    1532                      .dwattr $C$DW$T$29, DW_AT_decl_column(0x03)
+    1533              
+    1534                      .dwendtag $C$DW$TU$29
+    1535              
+    1536              
+    1537              $C$DW$TU$30     .dwtag  DW_TAG_type_unit
+    1538                      .dwmtype  $C$DW$T$30
+    1539              $C$DW$94        .dwtag  DW_TAG_TI_far_type
+    1540                      .dwattr $C$DW$94, DW_AT_type(*$C$DW$T$29)
+    1541              
+    1542              $C$DW$T$30      .dwtag  DW_TAG_const_type
+    1543                      .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$94)
+    1544              
+    1545                      .dwendtag $C$DW$TU$30
+    1546              
+    1547              
+    1548              $C$DW$TU$31     .dwtag  DW_TAG_type_unit
+    1549                      .dwmtype  $C$DW$T$31
+    1550              
+    1551              $C$DW$T$31      .dwtag  DW_TAG_enumeration_type
+    1552                      .dwattr $C$DW$T$31, DW_AT_byte_size(0x01)
+    1553              $C$DW$95        .dwtag  DW_TAG_enumerator
+    1554                      .dwattr $C$DW$95, DW_AT_name("GPIO_QUAL_SYNC")
+    1555                      .dwattr $C$DW$95, DW_AT_const_value(0x00)
+    1556                      .dwattr $C$DW$95, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1557                      .dwattr $C$DW$95, DW_AT_decl_line(0x97)
+    1558                      .dwattr $C$DW$95, DW_AT_decl_column(0x05)
+    1559              
+    1560              $C$DW$96        .dwtag  DW_TAG_enumerator
+    1561                      .dwattr $C$DW$96, DW_AT_name("GPIO_QUAL_3SAMPLE")
+    1562                      .dwattr $C$DW$96, DW_AT_const_value(0x01)
+    1563                      .dwattr $C$DW$96, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1564                      .dwattr $C$DW$96, DW_AT_decl_line(0x98)
+    1565                      .dwattr $C$DW$96, DW_AT_decl_column(0x05)
+    1566              
+    1567              $C$DW$97        .dwtag  DW_TAG_enumerator
+    1568                      .dwattr $C$DW$97, DW_AT_name("GPIO_QUAL_6SAMPLE")
+    1569                      .dwattr $C$DW$97, DW_AT_const_value(0x02)
+    1570                      .dwattr $C$DW$97, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1571                      .dwattr $C$DW$97, DW_AT_decl_line(0x99)
+    1572                      .dwattr $C$DW$97, DW_AT_decl_column(0x05)
+    1573              
+    1574              $C$DW$98        .dwtag  DW_TAG_enumerator
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   30
+
+    1575                      .dwattr $C$DW$98, DW_AT_name("GPIO_QUAL_ASYNC")
+    1576                      .dwattr $C$DW$98, DW_AT_const_value(0x03)
+    1577                      .dwattr $C$DW$98, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1578                      .dwattr $C$DW$98, DW_AT_decl_line(0x9a)
+    1579                      .dwattr $C$DW$98, DW_AT_decl_column(0x05)
+    1580              
+    1581                      .dwattr $C$DW$T$31, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1582                      .dwattr $C$DW$T$31, DW_AT_decl_line(0x96)
+    1583                      .dwattr $C$DW$T$31, DW_AT_decl_column(0x01)
+    1584                      .dwendtag $C$DW$T$31
+    1585              
+    1586                      .dwendtag $C$DW$TU$31
+    1587              
+    1588              
+    1589              $C$DW$TU$32     .dwtag  DW_TAG_type_unit
+    1590                      .dwmtype  $C$DW$T$32
+    1591              $C$DW$T$32      .dwtag  DW_TAG_typedef
+    1592                      .dwattr $C$DW$T$32, DW_AT_name("GPIO_QualificationMode")
+    1593                      .dwattr $C$DW$T$32, DW_AT_type(*$C$DW$T$31)
+    1594                      .dwattr $C$DW$T$32, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1595                      .dwattr $C$DW$T$32, DW_AT_decl_line(0x9b)
+    1596                      .dwattr $C$DW$T$32, DW_AT_decl_column(0x03)
+    1597              
+    1598                      .dwendtag $C$DW$TU$32
+    1599              
+    1600              
+    1601              $C$DW$TU$33     .dwtag  DW_TAG_type_unit
+    1602                      .dwmtype  $C$DW$T$33
+    1603              $C$DW$99        .dwtag  DW_TAG_TI_far_type
+    1604                      .dwattr $C$DW$99, DW_AT_type(*$C$DW$T$32)
+    1605              
+    1606              $C$DW$T$33      .dwtag  DW_TAG_const_type
+    1607                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$99)
+    1608              
+    1609                      .dwendtag $C$DW$TU$33
+    1610              
+    1611              
+    1612              $C$DW$TU$36     .dwtag  DW_TAG_type_unit
+    1613                      .dwmtype  $C$DW$T$36
+    1614              
+    1615              $C$DW$T$36      .dwtag  DW_TAG_enumeration_type
+    1616                      .dwattr $C$DW$T$36, DW_AT_byte_size(0x01)
+    1617              $C$DW$100       .dwtag  DW_TAG_enumerator
+    1618                      .dwattr $C$DW$100, DW_AT_name("GPIO_CORE_CPU1")
+    1619                      .dwattr $C$DW$100, DW_AT_const_value(0x00)
+    1620                      .dwattr $C$DW$100, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/drive
+    1621                      .dwattr $C$DW$100, DW_AT_decl_line(0xb0)
+    1622                      .dwattr $C$DW$100, DW_AT_decl_column(0x05)
+    1623              
+    1624              $C$DW$101       .dwtag  DW_TAG_enumerator
+    1625                      .dwattr $C$DW$101, DW_AT_name("GPIO_CORE_CPU1_CLA1")
+    1626                      .dwattr $C$DW$101, DW_AT_const_value(0x01)
+    1627                      .dwattr $C$DW$101, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/drive
+    1628                      .dwattr $C$DW$101, DW_AT_decl_line(0xb1)
+    1629                      .dwattr $C$DW$101, DW_AT_decl_column(0x05)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   31
+
+    1630              
+    1631              $C$DW$102       .dwtag  DW_TAG_enumerator
+    1632                      .dwattr $C$DW$102, DW_AT_name("GPIO_CORE_CPU2")
+    1633                      .dwattr $C$DW$102, DW_AT_const_value(0x02)
+    1634                      .dwattr $C$DW$102, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/drive
+    1635                      .dwattr $C$DW$102, DW_AT_decl_line(0xb2)
+    1636                      .dwattr $C$DW$102, DW_AT_decl_column(0x05)
+    1637              
+    1638              $C$DW$103       .dwtag  DW_TAG_enumerator
+    1639                      .dwattr $C$DW$103, DW_AT_name("GPIO_CORE_CPU2_CLA1")
+    1640                      .dwattr $C$DW$103, DW_AT_const_value(0x03)
+    1641                      .dwattr $C$DW$103, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/drive
+    1642                      .dwattr $C$DW$103, DW_AT_decl_line(0xb3)
+    1643                      .dwattr $C$DW$103, DW_AT_decl_column(0x05)
+    1644              
+    1645                      .dwattr $C$DW$T$36, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1646                      .dwattr $C$DW$T$36, DW_AT_decl_line(0xaf)
+    1647                      .dwattr $C$DW$T$36, DW_AT_decl_column(0x01)
+    1648                      .dwendtag $C$DW$T$36
+    1649              
+    1650                      .dwendtag $C$DW$TU$36
+    1651              
+    1652              
+    1653              $C$DW$TU$37     .dwtag  DW_TAG_type_unit
+    1654                      .dwmtype  $C$DW$T$37
+    1655              $C$DW$T$37      .dwtag  DW_TAG_typedef
+    1656                      .dwattr $C$DW$T$37, DW_AT_name("GPIO_CoreSelect")
+    1657                      .dwattr $C$DW$T$37, DW_AT_type(*$C$DW$T$36)
+    1658                      .dwattr $C$DW$T$37, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1659                      .dwattr $C$DW$T$37, DW_AT_decl_line(0xb4)
+    1660                      .dwattr $C$DW$T$37, DW_AT_decl_column(0x03)
+    1661              
+    1662                      .dwendtag $C$DW$TU$37
+    1663              
+    1664              
+    1665              $C$DW$TU$38     .dwtag  DW_TAG_type_unit
+    1666                      .dwmtype  $C$DW$T$38
+    1667              $C$DW$104       .dwtag  DW_TAG_TI_far_type
+    1668                      .dwattr $C$DW$104, DW_AT_type(*$C$DW$T$37)
+    1669              
+    1670              $C$DW$T$38      .dwtag  DW_TAG_const_type
+    1671                      .dwattr $C$DW$T$38, DW_AT_type(*$C$DW$104)
+    1672              
+    1673                      .dwendtag $C$DW$TU$38
+    1674              
+    1675              
+    1676              $C$DW$TU$39     .dwtag  DW_TAG_type_unit
+    1677                      .dwmtype  $C$DW$T$39
+    1678              
+    1679              $C$DW$T$39      .dwtag  DW_TAG_enumeration_type
+    1680                      .dwattr $C$DW$T$39, DW_AT_byte_size(0x01)
+    1681              $C$DW$105       .dwtag  DW_TAG_enumerator
+    1682                      .dwattr $C$DW$105, DW_AT_name("GPIO_ANALOG_DISABLED")
+    1683                      .dwattr $C$DW$105, DW_AT_const_value(0x00)
+    1684                      .dwattr $C$DW$105, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/drive
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   32
+
+    1685                      .dwattr $C$DW$105, DW_AT_decl_line(0xa4)
+    1686                      .dwattr $C$DW$105, DW_AT_decl_column(0x05)
+    1687              
+    1688              $C$DW$106       .dwtag  DW_TAG_enumerator
+    1689                      .dwattr $C$DW$106, DW_AT_name("GPIO_ANALOG_ENABLED")
+    1690                      .dwattr $C$DW$106, DW_AT_const_value(0x01)
+    1691                      .dwattr $C$DW$106, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/drive
+    1692                      .dwattr $C$DW$106, DW_AT_decl_line(0xa5)
+    1693                      .dwattr $C$DW$106, DW_AT_decl_column(0x05)
+    1694              
+    1695                      .dwattr $C$DW$T$39, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1696                      .dwattr $C$DW$T$39, DW_AT_decl_line(0xa3)
+    1697                      .dwattr $C$DW$T$39, DW_AT_decl_column(0x01)
+    1698                      .dwendtag $C$DW$T$39
+    1699              
+    1700                      .dwendtag $C$DW$TU$39
+    1701              
+    1702              
+    1703              $C$DW$TU$40     .dwtag  DW_TAG_type_unit
+    1704                      .dwmtype  $C$DW$T$40
+    1705              $C$DW$T$40      .dwtag  DW_TAG_typedef
+    1706                      .dwattr $C$DW$T$40, DW_AT_name("GPIO_AnalogMode")
+    1707                      .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$39)
+    1708                      .dwattr $C$DW$T$40, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1709                      .dwattr $C$DW$T$40, DW_AT_decl_line(0xa6)
+    1710                      .dwattr $C$DW$T$40, DW_AT_decl_column(0x03)
+    1711              
+    1712                      .dwendtag $C$DW$TU$40
+    1713              
+    1714              
+    1715              $C$DW$TU$41     .dwtag  DW_TAG_type_unit
+    1716                      .dwmtype  $C$DW$T$41
+    1717              $C$DW$107       .dwtag  DW_TAG_TI_far_type
+    1718                      .dwattr $C$DW$107, DW_AT_type(*$C$DW$T$40)
+    1719              
+    1720              $C$DW$T$41      .dwtag  DW_TAG_const_type
+    1721                      .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$107)
+    1722              
+    1723                      .dwendtag $C$DW$TU$41
+    1724              
+    1725              
+    1726              $C$DW$TU$2      .dwtag  DW_TAG_type_unit
+    1727                      .dwmtype  $C$DW$T$2
+    1728              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1729                      .dwattr $C$DW$T$2, DW_AT_name("void")
+    1730              
+    1731                      .dwendtag $C$DW$TU$2
+    1732              
+    1733              
+    1734              $C$DW$TU$4      .dwtag  DW_TAG_type_unit
+    1735                      .dwmtype  $C$DW$T$4
+    1736              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1737                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1738                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1739                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   33
+
+    1740              
+    1741                      .dwendtag $C$DW$TU$4
+    1742              
+    1743              
+    1744              $C$DW$TU$5      .dwtag  DW_TAG_type_unit
+    1745                      .dwmtype  $C$DW$T$5
+    1746              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1747                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1748                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1749                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1750              
+    1751                      .dwendtag $C$DW$TU$5
+    1752              
+    1753              
+    1754              $C$DW$TU$6      .dwtag  DW_TAG_type_unit
+    1755                      .dwmtype  $C$DW$T$6
+    1756              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1757                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1758                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1759                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1760              
+    1761                      .dwendtag $C$DW$TU$6
+    1762              
+    1763              
+    1764              $C$DW$TU$7      .dwtag  DW_TAG_type_unit
+    1765                      .dwmtype  $C$DW$T$7
+    1766              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1767                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1768                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1769                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+    1770              
+    1771                      .dwendtag $C$DW$TU$7
+    1772              
+    1773              
+    1774              $C$DW$TU$8      .dwtag  DW_TAG_type_unit
+    1775                      .dwmtype  $C$DW$T$8
+    1776              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1777                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1778                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    1779                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    1780              
+    1781                      .dwendtag $C$DW$TU$8
+    1782              
+    1783              
+    1784              $C$DW$TU$9      .dwtag  DW_TAG_type_unit
+    1785                      .dwmtype  $C$DW$T$9
+    1786              $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1787                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1788                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1789                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    1790              
+    1791                      .dwendtag $C$DW$TU$9
+    1792              
+    1793              
+    1794              $C$DW$TU$10     .dwtag  DW_TAG_type_unit
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   34
+
+    1795                      .dwmtype  $C$DW$T$10
+    1796              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1797                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1798                      .dwattr $C$DW$T$10, DW_AT_name("int")
+    1799                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    1800              
+    1801                      .dwendtag $C$DW$TU$10
+    1802              
+    1803              
+    1804              $C$DW$TU$11     .dwtag  DW_TAG_type_unit
+    1805                      .dwmtype  $C$DW$T$11
+    1806              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1807                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1808                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1809                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+    1810              
+    1811                      .dwendtag $C$DW$TU$11
+    1812              
+    1813              
+    1814              $C$DW$TU$42     .dwtag  DW_TAG_type_unit
+    1815                      .dwmtype  $C$DW$T$42
+    1816              $C$DW$T$42      .dwtag  DW_TAG_typedef
+    1817                      .dwattr $C$DW$T$42, DW_AT_name("__uint16_t")
+    1818                      .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$11)
+    1819                      .dwattr $C$DW$T$42, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine
+    1820                      .dwattr $C$DW$T$42, DW_AT_decl_line(0x41)
+    1821                      .dwattr $C$DW$T$42, DW_AT_decl_column(0x1c)
+    1822              
+    1823                      .dwendtag $C$DW$TU$42
+    1824              
+    1825              
+    1826              $C$DW$TU$43     .dwtag  DW_TAG_type_unit
+    1827                      .dwmtype  $C$DW$T$43
+    1828              $C$DW$T$43      .dwtag  DW_TAG_typedef
+    1829                      .dwattr $C$DW$T$43, DW_AT_name("uint16_t")
+    1830                      .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$42)
+    1831                      .dwattr $C$DW$T$43, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_st
+    1832                      .dwattr $C$DW$T$43, DW_AT_decl_line(0x41)
+    1833                      .dwattr $C$DW$T$43, DW_AT_decl_column(0x15)
+    1834              
+    1835                      .dwendtag $C$DW$TU$43
+    1836              
+    1837              
+    1838              $C$DW$TU$12     .dwtag  DW_TAG_type_unit
+    1839                      .dwmtype  $C$DW$T$12
+    1840              $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1841                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1842                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    1843                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+    1844              
+    1845                      .dwendtag $C$DW$TU$12
+    1846              
+    1847              
+    1848              $C$DW$TU$13     .dwtag  DW_TAG_type_unit
+    1849                      .dwmtype  $C$DW$T$13
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   35
+
+    1850              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1851                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1852                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1853                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+    1854              
+    1855                      .dwendtag $C$DW$TU$13
+    1856              
+    1857              
+    1858              $C$DW$TU$24     .dwtag  DW_TAG_type_unit
+    1859                      .dwmtype  $C$DW$T$24
+    1860              $C$DW$T$24      .dwtag  DW_TAG_typedef
+    1861                      .dwattr $C$DW$T$24, DW_AT_name("__uint32_t")
+    1862                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$13)
+    1863                      .dwattr $C$DW$T$24, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine
+    1864                      .dwattr $C$DW$T$24, DW_AT_decl_line(0x43)
+    1865                      .dwattr $C$DW$T$24, DW_AT_decl_column(0x1c)
+    1866              
+    1867                      .dwendtag $C$DW$TU$24
+    1868              
+    1869              
+    1870              $C$DW$TU$25     .dwtag  DW_TAG_type_unit
+    1871                      .dwmtype  $C$DW$T$25
+    1872              $C$DW$T$25      .dwtag  DW_TAG_typedef
+    1873                      .dwattr $C$DW$T$25, DW_AT_name("uint32_t")
+    1874                      .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$24)
+    1875                      .dwattr $C$DW$T$25, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_st
+    1876                      .dwattr $C$DW$T$25, DW_AT_decl_line(0x46)
+    1877                      .dwattr $C$DW$T$25, DW_AT_decl_column(0x15)
+    1878              
+    1879                      .dwendtag $C$DW$TU$25
+    1880              
+    1881              
+    1882              $C$DW$TU$62     .dwtag  DW_TAG_type_unit
+    1883                      .dwmtype  $C$DW$T$62
+    1884              $C$DW$108       .dwtag  DW_TAG_TI_far_type
+    1885                      .dwattr $C$DW$108, DW_AT_type(*$C$DW$T$25)
+    1886              
+    1887              $C$DW$T$62      .dwtag  DW_TAG_volatile_type
+    1888                      .dwattr $C$DW$T$62, DW_AT_type(*$C$DW$108)
+    1889              
+    1890                      .dwendtag $C$DW$TU$62
+    1891              
+    1892              
+    1893              $C$DW$TU$63     .dwtag  DW_TAG_type_unit
+    1894                      .dwmtype  $C$DW$T$63
+    1895              $C$DW$T$63      .dwtag  DW_TAG_pointer_type
+    1896                      .dwattr $C$DW$T$63, DW_AT_type(*$C$DW$T$62)
+    1897                      .dwattr $C$DW$T$63, DW_AT_address_class(0x20)
+    1898              
+    1899                      .dwendtag $C$DW$TU$63
+    1900              
+    1901              
+    1902              $C$DW$TU$64     .dwtag  DW_TAG_type_unit
+    1903                      .dwmtype  $C$DW$T$64
+    1904              $C$DW$109       .dwtag  DW_TAG_TI_far_type
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   36
+
+    1905                      .dwattr $C$DW$109, DW_AT_type(*$C$DW$T$25)
+    1906              
+    1907              $C$DW$T$64      .dwtag  DW_TAG_const_type
+    1908                      .dwattr $C$DW$T$64, DW_AT_type(*$C$DW$109)
+    1909              
+    1910                      .dwendtag $C$DW$TU$64
+    1911              
+    1912              
+    1913              $C$DW$TU$14     .dwtag  DW_TAG_type_unit
+    1914                      .dwmtype  $C$DW$T$14
+    1915              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1916                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1917                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1918                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    1919              
+    1920                      .dwendtag $C$DW$TU$14
+    1921              
+    1922              
+    1923              $C$DW$TU$15     .dwtag  DW_TAG_type_unit
+    1924                      .dwmtype  $C$DW$T$15
+    1925              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1926                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1927                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1928                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+    1929              
+    1930                      .dwendtag $C$DW$TU$15
+    1931              
+    1932              
+    1933              $C$DW$TU$16     .dwtag  DW_TAG_type_unit
+    1934                      .dwmtype  $C$DW$T$16
+    1935              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1936                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1937                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    1938                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    1939              
+    1940                      .dwendtag $C$DW$TU$16
+    1941              
+    1942              
+    1943              $C$DW$TU$17     .dwtag  DW_TAG_type_unit
+    1944                      .dwmtype  $C$DW$T$17
+    1945              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1946                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1947                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    1948                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x04)
+    1949              
+    1950                      .dwendtag $C$DW$TU$17
+    1951              
+    1952              
+    1953              $C$DW$TU$18     .dwtag  DW_TAG_type_unit
+    1954                      .dwmtype  $C$DW$T$18
+    1955              $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1956                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1957                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1958                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    1959              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+gpio.asm                                                             PAGE   37
+
+    1960                      .dwendtag $C$DW$TU$18
+    1961              
+
+No Assembly Errors, No Assembly Warnings

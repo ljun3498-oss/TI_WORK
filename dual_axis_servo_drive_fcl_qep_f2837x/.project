@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>dual_axis_servo_drive_fcl_qep_f2837x</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.ti.ccstudio.core.ccsNature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+	</natures>
+	<variableList>
+		<variable>
+			<name>C2000WARE_DEVICE_SUPPORT_ROOT</name>
+			<value>$%7BCOM_TI_MOTOR_CONTROL_C2000WARE_SDK_SOFTWARE_PACKAGE_INSTALL_DIR%7D/c2000ware/device_support/f2837xd</value>
+		</variable>
+		<variable>
+			<name>C2000WARE_DLIB_ROOT</name>
+			<value>$%7BCOM_TI_MOTOR_CONTROL_C2000WARE_SDK_SOFTWARE_PACKAGE_INSTALL_DIR%7D/c2000ware/driverlib/f2837xd/driverlib</value>
+		</variable>
+		<variable>
+			<name>C2000WARE_LIB_ROOT</name>
+			<value>$%7BCOM_TI_MOTOR_CONTROL_C2000WARE_SDK_SOFTWARE_PACKAGE_INSTALL_DIR%7D/c2000ware/libraries</value>
+		</variable>
+		<variable>
+			<name>SDK_ROOT</name>
+			<value>$%7BCOM_TI_MOTOR_CONTROL_C2000WARE_SDK_SOFTWARE_PACKAGE_INSTALL_DIR%7D</value>
+		</variable>
+		<variable>
+			<name>SFRA_INSTALL_ROOT</name>
+			<value>$%7BCOM_TI_MOTOR_CONTROL_C2000WARE_SDK_SOFTWARE_PACKAGE_INSTALL_DIR%7D/libraries/sfra</value>
+		</variable>
+	</variableList>
+</projectDescription>

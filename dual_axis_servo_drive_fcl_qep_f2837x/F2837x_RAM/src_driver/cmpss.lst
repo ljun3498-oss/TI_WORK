@@ -1,0 +1,899 @@
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
+       3              ;* Date/Time created: Sat Dec 27 15:00:18 2025                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("../src_driver/cmpss.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f28
+      13              
+      14              $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                      .dwattr $C$DW$1, DW_AT_name("__eallow")
+      16                      .dwattr $C$DW$1, DW_AT_linkage_name("__eallow")
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19                      .dwendtag $C$DW$1
+      20              
+      21              
+      22              $C$DW$2 .dwtag  DW_TAG_subprogram
+      23                      .dwattr $C$DW$2, DW_AT_name("__edis")
+      24                      .dwattr $C$DW$2, DW_AT_linkage_name("__edis")
+      25                      .dwattr $C$DW$2, DW_AT_declaration
+      26                      .dwattr $C$DW$2, DW_AT_external
+      27                      .dwendtag $C$DW$2
+      28              
+      29              ;       D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Te
+      30              ;       D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\
+      31 00000000               .sect   ".text:CMPSS_configRamp"
+      32                      .clink
+      33                      .global ||CMPSS_configRamp||
+      34              
+      35              $C$DW$3 .dwtag  DW_TAG_subprogram
+      36                      .dwattr $C$DW$3, DW_AT_name("CMPSS_configRamp")
+      37                      .dwattr $C$DW$3, DW_AT_low_pc(||CMPSS_configRamp||)
+      38                      .dwattr $C$DW$3, DW_AT_high_pc(0x00)
+      39                      .dwattr $C$DW$3, DW_AT_linkage_name("CMPSS_configRamp")
+      40                      .dwattr $C$DW$3, DW_AT_external
+      41                      .dwattr $C$DW$3, DW_AT_decl_file("../src_driver/cmpss.c")
+      42                      .dwattr $C$DW$3, DW_AT_decl_line(0xad)
+      43                      .dwattr $C$DW$3, DW_AT_decl_column(0x01)
+      44                      .dwattr $C$DW$3, DW_AT_TI_max_frame_size(-4)
+      45                      .dwpsn  file "../src_driver/cmpss.c",line 175,column 1,is_stmt,address ||CMPSS_configRamp||,isa 0
+      46              
+      47                      .dwfde $C$DW$CIE, ||CMPSS_configRamp||
+      48              $C$DW$4 .dwtag  DW_TAG_formal_parameter
+      49                      .dwattr $C$DW$4, DW_AT_name("base")
+      50                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$20)
+      51                      .dwattr $C$DW$4, DW_AT_location[DW_OP_reg0]
+      52              
+      53              $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      54                      .dwattr $C$DW$5, DW_AT_name("maxRampVal")
+      55                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$22)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    2
+
+      56                      .dwattr $C$DW$5, DW_AT_location[DW_OP_reg12]
+      57              
+      58              $C$DW$6 .dwtag  DW_TAG_formal_parameter
+      59                      .dwattr $C$DW$6, DW_AT_name("decrementVal")
+      60                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$22)
+      61                      .dwattr $C$DW$6, DW_AT_location[DW_OP_reg14]
+      62              
+      63              $C$DW$7 .dwtag  DW_TAG_formal_parameter
+      64                      .dwattr $C$DW$7, DW_AT_name("delayVal")
+      65                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$22)
+      66                      .dwattr $C$DW$7, DW_AT_location[DW_OP_breg20 -5]
+      67              
+      68              $C$DW$8 .dwtag  DW_TAG_formal_parameter
+      69                      .dwattr $C$DW$8, DW_AT_name("pwmSyncSrc")
+      70                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$22)
+      71                      .dwattr $C$DW$8, DW_AT_location[DW_OP_breg20 -6]
+      72              
+      73              $C$DW$9 .dwtag  DW_TAG_formal_parameter
+      74                      .dwattr $C$DW$9, DW_AT_name("useRampValShdw")
+      75                      .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$24)
+      76                      .dwattr $C$DW$9, DW_AT_location[DW_OP_breg20 -7]
+      77              
+      78              
+      79              ;***************************************************************
+      80              ;* FNAME: CMPSS_configRamp              FR SIZE:   2           *
+      81              ;*                                                             *
+      82              ;* FUNCTION ENVIRONMENT                                        *
+      83              ;*                                                             *
+      84              ;* FUNCTION PROPERTIES                                         *
+      85              ;*                            0 Parameter,  0 Auto,  2 SOE     *
+      86              ;***************************************************************
+      87              
+      88              ||CMPSS_configRamp||:
+      89              ;* AR6   assigned to base
+      90              $C$DW$10        .dwtag  DW_TAG_variable
+      91                      .dwattr $C$DW$10, DW_AT_name("base")
+      92                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$33)
+      93                      .dwattr $C$DW$10, DW_AT_location[DW_OP_reg16]
+      94              
+      95              ;* AR4   assigned to maxRampVal
+      96              $C$DW$11        .dwtag  DW_TAG_variable
+      97                      .dwattr $C$DW$11, DW_AT_name("maxRampVal")
+      98                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$31)
+      99                      .dwattr $C$DW$11, DW_AT_location[DW_OP_reg12]
+     100              
+     101              ;* AR5   assigned to decrementVal
+     102              $C$DW$12        .dwtag  DW_TAG_variable
+     103                      .dwattr $C$DW$12, DW_AT_name("decrementVal")
+     104                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$31)
+     105                      .dwattr $C$DW$12, DW_AT_location[DW_OP_reg14]
+     106              
+     107              ;* PL    assigned to delayVal
+     108              $C$DW$13        .dwtag  DW_TAG_variable
+     109                      .dwattr $C$DW$13, DW_AT_name("delayVal")
+     110                      .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$31)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    3
+
+     111                      .dwattr $C$DW$13, DW_AT_location[DW_OP_reg2]
+     112              
+     113              ;* AR7   assigned to pwmSyncSrc
+     114              $C$DW$14        .dwtag  DW_TAG_variable
+     115                      .dwattr $C$DW$14, DW_AT_name("pwmSyncSrc")
+     116                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$31)
+     117                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg18]
+     118              
+     119              ;* PH    assigned to useRampValShdw
+     120              $C$DW$15        .dwtag  DW_TAG_variable
+     121                      .dwattr $C$DW$15, DW_AT_name("useRampValShdw")
+     122                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$34)
+     123                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg3]
+     124              
+     125                      .dwcfi  cfa_offset, -2
+     126                      .dwcfi  save_reg_to_mem, 26, 0
+     127 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     128                      .dwcfi  save_reg_to_mem, 7, 2
+     129                      .dwcfi  cfa_offset, -4
+     130 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |175| 
+     131 00000002 8046          MOVZ      AR7,*-SP[6]           ; [CPU_ALU] |175| 
+     132 00000003 2745          MOV       PL,*-SP[5]            ; [CPU_ALU] |175| 
+     133 00000004 2F47          MOV       PH,*-SP[7]            ; [CPU_ALU] |175| 
+     134                      .dwpsn  file "../src_driver/cmpss.c",line 183,column 5,is_stmt,isa 0
+     135 00000005 7622          EALLOW    ; [CPU_ALU] |183| 
+     136                      .dwpsn  file "../src_driver/cmpss.c",line 188,column 5,is_stmt,isa 0
+     137 00000006 CCE6          AND       AL,*+XAR6[4],#0xffe1  ; [CPU_ALU] |188| 
+         00000007 FFE1 
+     138 00000008 58A9          MOVZ      AR0,AL                ; [CPU_ALU] |188| 
+     139 00000009 DF81          SUBB      XAR7,#1               ; [CPU_ARAU] |188| 
+     140 0000000a 5603          MOV       ACC,AR7 << #1         ; [CPU_ALU] |188| 
+         0000000b 01A7 
+     141 0000000c CAA0          OR        AL,AR0                ; [CPU_ALU] |188| 
+     142 0000000d 96E6          MOV       *+XAR6[4],AL          ; [CPU_ALU] |188| 
+     143 0000000e 92AA          MOV       AL,PH                 ; [CPU_ALU] |188| 
+     144                      .dwpsn  file "../src_driver/cmpss.c",line 197,column 5,is_stmt,isa 0
+     145 0000000f 5201          CMPB      AL,#1                 ; [CPU_ALU] |197| 
+     146 00000010 6104          B         ||$C$L1||,EQ          ; [CPU_ALU] |197| 
+     147                      ; branchcc occurs ; [] |197| 
+     148                      .dwpsn  file "../src_driver/cmpss.c",line 203,column 9,is_stmt,isa 0
+     149 00000011 18E6          AND       *+XAR6[4],#0xffbf     ; [CPU_ALU] |203| 
+         00000012 FFBF 
+     150 00000013 6F03          B         ||$C$L2||,UNC         ; [CPU_ALU] |203| 
+     151                      ; branch occurs ; [] |203| 
+     152 00000014       ||$C$L1||:    
+     153                      .dwpsn  file "../src_driver/cmpss.c",line 199,column 9,is_stmt,isa 0
+     154 00000014 1AE6          OR        *+XAR6[4],#0x0040     ; [CPU_ALU] |199| 
+         00000015 0040 
+     155 00000016       ||$C$L2||:    
+     156                      .dwpsn  file "../src_driver/cmpss.c",line 206,column 5,is_stmt,isa 0
+     157 00000016 761A          EDIS      ; [CPU_ALU] |206| 
+     158                      .dwpsn  file "../src_driver/cmpss.c",line 211,column 5,is_stmt,isa 0
+     159 00000017 D00A          MOVB      XAR0,#10              ; [CPU_ALU] |211| 
+     160                      .dwpsn  file "../src_driver/cmpss.c",line 216,column 5,is_stmt,isa 0
+     161 00000018 D10E          MOVB      XAR1,#14              ; [CPU_ALU] |216| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    4
+
+     162                      .dwpsn  file "../src_driver/cmpss.c",line 211,column 5,is_stmt,isa 0
+     163 00000019 7C96          MOV       *+XAR6[AR0],AR4       ; [CPU_ALU] |211| 
+     164                      .dwpsn  file "../src_driver/cmpss.c",line 221,column 5,is_stmt,isa 0
+     165 0000001a D015          MOVB      XAR0,#21              ; [CPU_ALU] |221| 
+     166                      .dwpsn  file "../src_driver/cmpss.c",line 216,column 5,is_stmt,isa 0
+     167 0000001b 7D9E          MOV       *+XAR6[AR1],AR5       ; [CPU_ALU] |216| 
+     168                      .dwpsn  file "../src_driver/cmpss.c",line 221,column 5,is_stmt,isa 0
+     169 0000001c 3F96          MOV       *+XAR6[AR0],P         ; [CPU_ALU] |221| 
+     170 0000001d 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     171                      .dwcfi  cfa_offset, -2
+     172                      .dwcfi  restore_reg, 7
+     173              $C$DW$16        .dwtag  DW_TAG_TI_branch
+     174                      .dwattr $C$DW$16, DW_AT_low_pc(0x00)
+     175                      .dwattr $C$DW$16, DW_AT_TI_return
+     176              
+     177 0000001e 0006          LRETR     ; [CPU_ALU] 
+     178                      ; return occurs ; [] 
+     179                      .dwattr $C$DW$3, DW_AT_TI_end_file("../src_driver/cmpss.c")
+     180                      .dwattr $C$DW$3, DW_AT_TI_end_line(0xde)
+     181                      .dwattr $C$DW$3, DW_AT_TI_end_column(0x01)
+     182                      .dwendentry
+     183                      .dwendtag $C$DW$3
+     184              
+     185 00000000               .sect   ".text:CMPSS_configLatchOnPWMSYNC"
+     186                      .clink
+     187                      .global ||CMPSS_configLatchOnPWMSYNC||
+     188              
+     189              $C$DW$17        .dwtag  DW_TAG_subprogram
+     190                      .dwattr $C$DW$17, DW_AT_name("CMPSS_configLatchOnPWMSYNC")
+     191                      .dwattr $C$DW$17, DW_AT_low_pc(||CMPSS_configLatchOnPWMSYNC||)
+     192                      .dwattr $C$DW$17, DW_AT_high_pc(0x00)
+     193                      .dwattr $C$DW$17, DW_AT_linkage_name("CMPSS_configLatchOnPWMSYNC")
+     194                      .dwattr $C$DW$17, DW_AT_external
+     195                      .dwattr $C$DW$17, DW_AT_decl_file("../src_driver/cmpss.c")
+     196                      .dwattr $C$DW$17, DW_AT_decl_line(0x81)
+     197                      .dwattr $C$DW$17, DW_AT_decl_column(0x01)
+     198                      .dwattr $C$DW$17, DW_AT_TI_max_frame_size(-2)
+     199                      .dwpsn  file "../src_driver/cmpss.c",line 130,column 1,is_stmt,address ||CMPSS_configLatchOnPWMSYNC||
+     200              
+     201                      .dwfde $C$DW$CIE, ||CMPSS_configLatchOnPWMSYNC||
+     202              $C$DW$18        .dwtag  DW_TAG_formal_parameter
+     203                      .dwattr $C$DW$18, DW_AT_name("base")
+     204                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$20)
+     205                      .dwattr $C$DW$18, DW_AT_location[DW_OP_reg0]
+     206              
+     207              $C$DW$19        .dwtag  DW_TAG_formal_parameter
+     208                      .dwattr $C$DW$19, DW_AT_name("highEnable")
+     209                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$24)
+     210                      .dwattr $C$DW$19, DW_AT_location[DW_OP_reg12]
+     211              
+     212              $C$DW$20        .dwtag  DW_TAG_formal_parameter
+     213                      .dwattr $C$DW$20, DW_AT_name("lowEnable")
+     214                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$24)
+     215                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg14]
+     216              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    5
+
+     217              
+     218              ;***************************************************************
+     219              ;* FNAME: CMPSS_configLatchOnPWMSYNC    FR SIZE:   0           *
+     220              ;*                                                             *
+     221              ;* FUNCTION ENVIRONMENT                                        *
+     222              ;*                                                             *
+     223              ;* FUNCTION PROPERTIES                                         *
+     224              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     225              ;***************************************************************
+     226              
+     227              ||CMPSS_configLatchOnPWMSYNC||:
+     228              ;* AR4   assigned to base
+     229              $C$DW$21        .dwtag  DW_TAG_variable
+     230                      .dwattr $C$DW$21, DW_AT_name("base")
+     231                      .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$33)
+     232                      .dwattr $C$DW$21, DW_AT_location[DW_OP_reg12]
+     233              
+     234              ;* AH    assigned to highEnable
+     235              $C$DW$22        .dwtag  DW_TAG_variable
+     236                      .dwattr $C$DW$22, DW_AT_name("highEnable")
+     237                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$34)
+     238                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg1]
+     239              
+     240              ;* AL    assigned to lowEnable
+     241              $C$DW$23        .dwtag  DW_TAG_variable
+     242                      .dwattr $C$DW$23, DW_AT_name("lowEnable")
+     243                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$34)
+     244                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg0]
+     245              
+     246                      .dwcfi  cfa_offset, -2
+     247                      .dwcfi  save_reg_to_mem, 26, 0
+     248 00000000 88A4          MOVZ      AR6,AR4               ; [CPU_ALU] |130| 
+     249 00000001 8AA9          MOVL      XAR4,ACC              ; [CPU_ALU] |130| 
+     250 00000002 92A5          MOV       AL,AR5                ; [CPU_ALU] |130| 
+     251 00000003 93A6          MOV       AH,AR6                ; [CPU_ALU] |130| 
+     252                      .dwpsn  file "../src_driver/cmpss.c",line 140,column 5,is_stmt,isa 0
+     253 00000004 7622          EALLOW    ; [CPU_ALU] |140| 
+     254                      .dwpsn  file "../src_driver/cmpss.c",line 142,column 5,is_stmt,isa 0
+     255 00000005 5301          CMPB      AH,#1                 ; [CPU_ALU] |142| 
+     256 00000006 6104          B         ||$C$L3||,EQ          ; [CPU_ALU] |142| 
+     257                      ; branchcc occurs ; [] |142| 
+     258                      .dwpsn  file "../src_driver/cmpss.c",line 148,column 9,is_stmt,isa 0
+     259 00000007 18DC          AND       *+XAR4[3],#0xfffb     ; [CPU_ALU] |148| 
+         00000008 FFFB 
+     260                      .dwpsn  file "../src_driver/cmpss.c",line 155,column 5,is_stmt,isa 0
+     261 00000009 6F03          B         ||$C$L4||,UNC         ; [CPU_ALU] |155| 
+     262                      ; branch occurs ; [] |155| 
+     263 0000000a       ||$C$L3||:    
+     264                      .dwpsn  file "../src_driver/cmpss.c",line 144,column 9,is_stmt,isa 0
+     265 0000000a 1ADC          OR        *+XAR4[3],#0x0004     ; [CPU_ALU] |144| 
+         0000000b 0004 
+     266 0000000c       ||$C$L4||:    
+     267                      .dwpsn  file "../src_driver/cmpss.c",line 155,column 5,is_stmt,isa 0
+     268 0000000c 5201          CMPB      AL,#1                 ; [CPU_ALU] |155| 
+     269 0000000d 6104          B         ||$C$L5||,EQ          ; [CPU_ALU] |155| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    6
+
+     270                      ; branchcc occurs ; [] |155| 
+     271                      .dwpsn  file "../src_driver/cmpss.c",line 161,column 9,is_stmt,isa 0
+     272 0000000e 18DC          AND       *+XAR4[3],#0xfbff     ; [CPU_ALU] |161| 
+         0000000f FBFF 
+     273 00000010 6F03          B         ||$C$L6||,UNC         ; [CPU_ALU] |161| 
+     274                      ; branch occurs ; [] |161| 
+     275 00000011       ||$C$L5||:    
+     276                      .dwpsn  file "../src_driver/cmpss.c",line 157,column 9,is_stmt,isa 0
+     277 00000011 1ADC          OR        *+XAR4[3],#0x0400     ; [CPU_ALU] |157| 
+         00000012 0400 
+     278 00000013       ||$C$L6||:    
+     279                      .dwpsn  file "../src_driver/cmpss.c",line 164,column 5,is_stmt,isa 0
+     280 00000013 761A          EDIS      ; [CPU_ALU] |164| 
+     281              $C$DW$24        .dwtag  DW_TAG_TI_branch
+     282                      .dwattr $C$DW$24, DW_AT_low_pc(0x00)
+     283                      .dwattr $C$DW$24, DW_AT_TI_return
+     284              
+     285 00000014 0006          LRETR     ; [CPU_ALU] 
+     286                      ; return occurs ; [] 
+     287                      .dwattr $C$DW$17, DW_AT_TI_end_file("../src_driver/cmpss.c")
+     288                      .dwattr $C$DW$17, DW_AT_TI_end_line(0xa5)
+     289                      .dwattr $C$DW$17, DW_AT_TI_end_column(0x01)
+     290                      .dwendentry
+     291                      .dwendtag $C$DW$17
+     292              
+     293 00000000               .sect   ".text:CMPSS_configFilterLow"
+     294                      .clink
+     295                      .global ||CMPSS_configFilterLow||
+     296              
+     297              $C$DW$25        .dwtag  DW_TAG_subprogram
+     298                      .dwattr $C$DW$25, DW_AT_name("CMPSS_configFilterLow")
+     299                      .dwattr $C$DW$25, DW_AT_low_pc(||CMPSS_configFilterLow||)
+     300                      .dwattr $C$DW$25, DW_AT_high_pc(0x00)
+     301                      .dwattr $C$DW$25, DW_AT_linkage_name("CMPSS_configFilterLow")
+     302                      .dwattr $C$DW$25, DW_AT_external
+     303                      .dwattr $C$DW$25, DW_AT_decl_file("../src_driver/cmpss.c")
+     304                      .dwattr $C$DW$25, DW_AT_decl_line(0x5a)
+     305                      .dwattr $C$DW$25, DW_AT_decl_column(0x01)
+     306                      .dwattr $C$DW$25, DW_AT_TI_max_frame_size(-4)
+     307                      .dwpsn  file "../src_driver/cmpss.c",line 92,column 1,is_stmt,address ||CMPSS_configFilterLow||,isa 0
+     308              
+     309                      .dwfde $C$DW$CIE, ||CMPSS_configFilterLow||
+     310              $C$DW$26        .dwtag  DW_TAG_formal_parameter
+     311                      .dwattr $C$DW$26, DW_AT_name("base")
+     312                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$20)
+     313                      .dwattr $C$DW$26, DW_AT_location[DW_OP_reg0]
+     314              
+     315              $C$DW$27        .dwtag  DW_TAG_formal_parameter
+     316                      .dwattr $C$DW$27, DW_AT_name("samplePrescale")
+     317                      .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$22)
+     318                      .dwattr $C$DW$27, DW_AT_location[DW_OP_reg12]
+     319              
+     320              $C$DW$28        .dwtag  DW_TAG_formal_parameter
+     321                      .dwattr $C$DW$28, DW_AT_name("sampleWindow")
+     322                      .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$22)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    7
+
+     323                      .dwattr $C$DW$28, DW_AT_location[DW_OP_reg14]
+     324              
+     325              $C$DW$29        .dwtag  DW_TAG_formal_parameter
+     326                      .dwattr $C$DW$29, DW_AT_name("threshold")
+     327                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$22)
+     328                      .dwattr $C$DW$29, DW_AT_location[DW_OP_breg20 -5]
+     329              
+     330              
+     331              ;***************************************************************
+     332              ;* FNAME: CMPSS_configFilterLow         FR SIZE:   2           *
+     333              ;*                                                             *
+     334              ;* FUNCTION ENVIRONMENT                                        *
+     335              ;*                                                             *
+     336              ;* FUNCTION PROPERTIES                                         *
+     337              ;*                            0 Parameter,  0 Auto,  2 SOE     *
+     338              ;***************************************************************
+     339              
+     340              ||CMPSS_configFilterLow||:
+     341              ;* AR6   assigned to base
+     342              $C$DW$30        .dwtag  DW_TAG_variable
+     343                      .dwattr $C$DW$30, DW_AT_name("base")
+     344                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$33)
+     345                      .dwattr $C$DW$30, DW_AT_location[DW_OP_reg16]
+     346              
+     347              ;* AR4   assigned to samplePrescale
+     348              $C$DW$31        .dwtag  DW_TAG_variable
+     349                      .dwattr $C$DW$31, DW_AT_name("samplePrescale")
+     350                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$31)
+     351                      .dwattr $C$DW$31, DW_AT_location[DW_OP_reg12]
+     352              
+     353              ;* AR5   assigned to sampleWindow
+     354              $C$DW$32        .dwtag  DW_TAG_variable
+     355                      .dwattr $C$DW$32, DW_AT_name("sampleWindow")
+     356                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$31)
+     357                      .dwattr $C$DW$32, DW_AT_location[DW_OP_reg14]
+     358              
+     359              ;* PL    assigned to threshold
+     360              $C$DW$33        .dwtag  DW_TAG_variable
+     361                      .dwattr $C$DW$33, DW_AT_name("threshold")
+     362                      .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$31)
+     363                      .dwattr $C$DW$33, DW_AT_location[DW_OP_reg2]
+     364              
+     365                      .dwcfi  cfa_offset, -2
+     366                      .dwcfi  save_reg_to_mem, 26, 0
+     367 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     368                      .dwcfi  save_reg_to_mem, 7, 2
+     369                      .dwcfi  cfa_offset, -4
+     370 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |92| 
+     371 00000002 2745          MOV       PL,*-SP[5]            ; [CPU_ALU] |92| 
+     372                      .dwpsn  file "../src_driver/cmpss.c",line 108,column 5,is_stmt,isa 0
+     373 00000003 7622          EALLOW    ; [CPU_ALU] |108| 
+     374                      .dwpsn  file "../src_driver/cmpss.c",line 110,column 5,is_stmt,isa 0
+     375 00000004 D016          MOVB      XAR0,#22              ; [CPU_ALU] |110| 
+     376 00000005 93AB          MOV       AH,PL                 ; [CPU_ALU] |110| 
+     377 00000006 D116          MOVB      XAR1,#22              ; [CPU_ALU] |110| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    8
+
+     378 00000007 9DFF          ADDB      AH,#-1                ; [CPU_ALU] |110| 
+     379 00000008 CC96          AND       AL,*+XAR6[AR0],#0xc00f ; [CPU_ALU] |110| 
+         00000009 C00F 
+     380 0000000a 80A9          MOVZ      AR7,AL                ; [CPU_ALU] |110| 
+     381                      .dwpsn  file "../src_driver/cmpss.c",line 118,column 5,is_stmt,isa 0
+     382 0000000b D017          MOVB      XAR0,#23              ; [CPU_ALU] |118| 
+     383                      .dwpsn  file "../src_driver/cmpss.c",line 110,column 5,is_stmt,isa 0
+     384 0000000c 5603          MOV       ACC,AH << #5          ; [CPU_ALU] |110| 
+         0000000d 05A8 
+     385 0000000e 93A5          MOV       AH,AR5                ; [CPU_ALU] |110| 
+     386 0000000f 9DFF          ADDB      AH,#-1                ; [CPU_ALU] |110| 
+     387 00000010 CBA9          OR        AH,AL                 ; [CPU_ALU] |110| 
+     388 00000011 5603          MOV       ACC,AH << #4          ; [CPU_ALU] |110| 
+         00000012 04A8 
+     389 00000013 CAA7          OR        AL,AR7                ; [CPU_ALU] |110| 
+     390 00000014 969E          MOV       *+XAR6[AR1],AL        ; [CPU_ALU] |110| 
+     391                      .dwpsn  file "../src_driver/cmpss.c",line 118,column 5,is_stmt,isa 0
+     392 00000015 7C96          MOV       *+XAR6[AR0],AR4       ; [CPU_ALU] |118| 
+     393                      .dwpsn  file "../src_driver/cmpss.c",line 120,column 5,is_stmt,isa 0
+     394 00000016 761A          EDIS      ; [CPU_ALU] |120| 
+     395 00000017 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     396                      .dwcfi  cfa_offset, -2
+     397                      .dwcfi  restore_reg, 7
+     398              $C$DW$34        .dwtag  DW_TAG_TI_branch
+     399                      .dwattr $C$DW$34, DW_AT_low_pc(0x00)
+     400                      .dwattr $C$DW$34, DW_AT_TI_return
+     401              
+     402 00000018 0006          LRETR     ; [CPU_ALU] 
+     403                      ; return occurs ; [] 
+     404                      .dwattr $C$DW$25, DW_AT_TI_end_file("../src_driver/cmpss.c")
+     405                      .dwattr $C$DW$25, DW_AT_TI_end_line(0x79)
+     406                      .dwattr $C$DW$25, DW_AT_TI_end_column(0x01)
+     407                      .dwendentry
+     408                      .dwendtag $C$DW$25
+     409              
+     410 00000000               .sect   ".text:CMPSS_configFilterHigh"
+     411                      .clink
+     412                      .global ||CMPSS_configFilterHigh||
+     413              
+     414              $C$DW$35        .dwtag  DW_TAG_subprogram
+     415                      .dwattr $C$DW$35, DW_AT_name("CMPSS_configFilterHigh")
+     416                      .dwattr $C$DW$35, DW_AT_low_pc(||CMPSS_configFilterHigh||)
+     417                      .dwattr $C$DW$35, DW_AT_high_pc(0x00)
+     418                      .dwattr $C$DW$35, DW_AT_linkage_name("CMPSS_configFilterHigh")
+     419                      .dwattr $C$DW$35, DW_AT_external
+     420                      .dwattr $C$DW$35, DW_AT_decl_file("../src_driver/cmpss.c")
+     421                      .dwattr $C$DW$35, DW_AT_decl_line(0x33)
+     422                      .dwattr $C$DW$35, DW_AT_decl_column(0x01)
+     423                      .dwattr $C$DW$35, DW_AT_TI_max_frame_size(-4)
+     424                      .dwpsn  file "../src_driver/cmpss.c",line 53,column 1,is_stmt,address ||CMPSS_configFilterHigh||,isa 
+     425              
+     426                      .dwfde $C$DW$CIE, ||CMPSS_configFilterHigh||
+     427              $C$DW$36        .dwtag  DW_TAG_formal_parameter
+     428                      .dwattr $C$DW$36, DW_AT_name("base")
+     429                      .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$20)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE    9
+
+     430                      .dwattr $C$DW$36, DW_AT_location[DW_OP_reg0]
+     431              
+     432              $C$DW$37        .dwtag  DW_TAG_formal_parameter
+     433                      .dwattr $C$DW$37, DW_AT_name("samplePrescale")
+     434                      .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$22)
+     435                      .dwattr $C$DW$37, DW_AT_location[DW_OP_reg12]
+     436              
+     437              $C$DW$38        .dwtag  DW_TAG_formal_parameter
+     438                      .dwattr $C$DW$38, DW_AT_name("sampleWindow")
+     439                      .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$22)
+     440                      .dwattr $C$DW$38, DW_AT_location[DW_OP_reg14]
+     441              
+     442              $C$DW$39        .dwtag  DW_TAG_formal_parameter
+     443                      .dwattr $C$DW$39, DW_AT_name("threshold")
+     444                      .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$22)
+     445                      .dwattr $C$DW$39, DW_AT_location[DW_OP_breg20 -5]
+     446              
+     447              
+     448              ;***************************************************************
+     449              ;* FNAME: CMPSS_configFilterHigh        FR SIZE:   2           *
+     450              ;*                                                             *
+     451              ;* FUNCTION ENVIRONMENT                                        *
+     452              ;*                                                             *
+     453              ;* FUNCTION PROPERTIES                                         *
+     454              ;*                            0 Parameter,  0 Auto,  2 SOE     *
+     455              ;***************************************************************
+     456              
+     457              ||CMPSS_configFilterHigh||:
+     458              ;* AR6   assigned to base
+     459              $C$DW$40        .dwtag  DW_TAG_variable
+     460                      .dwattr $C$DW$40, DW_AT_name("base")
+     461                      .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$33)
+     462                      .dwattr $C$DW$40, DW_AT_location[DW_OP_reg16]
+     463              
+     464              ;* AR4   assigned to samplePrescale
+     465              $C$DW$41        .dwtag  DW_TAG_variable
+     466                      .dwattr $C$DW$41, DW_AT_name("samplePrescale")
+     467                      .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$31)
+     468                      .dwattr $C$DW$41, DW_AT_location[DW_OP_reg12]
+     469              
+     470              ;* AR5   assigned to sampleWindow
+     471              $C$DW$42        .dwtag  DW_TAG_variable
+     472                      .dwattr $C$DW$42, DW_AT_name("sampleWindow")
+     473                      .dwattr $C$DW$42, DW_AT_type(*$C$DW$T$31)
+     474                      .dwattr $C$DW$42, DW_AT_location[DW_OP_reg14]
+     475              
+     476              ;* PL    assigned to threshold
+     477              $C$DW$43        .dwtag  DW_TAG_variable
+     478                      .dwattr $C$DW$43, DW_AT_name("threshold")
+     479                      .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$31)
+     480                      .dwattr $C$DW$43, DW_AT_location[DW_OP_reg2]
+     481              
+     482                      .dwcfi  cfa_offset, -2
+     483                      .dwcfi  save_reg_to_mem, 26, 0
+     484 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE   10
+
+     485                      .dwcfi  save_reg_to_mem, 7, 2
+     486                      .dwcfi  cfa_offset, -4
+     487 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |53| 
+     488 00000002 2745          MOV       PL,*-SP[5]            ; [CPU_ALU] |53| 
+     489                      .dwpsn  file "../src_driver/cmpss.c",line 69,column 5,is_stmt,isa 0
+     490 00000003 7622          EALLOW    ; [CPU_ALU] |69| 
+     491                      .dwpsn  file "../src_driver/cmpss.c",line 71,column 5,is_stmt,isa 0
+     492 00000004 D018          MOVB      XAR0,#24              ; [CPU_ALU] |71| 
+     493 00000005 93AB          MOV       AH,PL                 ; [CPU_ALU] |71| 
+     494 00000006 D118          MOVB      XAR1,#24              ; [CPU_ALU] |71| 
+     495 00000007 9DFF          ADDB      AH,#-1                ; [CPU_ALU] |71| 
+     496 00000008 CC96          AND       AL,*+XAR6[AR0],#0xc00f ; [CPU_ALU] |71| 
+         00000009 C00F 
+     497 0000000a 80A9          MOVZ      AR7,AL                ; [CPU_ALU] |71| 
+     498                      .dwpsn  file "../src_driver/cmpss.c",line 79,column 5,is_stmt,isa 0
+     499 0000000b D019          MOVB      XAR0,#25              ; [CPU_ALU] |79| 
+     500                      .dwpsn  file "../src_driver/cmpss.c",line 71,column 5,is_stmt,isa 0
+     501 0000000c 5603          MOV       ACC,AH << #5          ; [CPU_ALU] |71| 
+         0000000d 05A8 
+     502 0000000e 93A5          MOV       AH,AR5                ; [CPU_ALU] |71| 
+     503 0000000f 9DFF          ADDB      AH,#-1                ; [CPU_ALU] |71| 
+     504 00000010 CBA9          OR        AH,AL                 ; [CPU_ALU] |71| 
+     505 00000011 5603          MOV       ACC,AH << #4          ; [CPU_ALU] |71| 
+         00000012 04A8 
+     506 00000013 CAA7          OR        AL,AR7                ; [CPU_ALU] |71| 
+     507 00000014 969E          MOV       *+XAR6[AR1],AL        ; [CPU_ALU] |71| 
+     508                      .dwpsn  file "../src_driver/cmpss.c",line 79,column 5,is_stmt,isa 0
+     509 00000015 7C96          MOV       *+XAR6[AR0],AR4       ; [CPU_ALU] |79| 
+     510                      .dwpsn  file "../src_driver/cmpss.c",line 81,column 5,is_stmt,isa 0
+     511 00000016 761A          EDIS      ; [CPU_ALU] |81| 
+     512 00000017 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     513                      .dwcfi  cfa_offset, -2
+     514                      .dwcfi  restore_reg, 7
+     515              $C$DW$44        .dwtag  DW_TAG_TI_branch
+     516                      .dwattr $C$DW$44, DW_AT_low_pc(0x00)
+     517                      .dwattr $C$DW$44, DW_AT_TI_return
+     518              
+     519 00000018 0006          LRETR     ; [CPU_ALU] 
+     520                      ; return occurs ; [] 
+     521                      .dwattr $C$DW$35, DW_AT_TI_end_file("../src_driver/cmpss.c")
+     522                      .dwattr $C$DW$35, DW_AT_TI_end_line(0x52)
+     523                      .dwattr $C$DW$35, DW_AT_TI_end_column(0x01)
+     524                      .dwendentry
+     525                      .dwendtag $C$DW$35
+     526              
+     527              
+     528              ;***************************************************************
+     529              ;* BUILD ATTRIBUTES                                            *
+     530              ;***************************************************************
+     531                      .battr "c28xabi", Tag_File, 1, Tag_float_args(0)
+     532                      .battr "c28xabi", Tag_File, 1, Tag_double_args(0)
+     533                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     534              
+     535              ;***************************************************************
+     536              ;* DWARF CIE ENTRIES                                           *
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE   11
+
+     537              ;***************************************************************
+     538              
+     539              $C$DW$CIE       .dwcie 26
+     540                      .dwcfi  cfa_register, 20
+     541                      .dwcfi  cfa_offset, 0
+     542                      .dwcfi  same_value, 28
+     543                      .dwcfi  same_value, 6
+     544                      .dwcfi  same_value, 7
+     545                      .dwcfi  same_value, 8
+     546                      .dwcfi  same_value, 9
+     547                      .dwcfi  same_value, 10
+     548                      .dwcfi  same_value, 11
+     549                      .dwcfi  same_value, 59
+     550                      .dwcfi  same_value, 63
+     551                      .dwcfi  same_value, 67
+     552                      .dwcfi  same_value, 71
+     553                      .dwendentry
+     554                      .dwendtag $C$DW$CU
+     555              
+     556              
+     557              ;***************************************************************
+     558              ;* TYPE INFORMATION                                            *
+     559              ;***************************************************************
+     560              
+     561              $C$DW$TU$2      .dwtag  DW_TAG_type_unit
+     562                      .dwmtype  $C$DW$T$2
+     563              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     564                      .dwattr $C$DW$T$2, DW_AT_name("void")
+     565              
+     566                      .dwendtag $C$DW$TU$2
+     567              
+     568              
+     569              $C$DW$TU$4      .dwtag  DW_TAG_type_unit
+     570                      .dwmtype  $C$DW$T$4
+     571              $C$DW$T$4       .dwtag  DW_TAG_base_type
+     572                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     573                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+     574                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     575              
+     576                      .dwendtag $C$DW$TU$4
+     577              
+     578              
+     579              $C$DW$TU$5      .dwtag  DW_TAG_type_unit
+     580                      .dwmtype  $C$DW$T$5
+     581              $C$DW$T$5       .dwtag  DW_TAG_base_type
+     582                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     583                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     584                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     585              
+     586                      .dwendtag $C$DW$TU$5
+     587              
+     588              
+     589              $C$DW$TU$6      .dwtag  DW_TAG_type_unit
+     590                      .dwmtype  $C$DW$T$6
+     591              $C$DW$T$6       .dwtag  DW_TAG_base_type
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE   12
+
+     592                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     593                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     594                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     595              
+     596                      .dwendtag $C$DW$TU$6
+     597              
+     598              
+     599              $C$DW$TU$7      .dwtag  DW_TAG_type_unit
+     600                      .dwmtype  $C$DW$T$7
+     601              $C$DW$T$7       .dwtag  DW_TAG_base_type
+     602                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     603                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     604                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     605              
+     606                      .dwendtag $C$DW$TU$7
+     607              
+     608              
+     609              $C$DW$TU$8      .dwtag  DW_TAG_type_unit
+     610                      .dwmtype  $C$DW$T$8
+     611              $C$DW$T$8       .dwtag  DW_TAG_base_type
+     612                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     613                      .dwattr $C$DW$T$8, DW_AT_name("short")
+     614                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+     615              
+     616                      .dwendtag $C$DW$TU$8
+     617              
+     618              
+     619              $C$DW$TU$9      .dwtag  DW_TAG_type_unit
+     620                      .dwmtype  $C$DW$T$9
+     621              $C$DW$T$9       .dwtag  DW_TAG_base_type
+     622                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     623                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     624                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+     625              
+     626                      .dwendtag $C$DW$TU$9
+     627              
+     628              
+     629              $C$DW$TU$10     .dwtag  DW_TAG_type_unit
+     630                      .dwmtype  $C$DW$T$10
+     631              $C$DW$T$10      .dwtag  DW_TAG_base_type
+     632                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     633                      .dwattr $C$DW$T$10, DW_AT_name("int")
+     634                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+     635              
+     636                      .dwendtag $C$DW$TU$10
+     637              
+     638              
+     639              $C$DW$TU$11     .dwtag  DW_TAG_type_unit
+     640                      .dwmtype  $C$DW$T$11
+     641              $C$DW$T$11      .dwtag  DW_TAG_base_type
+     642                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     643                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     644                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+     645              
+     646                      .dwendtag $C$DW$TU$11
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE   13
+
+     647              
+     648              
+     649              $C$DW$TU$21     .dwtag  DW_TAG_type_unit
+     650                      .dwmtype  $C$DW$T$21
+     651              $C$DW$T$21      .dwtag  DW_TAG_typedef
+     652                      .dwattr $C$DW$T$21, DW_AT_name("__uint16_t")
+     653                      .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$11)
+     654                      .dwattr $C$DW$T$21, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine
+     655                      .dwattr $C$DW$T$21, DW_AT_decl_line(0x41)
+     656                      .dwattr $C$DW$T$21, DW_AT_decl_column(0x1c)
+     657              
+     658                      .dwendtag $C$DW$TU$21
+     659              
+     660              
+     661              $C$DW$TU$22     .dwtag  DW_TAG_type_unit
+     662                      .dwmtype  $C$DW$T$22
+     663              $C$DW$T$22      .dwtag  DW_TAG_typedef
+     664                      .dwattr $C$DW$T$22, DW_AT_name("uint16_t")
+     665                      .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+     666                      .dwattr $C$DW$T$22, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_st
+     667                      .dwattr $C$DW$T$22, DW_AT_decl_line(0x41)
+     668                      .dwattr $C$DW$T$22, DW_AT_decl_column(0x15)
+     669              
+     670                      .dwendtag $C$DW$TU$22
+     671              
+     672              
+     673              $C$DW$TU$31     .dwtag  DW_TAG_type_unit
+     674                      .dwmtype  $C$DW$T$31
+     675              $C$DW$45        .dwtag  DW_TAG_TI_far_type
+     676                      .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$22)
+     677              
+     678              $C$DW$T$31      .dwtag  DW_TAG_const_type
+     679                      .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$45)
+     680              
+     681                      .dwendtag $C$DW$TU$31
+     682              
+     683              
+     684              $C$DW$TU$12     .dwtag  DW_TAG_type_unit
+     685                      .dwmtype  $C$DW$T$12
+     686              $C$DW$T$12      .dwtag  DW_TAG_base_type
+     687                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     688                      .dwattr $C$DW$T$12, DW_AT_name("long")
+     689                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+     690              
+     691                      .dwendtag $C$DW$TU$12
+     692              
+     693              
+     694              $C$DW$TU$13     .dwtag  DW_TAG_type_unit
+     695                      .dwmtype  $C$DW$T$13
+     696              $C$DW$T$13      .dwtag  DW_TAG_base_type
+     697                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     698                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     699                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+     700              
+     701                      .dwendtag $C$DW$TU$13
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE   14
+
+     702              
+     703              
+     704              $C$DW$TU$19     .dwtag  DW_TAG_type_unit
+     705                      .dwmtype  $C$DW$T$19
+     706              $C$DW$T$19      .dwtag  DW_TAG_typedef
+     707                      .dwattr $C$DW$T$19, DW_AT_name("__uint32_t")
+     708                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$13)
+     709                      .dwattr $C$DW$T$19, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine
+     710                      .dwattr $C$DW$T$19, DW_AT_decl_line(0x43)
+     711                      .dwattr $C$DW$T$19, DW_AT_decl_column(0x1c)
+     712              
+     713                      .dwendtag $C$DW$TU$19
+     714              
+     715              
+     716              $C$DW$TU$20     .dwtag  DW_TAG_type_unit
+     717                      .dwmtype  $C$DW$T$20
+     718              $C$DW$T$20      .dwtag  DW_TAG_typedef
+     719                      .dwattr $C$DW$T$20, DW_AT_name("uint32_t")
+     720                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+     721                      .dwattr $C$DW$T$20, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_st
+     722                      .dwattr $C$DW$T$20, DW_AT_decl_line(0x46)
+     723                      .dwattr $C$DW$T$20, DW_AT_decl_column(0x15)
+     724              
+     725                      .dwendtag $C$DW$TU$20
+     726              
+     727              
+     728              $C$DW$TU$33     .dwtag  DW_TAG_type_unit
+     729                      .dwmtype  $C$DW$T$33
+     730              $C$DW$46        .dwtag  DW_TAG_TI_far_type
+     731                      .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$20)
+     732              
+     733              $C$DW$T$33      .dwtag  DW_TAG_const_type
+     734                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$46)
+     735              
+     736                      .dwendtag $C$DW$TU$33
+     737              
+     738              
+     739              $C$DW$TU$14     .dwtag  DW_TAG_type_unit
+     740                      .dwmtype  $C$DW$T$14
+     741              $C$DW$T$14      .dwtag  DW_TAG_base_type
+     742                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     743                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+     744                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+     745              
+     746                      .dwendtag $C$DW$TU$14
+     747              
+     748              
+     749              $C$DW$TU$15     .dwtag  DW_TAG_type_unit
+     750                      .dwmtype  $C$DW$T$15
+     751              $C$DW$T$15      .dwtag  DW_TAG_base_type
+     752                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     753                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     754                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+     755              
+     756                      .dwendtag $C$DW$TU$15
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:18 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+cmpss.asm                                                            PAGE   15
+
+     757              
+     758              
+     759              $C$DW$TU$16     .dwtag  DW_TAG_type_unit
+     760                      .dwmtype  $C$DW$T$16
+     761              $C$DW$T$16      .dwtag  DW_TAG_base_type
+     762                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     763                      .dwattr $C$DW$T$16, DW_AT_name("float")
+     764                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+     765              
+     766                      .dwendtag $C$DW$TU$16
+     767              
+     768              
+     769              $C$DW$TU$17     .dwtag  DW_TAG_type_unit
+     770                      .dwmtype  $C$DW$T$17
+     771              $C$DW$T$17      .dwtag  DW_TAG_base_type
+     772                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     773                      .dwattr $C$DW$T$17, DW_AT_name("double")
+     774                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x04)
+     775              
+     776                      .dwendtag $C$DW$TU$17
+     777              
+     778              
+     779              $C$DW$TU$18     .dwtag  DW_TAG_type_unit
+     780                      .dwmtype  $C$DW$T$18
+     781              $C$DW$T$18      .dwtag  DW_TAG_base_type
+     782                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     783                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+     784                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+     785              
+     786                      .dwendtag $C$DW$TU$18
+     787              
+     788              
+     789              $C$DW$TU$24     .dwtag  DW_TAG_type_unit
+     790                      .dwmtype  $C$DW$T$24
+     791              $C$DW$T$24      .dwtag  DW_TAG_base_type
+     792                      .dwattr $C$DW$T$24, DW_AT_encoding(DW_ATE_unsigned_char)
+     793                      .dwattr $C$DW$T$24, DW_AT_name("unsigned char")
+     794                      .dwattr $C$DW$T$24, DW_AT_byte_size(0x01)
+     795              
+     796                      .dwendtag $C$DW$TU$24
+     797              
+     798              
+     799              $C$DW$TU$34     .dwtag  DW_TAG_type_unit
+     800                      .dwmtype  $C$DW$T$34
+     801              $C$DW$47        .dwtag  DW_TAG_TI_far_type
+     802                      .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$24)
+     803              
+     804              $C$DW$T$34      .dwtag  DW_TAG_const_type
+     805                      .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$47)
+     806              
+     807                      .dwendtag $C$DW$TU$34
+     808              
+
+No Assembly Errors, No Assembly Warnings

@@ -1,0 +1,650 @@
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
+       3              ;* Date/Time created: Sat Dec 27 15:00:19 2025                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("../src_driver/eqep.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f28
+      13              ;       D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Te
+      14              ;       D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\
+      15 00000000               .sect   ".text:EQEP_setInputPolarity"
+      16                      .clink
+      17                      .global ||EQEP_setInputPolarity||
+      18              
+      19              $C$DW$1 .dwtag  DW_TAG_subprogram
+      20                      .dwattr $C$DW$1, DW_AT_name("EQEP_setInputPolarity")
+      21                      .dwattr $C$DW$1, DW_AT_low_pc(||EQEP_setInputPolarity||)
+      22                      .dwattr $C$DW$1, DW_AT_high_pc(0x00)
+      23                      .dwattr $C$DW$1, DW_AT_linkage_name("EQEP_setInputPolarity")
+      24                      .dwattr $C$DW$1, DW_AT_external
+      25                      .dwattr $C$DW$1, DW_AT_decl_file("../src_driver/eqep.c")
+      26                      .dwattr $C$DW$1, DW_AT_decl_line(0x5e)
+      27                      .dwattr $C$DW$1, DW_AT_decl_column(0x01)
+      28                      .dwattr $C$DW$1, DW_AT_TI_max_frame_size(-4)
+      29                      .dwpsn  file "../src_driver/eqep.c",line 96,column 1,is_stmt,address ||EQEP_setInputPolarity||,isa 0
+      30              
+      31                      .dwfde $C$DW$CIE, ||EQEP_setInputPolarity||
+      32              $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      33                      .dwattr $C$DW$2, DW_AT_name("base")
+      34                      .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$20)
+      35                      .dwattr $C$DW$2, DW_AT_location[DW_OP_reg0]
+      36              
+      37              $C$DW$3 .dwtag  DW_TAG_formal_parameter
+      38                      .dwattr $C$DW$3, DW_AT_name("invertQEPA")
+      39                      .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$24)
+      40                      .dwattr $C$DW$3, DW_AT_location[DW_OP_reg12]
+      41              
+      42              $C$DW$4 .dwtag  DW_TAG_formal_parameter
+      43                      .dwattr $C$DW$4, DW_AT_name("invertQEPB")
+      44                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$24)
+      45                      .dwattr $C$DW$4, DW_AT_location[DW_OP_reg14]
+      46              
+      47              $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      48                      .dwattr $C$DW$5, DW_AT_name("invertIndex")
+      49                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$24)
+      50                      .dwattr $C$DW$5, DW_AT_location[DW_OP_breg20 -5]
+      51              
+      52              $C$DW$6 .dwtag  DW_TAG_formal_parameter
+      53                      .dwattr $C$DW$6, DW_AT_name("invertStrobe")
+      54                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$24)
+      55                      .dwattr $C$DW$6, DW_AT_location[DW_OP_breg20 -6]
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    2
+
+      56              
+      57              
+      58              ;***************************************************************
+      59              ;* FNAME: EQEP_setInputPolarity         FR SIZE:   2           *
+      60              ;*                                                             *
+      61              ;* FUNCTION ENVIRONMENT                                        *
+      62              ;*                                                             *
+      63              ;* FUNCTION PROPERTIES                                         *
+      64              ;*                            0 Parameter,  0 Auto,  2 SOE     *
+      65              ;***************************************************************
+      66              
+      67              ||EQEP_setInputPolarity||:
+      68              ;* AR6   assigned to base
+      69              $C$DW$7 .dwtag  DW_TAG_variable
+      70                      .dwattr $C$DW$7, DW_AT_name("base")
+      71                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$33)
+      72                      .dwattr $C$DW$7, DW_AT_location[DW_OP_reg16]
+      73              
+      74              ;* AL    assigned to invertQEPA
+      75              $C$DW$8 .dwtag  DW_TAG_variable
+      76                      .dwattr $C$DW$8, DW_AT_name("invertQEPA")
+      77                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$34)
+      78                      .dwattr $C$DW$8, DW_AT_location[DW_OP_reg0]
+      79              
+      80              ;* AR5   assigned to invertQEPB
+      81              $C$DW$9 .dwtag  DW_TAG_variable
+      82                      .dwattr $C$DW$9, DW_AT_name("invertQEPB")
+      83                      .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$34)
+      84                      .dwattr $C$DW$9, DW_AT_location[DW_OP_reg14]
+      85              
+      86              ;* AR7   assigned to invertIndex
+      87              $C$DW$10        .dwtag  DW_TAG_variable
+      88                      .dwattr $C$DW$10, DW_AT_name("invertIndex")
+      89                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$34)
+      90                      .dwattr $C$DW$10, DW_AT_location[DW_OP_reg18]
+      91              
+      92              ;* AH    assigned to invertStrobe
+      93              $C$DW$11        .dwtag  DW_TAG_variable
+      94                      .dwattr $C$DW$11, DW_AT_name("invertStrobe")
+      95                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$34)
+      96                      .dwattr $C$DW$11, DW_AT_location[DW_OP_reg1]
+      97              
+      98                      .dwcfi  cfa_offset, -2
+      99                      .dwcfi  save_reg_to_mem, 26, 0
+     100 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |96| 
+     101 00000001 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     102                      .dwcfi  save_reg_to_mem, 7, 2
+     103                      .dwcfi  cfa_offset, -4
+     104 00000002 92A4          MOV       AL,AR4                ; [CPU_ALU] |96| 
+     105 00000003 9346          MOV       AH,*-SP[6]            ; [CPU_ALU] |96| 
+     106 00000004 8045          MOVZ      AR7,*-SP[5]           ; [CPU_ALU] |96| 
+     107                      .dwpsn  file "../src_driver/eqep.c",line 105,column 5,is_stmt,isa 0
+     108 00000005 5201          CMPB      AL,#1                 ; [CPU_ALU] |105| 
+     109 00000006 6106          B         ||$C$L1||,EQ          ; [CPU_ALU] |105| 
+     110                      ; branchcc occurs ; [] |105| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    3
+
+     111                      .dwpsn  file "../src_driver/eqep.c",line 111,column 9,is_stmt,isa 0
+     112 00000007 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |111| 
+     113 00000008 DC14          ADDB      XAR4,#20              ; [CPU_ALU] |111| 
+     114 00000009 18C4          AND       *+XAR4[0],#0xfeff     ; [CPU_ALU] |111| 
+         0000000a FEFF 
+     115                      .dwpsn  file "../src_driver/eqep.c",line 117,column 5,is_stmt,isa 0
+     116 0000000b 6F05          B         ||$C$L2||,UNC         ; [CPU_ALU] |117| 
+     117                      ; branch occurs ; [] |117| 
+     118 0000000c       ||$C$L1||:    
+     119                      .dwpsn  file "../src_driver/eqep.c",line 107,column 9,is_stmt,isa 0
+     120 0000000c 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |107| 
+     121 0000000d DC14          ADDB      XAR4,#20              ; [CPU_ALU] |107| 
+     122 0000000e 1AC4          OR        *+XAR4[0],#0x0100     ; [CPU_ALU] |107| 
+         0000000f 0100 
+     123 00000010       ||$C$L2||:    
+     124 00000010 92A5          MOV       AL,AR5                ; [CPU_ALU] 
+     125                      .dwpsn  file "../src_driver/eqep.c",line 117,column 5,is_stmt,isa 0
+     126 00000011 5201          CMPB      AL,#1                 ; [CPU_ALU] |117| 
+     127 00000012 6106          B         ||$C$L3||,EQ          ; [CPU_ALU] |117| 
+     128                      ; branchcc occurs ; [] |117| 
+     129                      .dwpsn  file "../src_driver/eqep.c",line 123,column 9,is_stmt,isa 0
+     130 00000013 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |123| 
+     131 00000014 DC14          ADDB      XAR4,#20              ; [CPU_ALU] |123| 
+     132 00000015 18C4          AND       *+XAR4[0],#0xff7f     ; [CPU_ALU] |123| 
+         00000016 FF7F 
+     133                      .dwpsn  file "../src_driver/eqep.c",line 129,column 5,is_stmt,isa 0
+     134 00000017 6F05          B         ||$C$L4||,UNC         ; [CPU_ALU] |129| 
+     135                      ; branch occurs ; [] |129| 
+     136 00000018       ||$C$L3||:    
+     137                      .dwpsn  file "../src_driver/eqep.c",line 119,column 9,is_stmt,isa 0
+     138 00000018 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |119| 
+     139 00000019 DC14          ADDB      XAR4,#20              ; [CPU_ALU] |119| 
+     140 0000001a 1AC4          OR        *+XAR4[0],#0x0080     ; [CPU_ALU] |119| 
+         0000001b 0080 
+     141 0000001c       ||$C$L4||:    
+     142 0000001c 92A7          MOV       AL,AR7                ; [CPU_ALU] 
+     143                      .dwpsn  file "../src_driver/eqep.c",line 129,column 5,is_stmt,isa 0
+     144 0000001d 5201          CMPB      AL,#1                 ; [CPU_ALU] |129| 
+     145 0000001e 6106          B         ||$C$L5||,EQ          ; [CPU_ALU] |129| 
+     146                      ; branchcc occurs ; [] |129| 
+     147                      .dwpsn  file "../src_driver/eqep.c",line 135,column 9,is_stmt,isa 0
+     148 0000001f 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |135| 
+     149 00000020 DC14          ADDB      XAR4,#20              ; [CPU_ALU] |135| 
+     150 00000021 18C4          AND       *+XAR4[0],#0xffbf     ; [CPU_ALU] |135| 
+         00000022 FFBF 
+     151                      .dwpsn  file "../src_driver/eqep.c",line 141,column 5,is_stmt,isa 0
+     152 00000023 6F05          B         ||$C$L6||,UNC         ; [CPU_ALU] |141| 
+     153                      ; branch occurs ; [] |141| 
+     154 00000024       ||$C$L5||:    
+     155                      .dwpsn  file "../src_driver/eqep.c",line 131,column 9,is_stmt,isa 0
+     156 00000024 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |131| 
+     157 00000025 DC14          ADDB      XAR4,#20              ; [CPU_ALU] |131| 
+     158 00000026 1AC4          OR        *+XAR4[0],#0x0040     ; [CPU_ALU] |131| 
+         00000027 0040 
+     159 00000028       ||$C$L6||:    
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    4
+
+     160                      .dwpsn  file "../src_driver/eqep.c",line 141,column 5,is_stmt,isa 0
+     161 00000028 5301          CMPB      AH,#1                 ; [CPU_ALU] |141| 
+     162 00000029 6106          B         ||$C$L7||,EQ          ; [CPU_ALU] |141| 
+     163                      ; branchcc occurs ; [] |141| 
+     164                      .dwpsn  file "../src_driver/eqep.c",line 147,column 9,is_stmt,isa 0
+     165 0000002a 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |147| 
+     166 0000002b DC14          ADDB      XAR4,#20              ; [CPU_ALU] |147| 
+     167 0000002c 18C4          AND       *+XAR4[0],#0xffdf     ; [CPU_ALU] |147| 
+         0000002d FFDF 
+     168 0000002e 6F05          B         ||$C$L8||,UNC         ; [CPU_ALU] |147| 
+     169                      ; branch occurs ; [] |147| 
+     170 0000002f       ||$C$L7||:    
+     171                      .dwpsn  file "../src_driver/eqep.c",line 143,column 9,is_stmt,isa 0
+     172 0000002f 8AA6          MOVL      XAR4,XAR6             ; [CPU_ALU] |143| 
+     173 00000030 DC14          ADDB      XAR4,#20              ; [CPU_ALU] |143| 
+     174 00000031 1AC4          OR        *+XAR4[0],#0x0020     ; [CPU_ALU] |143| 
+         00000032 0020 
+     175 00000033       ||$C$L8||:    
+     176 00000033 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     177                      .dwcfi  cfa_offset, -2
+     178                      .dwcfi  restore_reg, 7
+     179              $C$DW$12        .dwtag  DW_TAG_TI_branch
+     180                      .dwattr $C$DW$12, DW_AT_low_pc(0x00)
+     181                      .dwattr $C$DW$12, DW_AT_TI_return
+     182              
+     183 00000034 0006          LRETR     ; [CPU_ALU] 
+     184                      ; return occurs ; [] 
+     185                      .dwattr $C$DW$1, DW_AT_TI_end_file("../src_driver/eqep.c")
+     186                      .dwattr $C$DW$1, DW_AT_TI_end_line(0x95)
+     187                      .dwattr $C$DW$1, DW_AT_TI_end_column(0x01)
+     188                      .dwendentry
+     189                      .dwendtag $C$DW$1
+     190              
+     191 00000000               .sect   ".text:EQEP_setCompareConfig"
+     192                      .clink
+     193                      .global ||EQEP_setCompareConfig||
+     194              
+     195              $C$DW$13        .dwtag  DW_TAG_subprogram
+     196                      .dwattr $C$DW$13, DW_AT_name("EQEP_setCompareConfig")
+     197                      .dwattr $C$DW$13, DW_AT_low_pc(||EQEP_setCompareConfig||)
+     198                      .dwattr $C$DW$13, DW_AT_high_pc(0x00)
+     199                      .dwattr $C$DW$13, DW_AT_linkage_name("EQEP_setCompareConfig")
+     200                      .dwattr $C$DW$13, DW_AT_external
+     201                      .dwattr $C$DW$13, DW_AT_decl_file("../src_driver/eqep.c")
+     202                      .dwattr $C$DW$13, DW_AT_decl_line(0x33)
+     203                      .dwattr $C$DW$13, DW_AT_decl_column(0x01)
+     204                      .dwattr $C$DW$13, DW_AT_TI_max_frame_size(-4)
+     205                      .dwpsn  file "../src_driver/eqep.c",line 53,column 1,is_stmt,address ||EQEP_setCompareConfig||,isa 0
+     206              
+     207                      .dwfde $C$DW$CIE, ||EQEP_setCompareConfig||
+     208              $C$DW$14        .dwtag  DW_TAG_formal_parameter
+     209                      .dwattr $C$DW$14, DW_AT_name("base")
+     210                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$20)
+     211                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg0]
+     212              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    5
+
+     213              $C$DW$15        .dwtag  DW_TAG_formal_parameter
+     214                      .dwattr $C$DW$15, DW_AT_name("config")
+     215                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$22)
+     216                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg12]
+     217              
+     218              $C$DW$16        .dwtag  DW_TAG_formal_parameter
+     219                      .dwattr $C$DW$16, DW_AT_name("compareValue")
+     220                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$20)
+     221                      .dwattr $C$DW$16, DW_AT_location[DW_OP_breg20 -6]
+     222              
+     223              $C$DW$17        .dwtag  DW_TAG_formal_parameter
+     224                      .dwattr $C$DW$17, DW_AT_name("cycles")
+     225                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$22)
+     226                      .dwattr $C$DW$17, DW_AT_location[DW_OP_reg14]
+     227              
+     228              
+     229              ;***************************************************************
+     230              ;* FNAME: EQEP_setCompareConfig         FR SIZE:   2           *
+     231              ;*                                                             *
+     232              ;* FUNCTION ENVIRONMENT                                        *
+     233              ;*                                                             *
+     234              ;* FUNCTION PROPERTIES                                         *
+     235              ;*                            0 Parameter,  0 Auto,  2 SOE     *
+     236              ;***************************************************************
+     237              
+     238              ||EQEP_setCompareConfig||:
+     239              ;* AR6   assigned to base
+     240              $C$DW$18        .dwtag  DW_TAG_variable
+     241                      .dwattr $C$DW$18, DW_AT_name("base")
+     242                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$33)
+     243                      .dwattr $C$DW$18, DW_AT_location[DW_OP_reg16]
+     244              
+     245              ;* AR4   assigned to config
+     246              $C$DW$19        .dwtag  DW_TAG_variable
+     247                      .dwattr $C$DW$19, DW_AT_name("config")
+     248                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$29)
+     249                      .dwattr $C$DW$19, DW_AT_location[DW_OP_reg12]
+     250              
+     251              ;* AR7   assigned to compareValue
+     252              $C$DW$20        .dwtag  DW_TAG_variable
+     253                      .dwattr $C$DW$20, DW_AT_name("compareValue")
+     254                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$33)
+     255                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg18]
+     256              
+     257                      .dwcfi  cfa_offset, -2
+     258                      .dwcfi  save_reg_to_mem, 26, 0
+     259 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
+     260                      .dwcfi  save_reg_to_mem, 7, 2
+     261                      .dwcfi  cfa_offset, -4
+     262 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |53| 
+     263 00000002 C546          MOVL      XAR7,*-SP[6]          ; [CPU_ALU] |53| 
+     264                      .dwpsn  file "../src_driver/eqep.c",line 73,column 5,is_stmt,isa 0
+     265 00000003 D017          MOVB      XAR0,#23              ; [CPU_ALU] |73| 
+     266 00000004 CDA4          AND       AH,AR4,#0xc000        ; [CPU_ALU] |73| 
+         00000005 C000 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    6
+
+     267 00000006 DD81          SUBB      XAR5,#1               ; [CPU_ARAU] |73| 
+     268                      .dwpsn  file "../src_driver/eqep.c",line 65,column 5,is_stmt,isa 0
+     269 00000007 C3F6          MOVL      *+XAR6[6],XAR7        ; [CPU_ALU] |65| 
+     270                      .dwpsn  file "../src_driver/eqep.c",line 73,column 5,is_stmt,isa 0
+     271 00000008 CC96          AND       AL,*+XAR6[AR0],#0x3000 ; [CPU_ALU] |73| 
+         00000009 3000 
+     272 0000000a CBA9          OR        AH,AL                 ; [CPU_ALU] |73| 
+     273 0000000b 99A5          OR        AR5,AH                ; [CPU_ALU] |73| 
+     274 0000000c D117          MOVB      XAR1,#23              ; [CPU_ALU] |73| 
+     275                      .dwpsn  file "../src_driver/eqep.c",line 83,column 5,is_stmt,isa 0
+     276 0000000d D014          MOVB      XAR0,#20              ; [CPU_ALU] |83| 
+     277 0000000e CCA4          AND       AL,AR4,#0x3000        ; [CPU_ALU] |83| 
+         0000000f 3000 
+     278                      .dwpsn  file "../src_driver/eqep.c",line 73,column 5,is_stmt,isa 0
+     279 00000010 7D9E          MOV       *+XAR6[AR1],AR5       ; [CPU_ALU] |73| 
+     280                      .dwpsn  file "../src_driver/eqep.c",line 83,column 5,is_stmt,isa 0
+     281 00000011 CD96          AND       AH,*+XAR6[AR0],#0xcfff ; [CPU_ALU] |83| 
+         00000012 CFFF 
+     282 00000013 D014          MOVB      XAR0,#20              ; [CPU_ALU] |83| 
+     283 00000014 CAA8          OR        AL,AH                 ; [CPU_ALU] |83| 
+     284 00000015 9696          MOV       *+XAR6[AR0],AL        ; [CPU_ALU] |83| 
+     285 00000016 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
+     286                      .dwcfi  cfa_offset, -2
+     287                      .dwcfi  restore_reg, 7
+     288              $C$DW$21        .dwtag  DW_TAG_TI_branch
+     289                      .dwattr $C$DW$21, DW_AT_low_pc(0x00)
+     290                      .dwattr $C$DW$21, DW_AT_TI_return
+     291              
+     292 00000017 0006          LRETR     ; [CPU_ALU] 
+     293                      ; return occurs ; [] 
+     294                      .dwattr $C$DW$13, DW_AT_TI_end_file("../src_driver/eqep.c")
+     295                      .dwattr $C$DW$13, DW_AT_TI_end_line(0x56)
+     296                      .dwattr $C$DW$13, DW_AT_TI_end_column(0x01)
+     297                      .dwendentry
+     298                      .dwendtag $C$DW$13
+     299              
+     300              
+     301              ;***************************************************************
+     302              ;* BUILD ATTRIBUTES                                            *
+     303              ;***************************************************************
+     304                      .battr "c28xabi", Tag_File, 1, Tag_float_args(0)
+     305                      .battr "c28xabi", Tag_File, 1, Tag_double_args(0)
+     306                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     307              
+     308              ;***************************************************************
+     309              ;* DWARF CIE ENTRIES                                           *
+     310              ;***************************************************************
+     311              
+     312              $C$DW$CIE       .dwcie 26
+     313                      .dwcfi  cfa_register, 20
+     314                      .dwcfi  cfa_offset, 0
+     315                      .dwcfi  same_value, 28
+     316                      .dwcfi  same_value, 6
+     317                      .dwcfi  same_value, 7
+     318                      .dwcfi  same_value, 8
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    7
+
+     319                      .dwcfi  same_value, 9
+     320                      .dwcfi  same_value, 10
+     321                      .dwcfi  same_value, 11
+     322                      .dwcfi  same_value, 59
+     323                      .dwcfi  same_value, 63
+     324                      .dwcfi  same_value, 67
+     325                      .dwcfi  same_value, 71
+     326                      .dwendentry
+     327                      .dwendtag $C$DW$CU
+     328              
+     329              
+     330              ;***************************************************************
+     331              ;* TYPE INFORMATION                                            *
+     332              ;***************************************************************
+     333              
+     334              $C$DW$TU$2      .dwtag  DW_TAG_type_unit
+     335                      .dwmtype  $C$DW$T$2
+     336              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     337                      .dwattr $C$DW$T$2, DW_AT_name("void")
+     338              
+     339                      .dwendtag $C$DW$TU$2
+     340              
+     341              
+     342              $C$DW$TU$4      .dwtag  DW_TAG_type_unit
+     343                      .dwmtype  $C$DW$T$4
+     344              $C$DW$T$4       .dwtag  DW_TAG_base_type
+     345                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     346                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+     347                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     348              
+     349                      .dwendtag $C$DW$TU$4
+     350              
+     351              
+     352              $C$DW$TU$5      .dwtag  DW_TAG_type_unit
+     353                      .dwmtype  $C$DW$T$5
+     354              $C$DW$T$5       .dwtag  DW_TAG_base_type
+     355                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     356                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     357                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     358              
+     359                      .dwendtag $C$DW$TU$5
+     360              
+     361              
+     362              $C$DW$TU$6      .dwtag  DW_TAG_type_unit
+     363                      .dwmtype  $C$DW$T$6
+     364              $C$DW$T$6       .dwtag  DW_TAG_base_type
+     365                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     366                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     367                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     368              
+     369                      .dwendtag $C$DW$TU$6
+     370              
+     371              
+     372              $C$DW$TU$7      .dwtag  DW_TAG_type_unit
+     373                      .dwmtype  $C$DW$T$7
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    8
+
+     374              $C$DW$T$7       .dwtag  DW_TAG_base_type
+     375                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     376                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     377                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     378              
+     379                      .dwendtag $C$DW$TU$7
+     380              
+     381              
+     382              $C$DW$TU$8      .dwtag  DW_TAG_type_unit
+     383                      .dwmtype  $C$DW$T$8
+     384              $C$DW$T$8       .dwtag  DW_TAG_base_type
+     385                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     386                      .dwattr $C$DW$T$8, DW_AT_name("short")
+     387                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+     388              
+     389                      .dwendtag $C$DW$TU$8
+     390              
+     391              
+     392              $C$DW$TU$9      .dwtag  DW_TAG_type_unit
+     393                      .dwmtype  $C$DW$T$9
+     394              $C$DW$T$9       .dwtag  DW_TAG_base_type
+     395                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     396                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     397                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+     398              
+     399                      .dwendtag $C$DW$TU$9
+     400              
+     401              
+     402              $C$DW$TU$10     .dwtag  DW_TAG_type_unit
+     403                      .dwmtype  $C$DW$T$10
+     404              $C$DW$T$10      .dwtag  DW_TAG_base_type
+     405                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     406                      .dwattr $C$DW$T$10, DW_AT_name("int")
+     407                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+     408              
+     409                      .dwendtag $C$DW$TU$10
+     410              
+     411              
+     412              $C$DW$TU$11     .dwtag  DW_TAG_type_unit
+     413                      .dwmtype  $C$DW$T$11
+     414              $C$DW$T$11      .dwtag  DW_TAG_base_type
+     415                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     416                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     417                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+     418              
+     419                      .dwendtag $C$DW$TU$11
+     420              
+     421              
+     422              $C$DW$TU$21     .dwtag  DW_TAG_type_unit
+     423                      .dwmtype  $C$DW$T$21
+     424              $C$DW$T$21      .dwtag  DW_TAG_typedef
+     425                      .dwattr $C$DW$T$21, DW_AT_name("__uint16_t")
+     426                      .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$11)
+     427                      .dwattr $C$DW$T$21, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine
+     428                      .dwattr $C$DW$T$21, DW_AT_decl_line(0x41)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE    9
+
+     429                      .dwattr $C$DW$T$21, DW_AT_decl_column(0x1c)
+     430              
+     431                      .dwendtag $C$DW$TU$21
+     432              
+     433              
+     434              $C$DW$TU$22     .dwtag  DW_TAG_type_unit
+     435                      .dwmtype  $C$DW$T$22
+     436              $C$DW$T$22      .dwtag  DW_TAG_typedef
+     437                      .dwattr $C$DW$T$22, DW_AT_name("uint16_t")
+     438                      .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+     439                      .dwattr $C$DW$T$22, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_st
+     440                      .dwattr $C$DW$T$22, DW_AT_decl_line(0x41)
+     441                      .dwattr $C$DW$T$22, DW_AT_decl_column(0x15)
+     442              
+     443                      .dwendtag $C$DW$TU$22
+     444              
+     445              
+     446              $C$DW$TU$29     .dwtag  DW_TAG_type_unit
+     447                      .dwmtype  $C$DW$T$29
+     448              $C$DW$22        .dwtag  DW_TAG_TI_far_type
+     449                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$22)
+     450              
+     451              $C$DW$T$29      .dwtag  DW_TAG_const_type
+     452                      .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$22)
+     453              
+     454                      .dwendtag $C$DW$TU$29
+     455              
+     456              
+     457              $C$DW$TU$12     .dwtag  DW_TAG_type_unit
+     458                      .dwmtype  $C$DW$T$12
+     459              $C$DW$T$12      .dwtag  DW_TAG_base_type
+     460                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     461                      .dwattr $C$DW$T$12, DW_AT_name("long")
+     462                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+     463              
+     464                      .dwendtag $C$DW$TU$12
+     465              
+     466              
+     467              $C$DW$TU$13     .dwtag  DW_TAG_type_unit
+     468                      .dwmtype  $C$DW$T$13
+     469              $C$DW$T$13      .dwtag  DW_TAG_base_type
+     470                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     471                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     472                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+     473              
+     474                      .dwendtag $C$DW$TU$13
+     475              
+     476              
+     477              $C$DW$TU$19     .dwtag  DW_TAG_type_unit
+     478                      .dwmtype  $C$DW$T$19
+     479              $C$DW$T$19      .dwtag  DW_TAG_typedef
+     480                      .dwattr $C$DW$T$19, DW_AT_name("__uint32_t")
+     481                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$13)
+     482                      .dwattr $C$DW$T$19, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine
+     483                      .dwattr $C$DW$T$19, DW_AT_decl_line(0x43)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE   10
+
+     484                      .dwattr $C$DW$T$19, DW_AT_decl_column(0x1c)
+     485              
+     486                      .dwendtag $C$DW$TU$19
+     487              
+     488              
+     489              $C$DW$TU$20     .dwtag  DW_TAG_type_unit
+     490                      .dwmtype  $C$DW$T$20
+     491              $C$DW$T$20      .dwtag  DW_TAG_typedef
+     492                      .dwattr $C$DW$T$20, DW_AT_name("uint32_t")
+     493                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+     494                      .dwattr $C$DW$T$20, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_st
+     495                      .dwattr $C$DW$T$20, DW_AT_decl_line(0x46)
+     496                      .dwattr $C$DW$T$20, DW_AT_decl_column(0x15)
+     497              
+     498                      .dwendtag $C$DW$TU$20
+     499              
+     500              
+     501              $C$DW$TU$33     .dwtag  DW_TAG_type_unit
+     502                      .dwmtype  $C$DW$T$33
+     503              $C$DW$23        .dwtag  DW_TAG_TI_far_type
+     504                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$20)
+     505              
+     506              $C$DW$T$33      .dwtag  DW_TAG_const_type
+     507                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$23)
+     508              
+     509                      .dwendtag $C$DW$TU$33
+     510              
+     511              
+     512              $C$DW$TU$14     .dwtag  DW_TAG_type_unit
+     513                      .dwmtype  $C$DW$T$14
+     514              $C$DW$T$14      .dwtag  DW_TAG_base_type
+     515                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     516                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+     517                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+     518              
+     519                      .dwendtag $C$DW$TU$14
+     520              
+     521              
+     522              $C$DW$TU$15     .dwtag  DW_TAG_type_unit
+     523                      .dwmtype  $C$DW$T$15
+     524              $C$DW$T$15      .dwtag  DW_TAG_base_type
+     525                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     526                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     527                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+     528              
+     529                      .dwendtag $C$DW$TU$15
+     530              
+     531              
+     532              $C$DW$TU$16     .dwtag  DW_TAG_type_unit
+     533                      .dwmtype  $C$DW$T$16
+     534              $C$DW$T$16      .dwtag  DW_TAG_base_type
+     535                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     536                      .dwattr $C$DW$T$16, DW_AT_name("float")
+     537                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+     538              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:19 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+eqep.asm                                                             PAGE   11
+
+     539                      .dwendtag $C$DW$TU$16
+     540              
+     541              
+     542              $C$DW$TU$17     .dwtag  DW_TAG_type_unit
+     543                      .dwmtype  $C$DW$T$17
+     544              $C$DW$T$17      .dwtag  DW_TAG_base_type
+     545                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     546                      .dwattr $C$DW$T$17, DW_AT_name("double")
+     547                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x04)
+     548              
+     549                      .dwendtag $C$DW$TU$17
+     550              
+     551              
+     552              $C$DW$TU$18     .dwtag  DW_TAG_type_unit
+     553                      .dwmtype  $C$DW$T$18
+     554              $C$DW$T$18      .dwtag  DW_TAG_base_type
+     555                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     556                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+     557                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+     558              
+     559                      .dwendtag $C$DW$TU$18
+     560              
+     561              
+     562              $C$DW$TU$24     .dwtag  DW_TAG_type_unit
+     563                      .dwmtype  $C$DW$T$24
+     564              $C$DW$T$24      .dwtag  DW_TAG_base_type
+     565                      .dwattr $C$DW$T$24, DW_AT_encoding(DW_ATE_unsigned_char)
+     566                      .dwattr $C$DW$T$24, DW_AT_name("unsigned char")
+     567                      .dwattr $C$DW$T$24, DW_AT_byte_size(0x01)
+     568              
+     569                      .dwendtag $C$DW$TU$24
+     570              
+     571              
+     572              $C$DW$TU$34     .dwtag  DW_TAG_type_unit
+     573                      .dwmtype  $C$DW$T$34
+     574              $C$DW$24        .dwtag  DW_TAG_TI_far_type
+     575                      .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$24)
+     576              
+     577              $C$DW$T$34      .dwtag  DW_TAG_const_type
+     578                      .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$24)
+     579              
+     580                      .dwendtag $C$DW$TU$34
+     581              
+
+No Assembly Errors, No Assembly Warnings

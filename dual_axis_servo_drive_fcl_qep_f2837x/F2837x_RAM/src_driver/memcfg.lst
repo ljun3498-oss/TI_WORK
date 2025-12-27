@@ -1,0 +1,2630 @@
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
+       3              ;* Date/Time created: Sat Dec 27 15:00:19 2025                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("../src_driver/memcfg.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f28
+      13              
+      14              $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                      .dwattr $C$DW$1, DW_AT_name("__eallow")
+      16                      .dwattr $C$DW$1, DW_AT_linkage_name("__eallow")
+      17                      .dwattr $C$DW$1, DW_AT_declaration
+      18                      .dwattr $C$DW$1, DW_AT_external
+      19                      .dwendtag $C$DW$1
+      20              
+      21              
+      22              $C$DW$2 .dwtag  DW_TAG_subprogram
+      23                      .dwattr $C$DW$2, DW_AT_name("__edis")
+      24                      .dwattr $C$DW$2, DW_AT_linkage_name("__edis")
+      25                      .dwattr $C$DW$2, DW_AT_declaration
+      26                      .dwattr $C$DW$2, DW_AT_external
+      27                      .dwendtag $C$DW$2
+      28              
+      29              ;       D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Te
+      30              ;       D:\TI\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\
+      31 00000000               .sect   ".text:MemCfg_unlockConfig"
+      32                      .clink
+      33                      .global ||MemCfg_unlockConfig||
+      34              
+      35              $C$DW$3 .dwtag  DW_TAG_subprogram
+      36                      .dwattr $C$DW$3, DW_AT_name("MemCfg_unlockConfig")
+      37                      .dwattr $C$DW$3, DW_AT_low_pc(||MemCfg_unlockConfig||)
+      38                      .dwattr $C$DW$3, DW_AT_high_pc(0x00)
+      39                      .dwattr $C$DW$3, DW_AT_linkage_name("MemCfg_unlockConfig")
+      40                      .dwattr $C$DW$3, DW_AT_external
+      41                      .dwattr $C$DW$3, DW_AT_decl_file("../src_driver/memcfg.c")
+      42                      .dwattr $C$DW$3, DW_AT_decl_line(0x71)
+      43                      .dwattr $C$DW$3, DW_AT_decl_column(0x01)
+      44                      .dwattr $C$DW$3, DW_AT_TI_max_frame_size(-2)
+      45                      .dwpsn  file "../src_driver/memcfg.c",line 114,column 1,is_stmt,address ||MemCfg_unlockConfig||,isa 0
+      46              
+      47                      .dwfde $C$DW$CIE, ||MemCfg_unlockConfig||
+      48              $C$DW$4 .dwtag  DW_TAG_formal_parameter
+      49                      .dwattr $C$DW$4, DW_AT_name("memSections")
+      50                      .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$29)
+      51                      .dwattr $C$DW$4, DW_AT_location[DW_OP_reg0]
+      52              
+      53              
+      54              ;***************************************************************
+      55              ;* FNAME: MemCfg_unlockConfig           FR SIZE:   0           *
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    2
+
+      56              ;*                                                             *
+      57              ;* FUNCTION ENVIRONMENT                                        *
+      58              ;*                                                             *
+      59              ;* FUNCTION PROPERTIES                                         *
+      60              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      61              ;***************************************************************
+      62              
+      63              ||MemCfg_unlockConfig||:
+      64              ;* AR6   assigned to memSections
+      65              $C$DW$5 .dwtag  DW_TAG_variable
+      66                      .dwattr $C$DW$5, DW_AT_name("memSections")
+      67                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$43)
+      68                      .dwattr $C$DW$5, DW_AT_location[DW_OP_reg16]
+      69              
+      70                      .dwcfi  cfa_offset, -2
+      71                      .dwcfi  save_reg_to_mem, 26, 0
+      72 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |114| 
+      73                      .dwpsn  file "../src_driver/memcfg.c",line 127,column 5,is_stmt,isa 0
+      74 00000001 7622          EALLOW    ; [CPU_ALU] |127| 
+      75 00000002 3B01          SETC      SXM                   ; [CPU_ALU] 
+      76                      .dwpsn  file "../src_driver/memcfg.c",line 129,column 5,is_stmt,isa 0
+      77 00000003 FF2F          MOV       ACC,#-512 << 15       ; [CPU_ALU] |129| 
+         00000004 FE00 
+      78 00000005 A3A6          MOVL      P,XAR6                ; [CPU_ALU] |129| 
+      79 00000006 18AB          AND       PL,#0                 ; [CPU_ALU] |129| 
+         00000007 0000 
+      80 00000008 18AA          AND       PH,#65280             ; [CPU_ALU] |129| 
+         00000009 FF00 
+      81 0000000a 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |129| 
+      82 0000000b 610C          B         ||$C$L1||,EQ          ; [CPU_ALU] |129| 
+      83                      ; branchcc occurs ; [] |129| 
+      84 0000000c A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+      85 0000000d 6122          B         ||$C$L4||,EQ          ; [CPU_ALU] |129| 
+      86                      ; branchcc occurs ; [] |129| 
+      87 0000000e FF2F          MOV       ACC,#512 << 15        ; [CPU_ALU] |129| 
+         0000000f 0200 
+      88 00000010 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |129| 
+      89 00000011 611B          B         ||$C$L3||,EQ          ; [CPU_ALU] |129| 
+      90                      ; branchcc occurs ; [] |129| 
+      91 00000012 FF2F          MOV       ACC,#1024 << 15       ; [CPU_ALU] |129| 
+         00000013 0400 
+      92 00000014 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |129| 
+      93 00000015 6114          B         ||$C$L2||,EQ          ; [CPU_ALU] |129| 
+      94                      ; branchcc occurs ; [] |129| 
+      95 00000016 6F23          B         ||$C$L6||,UNC         ; [CPU_ALU] |129| 
+      96                      ; branch occurs ; [] |129| 
+      97 00000017       ||$C$L1||:    
+      98                      .dwpsn  file "../src_driver/memcfg.c",line 151,column 13,is_stmt,isa 0
+      99 00000017 8F05          MOVL      XAR4,#390144          ; [CPU_ARAU] |151| 
+         00000018 F400 
+     100                      .dwpsn  file "../src_driver/memcfg.c",line 153,column 13,is_stmt,isa 0
+     101 00000019 8F45          MOVL      XAR5,#390176          ; [CPU_ARAU] |153| 
+         0000001a F420 
+     102                      .dwpsn  file "../src_driver/memcfg.c",line 151,column 13,is_stmt,isa 0
+     103 0000001b 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |151| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    3
+
+     104 0000001c 18A9          AND       AL,#65520             ; [CPU_ALU] |151| 
+         0000001d FFF0 
+     105 0000001e 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |151| 
+     106                      .dwpsn  file "../src_driver/memcfg.c",line 155,column 13,is_stmt,isa 0
+     107 0000001f 8F05          MOVL      XAR4,#390208          ; [CPU_ARAU] |155| 
+         00000020 F440 
+     108                      .dwpsn  file "../src_driver/memcfg.c",line 153,column 13,is_stmt,isa 0
+     109 00000021 06C5          MOVL      ACC,*+XAR5[0]         ; [CPU_ALU] |153| 
+     110 00000022 18A9          AND       AL,#65472             ; [CPU_ALU] |153| 
+         00000023 FFC0 
+     111 00000024 1EC5          MOVL      *+XAR5[0],ACC         ; [CPU_ALU] |153| 
+     112                      .dwpsn  file "../src_driver/memcfg.c",line 155,column 13,is_stmt,isa 0
+     113 00000025 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |155| 
+     114 00000026 9000          ANDB      AL,#0                 ; [CPU_ALU] |155| 
+     115 00000027 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |155| 
+     116                      .dwpsn  file "../src_driver/memcfg.c",line 157,column 13,is_stmt,isa 0
+     117 00000028 6F11          B         ||$C$L6||,UNC         ; [CPU_ALU] |157| 
+     118                      ; branch occurs ; [] |157| 
+     119 00000029       ||$C$L2||:    
+     120                      .dwpsn  file "../src_driver/memcfg.c",line 142,column 13,is_stmt,isa 0
+     121 00000029 8F05          MOVL      XAR4,#390208          ; [CPU_ARAU] |142| 
+         0000002a F440 
+     122                      .dwpsn  file "../src_driver/memcfg.c",line 144,column 13,is_stmt,isa 0
+     123 0000002b 6F06          B         ||$C$L5||,UNC         ; [CPU_ALU] |144| 
+     124                      ; branch occurs ; [] |144| 
+     125 0000002c       ||$C$L3||:    
+     126                      .dwpsn  file "../src_driver/memcfg.c",line 137,column 13,is_stmt,isa 0
+     127 0000002c 8F05          MOVL      XAR4,#390176          ; [CPU_ARAU] |137| 
+         0000002d F420 
+     128                      .dwpsn  file "../src_driver/memcfg.c",line 139,column 13,is_stmt,isa 0
+     129 0000002e 6F03          B         ||$C$L5||,UNC         ; [CPU_ALU] |139| 
+     130                      ; branch occurs ; [] |139| 
+     131 0000002f       ||$C$L4||:    
+     132                      .dwpsn  file "../src_driver/memcfg.c",line 132,column 13,is_stmt,isa 0
+     133 0000002f 8F05          MOVL      XAR4,#390144          ; [CPU_ARAU] |132| 
+         00000030 F400 
+     134 00000031       ||$C$L5||:    
+     135 00000031 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |132| 
+     136 00000032 1CA9          XOR       AL,#65535             ; [CPU_ALU] |132| 
+         00000033 FFFF 
+     137 00000034 F1FF          XOR       AH,#255               ; [CPU_ALU] |132| 
+     138 00000035 C0C4          AND       *+XAR4[0],AL          ; [CPU_FPU] |132| 
+     139 00000036 1AA8          OR        AH,#65280             ; [CPU_ALU] |132| 
+         00000037 FF00 
+     140 00000038 C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |132| 
+     141 00000039       ||$C$L6||:    
+     142                      .dwpsn  file "../src_driver/memcfg.c",line 167,column 5,is_stmt,isa 0
+     143 00000039 761A          EDIS      ; [CPU_ALU] |167| 
+     144              $C$DW$6 .dwtag  DW_TAG_TI_branch
+     145                      .dwattr $C$DW$6, DW_AT_low_pc(0x00)
+     146                      .dwattr $C$DW$6, DW_AT_TI_return
+     147              
+     148 0000003a 0006          LRETR     ; [CPU_ALU] 
+     149                      ; return occurs ; [] 
+     150                      .dwattr $C$DW$3, DW_AT_TI_end_file("../src_driver/memcfg.c")
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    4
+
+     151                      .dwattr $C$DW$3, DW_AT_TI_end_line(0xa8)
+     152                      .dwattr $C$DW$3, DW_AT_TI_end_column(0x01)
+     153                      .dwendentry
+     154                      .dwendtag $C$DW$3
+     155              
+     156 00000000               .sect   ".text:MemCfg_setTestMode"
+     157                      .clink
+     158                      .global ||MemCfg_setTestMode||
+     159              
+     160              $C$DW$7 .dwtag  DW_TAG_subprogram
+     161                      .dwattr $C$DW$7, DW_AT_name("MemCfg_setTestMode")
+     162                      .dwattr $C$DW$7, DW_AT_low_pc(||MemCfg_setTestMode||)
+     163                      .dwattr $C$DW$7, DW_AT_high_pc(0x00)
+     164                      .dwattr $C$DW$7, DW_AT_linkage_name("MemCfg_setTestMode")
+     165                      .dwattr $C$DW$7, DW_AT_external
+     166                      .dwattr $C$DW$7, DW_AT_decl_file("../src_driver/memcfg.c")
+     167                      .dwattr $C$DW$7, DW_AT_decl_line(0x18b)
+     168                      .dwattr $C$DW$7, DW_AT_decl_column(0x01)
+     169                      .dwattr $C$DW$7, DW_AT_TI_max_frame_size(-2)
+     170                      .dwpsn  file "../src_driver/memcfg.c",line 396,column 1,is_stmt,address ||MemCfg_setTestMode||,isa 0
+     171              
+     172                      .dwfde $C$DW$CIE, ||MemCfg_setTestMode||
+     173              $C$DW$8 .dwtag  DW_TAG_formal_parameter
+     174                      .dwattr $C$DW$8, DW_AT_name("memSection")
+     175                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$29)
+     176                      .dwattr $C$DW$8, DW_AT_location[DW_OP_reg0]
+     177              
+     178              $C$DW$9 .dwtag  DW_TAG_formal_parameter
+     179                      .dwattr $C$DW$9, DW_AT_name("testMode")
+     180                      .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$26)
+     181                      .dwattr $C$DW$9, DW_AT_location[DW_OP_reg12]
+     182              
+     183              
+     184              ;***************************************************************
+     185              ;* FNAME: MemCfg_setTestMode            FR SIZE:   0           *
+     186              ;*                                                             *
+     187              ;* FUNCTION ENVIRONMENT                                        *
+     188              ;*                                                             *
+     189              ;* FUNCTION PROPERTIES                                         *
+     190              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     191              ;***************************************************************
+     192              
+     193              ||MemCfg_setTestMode||:
+     194              ;* AR6   assigned to memSection
+     195              $C$DW$10        .dwtag  DW_TAG_variable
+     196                      .dwattr $C$DW$10, DW_AT_name("memSection")
+     197                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$43)
+     198                      .dwattr $C$DW$10, DW_AT_location[DW_OP_reg16]
+     199              
+     200              ;* AR4   assigned to testMode
+     201              $C$DW$11        .dwtag  DW_TAG_variable
+     202                      .dwattr $C$DW$11, DW_AT_name("testMode")
+     203                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$27)
+     204                      .dwattr $C$DW$11, DW_AT_location[DW_OP_reg12]
+     205              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    5
+
+     206              ;* AR5   assigned to shiftVal
+     207              $C$DW$12        .dwtag  DW_TAG_variable
+     208                      .dwattr $C$DW$12, DW_AT_name("shiftVal")
+     209                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$29)
+     210                      .dwattr $C$DW$12, DW_AT_location[DW_OP_reg14]
+     211              
+     212              ;* AR7   assigned to maskVal
+     213              $C$DW$13        .dwtag  DW_TAG_variable
+     214                      .dwattr $C$DW$13, DW_AT_name("maskVal")
+     215                      .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$29)
+     216                      .dwattr $C$DW$13, DW_AT_location[DW_OP_reg18]
+     217              
+     218              ;* PL    assigned to regVal
+     219              $C$DW$14        .dwtag  DW_TAG_variable
+     220                      .dwattr $C$DW$14, DW_AT_name("regVal")
+     221                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$29)
+     222                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg2]
+     223              
+     224              ;* PL    assigned to sectionNum
+     225              $C$DW$15        .dwtag  DW_TAG_variable
+     226                      .dwattr $C$DW$15, DW_AT_name("sectionNum")
+     227                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$29)
+     228                      .dwattr $C$DW$15, DW_AT_location[DW_OP_reg2]
+     229              
+     230                      .dwcfi  cfa_offset, -2
+     231                      .dwcfi  save_reg_to_mem, 26, 0
+     232 00000000 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |396| 
+     233 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |396| 
+     234                      .dwpsn  file "../src_driver/memcfg.c",line 415,column 5,is_stmt,isa 0
+     235 00000002 18AA          AND       PH,#255               ; [CPU_ALU] |415| 
+         00000003 00FF 
+     236                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     237 00000004 0201          MOVB      ACC,#1                ; [CPU_ALU] |417| 
+     238                      .dwpsn  file "../src_driver/memcfg.c",line 397,column 23,is_stmt,isa 0
+     239 00000005 D500          MOVB      XAR5,#0               ; [CPU_ALU] |397| 
+     240                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     241 00000006 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     242 00000007 613A          B         ||$C$L8||,EQ          ; [CPU_ALU] |417| 
+     243                      ; branchcc occurs ; [] |417| 
+     244 00000008 2901          CLRC      SXM                   ; [CPU_ALU] 
+     245 00000009       ||$C$L7||:    
+     246 00000009 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     247                      .dwpsn  file "../src_driver/memcfg.c",line 420,column 9,is_stmt,isa 0
+     248 0000000a DD02          ADDB      XAR5,#2               ; [CPU_ALU] |420| 
+     249                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     250 0000000b FF40          SFR       ACC,1                 ; [CPU_ALU] |417| 
+     251 0000000c FF5A          MOVL      P,ACC                 ; [CPU_FPU] |417| 
+     252 0000000d 0201          MOVB      ACC,#1                ; [CPU_FPU] |417| 
+     253 0000000e 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     254 0000000f 6132          B         ||$C$L8||,EQ          ; [CPU_ALU] |417| 
+     255                      ; branchcc occurs ; [] |417| 
+     256 00000010 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     257                      .dwpsn  file "../src_driver/memcfg.c",line 420,column 9,is_stmt,isa 0
+     258 00000011 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |420| 
+     259                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    6
+
+     260 00000012 FF40          SFR       ACC,1                 ; [CPU_ALU] |417| 
+     261 00000013 FF5A          MOVL      P,ACC                 ; [CPU_FPU] |417| 
+     262 00000014 0201          MOVB      ACC,#1                ; [CPU_FPU] |417| 
+     263 00000015 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     264 00000016 612B          B         ||$C$L8||,EQ          ; [CPU_ALU] |417| 
+     265                      ; branchcc occurs ; [] |417| 
+     266 00000017 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     267                      .dwpsn  file "../src_driver/memcfg.c",line 420,column 9,is_stmt,isa 0
+     268 00000018 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |420| 
+     269                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     270 00000019 FF40          SFR       ACC,1                 ; [CPU_ALU] |417| 
+     271 0000001a FF5A          MOVL      P,ACC                 ; [CPU_FPU] |417| 
+     272 0000001b 0201          MOVB      ACC,#1                ; [CPU_FPU] |417| 
+     273 0000001c 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     274 0000001d 6124          B         ||$C$L8||,EQ          ; [CPU_ALU] |417| 
+     275                      ; branchcc occurs ; [] |417| 
+     276 0000001e A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     277                      .dwpsn  file "../src_driver/memcfg.c",line 420,column 9,is_stmt,isa 0
+     278 0000001f DD02          ADDB      XAR5,#2               ; [CPU_ALU] |420| 
+     279                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     280 00000020 FF40          SFR       ACC,1                 ; [CPU_ALU] |417| 
+     281 00000021 FF5A          MOVL      P,ACC                 ; [CPU_FPU] |417| 
+     282 00000022 0201          MOVB      ACC,#1                ; [CPU_FPU] |417| 
+     283 00000023 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     284 00000024 611D          B         ||$C$L8||,EQ          ; [CPU_ALU] |417| 
+     285                      ; branchcc occurs ; [] |417| 
+     286 00000025 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     287                      .dwpsn  file "../src_driver/memcfg.c",line 420,column 9,is_stmt,isa 0
+     288 00000026 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |420| 
+     289                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     290 00000027 FF40          SFR       ACC,1                 ; [CPU_ALU] |417| 
+     291 00000028 FF5A          MOVL      P,ACC                 ; [CPU_FPU] |417| 
+     292 00000029 0201          MOVB      ACC,#1                ; [CPU_FPU] |417| 
+     293 0000002a 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     294 0000002b 6116          B         ||$C$L8||,EQ          ; [CPU_ALU] |417| 
+     295                      ; branchcc occurs ; [] |417| 
+     296 0000002c A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     297                      .dwpsn  file "../src_driver/memcfg.c",line 420,column 9,is_stmt,isa 0
+     298 0000002d DD02          ADDB      XAR5,#2               ; [CPU_ALU] |420| 
+     299                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     300 0000002e FF40          SFR       ACC,1                 ; [CPU_ALU] |417| 
+     301 0000002f FF5A          MOVL      P,ACC                 ; [CPU_FPU] |417| 
+     302 00000030 0201          MOVB      ACC,#1                ; [CPU_FPU] |417| 
+     303 00000031 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     304 00000032 610F          B         ||$C$L8||,EQ          ; [CPU_ALU] |417| 
+     305                      ; branchcc occurs ; [] |417| 
+     306 00000033 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     307                      .dwpsn  file "../src_driver/memcfg.c",line 420,column 9,is_stmt,isa 0
+     308 00000034 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |420| 
+     309                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     310 00000035 FF40          SFR       ACC,1                 ; [CPU_ALU] |417| 
+     311 00000036 FF5A          MOVL      P,ACC                 ; [CPU_FPU] |417| 
+     312 00000037 0201          MOVB      ACC,#1                ; [CPU_FPU] |417| 
+     313 00000038 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     314 00000039 6108          B         ||$C$L8||,EQ          ; [CPU_ALU] |417| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    7
+
+     315                      ; branchcc occurs ; [] |417| 
+     316 0000003a A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     317                      .dwpsn  file "../src_driver/memcfg.c",line 420,column 9,is_stmt,isa 0
+     318 0000003b DD02          ADDB      XAR5,#2               ; [CPU_ALU] |420| 
+     319                      .dwpsn  file "../src_driver/memcfg.c",line 417,column 11,is_stmt,isa 0
+     320 0000003c FF40          SFR       ACC,1                 ; [CPU_ALU] |417| 
+     321 0000003d FF5A          MOVL      P,ACC                 ; [CPU_FPU] |417| 
+     322 0000003e 0201          MOVB      ACC,#1                ; [CPU_FPU] |417| 
+     323 0000003f 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |417| 
+     324 00000040 60C9          B         ||$C$L7||,NEQ         ; [CPU_ALU] |417| 
+     325                      ; branchcc occurs ; [] |417| 
+     326 00000041       ||$C$L8||:    
+     327                      .dwpsn  file "../src_driver/memcfg.c",line 423,column 5,is_stmt,isa 0
+     328 00000041 2DA5          MOV       T,AR5                 ; [CPU_ALU] |423| 
+     329 00000042 0203          MOVB      ACC,#3                ; [CPU_ALU] |423| 
+     330 00000043 563B          LSLL      ACC,T                 ; [CPU_ALU] |423| 
+     331 00000044 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |423| 
+     332                      .dwpsn  file "../src_driver/memcfg.c",line 424,column 5,is_stmt,isa 0
+     333 00000045 0EA4          MOVU      ACC,AR4               ; [CPU_ALU] |424| 
+     334 00000046 563B          LSLL      ACC,T                 ; [CPU_ALU] |424| 
+     335 00000047 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |424| 
+     336                      .dwpsn  file "../src_driver/memcfg.c",line 429,column 5,is_stmt,isa 0
+     337 00000048 7622          EALLOW    ; [CPU_ALU] |429| 
+     338                      .dwpsn  file "../src_driver/memcfg.c",line 431,column 5,is_stmt,isa 0
+     339 00000049 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |431| 
+     340 0000004a 9000          ANDB      AL,#0                 ; [CPU_ALU] |431| 
+     341 0000004b 18A8          AND       AH,#65280             ; [CPU_ALU] |431| 
+         0000004c FF00 
+     342 0000004d 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |431| 
+     343 0000004e FF58          TEST      ACC                   ; [CPU_ALU] |431| 
+     344 0000004f 611C          B         ||$C$L11||,EQ         ; [CPU_ALU] |431| 
+     345                      ; branchcc occurs ; [] |431| 
+     346 00000050 FF2F          MOV       ACC,#512 << 15        ; [CPU_ALU] |431| 
+         00000051 0200 
+     347 00000052 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |431| 
+     348 00000053 6113          B         ||$C$L10||,EQ         ; [CPU_ALU] |431| 
+     349                      ; branchcc occurs ; [] |431| 
+     350 00000054 FF2F          MOV       ACC,#1024 << 15       ; [CPU_ALU] |431| 
+         00000055 0400 
+     351 00000056 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |431| 
+     352 00000057 610A          B         ||$C$L9||,EQ          ; [CPU_ALU] |431| 
+     353                      ; branchcc occurs ; [] |431| 
+     354 00000058 FF2F          MOV       ACC,#1536 << 15       ; [CPU_ALU] |431| 
+         00000059 0600 
+     355 0000005a 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |431| 
+     356 0000005b 601C          B         ||$C$L13||,NEQ        ; [CPU_ALU] |431| 
+     357                      ; branchcc occurs ; [] |431| 
+     358                      .dwpsn  file "../src_driver/memcfg.c",line 449,column 13,is_stmt,isa 0
+     359 0000005c 8F45          MOVL      XAR5,#390256          ; [CPU_ARAU] |449| 
+         0000005d F470 
+     360                      .dwpsn  file "../src_driver/memcfg.c",line 450,column 13,is_stmt,isa 0
+     361 0000005e 8F05          MOVL      XAR4,#390256          ; [CPU_ARAU] |450| 
+         0000005f F470 
+     362                      .dwpsn  file "../src_driver/memcfg.c",line 451,column 13,is_stmt,isa 0
+     363 00000060 6F0F          B         ||$C$L12||,UNC        ; [CPU_ALU] |451| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    8
+
+     364                      ; branch occurs ; [] |451| 
+     365 00000061       ||$C$L9||:    
+     366                      .dwpsn  file "../src_driver/memcfg.c",line 444,column 13,is_stmt,isa 0
+     367 00000061 8F45          MOVL      XAR5,#390224          ; [CPU_ARAU] |444| 
+         00000062 F450 
+     368                      .dwpsn  file "../src_driver/memcfg.c",line 445,column 13,is_stmt,isa 0
+     369 00000063 8F05          MOVL      XAR4,#390224          ; [CPU_ARAU] |445| 
+         00000064 F450 
+     370                      .dwpsn  file "../src_driver/memcfg.c",line 446,column 13,is_stmt,isa 0
+     371 00000065 6F0A          B         ||$C$L12||,UNC        ; [CPU_ALU] |446| 
+     372                      ; branch occurs ; [] |446| 
+     373 00000066       ||$C$L10||:    
+     374                      .dwpsn  file "../src_driver/memcfg.c",line 439,column 13,is_stmt,isa 0
+     375 00000066 8F45          MOVL      XAR5,#390192          ; [CPU_ARAU] |439| 
+         00000067 F430 
+     376                      .dwpsn  file "../src_driver/memcfg.c",line 440,column 13,is_stmt,isa 0
+     377 00000068 8F05          MOVL      XAR4,#390192          ; [CPU_ARAU] |440| 
+         00000069 F430 
+     378                      .dwpsn  file "../src_driver/memcfg.c",line 441,column 13,is_stmt,isa 0
+     379 0000006a 6F05          B         ||$C$L12||,UNC        ; [CPU_ALU] |441| 
+     380                      ; branch occurs ; [] |441| 
+     381 0000006b       ||$C$L11||:    
+     382                      .dwpsn  file "../src_driver/memcfg.c",line 434,column 13,is_stmt,isa 0
+     383 0000006b 8F45          MOVL      XAR5,#390160          ; [CPU_ARAU] |434| 
+         0000006c F410 
+     384                      .dwpsn  file "../src_driver/memcfg.c",line 435,column 13,is_stmt,isa 0
+     385 0000006d 8F05          MOVL      XAR4,#390160          ; [CPU_ARAU] |435| 
+         0000006e F410 
+     386 0000006f       ||$C$L12||:    
+     387                      .dwpsn  file "../src_driver/memcfg.c",line 434,column 13,is_stmt,isa 0
+     388 0000006f 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] |434| 
+     389 00000070 FF55          NOT       ACC                   ; [CPU_ALU] |434| 
+     390 00000071 C0C5          AND       *+XAR5[0],AL          ; [CPU_ALU] |434| 
+     391 00000072 92AB          MOV       AL,PL                 ; [CPU_ALU] |434| 
+     392 00000073 C1CD          AND       *+XAR5[1],AH          ; [CPU_ALU] |434| 
+     393                      .dwpsn  file "../src_driver/memcfg.c",line 435,column 13,is_stmt,isa 0
+     394 00000074 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |435| 
+     395 00000075 92AA          MOV       AL,PH                 ; [CPU_ALU] |435| 
+     396 00000076 98CC          OR        *+XAR4[1],AL          ; [CPU_ALU] |435| 
+     397 00000077       ||$C$L13||:    
+     398                      .dwpsn  file "../src_driver/memcfg.c",line 460,column 5,is_stmt,isa 0
+     399 00000077 761A          EDIS      ; [CPU_ALU] |460| 
+     400              $C$DW$16        .dwtag  DW_TAG_TI_branch
+     401                      .dwattr $C$DW$16, DW_AT_low_pc(0x00)
+     402                      .dwattr $C$DW$16, DW_AT_TI_return
+     403              
+     404 00000078 0006          LRETR     ; [CPU_ALU] 
+     405                      ; return occurs ; [] 
+     406                      .dwattr $C$DW$7, DW_AT_TI_end_file("../src_driver/memcfg.c")
+     407                      .dwattr $C$DW$7, DW_AT_TI_end_line(0x1cd)
+     408                      .dwattr $C$DW$7, DW_AT_TI_end_column(0x01)
+     409                      .dwendentry
+     410                      .dwendtag $C$DW$7
+     411              
+     412 00000000               .sect   ".text:MemCfg_setProtection"
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE    9
+
+     413                      .clink
+     414                      .global ||MemCfg_setProtection||
+     415              
+     416              $C$DW$17        .dwtag  DW_TAG_subprogram
+     417                      .dwattr $C$DW$17, DW_AT_name("MemCfg_setProtection")
+     418                      .dwattr $C$DW$17, DW_AT_low_pc(||MemCfg_setProtection||)
+     419                      .dwattr $C$DW$17, DW_AT_high_pc(0x00)
+     420                      .dwattr $C$DW$17, DW_AT_linkage_name("MemCfg_setProtection")
+     421                      .dwattr $C$DW$17, DW_AT_external
+     422                      .dwattr $C$DW$17, DW_AT_decl_file("../src_driver/memcfg.c")
+     423                      .dwattr $C$DW$17, DW_AT_decl_line(0xef)
+     424                      .dwattr $C$DW$17, DW_AT_decl_column(0x01)
+     425                      .dwattr $C$DW$17, DW_AT_TI_max_frame_size(-2)
+     426                      .dwpsn  file "../src_driver/memcfg.c",line 240,column 1,is_stmt,address ||MemCfg_setProtection||,isa 
+     427              
+     428                      .dwfde $C$DW$CIE, ||MemCfg_setProtection||
+     429              $C$DW$18        .dwtag  DW_TAG_formal_parameter
+     430                      .dwattr $C$DW$18, DW_AT_name("memSection")
+     431                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$29)
+     432                      .dwattr $C$DW$18, DW_AT_location[DW_OP_reg0]
+     433              
+     434              $C$DW$19        .dwtag  DW_TAG_formal_parameter
+     435                      .dwattr $C$DW$19, DW_AT_name("protectMode")
+     436                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$29)
+     437                      .dwattr $C$DW$19, DW_AT_location[DW_OP_breg20 -4]
+     438              
+     439              
+     440              ;***************************************************************
+     441              ;* FNAME: MemCfg_setProtection          FR SIZE:   0           *
+     442              ;*                                                             *
+     443              ;* FUNCTION ENVIRONMENT                                        *
+     444              ;*                                                             *
+     445              ;* FUNCTION PROPERTIES                                         *
+     446              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     447              ;***************************************************************
+     448              
+     449              ||MemCfg_setProtection||:
+     450              ;* AR4   assigned to $O$C1
+     451              ;* AR6   assigned to memSection
+     452              $C$DW$20        .dwtag  DW_TAG_variable
+     453                      .dwattr $C$DW$20, DW_AT_name("memSection")
+     454                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$43)
+     455                      .dwattr $C$DW$20, DW_AT_location[DW_OP_reg16]
+     456              
+     457              ;* AR4   assigned to protectMode
+     458              $C$DW$21        .dwtag  DW_TAG_variable
+     459                      .dwattr $C$DW$21, DW_AT_name("protectMode")
+     460                      .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$43)
+     461                      .dwattr $C$DW$21, DW_AT_location[DW_OP_reg12]
+     462              
+     463              ;* PL    assigned to shiftVal
+     464              $C$DW$22        .dwtag  DW_TAG_variable
+     465                      .dwattr $C$DW$22, DW_AT_name("shiftVal")
+     466                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$29)
+     467                      .dwattr $C$DW$22, DW_AT_location[DW_OP_reg2]
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   10
+
+     468              
+     469              ;* AR5   assigned to maskVal
+     470              $C$DW$23        .dwtag  DW_TAG_variable
+     471                      .dwattr $C$DW$23, DW_AT_name("maskVal")
+     472                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$29)
+     473                      .dwattr $C$DW$23, DW_AT_location[DW_OP_reg14]
+     474              
+     475              ;* PL    assigned to regVal
+     476              $C$DW$24        .dwtag  DW_TAG_variable
+     477                      .dwattr $C$DW$24, DW_AT_name("regVal")
+     478                      .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$29)
+     479                      .dwattr $C$DW$24, DW_AT_location[DW_OP_reg2]
+     480              
+     481              ;* AR7   assigned to sectionNum
+     482              $C$DW$25        .dwtag  DW_TAG_variable
+     483                      .dwattr $C$DW$25, DW_AT_name("sectionNum")
+     484                      .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$29)
+     485                      .dwattr $C$DW$25, DW_AT_location[DW_OP_reg18]
+     486              
+     487              ;* AR7   assigned to regOffset
+     488              $C$DW$26        .dwtag  DW_TAG_variable
+     489                      .dwattr $C$DW$26, DW_AT_name("regOffset")
+     490                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$29)
+     491                      .dwattr $C$DW$26, DW_AT_location[DW_OP_reg18]
+     492              
+     493                      .dwcfi  cfa_offset, -2
+     494                      .dwcfi  save_reg_to_mem, 26, 0
+     495 00000000 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |240| 
+     496 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |240| 
+     497                      .dwpsn  file "../src_driver/memcfg.c",line 259,column 5,is_stmt,isa 0
+     498 00000002 18AA          AND       PH,#255               ; [CPU_ALU] |259| 
+         00000003 00FF 
+     499 00000004 A9A7          MOVL      XAR7,P                ; [CPU_ALU] |259| 
+     500                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     501 00000005 0201          MOVB      ACC,#1                ; [CPU_ALU] |261| 
+     502                      .dwpsn  file "../src_driver/memcfg.c",line 240,column 1,is_stmt,isa 0
+     503 00000006 8A44          MOVL      XAR4,*-SP[4]          ; [CPU_ALU] |240| 
+     504                      .dwpsn  file "../src_driver/memcfg.c",line 241,column 23,is_stmt,isa 0
+     505 00000007 3100          MOV       P,#0                  ; [CPU_ALU] |241| 
+     506                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     507 00000008 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     508 00000009 6143          B         ||$C$L15||,EQ         ; [CPU_ALU] |261| 
+     509                      ; branchcc occurs ; [] |261| 
+     510 0000000a 2901          CLRC      SXM                   ; [CPU_ALU] 
+     511 0000000b       ||$C$L14||:    
+     512 0000000b A9A5          MOVL      XAR5,P                ; [CPU_ALU] |261| 
+     513 0000000c 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] 
+     514 0000000d FF40          SFR       ACC,1                 ; [CPU_ALU] |261| 
+     515 0000000e 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |261| 
+     516                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     517 0000000f DD08          ADDB      XAR5,#8               ; [CPU_ALU] |264| 
+     518                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     519 00000010 0201          MOVB      ACC,#1                ; [CPU_FPU] |261| 
+     520                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     521 00000011 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |264| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   11
+
+     522                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     523 00000012 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     524 00000013 6139          B         ||$C$L15||,EQ         ; [CPU_ALU] |261| 
+     525                      ; branchcc occurs ; [] |261| 
+     526 00000014 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] 
+     527 00000015 FF40          SFR       ACC,1                 ; [CPU_ALU] |261| 
+     528 00000016 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |261| 
+     529                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     530 00000017 DD08          ADDB      XAR5,#8               ; [CPU_ALU] |264| 
+     531 00000018 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |264| 
+     532                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     533 00000019 0201          MOVB      ACC,#1                ; [CPU_ALU] |261| 
+     534 0000001a 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     535 0000001b 6131          B         ||$C$L15||,EQ         ; [CPU_ALU] |261| 
+     536                      ; branchcc occurs ; [] |261| 
+     537 0000001c 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] 
+     538 0000001d FF40          SFR       ACC,1                 ; [CPU_ALU] |261| 
+     539 0000001e 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |261| 
+     540                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     541 0000001f DD08          ADDB      XAR5,#8               ; [CPU_ALU] |264| 
+     542 00000020 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |264| 
+     543                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     544 00000021 0201          MOVB      ACC,#1                ; [CPU_ALU] |261| 
+     545 00000022 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     546 00000023 6129          B         ||$C$L15||,EQ         ; [CPU_ALU] |261| 
+     547                      ; branchcc occurs ; [] |261| 
+     548 00000024 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] 
+     549 00000025 FF40          SFR       ACC,1                 ; [CPU_ALU] |261| 
+     550 00000026 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |261| 
+     551                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     552 00000027 DD08          ADDB      XAR5,#8               ; [CPU_ALU] |264| 
+     553 00000028 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |264| 
+     554                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     555 00000029 0201          MOVB      ACC,#1                ; [CPU_ALU] |261| 
+     556 0000002a 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     557 0000002b 6121          B         ||$C$L15||,EQ         ; [CPU_ALU] |261| 
+     558                      ; branchcc occurs ; [] |261| 
+     559 0000002c 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] 
+     560 0000002d FF40          SFR       ACC,1                 ; [CPU_ALU] |261| 
+     561 0000002e 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |261| 
+     562                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     563 0000002f DD08          ADDB      XAR5,#8               ; [CPU_ALU] |264| 
+     564 00000030 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |264| 
+     565                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     566 00000031 0201          MOVB      ACC,#1                ; [CPU_ALU] |261| 
+     567 00000032 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     568 00000033 6119          B         ||$C$L15||,EQ         ; [CPU_ALU] |261| 
+     569                      ; branchcc occurs ; [] |261| 
+     570 00000034 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] 
+     571 00000035 FF40          SFR       ACC,1                 ; [CPU_ALU] |261| 
+     572 00000036 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |261| 
+     573                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     574 00000037 DD08          ADDB      XAR5,#8               ; [CPU_ALU] |264| 
+     575 00000038 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |264| 
+     576                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   12
+
+     577 00000039 0201          MOVB      ACC,#1                ; [CPU_ALU] |261| 
+     578 0000003a 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     579 0000003b 6111          B         ||$C$L15||,EQ         ; [CPU_ALU] |261| 
+     580                      ; branchcc occurs ; [] |261| 
+     581 0000003c 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] 
+     582 0000003d FF40          SFR       ACC,1                 ; [CPU_ALU] |261| 
+     583 0000003e 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |261| 
+     584                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     585 0000003f DD08          ADDB      XAR5,#8               ; [CPU_ALU] |264| 
+     586 00000040 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |264| 
+     587                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     588 00000041 0201          MOVB      ACC,#1                ; [CPU_ALU] |261| 
+     589 00000042 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     590 00000043 6109          B         ||$C$L15||,EQ         ; [CPU_ALU] |261| 
+     591                      ; branchcc occurs ; [] |261| 
+     592 00000044 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] 
+     593 00000045 FF40          SFR       ACC,1                 ; [CPU_ALU] |261| 
+     594 00000046 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |261| 
+     595                      .dwpsn  file "../src_driver/memcfg.c",line 264,column 9,is_stmt,isa 0
+     596 00000047 DD08          ADDB      XAR5,#8               ; [CPU_ALU] |264| 
+     597 00000048 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |264| 
+     598                      .dwpsn  file "../src_driver/memcfg.c",line 261,column 11,is_stmt,isa 0
+     599 00000049 0201          MOVB      ACC,#1                ; [CPU_ALU] |261| 
+     600 0000004a 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |261| 
+     601 0000004b 60C0          B         ||$C$L14||,NEQ        ; [CPU_ALU] |261| 
+     602                      ; branchcc occurs ; [] |261| 
+     603 0000004c       ||$C$L15||:    
+     604 0000004c A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+     605 0000004d 2901          CLRC      SXM                   ; [CPU_ALU] 
+     606                      .dwpsn  file "../src_driver/memcfg.c",line 271,column 5,is_stmt,isa 0
+     607 0000004e FF43          SFR       ACC,4                 ; [CPU_ALU] |271| 
+     608 0000004f 18A9          AND       AL,#4094              ; [CPU_ALU] |271| 
+         00000050 0FFE 
+     609 00000051 9100          ANDB      AH,#0                 ; [CPU_ALU] |271| 
+     610 00000052 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |271| 
+     611 00000053 92AB          MOV       AL,PL                 ; [CPU_ALU] |271| 
+     612                      .dwpsn  file "../src_driver/memcfg.c",line 273,column 5,is_stmt,isa 0
+     613 00000054 901F          ANDB      AL,#0x1f              ; [CPU_ALU] |273| 
+     614 00000055 2DA9          MOV       T,AL                  ; [CPU_ALU] |273| 
+     615 00000056 0207          MOVB      ACC,#7                ; [CPU_ALU] |273| 
+     616 00000057 563B          LSLL      ACC,T                 ; [CPU_ALU] |273| 
+     617 00000058 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |273| 
+     618                      .dwpsn  file "../src_driver/memcfg.c",line 274,column 5,is_stmt,isa 0
+     619 00000059 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |274| 
+     620 0000005a 563B          LSLL      ACC,T                 ; [CPU_ALU] |274| 
+     621 0000005b FF5A          MOVL      P,ACC                 ; [CPU_ALU] |274| 
+     622                      .dwpsn  file "../src_driver/memcfg.c",line 279,column 5,is_stmt,isa 0
+     623 0000005c 7622          EALLOW    ; [CPU_ALU] |279| 
+     624                      .dwpsn  file "../src_driver/memcfg.c",line 281,column 5,is_stmt,isa 0
+     625 0000005d 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |281| 
+     626 0000005e 9000          ANDB      AL,#0                 ; [CPU_ALU] |281| 
+     627 0000005f 18A8          AND       AH,#65280             ; [CPU_ALU] |281| 
+         00000060 FF00 
+     628 00000061 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |281| 
+     629 00000062 FF58          TEST      ACC                   ; [CPU_ALU] |281| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   13
+
+     630 00000063 610F          B         ||$C$L17||,EQ         ; [CPU_ALU] |281| 
+     631                      ; branchcc occurs ; [] |281| 
+     632 00000064 FF2F          MOV       ACC,#512 << 15        ; [CPU_ALU] |281| 
+         00000065 0200 
+     633 00000066 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |281| 
+     634 00000067 6108          B         ||$C$L16||,EQ         ; [CPU_ALU] |281| 
+     635                      ; branchcc occurs ; [] |281| 
+     636 00000068 FF2F          MOV       ACC,#1024 << 15       ; [CPU_ALU] |281| 
+         00000069 0400 
+     637 0000006a 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |281| 
+     638 0000006b 6014          B         ||$C$L19||,NEQ        ; [CPU_ALU] |281| 
+     639                      ; branchcc occurs ; [] |281| 
+     640                      .dwpsn  file "../src_driver/memcfg.c",line 294,column 13,is_stmt,isa 0
+     641 0000006c 8F05          MOVL      XAR4,#390216          ; [CPU_ARAU] |294| 
+         0000006d F448 
+     642                      .dwpsn  file "../src_driver/memcfg.c",line 296,column 13,is_stmt,isa 0
+     643 0000006e 6F06          B         ||$C$L18||,UNC        ; [CPU_ALU] |296| 
+     644                      ; branch occurs ; [] |296| 
+     645 0000006f       ||$C$L16||:    
+     646                      .dwpsn  file "../src_driver/memcfg.c",line 289,column 13,is_stmt,isa 0
+     647 0000006f 8F05          MOVL      XAR4,#390184          ; [CPU_ARAU] |289| 
+         00000070 F428 
+     648                      .dwpsn  file "../src_driver/memcfg.c",line 291,column 13,is_stmt,isa 0
+     649 00000071 6F03          B         ||$C$L18||,UNC        ; [CPU_ALU] |291| 
+     650                      ; branch occurs ; [] |291| 
+     651 00000072       ||$C$L17||:    
+     652                      .dwpsn  file "../src_driver/memcfg.c",line 284,column 13,is_stmt,isa 0
+     653 00000072 8F05          MOVL      XAR4,#390152          ; [CPU_ARAU] |284| 
+         00000073 F408 
+     654 00000074       ||$C$L18||:    
+     655 00000074 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] |284| 
+     656 00000075 5601          ADDL      XAR4,ACC              ; [CPU_ALU] |284| 
+         00000076 00A4 
+     657 00000077 A0A9          MOVL      ACC,XAR5              ; [CPU_ALU] |284| 
+     658 00000078 FF55          NOT       ACC                   ; [CPU_ALU] |284| 
+     659 00000079 C0C4          AND       *+XAR4[0],AL          ; [CPU_ALU] |284| 
+     660 0000007a 92AB          MOV       AL,PL                 ; [CPU_ALU] |284| 
+     661 0000007b C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |284| 
+     662                      .dwpsn  file "../src_driver/memcfg.c",line 285,column 13,is_stmt,isa 0
+     663 0000007c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |285| 
+     664 0000007d 92AA          MOV       AL,PH                 ; [CPU_ALU] |285| 
+     665 0000007e 98CC          OR        *+XAR4[1],AL          ; [CPU_ALU] |285| 
+     666 0000007f       ||$C$L19||:    
+     667                      .dwpsn  file "../src_driver/memcfg.c",line 306,column 5,is_stmt,isa 0
+     668 0000007f 761A          EDIS      ; [CPU_ALU] |306| 
+     669              $C$DW$27        .dwtag  DW_TAG_TI_branch
+     670                      .dwattr $C$DW$27, DW_AT_low_pc(0x00)
+     671                      .dwattr $C$DW$27, DW_AT_TI_return
+     672              
+     673 00000080 0006          LRETR     ; [CPU_ALU] 
+     674                      ; return occurs ; [] 
+     675                      .dwattr $C$DW$17, DW_AT_TI_end_file("../src_driver/memcfg.c")
+     676                      .dwattr $C$DW$17, DW_AT_TI_end_line(0x133)
+     677                      .dwattr $C$DW$17, DW_AT_TI_end_column(0x01)
+     678                      .dwendentry
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   14
+
+     679                      .dwendtag $C$DW$17
+     680              
+     681 00000000               .sect   ".text:MemCfg_setLSRAMControllerSel"
+     682                      .clink
+     683                      .global ||MemCfg_setLSRAMControllerSel||
+     684              
+     685              $C$DW$28        .dwtag  DW_TAG_subprogram
+     686                      .dwattr $C$DW$28, DW_AT_name("MemCfg_setLSRAMControllerSel")
+     687                      .dwattr $C$DW$28, DW_AT_low_pc(||MemCfg_setLSRAMControllerSel||)
+     688                      .dwattr $C$DW$28, DW_AT_high_pc(0x00)
+     689                      .dwattr $C$DW$28, DW_AT_linkage_name("MemCfg_setLSRAMControllerSel")
+     690                      .dwattr $C$DW$28, DW_AT_external
+     691                      .dwattr $C$DW$28, DW_AT_decl_file("../src_driver/memcfg.c")
+     692                      .dwattr $C$DW$28, DW_AT_decl_line(0x13b)
+     693                      .dwattr $C$DW$28, DW_AT_decl_column(0x01)
+     694                      .dwattr $C$DW$28, DW_AT_TI_max_frame_size(-2)
+     695                      .dwpsn  file "../src_driver/memcfg.c",line 317,column 1,is_stmt,address ||MemCfg_setLSRAMControllerSe
+     696              
+     697                      .dwfde $C$DW$CIE, ||MemCfg_setLSRAMControllerSel||
+     698              $C$DW$29        .dwtag  DW_TAG_formal_parameter
+     699                      .dwattr $C$DW$29, DW_AT_name("ramSection")
+     700                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$29)
+     701                      .dwattr $C$DW$29, DW_AT_location[DW_OP_reg0]
+     702              
+     703              $C$DW$30        .dwtag  DW_TAG_formal_parameter
+     704                      .dwattr $C$DW$30, DW_AT_name("controllerSel")
+     705                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$20)
+     706                      .dwattr $C$DW$30, DW_AT_location[DW_OP_reg12]
+     707              
+     708              
+     709              ;***************************************************************
+     710              ;* FNAME: MemCfg_setLSRAMControllerSel  FR SIZE:   0           *
+     711              ;*                                                             *
+     712              ;* FUNCTION ENVIRONMENT                                        *
+     713              ;*                                                             *
+     714              ;* FUNCTION PROPERTIES                                         *
+     715              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     716              ;***************************************************************
+     717              
+     718              ||MemCfg_setLSRAMControllerSel||:
+     719              ;* AR4   assigned to controllerSel
+     720              $C$DW$31        .dwtag  DW_TAG_variable
+     721                      .dwattr $C$DW$31, DW_AT_name("controllerSel")
+     722                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$21)
+     723                      .dwattr $C$DW$31, DW_AT_location[DW_OP_reg12]
+     724              
+     725              ;* AR5   assigned to shiftVal
+     726              $C$DW$32        .dwtag  DW_TAG_variable
+     727                      .dwattr $C$DW$32, DW_AT_name("shiftVal")
+     728                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$29)
+     729                      .dwattr $C$DW$32, DW_AT_location[DW_OP_reg14]
+     730              
+     731              ;* AR6   assigned to temp
+     732              $C$DW$33        .dwtag  DW_TAG_variable
+     733                      .dwattr $C$DW$33, DW_AT_name("temp")
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   15
+
+     734                      .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$29)
+     735                      .dwattr $C$DW$33, DW_AT_location[DW_OP_reg16]
+     736              
+     737                      .dwcfi  cfa_offset, -2
+     738                      .dwcfi  save_reg_to_mem, 26, 0
+     739                      .dwpsn  file "../src_driver/memcfg.c",line 332,column 5,is_stmt,isa 0
+     740 00000000 91FF          ANDB      AH,#255               ; [CPU_ALU] |332| 
+     741 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |332| 
+     742                      .dwpsn  file "../src_driver/memcfg.c",line 331,column 5,is_stmt,isa 0
+     743 00000002 D500          MOVB      XAR5,#0               ; [CPU_ALU] |331| 
+     744                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     745 00000003 0201          MOVB      ACC,#1                ; [CPU_ALU] |334| 
+     746 00000004 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+     747 00000005 613A          B         ||$C$L21||,EQ         ; [CPU_ALU] |334| 
+     748                      ; branchcc occurs ; [] |334| 
+     749 00000006 2901          CLRC      SXM                   ; [CPU_ALU] 
+     750 00000007       ||$C$L20||:    
+     751 00000007 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+     752 00000008 FF40          SFR       ACC,1                 ; [CPU_ALU] |334| 
+     753 00000009 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |334| 
+     754                      .dwpsn  file "../src_driver/memcfg.c",line 337,column 9,is_stmt,isa 0
+     755 0000000a DD02          ADDB      XAR5,#2               ; [CPU_ALU] |337| 
+     756                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     757 0000000b 0201          MOVB      ACC,#1                ; [CPU_FPU] |334| 
+     758 0000000c 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+     759 0000000d 6132          B         ||$C$L21||,EQ         ; [CPU_ALU] |334| 
+     760                      ; branchcc occurs ; [] |334| 
+     761 0000000e 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+     762 0000000f FF40          SFR       ACC,1                 ; [CPU_ALU] |334| 
+     763 00000010 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |334| 
+     764                      .dwpsn  file "../src_driver/memcfg.c",line 337,column 9,is_stmt,isa 0
+     765 00000011 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |337| 
+     766                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     767 00000012 0201          MOVB      ACC,#1                ; [CPU_FPU] |334| 
+     768 00000013 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+     769 00000014 612B          B         ||$C$L21||,EQ         ; [CPU_ALU] |334| 
+     770                      ; branchcc occurs ; [] |334| 
+     771 00000015 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+     772 00000016 FF40          SFR       ACC,1                 ; [CPU_ALU] |334| 
+     773 00000017 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |334| 
+     774                      .dwpsn  file "../src_driver/memcfg.c",line 337,column 9,is_stmt,isa 0
+     775 00000018 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |337| 
+     776                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     777 00000019 0201          MOVB      ACC,#1                ; [CPU_FPU] |334| 
+     778 0000001a 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+     779 0000001b 6124          B         ||$C$L21||,EQ         ; [CPU_ALU] |334| 
+     780                      ; branchcc occurs ; [] |334| 
+     781 0000001c 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+     782 0000001d FF40          SFR       ACC,1                 ; [CPU_ALU] |334| 
+     783 0000001e 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |334| 
+     784                      .dwpsn  file "../src_driver/memcfg.c",line 337,column 9,is_stmt,isa 0
+     785 0000001f DD02          ADDB      XAR5,#2               ; [CPU_ALU] |337| 
+     786                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     787 00000020 0201          MOVB      ACC,#1                ; [CPU_FPU] |334| 
+     788 00000021 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   16
+
+     789 00000022 611D          B         ||$C$L21||,EQ         ; [CPU_ALU] |334| 
+     790                      ; branchcc occurs ; [] |334| 
+     791 00000023 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+     792 00000024 FF40          SFR       ACC,1                 ; [CPU_ALU] |334| 
+     793 00000025 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |334| 
+     794                      .dwpsn  file "../src_driver/memcfg.c",line 337,column 9,is_stmt,isa 0
+     795 00000026 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |337| 
+     796                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     797 00000027 0201          MOVB      ACC,#1                ; [CPU_FPU] |334| 
+     798 00000028 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+     799 00000029 6116          B         ||$C$L21||,EQ         ; [CPU_ALU] |334| 
+     800                      ; branchcc occurs ; [] |334| 
+     801 0000002a 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+     802 0000002b FF40          SFR       ACC,1                 ; [CPU_ALU] |334| 
+     803 0000002c 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |334| 
+     804                      .dwpsn  file "../src_driver/memcfg.c",line 337,column 9,is_stmt,isa 0
+     805 0000002d DD02          ADDB      XAR5,#2               ; [CPU_ALU] |337| 
+     806                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     807 0000002e 0201          MOVB      ACC,#1                ; [CPU_FPU] |334| 
+     808 0000002f 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+     809 00000030 610F          B         ||$C$L21||,EQ         ; [CPU_ALU] |334| 
+     810                      ; branchcc occurs ; [] |334| 
+     811 00000031 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+     812 00000032 FF40          SFR       ACC,1                 ; [CPU_ALU] |334| 
+     813 00000033 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |334| 
+     814                      .dwpsn  file "../src_driver/memcfg.c",line 337,column 9,is_stmt,isa 0
+     815 00000034 DD02          ADDB      XAR5,#2               ; [CPU_ALU] |337| 
+     816                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     817 00000035 0201          MOVB      ACC,#1                ; [CPU_FPU] |334| 
+     818 00000036 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+     819 00000037 6108          B         ||$C$L21||,EQ         ; [CPU_ALU] |334| 
+     820                      ; branchcc occurs ; [] |334| 
+     821 00000038 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+     822 00000039 FF40          SFR       ACC,1                 ; [CPU_ALU] |334| 
+     823 0000003a 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |334| 
+     824                      .dwpsn  file "../src_driver/memcfg.c",line 337,column 9,is_stmt,isa 0
+     825 0000003b DD02          ADDB      XAR5,#2               ; [CPU_ALU] |337| 
+     826                      .dwpsn  file "../src_driver/memcfg.c",line 334,column 11,is_stmt,isa 0
+     827 0000003c 0201          MOVB      ACC,#1                ; [CPU_FPU] |334| 
+     828 0000003d 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |334| 
+     829 0000003e 60C9          B         ||$C$L20||,NEQ        ; [CPU_ALU] |334| 
+     830                      ; branchcc occurs ; [] |334| 
+     831 0000003f       ||$C$L21||:    
+     832                      .dwpsn  file "../src_driver/memcfg.c",line 343,column 5,is_stmt,isa 0
+     833 0000003f 7622          EALLOW    ; [CPU_ALU] |343| 
+     834                      .dwpsn  file "../src_driver/memcfg.c",line 345,column 5,is_stmt,isa 0
+     835 00000040 2DA5          MOV       T,AR5                 ; [CPU_ALU] |345| 
+     836 00000041 0203          MOVB      ACC,#3                ; [CPU_ALU] |345| 
+     837 00000042 27A4          MOV       PL,AR4                ; [CPU_ALU] |345| 
+     838 00000043 7685          MOVL      XAR6,#390180          ; [CPU_ARAU] |345| 
+         00000044 F424 
+     839 00000045 2BAA          MOV       PH,#0                 ; [CPU_ALU] |345| 
+     840 00000046 563B          LSLL      ACC,T                 ; [CPU_ALU] |345| 
+     841 00000047 8F05          MOVL      XAR4,#390180          ; [CPU_ARAU] |345| 
+         00000048 F424 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   17
+
+     842 00000049 FF55          NOT       ACC                   ; [CPU_ALU] |345| 
+     843 0000004a CEC6          AND       AL,*+XAR6[0]          ; [CPU_ALU] |345| 
+     844 0000004b CFCE          AND       AH,*+XAR6[1]          ; [CPU_ALU] |345| 
+     845 0000004c 1EA7          MOVL      XAR7,ACC              ; [CPU_ALU] |345| 
+     846 0000004d A9A9          MOVL      ACC,P                 ; [CPU_ALU] |345| 
+     847 0000004e 563B          LSLL      ACC,T                 ; [CPU_ALU] |345| 
+     848 0000004f FF5A          MOVL      P,ACC                 ; [CPU_ALU] |345| 
+     849 00000050 06A7          MOVL      ACC,XAR7              ; [CPU_ALU] |345| 
+     850 00000051 CAAB          OR        AL,PL                 ; [CPU_ALU] |345| 
+     851 00000052 CBAA          OR        AH,PH                 ; [CPU_ALU] |345| 
+     852 00000053 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |345| 
+     853                      .dwpsn  file "../src_driver/memcfg.c",line 350,column 5,is_stmt,isa 0
+     854 00000054 761A          EDIS      ; [CPU_ALU] |350| 
+     855              $C$DW$34        .dwtag  DW_TAG_TI_branch
+     856                      .dwattr $C$DW$34, DW_AT_low_pc(0x00)
+     857                      .dwattr $C$DW$34, DW_AT_TI_return
+     858              
+     859 00000055 0006          LRETR     ; [CPU_ALU] 
+     860                      ; return occurs ; [] 
+     861                      .dwattr $C$DW$28, DW_AT_TI_end_file("../src_driver/memcfg.c")
+     862                      .dwattr $C$DW$28, DW_AT_TI_end_line(0x15f)
+     863                      .dwattr $C$DW$28, DW_AT_TI_end_column(0x01)
+     864                      .dwendentry
+     865                      .dwendtag $C$DW$28
+     866              
+     867 00000000               .sect   ".text:MemCfg_setGSRAMControllerSel"
+     868                      .clink
+     869                      .global ||MemCfg_setGSRAMControllerSel||
+     870              
+     871              $C$DW$35        .dwtag  DW_TAG_subprogram
+     872                      .dwattr $C$DW$35, DW_AT_name("MemCfg_setGSRAMControllerSel")
+     873                      .dwattr $C$DW$35, DW_AT_low_pc(||MemCfg_setGSRAMControllerSel||)
+     874                      .dwattr $C$DW$35, DW_AT_high_pc(0x00)
+     875                      .dwattr $C$DW$35, DW_AT_linkage_name("MemCfg_setGSRAMControllerSel")
+     876                      .dwattr $C$DW$35, DW_AT_external
+     877                      .dwattr $C$DW$35, DW_AT_decl_file("../src_driver/memcfg.c")
+     878                      .dwattr $C$DW$35, DW_AT_decl_line(0x167)
+     879                      .dwattr $C$DW$35, DW_AT_decl_column(0x01)
+     880                      .dwattr $C$DW$35, DW_AT_TI_max_frame_size(-2)
+     881                      .dwpsn  file "../src_driver/memcfg.c",line 361,column 1,is_stmt,address ||MemCfg_setGSRAMControllerSe
+     882              
+     883                      .dwfde $C$DW$CIE, ||MemCfg_setGSRAMControllerSel||
+     884              $C$DW$36        .dwtag  DW_TAG_formal_parameter
+     885                      .dwattr $C$DW$36, DW_AT_name("ramSections")
+     886                      .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$29)
+     887                      .dwattr $C$DW$36, DW_AT_location[DW_OP_reg0]
+     888              
+     889              $C$DW$37        .dwtag  DW_TAG_formal_parameter
+     890                      .dwattr $C$DW$37, DW_AT_name("controllerSel")
+     891                      .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$23)
+     892                      .dwattr $C$DW$37, DW_AT_location[DW_OP_reg12]
+     893              
+     894              
+     895              ;***************************************************************
+     896              ;* FNAME: MemCfg_setGSRAMControllerSel  FR SIZE:   0           *
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   18
+
+     897              ;*                                                             *
+     898              ;* FUNCTION ENVIRONMENT                                        *
+     899              ;*                                                             *
+     900              ;* FUNCTION PROPERTIES                                         *
+     901              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     902              ;***************************************************************
+     903              
+     904              ||MemCfg_setGSRAMControllerSel||:
+     905              ;* AR6   assigned to ramSections
+     906              $C$DW$38        .dwtag  DW_TAG_variable
+     907                      .dwattr $C$DW$38, DW_AT_name("ramSections")
+     908                      .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$43)
+     909                      .dwattr $C$DW$38, DW_AT_location[DW_OP_reg16]
+     910              
+     911              ;* AR4   assigned to controllerSel
+     912              $C$DW$39        .dwtag  DW_TAG_variable
+     913                      .dwattr $C$DW$39, DW_AT_name("controllerSel")
+     914                      .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$24)
+     915                      .dwattr $C$DW$39, DW_AT_location[DW_OP_reg12]
+     916              
+     917              ;* PL    assigned to sectionNum
+     918              $C$DW$40        .dwtag  DW_TAG_variable
+     919                      .dwattr $C$DW$40, DW_AT_name("sectionNum")
+     920                      .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$29)
+     921                      .dwattr $C$DW$40, DW_AT_location[DW_OP_reg2]
+     922              
+     923                      .dwcfi  cfa_offset, -2
+     924                      .dwcfi  save_reg_to_mem, 26, 0
+     925 00000000 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |361| 
+     926 00000001 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |361| 
+     927                      .dwpsn  file "../src_driver/memcfg.c",line 372,column 5,is_stmt,isa 0
+     928 00000002 18AA          AND       PH,#255               ; [CPU_ALU] |372| 
+         00000003 00FF 
+     929                      .dwpsn  file "../src_driver/memcfg.c",line 377,column 5,is_stmt,isa 0
+     930 00000004 7622          EALLOW    ; [CPU_ALU] |377| 
+     931 00000005 92A4          MOV       AL,AR4                ; [CPU_ALU] |377| 
+     932                      .dwpsn  file "../src_driver/memcfg.c",line 378,column 5,is_stmt,isa 0
+     933 00000006 600C          B         ||$C$L22||,NEQ        ; [CPU_ALU] |378| 
+     934                      ; branchcc occurs ; [] |378| 
+     935                      .dwpsn  file "../src_driver/memcfg.c",line 380,column 9,is_stmt,isa 0
+     936 00000007 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |380| 
+     937 00000008 8F05          MOVL      XAR4,#390212          ; [CPU_ARAU] |380| 
+         00000009 F444 
+     938 0000000a F1FF          XOR       AH,#255               ; [CPU_ALU] |380| 
+     939 0000000b 1CA9          XOR       AL,#65535             ; [CPU_ALU] |380| 
+         0000000c FFFF 
+     940 0000000d 1AA8          OR        AH,#65280             ; [CPU_ALU] |380| 
+         0000000e FF00 
+     941 0000000f C0C4          AND       *+XAR4[0],AL          ; [CPU_FPU] |380| 
+     942 00000010 C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |380| 
+     943 00000011 6F07          B         ||$C$L23||,UNC        ; [CPU_ALU] 
+     944                      ; branch occurs ; [] 
+     945 00000012       ||$C$L22||:    
+     946                      .dwpsn  file "../src_driver/memcfg.c",line 384,column 9,is_stmt,isa 0
+     947 00000012 8F05          MOVL      XAR4,#390212          ; [CPU_ARAU] |384| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   19
+
+         00000013 F444 
+     948 00000014 92AB          MOV       AL,PL                 ; [CPU_ALU] |384| 
+     949 00000015 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |384| 
+     950 00000016 92AA          MOV       AL,PH                 ; [CPU_ALU] |384| 
+     951 00000017 98CC          OR        *+XAR4[1],AL          ; [CPU_ALU] |384| 
+     952 00000018       ||$C$L23||:    
+     953                      .dwpsn  file "../src_driver/memcfg.c",line 386,column 5,is_stmt,isa 0
+     954 00000018 761A          EDIS      ; [CPU_ALU] |386| 
+     955              $C$DW$41        .dwtag  DW_TAG_TI_branch
+     956                      .dwattr $C$DW$41, DW_AT_low_pc(0x00)
+     957                      .dwattr $C$DW$41, DW_AT_TI_return
+     958              
+     959 00000019 0006          LRETR     ; [CPU_ALU] 
+     960                      ; return occurs ; [] 
+     961                      .dwattr $C$DW$35, DW_AT_TI_end_file("../src_driver/memcfg.c")
+     962                      .dwattr $C$DW$35, DW_AT_TI_end_line(0x183)
+     963                      .dwattr $C$DW$35, DW_AT_TI_end_column(0x01)
+     964                      .dwendentry
+     965                      .dwendtag $C$DW$35
+     966              
+     967 00000000               .sect   ".text:MemCfg_lockConfig"
+     968                      .clink
+     969                      .global ||MemCfg_lockConfig||
+     970              
+     971              $C$DW$42        .dwtag  DW_TAG_subprogram
+     972                      .dwattr $C$DW$42, DW_AT_name("MemCfg_lockConfig")
+     973                      .dwattr $C$DW$42, DW_AT_low_pc(||MemCfg_lockConfig||)
+     974                      .dwattr $C$DW$42, DW_AT_high_pc(0x00)
+     975                      .dwattr $C$DW$42, DW_AT_linkage_name("MemCfg_lockConfig")
+     976                      .dwattr $C$DW$42, DW_AT_external
+     977                      .dwattr $C$DW$42, DW_AT_decl_file("../src_driver/memcfg.c")
+     978                      .dwattr $C$DW$42, DW_AT_decl_line(0x34)
+     979                      .dwattr $C$DW$42, DW_AT_decl_column(0x01)
+     980                      .dwattr $C$DW$42, DW_AT_TI_max_frame_size(-2)
+     981                      .dwpsn  file "../src_driver/memcfg.c",line 53,column 1,is_stmt,address ||MemCfg_lockConfig||,isa 0
+     982              
+     983                      .dwfde $C$DW$CIE, ||MemCfg_lockConfig||
+     984              $C$DW$43        .dwtag  DW_TAG_formal_parameter
+     985                      .dwattr $C$DW$43, DW_AT_name("memSections")
+     986                      .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$29)
+     987                      .dwattr $C$DW$43, DW_AT_location[DW_OP_reg0]
+     988              
+     989              
+     990              ;***************************************************************
+     991              ;* FNAME: MemCfg_lockConfig             FR SIZE:   0           *
+     992              ;*                                                             *
+     993              ;* FUNCTION ENVIRONMENT                                        *
+     994              ;*                                                             *
+     995              ;* FUNCTION PROPERTIES                                         *
+     996              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     997              ;***************************************************************
+     998              
+     999              ||MemCfg_lockConfig||:
+    1000              ;* AR6   assigned to memSections
+    1001              $C$DW$44        .dwtag  DW_TAG_variable
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   20
+
+    1002                      .dwattr $C$DW$44, DW_AT_name("memSections")
+    1003                      .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$43)
+    1004                      .dwattr $C$DW$44, DW_AT_location[DW_OP_reg16]
+    1005              
+    1006                      .dwcfi  cfa_offset, -2
+    1007                      .dwcfi  save_reg_to_mem, 26, 0
+    1008 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |53| 
+    1009                      .dwpsn  file "../src_driver/memcfg.c",line 65,column 5,is_stmt,isa 0
+    1010 00000001 7622          EALLOW    ; [CPU_ALU] |65| 
+    1011 00000002 3B01          SETC      SXM                   ; [CPU_ALU] 
+    1012                      .dwpsn  file "../src_driver/memcfg.c",line 67,column 5,is_stmt,isa 0
+    1013 00000003 FF2F          MOV       ACC,#-512 << 15       ; [CPU_ALU] |67| 
+         00000004 FE00 
+    1014 00000005 A3A6          MOVL      P,XAR6                ; [CPU_ALU] |67| 
+    1015 00000006 18AB          AND       PL,#0                 ; [CPU_ALU] |67| 
+         00000007 0000 
+    1016 00000008 18AA          AND       PH,#65280             ; [CPU_ALU] |67| 
+         00000009 FF00 
+    1017 0000000a 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |67| 
+    1018 0000000b 610C          B         ||$C$L24||,EQ         ; [CPU_ALU] |67| 
+    1019                      ; branchcc occurs ; [] |67| 
+    1020 0000000c A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+    1021 0000000d 6121          B         ||$C$L27||,EQ         ; [CPU_ALU] |67| 
+    1022                      ; branchcc occurs ; [] |67| 
+    1023 0000000e FF2F          MOV       ACC,#512 << 15        ; [CPU_ALU] |67| 
+         0000000f 0200 
+    1024 00000010 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |67| 
+    1025 00000011 611A          B         ||$C$L26||,EQ         ; [CPU_ALU] |67| 
+    1026                      ; branchcc occurs ; [] |67| 
+    1027 00000012 FF2F          MOV       ACC,#1024 << 15       ; [CPU_ALU] |67| 
+         00000013 0400 
+    1028 00000014 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |67| 
+    1029 00000015 6113          B         ||$C$L25||,EQ         ; [CPU_ALU] |67| 
+    1030                      ; branchcc occurs ; [] |67| 
+    1031 00000016 6F1E          B         ||$C$L29||,UNC        ; [CPU_ALU] |67| 
+    1032                      ; branch occurs ; [] |67| 
+    1033 00000017       ||$C$L24||:    
+    1034                      .dwpsn  file "../src_driver/memcfg.c",line 88,column 13,is_stmt,isa 0
+    1035 00000017 020F          MOVB      ACC,#15               ; [CPU_ALU] |88| 
+    1036 00000018 8F05          MOVL      XAR4,#390144          ; [CPU_ARAU] |88| 
+         00000019 F400 
+    1037                      .dwpsn  file "../src_driver/memcfg.c",line 90,column 13,is_stmt,isa 0
+    1038 0000001a 8F45          MOVL      XAR5,#390176          ; [CPU_ARAU] |90| 
+         0000001b F420 
+    1039                      .dwpsn  file "../src_driver/memcfg.c",line 88,column 13,is_stmt,isa 0
+    1040 0000001c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |88| 
+    1041 0000001d 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |88| 
+    1042                      .dwpsn  file "../src_driver/memcfg.c",line 90,column 13,is_stmt,isa 0
+    1043 0000001e 023F          MOVB      ACC,#63               ; [CPU_ALU] |90| 
+    1044                      .dwpsn  file "../src_driver/memcfg.c",line 92,column 13,is_stmt,isa 0
+    1045 0000001f 8F05          MOVL      XAR4,#390208          ; [CPU_ARAU] |92| 
+         00000020 F440 
+    1046                      .dwpsn  file "../src_driver/memcfg.c",line 90,column 13,is_stmt,isa 0
+    1047 00000021 98C5          OR        *+XAR5[0],AL          ; [CPU_ALU] |90| 
+    1048 00000022 99CD          OR        *+XAR5[1],AH          ; [CPU_ALU] |90| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   21
+
+    1049                      .dwpsn  file "../src_driver/memcfg.c",line 92,column 13,is_stmt,isa 0
+    1050 00000023 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |92| 
+    1051 00000024 1AA9          OR        AL,#65535             ; [CPU_ALU] |92| 
+         00000025 FFFF 
+    1052 00000026 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |92| 
+    1053                      .dwpsn  file "../src_driver/memcfg.c",line 94,column 13,is_stmt,isa 0
+    1054 00000027 6F0D          B         ||$C$L29||,UNC        ; [CPU_ALU] |94| 
+    1055                      ; branch occurs ; [] |94| 
+    1056 00000028       ||$C$L25||:    
+    1057                      .dwpsn  file "../src_driver/memcfg.c",line 80,column 13,is_stmt,isa 0
+    1058 00000028 8F05          MOVL      XAR4,#390208          ; [CPU_ARAU] |80| 
+         00000029 F440 
+    1059                      .dwpsn  file "../src_driver/memcfg.c",line 82,column 13,is_stmt,isa 0
+    1060 0000002a 6F06          B         ||$C$L28||,UNC        ; [CPU_ALU] |82| 
+    1061                      ; branch occurs ; [] |82| 
+    1062 0000002b       ||$C$L26||:    
+    1063                      .dwpsn  file "../src_driver/memcfg.c",line 75,column 13,is_stmt,isa 0
+    1064 0000002b 8F05          MOVL      XAR4,#390176          ; [CPU_ARAU] |75| 
+         0000002c F420 
+    1065                      .dwpsn  file "../src_driver/memcfg.c",line 77,column 13,is_stmt,isa 0
+    1066 0000002d 6F03          B         ||$C$L28||,UNC        ; [CPU_ALU] |77| 
+    1067                      ; branch occurs ; [] |77| 
+    1068 0000002e       ||$C$L27||:    
+    1069                      .dwpsn  file "../src_driver/memcfg.c",line 70,column 13,is_stmt,isa 0
+    1070 0000002e 8F05          MOVL      XAR4,#390144          ; [CPU_ARAU] |70| 
+         0000002f F400 
+    1071 00000030       ||$C$L28||:    
+    1072 00000030 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |70| 
+    1073 00000031 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |70| 
+    1074 00000032 91FF          ANDB      AH,#255               ; [CPU_ALU] |70| 
+    1075 00000033 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |70| 
+    1076 00000034       ||$C$L29||:    
+    1077                      .dwpsn  file "../src_driver/memcfg.c",line 104,column 5,is_stmt,isa 0
+    1078 00000034 761A          EDIS      ; [CPU_ALU] |104| 
+    1079              $C$DW$45        .dwtag  DW_TAG_TI_branch
+    1080                      .dwattr $C$DW$45, DW_AT_low_pc(0x00)
+    1081                      .dwattr $C$DW$45, DW_AT_TI_return
+    1082              
+    1083 00000035 0006          LRETR     ; [CPU_ALU] 
+    1084                      ; return occurs ; [] 
+    1085                      .dwattr $C$DW$42, DW_AT_TI_end_file("../src_driver/memcfg.c")
+    1086                      .dwattr $C$DW$42, DW_AT_TI_end_line(0x69)
+    1087                      .dwattr $C$DW$42, DW_AT_TI_end_column(0x01)
+    1088                      .dwendentry
+    1089                      .dwendtag $C$DW$42
+    1090              
+    1091 00000000               .sect   ".text:MemCfg_initSections"
+    1092                      .clink
+    1093                      .global ||MemCfg_initSections||
+    1094              
+    1095              $C$DW$46        .dwtag  DW_TAG_subprogram
+    1096                      .dwattr $C$DW$46, DW_AT_name("MemCfg_initSections")
+    1097                      .dwattr $C$DW$46, DW_AT_low_pc(||MemCfg_initSections||)
+    1098                      .dwattr $C$DW$46, DW_AT_high_pc(0x00)
+    1099                      .dwattr $C$DW$46, DW_AT_linkage_name("MemCfg_initSections")
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   22
+
+    1100                      .dwattr $C$DW$46, DW_AT_external
+    1101                      .dwattr $C$DW$46, DW_AT_decl_file("../src_driver/memcfg.c")
+    1102                      .dwattr $C$DW$46, DW_AT_decl_line(0x1d5)
+    1103                      .dwattr $C$DW$46, DW_AT_decl_column(0x01)
+    1104                      .dwattr $C$DW$46, DW_AT_TI_max_frame_size(-2)
+    1105                      .dwpsn  file "../src_driver/memcfg.c",line 470,column 1,is_stmt,address ||MemCfg_initSections||,isa 0
+    1106              
+    1107                      .dwfde $C$DW$CIE, ||MemCfg_initSections||
+    1108              $C$DW$47        .dwtag  DW_TAG_formal_parameter
+    1109                      .dwattr $C$DW$47, DW_AT_name("ramSections")
+    1110                      .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$29)
+    1111                      .dwattr $C$DW$47, DW_AT_location[DW_OP_reg0]
+    1112              
+    1113              
+    1114              ;***************************************************************
+    1115              ;* FNAME: MemCfg_initSections           FR SIZE:   0           *
+    1116              ;*                                                             *
+    1117              ;* FUNCTION ENVIRONMENT                                        *
+    1118              ;*                                                             *
+    1119              ;* FUNCTION PROPERTIES                                         *
+    1120              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1121              ;***************************************************************
+    1122              
+    1123              ||MemCfg_initSections||:
+    1124              ;* AR6   assigned to ramSections
+    1125              $C$DW$48        .dwtag  DW_TAG_variable
+    1126                      .dwattr $C$DW$48, DW_AT_name("ramSections")
+    1127                      .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$43)
+    1128                      .dwattr $C$DW$48, DW_AT_location[DW_OP_reg16]
+    1129              
+    1130                      .dwcfi  cfa_offset, -2
+    1131                      .dwcfi  save_reg_to_mem, 26, 0
+    1132 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |470| 
+    1133                      .dwpsn  file "../src_driver/memcfg.c",line 484,column 5,is_stmt,isa 0
+    1134 00000001 7622          EALLOW    ; [CPU_ALU] |484| 
+    1135                      .dwpsn  file "../src_driver/memcfg.c",line 486,column 5,is_stmt,isa 0
+    1136 00000002 FF2F          MOV       ACC,#512 << 15        ; [CPU_ALU] |486| 
+         00000003 0200 
+    1137 00000004 A3A6          MOVL      P,XAR6                ; [CPU_ALU] |486| 
+    1138 00000005 18AB          AND       PL,#0                 ; [CPU_ALU] |486| 
+         00000006 0000 
+    1139 00000007 18AA          AND       PH,#65280             ; [CPU_ALU] |486| 
+         00000008 FF00 
+    1140 00000009 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |486| 
+    1141 0000000a 640B          B         ||$C$L30||,LT         ; [CPU_ALU] |486| 
+    1142                      ; branchcc occurs ; [] |486| 
+    1143 0000000b 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |486| 
+    1144 0000000c 612C          B         ||$C$L34||,EQ         ; [CPU_ALU] |486| 
+    1145                      ; branchcc occurs ; [] |486| 
+    1146 0000000d 3B01          SETC      SXM                   ; [CPU_ALU] 
+    1147 0000000e FF2F          MOV       ACC,#-512 << 15       ; [CPU_ALU] |486| 
+         0000000f FE00 
+    1148 00000010 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |486| 
+    1149 00000011 610D          B         ||$C$L31||,EQ         ; [CPU_ALU] |486| 
+    1150                      ; branchcc occurs ; [] |486| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   23
+
+    1151 00000012 A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+    1152 00000013 6128          B         ||$C$L35||,EQ         ; [CPU_ALU] |486| 
+    1153                      ; branchcc occurs ; [] |486| 
+    1154 00000014 6F2D          B         ||$C$L38||,UNC        ; [CPU_ALU] |486| 
+    1155                      ; branch occurs ; [] |486| 
+    1156 00000015       ||$C$L30||:    
+    1157 00000015 FF2F          MOV       ACC,#1024 << 15       ; [CPU_ALU] |486| 
+         00000016 0400 
+    1158 00000017 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |486| 
+    1159 00000018 611D          B         ||$C$L33||,EQ         ; [CPU_ALU] |486| 
+    1160                      ; branchcc occurs ; [] |486| 
+    1161 00000019 FF2F          MOV       ACC,#1536 << 15       ; [CPU_ALU] |486| 
+         0000001a 0600 
+    1162 0000001b 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |486| 
+    1163 0000001c 6116          B         ||$C$L32||,EQ         ; [CPU_ALU] |486| 
+    1164                      ; branchcc occurs ; [] |486| 
+    1165 0000001d 6F24          B         ||$C$L38||,UNC        ; [CPU_ALU] |486| 
+    1166                      ; branch occurs ; [] |486| 
+    1167 0000001e       ||$C$L31||:    
+    1168                      .dwpsn  file "../src_driver/memcfg.c",line 512,column 13,is_stmt,isa 0
+    1169 0000001e 020F          MOVB      ACC,#15               ; [CPU_ALU] |512| 
+    1170 0000001f 8F05          MOVL      XAR4,#390162          ; [CPU_ARAU] |512| 
+         00000020 F412 
+    1171                      .dwpsn  file "../src_driver/memcfg.c",line 514,column 13,is_stmt,isa 0
+    1172 00000021 8F45          MOVL      XAR5,#390194          ; [CPU_ARAU] |514| 
+         00000022 F432 
+    1173                      .dwpsn  file "../src_driver/memcfg.c",line 512,column 13,is_stmt,isa 0
+    1174 00000023 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |512| 
+    1175 00000024 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |512| 
+    1176                      .dwpsn  file "../src_driver/memcfg.c",line 514,column 13,is_stmt,isa 0
+    1177 00000025 023F          MOVB      ACC,#63               ; [CPU_ALU] |514| 
+    1178                      .dwpsn  file "../src_driver/memcfg.c",line 516,column 13,is_stmt,isa 0
+    1179 00000026 8F05          MOVL      XAR4,#390226          ; [CPU_ARAU] |516| 
+         00000027 F452 
+    1180                      .dwpsn  file "../src_driver/memcfg.c",line 514,column 13,is_stmt,isa 0
+    1181 00000028 98C5          OR        *+XAR5[0],AL          ; [CPU_ALU] |514| 
+    1182 00000029 99CD          OR        *+XAR5[1],AH          ; [CPU_ALU] |514| 
+    1183                      .dwpsn  file "../src_driver/memcfg.c",line 516,column 13,is_stmt,isa 0
+    1184 0000002a 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |516| 
+    1185 0000002b 1AA9          OR        AL,#65535             ; [CPU_ALU] |516| 
+         0000002c FFFF 
+    1186 0000002d 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |516| 
+    1187                      .dwpsn  file "../src_driver/memcfg.c",line 518,column 13,is_stmt,isa 0
+    1188 0000002e 0207          MOVB      ACC,#7                ; [CPU_ALU] |518| 
+    1189 0000002f 8F05          MOVL      XAR4,#390258          ; [CPU_ARAU] |518| 
+         00000030 F472 
+    1190                      .dwpsn  file "../src_driver/memcfg.c",line 520,column 13,is_stmt,isa 0
+    1191 00000031 6F0E          B         ||$C$L37||,UNC        ; [CPU_ALU] |520| 
+    1192                      ; branch occurs ; [] |520| 
+    1193 00000032       ||$C$L32||:    
+    1194                      .dwpsn  file "../src_driver/memcfg.c",line 504,column 13,is_stmt,isa 0
+    1195 00000032 8F05          MOVL      XAR4,#390258          ; [CPU_ARAU] |504| 
+         00000033 F472 
+    1196                      .dwpsn  file "../src_driver/memcfg.c",line 506,column 13,is_stmt,isa 0
+    1197 00000034 6F09          B         ||$C$L36||,UNC        ; [CPU_ALU] |506| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   24
+
+    1198                      ; branch occurs ; [] |506| 
+    1199 00000035       ||$C$L33||:    
+    1200                      .dwpsn  file "../src_driver/memcfg.c",line 499,column 13,is_stmt,isa 0
+    1201 00000035 8F05          MOVL      XAR4,#390226          ; [CPU_ARAU] |499| 
+         00000036 F452 
+    1202                      .dwpsn  file "../src_driver/memcfg.c",line 501,column 13,is_stmt,isa 0
+    1203 00000037 6F06          B         ||$C$L36||,UNC        ; [CPU_ALU] |501| 
+    1204                      ; branch occurs ; [] |501| 
+    1205 00000038       ||$C$L34||:    
+    1206                      .dwpsn  file "../src_driver/memcfg.c",line 494,column 13,is_stmt,isa 0
+    1207 00000038 8F05          MOVL      XAR4,#390194          ; [CPU_ARAU] |494| 
+         00000039 F432 
+    1208                      .dwpsn  file "../src_driver/memcfg.c",line 496,column 13,is_stmt,isa 0
+    1209 0000003a 6F03          B         ||$C$L36||,UNC        ; [CPU_ALU] |496| 
+    1210                      ; branch occurs ; [] |496| 
+    1211 0000003b       ||$C$L35||:    
+    1212                      .dwpsn  file "../src_driver/memcfg.c",line 489,column 13,is_stmt,isa 0
+    1213 0000003b 8F05          MOVL      XAR4,#390162          ; [CPU_ARAU] |489| 
+         0000003c F412 
+    1214 0000003d       ||$C$L36||:    
+    1215 0000003d 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |489| 
+    1216 0000003e 91FF          ANDB      AH,#255               ; [CPU_ALU] |489| 
+    1217 0000003f       ||$C$L37||:    
+    1218 0000003f 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |489| 
+    1219 00000040 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |489| 
+    1220 00000041       ||$C$L38||:    
+    1221                      .dwpsn  file "../src_driver/memcfg.c",line 530,column 5,is_stmt,isa 0
+    1222 00000041 761A          EDIS      ; [CPU_ALU] |530| 
+    1223              $C$DW$49        .dwtag  DW_TAG_TI_branch
+    1224                      .dwattr $C$DW$49, DW_AT_low_pc(0x00)
+    1225                      .dwattr $C$DW$49, DW_AT_TI_return
+    1226              
+    1227 00000042 0006          LRETR     ; [CPU_ALU] 
+    1228                      ; return occurs ; [] 
+    1229                      .dwattr $C$DW$46, DW_AT_TI_end_file("../src_driver/memcfg.c")
+    1230                      .dwattr $C$DW$46, DW_AT_TI_end_line(0x213)
+    1231                      .dwattr $C$DW$46, DW_AT_TI_end_column(0x01)
+    1232                      .dwendentry
+    1233                      .dwendtag $C$DW$46
+    1234              
+    1235 00000000               .sect   ".text:MemCfg_getViolationAddress"
+    1236                      .clink
+    1237                      .global ||MemCfg_getViolationAddress||
+    1238              
+    1239              $C$DW$50        .dwtag  DW_TAG_subprogram
+    1240                      .dwattr $C$DW$50, DW_AT_name("MemCfg_getViolationAddress")
+    1241                      .dwattr $C$DW$50, DW_AT_low_pc(||MemCfg_getViolationAddress||)
+    1242                      .dwattr $C$DW$50, DW_AT_high_pc(0x00)
+    1243                      .dwattr $C$DW$50, DW_AT_linkage_name("MemCfg_getViolationAddress")
+    1244                      .dwattr $C$DW$50, DW_AT_external
+    1245                      .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$29)
+    1246                      .dwattr $C$DW$50, DW_AT_decl_file("../src_driver/memcfg.c")
+    1247                      .dwattr $C$DW$50, DW_AT_decl_line(0x264)
+    1248                      .dwattr $C$DW$50, DW_AT_decl_column(0x01)
+    1249                      .dwattr $C$DW$50, DW_AT_TI_max_frame_size(-2)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   25
+
+    1250                      .dwpsn  file "../src_driver/memcfg.c",line 613,column 1,is_stmt,address ||MemCfg_getViolationAddress|
+    1251              
+    1252                      .dwfde $C$DW$CIE, ||MemCfg_getViolationAddress||
+    1253              $C$DW$51        .dwtag  DW_TAG_formal_parameter
+    1254                      .dwattr $C$DW$51, DW_AT_name("intFlag")
+    1255                      .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$29)
+    1256                      .dwattr $C$DW$51, DW_AT_location[DW_OP_reg0]
+    1257              
+    1258              
+    1259              ;***************************************************************
+    1260              ;* FNAME: MemCfg_getViolationAddress    FR SIZE:   0           *
+    1261              ;*                                                             *
+    1262              ;* FUNCTION ENVIRONMENT                                        *
+    1263              ;*                                                             *
+    1264              ;* FUNCTION PROPERTIES                                         *
+    1265              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1266              ;***************************************************************
+    1267              
+    1268              ||MemCfg_getViolationAddress||:
+    1269              ;* AR6   assigned to intFlag
+    1270              $C$DW$52        .dwtag  DW_TAG_variable
+    1271                      .dwattr $C$DW$52, DW_AT_name("intFlag")
+    1272                      .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$43)
+    1273                      .dwattr $C$DW$52, DW_AT_location[DW_OP_reg16]
+    1274              
+    1275              ;* AR4   assigned to address
+    1276              $C$DW$53        .dwtag  DW_TAG_variable
+    1277                      .dwattr $C$DW$53, DW_AT_name("address")
+    1278                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$29)
+    1279                      .dwattr $C$DW$53, DW_AT_location[DW_OP_reg12]
+    1280              
+    1281              ;* AR6   assigned to stsNumber
+    1282              $C$DW$54        .dwtag  DW_TAG_variable
+    1283                      .dwattr $C$DW$54, DW_AT_name("stsNumber")
+    1284                      .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$29)
+    1285                      .dwattr $C$DW$54, DW_AT_location[DW_OP_reg16]
+    1286              
+    1287                      .dwcfi  cfa_offset, -2
+    1288                      .dwcfi  save_reg_to_mem, 26, 0
+    1289 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |613| 
+    1290                      .dwpsn  file "../src_driver/memcfg.c",line 620,column 5,is_stmt,isa 0
+    1291 00000001 9000          ANDB      AL,#0                 ; [CPU_ALU] |620| 
+    1292 00000002 910F          ANDB      AH,#15                ; [CPU_ALU] |620| 
+    1293 00000003 FF58          TEST      ACC                   ; [CPU_ALU] |620| 
+    1294 00000004 6004          B         ||$C$L39||,NEQ        ; [CPU_ALU] |620| 
+    1295                      ; branchcc occurs ; [] |620| 
+    1296                      .dwpsn  file "../src_driver/memcfg.c",line 628,column 9,is_stmt,isa 0
+    1297 00000005 8F05          MOVL      XAR4,#390344          ; [CPU_ARAU] |628| 
+         00000006 F4C8 
+    1298                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1299 00000007 6F06          B         ||$C$L40||,UNC        ; [CPU_ALU] |631| 
+    1300                      ; branch occurs ; [] |631| 
+    1301 00000008       ||$C$L39||:    
+    1302                      .dwpsn  file "../src_driver/memcfg.c",line 622,column 9,is_stmt,isa 0
+    1303 00000008 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |622| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   26
+
+    1304 00000009 0EA8          MOVU      ACC,AH                ; [CPU_ALU] |622| 
+    1305 0000000a 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |622| 
+    1306                      .dwpsn  file "../src_driver/memcfg.c",line 623,column 9,is_stmt,isa 0
+    1307 0000000b 8F05          MOVL      XAR4,#390376          ; [CPU_ARAU] |623| 
+         0000000c F4E8 
+    1308 0000000d       ||$C$L40||:    
+    1309                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1310 0000000d 0201          MOVB      ACC,#1                ; [CPU_ALU] |631| 
+    1311 0000000e 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1312 0000000f 673A          B         ||$C$L42||,HIS        ; [CPU_ALU] |631| 
+    1313                      ; branchcc occurs ; [] |631| 
+    1314 00000010 2901          CLRC      SXM                   ; [CPU_ALU] 
+    1315 00000011       ||$C$L41||:    
+    1316 00000011 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1317 00000012 FF40          SFR       ACC,1                 ; [CPU_ALU] |631| 
+    1318 00000013 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |631| 
+    1319                      .dwpsn  file "../src_driver/memcfg.c",line 634,column 9,is_stmt,isa 0
+    1320 00000014 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |634| 
+    1321                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1322 00000015 0201          MOVB      ACC,#1                ; [CPU_FPU] |631| 
+    1323 00000016 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1324 00000017 6732          B         ||$C$L42||,HIS        ; [CPU_ALU] |631| 
+    1325                      ; branchcc occurs ; [] |631| 
+    1326 00000018 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1327 00000019 FF40          SFR       ACC,1                 ; [CPU_ALU] |631| 
+    1328 0000001a 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |631| 
+    1329                      .dwpsn  file "../src_driver/memcfg.c",line 634,column 9,is_stmt,isa 0
+    1330 0000001b DC02          ADDB      XAR4,#2               ; [CPU_ALU] |634| 
+    1331                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1332 0000001c 0201          MOVB      ACC,#1                ; [CPU_FPU] |631| 
+    1333 0000001d 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1334 0000001e 672B          B         ||$C$L42||,HIS        ; [CPU_ALU] |631| 
+    1335                      ; branchcc occurs ; [] |631| 
+    1336 0000001f 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1337 00000020 FF40          SFR       ACC,1                 ; [CPU_ALU] |631| 
+    1338 00000021 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |631| 
+    1339                      .dwpsn  file "../src_driver/memcfg.c",line 634,column 9,is_stmt,isa 0
+    1340 00000022 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |634| 
+    1341                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1342 00000023 0201          MOVB      ACC,#1                ; [CPU_FPU] |631| 
+    1343 00000024 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1344 00000025 6724          B         ||$C$L42||,HIS        ; [CPU_ALU] |631| 
+    1345                      ; branchcc occurs ; [] |631| 
+    1346 00000026 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1347 00000027 FF40          SFR       ACC,1                 ; [CPU_ALU] |631| 
+    1348 00000028 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |631| 
+    1349                      .dwpsn  file "../src_driver/memcfg.c",line 634,column 9,is_stmt,isa 0
+    1350 00000029 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |634| 
+    1351                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1352 0000002a 0201          MOVB      ACC,#1                ; [CPU_FPU] |631| 
+    1353 0000002b 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1354 0000002c 671D          B         ||$C$L42||,HIS        ; [CPU_ALU] |631| 
+    1355                      ; branchcc occurs ; [] |631| 
+    1356 0000002d 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1357 0000002e FF40          SFR       ACC,1                 ; [CPU_ALU] |631| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   27
+
+    1358 0000002f 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |631| 
+    1359                      .dwpsn  file "../src_driver/memcfg.c",line 634,column 9,is_stmt,isa 0
+    1360 00000030 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |634| 
+    1361                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1362 00000031 0201          MOVB      ACC,#1                ; [CPU_FPU] |631| 
+    1363 00000032 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1364 00000033 6716          B         ||$C$L42||,HIS        ; [CPU_ALU] |631| 
+    1365                      ; branchcc occurs ; [] |631| 
+    1366 00000034 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1367 00000035 FF40          SFR       ACC,1                 ; [CPU_ALU] |631| 
+    1368 00000036 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |631| 
+    1369                      .dwpsn  file "../src_driver/memcfg.c",line 634,column 9,is_stmt,isa 0
+    1370 00000037 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |634| 
+    1371                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1372 00000038 0201          MOVB      ACC,#1                ; [CPU_FPU] |631| 
+    1373 00000039 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1374 0000003a 670F          B         ||$C$L42||,HIS        ; [CPU_ALU] |631| 
+    1375                      ; branchcc occurs ; [] |631| 
+    1376 0000003b 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1377 0000003c FF40          SFR       ACC,1                 ; [CPU_ALU] |631| 
+    1378 0000003d 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |631| 
+    1379                      .dwpsn  file "../src_driver/memcfg.c",line 634,column 9,is_stmt,isa 0
+    1380 0000003e DC02          ADDB      XAR4,#2               ; [CPU_ALU] |634| 
+    1381                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1382 0000003f 0201          MOVB      ACC,#1                ; [CPU_FPU] |631| 
+    1383 00000040 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1384 00000041 6708          B         ||$C$L42||,HIS        ; [CPU_ALU] |631| 
+    1385                      ; branchcc occurs ; [] |631| 
+    1386 00000042 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1387 00000043 FF40          SFR       ACC,1                 ; [CPU_ALU] |631| 
+    1388 00000044 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |631| 
+    1389                      .dwpsn  file "../src_driver/memcfg.c",line 634,column 9,is_stmt,isa 0
+    1390 00000045 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |634| 
+    1391                      .dwpsn  file "../src_driver/memcfg.c",line 631,column 11,is_stmt,isa 0
+    1392 00000046 0201          MOVB      ACC,#1                ; [CPU_FPU] |631| 
+    1393 00000047 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |631| 
+    1394 00000048 68C9          B         ||$C$L41||,LO         ; [CPU_ALU] |631| 
+    1395                      ; branchcc occurs ; [] |631| 
+    1396 00000049       ||$C$L42||:    
+    1397                      .dwpsn  file "../src_driver/memcfg.c",line 640,column 5,is_stmt,isa 0
+    1398 00000049 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |640| 
+    1399              $C$DW$55        .dwtag  DW_TAG_TI_branch
+    1400                      .dwattr $C$DW$55, DW_AT_low_pc(0x00)
+    1401                      .dwattr $C$DW$55, DW_AT_TI_return
+    1402              
+    1403 0000004a 0006          LRETR     ; [CPU_ALU] 
+    1404                      ; return occurs ; [] 
+    1405                      .dwattr $C$DW$50, DW_AT_TI_end_file("../src_driver/memcfg.c")
+    1406                      .dwattr $C$DW$50, DW_AT_TI_end_line(0x281)
+    1407                      .dwattr $C$DW$50, DW_AT_TI_end_column(0x01)
+    1408                      .dwendentry
+    1409                      .dwendtag $C$DW$50
+    1410              
+    1411 00000000               .sect   ".text:MemCfg_getUncorrErrorAddress"
+    1412                      .clink
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   28
+
+    1413                      .global ||MemCfg_getUncorrErrorAddress||
+    1414              
+    1415              $C$DW$56        .dwtag  DW_TAG_subprogram
+    1416                      .dwattr $C$DW$56, DW_AT_name("MemCfg_getUncorrErrorAddress")
+    1417                      .dwattr $C$DW$56, DW_AT_low_pc(||MemCfg_getUncorrErrorAddress||)
+    1418                      .dwattr $C$DW$56, DW_AT_high_pc(0x00)
+    1419                      .dwattr $C$DW$56, DW_AT_linkage_name("MemCfg_getUncorrErrorAddress")
+    1420                      .dwattr $C$DW$56, DW_AT_external
+    1421                      .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$29)
+    1422                      .dwattr $C$DW$56, DW_AT_decl_file("../src_driver/memcfg.c")
+    1423                      .dwattr $C$DW$56, DW_AT_decl_line(0x2a5)
+    1424                      .dwattr $C$DW$56, DW_AT_decl_column(0x01)
+    1425                      .dwattr $C$DW$56, DW_AT_TI_max_frame_size(-2)
+    1426                      .dwpsn  file "../src_driver/memcfg.c",line 678,column 1,is_stmt,address ||MemCfg_getUncorrErrorAddres
+    1427              
+    1428                      .dwfde $C$DW$CIE, ||MemCfg_getUncorrErrorAddress||
+    1429              $C$DW$57        .dwtag  DW_TAG_formal_parameter
+    1430                      .dwattr $C$DW$57, DW_AT_name("stsFlag")
+    1431                      .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$29)
+    1432                      .dwattr $C$DW$57, DW_AT_location[DW_OP_reg0]
+    1433              
+    1434              
+    1435              ;***************************************************************
+    1436              ;* FNAME: MemCfg_getUncorrErrorAddress  FR SIZE:   0           *
+    1437              ;*                                                             *
+    1438              ;* FUNCTION ENVIRONMENT                                        *
+    1439              ;*                                                             *
+    1440              ;* FUNCTION PROPERTIES                                         *
+    1441              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1442              ;***************************************************************
+    1443              
+    1444              ||MemCfg_getUncorrErrorAddress||:
+    1445              ;* AR4   assigned to address
+    1446              $C$DW$58        .dwtag  DW_TAG_variable
+    1447                      .dwattr $C$DW$58, DW_AT_name("address")
+    1448                      .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$29)
+    1449                      .dwattr $C$DW$58, DW_AT_location[DW_OP_reg12]
+    1450              
+    1451              ;* AR6   assigned to temp
+    1452              $C$DW$59        .dwtag  DW_TAG_variable
+    1453                      .dwattr $C$DW$59, DW_AT_name("temp")
+    1454                      .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$29)
+    1455                      .dwattr $C$DW$59, DW_AT_location[DW_OP_reg16]
+    1456              
+    1457                      .dwcfi  cfa_offset, -2
+    1458                      .dwcfi  save_reg_to_mem, 26, 0
+    1459                      .dwpsn  file "../src_driver/memcfg.c",line 687,column 5,is_stmt,isa 0
+    1460 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |687| 
+    1461                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1462 00000001 0201          MOVB      ACC,#1                ; [CPU_ALU] |689| 
+    1463                      .dwpsn  file "../src_driver/memcfg.c",line 685,column 5,is_stmt,isa 0
+    1464 00000002 8F05          MOVL      XAR4,#390406          ; [CPU_ARAU] |685| 
+         00000003 F506 
+    1465                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1466 00000004 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   29
+
+    1467 00000005 673A          B         ||$C$L44||,HIS        ; [CPU_ALU] |689| 
+    1468                      ; branchcc occurs ; [] |689| 
+    1469 00000006 2901          CLRC      SXM                   ; [CPU_ALU] 
+    1470 00000007       ||$C$L43||:    
+    1471 00000007 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1472 00000008 FF40          SFR       ACC,1                 ; [CPU_ALU] |689| 
+    1473 00000009 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |689| 
+    1474                      .dwpsn  file "../src_driver/memcfg.c",line 692,column 9,is_stmt,isa 0
+    1475 0000000a DC02          ADDB      XAR4,#2               ; [CPU_ALU] |692| 
+    1476                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1477 0000000b 0201          MOVB      ACC,#1                ; [CPU_FPU] |689| 
+    1478 0000000c 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+    1479 0000000d 6732          B         ||$C$L44||,HIS        ; [CPU_ALU] |689| 
+    1480                      ; branchcc occurs ; [] |689| 
+    1481 0000000e 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1482 0000000f FF40          SFR       ACC,1                 ; [CPU_ALU] |689| 
+    1483 00000010 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |689| 
+    1484                      .dwpsn  file "../src_driver/memcfg.c",line 692,column 9,is_stmt,isa 0
+    1485 00000011 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |692| 
+    1486                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1487 00000012 0201          MOVB      ACC,#1                ; [CPU_FPU] |689| 
+    1488 00000013 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+    1489 00000014 672B          B         ||$C$L44||,HIS        ; [CPU_ALU] |689| 
+    1490                      ; branchcc occurs ; [] |689| 
+    1491 00000015 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1492 00000016 FF40          SFR       ACC,1                 ; [CPU_ALU] |689| 
+    1493 00000017 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |689| 
+    1494                      .dwpsn  file "../src_driver/memcfg.c",line 692,column 9,is_stmt,isa 0
+    1495 00000018 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |692| 
+    1496                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1497 00000019 0201          MOVB      ACC,#1                ; [CPU_FPU] |689| 
+    1498 0000001a 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+    1499 0000001b 6724          B         ||$C$L44||,HIS        ; [CPU_ALU] |689| 
+    1500                      ; branchcc occurs ; [] |689| 
+    1501 0000001c 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1502 0000001d FF40          SFR       ACC,1                 ; [CPU_ALU] |689| 
+    1503 0000001e 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |689| 
+    1504                      .dwpsn  file "../src_driver/memcfg.c",line 692,column 9,is_stmt,isa 0
+    1505 0000001f DC02          ADDB      XAR4,#2               ; [CPU_ALU] |692| 
+    1506                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1507 00000020 0201          MOVB      ACC,#1                ; [CPU_FPU] |689| 
+    1508 00000021 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+    1509 00000022 671D          B         ||$C$L44||,HIS        ; [CPU_ALU] |689| 
+    1510                      ; branchcc occurs ; [] |689| 
+    1511 00000023 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1512 00000024 FF40          SFR       ACC,1                 ; [CPU_ALU] |689| 
+    1513 00000025 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |689| 
+    1514                      .dwpsn  file "../src_driver/memcfg.c",line 692,column 9,is_stmt,isa 0
+    1515 00000026 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |692| 
+    1516                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1517 00000027 0201          MOVB      ACC,#1                ; [CPU_FPU] |689| 
+    1518 00000028 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+    1519 00000029 6716          B         ||$C$L44||,HIS        ; [CPU_ALU] |689| 
+    1520                      ; branchcc occurs ; [] |689| 
+    1521 0000002a 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   30
+
+    1522 0000002b FF40          SFR       ACC,1                 ; [CPU_ALU] |689| 
+    1523 0000002c 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |689| 
+    1524                      .dwpsn  file "../src_driver/memcfg.c",line 692,column 9,is_stmt,isa 0
+    1525 0000002d DC02          ADDB      XAR4,#2               ; [CPU_ALU] |692| 
+    1526                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1527 0000002e 0201          MOVB      ACC,#1                ; [CPU_FPU] |689| 
+    1528 0000002f 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+    1529 00000030 670F          B         ||$C$L44||,HIS        ; [CPU_ALU] |689| 
+    1530                      ; branchcc occurs ; [] |689| 
+    1531 00000031 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1532 00000032 FF40          SFR       ACC,1                 ; [CPU_ALU] |689| 
+    1533 00000033 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |689| 
+    1534                      .dwpsn  file "../src_driver/memcfg.c",line 692,column 9,is_stmt,isa 0
+    1535 00000034 DC02          ADDB      XAR4,#2               ; [CPU_ALU] |692| 
+    1536                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1537 00000035 0201          MOVB      ACC,#1                ; [CPU_FPU] |689| 
+    1538 00000036 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+    1539 00000037 6708          B         ||$C$L44||,HIS        ; [CPU_ALU] |689| 
+    1540                      ; branchcc occurs ; [] |689| 
+    1541 00000038 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1542 00000039 FF40          SFR       ACC,1                 ; [CPU_ALU] |689| 
+    1543 0000003a 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |689| 
+    1544                      .dwpsn  file "../src_driver/memcfg.c",line 692,column 9,is_stmt,isa 0
+    1545 0000003b DC02          ADDB      XAR4,#2               ; [CPU_ALU] |692| 
+    1546                      .dwpsn  file "../src_driver/memcfg.c",line 689,column 11,is_stmt,isa 0
+    1547 0000003c 0201          MOVB      ACC,#1                ; [CPU_FPU] |689| 
+    1548 0000003d 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |689| 
+    1549 0000003e 68C9          B         ||$C$L43||,LO         ; [CPU_ALU] |689| 
+    1550                      ; branchcc occurs ; [] |689| 
+    1551 0000003f       ||$C$L44||:    
+    1552                      .dwpsn  file "../src_driver/memcfg.c",line 698,column 5,is_stmt,isa 0
+    1553 0000003f 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |698| 
+    1554              $C$DW$60        .dwtag  DW_TAG_TI_branch
+    1555                      .dwattr $C$DW$60, DW_AT_low_pc(0x00)
+    1556                      .dwattr $C$DW$60, DW_AT_TI_return
+    1557              
+    1558 00000040 0006          LRETR     ; [CPU_ALU] 
+    1559                      ; return occurs ; [] 
+    1560                      .dwattr $C$DW$56, DW_AT_TI_end_file("../src_driver/memcfg.c")
+    1561                      .dwattr $C$DW$56, DW_AT_TI_end_line(0x2bb)
+    1562                      .dwattr $C$DW$56, DW_AT_TI_end_column(0x01)
+    1563                      .dwendentry
+    1564                      .dwendtag $C$DW$56
+    1565              
+    1566 00000000               .sect   ".text:MemCfg_getInitStatus"
+    1567                      .clink
+    1568                      .global ||MemCfg_getInitStatus||
+    1569              
+    1570              $C$DW$61        .dwtag  DW_TAG_subprogram
+    1571                      .dwattr $C$DW$61, DW_AT_name("MemCfg_getInitStatus")
+    1572                      .dwattr $C$DW$61, DW_AT_low_pc(||MemCfg_getInitStatus||)
+    1573                      .dwattr $C$DW$61, DW_AT_high_pc(0x00)
+    1574                      .dwattr $C$DW$61, DW_AT_linkage_name("MemCfg_getInitStatus")
+    1575                      .dwattr $C$DW$61, DW_AT_external
+    1576                      .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$44)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   31
+
+    1577                      .dwattr $C$DW$61, DW_AT_decl_file("../src_driver/memcfg.c")
+    1578                      .dwattr $C$DW$61, DW_AT_decl_line(0x21b)
+    1579                      .dwattr $C$DW$61, DW_AT_decl_column(0x01)
+    1580                      .dwattr $C$DW$61, DW_AT_TI_max_frame_size(-2)
+    1581                      .dwpsn  file "../src_driver/memcfg.c",line 540,column 1,is_stmt,address ||MemCfg_getInitStatus||,isa 
+    1582              
+    1583                      .dwfde $C$DW$CIE, ||MemCfg_getInitStatus||
+    1584              $C$DW$62        .dwtag  DW_TAG_formal_parameter
+    1585                      .dwattr $C$DW$62, DW_AT_name("ramSections")
+    1586                      .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$29)
+    1587                      .dwattr $C$DW$62, DW_AT_location[DW_OP_reg0]
+    1588              
+    1589              
+    1590              ;***************************************************************
+    1591              ;* FNAME: MemCfg_getInitStatus          FR SIZE:   0           *
+    1592              ;*                                                             *
+    1593              ;* FUNCTION ENVIRONMENT                                        *
+    1594              ;*                                                             *
+    1595              ;* FUNCTION PROPERTIES                                         *
+    1596              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1597              ;***************************************************************
+    1598              
+    1599              ||MemCfg_getInitStatus||:
+    1600              ;* PL    assigned to ramSections
+    1601              $C$DW$63        .dwtag  DW_TAG_variable
+    1602                      .dwattr $C$DW$63, DW_AT_name("ramSections")
+    1603                      .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$43)
+    1604                      .dwattr $C$DW$63, DW_AT_location[DW_OP_reg2]
+    1605              
+    1606              ;* AL    assigned to status
+    1607              $C$DW$64        .dwtag  DW_TAG_variable
+    1608                      .dwattr $C$DW$64, DW_AT_name("status")
+    1609                      .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$29)
+    1610                      .dwattr $C$DW$64, DW_AT_location[DW_OP_reg0]
+    1611              
+    1612                      .dwcfi  cfa_offset, -2
+    1613                      .dwcfi  save_reg_to_mem, 26, 0
+    1614 00000000 FF5A          MOVL      P,ACC                 ; [CPU_ALU] |540| 
+    1615                      .dwpsn  file "../src_driver/memcfg.c",line 555,column 5,is_stmt,isa 0
+    1616 00000001 9000          ANDB      AL,#0                 ; [CPU_ALU] |555| 
+    1617 00000002 18A8          AND       AH,#65280             ; [CPU_ALU] |555| 
+         00000003 FF00 
+    1618 00000004 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |555| 
+    1619 00000005 FF2F          MOV       ACC,#512 << 15        ; [CPU_ALU] |555| 
+         00000006 0200 
+    1620 00000007 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |555| 
+    1621 00000008 640B          B         ||$C$L45||,LT         ; [CPU_ALU] |555| 
+    1622                      ; branchcc occurs ; [] |555| 
+    1623 00000009 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |555| 
+    1624 0000000a 6139          B         ||$C$L50||,EQ         ; [CPU_ALU] |555| 
+    1625                      ; branchcc occurs ; [] |555| 
+    1626 0000000b 3B01          SETC      SXM                   ; [CPU_ALU] 
+    1627 0000000c FF2F          MOV       ACC,#-512 << 15       ; [CPU_ALU] |555| 
+         0000000d FE00 
+    1628 0000000e 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |555| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   32
+
+    1629 0000000f 610D          B         ||$C$L46||,EQ         ; [CPU_ALU] |555| 
+    1630                      ; branchcc occurs ; [] |555| 
+    1631 00000010 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] 
+    1632 00000011 6135          B         ||$C$L51||,EQ         ; [CPU_ALU] |555| 
+    1633                      ; branchcc occurs ; [] |555| 
+    1634 00000012 6F29          B         ||$C$L47||,UNC        ; [CPU_ALU] |555| 
+    1635                      ; branch occurs ; [] |555| 
+    1636 00000013       ||$C$L45||:    
+    1637 00000013 FF2F          MOV       ACC,#1024 << 15       ; [CPU_ALU] |555| 
+         00000014 0400 
+    1638 00000015 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |555| 
+    1639 00000016 612A          B         ||$C$L49||,EQ         ; [CPU_ALU] |555| 
+    1640                      ; branchcc occurs ; [] |555| 
+    1641 00000017 FF2F          MOV       ACC,#1536 << 15       ; [CPU_ALU] |555| 
+         00000018 0600 
+    1642 00000019 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |555| 
+    1643 0000001a 6123          B         ||$C$L48||,EQ         ; [CPU_ALU] |555| 
+    1644                      ; branchcc occurs ; [] |555| 
+    1645 0000001b 6F20          B         ||$C$L47||,UNC        ; [CPU_ALU] |555| 
+    1646                      ; branch occurs ; [] |555| 
+    1647 0000001c       ||$C$L46||:    
+    1648                      .dwpsn  file "../src_driver/memcfg.c",line 577,column 13,is_stmt,isa 0
+    1649 0000001c 020F          MOVB      ACC,#15               ; [CPU_ALU] |577| 
+    1650 0000001d 8F05          MOVL      XAR4,#390164          ; [CPU_ARAU] |577| 
+         0000001e F414 
+    1651 0000001f 0FC4          CMPL      ACC,*+XAR4[0]         ; [CPU_ALU] |577| 
+    1652 00000020 601B          B         ||$C$L47||,NEQ        ; [CPU_ALU] |577| 
+    1653                      ; branchcc occurs ; [] |577| 
+    1654 00000021 9A3F          MOV       AL,#63                ; [CPU_ALU] |577| 
+    1655 00000022 28A8          MOV       AH,#256               ; [CPU_ALU] |577| 
+         00000023 0100 
+    1656 00000024 8F05          MOVL      XAR4,#390196          ; [CPU_ARAU] |577| 
+         00000025 F434 
+    1657 00000026 0FC4          CMPL      ACC,*+XAR4[0]         ; [CPU_ALU] |577| 
+    1658 00000027 6014          B         ||$C$L47||,NEQ        ; [CPU_ALU] |577| 
+    1659                      ; branchcc occurs ; [] |577| 
+    1660 00000028 28A9          MOV       AL,#65535             ; [CPU_ALU] |577| 
+         00000029 FFFF 
+    1661 0000002a 28A8          MOV       AH,#512               ; [CPU_ALU] |577| 
+         0000002b 0200 
+    1662 0000002c 8F05          MOVL      XAR4,#390228          ; [CPU_ARAU] |577| 
+         0000002d F454 
+    1663 0000002e 0FC4          CMPL      ACC,*+XAR4[0]         ; [CPU_ALU] |577| 
+    1664 0000002f 600C          B         ||$C$L47||,NEQ        ; [CPU_ALU] |577| 
+    1665                      ; branchcc occurs ; [] |577| 
+    1666 00000030 9A07          MOV       AL,#7                 ; [CPU_ALU] |577| 
+    1667 00000031 28A8          MOV       AH,#768               ; [CPU_ALU] |577| 
+         00000032 0300 
+    1668 00000033 8F05          MOVL      XAR4,#390260          ; [CPU_ARAU] |577| 
+         00000034 F474 
+    1669 00000035 0FC4          CMPL      ACC,*+XAR4[0]         ; [CPU_ALU] |577| 
+    1670 00000036 6005          B         ||$C$L47||,NEQ        ; [CPU_ALU] |577| 
+    1671                      ; branchcc occurs ; [] |577| 
+    1672                      .dwpsn  file "../src_driver/memcfg.c",line 586,column 17,is_stmt,isa 0
+    1673 00000037 28A9          MOV       AL,#65535             ; [CPU_ALU] |586| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   33
+
+         00000038 FFFF 
+    1674 00000039 9BFF          MOV       AH,#255               ; [CPU_ALU] |586| 
+    1675 0000003a 6F0F          B         ||$C$L53||,UNC        ; [CPU_ALU] 
+    1676                      ; branch occurs ; [] 
+    1677 0000003b       ||$C$L47||:    
+    1678                      .dwpsn  file "../src_driver/memcfg.c",line 599,column 13,is_stmt,isa 0
+    1679 0000003b 0200          MOVB      ACC,#0                ; [CPU_ALU] |599| 
+    1680                      .dwpsn  file "../src_driver/memcfg.c",line 600,column 13,is_stmt,isa 0
+    1681 0000003c 6F0D          B         ||$C$L53||,UNC        ; [CPU_ALU] |600| 
+    1682                      ; branch occurs ; [] |600| 
+    1683 0000003d       ||$C$L48||:    
+    1684                      .dwpsn  file "../src_driver/memcfg.c",line 570,column 13,is_stmt,isa 0
+    1685 0000003d 8F05          MOVL      XAR4,#390260          ; [CPU_ARAU] |570| 
+         0000003e F474 
+    1686                      .dwpsn  file "../src_driver/memcfg.c",line 571,column 13,is_stmt,isa 0
+    1687 0000003f 6F09          B         ||$C$L52||,UNC        ; [CPU_ALU] |571| 
+    1688                      ; branch occurs ; [] |571| 
+    1689 00000040       ||$C$L49||:    
+    1690                      .dwpsn  file "../src_driver/memcfg.c",line 566,column 13,is_stmt,isa 0
+    1691 00000040 8F05          MOVL      XAR4,#390228          ; [CPU_ARAU] |566| 
+         00000041 F454 
+    1692                      .dwpsn  file "../src_driver/memcfg.c",line 567,column 13,is_stmt,isa 0
+    1693 00000042 6F06          B         ||$C$L52||,UNC        ; [CPU_ALU] |567| 
+    1694                      ; branch occurs ; [] |567| 
+    1695 00000043       ||$C$L50||:    
+    1696                      .dwpsn  file "../src_driver/memcfg.c",line 562,column 13,is_stmt,isa 0
+    1697 00000043 8F05          MOVL      XAR4,#390196          ; [CPU_ARAU] |562| 
+         00000044 F434 
+    1698                      .dwpsn  file "../src_driver/memcfg.c",line 563,column 13,is_stmt,isa 0
+    1699 00000045 6F03          B         ||$C$L52||,UNC        ; [CPU_ALU] |563| 
+    1700                      ; branch occurs ; [] |563| 
+    1701 00000046       ||$C$L51||:    
+    1702                      .dwpsn  file "../src_driver/memcfg.c",line 558,column 13,is_stmt,isa 0
+    1703 00000046 8F05          MOVL      XAR4,#390164          ; [CPU_ARAU] |558| 
+         00000047 F414 
+    1704 00000048       ||$C$L52||:    
+    1705 00000048 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |558| 
+    1706 00000049       ||$C$L53||:    
+    1707                      .dwpsn  file "../src_driver/memcfg.c",line 603,column 5,is_stmt,isa 0
+    1708 00000049 CFAA          AND       AH,PH                 ; [CPU_ALU] |603| 
+    1709 0000004a CEAB          AND       AL,PL                 ; [CPU_ALU] |603| 
+    1710 0000004b 18AA          AND       PH,#255               ; [CPU_ALU] |603| 
+         0000004c 00FF 
+    1711 0000004d BE00          MOVB      XAR6,#0               ; [CPU_FPU] |603| 
+    1712 0000004e 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |603| 
+    1713 0000004f 56B1          MOVB      XAR6,#1,EQ            ; [CPU_ALU] |603| 
+         00000050 01A6 
+    1714 00000051 92A6          MOV       AL,AR6                ; [CPU_ALU] |603| 
+    1715              $C$DW$65        .dwtag  DW_TAG_TI_branch
+    1716                      .dwattr $C$DW$65, DW_AT_low_pc(0x00)
+    1717                      .dwattr $C$DW$65, DW_AT_TI_return
+    1718              
+    1719 00000052 0006          LRETR     ; [CPU_ALU] 
+    1720                      ; return occurs ; [] 
+    1721                      .dwattr $C$DW$61, DW_AT_TI_end_file("../src_driver/memcfg.c")
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   34
+
+    1722                      .dwattr $C$DW$61, DW_AT_TI_end_line(0x25c)
+    1723                      .dwattr $C$DW$61, DW_AT_TI_end_column(0x01)
+    1724                      .dwendentry
+    1725                      .dwendtag $C$DW$61
+    1726              
+    1727 00000000               .sect   ".text:MemCfg_getCorrErrorAddress"
+    1728                      .clink
+    1729                      .global ||MemCfg_getCorrErrorAddress||
+    1730              
+    1731              $C$DW$66        .dwtag  DW_TAG_subprogram
+    1732                      .dwattr $C$DW$66, DW_AT_name("MemCfg_getCorrErrorAddress")
+    1733                      .dwattr $C$DW$66, DW_AT_low_pc(||MemCfg_getCorrErrorAddress||)
+    1734                      .dwattr $C$DW$66, DW_AT_high_pc(0x00)
+    1735                      .dwattr $C$DW$66, DW_AT_linkage_name("MemCfg_getCorrErrorAddress")
+    1736                      .dwattr $C$DW$66, DW_AT_external
+    1737                      .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$29)
+    1738                      .dwattr $C$DW$66, DW_AT_decl_file("../src_driver/memcfg.c")
+    1739                      .dwattr $C$DW$66, DW_AT_decl_line(0x289)
+    1740                      .dwattr $C$DW$66, DW_AT_decl_column(0x01)
+    1741                      .dwattr $C$DW$66, DW_AT_TI_max_frame_size(-2)
+    1742                      .dwpsn  file "../src_driver/memcfg.c",line 650,column 1,is_stmt,address ||MemCfg_getCorrErrorAddress|
+    1743              
+    1744                      .dwfde $C$DW$CIE, ||MemCfg_getCorrErrorAddress||
+    1745              $C$DW$67        .dwtag  DW_TAG_formal_parameter
+    1746                      .dwattr $C$DW$67, DW_AT_name("stsFlag")
+    1747                      .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$29)
+    1748                      .dwattr $C$DW$67, DW_AT_location[DW_OP_reg0]
+    1749              
+    1750              
+    1751              ;***************************************************************
+    1752              ;* FNAME: MemCfg_getCorrErrorAddress    FR SIZE:   0           *
+    1753              ;*                                                             *
+    1754              ;* FUNCTION ENVIRONMENT                                        *
+    1755              ;*                                                             *
+    1756              ;* FUNCTION PROPERTIES                                         *
+    1757              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1758              ;***************************************************************
+    1759              
+    1760 00000000       ||MemCfg_getCorrErrorAddress||:
+    1761                      .dwcfi  cfa_offset, -2
+    1762                      .dwcfi  save_reg_to_mem, 26, 0
+    1763                      .dwpsn  file "../src_driver/memcfg.c",line 668,column 5,is_stmt,isa 0
+    1764 00000000 8F05          MOVL      XAR4,#390438          ; [CPU_ARAU] |668| 
+         00000001 F526 
+    1765 00000002 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |668| 
+    1766              $C$DW$68        .dwtag  DW_TAG_TI_branch
+    1767                      .dwattr $C$DW$68, DW_AT_low_pc(0x00)
+    1768                      .dwattr $C$DW$68, DW_AT_TI_return
+    1769              
+    1770 00000003 0006          LRETR     ; [CPU_ALU] 
+    1771                      ; return occurs ; [] 
+    1772                      .dwattr $C$DW$66, DW_AT_TI_end_file("../src_driver/memcfg.c")
+    1773                      .dwattr $C$DW$66, DW_AT_TI_end_line(0x29d)
+    1774                      .dwattr $C$DW$66, DW_AT_TI_end_column(0x01)
+    1775                      .dwendentry
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   35
+
+    1776                      .dwendtag $C$DW$66
+    1777              
+    1778 00000000               .sect   ".text:MemCfg_commitConfig"
+    1779                      .clink
+    1780                      .global ||MemCfg_commitConfig||
+    1781              
+    1782              $C$DW$69        .dwtag  DW_TAG_subprogram
+    1783                      .dwattr $C$DW$69, DW_AT_name("MemCfg_commitConfig")
+    1784                      .dwattr $C$DW$69, DW_AT_low_pc(||MemCfg_commitConfig||)
+    1785                      .dwattr $C$DW$69, DW_AT_high_pc(0x00)
+    1786                      .dwattr $C$DW$69, DW_AT_linkage_name("MemCfg_commitConfig")
+    1787                      .dwattr $C$DW$69, DW_AT_external
+    1788                      .dwattr $C$DW$69, DW_AT_decl_file("../src_driver/memcfg.c")
+    1789                      .dwattr $C$DW$69, DW_AT_decl_line(0xb0)
+    1790                      .dwattr $C$DW$69, DW_AT_decl_column(0x01)
+    1791                      .dwattr $C$DW$69, DW_AT_TI_max_frame_size(-2)
+    1792                      .dwpsn  file "../src_driver/memcfg.c",line 177,column 1,is_stmt,address ||MemCfg_commitConfig||,isa 0
+    1793              
+    1794                      .dwfde $C$DW$CIE, ||MemCfg_commitConfig||
+    1795              $C$DW$70        .dwtag  DW_TAG_formal_parameter
+    1796                      .dwattr $C$DW$70, DW_AT_name("memSections")
+    1797                      .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$29)
+    1798                      .dwattr $C$DW$70, DW_AT_location[DW_OP_reg0]
+    1799              
+    1800              
+    1801              ;***************************************************************
+    1802              ;* FNAME: MemCfg_commitConfig           FR SIZE:   0           *
+    1803              ;*                                                             *
+    1804              ;* FUNCTION ENVIRONMENT                                        *
+    1805              ;*                                                             *
+    1806              ;* FUNCTION PROPERTIES                                         *
+    1807              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+    1808              ;***************************************************************
+    1809              
+    1810              ||MemCfg_commitConfig||:
+    1811              ;* AR6   assigned to memSections
+    1812              $C$DW$71        .dwtag  DW_TAG_variable
+    1813                      .dwattr $C$DW$71, DW_AT_name("memSections")
+    1814                      .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$43)
+    1815                      .dwattr $C$DW$71, DW_AT_location[DW_OP_reg16]
+    1816              
+    1817                      .dwcfi  cfa_offset, -2
+    1818                      .dwcfi  save_reg_to_mem, 26, 0
+    1819 00000000 1EA6          MOVL      XAR6,ACC              ; [CPU_ALU] |177| 
+    1820                      .dwpsn  file "../src_driver/memcfg.c",line 190,column 5,is_stmt,isa 0
+    1821 00000001 7622          EALLOW    ; [CPU_ALU] |190| 
+    1822 00000002 3B01          SETC      SXM                   ; [CPU_ALU] 
+    1823                      .dwpsn  file "../src_driver/memcfg.c",line 192,column 5,is_stmt,isa 0
+    1824 00000003 FF2F          MOV       ACC,#-512 << 15       ; [CPU_ALU] |192| 
+         00000004 FE00 
+    1825 00000005 A3A6          MOVL      P,XAR6                ; [CPU_ALU] |192| 
+    1826 00000006 18AB          AND       PL,#0                 ; [CPU_ALU] |192| 
+         00000007 0000 
+    1827 00000008 18AA          AND       PH,#65280             ; [CPU_ALU] |192| 
+         00000009 FF00 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   36
+
+    1828 0000000a 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |192| 
+    1829 0000000b 610C          B         ||$C$L54||,EQ         ; [CPU_ALU] |192| 
+    1830                      ; branchcc occurs ; [] |192| 
+    1831 0000000c A9A9          MOVL      ACC,P                 ; [CPU_ALU] 
+    1832 0000000d 6121          B         ||$C$L57||,EQ         ; [CPU_ALU] |192| 
+    1833                      ; branchcc occurs ; [] |192| 
+    1834 0000000e FF2F          MOV       ACC,#512 << 15        ; [CPU_ALU] |192| 
+         0000000f 0200 
+    1835 00000010 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |192| 
+    1836 00000011 611A          B         ||$C$L56||,EQ         ; [CPU_ALU] |192| 
+    1837                      ; branchcc occurs ; [] |192| 
+    1838 00000012 FF2F          MOV       ACC,#1024 << 15       ; [CPU_ALU] |192| 
+         00000013 0400 
+    1839 00000014 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |192| 
+    1840 00000015 6113          B         ||$C$L55||,EQ         ; [CPU_ALU] |192| 
+    1841                      ; branchcc occurs ; [] |192| 
+    1842 00000016 6F1E          B         ||$C$L59||,UNC        ; [CPU_ALU] |192| 
+    1843                      ; branch occurs ; [] |192| 
+    1844 00000017       ||$C$L54||:    
+    1845                      .dwpsn  file "../src_driver/memcfg.c",line 214,column 13,is_stmt,isa 0
+    1846 00000017 020F          MOVB      ACC,#15               ; [CPU_ALU] |214| 
+    1847 00000018 8F05          MOVL      XAR4,#390146          ; [CPU_ARAU] |214| 
+         00000019 F402 
+    1848                      .dwpsn  file "../src_driver/memcfg.c",line 216,column 13,is_stmt,isa 0
+    1849 0000001a 8F45          MOVL      XAR5,#390178          ; [CPU_ARAU] |216| 
+         0000001b F422 
+    1850                      .dwpsn  file "../src_driver/memcfg.c",line 214,column 13,is_stmt,isa 0
+    1851 0000001c 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |214| 
+    1852 0000001d 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |214| 
+    1853                      .dwpsn  file "../src_driver/memcfg.c",line 216,column 13,is_stmt,isa 0
+    1854 0000001e 023F          MOVB      ACC,#63               ; [CPU_ALU] |216| 
+    1855                      .dwpsn  file "../src_driver/memcfg.c",line 218,column 13,is_stmt,isa 0
+    1856 0000001f 8F05          MOVL      XAR4,#390210          ; [CPU_ARAU] |218| 
+         00000020 F442 
+    1857                      .dwpsn  file "../src_driver/memcfg.c",line 216,column 13,is_stmt,isa 0
+    1858 00000021 98C5          OR        *+XAR5[0],AL          ; [CPU_ALU] |216| 
+    1859 00000022 99CD          OR        *+XAR5[1],AH          ; [CPU_ALU] |216| 
+    1860                      .dwpsn  file "../src_driver/memcfg.c",line 218,column 13,is_stmt,isa 0
+    1861 00000023 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |218| 
+    1862 00000024 1AA9          OR        AL,#65535             ; [CPU_ALU] |218| 
+         00000025 FFFF 
+    1863 00000026 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |218| 
+    1864                      .dwpsn  file "../src_driver/memcfg.c",line 220,column 13,is_stmt,isa 0
+    1865 00000027 6F0D          B         ||$C$L59||,UNC        ; [CPU_ALU] |220| 
+    1866                      ; branch occurs ; [] |220| 
+    1867 00000028       ||$C$L55||:    
+    1868                      .dwpsn  file "../src_driver/memcfg.c",line 205,column 13,is_stmt,isa 0
+    1869 00000028 8F05          MOVL      XAR4,#390210          ; [CPU_ARAU] |205| 
+         00000029 F442 
+    1870                      .dwpsn  file "../src_driver/memcfg.c",line 207,column 13,is_stmt,isa 0
+    1871 0000002a 6F06          B         ||$C$L58||,UNC        ; [CPU_ALU] |207| 
+    1872                      ; branch occurs ; [] |207| 
+    1873 0000002b       ||$C$L56||:    
+    1874                      .dwpsn  file "../src_driver/memcfg.c",line 200,column 13,is_stmt,isa 0
+    1875 0000002b 8F05          MOVL      XAR4,#390178          ; [CPU_ARAU] |200| 
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   37
+
+         0000002c F422 
+    1876                      .dwpsn  file "../src_driver/memcfg.c",line 202,column 13,is_stmt,isa 0
+    1877 0000002d 6F03          B         ||$C$L58||,UNC        ; [CPU_ALU] |202| 
+    1878                      ; branch occurs ; [] |202| 
+    1879 0000002e       ||$C$L57||:    
+    1880                      .dwpsn  file "../src_driver/memcfg.c",line 195,column 13,is_stmt,isa 0
+    1881 0000002e 8F05          MOVL      XAR4,#390146          ; [CPU_ARAU] |195| 
+         0000002f F402 
+    1882 00000030       ||$C$L58||:    
+    1883 00000030 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |195| 
+    1884 00000031 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |195| 
+    1885 00000032 91FF          ANDB      AH,#255               ; [CPU_ALU] |195| 
+    1886 00000033 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |195| 
+    1887 00000034       ||$C$L59||:    
+    1888                      .dwpsn  file "../src_driver/memcfg.c",line 230,column 5,is_stmt,isa 0
+    1889 00000034 761A          EDIS      ; [CPU_ALU] |230| 
+    1890              $C$DW$72        .dwtag  DW_TAG_TI_branch
+    1891                      .dwattr $C$DW$72, DW_AT_low_pc(0x00)
+    1892                      .dwattr $C$DW$72, DW_AT_TI_return
+    1893              
+    1894 00000035 0006          LRETR     ; [CPU_ALU] 
+    1895                      ; return occurs ; [] 
+    1896                      .dwattr $C$DW$69, DW_AT_TI_end_file("../src_driver/memcfg.c")
+    1897                      .dwattr $C$DW$69, DW_AT_TI_end_line(0xe7)
+    1898                      .dwattr $C$DW$69, DW_AT_TI_end_column(0x01)
+    1899                      .dwendentry
+    1900                      .dwendtag $C$DW$69
+    1901              
+    1902              
+    1903              ;***************************************************************
+    1904              ;* BUILD ATTRIBUTES                                            *
+    1905              ;***************************************************************
+    1906                      .battr "c28xabi", Tag_File, 1, Tag_float_args(0)
+    1907                      .battr "c28xabi", Tag_File, 1, Tag_double_args(0)
+    1908                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1909              
+    1910              ;***************************************************************
+    1911              ;* DWARF CIE ENTRIES                                           *
+    1912              ;***************************************************************
+    1913              
+    1914              $C$DW$CIE       .dwcie 26
+    1915                      .dwcfi  cfa_register, 20
+    1916                      .dwcfi  cfa_offset, 0
+    1917                      .dwcfi  same_value, 28
+    1918                      .dwcfi  same_value, 6
+    1919                      .dwcfi  same_value, 7
+    1920                      .dwcfi  same_value, 8
+    1921                      .dwcfi  same_value, 9
+    1922                      .dwcfi  same_value, 10
+    1923                      .dwcfi  same_value, 11
+    1924                      .dwcfi  same_value, 59
+    1925                      .dwcfi  same_value, 63
+    1926                      .dwcfi  same_value, 67
+    1927                      .dwcfi  same_value, 71
+    1928                      .dwendentry
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   38
+
+    1929                      .dwendtag $C$DW$CU
+    1930              
+    1931              
+    1932              ;***************************************************************
+    1933              ;* TYPE INFORMATION                                            *
+    1934              ;***************************************************************
+    1935              
+    1936              $C$DW$TU$19     .dwtag  DW_TAG_type_unit
+    1937                      .dwmtype  $C$DW$T$19
+    1938              
+    1939              $C$DW$T$19      .dwtag  DW_TAG_enumeration_type
+    1940                      .dwattr $C$DW$T$19, DW_AT_byte_size(0x01)
+    1941              $C$DW$73        .dwtag  DW_TAG_enumerator
+    1942                      .dwattr $C$DW$73, DW_AT_name("MEMCFG_LSRAMCONTROLLER_CPU_ONLY")
+    1943                      .dwattr $C$DW$73, DW_AT_const_value(0x00)
+    1944                      .dwattr $C$DW$73, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1945                      .dwattr $C$DW$73, DW_AT_decl_line(0xff)
+    1946                      .dwattr $C$DW$73, DW_AT_decl_column(0x05)
+    1947              
+    1948              $C$DW$74        .dwtag  DW_TAG_enumerator
+    1949                      .dwattr $C$DW$74, DW_AT_name("MEMCFG_LSRAMCONTROLLER_CPU_CLA1")
+    1950                      .dwattr $C$DW$74, DW_AT_const_value(0x01)
+    1951                      .dwattr $C$DW$74, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1952                      .dwattr $C$DW$74, DW_AT_decl_line(0x100)
+    1953                      .dwattr $C$DW$74, DW_AT_decl_column(0x05)
+    1954              
+    1955                      .dwattr $C$DW$T$19, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1956                      .dwattr $C$DW$T$19, DW_AT_decl_line(0xfe)
+    1957                      .dwattr $C$DW$T$19, DW_AT_decl_column(0x01)
+    1958                      .dwendtag $C$DW$T$19
+    1959              
+    1960                      .dwendtag $C$DW$TU$19
+    1961              
+    1962              
+    1963              $C$DW$TU$20     .dwtag  DW_TAG_type_unit
+    1964                      .dwmtype  $C$DW$T$20
+    1965              $C$DW$T$20      .dwtag  DW_TAG_typedef
+    1966                      .dwattr $C$DW$T$20, DW_AT_name("MemCfg_LSRAMControllerSel")
+    1967                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+    1968                      .dwattr $C$DW$T$20, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    1969                      .dwattr $C$DW$T$20, DW_AT_decl_line(0x101)
+    1970                      .dwattr $C$DW$T$20, DW_AT_decl_column(0x03)
+    1971              
+    1972                      .dwendtag $C$DW$TU$20
+    1973              
+    1974              
+    1975              $C$DW$TU$21     .dwtag  DW_TAG_type_unit
+    1976                      .dwmtype  $C$DW$T$21
+    1977              $C$DW$75        .dwtag  DW_TAG_TI_far_type
+    1978                      .dwattr $C$DW$75, DW_AT_type(*$C$DW$T$20)
+    1979              
+    1980              $C$DW$T$21      .dwtag  DW_TAG_const_type
+    1981                      .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$75)
+    1982              
+    1983                      .dwendtag $C$DW$TU$21
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   39
+
+    1984              
+    1985              
+    1986              $C$DW$TU$22     .dwtag  DW_TAG_type_unit
+    1987                      .dwmtype  $C$DW$T$22
+    1988              
+    1989              $C$DW$T$22      .dwtag  DW_TAG_enumeration_type
+    1990                      .dwattr $C$DW$T$22, DW_AT_byte_size(0x01)
+    1991              $C$DW$76        .dwtag  DW_TAG_enumerator
+    1992                      .dwattr $C$DW$76, DW_AT_name("MEMCFG_GSRAMCONTROLLER_CPU1")
+    1993                      .dwattr $C$DW$76, DW_AT_const_value(0x00)
+    1994                      .dwattr $C$DW$76, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    1995                      .dwattr $C$DW$76, DW_AT_decl_line(0x10b)
+    1996                      .dwattr $C$DW$76, DW_AT_decl_column(0x05)
+    1997              
+    1998              $C$DW$77        .dwtag  DW_TAG_enumerator
+    1999                      .dwattr $C$DW$77, DW_AT_name("MEMCFG_GSRAMCONTROLLER_CPU2")
+    2000                      .dwattr $C$DW$77, DW_AT_const_value(0x01)
+    2001                      .dwattr $C$DW$77, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    2002                      .dwattr $C$DW$77, DW_AT_decl_line(0x10c)
+    2003                      .dwattr $C$DW$77, DW_AT_decl_column(0x05)
+    2004              
+    2005                      .dwattr $C$DW$T$22, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    2006                      .dwattr $C$DW$T$22, DW_AT_decl_line(0x10a)
+    2007                      .dwattr $C$DW$T$22, DW_AT_decl_column(0x01)
+    2008                      .dwendtag $C$DW$T$22
+    2009              
+    2010                      .dwendtag $C$DW$TU$22
+    2011              
+    2012              
+    2013              $C$DW$TU$23     .dwtag  DW_TAG_type_unit
+    2014                      .dwmtype  $C$DW$T$23
+    2015              $C$DW$T$23      .dwtag  DW_TAG_typedef
+    2016                      .dwattr $C$DW$T$23, DW_AT_name("MemCfg_GSRAMControllerSel")
+    2017                      .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$22)
+    2018                      .dwattr $C$DW$T$23, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    2019                      .dwattr $C$DW$T$23, DW_AT_decl_line(0x10d)
+    2020                      .dwattr $C$DW$T$23, DW_AT_decl_column(0x03)
+    2021              
+    2022                      .dwendtag $C$DW$TU$23
+    2023              
+    2024              
+    2025              $C$DW$TU$24     .dwtag  DW_TAG_type_unit
+    2026                      .dwmtype  $C$DW$T$24
+    2027              $C$DW$78        .dwtag  DW_TAG_TI_far_type
+    2028                      .dwattr $C$DW$78, DW_AT_type(*$C$DW$T$23)
+    2029              
+    2030              $C$DW$T$24      .dwtag  DW_TAG_const_type
+    2031                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$78)
+    2032              
+    2033                      .dwendtag $C$DW$TU$24
+    2034              
+    2035              
+    2036              $C$DW$TU$25     .dwtag  DW_TAG_type_unit
+    2037                      .dwmtype  $C$DW$T$25
+    2038              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   40
+
+    2039              $C$DW$T$25      .dwtag  DW_TAG_enumeration_type
+    2040                      .dwattr $C$DW$T$25, DW_AT_byte_size(0x01)
+    2041              $C$DW$79        .dwtag  DW_TAG_enumerator
+    2042                      .dwattr $C$DW$79, DW_AT_name("MEMCFG_TEST_FUNCTIONAL")
+    2043                      .dwattr $C$DW$79, DW_AT_const_value(0x00)
+    2044                      .dwattr $C$DW$79, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    2045                      .dwattr $C$DW$79, DW_AT_decl_line(0x118)
+    2046                      .dwattr $C$DW$79, DW_AT_decl_column(0x05)
+    2047              
+    2048              $C$DW$80        .dwtag  DW_TAG_enumerator
+    2049                      .dwattr $C$DW$80, DW_AT_name("MEMCFG_TEST_WRITE_DATA")
+    2050                      .dwattr $C$DW$80, DW_AT_const_value(0x01)
+    2051                      .dwattr $C$DW$80, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    2052                      .dwattr $C$DW$80, DW_AT_decl_line(0x11a)
+    2053                      .dwattr $C$DW$80, DW_AT_decl_column(0x05)
+    2054              
+    2055              $C$DW$81        .dwtag  DW_TAG_enumerator
+    2056                      .dwattr $C$DW$81, DW_AT_name("MEMCFG_TEST_WRITE_ECC")
+    2057                      .dwattr $C$DW$81, DW_AT_const_value(0x02)
+    2058                      .dwattr $C$DW$81, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    2059                      .dwattr $C$DW$81, DW_AT_decl_line(0x11c)
+    2060                      .dwattr $C$DW$81, DW_AT_decl_column(0x05)
+    2061              
+    2062              $C$DW$82        .dwtag  DW_TAG_enumerator
+    2063                      .dwattr $C$DW$82, DW_AT_name("MEMCFG_TEST_WRITE_PARITY")
+    2064                      .dwattr $C$DW$82, DW_AT_const_value(0x02)
+    2065                      .dwattr $C$DW$82, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driver
+    2066                      .dwattr $C$DW$82, DW_AT_decl_line(0x11e)
+    2067                      .dwattr $C$DW$82, DW_AT_decl_column(0x05)
+    2068              
+    2069                      .dwattr $C$DW$T$25, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    2070                      .dwattr $C$DW$T$25, DW_AT_decl_line(0x116)
+    2071                      .dwattr $C$DW$T$25, DW_AT_decl_column(0x01)
+    2072                      .dwendtag $C$DW$T$25
+    2073              
+    2074                      .dwendtag $C$DW$TU$25
+    2075              
+    2076              
+    2077              $C$DW$TU$26     .dwtag  DW_TAG_type_unit
+    2078                      .dwmtype  $C$DW$T$26
+    2079              $C$DW$T$26      .dwtag  DW_TAG_typedef
+    2080                      .dwattr $C$DW$T$26, DW_AT_name("MemCfg_TestMode")
+    2081                      .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+    2082                      .dwattr $C$DW$T$26, DW_AT_decl_file("D:/TI/c2000/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driv
+    2083                      .dwattr $C$DW$T$26, DW_AT_decl_line(0x11f)
+    2084                      .dwattr $C$DW$T$26, DW_AT_decl_column(0x03)
+    2085              
+    2086                      .dwendtag $C$DW$TU$26
+    2087              
+    2088              
+    2089              $C$DW$TU$27     .dwtag  DW_TAG_type_unit
+    2090                      .dwmtype  $C$DW$T$27
+    2091              $C$DW$83        .dwtag  DW_TAG_TI_far_type
+    2092                      .dwattr $C$DW$83, DW_AT_type(*$C$DW$T$26)
+    2093              
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   41
+
+    2094              $C$DW$T$27      .dwtag  DW_TAG_const_type
+    2095                      .dwattr $C$DW$T$27, DW_AT_type(*$C$DW$83)
+    2096              
+    2097                      .dwendtag $C$DW$TU$27
+    2098              
+    2099              
+    2100              $C$DW$TU$2      .dwtag  DW_TAG_type_unit
+    2101                      .dwmtype  $C$DW$T$2
+    2102              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    2103                      .dwattr $C$DW$T$2, DW_AT_name("void")
+    2104              
+    2105                      .dwendtag $C$DW$TU$2
+    2106              
+    2107              
+    2108              $C$DW$TU$4      .dwtag  DW_TAG_type_unit
+    2109                      .dwmtype  $C$DW$T$4
+    2110              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    2111                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    2112                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    2113                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    2114              
+    2115                      .dwendtag $C$DW$TU$4
+    2116              
+    2117              
+    2118              $C$DW$TU$5      .dwtag  DW_TAG_type_unit
+    2119                      .dwmtype  $C$DW$T$5
+    2120              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    2121                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    2122                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    2123                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    2124              
+    2125                      .dwendtag $C$DW$TU$5
+    2126              
+    2127              
+    2128              $C$DW$TU$6      .dwtag  DW_TAG_type_unit
+    2129                      .dwmtype  $C$DW$T$6
+    2130              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    2131                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    2132                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    2133                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    2134              
+    2135                      .dwendtag $C$DW$TU$6
+    2136              
+    2137              
+    2138              $C$DW$TU$7      .dwtag  DW_TAG_type_unit
+    2139                      .dwmtype  $C$DW$T$7
+    2140              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    2141                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    2142                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    2143                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+    2144              
+    2145                      .dwendtag $C$DW$TU$7
+    2146              
+    2147              
+    2148              $C$DW$TU$8      .dwtag  DW_TAG_type_unit
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   42
+
+    2149                      .dwmtype  $C$DW$T$8
+    2150              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    2151                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    2152                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    2153                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    2154              
+    2155                      .dwendtag $C$DW$TU$8
+    2156              
+    2157              
+    2158              $C$DW$TU$9      .dwtag  DW_TAG_type_unit
+    2159                      .dwmtype  $C$DW$T$9
+    2160              $C$DW$T$9       .dwtag  DW_TAG_base_type
+    2161                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    2162                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    2163                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    2164              
+    2165                      .dwendtag $C$DW$TU$9
+    2166              
+    2167              
+    2168              $C$DW$TU$10     .dwtag  DW_TAG_type_unit
+    2169                      .dwmtype  $C$DW$T$10
+    2170              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    2171                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    2172                      .dwattr $C$DW$T$10, DW_AT_name("int")
+    2173                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    2174              
+    2175                      .dwendtag $C$DW$TU$10
+    2176              
+    2177              
+    2178              $C$DW$TU$11     .dwtag  DW_TAG_type_unit
+    2179                      .dwmtype  $C$DW$T$11
+    2180              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    2181                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    2182                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    2183                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+    2184              
+    2185                      .dwendtag $C$DW$TU$11
+    2186              
+    2187              
+    2188              $C$DW$TU$12     .dwtag  DW_TAG_type_unit
+    2189                      .dwmtype  $C$DW$T$12
+    2190              $C$DW$T$12      .dwtag  DW_TAG_base_type
+    2191                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    2192                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    2193                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+    2194              
+    2195                      .dwendtag $C$DW$TU$12
+    2196              
+    2197              
+    2198              $C$DW$TU$13     .dwtag  DW_TAG_type_unit
+    2199                      .dwmtype  $C$DW$T$13
+    2200              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    2201                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    2202                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    2203                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   43
+
+    2204              
+    2205                      .dwendtag $C$DW$TU$13
+    2206              
+    2207              
+    2208              $C$DW$TU$28     .dwtag  DW_TAG_type_unit
+    2209                      .dwmtype  $C$DW$T$28
+    2210              $C$DW$T$28      .dwtag  DW_TAG_typedef
+    2211                      .dwattr $C$DW$T$28, DW_AT_name("__uint32_t")
+    2212                      .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$13)
+    2213                      .dwattr $C$DW$T$28, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine
+    2214                      .dwattr $C$DW$T$28, DW_AT_decl_line(0x43)
+    2215                      .dwattr $C$DW$T$28, DW_AT_decl_column(0x1c)
+    2216              
+    2217                      .dwendtag $C$DW$TU$28
+    2218              
+    2219              
+    2220              $C$DW$TU$29     .dwtag  DW_TAG_type_unit
+    2221                      .dwmtype  $C$DW$T$29
+    2222              $C$DW$T$29      .dwtag  DW_TAG_typedef
+    2223                      .dwattr $C$DW$T$29, DW_AT_name("uint32_t")
+    2224                      .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$28)
+    2225                      .dwattr $C$DW$T$29, DW_AT_decl_file("D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_st
+    2226                      .dwattr $C$DW$T$29, DW_AT_decl_line(0x46)
+    2227                      .dwattr $C$DW$T$29, DW_AT_decl_column(0x15)
+    2228              
+    2229                      .dwendtag $C$DW$TU$29
+    2230              
+    2231              
+    2232              $C$DW$TU$43     .dwtag  DW_TAG_type_unit
+    2233                      .dwmtype  $C$DW$T$43
+    2234              $C$DW$84        .dwtag  DW_TAG_TI_far_type
+    2235                      .dwattr $C$DW$84, DW_AT_type(*$C$DW$T$29)
+    2236              
+    2237              $C$DW$T$43      .dwtag  DW_TAG_const_type
+    2238                      .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$84)
+    2239              
+    2240                      .dwendtag $C$DW$TU$43
+    2241              
+    2242              
+    2243              $C$DW$TU$14     .dwtag  DW_TAG_type_unit
+    2244                      .dwmtype  $C$DW$T$14
+    2245              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    2246                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    2247                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    2248                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    2249              
+    2250                      .dwendtag $C$DW$TU$14
+    2251              
+    2252              
+    2253              $C$DW$TU$15     .dwtag  DW_TAG_type_unit
+    2254                      .dwmtype  $C$DW$T$15
+    2255              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    2256                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    2257                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    2258                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+TMS320C2000 Assembler PC v22.6.2 Sat Dec 27 15:00:20 2025
+
+Copyright (c) 1996-2018 Texas Instruments Incorporated
+memcfg.asm                                                           PAGE   44
+
+    2259              
+    2260                      .dwendtag $C$DW$TU$15
+    2261              
+    2262              
+    2263              $C$DW$TU$16     .dwtag  DW_TAG_type_unit
+    2264                      .dwmtype  $C$DW$T$16
+    2265              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    2266                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    2267                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    2268                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    2269              
+    2270                      .dwendtag $C$DW$TU$16
+    2271              
+    2272              
+    2273              $C$DW$TU$17     .dwtag  DW_TAG_type_unit
+    2274                      .dwmtype  $C$DW$T$17
+    2275              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    2276                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    2277                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    2278                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x04)
+    2279              
+    2280                      .dwendtag $C$DW$TU$17
+    2281              
+    2282              
+    2283              $C$DW$TU$18     .dwtag  DW_TAG_type_unit
+    2284                      .dwmtype  $C$DW$T$18
+    2285              $C$DW$T$18      .dwtag  DW_TAG_base_type
+    2286                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    2287                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    2288                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    2289              
+    2290                      .dwendtag $C$DW$TU$18
+    2291              
+    2292              
+    2293              $C$DW$TU$44     .dwtag  DW_TAG_type_unit
+    2294                      .dwmtype  $C$DW$T$44
+    2295              $C$DW$T$44      .dwtag  DW_TAG_base_type
+    2296                      .dwattr $C$DW$T$44, DW_AT_encoding(DW_ATE_unsigned_char)
+    2297                      .dwattr $C$DW$T$44, DW_AT_name("unsigned char")
+    2298                      .dwattr $C$DW$T$44, DW_AT_byte_size(0x01)
+    2299              
+    2300                      .dwendtag $C$DW$TU$44
+    2301              
+
+No Assembly Errors, No Assembly Warnings
