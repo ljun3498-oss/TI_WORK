@@ -5,3 +5,21 @@
  * @v2CliArgs --device "TMS320F28375D" --package "100PTP" --context "CPU1" --product "C2000WARE@6.00.01.00"
  * @versions {"tool":"1.25.0+4268"}
  */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const gpio  = scripting.addModule("/driverlib/gpio.js", {}, false);
+const gpio1 = gpio.addInstance();
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+gpio1.$name = "myGPIO0";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+gpio1.gpioPin.$suggestSolution = "GPIO11";

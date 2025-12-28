@@ -3,35 +3,6 @@
 #include "driverlib.h"     // 包含C2000系列芯片的驱动库头文件
 #include "device.h"        // 包含设备配置头文件
 
-// 全局变量
-static uint16_t adcResult[3]; // ADC采样结果数组，存储三相电流的ADC转换值
-
-// 处理ADC转换结果 - 读取ADC转换结果，计算电流值，并进行过流检查
-static void Process_ADC_Results(void)
-{
-    // 读取转换结果
-    adcResult[0] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER0); // 读取A相电流的ADC转换结果
-    adcResult[1] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER1); // 读取B相电流的ADC转换结果
-    adcResult[2] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER2); // 读取C相电流的ADC转换结果
-
-    // 转换为电流值
-    Ia_meas = (float)((int16_t)adcResult[0] - 2048) * ADC_COUNTS_TO_AMP; // 计算A相电流值，2048为中点值
-    Ib_meas = (float)((int16_t)adcResult[1] - 2048) * ADC_COUNTS_TO_AMP; // 计算B相电流值，2048为中点值
-    Ic_meas = (float)((int16_t)adcResult[2] - 2048) * ADC_COUNTS_TO_AMP; // 计算C相电流值，2048为中点值
-
-    // 过流保护检查
-    if(fabsf(Ia_meas) > I_OVERCURRENT_TRIP || // 检查A相电流是否超过过流阈值
-       fabsf(Ib_meas) > I_OVERCURRENT_TRIP || // 检查B相电流是否超过过流阈值
-       fabsf(Ic_meas) > I_OVERCURRENT_TRIP)   // 检查C相电流是否超过过流阈值
-    {
-        overcurrent_fault = true;              // 设置过流故障标志
-        // 触发过流保护动作
-        // 这里可以添加具体的过流保护措施，例如：
-        // 1. 立即关闭PWM输出
-        // 2. 记录故障信息
-        // 3. 触发系统停机
-    }
-}
 
 // ADC初始化函数 - 配置ADC模块的时钟、分辨率、通道、触发源等参数，为电流测量做准备
 void ADC_Init(void)
@@ -82,6 +53,34 @@ void ADC_Init(void)
     DEVICE_DELAY_US(100); // 延时100微秒，确保ADC稳定工作
 }
 
+
+// 全局变量
+static uint16_t adcResult[3]; // ADC采样结果数组，存储三相电流的ADC转换值
+
+// 处理ADC转换结果 - 读取ADC转换结果，计算电流值，并进行过流检查
+static void Process_ADC_Results(void)
+{
+    // 读取转换结果
+    adcResult[0] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER0); // 读取A相电流的ADC转换结果
+    adcResult[1] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER1); // 读取B相电流的ADC转换结果
+    adcResult[2] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER2); // 读取C相电流的ADC转换结果
+
+    // 转换为电流值
+    Ia_meas = (float)((int16_t)adcResult[0] - 2048) * ADC_COUNTS_TO_AMP; // 计算A相电流值，2048为中点值
+    Ib_meas = (float)((int16_t)adcResult[1] - 2048) * ADC_COUNTS_TO_AMP; // 计算B相电流值，2048为中点值
+    Ic_meas = (float)((int16_t)adcResult[2] - 2048) * ADC_COUNTS_TO_AMP; // 计算C相电流值，2048为中点值
+
+    // 过流保护检查
+    if(fabsf(Ia_meas) > I_OVERCURRENT_TRIP || // 检查A相电流是否超过过流阈值
+       fabsf(Ib_meas) > I_OVERCURRENT_TRIP || // 检查B相电流是否超过过流阈值
+       fabsf(Ic_meas) > I_OVERCURRENT_TRIP)   // 检查C相电流是否超过过流阈值
+    {
+        overcurrent_fault = true;              // 设置过流故障标志
+        // 触发过流保护动作
+
+    }
+}
+
 // 读取电流函数 - 触发ADC转换并读取三相电流值，将ADC计数转换为实际电流值
 void ADC_Read_Current(void)
 {
@@ -97,15 +96,4 @@ void ADC_Read_Current(void)
 
     // 清除中断标志
     ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1); // 清除ADC中断1的状态标志，准备下次转换
-}
-
-// ADC中断服务程序 - 处理ADC转换完成中断，读取转换结果，计算电流值并进行过流检查
-__interrupt void ADC_Isr(void)
-{
-    // 处理ADC结果
-    Process_ADC_Results();
-
-    // 清除中断标志
-    ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1); // 清除ADC中断1的状态标志
-    Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);        // 清除中断确认组1，允许后续中断
 }

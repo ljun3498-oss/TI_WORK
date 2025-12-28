@@ -97,7 +97,6 @@ FOC_auto_start.obj: ../model/foc_svpwm.h
 FOC_auto_start.obj: ../model/foc_encoder.h
 FOC_auto_start.obj: ../model/foc_adc.h
 FOC_auto_start.obj: ../model/foc_pwm.h
-FOC_auto_start.obj: ../model/foc_startup.h
 
 ../FOC_auto_start.C:
 
@@ -292,6 +291,4 @@ C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h:
 ../model/foc_adc.h:
 
 ../model/foc_pwm.h:
-
-../model/foc_startup.h:
 

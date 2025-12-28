@@ -19,7 +19,6 @@ ORDERED_OBJS += \
 "./model/foc_core.obj" \
 "./model/foc_encoder.obj" \
 "./model/foc_pwm.obj" \
-"./model/foc_startup.obj" \
 "./model/foc_svpwm.obj" \
 "../2837xD_RAM_lnk_cpu1.cmd" \
 "C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib.lib" \
@@ -149,15 +148,15 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 empty_driverlib_4.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O3 --opt_for_speed=3 --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"empty_driverlib_4.map" --stack_size=0x100 --warn_sections -i"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="empty_driverlib_4_linkInfo.xml" --entry_point=code_start --rom_model -o "empty_driverlib_4.out" $(ORDERED_OBJS)
+	"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O1 --opt_for_speed=1 --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"empty_driverlib_4.map" --stack_size=0x100 --warn_sections -i"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="empty_driverlib_4_linkInfo.xml" --entry_point=code_start --rom_model -o "empty_driverlib_4.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "FOC_auto_start.obj" "syscfg\board.obj" "syscfg\c2000ware_libraries.obj" "device\F2837xD_CodeStartBranch.obj" "device\device.obj" "model\foc_adc.obj" "model\foc_core.obj" "model\foc_encoder.obj" "model\foc_pwm.obj" "model\foc_startup.obj" "model\foc_svpwm.obj" 
-	-$(RM) "syscfg\board.d" "syscfg\c2000ware_libraries.d" "device\device.d" "model\foc_adc.d" "model\foc_core.d" "model\foc_encoder.d" "model\foc_pwm.d" "model\foc_startup.d" "model\foc_svpwm.d" 
+	-$(RM) "FOC_auto_start.obj" "syscfg\board.obj" "syscfg\c2000ware_libraries.obj" "device\F2837xD_CodeStartBranch.obj" "device\device.obj" "model\foc_adc.obj" "model\foc_core.obj" "model\foc_encoder.obj" "model\foc_pwm.obj" "model\foc_svpwm.obj" 
+	-$(RM) "syscfg\board.d" "syscfg\c2000ware_libraries.d" "device\device.d" "model\foc_adc.d" "model\foc_core.d" "model\foc_encoder.d" "model\foc_pwm.d" "model\foc_svpwm.d" 
 	-$(RM) "FOC_auto_start.d" 
 	-$(RM) "device\F2837xD_CodeStartBranch.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)

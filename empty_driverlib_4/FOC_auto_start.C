@@ -25,24 +25,21 @@ SVPWM_Handle svpwm_handle = {
     .sector = 0
 };
 
-// 全局变量
-// 删除重复的变量声明，这些变量已经在foc_core.h中声明为volatile
-// float Ia_meas = 0.0f;
-// float Ib_meas = 0.0f;
-// float Ic_meas = 0.0f;
-// float Id_ref = 0.0f;
-// float Iq_ref = 0.0f;
+// 模拟编码器角度变量（全局）
+// 移除重复定义，使用foc_core.c中定义的变量
+// float encoder_angle_mech_rad = 0.0f;
+
+
 
 // 函数声明
 void InitPeripherals(void);
-void DoElectricalAlignment(void);
-void calibrate_electrical_angle(void);
-__interrupt void adc_isr(void);
-__interrupt void eqep_index_isr(void);
-uint32_t getTimeInMs(void);
+interrupt void adc_isr(void);
 
-// 全局变量
-uint32_t system_time_ms = 0; // 系统时间计数器（毫秒）
+
+
+
+
+
 
 // 主函数
 int main(void)
@@ -62,106 +59,49 @@ int main(void)
     IFR = 0x0000;
     Interrupt_initVectorTable();
     
+    // 直接设置闭环运行的电流参考值
+    Id_ref = 0.5f; // 弱磁控制
+    Iq_ref = 4.0f; // 固定Q轴电流作为示例
+    
     // 4. 初始化外设
     InitPeripherals();
-    
-    // 5. 初始化启动模块
-    Startup_init();
-    
-    // 6. 进行电气角度校准
-    DoElectricalAlignment();
-    
+        
     // 7. 使能全局中断
     EINT;
     ERTM;
     
-    // 8. 主循环
+
+    // 10. 主循环
     while(1)
     {
-        // 更新系统时间（简单的软件实现，实际应用中应该使用硬件定时器）
-        system_time_ms++;
-        
-        // 执行电机启动序列
-        Startup_exec();
-        
-        // 根据启动状态设置电流参考值
-        switch(Startup_getState())
-        {
-            case STARTUP_STATE_IDLE:
-            case STARTUP_STATE_ALIGNMENT:
-                // 对齐阶段：设置对齐电流
-                Id_ref = startup_params.alignment_current;
-                Iq_ref = 0.0f;
-                break;
-                
-            case STARTUP_STATE_OPEN_LOOP:
-                // 开环运行阶段：固定Q轴电流
-                Id_ref = 0.0f;
-                Iq_ref = 1.0f;
-                if(Iq_ref > 2.0f) Iq_ref = 2.0f; // 限制最大Q轴电流
-                break;
-                
-            case STARTUP_STATE_CLOSE_LOOP:
-                // 闭环运行阶段：使用编码器反馈
-                Id_ref = 0.5f; // 弱磁控制
-                Iq_ref = 1.0f; // 固定Q轴电流作为示例
-                break;
-                
-            case STARTUP_STATE_COMPLETE:
-                // 启动完成，使用位置控制
-                // 设置目标位置（例如：π弧度，即半圈）
-                target_pos_rad = M_PI;
-                
-                // 调用位置控制函数
-                position_control();
-                break;
-                
-            default:
-                // 其他状态，保持零电流
-                Id_ref = 0.0f;
-                Iq_ref = 0.0f;
-                break;
+        // 模拟编码器角度变化：每1000微秒转动3°（π/60弧度）
+        float angle_increment = M_PI_F / 60.0f; // 3°对应的弧度值，降低转速
+        motor_angle_mech_rad += angle_increment;
+        if (motor_angle_mech_rad >= 2.0f * M_PI_F) {
+            motor_angle_mech_rad -= 2.0f * M_PI_F;
         }
         
-        // 软件延时
-        uint32_t i;
-        for(i = 0; i < 1000; i++);
+        // 更新电机电角度
+        motor_angle_elec_rad = motor_angle_mech_rad * MOTOR_POLE_PAIRS;
+        if (motor_angle_elec_rad >= 2.0f * M_PI_F) {
+            motor_angle_elec_rad -= 2.0f * M_PI_F;
+        }
+        
+        // 模拟三相电流变化值（基于电机角度的正弦波）
+        // 假设电流幅值为3.0，三相电流相位差为120°
+        float current_amplitude = 3.0f;
+        Ia_meas = current_amplitude * sinf(motor_angle_elec_rad);
+        Ib_meas = current_amplitude * sinf(motor_angle_elec_rad - 2.0f * M_PI_F / 3.0f);
+        Ic_meas = current_amplitude * sinf(motor_angle_elec_rad + 2.0f * M_PI_F / 3.0f);
+        
+        // 添加延时以控制电机转动速度（每1000微秒转动一次）
+        DEVICE_DELAY_US(1000); // 1000微秒延时，控制转动速度
+        
+ 
     }
 }
-
-// 获取系统时间（毫秒）
-// 移除重复定义，使用 model/foc_startup.c 中的实现
-// uint32_t getTimeInMs(void)
-// {
-//     return system_time_ms;
-// }
 
 // 电气角度校准 - 执行电机的电气角度校准过程，确保编码器的机械角度与电机的电气角度对应正确
-void DoElectricalAlignment(void)
-{
-    // 1. 设置对齐电流
-    Id_ref = startup_params.alignment_current;
-    Iq_ref = 0.0f;
-    
-    // 2. 固定电角度为0
-    motor_angle_elec_rad = 0.0f;
-    
-    // 3. 延时一段时间，让电机转子转到正确位置
-    uint32_t alignment_delay = startup_params.alignment_time_ms;
-    while(alignment_delay > 0)
-    {
-        // 简单的软件延时
-        uint32_t i;
-        for(i = 0; i < 10000; i++);
-        alignment_delay--;
-    }
-    
-    // 4. 读取编码器位置并计算电气角度
-    calibrate_electrical_angle();
-    
-    // 5. 标记编码器已校准
-    encoder_calibrated = true;
-}
 
 // 初始化所有外设 - 初始化EPWM、ADC、编码器等外设，并注册中断
 void InitPeripherals(void)
@@ -179,84 +119,80 @@ void InitPeripherals(void)
     Interrupt_register(INT_ADCA1, &adc_isr);
     Interrupt_enable(INT_ADCA1);
     
-    // 注册编码器索引中断 - 使用正确的中断标识符
-    Interrupt_register(INT_EQEP1, &eqep_index_isr);
-    Interrupt_enable(INT_EQEP1);
-}
 
-// 校准电气角度函数
-void calibrate_electrical_angle(void)
-{
-    // 读取编码器位置 (注意：Encoder_update()函数没有返回值，它会更新全局变量)
-    Encoder_update();
-    
-    // 计算机械角度 (使用正确的ENCODER_CPR宏)
-    float mechanical_angle = (float)encoder_raw_pos / ENCODER_CPR * 2.0f * M_PI;
-    
-    // 计算电气角度
-    motor_angle_elec_rad = mechanical_angle * MOTOR_POLE_PAIRS;
 }
 
 // ADC中断服务程序 - 处理ADC转换完成中断，读取电流值，执行FOC算法，计算SVPWM占空比，并更新PWM输出
-__interrupt void adc_isr(void)
+interrupt void adc_isr(void)
 {
     // 读取电流
-    ADC_Read_Current();
+    //ADC_Read_Current();
+    // 电流模拟已移至主循环中
+    // Ia_meas=0.0f;
+    // Ib_meas=0.0f;
+    // Ic_meas=0.0f;
 
     // 读取编码器
-    Encoder_update();
-
-    // 执行FOC算法
-    float Valpha, Vbeta, Id_meas, Iq_meas, Vd, Vq;
-
-    // Clarke变换 - 将三相电流转换为αβ坐标系
-    clarke_transform(Ia_meas, Ib_meas, Ic_meas, &Valpha, &Vbeta);
-
-    // 根据启动状态决定使用哪个角度
-    float angle_to_use = motor_angle_elec_rad;
+   // Encoder_update();
     
-    if(Startup_getState() == STARTUP_STATE_OPEN_LOOP)
-    {
-        // 开环状态：使用计算出的电角度
-        angle_to_use = Startup_getOpenLoopAngle();
-    }
-
-    // Park变换 - 将αβ坐标系下的电流转换为dq坐标系
-    park_transform(Valpha, Vbeta, angle_to_use, &Id_meas, &Iq_meas);
-
-    // 电流PI控制 - 计算dq坐标系下的电压指令
-    Vd = pi_id(Id_ref - Id_meas);
-    Vq = pi_iq(Iq_ref - Iq_meas);
-
-    // 逆Park变换 - 将dq坐标系下的电压指令转换为αβ坐标系
-    inv_park_transform(Vd, Vq, angle_to_use, &Valpha, &Vbeta);
-
-    // SVPWM计算 - 生成PWM比较值
-    svpwm_compute(&svpwm_handle, Valpha, Vbeta);
-
-    // 设置PWM占空比
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, svpwm_handle.CMPA1);
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, svpwm_handle.CMPB1);
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, svpwm_handle.CMPA2);
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, svpwm_handle.CMPB2);
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, svpwm_handle.CMPA3);
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, svpwm_handle.CMPB3);
+    // 模拟编码器角度变化：一秒钟转一圈
+    // static float encoder_angle_mech_rad = 0.0f;
+    // float angle_increment = (2.0f * M_PI_F) * (1.0f / 500000.0f); // 1秒转一圈，10kHz中断频率
+    // encoder_angle_mech_rad += angle_increment;
+    // if (encoder_angle_mech_rad >= 2.0f * M_PI_F) {
+    //     encoder_angle_mech_rad -= 2.0f * M_PI_F;
+    // }
     
-    // 清除中断标志
+    // 更新电机电角度
+    // motor_angle_elec_rad = encoder_angle_mech_rad * MOTOR_POLE_PAIRS;
+    // if (motor_angle_elec_rad >= 2.0f * M_PI_F) {
+    //     motor_angle_elec_rad -= 2.0f * M_PI_F;
+    // }
+    
+        // 处理电流并执行FOC算法
+        // 1. Clarke变换 - 将三相电流转换为αβ坐标系
+        float alpha, beta;
+        clarke_transform(Ia_meas, Ib_meas, Ic_meas, &alpha, &beta);
+        
+        // 2. Park变换 - 将αβ坐标系电流转换为dq坐标系
+        float d, q;
+        park_transform(alpha, beta, motor_angle_elec_rad, &d, &q);
+        
+        // 3. D/Q轴电流PI控制
+        float vd = pi_id(Id_ref - d);  // D轴电流误差PI控制
+        float vq = pi_iq(Iq_ref - q);  // Q轴电流误差PI控制
+        
+        // 4. 逆Park变换 - 将dq坐标系电压指令转换为αβ坐标系
+        float valpha, vbeta;
+        inv_park_transform(vd, vq, motor_angle_elec_rad, &valpha, &vbeta);
+        
+        // 5. SVPWM计算 - 计算PWM占空比
+        svpwm_compute(&svpwm_handle, valpha, vbeta);
+        
+        // 6. 设置PWM比较值（直接使用SVPWM计算的比较值）
+        EPWM_SetCompareValues(
+            svpwm_handle.CMPA1, 
+            svpwm_handle.CMPB1,
+            svpwm_handle.CMPA2,
+            svpwm_handle.CMPB2,
+            svpwm_handle.CMPA3,
+            svpwm_handle.CMPB3
+        );
+    
+    
+    // 清除ADC中断标志
+    ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
 }
 
-// 编码器索引中断服务程序
-__interrupt void eqep_index_isr(void)
-{
-    // 标记索引信号已检测
-    index_detected = true;
-    startup_params.encoder_index_detected = true;
-    
-    // 清除中断标志
-    EQEP_clearInterruptStatus(EQEP1_BASE, EQEP_INT_INDEX_EVNT_LATCH);
-    Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP6);
-}
+
+
+
+
+
+
+
+
 
 
 

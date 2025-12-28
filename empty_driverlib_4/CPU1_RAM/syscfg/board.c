@@ -48,6 +48,7 @@ void Board_init()
 	EALLOW;
 
 	PinMux_init();
+	GPIO_init();
 
 	EDIS;
 }
@@ -63,6 +64,24 @@ void PinMux_init()
 	// PinMux for modules assigned to CPU1
 	//
 	
+	// GPIO11 -> myGPIO0 Pinmux
+	GPIO_setPinConfig(GPIO_11_GPIO11);
 
+}
+
+//*****************************************************************************
+//
+// GPIO Configurations
+//
+//*****************************************************************************
+void GPIO_init(){
+	myGPIO0_init();
+}
+
+void myGPIO0_init(){
+	GPIO_setPadConfig(myGPIO0, GPIO_PIN_TYPE_STD);
+	GPIO_setQualificationMode(myGPIO0, GPIO_QUAL_SYNC);
+	GPIO_setDirectionMode(myGPIO0, GPIO_DIR_MODE_IN);
+	GPIO_setControllerCore(myGPIO0, GPIO_CORE_CPU1);
 }
 

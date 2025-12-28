@@ -32,8 +32,8 @@
 // 死区时间对应的时钟周期数 - 根据死区时间和系统时钟计算得出，用于设置PWM模块的死区寄存器
 #define DEADTIME_TICKS      ((uint16_t)((DEADTIME_NS * 1e-9f) * SYSCLK_HZ + 0.5f))
 
-// 死区补偿电压 - 用于补偿死区时间对输出电压的影响，当前设置为0.0f
-#define DEADTIME_COMP_VOLTAGE 0.0f                  // 死区补偿电压
+// 注意：死区补偿电压未使用，已注释掉
+// #define DEADTIME_COMP_VOLTAGE 0.0f                  // 死区补偿电压
 
 // 编码器/电机参数
 // 编码器线数 - 定义为2500线，用于计算电机转速和位置
@@ -67,31 +67,16 @@
 
 // PI控制器参数
 // D轴电流环比例增益初始值
-#define KP_ID_INIT  0.5f                            // D轴电流环比例增益
+#define KP_ID_INIT  5.5f                            // D轴电流环比例增益
 
 // D轴电流环积分增益初始值 - 已调整为适应7.8A电流
 #define KI_ID_INIT  80.0f                           // D轴电流环积分增益（调整为适应7.8A电流）
 
 // Q轴电流环比例增益初始值
-#define KP_IQ_INIT  0.5f                            // Q轴电流环比例增益
+#define KP_IQ_INIT  10.0f                            // Q轴电流环比例增益
 
 // Q轴电流环积分增益初始值 - 已调整为适应7.8A电流
 #define KI_IQ_INIT  80.0f                           // Q轴电流环积分增益（调整为适应7.8A电流）
-
-// 速度环PI参数初始值
-#define KP_SPEED_INIT  0.1f                         // 速度环比例增益
-#define KI_SPEED_INIT  0.5f                         // 速度环积分增益
-
-// 位置环P参数初始值
-#define KP_POS_INIT    0.01f                        // 位置环比例增益
-
-// 速度限制参数
-#define MAX_SPEED_RAD   100.0f                      // 最大速度(rad/s)
-#define MIN_SPEED_RAD   -100.0f                     // 最小速度(rad/s)
-
-// 位置限制参数
-#define MAX_POS_RAD     (2.0f * M_PI)               // 最大位置(rad)
-#define MIN_POS_RAD     0.0f                        // 最小位置(rad)
 
 // ADC到电流的转换系数
 // ADC计数到安培的转换系数 - 计算方法：最大相电流(7.8A)除以ADC最大值(4096)，约等于0.001904
@@ -103,11 +88,9 @@
 // 编码器原始位置 - 存储编码器的原始计数值
 extern volatile int32_t encoder_raw_pos;             // 编码器原始位置
 
-// 索引信号检测标志 - 当检测到编码器索引信号时设置为true
-extern volatile bool index_detected;                 // 索引信号检测标志
 
-// 编码器校准标志 - 当编码器完成校准后设置为true
-extern volatile bool encoder_calibrated;             // 编码器校准标志
+// 注意：编码器校准标志未使用，已注释掉
+// extern volatile bool encoder_calibrated;             // 编码器校准标志
 
 // 电机机械角度 - 单位为弧度，范围为0到2π
 extern volatile float motor_angle_mech_rad;          // 电机机械角度(弧度)
@@ -136,17 +119,6 @@ extern float KP_ID, KI_ID;                    // D轴PI参数
 // Q轴PI参数 - KP_IQ为比例增益，KI_IQ为积分增益
 extern float KP_IQ, KI_IQ;                    // Q轴PI参数
 
-// 速度环PI参数
-extern float KP_SPEED, KI_SPEED;              // 速度环PI参数
-extern float speed_int;                       // 速度环积分项
-
-// 位置环P参数
-extern float KP_POS;                          // 位置环P参数
-
-// 目标位置和速度
-extern volatile float target_pos_rad;         // 目标位置(rad)
-extern volatile float target_speed_rad;       // 目标速度(rad/s)
-
 // 过流故障标志 - 当检测到过流时设置为true
 extern volatile bool overcurrent_fault;              // 过流故障标志
 
@@ -169,14 +141,5 @@ float pi_id(float err);
 
 // Q轴电流PI控制器 - 计算Q轴电流误差的PI控制输出
 float pi_iq(float err);
-
-// 速度环PI控制器 - 计算速度误差的PI控制输出
-float pi_speed(float err);
-
-// 位置环P控制器 - 计算位置误差的P控制输出
-float p_position(float err);
-
-// 位置控制函数 - 实现位置环和速度环的级联控制
-void position_control(void);
 
 #endif // FOC_CORE_H

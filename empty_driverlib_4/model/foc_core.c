@@ -6,10 +6,6 @@
 uint16_t TBPRD = TBPRD_VAL;                      // PWM时基周期值
 // 编码器原始位置 - 初始化为0
 volatile int32_t encoder_raw_pos = 0;            // 编码器原始位置
-// 索引信号检测标志 - 初始化为false
-volatile bool index_detected = false;            // 索引信号检测标志
-// 编码器校准标志 - 初始化为false
-volatile bool encoder_calibrated = false;        // 编码器校准标志
 // 电机机械角度 - 单位为弧度，初始化为0.0f
 volatile float motor_angle_mech_rad = 0.0f;      // 电机机械角度(弧度)
 // 电机电角度 - 单位为弧度，初始化为0.0f
@@ -31,13 +27,6 @@ volatile bool overcurrent_fault = false;         // 过流故障标志
 // 电机转速（弧度/秒） - 单位为rad/s，初始化为0.0f
 volatile float motor_speed_rad = 0.0f;           // 电机转速(rad/s)
 
-// 速度环和位置环相关变量
-float KP_SPEED = KP_SPEED_INIT, KI_SPEED = KI_SPEED_INIT;  // 速度环PI参数
-float speed_int = 0.0f;                          // 速度环积分项
-float KP_POS = KP_POS_INIT;                      // 位置环P参数
-volatile float target_pos_rad = 0.0f;            // 目标位置(rad)
-volatile float target_speed_rad = 0.0f;          // 目标速度(rad/s)
-
 // 浮点数饱和限制函数 - 将输入值限制在指定的上下限范围内
 float clampf_val(float v, float lo, float hi)
 {
@@ -49,9 +38,9 @@ float clampf_val(float v, float lo, float hi)
 // Clarke变换 - 将三相电流转换为αβ坐标系
 void clarke_transform(float Ia, float Ib, float Ic, float* Valpha, float* Vbeta)
 {
-    // Clarke变换公式（考虑三相电流之和为零的情况，只需要Ia和Ib即可）
+    // 使用标准Clarke变换公式，考虑三相电流之和为零的情况
     *Valpha = Ia;
-    *Vbeta = (Ia + 2.0f * Ib) / sqrtf(3.0f);
+    *Vbeta = (Ia + 2.0f * Ib) / sqrtf(3.0f);  // 当 Ia+Ib+Ic=0 时的简化形式
 }
 
 // Park变换函数 - 将αβ坐标系转换为dq坐标系
@@ -82,14 +71,14 @@ float pi_id(float err)
     // 计算积分项
     Id_int += KI_ID * err * DT;                // 积分项累加：KI_ID * 误差 * 控制周期
 
-    // 积分限幅
-    Id_int = clampf_val(Id_int, -BUS_VOLTAGE, BUS_VOLTAGE); // 将积分项限制在±母线电压范围内
+    // 积分限幅 - 限制在±Vdc/2范围内，以确保SVPWM计算正常
+    Id_int = clampf_val(Id_int, -BUS_VOLTAGE/2.0f, BUS_VOLTAGE/2.0f); // 将积分项限制在±母线电压/2范围内
 
     // PI输出
     float output = KP_ID * err + Id_int;       // PI控制器输出：比例项 + 积分项
 
-    // 输出限幅
-    output = clampf_val(output, -BUS_VOLTAGE, BUS_VOLTAGE); // 将输出限制在±母线电压范围内
+    // 输出限幅 - 限制在±Vdc/2范围内，以确保SVPWM计算正常
+    output = clampf_val(output, -BUS_VOLTAGE/2.0f, BUS_VOLTAGE/2.0f); // 将输出限制在±母线电压/2范围内
 
     return output;                              // 返回PI控制器输出
 }
@@ -100,67 +89,14 @@ float pi_iq(float err)
     // 计算积分项
     Iq_int += KI_IQ * err * DT;                // 积分项累加：KI_IQ * 误差 * 控制周期
 
-    // 积分限幅
-    Iq_int = clampf_val(Iq_int, -BUS_VOLTAGE, BUS_VOLTAGE); // 将积分项限制在±母线电压范围内
+    // 积分限幅 - 限制在±Vdc/2范围内，以确保SVPWM计算正常
+    Iq_int = clampf_val(Iq_int, -BUS_VOLTAGE/2.0f, BUS_VOLTAGE/2.0f); // 将积分项限制在±母线电压/2范围内
 
     // PI输出
     float output = KP_IQ * err + Iq_int;       // PI控制器输出：比例项 + 积分项
 
-    // 输出限幅
-    output = clampf_val(output, -BUS_VOLTAGE, BUS_VOLTAGE); // 将输出限制在±母线电压范围内
+    // 输出限幅 - 限制在±Vdc/2范围内，以确保SVPWM计算正常
+    output = clampf_val(output, -BUS_VOLTAGE/2.0f, BUS_VOLTAGE/2.0f); // 将输出限制在±母线电压/2范围内
 
     return output;                              // 返回PI控制器输出
-}
-
-// 速度环PI控制器 - 计算速度误差的PI控制输出
-float pi_speed(float err)
-{
-    // 计算积分项
-    speed_int += KI_SPEED * err * DT;          // 积分项累加：KI_SPEED * 误差 * 控制周期
-
-    // 积分限幅
-    speed_int = clampf_val(speed_int, -2.0f, 2.0f); // 将积分项限制在±2.0A范围内（根据电机额定电流调整）
-
-    // PI输出
-    float output = KP_SPEED * err + speed_int; // PI控制器输出：比例项 + 积分项
-
-    // 输出限幅
-    output = clampf_val(output, -2.0f, 2.0f);   // 将输出限制在±2.0A范围内（根据电机额定电流调整）
-
-    return output;                              // 返回PI控制器输出
-}
-
-// 位置环P控制器 - 计算位置误差的P控制输出
-float p_position(float err)
-{
-    // P控制器输出
-    float output = KP_POS * err;               // P控制器输出：比例项
-
-    // 输出限幅（速度限制）
-    output = clampf_val(output, MIN_SPEED_RAD, MAX_SPEED_RAD); // 将输出限制在速度范围内
-
-    return output;                              // 返回P控制器输出
-}
-
-// 位置控制函数 - 实现位置环和速度环的级联控制
-void position_control(void)
-{
-    // 计算位置误差
-    float pos_err = target_pos_rad - motor_angle_mech_rad;
-
-    // 位置误差归一化到[-π, π]范围
-    while (pos_err > M_PI) pos_err -= 2.0f * M_PI;
-    while (pos_err < -M_PI) pos_err += 2.0f * M_PI;
-
-    // 位置环控制 - 计算目标速度
-    target_speed_rad = p_position(pos_err);
-
-    // 计算速度误差
-    float speed_err = target_speed_rad - motor_speed_rad;
-
-    // 速度环控制 - 计算Q轴电流参考值
-    Iq_ref = pi_speed(speed_err);
-
-    // D轴电流参考值设置为0（零D轴电流控制）
-    Id_ref = 0.0f;
 }

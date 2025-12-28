@@ -11,10 +11,9 @@
 // 函数声明
 
 // PWM初始化函数 - 配置EPWM模块以输出PWM信号
-void EPWM_Init(void);
+extern void EPWM_Init(void);
 
 // PWM占空比设置函数 - 设置EPWM模块的占空比
-void EPWM_SetDuty(float dutyA, float dutyB, float dutyC);
+extern void EPWM_SetCompareValues(uint16_t cmpA1, uint16_t cmpB1, uint16_t cmpA2, uint16_t cmpB2, uint16_t cmpA3, uint16_t cmpB3);
 
-#endif // FOC_PWM_H
-
+#endif // FOC_PWM_H

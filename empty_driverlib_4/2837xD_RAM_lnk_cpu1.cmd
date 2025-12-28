@@ -103,14 +103,14 @@ SECTIONS
    .bss             : > RAMGS1_PAGE1,    PAGE = 1
    .bss:output      : > RAMLS3,    PAGE = 0
    .init_array      : > RAMM0,     PAGE = 0
-   .const           : > RAMLS5,    PAGE = 1
+   .const           : > RAMGS0_PAGE1,    PAGE = 1
    .data            : > RAMGS0_PAGE1, PAGE = 1
-   .sysmem          : > RAMLS5,    PAGE = 1
+   .sysmem          : > RAMGS5_PAGE1,    PAGE = 1
 #else
    .pinit           : > RAMM0,     PAGE = 0
    .ebss            : > RAMGS1_PAGE1,    PAGE = 1
-   .econst          : > RAMLS5,    PAGE = 1
-   .esysmem         : > RAMLS5,    PAGE = 1
+   .econst          : > RAMGS0_PAGE1,    PAGE = 1
+   .esysmem         : > RAMGS5_PAGE1,    PAGE = 1
 #endif
 
    Filter_RegsFile  : > RAMGS0_PAGE1,    PAGE = 1

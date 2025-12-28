@@ -28,14 +28,8 @@ extern int32_t pos_diff;            // 位置变化量
 // 编码器初始化函数 - 初始化编码器模块
 void Encoder_init(void);
 
-// 编码器校准函数 - 校准编码器
-void Encoder_calibrate(void);
-
 // 编码器数据更新函数 - 更新编码器数据并计算角度和速度
 void Encoder_update(void);
-
-// 检查编码器是否已校准
-bool Encoder_isCalibrated(void);
 
 // 获取电机机械角度(弧度)
 float Encoder_getMechAngle(void);
@@ -50,4 +44,3 @@ float Encoder_getSpeedRad(void);
 float Encoder_getSpeedRPM(void);
 
 #endif // FOC_ENCODER_H
-
