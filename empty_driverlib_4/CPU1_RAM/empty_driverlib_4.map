@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.2                     
 ******************************************************************************
->> Linked Sun Dec 28 21:57:20 2025
+>> Linked Sun Dec 28 22:04:31 2025
 
 OUTPUT FILE NAME:   <empty_driverlib_4.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -16,7 +16,7 @@ PAGE 0:
   RAMM0                 00000123   000002dd  00000032  000002ab  RWIX
   RAMLS0                00008000   00000800  000007fe  00000002  RWIX
   RAMLS1                00008800   00000800  00000800  00000000  RWIX
-  RAMLS2                00009000   00000800  00000119  000006e7  RWIX
+  RAMLS2                00009000   00000800  00000118  000006e8  RWIX
   RAMLS3                00009800   00000800  00000000  00000800  RWIX
   RAMLS4                0000a000   00000800  00000000  00000800  RWIX
   RAMD0                 0000b000   00000800  00000800  00000000  RWIX
@@ -181,7 +181,7 @@ Cla1funcs
                   00008fd8    00000019     rts2800_fpu32_eabi.lib : prolog28.asm.obj (.text)
                   00008ff1    0000000f     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_pollCpuTimer)
 
-.text.3    0    00009000    00000119     
+.text.3    0    00009000    00000118     
                   00009000    00000017     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_isBaseValid)
                   00009017    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
                   0000902e    00000016     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_defaultHandler)
@@ -196,28 +196,28 @@ Cla1funcs
                   000090c2    0000000c                            : args_main.c.obj (.text)
                   000090ce    0000000c                            : epilog28.asm.obj (.text)
                   000090da    0000000b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_isMCDClockFailureDetected)
-                  000090e5    0000000a                        : interrupt.obj (.text:Interrupt_illegalOperationHandler)
-                  000090ef    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
-                  000090f9    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
-                  00009102    00000008     F2837xD_CodeStartBranch.obj (.text)
-                  0000910a    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
-                  00009112    00000007     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_resetMCD)
+                  000090e5    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
+                  000090ef    00000009                        : sysctl.obj (.text:SysCtl_serviceWatchdog)
+                  000090f8    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
+                  00009101    00000008     F2837xD_CodeStartBranch.obj (.text)
+                  00009109    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  00009111    00000007     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_resetMCD)
 
 .text.4    0    0000b000    00000800     
                   0000b000    0000037d     device.obj (.text)
                   0000b37d    00000209     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
                   0000b586    000001c9     foc_svpwm.obj (.text)
-                  0000b74f    000000a8     FOC_auto_start.obj (.text)
-                  0000b7f7    00000009     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_serviceWatchdog)
+                  0000b74f    000000a7     FOC_auto_start.obj (.text)
+                  0000b7f6    0000000a     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_illegalOperationHandler)
 
 MODULE SUMMARY
 
        Module                        code   ro data   rw data
        ------                        ----   -------   -------
     .\
-       FOC_auto_start.obj            312    0         22     
+       FOC_auto_start.obj            311    0         22     
     +--+-----------------------------+------+---------+---------+
-       Total:                        312    0         22     
+       Total:                        311    0         22     
                                                              
     .\device\
        device.obj                    893    0         6      
@@ -272,7 +272,7 @@ MODULE SUMMARY
        Stack:                        0      0         256    
        Linker Generated:             0      45        0      
     +--+-----------------------------+------+---------+---------+
-       Grand Total:                  6429   608       338    
+       Grand Total:                  6428   608       338    
 
 
 LINKER GENERATED COPY TABLES
@@ -380,10 +380,10 @@ abs   00000000  Cla1funcsLoadSize
 0     0000b74f  InitPeripherals                          
 0     0000902e  Interrupt_defaultHandler                 
 0     00008d7f  Interrupt_enable                         
-0     000090e5  Interrupt_illegalOperationHandler        
+0     0000b7f6  Interrupt_illegalOperationHandler        
 0     00008c9d  Interrupt_initModule                     
 0     00008f30  Interrupt_initVectorTable                
-0     000090ef  Interrupt_nmiHandler                     
+0     000090e5  Interrupt_nmiHandler                     
 1     0000c256  Iq_int                                   
 1     0000c252  Iq_ref                                   
 1     0000c25a  KI_ID                                    
@@ -408,7 +408,7 @@ abs   00000100  __TI_STACK_SIZE
 0     00008e44  __TI_auto_init_nobinit_nopinit           
 1     0000c27a  __TI_cleanup_ptr                         
 0     00008e16  __TI_decompress_lzss                     
-0     0000910a  __TI_decompress_none                     
+0     00009109  __TI_decompress_none                     
 1     0000c27c  __TI_dtors_ptr                           
 1     0000c278  __TI_enable_exit_profile_output          
 abs   ffffffff  __TI_pprof_out_hndl                      
@@ -427,12 +427,12 @@ n/a   UNDEFED   __c_args__
 0     000090ce  _epilog_c28x_1                           
 0     000090d2  _epilog_c28x_2                           
 1     0000c27e  _lock                                    
-0     00009101  _nop                                     
+0     00009100  _nop                                     
 0     00008fd8  _prolog_c28x_1                           
 0     00008fdc  _prolog_c28x_2                           
 0     00008fe4  _prolog_c28x_3                           
-0     000090fd  _register_lock                           
-0     000090f9  _register_unlock                         
+0     000090fc  _register_lock                           
+0     000090f8  _register_unlock                         
 0     000087fd  _system_post_cinit                       
 0     000087fb  _system_pre_init                         
 1     0000c280  _unlock                                  
@@ -552,12 +552,11 @@ page  address   name
 0     000090c2  _args_main                               
 0     000090ce  _epilog_c28x_1                           
 0     000090d2  _epilog_c28x_2                           
-0     000090e5  Interrupt_illegalOperationHandler        
-0     000090ef  Interrupt_nmiHandler                     
-0     000090f9  _register_unlock                         
-0     000090fd  _register_lock                           
-0     00009101  _nop                                     
-0     0000910a  __TI_decompress_none                     
+0     000090e5  Interrupt_nmiHandler                     
+0     000090f8  _register_unlock                         
+0     000090fc  _register_lock                           
+0     00009100  _nop                                     
+0     00009109  __TI_decompress_none                     
 0     0000b000  __error__                                
 0     0000b003  Example_setResultPass                    
 0     0000b008  Example_setResultFail                    
@@ -574,6 +573,7 @@ page  address   name
 0     0000b586  svpwm_compute                            
 0     0000b74f  InitPeripherals                          
 0     0000b761  main                                     
+0     0000b7f6  Interrupt_illegalOperationHandler        
 1     00000400  __stack                                  
 1     00000500  __TI_STACK_END                           
 1     0000c234  Example_Result                           

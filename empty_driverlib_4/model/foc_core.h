@@ -71,7 +71,7 @@
 #define KI_ID_INIT  156.0f                          // D轴电流环积分增益（调整为适应4A电流）
 
 // Q轴电流环比例增益初始值
-#define KP_IQ_INIT  6.8f                            // Q轴电流环比例增益（调整为适应4A电流）
+#define KP_IQ_INIT  9.8f                            // Q轴电流环比例增益（调整为适应4A电流）
 
 // Q轴电流环积分增益初始值 - 已调整为适应4A电流
 #define KI_IQ_INIT  156.0f                          // Q轴电流环积分增益（调整为适应4A电流）

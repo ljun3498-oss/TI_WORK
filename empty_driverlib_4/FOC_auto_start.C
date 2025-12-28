@@ -47,7 +47,7 @@ int main(void)
     
     // 直接设置闭环运行的电流参考值
     Id_ref = 0.0f; // 无弱磁控制，专注于转矩控制
-    Iq_ref = 5.0f; // 与模拟电流幅值匹配，减少电流误差
+    Iq_ref = 4.0f; // 与模拟电流幅值匹配，减少电流误差
 
     
     // 4. 初始化外设
@@ -76,13 +76,13 @@ int main(void)
         
         // 模拟三相电流变化值（基于电机角度的正弦波）
         // 假设电流幅值为3.0，三相电流相位差为120°
-        float current_amplitude = 5.0f;
+        float current_amplitude = 3.0f;
         Ia_meas = current_amplitude * sinf(motor_angle_elec_rad);
         Ib_meas = current_amplitude * sinf(motor_angle_elec_rad - 2.0f * M_PI_F / 3.0f);
         Ic_meas = current_amplitude * sinf(motor_angle_elec_rad + 2.0f * M_PI_F / 3.0f);
         
         // 添加延时以控制电机转动速度（每1000微秒转动一次）
-        DEVICE_DELAY_US(1000); // 1秒延时，控制转动速度
+        DEVICE_DELAY_US(500); // 1秒延时，控制转动速度
         
  
     }
