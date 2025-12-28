@@ -61,28 +61,7 @@ int main(void)
     // 10. 主循环
     while(1)
     {
-        // 模拟编码器角度变化：每1000微秒转动3°（π/60弧度）
-        float angle_increment = M_PI_F / 60.0f; // 3°对应的弧度值，降低转速
-        motor_angle_mech_rad += angle_increment;
-        if (motor_angle_mech_rad >= 2.0f * M_PI_F) {
-            motor_angle_mech_rad -= 2.0f * M_PI_F;
-        }
-        
-        // 更新电机电角度
-        motor_angle_elec_rad = motor_angle_mech_rad * MOTOR_POLE_PAIRS;
-        if (motor_angle_elec_rad >= 2.0f * M_PI_F) {
-            motor_angle_elec_rad -= 2.0f * M_PI_F;
-        }
-        
-        // 模拟三相电流变化值（基于电机角度的正弦波）
-        // 假设电流幅值为3.0，三相电流相位差为120°
-        float current_amplitude = 3.0f;
-        Ia_meas = current_amplitude * sinf(motor_angle_elec_rad);
-        Ib_meas = current_amplitude * sinf(motor_angle_elec_rad - 2.0f * M_PI_F / 3.0f);
-        Ic_meas = current_amplitude * sinf(motor_angle_elec_rad + 2.0f * M_PI_F / 3.0f);
-        
-        // 添加延时以控制电机转动速度（每1000微秒转动一次）
-        DEVICE_DELAY_US(500); // 1秒延时，控制转动速度
+      
         
  
     }
@@ -112,6 +91,29 @@ void InitPeripherals(void)
 // ADC中断服务程序 - 处理ADC转换完成中断，读取电流值，执行FOC算法，计算SVPWM占空比，并更新PWM输出
 interrupt void adc_isr(void)
 {  
+
+          // 模拟编码器角度变化：每1000微秒转动3°（π/60弧度）
+        float angle_increment = M_PI_F / 60.0f; // 3°对应的弧度值，降低转速
+        motor_angle_mech_rad += angle_increment;
+        if (motor_angle_mech_rad >= 2.0f * M_PI_F) {
+            motor_angle_mech_rad -= 2.0f * M_PI_F;
+        }
+        
+        // 更新电机电角度
+        motor_angle_elec_rad = motor_angle_mech_rad * MOTOR_POLE_PAIRS;
+        if (motor_angle_elec_rad >= 2.0f * M_PI_F) {
+            motor_angle_elec_rad -= 2.0f * M_PI_F;
+        }
+        
+        // 模拟三相电流变化值（基于电机角度的正弦波）
+        // 假设电流幅值为3.0，三相电流相位差为120°
+        float current_amplitude = 3.0f;
+        Ia_meas = current_amplitude * sinf(motor_angle_elec_rad);
+        Ib_meas = current_amplitude * sinf(motor_angle_elec_rad - 2.0f * M_PI_F / 3.0f);
+        Ic_meas = current_amplitude * sinf(motor_angle_elec_rad + 2.0f * M_PI_F / 3.0f);
+        
+        // 添加延时以控制电机转动速度（每1000微秒转动一次）
+        DEVICE_DELAY_US(500); // 1秒延时，控制转动速度
         // 处理电流并执行FOC算法
         // 1. Clarke变换 - 将三相电流转换为αβ坐标系
         float alpha, beta;
