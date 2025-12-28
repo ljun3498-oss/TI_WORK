@@ -89,15 +89,25 @@ void svpwm_compute(SVPWM_Handle *handle, float Valpha, float Vbeta)
     Tb = fminf(fmaxf(Tb, 0.0f), 1.0f);
     Tc = fminf(fmaxf(Tc, 0.0f), 1.0f);
 
+    // 边界保护 - 确保比较值不会接近0或TBPRD_VAL，避免边界情况
+    const uint16_t MIN_CMP = 10;  // 最小比较值
+    const uint16_t MAX_CMP = TBPRD_VAL - 10;  // 最大比较值
+
     /* up-down 模式：CMPA = duty * TBPRD */
     handle->CMPA1 = (uint16_t)(Ta * TBPRD_VAL);
     handle->CMPA2 = (uint16_t)(Tb * TBPRD_VAL);
     handle->CMPA3 = (uint16_t)(Tc * TBPRD_VAL);
+    
+    // 应用边界保护
+    handle->CMPA1 = (uint16_t)fminf(fmaxf(handle->CMPA1, MIN_CMP), MAX_CMP);
+    handle->CMPA2 = (uint16_t)fminf(fmaxf(handle->CMPA2, MIN_CMP), MAX_CMP);
+    handle->CMPA3 = (uint16_t)fminf(fmaxf(handle->CMPA3, MIN_CMP), MAX_CMP);
     
     // 计算互补PWM输出（用于下桥臂）
     handle->CMPB1 = (uint16_t)(TBPRD_VAL - handle->CMPA1);
     handle->CMPB2 = (uint16_t)(TBPRD_VAL - handle->CMPA2);
     handle->CMPB3 = (uint16_t)(TBPRD_VAL - handle->CMPA3);
 }
+
 
 

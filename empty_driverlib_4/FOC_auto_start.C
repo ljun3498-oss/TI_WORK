@@ -25,22 +25,8 @@ SVPWM_Handle svpwm_handle = {
     .sector = 0
 };
 
-// 模拟编码器角度变量（全局）
-// 移除重复定义，使用foc_core.c中定义的变量
-// float encoder_angle_mech_rad = 0.0f;
-
-
-
-// 函数声明
 void InitPeripherals(void);
 interrupt void adc_isr(void);
-
-
-
-
-
-
-
 // 主函数
 int main(void)
 {
@@ -60,8 +46,9 @@ int main(void)
     Interrupt_initVectorTable();
     
     // 直接设置闭环运行的电流参考值
-    Id_ref = 0.5f; // 弱磁控制
-    Iq_ref = 4.0f; // 固定Q轴电流作为示例
+    Id_ref = 0.0f; // 无弱磁控制，专注于转矩控制
+    Iq_ref = 5.0f; // 与模拟电流幅值匹配，减少电流误差
+
     
     // 4. 初始化外设
     InitPeripherals();
@@ -89,13 +76,13 @@ int main(void)
         
         // 模拟三相电流变化值（基于电机角度的正弦波）
         // 假设电流幅值为3.0，三相电流相位差为120°
-        float current_amplitude = 3.0f;
+        float current_amplitude = 5.0f;
         Ia_meas = current_amplitude * sinf(motor_angle_elec_rad);
         Ib_meas = current_amplitude * sinf(motor_angle_elec_rad - 2.0f * M_PI_F / 3.0f);
         Ic_meas = current_amplitude * sinf(motor_angle_elec_rad + 2.0f * M_PI_F / 3.0f);
         
         // 添加延时以控制电机转动速度（每1000微秒转动一次）
-        DEVICE_DELAY_US(1000); // 1000微秒延时，控制转动速度
+        DEVICE_DELAY_US(1000); // 1秒延时，控制转动速度
         
  
     }
@@ -124,31 +111,7 @@ void InitPeripherals(void)
 
 // ADC中断服务程序 - 处理ADC转换完成中断，读取电流值，执行FOC算法，计算SVPWM占空比，并更新PWM输出
 interrupt void adc_isr(void)
-{
-    // 读取电流
-    //ADC_Read_Current();
-    // 电流模拟已移至主循环中
-    // Ia_meas=0.0f;
-    // Ib_meas=0.0f;
-    // Ic_meas=0.0f;
-
-    // 读取编码器
-   // Encoder_update();
-    
-    // 模拟编码器角度变化：一秒钟转一圈
-    // static float encoder_angle_mech_rad = 0.0f;
-    // float angle_increment = (2.0f * M_PI_F) * (1.0f / 500000.0f); // 1秒转一圈，10kHz中断频率
-    // encoder_angle_mech_rad += angle_increment;
-    // if (encoder_angle_mech_rad >= 2.0f * M_PI_F) {
-    //     encoder_angle_mech_rad -= 2.0f * M_PI_F;
-    // }
-    
-    // 更新电机电角度
-    // motor_angle_elec_rad = encoder_angle_mech_rad * MOTOR_POLE_PAIRS;
-    // if (motor_angle_elec_rad >= 2.0f * M_PI_F) {
-    //     motor_angle_elec_rad -= 2.0f * M_PI_F;
-    // }
-    
+{  
         // 处理电流并执行FOC算法
         // 1. Clarke变换 - 将三相电流转换为αβ坐标系
         float alpha, beta;
@@ -172,11 +135,8 @@ interrupt void adc_isr(void)
         // 6. 设置PWM比较值（直接使用SVPWM计算的比较值）
         EPWM_SetCompareValues(
             svpwm_handle.CMPA1, 
-            svpwm_handle.CMPB1,
             svpwm_handle.CMPA2,
-            svpwm_handle.CMPB2,
-            svpwm_handle.CMPA3,
-            svpwm_handle.CMPB3
+            svpwm_handle.CMPA3
         );
     
     
@@ -184,6 +144,8 @@ interrupt void adc_isr(void)
     ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
     Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
 }
+
+
 
 
 

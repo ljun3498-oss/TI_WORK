@@ -14,6 +14,6 @@
 extern void EPWM_Init(void);
 
 // PWM占空比设置函数 - 设置EPWM模块的占空比
-extern void EPWM_SetCompareValues(uint16_t cmpA1, uint16_t cmpB1, uint16_t cmpA2, uint16_t cmpB2, uint16_t cmpA3, uint16_t cmpB3);
+extern void EPWM_SetCompareValues(uint16_t cmpA1, uint16_t cmpA2, uint16_t cmpA3);
 
-#endif // FOC_PWM_H
+#endif // FOC_PWM_H

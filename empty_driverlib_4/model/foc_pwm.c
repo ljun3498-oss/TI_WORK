@@ -29,64 +29,54 @@ void EPWM_Init(void)
     GPIO_setPinConfig(GPIO_4_EPWM3A);      // 配置GPIO4为EPWM3A功能
     GPIO_setPinConfig(GPIO_5_EPWM3B);      // 配置GPIO5为EPWM3B功能
 
-    // 定义PWM信号参数
-    EPWM_SignalParams pwmParams;
+    // 启用EPWM时钟
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM2);
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM3);
     
-    // 设置系统时钟频率（假设为200MHz，根据实际硬件调整）
-    pwmParams.sysClkInHz = 200000000.0f;
+    // 设置EPWM时钟分频
+    SysCtl_setEPWMClockDivider(SYSCTL_EPWMCLK_DIV_1);
     
-    // 设置PWM频率（根据实际需求调整）
-    pwmParams.freqInHz = 10000.0f; // 10kHz
+    // 配置EPWM1
+    EPWM_setTimeBasePeriod(EPWM1_BASE, TBPRD_VAL);
+    EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN);
+    EPWM_setTimeBaseCounter(EPWM1_BASE, 0);
     
-    // 设置占空比初始值（0.0-1.0）
-    pwmParams.dutyValA = 0.5f; // 50%占空比
-    pwmParams.dutyValB = 0.5f; // 50%占空比
+    // 配置EPWM2
+    EPWM_setTimeBasePeriod(EPWM2_BASE, TBPRD_VAL);
+    EPWM_setTimeBaseCounterMode(EPWM2_BASE, EPWM_COUNTER_MODE_UP_DOWN);
+    EPWM_setTimeBaseCounter(EPWM2_BASE, 0);
     
-    // 设置计数模式为上下计数
-    pwmParams.tbCtrMode = EPWM_COUNTER_MODE_UP_DOWN;
+    // 配置EPWM3
+    EPWM_setTimeBasePeriod(EPWM3_BASE, TBPRD_VAL);
+    EPWM_setTimeBaseCounterMode(EPWM3_BASE, EPWM_COUNTER_MODE_UP_DOWN);
+    EPWM_setTimeBaseCounter(EPWM3_BASE, 0);
     
-    // 设置时钟分频
-    pwmParams.epwmClkDiv = SYSCTL_EPWMCLK_DIV_1;
-    pwmParams.tbClkDiv = EPWM_CLOCK_DIVIDER_1;
-    pwmParams.tbHSClkDiv = EPWM_HSCLOCK_DIVIDER_1;
-    
-    // 设置B信号为反相（实现互补输出）
-    pwmParams.invertSignalB = false;
-    
-    // 使用库函数配置EPWM1-3
-    EPWM_configureSignal(EPWM1_BASE, &pwmParams);
-    EPWM_configureSignal(EPWM2_BASE, &pwmParams);
-    EPWM_configureSignal(EPWM3_BASE, &pwmParams);
+   
 
     // 配置PWM动作限定器 - 确保正确的输出逻辑
-    // EPWM1
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
+    // EPWM1 - A相
+    // A输出（上桥臂）：向上计数到CMPA时变低，向下计数到CMPA时变高
+    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
+    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
     
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB);
-    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPB);
+    // B输出（下桥臂）：向上计数到CMPA时变高，向下计数到CMPA时变低
+    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
+    EPWM_setActionQualifierAction(EPWM1_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
     
-    // EPWM2
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
+    // EPWM2 - B相
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
     
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB);
-    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPB);
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
+    EPWM_setActionQualifierAction(EPWM2_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
     
-    // EPWM3
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
+    // EPWM3 - C相
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_A, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
     
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_ZERO);
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPB);
-    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPB);
-
-   
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_HIGH, EPWM_AQ_OUTPUT_ON_TIMEBASE_UP_CMPA);
+    EPWM_setActionQualifierAction(EPWM3_BASE, EPWM_AQ_OUTPUT_B, EPWM_AQ_OUTPUT_LOW, EPWM_AQ_OUTPUT_ON_TIMEBASE_DOWN_CMPA);
 
     // 配置SOC触发
     EPWM_setADCTriggerSource(EPWM1_BASE, EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO); // 设置ADC触发源为EPWM1计数器为0时
@@ -98,38 +88,20 @@ void EPWM_Init(void)
     EPWM_setADCTriggerEventPrescale(EPWM1_BASE, EPWM_SOC_B, 1);           // 设置触发事件的预分频为1
     EPWM_enableADCTrigger(EPWM1_BASE, EPWM_SOC_B);                         // 启用ADC触发
     
-    // 启动PWM
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM1);
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM2);
-    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_EPWM3);
-    
-    // 启动PWM时基计数器
-    EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN);
-    EPWM_setTimeBaseCounterMode(EPWM2_BASE, EPWM_COUNTER_MODE_UP_DOWN);
-    EPWM_setTimeBaseCounterMode(EPWM3_BASE, EPWM_COUNTER_MODE_UP_DOWN);
+ 
 }
 
 /**
- * @brief 直接设置PWM比较值
- * @details 直接使用SVPWM计算的比较值设置PWM输出，避免重复计算，
- *          用于控制电机的三相电压输出。
+ * @brief 设置PWM比较值
+ * @details 设置PWM输出的比较值，用于控制电机的三相电压输出。
  * @param cmpA1 A相比较器A的值
- * @param cmpB1 A相比较器B的值（互补输出）
  * @param cmpA2 B相比较器A的值
- * @param cmpB2 B相比较器B的值（互补输出）
  * @param cmpA3 C相比较器A的值
- * @param cmpB3 C相比较器B的值（互补输出）
  */
-void EPWM_SetCompareValues(uint16_t cmpA1, uint16_t cmpB1, uint16_t cmpA2, uint16_t cmpB2, uint16_t cmpA3, uint16_t cmpB3)
+void EPWM_SetCompareValues(uint16_t cmpA1, uint16_t cmpA2, uint16_t cmpA3)
 {
     // 设置比较值
     EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, cmpA1); // 设置EPWM1比较器A的值
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_B, cmpB1); // 设置EPWM1比较器B的值
-
     EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, cmpA2); // 设置EPWM2比较器A的值
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_B, cmpB2); // 设置EPWM2比较器B的值
-
     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, cmpA3); // 设置EPWM3比较器A的值
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_B, cmpB3); // 设置EPWM3比较器B的值
-
 }

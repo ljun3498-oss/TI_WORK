@@ -14,15 +14,9 @@ SYSCFG_SRCS += \
 LIB_SRCS += \
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib.lib 
 
-C_UPPER_SRCS += \
-../PWM_7.C 
-
 C_SRCS += \
 ./syscfg/board.c \
 ./syscfg/c2000ware_libraries.c 
-
-C_UPPER_DEPS += \
-./PWM_7.d 
 
 GEN_FILES += \
 ./syscfg/board.c \
@@ -42,7 +36,6 @@ GEN_OPTS += \
 ./syscfg/c2000ware_libraries.opt 
 
 OBJS += \
-./PWM_7.obj \
 ./syscfg/board.obj \
 ./syscfg/c2000ware_libraries.obj 
 
@@ -59,7 +52,6 @@ GEN_MISC_DIRS__QUOTED += \
 "syscfg" 
 
 OBJS__QUOTED += \
-"PWM_7.obj" \
 "syscfg\board.obj" \
 "syscfg\c2000ware_libraries.obj" 
 
@@ -76,17 +68,11 @@ C_DEPS__QUOTED += \
 "syscfg\board.d" \
 "syscfg\c2000ware_libraries.d" 
 
-C_UPPER_DEPS__QUOTED += \
-"PWM_7.d" 
-
 GEN_FILES__QUOTED += \
 "syscfg\board.c" \
 "syscfg\board.opt" \
 "syscfg\c2000ware_libraries.opt" \
 "syscfg\c2000ware_libraries.c" 
-
-C_UPPER_SRCS__QUOTED += \
-"../PWM_7.C" 
 
 SYSCFG_SRCS__QUOTED += \
 "../c2000.syscfg" 

@@ -17,13 +17,9 @@
 
 // 系统/硬件参数
 // 系统时钟频率 - 定义为200MHz，用于计算其他时钟相关参数
-#define SYSCLK_HZ           200000000.0f            // 系统时钟频率：200MHz
-
-// PWM输出频率 - 定义为10kHz，这是FOC控制的基础频率
-#define PWM_FREQ_HZ         10000.0f                // PWM频率：10kHz
-
-// PWM时基周期值 - 根据系统时钟和PWM频率计算得出，用于设置PWM模块的周期寄存器
-#define TBPRD_VAL           ((uint16_t)(SYSCLK_HZ / (2.0f * PWM_FREQ_HZ) + 0.5f))
+#define SYSCLK_HZ            200000000.0f    // 200MHz
+#define PWM_FREQ_HZ          20000.0f        // 20kHz
+#define TBPRD_VAL            (SYSCLK_HZ/(2*PWM_FREQ_HZ))  // 时基周期
 
 // 死区参数
 // 死区时间 - 定义为400ns，用于防止上下桥臂同时导通导致的短路
@@ -59,24 +55,26 @@
 #define I_OVERCURRENT_TRIP  (MAX_PHASE_CURRENT_A * 1.05f) // 过流保护阈值
 
 // 控制环路参数
-// 控制频率 - 设置为与PWM频率相同，即10kHz
+// 控制频率 - 设置为与PWM频率相同，即5kHz
 #define CONTROL_HZ          PWM_FREQ_HZ             // 控制频率
 
 // 控制周期 - 控制频率的倒数，单位为秒
 #define DT                  (1.0f/CONTROL_HZ)       // 控制周期
 
+
+
 // PI控制器参数
 // D轴电流环比例增益初始值
-#define KP_ID_INIT  5.5f                            // D轴电流环比例增益
+#define KP_ID_INIT  10.7f                           // D轴电流环比例增益（调整为适应4A电流）
 
-// D轴电流环积分增益初始值 - 已调整为适应7.8A电流
-#define KI_ID_INIT  80.0f                           // D轴电流环积分增益（调整为适应7.8A电流）
+// D轴电流环积分增益初始值 - 已调整为适应4A电流
+#define KI_ID_INIT  156.0f                          // D轴电流环积分增益（调整为适应4A电流）
 
 // Q轴电流环比例增益初始值
-#define KP_IQ_INIT  10.0f                            // Q轴电流环比例增益
+#define KP_IQ_INIT  6.8f                            // Q轴电流环比例增益（调整为适应4A电流）
 
-// Q轴电流环积分增益初始值 - 已调整为适应7.8A电流
-#define KI_IQ_INIT  80.0f                           // Q轴电流环积分增益（调整为适应7.8A电流）
+// Q轴电流环积分增益初始值 - 已调整为适应4A电流
+#define KI_IQ_INIT  156.0f                          // Q轴电流环积分增益（调整为适应4A电流）
 
 // ADC到电流的转换系数
 // ADC计数到安培的转换系数 - 计算方法：最大相电流(7.8A)除以ADC最大值(4096)，约等于0.001904
@@ -87,10 +85,6 @@
 
 // 编码器原始位置 - 存储编码器的原始计数值
 extern volatile int32_t encoder_raw_pos;             // 编码器原始位置
-
-
-// 注意：编码器校准标志未使用，已注释掉
-// extern volatile bool encoder_calibrated;             // 编码器校准标志
 
 // 电机机械角度 - 单位为弧度，范围为0到2π
 extern volatile float motor_angle_mech_rad;          // 电机机械角度(弧度)
