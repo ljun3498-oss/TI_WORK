@@ -5,17 +5,17 @@ syscfg/board.obj: syscfg/board.h
 syscfg/board.obj: C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/driverlib.h
 syscfg/board.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h
 syscfg/board.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/adc.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/linkage.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_stdint40.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/stdint.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/cdefs.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_types.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_stdint.h
-syscfg/board.obj: D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/linkage.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_stdint40.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/stdint.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/cdefs.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_types.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_stdint.h
+syscfg/board.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h
 syscfg/board.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_adc.h
 syscfg/board.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_sysctl.h
 syscfg/board.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_types.h
@@ -100,27 +100,27 @@ C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h:
 
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/adc.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/linkage.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/linkage.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_stdint40.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_stdint40.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/stdint.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/stdint.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/cdefs.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/cdefs.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_types.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_types.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_stdint.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_stdint.h:
 
-D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h:
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h:
 
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_adc.h:
 

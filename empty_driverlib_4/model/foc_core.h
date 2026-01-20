@@ -19,7 +19,7 @@
 // 系统时钟频率 - 定义为200MHz，用于计算其他时钟相关参数
 #define SYSCLK_HZ            200000000.0f    // 200MHz
 #define PWM_FREQ_HZ          20000.0f        // 20kHz
-#define TBPRD_VAL            (SYSCLK_HZ/(2*PWM_FREQ_HZ))  // 时基周期
+#define TBPRD_VAL            5000U          // 时基周期，200MHz系统时钟，UP_DOWN计数模式下产生20kHz PWM频率
 
 // 死区参数
 // 死区时间 - 定义为400ns，用于防止上下桥臂同时导通导致的短路
@@ -91,6 +91,12 @@ extern volatile float motor_angle_mech_rad;          // 电机机械角度(弧�
 
 // 电机电角度 - 单位为弧度，范围为0到2π，机械角度乘以极对数
 extern volatile float motor_angle_elec_rad;          // 电机电角度(弧度)
+
+// 开环模式专用虚拟角度变量
+extern volatile float open_loop_angle_mech_rad;      // 开环虚拟机械角度(弧度)
+extern volatile float open_loop_angle_elec_rad;      // 开环虚拟电角度(弧度)
+
+extern volatile float angle_offset_rad;              // 开环虚拟角度与编码器角度的差值(弧度)
 
 // 电机转速 - 单位为RPM（转/分钟）
 extern volatile float motor_rpm;                     // 电机转速

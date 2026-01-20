@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS
+CG_TOOL_ROOT := D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS
 
 GEN_OPTS__FLAG := --cmd_file="syscfg/board.opt" --cmd_file="syscfg/c2000ware_libraries.opt" 
 GEN_CMDS__FLAG := 
@@ -140,7 +140,7 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 empty_driverlib.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O3 --opt_for_speed=3 --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"empty_driverlib.map" --stack_size=0x100 --warn_sections -i"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="empty_driverlib_linkInfo.xml" --entry_point=code_start --rom_model -o "empty_driverlib.out" $(ORDERED_OBJS)
+	"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O3 --opt_for_speed=3 --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"empty_driverlib.map" --stack_size=0x100 --warn_sections -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="empty_driverlib_linkInfo.xml" --entry_point=code_start --rom_model -o "empty_driverlib.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 

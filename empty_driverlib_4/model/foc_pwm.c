@@ -41,16 +41,22 @@ void EPWM_Init(void)
     EPWM_setTimeBasePeriod(EPWM1_BASE, TBPRD_VAL);
     EPWM_setTimeBaseCounterMode(EPWM1_BASE, EPWM_COUNTER_MODE_UP_DOWN);
     EPWM_setTimeBaseCounter(EPWM1_BASE, 0);
+    EPWM_setClockPrescaler(EPWM1_BASE, EPWM_CLOCK_DIVIDER_1, EPWM_HSCLOCK_DIVIDER_1);
+
     
     // 配置EPWM2
     EPWM_setTimeBasePeriod(EPWM2_BASE, TBPRD_VAL);
     EPWM_setTimeBaseCounterMode(EPWM2_BASE, EPWM_COUNTER_MODE_UP_DOWN);
     EPWM_setTimeBaseCounter(EPWM2_BASE, 0);
+    EPWM_setClockPrescaler(EPWM2_BASE, EPWM_CLOCK_DIVIDER_1, EPWM_HSCLOCK_DIVIDER_1);
+
     
     // 配置EPWM3
     EPWM_setTimeBasePeriod(EPWM3_BASE, TBPRD_VAL);
     EPWM_setTimeBaseCounterMode(EPWM3_BASE, EPWM_COUNTER_MODE_UP_DOWN);
     EPWM_setTimeBaseCounter(EPWM3_BASE, 0);
+    EPWM_setClockPrescaler(EPWM3_BASE, EPWM_CLOCK_DIVIDER_1, EPWM_HSCLOCK_DIVIDER_1);
+
     
    
 

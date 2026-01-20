@@ -10,6 +10,12 @@ volatile int32_t encoder_raw_pos = 0;            // 编码器原始位置
 volatile float motor_angle_mech_rad = 0.0f;      // 电机机械角度(弧度)
 // 电机电角度 - 单位为弧度，初始化为0.0f
 volatile float motor_angle_elec_rad = 0.0f;      // 电机电角度(弧度)
+// 开环模式专用虚拟机械角度 - 单位为弧度，初始化为0.0f
+volatile float open_loop_angle_mech_rad = 0.0f;  // 开环虚拟机械角度(弧度)
+// 开环模式专用虚拟电角度 - 单位为弧度，初始化为0.0f
+volatile float open_loop_angle_elec_rad = 0.0f;  // 开环虚拟电角度(弧度)
+// 开环虚拟角度与编码器角度的差值 - 单位为弧度，初始化为0.0f
+volatile float angle_offset_rad = 0.0f;          // 开环虚拟角度与编码器角度的差值(弧度)
 // 电机转速 - 单位为RPM，初始化为0.0f
 volatile float motor_rpm = 0.0f;                 // 电机转速
 // 三相电流测量值 - 单位为安培，初始化为0.0f

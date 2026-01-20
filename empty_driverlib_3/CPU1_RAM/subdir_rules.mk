@@ -8,14 +8,14 @@ SHELL = cmd.exe
 %.obj: ../%.C $(GEN_OPTS) | $(GEN_FILES) $(GEN_MISC_FILES)
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: C2000 Compiler'
-	"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O3 --opt_for_speed=3 --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3" --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/device" --include_path="C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/" --include_path="D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="$(basename $(<F)).d_raw" --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/CPU1_RAM/syscfg" $(GEN_OPTS__FLAG) "$<"
+	"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O3 --opt_for_speed=3 --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3" --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/device" --include_path="C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/" --include_path="D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="$(basename $(<F)).d_raw" --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/CPU1_RAM/syscfg" $(GEN_OPTS__FLAG) "$<"
 	@echo 'Finished building: "$<"'
 	@echo ' '
 
 build-2146051967: ../c2000.syscfg
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: SysConfig'
-	"D:/TI/sysconfig_1.25.0/sysconfig_cli.bat" --script "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/c2000.syscfg" -o "syscfg" -s "C:/TI/C2000Ware_6_00_01_00/.metadata/sdk.json" -d "F2837xD" --compiler ccs
+	"D:/TI/ccs/ccs/utils/sysconfig_1.25.0/sysconfig_cli.bat" --script "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/c2000.syscfg" -o "syscfg" -s "C:/TI/C2000Ware_6_00_01_00/.metadata/sdk.json" -d "F2837xD" --compiler ccs
 	@echo 'Finished building: "$<"'
 	@echo ' '
 
@@ -35,7 +35,7 @@ syscfg: build-2146051967
 syscfg/%.obj: ./syscfg/%.c $(GEN_OPTS) | $(GEN_FILES) $(GEN_MISC_FILES)
 	@echo 'Building file: "$<"'
 	@echo 'Invoking: C2000 Compiler'
-	"D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O3 --opt_for_speed=3 --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3" --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/device" --include_path="C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/" --include_path="D:/TI/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="syscfg/$(basename $(<F)).d_raw" --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/CPU1_RAM/syscfg" --obj_directory="syscfg" $(GEN_OPTS__FLAG) "$<"
+	"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O3 --opt_for_speed=3 --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3" --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/device" --include_path="C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/" --include_path="D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --define=DEBUG --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="syscfg/$(basename $(<F)).d_raw" --include_path="C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_3/CPU1_RAM/syscfg" --obj_directory="syscfg" $(GEN_OPTS__FLAG) "$<"
 	@echo 'Finished building: "$<"'
 	@echo ' '
 
