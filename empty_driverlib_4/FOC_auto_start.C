@@ -12,12 +12,17 @@
 
 // 状态机定义
 typedef enum {
-    STATE_OPEN_LOOP = 0,  // 开环状态
-    STATE_CLOSED_LOOP     // 闭环状态
+    STATE_ALIGNMENT = 0,   // 对齐状态
+    STATE_OPEN_LOOP,       // 开环状态
+    STATE_CLOSED_LOOP      // 闭环状态
 } ControlState;
 
 // 状态机控制变量
-ControlState g_control_state = STATE_OPEN_LOOP; // 默认开环状态
+ControlState g_control_state = STATE_ALIGNMENT; // 默认对齐状态
+
+// 对齐阶段计数器
+uint32_t g_alignment_counter = 0;  // 对齐阶段的中断次数计数器
+#define ALIGNMENT_DURATION 10000  // 对齐持续时间（0.25秒，基于20kHz中断频率）
 bool g_encoder_aligned = false;  // 编码器对齐标志
 
 // 开环转圈圈数计数器
@@ -80,8 +85,8 @@ int main(void)
     Interrupt_initVectorTable();
     
     // 直接设置闭环运行的电流参考值
-    Id_ref = 0.0f; // 无弱磁控制，专注于转矩控制
-    Iq_ref = 4.0f; // 与模拟电流幅值匹配，减少电流误差
+    Id_ref = 4.0f; // 无弱磁控制，专注于转矩控制
+    Iq_ref = 0.0f; // 减小电流参考值，减少转矩脉动和抖动
 
     
     // 4. 初始化外设
@@ -128,20 +133,63 @@ interrupt void adc_isr(void)
 {
     // 状态机控制
     switch(g_control_state) {
+        case STATE_ALIGNMENT: {
+            // 对齐阶段：给电机施加固定电压矢量，使转子对齐到已知位置
+            
+            // 递增对齐计数器
+            g_alignment_counter++;
+            
+            // 设置固定的电角度（例如0度），使转子对齐到A相轴线
+            float align_angle = 0.0f;  // 对齐角度（弧度）
+            
+            // 计算固定电压矢量（使用较小的电压值，避免过大的电流）
+            float vd = 4.0f;  // D轴电压，用于将转子对齐到A相轴线
+            float vq = 0.0f;
+            
+            // 逆Park变换 - 将dq坐标系电压指令转换为αβ坐标系
+            float valpha, vbeta;
+            inv_park_transform(vd, vq, align_angle, &valpha, &vbeta);
+            
+            // SVPWM计算 - 计算PWM占空比
+            svpwm_compute(&svpwm_handle, valpha, vbeta);
+            
+            // 设置PWM比较值
+            EPWM_SetCompareValues(
+                svpwm_handle.CMPA1, 
+                svpwm_handle.CMPA2,
+                svpwm_handle.CMPA3
+            );
+            
+            // 更新编码器数据，记录对齐位置
+            Encoder_update();
+            
+            // 对齐持续一段时间后，切换到开环模式
+            if (g_alignment_counter >= ALIGNMENT_DURATION) {
+                // 保存对齐位置的角度
+                open_loop_angle_mech_rad = motor_angle_mech_rad;
+                open_loop_angle_elec_rad = motor_angle_elec_rad;
+                g_previous_open_loop_angle = open_loop_angle_mech_rad;
+                
+                // 切换到开环模式
+                SwitchControlState(STATE_OPEN_LOOP);
+            }
+            
+            // 清除ADC中断标志
+            ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
+            Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
+            
+            // 对齐阶段直接返回，不执行后续的FOC算法
+            return;
+        }
+        
         case STATE_OPEN_LOOP: {
-            // 开环模式：使用模拟角度增量（开环专用虚拟角度）
-            float angle_increment = M_PI_F / 1000.0f; // 基于20kHz PWM的角度增量
+            // 开环模式：使用与模拟ADC一致的角度变化
+            // 计算角度增量（设置为10转每分钟）
+            float angle_increment = M_PI_F / 30000.0f; // 10转/分钟，基于20kHz PWM频率
             open_loop_angle_mech_rad += angle_increment;
             
             // 计算圈数变化
             float angle_change = open_loop_angle_mech_rad - g_previous_open_loop_angle;
-            if (angle_change < -M_PI_F) {
-                // 角度发生了正转溢出，增加一圈
-                g_open_loop_turns += 1.0f;
-            } else if (angle_change > M_PI_F) {
-                // 角度发生了反转溢出，减少一圈
-                g_open_loop_turns -= 1.0f;
-            }
             
             // 角度归一化
             if (open_loop_angle_mech_rad >= 2.0f * M_PI_F) {
@@ -152,6 +200,13 @@ interrupt void adc_isr(void)
             
             // 保存当前角度用于下一次计算
             g_previous_open_loop_angle = open_loop_angle_mech_rad;
+            if (angle_change < -M_PI_F) {
+                // 角度发生了正转溢出，增加一圈
+                g_open_loop_turns += 1.0f;
+            } else if (angle_change > M_PI_F) {
+                // 角度发生了反转溢出，减少一圈
+                g_open_loop_turns -= 1.0f;
+            }
             
             // 更新开环虚拟电角度
             open_loop_angle_elec_rad = open_loop_angle_mech_rad * MOTOR_POLE_PAIRS;
@@ -159,27 +214,37 @@ interrupt void adc_isr(void)
                 open_loop_angle_elec_rad -= 2.0f * M_PI_F;
             }
             
-            // 更新编码器数据
+            // 更新编码器数据，用于监控
             Encoder_update();
             
-            // 计算开环虚拟角度与编码器角度的差值（考虑角度周期性）
-            // 先保存编码器计算的机械角度
-            float encoder_mech_rad = motor_angle_mech_rad;
-            
-            // 计算角度差（确保差值在-π到π之间）
-            angle_offset_rad = open_loop_angle_mech_rad - encoder_mech_rad;
-            while (angle_offset_rad > M_PI_F) angle_offset_rad -= 2.0f * M_PI_F;
-            while (angle_offset_rad < -M_PI_F) angle_offset_rad += 2.0f * M_PI_F;
-            
-            // 将开环虚拟角度加上角度差值后作为当前电机角度
-            // 这样可以使开环角度逐渐向编码器角度对齐
+            // 将开环虚拟角度作为当前电机角度，确保与模拟ADC一致
             motor_angle_mech_rad = open_loop_angle_mech_rad;
             motor_angle_elec_rad = open_loop_angle_elec_rad;
             
-            // 保持在开环高速运行，移除自动切换到闭环的逻辑
-            // 角度增量已经设置为高速运行值
+            // 开环模式直接设置电压值
+            float vd = 0.2f;    // D轴电压为0
+            float vq = 1.0f;    // 降低Q轴电压减少转矩脉动和抖动
             
-            break;
+            // 逆Park变换
+            float valpha, vbeta;
+            inv_park_transform(vd, vq, open_loop_angle_elec_rad, &valpha, &vbeta);
+            
+            // SVPWM计算
+            svpwm_compute(&svpwm_handle, valpha, vbeta);
+            
+            // 设置PWM比较值
+            EPWM_SetCompareValues(
+                svpwm_handle.CMPA1, 
+                svpwm_handle.CMPA2,
+                svpwm_handle.CMPA3
+            );
+            
+            // 清除ADC中断标志
+            ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
+            Interrupt_clearACKGroup(INTERRUPT_ACK_GROUP1);
+            
+            // 开环阶段直接返回，不执行后续的PI控制器代码
+            return;
         }    
         
         case STATE_CLOSED_LOOP: {
@@ -210,16 +275,16 @@ interrupt void adc_isr(void)
     
     // 模拟三相电流变化值（基于电机角度的正弦波）
     // 注释掉虚拟电流生成代码，改用ADC实际测量的电流
-    /*
-    // 假设电流幅值为3.0，三相电流相位差为120°
-    float current_amplitude = 3.0f;
+    
+    // 假设电流幅值为2.0，与电流参考值匹配，三相电流相位差为120°
+    float current_amplitude = 2.0f;
     Ia_meas = current_amplitude * sinf(motor_angle_elec_rad);
     Ib_meas = current_amplitude * sinf(motor_angle_elec_rad - 2.0f * M_PI_F / 3.0f);
     Ic_meas = current_amplitude * sinf(motor_angle_elec_rad + 2.0f * M_PI_F / 3.0f);
-    */
+    
     
     // 读取实际ADC电流值
-    ADC_Read_Current();
+    // ADC_Read_Current();
     
     // 处理电流并执行FOC算法
     // 1. Clarke变换 - 将三相电流转换为αβ坐标系
