@@ -91,8 +91,8 @@ int main(void)
     EINT;
     ERTM;
     
-    // 立即切换到闭环模式（用于测试）
-    SwitchControlState(STATE_CLOSED_LOOP);
+    // 保持在开环模式，不立即切换到闭环
+    // SwitchControlState(STATE_CLOSED_LOOP);
     
     // 10. 主循环
     while(1)
@@ -176,13 +176,8 @@ interrupt void adc_isr(void)
             motor_angle_mech_rad = open_loop_angle_mech_rad;
             motor_angle_elec_rad = open_loop_angle_elec_rad;
             
-            // 递增超时计数器
-            g_open_loop_timeout_counter++;
-            
-            // 检查是否已经转够50圈，或者达到3秒超时，如果是则切换到闭环模式
-            if (g_open_loop_turns >= 50.0f || g_open_loop_timeout_counter >= OPEN_LOOP_TIMEOUT_COUNT) {
-                SwitchControlState(STATE_CLOSED_LOOP);
-            }
+            // 保持在开环高速运行，移除自动切换到闭环的逻辑
+            // 角度增量已经设置为高速运行值
             
             break;
         }    
