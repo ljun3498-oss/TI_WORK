@@ -6,5 +6,7 @@ encoding//f2837x_RAM/sources/subdir_rules.mk=UTF-8
 encoding//f2837x_RAM/sources/subdir_vars.mk=UTF-8
 encoding//f2837x_RAM/src_device/subdir_rules.mk=UTF-8
 encoding//f2837x_RAM/src_device/subdir_vars.mk=UTF-8
+encoding//f2837x_RAM/src_driver/subdir_rules.mk=UTF-8
+encoding//f2837x_RAM/src_driver/subdir_vars.mk=UTF-8
 encoding//f2837x_RAM/subdir_rules.mk=UTF-8
 encoding//f2837x_RAM/subdir_vars.mk=UTF-8

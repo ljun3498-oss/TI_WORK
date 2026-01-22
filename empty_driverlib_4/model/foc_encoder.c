@@ -6,6 +6,9 @@
 int32_t curr_pos_latch = 0;
 int32_t last_pos_latch = 0;
 int32_t pos_diff = 0;
+int32_t encoder_continuous_pos = 0; // 连续编码器位置（无重置）
+float encoder_angle_elec_continuous = 0.0f; // 连续电气角度（弧度）
+static int32_t last_encoder_raw_pos = 0; // 上一次原始编码器位置
 
 // 初始化编码器
 void Encoder_init(void)
@@ -51,6 +54,21 @@ void Encoder_update(void)
     
     encoder_raw_pos = (int32_t)EQEP_getPosition(EQEP1_BASE); // 读取eQEP1的位置计数器值
     
+    // 计算连续编码器位置（处理溢出）
+    int32_t raw_pos_diff = encoder_raw_pos - last_encoder_raw_pos;
+    if (raw_pos_diff > (int32_t)(ENCODER_LINES * QUADRATURE_MULT / 2))
+    {
+        raw_pos_diff -= (int32_t)(ENCODER_LINES * QUADRATURE_MULT);
+    }
+    else if (raw_pos_diff < -(int32_t)(ENCODER_LINES * QUADRATURE_MULT / 2))
+    {
+        raw_pos_diff += (int32_t)(ENCODER_LINES * QUADRATURE_MULT);
+    }
+    encoder_continuous_pos += raw_pos_diff;
+    
+    // 计算连续电气角度
+    encoder_angle_elec_continuous = ((float)encoder_continuous_pos / (float)(ENCODER_LINES * QUADRATURE_MULT)) * 2.0f * M_PI_F * (float)MOTOR_POLE_PAIRS;
+    
     // 计算机械角度(弧度)
     motor_angle_mech_rad = ((float)encoder_raw_pos / (float)(ENCODER_LINES * QUADRATURE_MULT)) * 2.0f * M_PI_F;
     // 机械角度计算公式：(当前位置 / 总分辨率) * 2π
@@ -86,6 +104,9 @@ void Encoder_update(void)
     
     // 更新上一次位置锁存值
     last_pos_latch = curr_pos_latch;
+    
+    // 更新上一次原始编码器位置
+    last_encoder_raw_pos = encoder_raw_pos;
 }
 
 // 获取电机机械角度(弧度)

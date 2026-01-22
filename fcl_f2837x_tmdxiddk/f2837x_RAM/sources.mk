@@ -127,4 +127,5 @@ SUBDIRS := \
 . \
 sources \
 src_device \
+src_driver \
 

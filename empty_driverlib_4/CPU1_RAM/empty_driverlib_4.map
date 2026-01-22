@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.2                     
 ******************************************************************************
->> Linked Wed Jan 21 22:00:04 2026
+>> Linked Thu Jan 22 13:00:05 2026
 
 OUTPUT FILE NAME:   <empty_driverlib_4.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -13,10 +13,10 @@ MEMORY CONFIGURATION
 ----------------------  --------  ---------  --------  --------  ----  --------
 PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
-  RAMM0                 00000123   000002dd  00000034  000002a9  RWIX
+  RAMM0                 00000123   000002dd  00000036  000002a7  RWIX
   RAMLS0                00008000   00000800  00000800  00000000  RWIX
-  RAMLS1                00008800   00000800  0000075d  000000a3  RWIX
-  RAMLS2                00009000   00000800  00000000  00000800  RWIX
+  RAMLS1                00008800   00000800  00000800  00000000  RWIX
+  RAMLS2                00009000   00000800  000000dd  00000723  RWIX
   RAMLS3                00009800   00000800  00000000  00000800  RWIX
   RAMLS4                0000a000   00000800  00000000  00000800  RWIX
   RAMD0                 0000b000   00000800  00000800  00000000  RWIX
@@ -49,7 +49,7 @@ PAGE 1:
   RAMLS5                0000a800   00000400  00000000  00000400  RWIX
   Cla1DataRam           0000ac00   00000400  00000000  00000400  RWIX
   RAMD1                 0000b800   00000800  00000000  00000800  RWIX
-  RAMGS0_PAGE1          0000c000   00001000  000002a4  00000d5c  RWIX
+  RAMGS0_PAGE1          0000c000   00001000  000002a8  00000d58  RWIX
   RAMGS1_PAGE1          0000d000   00001000  00000003  00000ffd  RWIX
   RAMGS2_PAGE1          0000e000   00001000  00000000  00001000  RWIX
   RAMGS3_PAGE1          0000f000   00001000  00000000  00001000  RWIX
@@ -80,12 +80,11 @@ codestart
 *          0    00000000    00000002     
                   00000000    00000002     F2837xD_CodeStartBranch.obj (codestart)
 
-.cinit     0    00000128    00000030     
-                  00000128    0000001d     (.cinit..data.load) [load image, compression = lzss]
-                  00000145    00000001     --HOLE-- [fill = 0]
-                  00000146    00000006     (__TI_handler_table)
-                  0000014c    00000004     (.cinit..bss.load) [load image, compression = zero_init]
-                  00000150    00000008     (__TI_cinit_table)
+.cinit     0    00000128    00000032     
+                  00000128    00000020     (.cinit..data.load) [load image, compression = lzss]
+                  00000148    00000006     (__TI_handler_table)
+                  0000014e    00000004     (.cinit..bss.load) [load image, compression = zero_init]
+                  00000152    00000008     (__TI_cinit_table)
 
 .reset     0    003fffc0    00000000     DSECT
 
@@ -106,17 +105,17 @@ codestart
                   0000c1dc    0000003e     foc_pwm.obj (.const:.string)
                   0000c21a    00000004     rts2800_fpu32_eabi.lib : e_fmodf.c.obj (.const:Zero)
 
-.data      1    0000c21e    00000086     UNINITIALIZED
-                  0000c21e    00000006     device.obj (.data)
-                  0000c224    00000006     foc_encoder.obj (.data)
-                  0000c22a    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
-                  0000c230    00000002                            : _lock.c.obj (.data:_lock)
-                  0000c232    00000002                            : _lock.c.obj (.data:_unlock)
-                  0000c234    00000001                            : errno.c.obj (.data)
-                  0000c235    0000000b     --HOLE--
-                  0000c240    00000028     foc_core.obj (.data)
-                  0000c268    00000018     --HOLE--
-                  0000c280    00000024     FOC_auto_start.obj (.data)
+.data      1    0000c21e    0000008a     UNINITIALIZED
+                  0000c21e    0000000c     foc_encoder.obj (.data)
+                  0000c22a    00000006     device.obj (.data)
+                  0000c230    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
+                  0000c236    00000002                            : _lock.c.obj (.data:_lock)
+                  0000c238    00000002                            : _lock.c.obj (.data:_unlock)
+                  0000c23a    00000001                            : errno.c.obj (.data)
+                  0000c23b    00000005     --HOLE--
+                  0000c240    00000030     FOC_auto_start.obj (.data)
+                  0000c270    00000010     --HOLE--
+                  0000c280    00000028     foc_core.obj (.data)
 
 GETBUFFER 
 *          0    0003f800    00000000     DSECT
@@ -135,83 +134,85 @@ Cla1funcs
 *          0    00008000    00000000     UNINITIALIZED
 
 .text.1    0    00008000    00000800     
-                  00008000    00000212     FOC_auto_start.obj (.text:retain)
-                  00008212    00000209     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
-                  0000841b    00000100     foc_adc.obj (.text)
-                  0000851b    000000cf     rts2800_fpu32_eabi.lib : e_fmodf.c.obj (.text)
-                  000085ea    00000090     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTAL)
-                  0000867a    0000008f     foc_svpwm.obj (.text)
-                  00008709    00000088     rts2800_fpu32_eabi.lib : fs_div28.asm.obj (.text)
+                  00008000    0000027f     foc_pwm.obj (.text)
+                  0000827f    00000209     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
+                  00008488    00000140     foc_encoder.obj (.text)
+                  000085c8    000000fa     foc_core.obj (.text)
+                  000086c2    000000cf     rts2800_fpu32_eabi.lib : e_fmodf.c.obj (.text)
                   00008791    0000006f     driverlib_eabi.lib : adc.obj (.text:ADC_setINLTrim)
 
-.text.2    0    00008800    0000075d     
-                  00008800    00000068     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_getDeviceParametric)
-                  00008868    00000066     rts2800_fpu32_eabi.lib : s_sinf.c.obj (.text)
-                  000088ce    00000063                            : s_cosf.c.obj (.text)
-                  00008931    00000060     driverlib_eabi.lib : adc.obj (.text:ADC_setOffsetTrim)
-                  00008991    0000005c                        : adc.obj (.text:ADC_setPPBTripLimits)
-                  000089ed    00000052                        : gpio.obj (.text:GPIO_setPadConfig)
-                  00008a3f    00000051                        : sysctl.obj (.text:SysCtl_getClock)
-                  00008a90    00000048                        : sysctl.obj (.text:SysCtl_selectOscSource)
-                  00008ad8    00000045     FOC_auto_start.obj (.text)
-                  00008b1d    0000003d     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_initModule)
-                  00008b5a    00000037                        : gpio.obj (.text:GPIO_setControllerCore)
-                  00008b91    00000037                        : gpio.obj (.text:GPIO_setPinConfig)
-                  00008bc8    00000037                        : gpio.obj (.text:GPIO_setQualificationMode)
-                  00008bff    00000037                        : interrupt.obj (.text:Interrupt_enable)
-                  00008c36    00000031                        : gpio.obj (.text:GPIO_setDirectionMode)
-                  00008c67    0000002f                        : adc.obj (.text:ADC_setMode)
-                  00008c96    0000002e     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
-                  00008cc4    0000002b                            : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
-                  00008cef    00000029                            : exit.c.obj (.text)
-                  00008d18    00000028     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_selectClockSource)
-                  00008d40    00000027     rts2800_fpu32_eabi.lib : e_sqrtf.c.obj (.text)
-                  00008d67    0000001f     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_getTimerOverflowStatus)
-                  00008d86    0000001e                        : interrupt.obj (.text:Interrupt_initVectorTable)
-                  00008da4    0000001d     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
-                  00008dc1    0000001b     driverlib_eabi.lib : adc.obj (.text:ADC_isBaseValid)
-                  00008ddc    0000001a                        : sysctl.obj (.text:CPUTimer_startTimer)
-                  00008df6    0000001a                        : sysctl.obj (.text:SysCtl_getLowSpeedClock)
-                  00008e10    00000019     rts2800_fpu32_eabi.lib : prolog28.asm.obj (.text)
-                  00008e29    00000017     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_isBaseValid)
-                  00008e40    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
-                  00008e57    00000016     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_defaultHandler)
-                  00008e6d    00000014                        : sysctl.obj (.text:CPUTimer_stopTimer)
-                  00008e81    00000012                        : sysctl.obj (.text:CPUTimer_clearOverflowFlag)
-                  00008e93    00000012                        : sysctl.obj (.text:CPUTimer_disableInterrupt)
-                  00008ea5    00000011                        : sysctl.obj (.text:CPUTimer_setPeriod)
-                  00008eb6    0000000f                        : sysctl.obj (.text:SysCtl_pollCpuTimer)
-                  00008ec5    0000000e                        : gpio.obj (.text:GPIO_isPinValid)
-                  00008ed3    0000000d                        : interrupt.obj (.text:Interrupt_disableGlobal)
-                  00008ee0    0000000d                        : interrupt.obj (.text:Interrupt_enableGlobal)
-                  00008eed    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
-                  00008efa    0000000c                            : args_main.c.obj (.text)
-                  00008f06    0000000c                            : epilog28.asm.obj (.text)
-                  00008f12    0000000b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_isMCDClockFailureDetected)
-                  00008f1d    0000000a                        : interrupt.obj (.text:Interrupt_illegalOperationHandler)
-                  00008f27    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
-                  00008f31    00000009                        : sysctl.obj (.text:SysCtl_serviceWatchdog)
-                  00008f3a    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
-                  00008f43    00000008     F2837xD_CodeStartBranch.obj (.text)
-                  00008f4b    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
-                  00008f53    00000007     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_resetMCD)
-                  00008f5a    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
-                  00008f5c    00000001                            : startup.c.obj (.text)
+.text.2    0    00008800    00000800     
+                  00008800    00000090     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTAL)
+                  00008890    0000008f     foc_svpwm.obj (.text)
+                  0000891f    00000088     rts2800_fpu32_eabi.lib : fs_div28.asm.obj (.text)
+                  000089a7    00000068     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_getDeviceParametric)
+                  00008a0f    00000066     rts2800_fpu32_eabi.lib : s_sinf.c.obj (.text)
+                  00008a75    00000063                            : s_cosf.c.obj (.text)
+                  00008ad8    00000060     driverlib_eabi.lib : adc.obj (.text:ADC_setOffsetTrim)
+                  00008b38    0000005c                        : adc.obj (.text:ADC_setPPBTripLimits)
+                  00008b94    00000052                        : gpio.obj (.text:GPIO_setPadConfig)
+                  00008be6    00000051                        : sysctl.obj (.text:SysCtl_getClock)
+                  00008c37    00000048                        : sysctl.obj (.text:SysCtl_selectOscSource)
+                  00008c7f    00000045     FOC_auto_start.obj (.text)
+                  00008cc4    0000003d     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_initModule)
+                  00008d01    00000037                        : gpio.obj (.text:GPIO_setControllerCore)
+                  00008d38    00000037                        : gpio.obj (.text:GPIO_setPinConfig)
+                  00008d6f    00000037                        : gpio.obj (.text:GPIO_setQualificationMode)
+                  00008da6    00000037                        : interrupt.obj (.text:Interrupt_enable)
+                  00008ddd    00000031                        : gpio.obj (.text:GPIO_setDirectionMode)
+                  00008e0e    0000002f                        : adc.obj (.text:ADC_setMode)
+                  00008e3d    0000002e     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00008e6b    0000002b                            : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00008e96    00000029                            : exit.c.obj (.text)
+                  00008ebf    00000028     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_selectClockSource)
+                  00008ee7    00000001     rts2800_fpu32_eabi.lib : startup.c.obj (.text)
+                  00008ee8    00000027                            : e_sqrtf.c.obj (.text)
+                  00008f0f    0000001e     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_initVectorTable)
+                  00008f2d    0000001d     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
+                  00008f4a    0000001b     driverlib_eabi.lib : adc.obj (.text:ADC_isBaseValid)
+                  00008f65    0000001a                        : sysctl.obj (.text:CPUTimer_startTimer)
+                  00008f7f    0000001a                        : sysctl.obj (.text:SysCtl_getLowSpeedClock)
+                  00008f99    00000019     rts2800_fpu32_eabi.lib : prolog28.asm.obj (.text)
+                  00008fb2    00000017     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_isBaseValid)
+                  00008fc9    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
+                  00008fe0    00000016     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_defaultHandler)
+                  00008ff6    0000000a                        : interrupt.obj (.text:Interrupt_illegalOperationHandler)
 
-.text.3    0    0000b000    00000800     
+.text.3    0    00009000    000000dd     
+                  00009000    00000014     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_stopTimer)
+                  00009014    00000012                        : sysctl.obj (.text:CPUTimer_clearOverflowFlag)
+                  00009026    00000012                        : sysctl.obj (.text:CPUTimer_disableInterrupt)
+                  00009038    00000011                        : sysctl.obj (.text:CPUTimer_setPeriod)
+                  00009049    0000000f                        : sysctl.obj (.text:SysCtl_pollCpuTimer)
+                  00009058    0000000e                        : gpio.obj (.text:GPIO_isPinValid)
+                  00009066    0000000d                        : interrupt.obj (.text:Interrupt_disableGlobal)
+                  00009073    0000000d                        : interrupt.obj (.text:Interrupt_enableGlobal)
+                  00009080    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  0000908d    0000000c                            : args_main.c.obj (.text)
+                  00009099    0000000c                            : epilog28.asm.obj (.text)
+                  000090a5    0000000b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_isMCDClockFailureDetected)
+                  000090b0    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
+                  000090ba    00000009                        : sysctl.obj (.text:SysCtl_serviceWatchdog)
+                  000090c3    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
+                  000090cc    00000008                            : copy_decompress_none.c.obj (.text:decompress:none)
+                  000090d4    00000007     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_resetMCD)
+                  000090db    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+
+.text.4    0    0000b000    00000800     
                   0000b000    0000037d     device.obj (.text)
-                  0000b37d    0000027f     foc_pwm.obj (.text)
-                  0000b5fc    0000010a     foc_encoder.obj (.text)
-                  0000b706    000000fa     foc_core.obj (.text)
+                  0000b37d    0000035c     FOC_auto_start.obj (.text:retain)
+                  0000b6d9    00000100     foc_adc.obj (.text)
+                  0000b7d9    0000001f     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_getTimerOverflowStatus)
+                  0000b7f8    00000008     F2837xD_CodeStartBranch.obj (.text)
 
 MODULE SUMMARY
 
        Module                        code   ro data   rw data
        ------                        ----   -------   -------
     .\
-       FOC_auto_start.obj            599    0         36     
+       FOC_auto_start.obj            929    0         48     
     +--+-----------------------------+------+---------+---------+
-       Total:                        599    0         36     
+       Total:                        929    0         48     
                                                              
     .\device\
        device.obj                    893    0         6      
@@ -221,12 +222,12 @@ MODULE SUMMARY
                                                              
     .\model\
        foc_pwm.obj                   639    62        0      
+       foc_encoder.obj               320    0         12     
        foc_core.obj                  250    0         40     
-       foc_encoder.obj               266    0         6      
        foc_adc.obj                   256    0         3      
        foc_svpwm.obj                 143    0         0      
     +--+-----------------------------+------+---------+---------+
-       Total:                        1554   62        49     
+       Total:                        1608   62        55     
                                                              
     C:\TI\C2000Ware_6_00_01_00\driverlib\f2837xd\driverlib\ccs\Debug\driverlib_eabi.lib
        sysctl.obj                    1187   194       0      
@@ -260,21 +261,21 @@ MODULE SUMMARY
        Total:                        847    4         11     
                                                              
        Stack:                        0      0         256    
-       Linker Generated:             0      47        0      
+       Linker Generated:             0      50        0      
     +--+-----------------------------+------+---------+---------+
-       Grand Total:                  5987   588       358    
+       Grand Total:                  6371   591       376    
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00000150 records: 2, size/record: 4, table size: 8
-	.data: load addr=00000128, load size=0000001d bytes, run addr=0000c21e, run size=00000086 bytes, compression=lzss
-	.bss: load addr=0000014c, load size=00000004 bytes, run addr=0000d000, run size=00000003 bytes, compression=zero_init
+__TI_cinit_table @ 00000152 records: 2, size/record: 4, table size: 8
+	.data: load addr=00000128, load size=00000020 bytes, run addr=0000c21e, run size=0000008a bytes, compression=lzss
+	.bss: load addr=0000014e, load size=00000004 bytes, run addr=0000d000, run size=00000003 bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 00000146 records: 3, size/record: 2, table size: 6
+__TI_handler_table @ 00000148 records: 3, size/record: 2, table size: 6
 	index: 0, handler: __TI_zero_init
 	index: 1, handler: __TI_decompress_lzss
 	index: 2, handler: __TI_decompress_none
@@ -286,64 +287,72 @@ address     data page           name
 --------    ----------------    ----
 00000400      10 (00000400)     __stack
 
-0000c21e     308 (0000c200)     Example_Result
-0000c220     308 (0000c200)     Example_PassCount
-0000c222     308 (0000c200)     Example_Fail
-0000c224     308 (0000c200)     curr_pos_latch
-0000c226     308 (0000c200)     last_pos_latch
-0000c228     308 (0000c200)     pos_diff
-0000c22a     308 (0000c200)     __TI_enable_exit_profile_output
-0000c22c     308 (0000c200)     __TI_cleanup_ptr
-0000c22e     308 (0000c200)     __TI_dtors_ptr
-0000c230     308 (0000c200)     _lock
-0000c232     308 (0000c200)     _unlock
-0000c234     308 (0000c200)     errno
+0000c21e     308 (0000c200)     curr_pos_latch
+0000c220     308 (0000c200)     last_pos_latch
+0000c222     308 (0000c200)     pos_diff
+0000c224     308 (0000c200)     encoder_continuous_pos
+0000c226     308 (0000c200)     encoder_angle_elec_continuous
+0000c22a     308 (0000c200)     Example_Result
+0000c22c     308 (0000c200)     Example_PassCount
+0000c22e     308 (0000c200)     Example_Fail
+0000c230     308 (0000c200)     __TI_enable_exit_profile_output
+0000c232     308 (0000c200)     __TI_cleanup_ptr
+0000c234     308 (0000c200)     __TI_dtors_ptr
+0000c236     308 (0000c200)     _lock
+0000c238     308 (0000c200)     _unlock
+0000c23a     308 (0000c200)     errno
 
-0000c240     309 (0000c240)     TBPRD
-0000c241     309 (0000c240)     overcurrent_fault
-0000c242     309 (0000c240)     encoder_raw_pos
-0000c244     309 (0000c240)     motor_angle_mech_rad
-0000c246     309 (0000c240)     motor_angle_elec_rad
-0000c248     309 (0000c240)     open_loop_angle_mech_rad
-0000c24a     309 (0000c240)     open_loop_angle_elec_rad
-0000c24c     309 (0000c240)     angle_offset_rad
-0000c24e     309 (0000c240)     motor_rpm
-0000c250     309 (0000c240)     Ia_meas
-0000c252     309 (0000c240)     Ib_meas
-0000c254     309 (0000c240)     Ic_meas
-0000c256     309 (0000c240)     Id_ref
-0000c258     309 (0000c240)     Iq_ref
-0000c25a     309 (0000c240)     Id_int
-0000c25c     309 (0000c240)     Iq_int
-0000c25e     309 (0000c240)     KP_ID
-0000c260     309 (0000c240)     KI_ID
-0000c262     309 (0000c240)     KP_IQ
-0000c264     309 (0000c240)     KI_IQ
-0000c266     309 (0000c240)     motor_speed_rad
+0000c240     309 (0000c240)     g_control_state
+0000c241     309 (0000c240)     g_encoder_aligned
+0000c242     309 (0000c240)     cl_sub
+0000c243     309 (0000c240)     cl_cnt
+0000c244     309 (0000c240)     cl_startup_cnt
+0000c246     309 (0000c240)     g_alignment_counter
+0000c248     309 (0000c240)     g_open_loop_turns
+0000c24a     309 (0000c240)     g_previous_open_loop_angle
+0000c24c     309 (0000c240)     open_loop_angle_acc
+0000c24e     309 (0000c240)     g_open_loop_timeout_counter
+0000c250     309 (0000c240)     g_current_motor_angle_elec_rad
+0000c252     309 (0000c240)     angle_offset_rad_final
+0000c254     309 (0000c240)     Iq_ref_target
+0000c256     309 (0000c240)     Iq_ref_step
+0000c258     309 (0000c240)     g_debug_cnt
+0000c25a     309 (0000c240)     svpwm_handle
 
-0000c280     30a (0000c280)     g_control_state
-0000c281     30a (0000c280)     g_encoder_aligned
-0000c282     30a (0000c280)     cl_sub
-0000c283     30a (0000c280)     cl_cnt
-0000c284     30a (0000c280)     g_alignment_counter
-0000c286     30a (0000c280)     g_open_loop_turns
-0000c288     30a (0000c280)     g_previous_open_loop_angle
-0000c28a     30a (0000c280)     open_loop_angle_acc
-0000c28c     30a (0000c280)     g_open_loop_timeout_counter
-0000c28e     30a (0000c280)     svpwm_handle
+0000c280     30a (0000c280)     TBPRD
+0000c281     30a (0000c280)     overcurrent_fault
+0000c282     30a (0000c280)     encoder_raw_pos
+0000c284     30a (0000c280)     motor_angle_mech_rad
+0000c286     30a (0000c280)     motor_angle_elec_rad
+0000c288     30a (0000c280)     open_loop_angle_mech_rad
+0000c28a     30a (0000c280)     open_loop_angle_elec_rad
+0000c28c     30a (0000c280)     angle_offset_rad
+0000c28e     30a (0000c280)     motor_rpm
+0000c290     30a (0000c280)     Ia_meas
+0000c292     30a (0000c280)     Ib_meas
+0000c294     30a (0000c280)     Ic_meas
+0000c296     30a (0000c280)     Id_ref
+0000c298     30a (0000c280)     Iq_ref
+0000c29a     30a (0000c280)     Id_int
+0000c29c     30a (0000c280)     Iq_int
+0000c29e     30a (0000c280)     KP_ID
+0000c2a0     30a (0000c280)     KI_ID
+0000c2a2     30a (0000c280)     KP_IQ
+0000c2a4     30a (0000c280)     KI_IQ
+0000c2a6     30a (0000c280)     motor_speed_rad
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
 
 page  address   name                                     
 ----  -------   ----                                     
-0     000084a5  ADC_Init                                 
-0     00008496  ADC_Read_Current                         
+0     0000b763  ADC_Init                                 
+0     0000b754  ADC_Read_Current                         
 0     00008791  ADC_setINLTrim                           
-0     00008c67  ADC_setMode                              
-0     00008931  ADC_setOffsetTrim                        
-0     00008991  ADC_setPPBTripLimits                     
-0     00008cef  C$$EXIT                                  
+0     00008e0e  ADC_setMode                              
+0     00008ad8  ADC_setOffsetTrim                        
+0     00008b38  ADC_setPPBTripLimits                     
+0     00008e96  C$$EXIT                                  
 abs   00000000  Cla1funcsLoadSize                        
 0     00008000  Cla1funcsLoadStart                       
 0     00008000  Cla1funcsRunStart                        
@@ -355,127 +364,135 @@ abs   00000000  Cla1funcsLoadSize
 0     0000b00e  Device_enableUnbondedGPIOPullupsFor176Pin
 0     0000b1aa  Device_init                              
 0     0000b04e  Device_initGPIO                          
-0     0000b41d  EPWM_Init                                
-0     0000b3b2  EPWM_SetCompareValues                    
-0     0000b701  Encoder_getElecAngle                     
-0     0000b6fc  Encoder_getMechAngle                     
-0     0000b6f7  Encoder_getSpeedRPM                      
-0     0000b6f2  Encoder_getSpeedRad                      
-0     0000b68f  Encoder_init                             
-0     0000b5fc  Encoder_update                           
-1     0000c222  Example_Fail                             
-1     0000c220  Example_PassCount                        
-1     0000c21e  Example_Result                           
+0     000080a0  EPWM_Init                                
+0     00008035  EPWM_SetCompareValues                    
+0     000085c3  Encoder_getElecAngle                     
+0     000085be  Encoder_getMechAngle                     
+0     000085b9  Encoder_getSpeedRPM                      
+0     000085b4  Encoder_getSpeedRad                      
+0     00008551  Encoder_init                             
+0     00008488  Encoder_update                           
+1     0000c22e  Example_Fail                             
+1     0000c22c  Example_PassCount                        
+1     0000c22a  Example_Result                           
 0     0000b00d  Example_done                             
 0     0000b008  Example_setResultFail                    
 0     0000b003  Example_setResultPass                    
-0     00008b5a  GPIO_setControllerCore                   
-0     00008c36  GPIO_setDirectionMode                    
-0     000089ed  GPIO_setPadConfig                        
-0     00008b91  GPIO_setPinConfig                        
-0     00008bc8  GPIO_setQualificationMode                
-1     0000c250  Ia_meas                                  
-1     0000c252  Ib_meas                                  
-1     0000c254  Ic_meas                                  
-1     0000c25a  Id_int                                   
-1     0000c256  Id_ref                                   
-0     00008ad8  InitPeripherals                          
-0     00008e57  Interrupt_defaultHandler                 
-0     00008bff  Interrupt_enable                         
-0     00008f1d  Interrupt_illegalOperationHandler        
-0     00008b1d  Interrupt_initModule                     
-0     00008d86  Interrupt_initVectorTable                
-0     00008f27  Interrupt_nmiHandler                     
-1     0000c25c  Iq_int                                   
-1     0000c258  Iq_ref                                   
-1     0000c260  KI_ID                                    
-1     0000c264  KI_IQ                                    
-1     0000c25e  KP_ID                                    
-1     0000c262  KP_IQ                                    
-0     00008b0c  SwitchControlState                       
+0     00008d01  GPIO_setControllerCore                   
+0     00008ddd  GPIO_setDirectionMode                    
+0     00008b94  GPIO_setPadConfig                        
+0     00008d38  GPIO_setPinConfig                        
+0     00008d6f  GPIO_setQualificationMode                
+1     0000c290  Ia_meas                                  
+1     0000c292  Ib_meas                                  
+1     0000c294  Ic_meas                                  
+1     0000c29a  Id_int                                   
+1     0000c296  Id_ref                                   
+0     00008c7f  InitPeripherals                          
+0     00008fe0  Interrupt_defaultHandler                 
+0     00008da6  Interrupt_enable                         
+0     00008ff6  Interrupt_illegalOperationHandler        
+0     00008cc4  Interrupt_initModule                     
+0     00008f0f  Interrupt_initVectorTable                
+0     000090b0  Interrupt_nmiHandler                     
+1     0000c29c  Iq_int                                   
+1     0000c298  Iq_ref                                   
+1     0000c256  Iq_ref_step                              
+1     0000c254  Iq_ref_target                            
+1     0000c2a0  KI_ID                                    
+1     0000c2a4  KI_IQ                                    
+1     0000c29e  KP_ID                                    
+1     0000c2a2  KP_IQ                                    
+0     00008cb3  SwitchControlState                       
 0     00000123  SysCtl_delay                             
-0     00008a3f  SysCtl_getClock                          
-0     00008800  SysCtl_getDeviceParametric               
-0     00008df6  SysCtl_getLowSpeedClock                  
-0     00008a90  SysCtl_selectOscSource                   
-0     000085ea  SysCtl_selectXTAL                        
-0     00008212  SysCtl_setClock                          
-1     0000c240  TBPRD                                    
-0     00000150  __TI_CINIT_Base                          
-0     00000158  __TI_CINIT_Limit                         
-0     00000158  __TI_CINIT_Warm                          
-0     00000146  __TI_Handler_Table_Base                  
-0     0000014c  __TI_Handler_Table_Limit                 
+0     00008be6  SysCtl_getClock                          
+0     000089a7  SysCtl_getDeviceParametric               
+0     00008f7f  SysCtl_getLowSpeedClock                  
+0     00008c37  SysCtl_selectOscSource                   
+0     00008800  SysCtl_selectXTAL                        
+0     0000827f  SysCtl_setClock                          
+1     0000c280  TBPRD                                    
+0     00000152  __TI_CINIT_Base                          
+0     0000015a  __TI_CINIT_Limit                         
+0     0000015a  __TI_CINIT_Warm                          
+0     00000148  __TI_Handler_Table_Base                  
+0     0000014e  __TI_Handler_Table_Limit                 
 1     00000500  __TI_STACK_END                           
 abs   00000100  __TI_STACK_SIZE                          
-0     00008cc4  __TI_auto_init_nobinit_nopinit           
-1     0000c22c  __TI_cleanup_ptr                         
-0     00008c96  __TI_decompress_lzss                     
-0     00008f4b  __TI_decompress_none                     
-1     0000c22e  __TI_dtors_ptr                           
-1     0000c22a  __TI_enable_exit_profile_output          
+0     00008e6b  __TI_auto_init_nobinit_nopinit           
+1     0000c232  __TI_cleanup_ptr                         
+0     00008e3d  __TI_decompress_lzss                     
+0     000090cc  __TI_decompress_none                     
+1     0000c234  __TI_dtors_ptr                           
+1     0000c230  __TI_enable_exit_profile_output          
 abs   ffffffff  __TI_pprof_out_hndl                      
 abs   ffffffff  __TI_prof_data_size                      
 abs   ffffffff  __TI_prof_data_start                     
-0     00008eed  __TI_zero_init_nomemset                  
-0     00008709  __c28xabi_divf                           
+0     00009080  __TI_zero_init_nomemset                  
+0     0000891f  __c28xabi_divf                           
 n/a   UNDEFED   __c_args__                               
 0     0000b000  __error__                                
 1     00000400  __stack                                  
-0     00008efa  _args_main                               
-0     00008e40  _c_int00                                 
-0     00008f06  _epilog_c28x_1                           
-0     00008f0a  _epilog_c28x_2                           
-1     0000c230  _lock                                    
-0     00008f42  _nop                                     
-0     00008e10  _prolog_c28x_1                           
-0     00008e14  _prolog_c28x_2                           
-0     00008e1c  _prolog_c28x_3                           
-0     00008f3e  _register_lock                           
-0     00008f3a  _register_unlock                         
-0     00008f5c  _system_post_cinit                       
-0     00008f5a  _system_pre_init                         
-1     0000c232  _unlock                                  
-0     00008cef  abort                                    
-0     00008000  adc_isr                                  
-1     0000c24c  angle_offset_rad                         
-1     0000c283  cl_cnt                                   
-1     0000c282  cl_sub                                   
-0     0000b706  clampf_val                               
-0     0000b7df  clarke_transform                         
+0     0000908d  _args_main                               
+0     00008fc9  _c_int00                                 
+0     00009099  _epilog_c28x_1                           
+0     0000909d  _epilog_c28x_2                           
+1     0000c236  _lock                                    
+0     000090cb  _nop                                     
+0     00008f99  _prolog_c28x_1                           
+0     00008f9d  _prolog_c28x_2                           
+0     00008fa5  _prolog_c28x_3                           
+0     000090c7  _register_lock                           
+0     000090c3  _register_unlock                         
+0     00008ee7  _system_post_cinit                       
+0     000090db  _system_pre_init                         
+1     0000c238  _unlock                                  
+0     00008e96  abort                                    
+0     0000b37d  adc_isr                                  
+1     0000c28c  angle_offset_rad                         
+1     0000c252  angle_offset_rad_final                   
+1     0000c243  cl_cnt                                   
+1     0000c244  cl_startup_cnt                           
+1     0000c242  cl_sub                                   
+0     000085c8  clampf_val                               
+0     000086a1  clarke_transform                         
 0     00000000  code_start                               
-0     000088ce  cosf                                     
-1     0000c224  curr_pos_latch                           
-1     0000c242  encoder_raw_pos                          
-1     0000c234  errno                                    
-0     00008cf1  exit                                     
-0     0000851b  fmodf                                    
-1     0000c284  g_alignment_counter                      
-1     0000c280  g_control_state                          
-1     0000c281  g_encoder_aligned                        
-1     0000c28c  g_open_loop_timeout_counter              
-1     0000c286  g_open_loop_turns                        
-1     0000c288  g_previous_open_loop_angle               
-0     0000b7a8  inv_park_transform                       
-1     0000c226  last_pos_latch                           
-0     00008aea  main                                     
-0     00008da4  memcpy                                   
-1     0000c246  motor_angle_elec_rad                     
-1     0000c244  motor_angle_mech_rad                     
-1     0000c24e  motor_rpm                                
-1     0000c266  motor_speed_rad                          
-1     0000c28a  open_loop_angle_acc                      
-1     0000c24a  open_loop_angle_elec_rad                 
-1     0000c248  open_loop_angle_mech_rad                 
-1     0000c241  overcurrent_fault                        
-0     0000b76d  park_transform                           
-0     0000b742  pi_id                                    
-0     0000b717  pi_iq                                    
-1     0000c228  pos_diff                                 
-0     00008868  sinf                                     
-0     00008d40  sqrtf                                    
-0     0000867a  svpwm_compute                            
-1     0000c28e  svpwm_handle                             
+0     00008a75  cosf                                     
+1     0000c21e  curr_pos_latch                           
+1     0000c226  encoder_angle_elec_continuous            
+1     0000c224  encoder_continuous_pos                   
+1     0000c282  encoder_raw_pos                          
+1     0000c23a  errno                                    
+0     00008e98  exit                                     
+0     000086c2  fmodf                                    
+1     0000c246  g_alignment_counter                      
+1     0000c240  g_control_state                          
+1     0000c250  g_current_motor_angle_elec_rad           
+1     0000c258  g_debug_cnt                              
+1     0000c241  g_encoder_aligned                        
+1     0000c24e  g_open_loop_timeout_counter              
+1     0000c248  g_open_loop_turns                        
+1     0000c24a  g_previous_open_loop_angle               
+0     0000866a  inv_park_transform                       
+1     0000c220  last_pos_latch                           
+0     00008c91  main                                     
+0     00008f2d  memcpy                                   
+1     0000c286  motor_angle_elec_rad                     
+1     0000c284  motor_angle_mech_rad                     
+1     0000c28e  motor_rpm                                
+1     0000c2a6  motor_speed_rad                          
+1     0000c24c  open_loop_angle_acc                      
+1     0000c28a  open_loop_angle_elec_rad                 
+1     0000c288  open_loop_angle_mech_rad                 
+1     0000c281  overcurrent_fault                        
+0     0000862f  park_transform                           
+0     00008604  pi_id                                    
+0     000085d9  pi_iq                                    
+1     0000c222  pos_diff                                 
+0     00008a0f  sinf                                     
+0     00008ee8  sqrtf                                    
+0     00008890  svpwm_compute                            
+1     0000c25a  svpwm_handle                             
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -484,66 +501,77 @@ page  address   name
 ----  -------   ----                                     
 0     00000000  code_start                               
 0     00000123  SysCtl_delay                             
-0     00000146  __TI_Handler_Table_Base                  
-0     0000014c  __TI_Handler_Table_Limit                 
-0     00000150  __TI_CINIT_Base                          
-0     00000158  __TI_CINIT_Limit                         
-0     00000158  __TI_CINIT_Warm                          
+0     00000148  __TI_Handler_Table_Base                  
+0     0000014e  __TI_Handler_Table_Limit                 
+0     00000152  __TI_CINIT_Base                          
+0     0000015a  __TI_CINIT_Limit                         
+0     0000015a  __TI_CINIT_Warm                          
 0     00008000  Cla1funcsLoadStart                       
 0     00008000  Cla1funcsRunStart                        
-0     00008000  adc_isr                                  
-0     00008212  SysCtl_setClock                          
-0     00008496  ADC_Read_Current                         
-0     000084a5  ADC_Init                                 
-0     0000851b  fmodf                                    
-0     000085ea  SysCtl_selectXTAL                        
-0     0000867a  svpwm_compute                            
-0     00008709  __c28xabi_divf                           
+0     00008035  EPWM_SetCompareValues                    
+0     000080a0  EPWM_Init                                
+0     0000827f  SysCtl_setClock                          
+0     00008488  Encoder_update                           
+0     00008551  Encoder_init                             
+0     000085b4  Encoder_getSpeedRad                      
+0     000085b9  Encoder_getSpeedRPM                      
+0     000085be  Encoder_getMechAngle                     
+0     000085c3  Encoder_getElecAngle                     
+0     000085c8  clampf_val                               
+0     000085d9  pi_iq                                    
+0     00008604  pi_id                                    
+0     0000862f  park_transform                           
+0     0000866a  inv_park_transform                       
+0     000086a1  clarke_transform                         
+0     000086c2  fmodf                                    
 0     00008791  ADC_setINLTrim                           
-0     00008800  SysCtl_getDeviceParametric               
-0     00008868  sinf                                     
-0     000088ce  cosf                                     
-0     00008931  ADC_setOffsetTrim                        
-0     00008991  ADC_setPPBTripLimits                     
-0     000089ed  GPIO_setPadConfig                        
-0     00008a3f  SysCtl_getClock                          
-0     00008a90  SysCtl_selectOscSource                   
-0     00008ad8  InitPeripherals                          
-0     00008aea  main                                     
-0     00008b0c  SwitchControlState                       
-0     00008b1d  Interrupt_initModule                     
-0     00008b5a  GPIO_setControllerCore                   
-0     00008b91  GPIO_setPinConfig                        
-0     00008bc8  GPIO_setQualificationMode                
-0     00008bff  Interrupt_enable                         
-0     00008c36  GPIO_setDirectionMode                    
-0     00008c67  ADC_setMode                              
-0     00008c96  __TI_decompress_lzss                     
-0     00008cc4  __TI_auto_init_nobinit_nopinit           
-0     00008cef  C$$EXIT                                  
-0     00008cef  abort                                    
-0     00008cf1  exit                                     
-0     00008d40  sqrtf                                    
-0     00008d86  Interrupt_initVectorTable                
-0     00008da4  memcpy                                   
-0     00008df6  SysCtl_getLowSpeedClock                  
-0     00008e10  _prolog_c28x_1                           
-0     00008e14  _prolog_c28x_2                           
-0     00008e1c  _prolog_c28x_3                           
-0     00008e40  _c_int00                                 
-0     00008e57  Interrupt_defaultHandler                 
-0     00008eed  __TI_zero_init_nomemset                  
-0     00008efa  _args_main                               
-0     00008f06  _epilog_c28x_1                           
-0     00008f0a  _epilog_c28x_2                           
-0     00008f1d  Interrupt_illegalOperationHandler        
-0     00008f27  Interrupt_nmiHandler                     
-0     00008f3a  _register_unlock                         
-0     00008f3e  _register_lock                           
-0     00008f42  _nop                                     
-0     00008f4b  __TI_decompress_none                     
-0     00008f5a  _system_pre_init                         
-0     00008f5c  _system_post_cinit                       
+0     00008800  SysCtl_selectXTAL                        
+0     00008890  svpwm_compute                            
+0     0000891f  __c28xabi_divf                           
+0     000089a7  SysCtl_getDeviceParametric               
+0     00008a0f  sinf                                     
+0     00008a75  cosf                                     
+0     00008ad8  ADC_setOffsetTrim                        
+0     00008b38  ADC_setPPBTripLimits                     
+0     00008b94  GPIO_setPadConfig                        
+0     00008be6  SysCtl_getClock                          
+0     00008c37  SysCtl_selectOscSource                   
+0     00008c7f  InitPeripherals                          
+0     00008c91  main                                     
+0     00008cb3  SwitchControlState                       
+0     00008cc4  Interrupt_initModule                     
+0     00008d01  GPIO_setControllerCore                   
+0     00008d38  GPIO_setPinConfig                        
+0     00008d6f  GPIO_setQualificationMode                
+0     00008da6  Interrupt_enable                         
+0     00008ddd  GPIO_setDirectionMode                    
+0     00008e0e  ADC_setMode                              
+0     00008e3d  __TI_decompress_lzss                     
+0     00008e6b  __TI_auto_init_nobinit_nopinit           
+0     00008e96  C$$EXIT                                  
+0     00008e96  abort                                    
+0     00008e98  exit                                     
+0     00008ee7  _system_post_cinit                       
+0     00008ee8  sqrtf                                    
+0     00008f0f  Interrupt_initVectorTable                
+0     00008f2d  memcpy                                   
+0     00008f7f  SysCtl_getLowSpeedClock                  
+0     00008f99  _prolog_c28x_1                           
+0     00008f9d  _prolog_c28x_2                           
+0     00008fa5  _prolog_c28x_3                           
+0     00008fc9  _c_int00                                 
+0     00008fe0  Interrupt_defaultHandler                 
+0     00008ff6  Interrupt_illegalOperationHandler        
+0     00009080  __TI_zero_init_nomemset                  
+0     0000908d  _args_main                               
+0     00009099  _epilog_c28x_1                           
+0     0000909d  _epilog_c28x_2                           
+0     000090b0  Interrupt_nmiHandler                     
+0     000090c3  _register_unlock                         
+0     000090c7  _register_lock                           
+0     000090cb  _nop                                     
+0     000090cc  __TI_decompress_none                     
+0     000090db  _system_pre_init                         
 0     0000b000  __error__                                
 0     0000b003  Example_setResultPass                    
 0     0000b008  Example_setResultFail                    
@@ -556,65 +584,62 @@ page  address   name
 0     0000b0bf  Device_enableAllPeripherals              
 0     0000b1aa  Device_init                              
 0     0000b205  Device_bootCPU2                          
-0     0000b3b2  EPWM_SetCompareValues                    
-0     0000b41d  EPWM_Init                                
-0     0000b5fc  Encoder_update                           
-0     0000b68f  Encoder_init                             
-0     0000b6f2  Encoder_getSpeedRad                      
-0     0000b6f7  Encoder_getSpeedRPM                      
-0     0000b6fc  Encoder_getMechAngle                     
-0     0000b701  Encoder_getElecAngle                     
-0     0000b706  clampf_val                               
-0     0000b717  pi_iq                                    
-0     0000b742  pi_id                                    
-0     0000b76d  park_transform                           
-0     0000b7a8  inv_park_transform                       
-0     0000b7df  clarke_transform                         
+0     0000b37d  adc_isr                                  
+0     0000b754  ADC_Read_Current                         
+0     0000b763  ADC_Init                                 
 1     00000400  __stack                                  
 1     00000500  __TI_STACK_END                           
-1     0000c21e  Example_Result                           
-1     0000c220  Example_PassCount                        
-1     0000c222  Example_Fail                             
-1     0000c224  curr_pos_latch                           
-1     0000c226  last_pos_latch                           
-1     0000c228  pos_diff                                 
-1     0000c22a  __TI_enable_exit_profile_output          
-1     0000c22c  __TI_cleanup_ptr                         
-1     0000c22e  __TI_dtors_ptr                           
-1     0000c230  _lock                                    
-1     0000c232  _unlock                                  
-1     0000c234  errno                                    
-1     0000c240  TBPRD                                    
-1     0000c241  overcurrent_fault                        
-1     0000c242  encoder_raw_pos                          
-1     0000c244  motor_angle_mech_rad                     
-1     0000c246  motor_angle_elec_rad                     
-1     0000c248  open_loop_angle_mech_rad                 
-1     0000c24a  open_loop_angle_elec_rad                 
-1     0000c24c  angle_offset_rad                         
-1     0000c24e  motor_rpm                                
-1     0000c250  Ia_meas                                  
-1     0000c252  Ib_meas                                  
-1     0000c254  Ic_meas                                  
-1     0000c256  Id_ref                                   
-1     0000c258  Iq_ref                                   
-1     0000c25a  Id_int                                   
-1     0000c25c  Iq_int                                   
-1     0000c25e  KP_ID                                    
-1     0000c260  KI_ID                                    
-1     0000c262  KP_IQ                                    
-1     0000c264  KI_IQ                                    
-1     0000c266  motor_speed_rad                          
-1     0000c280  g_control_state                          
-1     0000c281  g_encoder_aligned                        
-1     0000c282  cl_sub                                   
-1     0000c283  cl_cnt                                   
-1     0000c284  g_alignment_counter                      
-1     0000c286  g_open_loop_turns                        
-1     0000c288  g_previous_open_loop_angle               
-1     0000c28a  open_loop_angle_acc                      
-1     0000c28c  g_open_loop_timeout_counter              
-1     0000c28e  svpwm_handle                             
+1     0000c21e  curr_pos_latch                           
+1     0000c220  last_pos_latch                           
+1     0000c222  pos_diff                                 
+1     0000c224  encoder_continuous_pos                   
+1     0000c226  encoder_angle_elec_continuous            
+1     0000c22a  Example_Result                           
+1     0000c22c  Example_PassCount                        
+1     0000c22e  Example_Fail                             
+1     0000c230  __TI_enable_exit_profile_output          
+1     0000c232  __TI_cleanup_ptr                         
+1     0000c234  __TI_dtors_ptr                           
+1     0000c236  _lock                                    
+1     0000c238  _unlock                                  
+1     0000c23a  errno                                    
+1     0000c240  g_control_state                          
+1     0000c241  g_encoder_aligned                        
+1     0000c242  cl_sub                                   
+1     0000c243  cl_cnt                                   
+1     0000c244  cl_startup_cnt                           
+1     0000c246  g_alignment_counter                      
+1     0000c248  g_open_loop_turns                        
+1     0000c24a  g_previous_open_loop_angle               
+1     0000c24c  open_loop_angle_acc                      
+1     0000c24e  g_open_loop_timeout_counter              
+1     0000c250  g_current_motor_angle_elec_rad           
+1     0000c252  angle_offset_rad_final                   
+1     0000c254  Iq_ref_target                            
+1     0000c256  Iq_ref_step                              
+1     0000c258  g_debug_cnt                              
+1     0000c25a  svpwm_handle                             
+1     0000c280  TBPRD                                    
+1     0000c281  overcurrent_fault                        
+1     0000c282  encoder_raw_pos                          
+1     0000c284  motor_angle_mech_rad                     
+1     0000c286  motor_angle_elec_rad                     
+1     0000c288  open_loop_angle_mech_rad                 
+1     0000c28a  open_loop_angle_elec_rad                 
+1     0000c28c  angle_offset_rad                         
+1     0000c28e  motor_rpm                                
+1     0000c290  Ia_meas                                  
+1     0000c292  Ib_meas                                  
+1     0000c294  Ic_meas                                  
+1     0000c296  Id_ref                                   
+1     0000c298  Iq_ref                                   
+1     0000c29a  Id_int                                   
+1     0000c29c  Iq_int                                   
+1     0000c29e  KP_ID                                    
+1     0000c2a0  KI_ID                                    
+1     0000c2a2  KP_IQ                                    
+1     0000c2a4  KI_IQ                                    
+1     0000c2a6  motor_speed_rad                          
 abs   00000000  Cla1funcsLoadSize                        
 abs   00000100  __TI_STACK_SIZE                          
 abs   ffffffff  __TI_pprof_out_hndl                      
@@ -622,4 +647,4 @@ abs   ffffffff  __TI_prof_data_size
 abs   ffffffff  __TI_prof_data_start                     
 n/a   UNDEFED   __c_args__                               
 
-[139 symbols]
+[147 symbols]

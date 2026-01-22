@@ -22,6 +22,8 @@
 extern int32_t curr_pos_latch;      // 当前位置锁存值
 extern int32_t last_pos_latch;      // 上一次位置锁存值
 extern int32_t pos_diff;            // 位置变化量
+extern int32_t encoder_continuous_pos; // 连续编码器位置（无重置）
+extern float encoder_angle_elec_continuous; // 连续电气角度（弧度）
 
 // 函数声明
 

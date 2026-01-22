@@ -1,17 +1,17 @@
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Wed Jan 21 17:05:17 2026                 *
+       3              ;* Date/Time created: Thu Jan 22 11:16:48 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
        7              
        8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
-       9                      .dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2
+       9                      .dwattr $C$DW$CU, DW_AT_name("../src_device/device.c")
       10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2
       11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
       12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\fcl_f2837x_tmdxiddk\f2837x_RAM")
@@ -58,7 +58,7 @@ device.asm                                                           PAGE    1
       53                      .dwattr $C$DW$7, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f28
       54                      .dwattr $C$DW$7, DW_AT_decl_line(0x405)
       55                      .dwattr $C$DW$7, DW_AT_decl_column(0x01)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    2
@@ -118,7 +118,7 @@ device.asm                                                           PAGE    2
      108                      .global ||Example_Result||
      109 00000000               .data
      110                      .align  2
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    3
@@ -135,7 +135,7 @@ device.asm                                                           PAGE    3
      119                      .dwattr $C$DW$16, DW_AT_location[DW_OP_addr ||Example_Result||]
      120                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$45)
      121                      .dwattr $C$DW$16, DW_AT_external
-     122                      .dwattr $C$DW$16, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     122                      .dwattr $C$DW$16, DW_AT_decl_file("../src_device/device.c")
      123                      .dwattr $C$DW$16, DW_AT_decl_line(0x3d)
      124                      .dwattr $C$DW$16, DW_AT_decl_column(0x0a)
      125              
@@ -154,7 +154,7 @@ device.asm                                                           PAGE    3
      137                      .dwattr $C$DW$17, DW_AT_location[DW_OP_addr ||Example_PassCount||]
      138                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$45)
      139                      .dwattr $C$DW$17, DW_AT_external
-     140                      .dwattr $C$DW$17, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     140                      .dwattr $C$DW$17, DW_AT_decl_file("../src_device/device.c")
      141                      .dwattr $C$DW$17, DW_AT_decl_line(0x3e)
      142                      .dwattr $C$DW$17, DW_AT_decl_column(0x0a)
      143              
@@ -173,12 +173,12 @@ device.asm                                                           PAGE    3
      155                      .dwattr $C$DW$18, DW_AT_location[DW_OP_addr ||Example_Fail||]
      156                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$45)
      157                      .dwattr $C$DW$18, DW_AT_external
-     158                      .dwattr $C$DW$18, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     158                      .dwattr $C$DW$18, DW_AT_decl_file("../src_device/device.c")
      159                      .dwattr $C$DW$18, DW_AT_decl_line(0x3f)
      160                      .dwattr $C$DW$18, DW_AT_decl_column(0x0a)
      161              
      162              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    4
@@ -211,11 +211,11 @@ device.asm                                                           PAGE    4
      188                      .dwattr $C$DW$21, DW_AT_high_pc(0x00)
      189                      .dwattr $C$DW$21, DW_AT_linkage_name("__error__")
      190                      .dwattr $C$DW$21, DW_AT_external
-     191                      .dwattr $C$DW$21, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     191                      .dwattr $C$DW$21, DW_AT_decl_file("../src_device/device.c")
      192                      .dwattr $C$DW$21, DW_AT_decl_line(0x2ac)
      193                      .dwattr $C$DW$21, DW_AT_decl_column(0x06)
      194                      .dwattr $C$DW$21, DW_AT_TI_max_frame_size(-2)
-     195                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     195                      .dwpsn  file "../src_device/device.c",line 685,column 1,is_stmt,address ||__error__||,isa 0
      196              
      197                      .dwfde $C$DW$CIE, ||__error__||
      198              $C$DW$22        .dwtag  DW_TAG_formal_parameter
@@ -238,7 +238,7 @@ device.asm                                                           PAGE    4
      215              ;*                            0 Parameter,  0 Auto,  0 SOE     *
      216              ;***************************************************************
      217              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    5
@@ -254,7 +254,7 @@ device.asm                                                           PAGE    5
      226              
      227 00000002 0006          LRETR     ; [CPU_ALU] 
      228                      ; return occurs ; [] 
-     229                      .dwattr $C$DW$21, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     229                      .dwattr $C$DW$21, DW_AT_TI_end_file("../src_device/device.c")
      230                      .dwattr $C$DW$21, DW_AT_TI_end_line(0x2b3)
      231                      .dwattr $C$DW$21, DW_AT_TI_end_column(0x01)
      232                      .dwendentry
@@ -270,11 +270,11 @@ device.asm                                                           PAGE    5
      242                      .dwattr $C$DW$25, DW_AT_high_pc(0x00)
      243                      .dwattr $C$DW$25, DW_AT_linkage_name("Example_setResultPass")
      244                      .dwattr $C$DW$25, DW_AT_external
-     245                      .dwattr $C$DW$25, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     245                      .dwattr $C$DW$25, DW_AT_decl_file("../src_device/device.c")
      246                      .dwattr $C$DW$25, DW_AT_decl_line(0x2b5)
      247                      .dwattr $C$DW$25, DW_AT_decl_column(0x06)
      248                      .dwattr $C$DW$25, DW_AT_TI_max_frame_size(-2)
-     249                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     249                      .dwpsn  file "../src_device/device.c",line 694,column 1,is_stmt,address ||Example_setResultPass||,isa
      250              
      251                      .dwfde $C$DW$CIE, ||Example_setResultPass||
      252              
@@ -290,7 +290,7 @@ device.asm                                                           PAGE    5
      262 00000000       ||Example_setResultPass||:
      263                      .dwcfi  cfa_offset, -2
      264                      .dwcfi  save_reg_to_mem, 26, 0
-     265                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     265                      .dwpsn  file "../src_device/device.c",line 695,column 5,is_stmt,isa 0
      266 00000000 0200          MOVB      ACC,#0                ; [CPU_ALU] |695| 
      267 00000001 761F!         MOVW      DP,#||Example_Result|| ; [CPU_ARAU] 
          00000002 0000 
@@ -298,7 +298,7 @@ device.asm                                                           PAGE    5
      269              $C$DW$26        .dwtag  DW_TAG_TI_branch
      270                      .dwattr $C$DW$26, DW_AT_low_pc(0x00)
      271                      .dwattr $C$DW$26, DW_AT_TI_return
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    6
@@ -306,7 +306,7 @@ device.asm                                                           PAGE    6
      272              
      273 00000004 0006          LRETR     ; [CPU_ALU] 
      274                      ; return occurs ; [] 
-     275                      .dwattr $C$DW$25, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     275                      .dwattr $C$DW$25, DW_AT_TI_end_file("../src_device/device.c")
      276                      .dwattr $C$DW$25, DW_AT_TI_end_line(0x2b8)
      277                      .dwattr $C$DW$25, DW_AT_TI_end_column(0x01)
      278                      .dwendentry
@@ -322,11 +322,11 @@ device.asm                                                           PAGE    6
      288                      .dwattr $C$DW$27, DW_AT_high_pc(0x00)
      289                      .dwattr $C$DW$27, DW_AT_linkage_name("Example_setResultFail")
      290                      .dwattr $C$DW$27, DW_AT_external
-     291                      .dwattr $C$DW$27, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     291                      .dwattr $C$DW$27, DW_AT_decl_file("../src_device/device.c")
      292                      .dwattr $C$DW$27, DW_AT_decl_line(0x2ba)
      293                      .dwattr $C$DW$27, DW_AT_decl_column(0x06)
      294                      .dwattr $C$DW$27, DW_AT_TI_max_frame_size(-2)
-     295                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     295                      .dwpsn  file "../src_device/device.c",line 699,column 1,is_stmt,address ||Example_setResultFail||,isa
      296              
      297                      .dwfde $C$DW$CIE, ||Example_setResultFail||
      298              
@@ -342,7 +342,7 @@ device.asm                                                           PAGE    6
      308 00000000       ||Example_setResultFail||:
      309                      .dwcfi  cfa_offset, -2
      310                      .dwcfi  save_reg_to_mem, 26, 0
-     311                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     311                      .dwpsn  file "../src_device/device.c",line 700,column 5,is_stmt,isa 0
      312 00000000 0201          MOVB      ACC,#1                ; [CPU_ALU] |700| 
      313 00000001 761F!         MOVW      DP,#||Example_Result|| ; [CPU_ARAU] 
          00000002 0000 
@@ -353,12 +353,12 @@ device.asm                                                           PAGE    6
      318              
      319 00000004 0006          LRETR     ; [CPU_ALU] 
      320                      ; return occurs ; [] 
-     321                      .dwattr $C$DW$27, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     321                      .dwattr $C$DW$27, DW_AT_TI_end_file("../src_device/device.c")
      322                      .dwattr $C$DW$27, DW_AT_TI_end_line(0x2bd)
      323                      .dwattr $C$DW$27, DW_AT_TI_end_column(0x01)
      324                      .dwendentry
      325                      .dwendtag $C$DW$27
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    7
@@ -374,11 +374,11 @@ device.asm                                                           PAGE    7
      334                      .dwattr $C$DW$29, DW_AT_high_pc(0x00)
      335                      .dwattr $C$DW$29, DW_AT_linkage_name("Example_done")
      336                      .dwattr $C$DW$29, DW_AT_external
-     337                      .dwattr $C$DW$29, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     337                      .dwattr $C$DW$29, DW_AT_decl_file("../src_device/device.c")
      338                      .dwattr $C$DW$29, DW_AT_decl_line(0x2bf)
      339                      .dwattr $C$DW$29, DW_AT_decl_column(0x06)
      340                      .dwattr $C$DW$29, DW_AT_TI_max_frame_size(-2)
-     341                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     341                      .dwpsn  file "../src_device/device.c",line 704,column 1,is_stmt,address ||Example_done||,isa 0
      342              
      343                      .dwfde $C$DW$CIE, ||Example_done||
      344              
@@ -395,10 +395,10 @@ device.asm                                                           PAGE    7
      355                      .dwcfi  cfa_offset, -2
      356                      .dwcfi  save_reg_to_mem, 26, 0
      357 00000000       ||$C$L1||:    
-     358                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     358                      .dwpsn  file "../src_device/device.c",line 705,column 11,is_stmt,isa 0
      359 00000000 6F00          B         ||$C$L1||,UNC         ; [CPU_ALU] |705| 
      360                      ; branch occurs ; [] |705| 
-     361                      .dwattr $C$DW$29, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     361                      .dwattr $C$DW$29, DW_AT_TI_end_file("../src_device/device.c")
      362                      .dwattr $C$DW$29, DW_AT_TI_end_line(0x2c2)
      363                      .dwattr $C$DW$29, DW_AT_TI_end_column(0x01)
      364                      .dwendentry
@@ -414,16 +414,16 @@ device.asm                                                           PAGE    7
      374                      .dwattr $C$DW$30, DW_AT_high_pc(0x00)
      375                      .dwattr $C$DW$30, DW_AT_linkage_name("Device_enableUnbondedGPIOPullupsFor176Pin")
      376                      .dwattr $C$DW$30, DW_AT_external
-     377                      .dwattr $C$DW$30, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     377                      .dwattr $C$DW$30, DW_AT_decl_file("../src_device/device.c")
      378                      .dwattr $C$DW$30, DW_AT_decl_line(0x11e)
      379                      .dwattr $C$DW$30, DW_AT_decl_column(0x06)
      380                      .dwattr $C$DW$30, DW_AT_TI_max_frame_size(-2)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    8
 
-     381                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     381                      .dwpsn  file "../src_device/device.c",line 287,column 1,is_stmt,address ||Device_enableUnbondedGPIOPu
      382              
      383                      .dwfde $C$DW$CIE, ||Device_enableUnbondedGPIOPullupsFor176Pin||
      384              
@@ -439,33 +439,33 @@ device.asm                                                           PAGE    8
      394 00000000       ||Device_enableUnbondedGPIOPullupsFor176Pin||:
      395                      .dwcfi  cfa_offset, -2
      396                      .dwcfi  save_reg_to_mem, 26, 0
-     397                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     397                      .dwpsn  file "../src_device/device.c",line 288,column 5,is_stmt,isa 0
      398 00000000 7622          EALLOW    ; [CPU_ALU] |288| 
-     399                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     399                      .dwpsn  file "../src_device/device.c",line 289,column 5,is_stmt,isa 0
      400 00000001 28A9          MOV       AL,#65535             ; [CPU_ALU] |289| 
          00000002 FFFF 
      401 00000003 28A8          MOV       AH,#32767             ; [CPU_ALU] |289| 
          00000004 7FFF 
-     402                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     402                      .dwpsn  file "../src_device/device.c",line 290,column 5,is_stmt,isa 0
      403 00000005 B608          MOVB      XAR7,#8               ; [CPU_ALU] |290| 
-     404                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     404                      .dwpsn  file "../src_device/device.c",line 291,column 5,is_stmt,isa 0
      405 00000006 BE20          MOVB      XAR6,#32              ; [CPU_ALU] |291| 
-     406                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     406                      .dwpsn  file "../src_device/device.c",line 292,column 5,is_stmt,isa 0
      407 00000007 8F00          MOVL      XAR4,#65024           ; [CPU_ARAU] |292| 
          00000008 FE00 
-     408                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     408                      .dwpsn  file "../src_device/device.c",line 289,column 5,is_stmt,isa 0
      409 00000009 BDA9          MOV32     *(0:0x7c8c),ACC       ; [CPU_FPU] |289| 
          0000000a 7C8C 
-     410                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     410                      .dwpsn  file "../src_device/device.c",line 290,column 5,is_stmt,isa 0
      411 0000000b BDA7          MOV32     *(0:0x7ccc),XAR7      ; [CPU_FPU] |290| 
          0000000c 7CCC 
-     412                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     412                      .dwpsn  file "../src_device/device.c",line 291,column 5,is_stmt,isa 0
      413 0000000d BDA6          MOV32     *(0:0x7d0c),XAR6      ; [CPU_FPU] |291| 
          0000000e 7D0C 
-     414                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     414                      .dwpsn  file "../src_device/device.c",line 292,column 5,is_stmt,isa 0
      415 0000000f BDA4          MOV32     *(0:0x7d4c),XAR4      ; [CPU_FPU] |292| 
          00000010 7D4C 
-     416                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     416                      .dwpsn  file "../src_device/device.c",line 293,column 5,is_stmt,isa 0
      417 00000011 761A          EDIS      ; [CPU_ALU] |293| 
      418              $C$DW$31        .dwtag  DW_TAG_TI_branch
      419                      .dwattr $C$DW$31, DW_AT_low_pc(0x00)
@@ -473,12 +473,12 @@ device.asm                                                           PAGE    8
      421              
      422 00000012 0006          LRETR     ; [CPU_ALU] 
      423                      ; return occurs ; [] 
-     424                      .dwattr $C$DW$30, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     424                      .dwattr $C$DW$30, DW_AT_TI_end_file("../src_device/device.c")
      425                      .dwattr $C$DW$30, DW_AT_TI_end_line(0x126)
      426                      .dwattr $C$DW$30, DW_AT_TI_end_column(0x01)
      427                      .dwendentry
      428                      .dwendtag $C$DW$30
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE    9
@@ -494,11 +494,11 @@ device.asm                                                           PAGE    9
      437                      .dwattr $C$DW$32, DW_AT_high_pc(0x00)
      438                      .dwattr $C$DW$32, DW_AT_linkage_name("Device_enableUnbondedGPIOPullupsFor100Pin")
      439                      .dwattr $C$DW$32, DW_AT_external
-     440                      .dwattr $C$DW$32, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     440                      .dwattr $C$DW$32, DW_AT_decl_file("../src_device/device.c")
      441                      .dwattr $C$DW$32, DW_AT_decl_line(0x13a)
      442                      .dwattr $C$DW$32, DW_AT_decl_column(0x06)
      443                      .dwattr $C$DW$32, DW_AT_TI_max_frame_size(-2)
-     444                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     444                      .dwpsn  file "../src_device/device.c",line 315,column 1,is_stmt,address ||Device_enableUnbondedGPIOPu
      445              
      446                      .dwfde $C$DW$CIE, ||Device_enableUnbondedGPIOPullupsFor100Pin||
      447              
@@ -514,52 +514,52 @@ device.asm                                                           PAGE    9
      457 00000000       ||Device_enableUnbondedGPIOPullupsFor100Pin||:
      458                      .dwcfi  cfa_offset, -2
      459                      .dwcfi  save_reg_to_mem, 26, 0
-     460                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     460                      .dwpsn  file "../src_device/device.c",line 316,column 5,is_stmt,isa 0
      461 00000000 7622          EALLOW    ; [CPU_ALU] |316| 
-     462                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     462                      .dwpsn  file "../src_device/device.c",line 317,column 5,is_stmt,isa 0
      463 00000001 8F3F          MOVL      XAR4,#4193308         ; [CPU_ARAU] |317| 
          00000002 FC1C 
-     464                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     464                      .dwpsn  file "../src_device/device.c",line 318,column 5,is_stmt,isa 0
      465 00000003 28A9          MOV       AL,#3584              ; [CPU_ALU] |318| 
          00000004 0E00 
      466 00000005 28A8          MOV       AH,#64512             ; [CPU_ALU] |318| 
          00000006 FC00 
-     467                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     467                      .dwpsn  file "../src_device/device.c",line 317,column 5,is_stmt,isa 0
      468 00000007 BDA4          MOV32     *(0:0x7c0c),XAR4      ; [CPU_FPU] |317| 
          00000008 7C0C 
-     469                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     469                      .dwpsn  file "../src_device/device.c",line 320,column 5,is_stmt,isa 0
      470 00000009 BE08          MOVB      XAR6,#8               ; [CPU_ALU] |320| 
-     471                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     471                      .dwpsn  file "../src_device/device.c",line 321,column 5,is_stmt,isa 0
      472 0000000a B600          MOVB      XAR7,#0               ; [CPU_ALU] |321| 
-     473                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     473                      .dwpsn  file "../src_device/device.c",line 318,column 5,is_stmt,isa 0
      474 0000000b BDA9          MOV32     *(0:0x7c4c),ACC       ; [CPU_FPU] |318| 
          0000000c 7C4C 
-     475                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     475                      .dwpsn  file "../src_device/device.c",line 319,column 5,is_stmt,isa 0
      476 0000000d 28A9          MOV       AL,#17383             ; [CPU_ALU] |319| 
          0000000e 43E7 
      477 0000000f 28A8          MOV       AH,#7920              ; [CPU_ALU] |319| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   10
 
          00000010 1EF0 
-     478                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     478                      .dwpsn  file "../src_device/device.c",line 322,column 5,is_stmt,isa 0
      479 00000011 8F00          MOVL      XAR4,#65024           ; [CPU_ARAU] |322| 
          00000012 FE00 
-     480                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     480                      .dwpsn  file "../src_device/device.c",line 319,column 5,is_stmt,isa 0
      481 00000013 BDA9          MOV32     *(0:0x7c8c),ACC       ; [CPU_FPU] |319| 
          00000014 7C8C 
-     482                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     482                      .dwpsn  file "../src_device/device.c",line 320,column 5,is_stmt,isa 0
      483 00000015 BDA6          MOV32     *(0:0x7ccc),XAR6      ; [CPU_FPU] |320| 
          00000016 7CCC 
-     484                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     484                      .dwpsn  file "../src_device/device.c",line 321,column 5,is_stmt,isa 0
      485 00000017 BDA7          MOV32     *(0:0x7d0c),XAR7      ; [CPU_FPU] |321| 
          00000018 7D0C 
-     486                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     486                      .dwpsn  file "../src_device/device.c",line 322,column 5,is_stmt,isa 0
      487 00000019 BDA4          MOV32     *(0:0x7d4c),XAR4      ; [CPU_FPU] |322| 
          0000001a 7D4C 
-     488                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     488                      .dwpsn  file "../src_device/device.c",line 323,column 5,is_stmt,isa 0
      489 0000001b 761A          EDIS      ; [CPU_ALU] |323| 
      490              $C$DW$33        .dwtag  DW_TAG_TI_branch
      491                      .dwattr $C$DW$33, DW_AT_low_pc(0x00)
@@ -567,7 +567,7 @@ device.asm                                                           PAGE   10
      493              
      494 0000001c 0006          LRETR     ; [CPU_ALU] 
      495                      ; return occurs ; [] 
-     496                      .dwattr $C$DW$32, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     496                      .dwattr $C$DW$32, DW_AT_TI_end_file("../src_device/device.c")
      497                      .dwattr $C$DW$32, DW_AT_TI_end_line(0x144)
      498                      .dwattr $C$DW$32, DW_AT_TI_end_column(0x01)
      499                      .dwendentry
@@ -583,11 +583,11 @@ device.asm                                                           PAGE   10
      509                      .dwattr $C$DW$34, DW_AT_high_pc(0x00)
      510                      .dwattr $C$DW$34, DW_AT_linkage_name("Device_enableUnbondedGPIOPullups")
      511                      .dwattr $C$DW$34, DW_AT_external
-     512                      .dwattr $C$DW$34, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     512                      .dwattr $C$DW$34, DW_AT_decl_file("../src_device/device.c")
      513                      .dwattr $C$DW$34, DW_AT_decl_line(0x14c)
      514                      .dwattr $C$DW$34, DW_AT_decl_column(0x06)
      515                      .dwattr $C$DW$34, DW_AT_TI_max_frame_size(-2)
-     516                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     516                      .dwpsn  file "../src_device/device.c",line 333,column 1,is_stmt,address ||Device_enableUnbondedGPIOPu
      517              
      518                      .dwfde $C$DW$CIE, ||Device_enableUnbondedGPIOPullups||
      519              
@@ -598,7 +598,7 @@ device.asm                                                           PAGE   10
      524              ;*                                                             *
      525              ;* FUNCTION PROPERTIES                                         *
      526              ;*                            0 Parameter,  0 Auto,  0 SOE     *
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   11
@@ -614,7 +614,7 @@ device.asm                                                           PAGE   11
      535              
      536                      .dwcfi  cfa_offset, -2
      537                      .dwcfi  save_reg_to_mem, 26, 0
-     538                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     538                      .dwpsn  file "../src_device/device.c",line 337,column 23,is_stmt,isa 0
      539 00000000 8F05          MOVL      XAR4,#380936          ; [CPU_ARAU] |337| 
          00000001 D008 
      540 00000002 2901          CLRC      SXM                   ; [CPU_ALU] 
@@ -624,41 +624,41 @@ device.asm                                                           PAGE   11
      544 00000006 5205          CMPB      AL,#5                 ; [CPU_ALU] |337| 
      545 00000007 6116          B         ||$C$L2||,EQ          ; [CPU_ALU] |337| 
      546                      ; branchcc occurs ; [] |337| 
-     547                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     547                      .dwpsn  file "../src_device/device.c",line 350,column 10,is_stmt,isa 0
      548 00000008 5206          CMPB      AL,#6                 ; [CPU_ALU] |350| 
      549 00000009 6016          B         ||$C$L3||,NEQ         ; [CPU_ALU] |350| 
      550                      ; branchcc occurs ; [] |350| 
      551                      .dwcfi  remember_state
-     552                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     552                      .dwpsn  file "../src_device/device.c",line 288,column 5,is_stmt,isa 0
      553 0000000a 7622          EALLOW    ; [CPU_ALU] |288| 
-     554                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     554                      .dwpsn  file "../src_device/device.c",line 289,column 5,is_stmt,isa 0
      555 0000000b 28A9          MOV       AL,#65535             ; [CPU_ALU] |289| 
          0000000c FFFF 
      556 0000000d 28A8          MOV       AH,#32767             ; [CPU_ALU] |289| 
          0000000e 7FFF 
-     557                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     557                      .dwpsn  file "../src_device/device.c",line 290,column 5,is_stmt,isa 0
      558 0000000f B608          MOVB      XAR7,#8               ; [CPU_ALU] |290| 
-     559                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     559                      .dwpsn  file "../src_device/device.c",line 291,column 5,is_stmt,isa 0
      560 00000010 BE20          MOVB      XAR6,#32              ; [CPU_ALU] |291| 
-     561                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     561                      .dwpsn  file "../src_device/device.c",line 292,column 5,is_stmt,isa 0
      562 00000011 8F00          MOVL      XAR4,#65024           ; [CPU_ARAU] |292| 
          00000012 FE00 
-     563                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     563                      .dwpsn  file "../src_device/device.c",line 289,column 5,is_stmt,isa 0
      564 00000013 BDA9          MOV32     *(0:0x7c8c),ACC       ; [CPU_FPU] |289| 
          00000014 7C8C 
-     565                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     565                      .dwpsn  file "../src_device/device.c",line 290,column 5,is_stmt,isa 0
      566 00000015 BDA7          MOV32     *(0:0x7ccc),XAR7      ; [CPU_FPU] |290| 
          00000016 7CCC 
-     567                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     567                      .dwpsn  file "../src_device/device.c",line 291,column 5,is_stmt,isa 0
      568 00000017 BDA6          MOV32     *(0:0x7d0c),XAR6      ; [CPU_FPU] |291| 
          00000018 7D0C 
-     569                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     569                      .dwpsn  file "../src_device/device.c",line 292,column 5,is_stmt,isa 0
      570 00000019 BDA4          MOV32     *(0:0x7d4c),XAR4      ; [CPU_FPU] |292| 
          0000001a 7D4C 
-     571                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     571                      .dwpsn  file "../src_device/device.c",line 293,column 5,is_stmt,isa 0
      572 0000001b 761A          EDIS      ; [CPU_ALU] |293| 
      573              $C$DW$36        .dwtag  DW_TAG_TI_branch
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   12
@@ -670,7 +670,7 @@ device.asm                                                           PAGE   12
      578                      ; return occurs ; [] 
      579                      .dwcfi  restore_state
      580 0000001d       ||$C$L2||:    
-     581                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     581                      .dwpsn  file "../src_device/device.c",line 348,column 9,is_stmt,isa 0
      582              $C$DW$37        .dwtag  DW_TAG_TI_branch
      583                      .dwattr $C$DW$37, DW_AT_low_pc(0x00)
      584                      .dwattr $C$DW$37, DW_AT_name("Device_enableUnbondedGPIOPullupsFor100Pin")
@@ -686,7 +686,7 @@ device.asm                                                           PAGE   12
      593              
      594 0000001f 0006          LRETR     ; [CPU_ALU] 
      595                      ; return occurs ; [] 
-     596                      .dwattr $C$DW$34, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     596                      .dwattr $C$DW$34, DW_AT_TI_end_file("../src_device/device.c")
      597                      .dwattr $C$DW$34, DW_AT_TI_end_line(0x168)
      598                      .dwattr $C$DW$34, DW_AT_TI_end_column(0x01)
      599                      .dwendentry
@@ -702,11 +702,11 @@ device.asm                                                           PAGE   12
      609                      .dwattr $C$DW$39, DW_AT_high_pc(0x00)
      610                      .dwattr $C$DW$39, DW_AT_linkage_name("Device_initGPIO")
      611                      .dwattr $C$DW$39, DW_AT_external
-     612                      .dwattr $C$DW$39, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     612                      .dwattr $C$DW$39, DW_AT_decl_file("../src_device/device.c")
      613                      .dwattr $C$DW$39, DW_AT_decl_line(0x100)
      614                      .dwattr $C$DW$39, DW_AT_decl_column(0x06)
      615                      .dwattr $C$DW$39, DW_AT_TI_max_frame_size(-2)
-     616                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     616                      .dwpsn  file "../src_device/device.c",line 257,column 1,is_stmt,address ||Device_initGPIO||,isa 0
      617              
      618                      .dwfde $C$DW$CIE, ||Device_initGPIO||
      619              
@@ -718,7 +718,7 @@ device.asm                                                           PAGE   12
      625              ;* FUNCTION PROPERTIES                                         *
      626              ;*                            0 Parameter,  0 Auto,  0 SOE     *
      627              ;***************************************************************
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   13
@@ -757,7 +757,7 @@ device.asm                                                           PAGE   13
          00000019 7D7C 
      648                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.
      649 0000001a 761A          EDIS      ; [CPU_ALU] |738| 
-     650                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     650                      .dwpsn  file "../src_device/device.c",line 271,column 5,is_stmt,isa 0
      651              $C$DW$40        .dwtag  DW_TAG_TI_branch
      652                      .dwattr $C$DW$40, DW_AT_low_pc(0x00)
      653                      .dwattr $C$DW$40, DW_AT_name("Device_enableUnbondedGPIOPullups")
@@ -772,13 +772,13 @@ device.asm                                                           PAGE   13
      661              
      662 0000001d 0006          LRETR     ; [CPU_ALU] 
      663                      ; return occurs ; [] 
-     664                      .dwattr $C$DW$39, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     664                      .dwattr $C$DW$39, DW_AT_TI_end_file("../src_device/device.c")
      665                      .dwattr $C$DW$39, DW_AT_TI_end_line(0x110)
      666                      .dwattr $C$DW$39, DW_AT_TI_end_column(0x01)
      667                      .dwendentry
      668                      .dwendtag $C$DW$39
      669              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   14
@@ -793,11 +793,11 @@ device.asm                                                           PAGE   14
      677                      .dwattr $C$DW$42, DW_AT_high_pc(0x00)
      678                      .dwattr $C$DW$42, DW_AT_linkage_name("Device_configureTMXAnalogTrim")
      679                      .dwattr $C$DW$42, DW_AT_external
-     680                      .dwattr $C$DW$42, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     680                      .dwattr $C$DW$42, DW_AT_decl_file("../src_device/device.c")
      681                      .dwattr $C$DW$42, DW_AT_decl_line(0x170)
      682                      .dwattr $C$DW$42, DW_AT_decl_column(0x06)
      683                      .dwattr $C$DW$42, DW_AT_TI_max_frame_size(-2)
-     684                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     684                      .dwpsn  file "../src_device/device.c",line 369,column 1,is_stmt,address ||Device_configureTMXAnalogTr
      685              
      686                      .dwfde $C$DW$CIE, ||Device_configureTMXAnalogTrim||
      687              
@@ -820,13 +820,13 @@ device.asm                                                           PAGE   14
      704 00000002 8F05          MOVL      XAR4,#381756          ; [CPU_ARAU] |995| 
          00000003 D33C 
      705 00000004 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |995| 
-     706                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     706                      .dwpsn  file "../src_device/device.c",line 382,column 5,is_stmt,isa 0
      707 00000005 76C5          MOVL      XAR7,#381366          ; [CPU_ARAU] |382| 
          00000006 D1B6 
-     708                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     708                      .dwpsn  file "../src_device/device.c",line 383,column 5,is_stmt,isa 0
      709 00000007 7685          MOVL      XAR6,#381368          ; [CPU_ARAU] |383| 
          00000008 D1B8 
-     710                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     710                      .dwpsn  file "../src_device/device.c",line 384,column 5,is_stmt,isa 0
      711 00000009 8F45          MOVL      XAR5,#381370          ; [CPU_ARAU] |384| 
          0000000a D1BA 
      712                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
@@ -838,26 +838,26 @@ device.asm                                                           PAGE   14
      718 00000010 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |995| 
      719 00000011 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |995| 
      720 00000012 0208          MOVB      ACC,#8                ; [CPU_ALU] |995| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   15
 
      721 00000013 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |995| 
      722 00000014 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |995| 
-     723                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     723                      .dwpsn  file "../src_device/device.c",line 382,column 5,is_stmt,isa 0
      724 00000015 28C7          MOV       *+XAR7[0],#31709      ; [CPU_ALU] |382| 
          00000016 7BDD 
-     725                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     725                      .dwpsn  file "../src_device/device.c",line 385,column 5,is_stmt,isa 0
      726 00000017 8F05          MOVL      XAR4,#381372          ; [CPU_ARAU] |385| 
          00000018 D1BC 
-     727                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     727                      .dwpsn  file "../src_device/device.c",line 383,column 5,is_stmt,isa 0
      728 00000019 28C6          MOV       *+XAR6[0],#31709      ; [CPU_ALU] |383| 
          0000001a 7BDD 
-     729                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     729                      .dwpsn  file "../src_device/device.c",line 384,column 5,is_stmt,isa 0
      730 0000001b 28C5          MOV       *+XAR5[0],#31709      ; [CPU_ALU] |384| 
          0000001c 7BDD 
-     731                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     731                      .dwpsn  file "../src_device/device.c",line 385,column 5,is_stmt,isa 0
      732 0000001d 28C4          MOV       *+XAR4[0],#31709      ; [CPU_ALU] |385| 
          0000001e 7BDD 
      733                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
@@ -887,7 +887,7 @@ device.asm                                                           PAGE   15
      752              
      753 00000032 0006          LRETR     ; [CPU_ALU] 
      754                      ; return occurs ; [] 
-     755                      .dwattr $C$DW$42, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+     755                      .dwattr $C$DW$42, DW_AT_TI_end_file("../src_device/device.c")
      756                      .dwattr $C$DW$42, DW_AT_TI_end_line(0x1a7)
      757                      .dwattr $C$DW$42, DW_AT_TI_end_column(0x01)
      758                      .dwendentry
@@ -898,7 +898,7 @@ device.asm                                                           PAGE   15
      763                      .global ||Device_enableAllPeripherals||
      764              
      765              $C$DW$44        .dwtag  DW_TAG_subprogram
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   16
@@ -908,11 +908,11 @@ device.asm                                                           PAGE   16
      768                      .dwattr $C$DW$44, DW_AT_high_pc(0x00)
      769                      .dwattr $C$DW$44, DW_AT_linkage_name("Device_enableAllPeripherals")
      770                      .dwattr $C$DW$44, DW_AT_external
-     771                      .dwattr $C$DW$44, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+     771                      .dwattr $C$DW$44, DW_AT_decl_file("../src_device/device.c")
      772                      .dwattr $C$DW$44, DW_AT_decl_line(0xa4)
      773                      .dwattr $C$DW$44, DW_AT_decl_column(0x06)
      774                      .dwattr $C$DW$44, DW_AT_TI_max_frame_size(-2)
-     775                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+     775                      .dwpsn  file "../src_device/device.c",line 165,column 1,is_stmt,address ||Device_enableAllPeripherals
      776              
      777                      .dwfde $C$DW$CIE, ||Device_enableAllPeripherals||
      778              
@@ -958,7 +958,7 @@ device.asm                                                           PAGE   16
      817 00000019 8F05          MOVL      XAR4,#381732          ; [CPU_ARAU] |995| 
          0000001a D324 
      818 0000001b 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |995| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   17
@@ -1018,7 +1018,7 @@ device.asm                                                           PAGE   17
      865 00000050 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |995| 
      866 00000051 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |995| 
      867 00000052 0204          MOVB      ACC,#4                ; [CPU_ALU] |995| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   18
@@ -1078,7 +1078,7 @@ device.asm                                                           PAGE   18
      916 00000087 0204          MOVB      ACC,#4                ; [CPU_ALU] |995| 
      917 00000088 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |995| 
      918 00000089 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |995| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   19
@@ -1138,7 +1138,7 @@ device.asm                                                           PAGE   19
      965 000000be 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |995| 
      966 000000bf 0204          MOVB      ACC,#4                ; [CPU_ALU] |995| 
      967 000000c0 98C4          OR        *+XAR4[0],AL          ; [CPU_ALU] |995| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   20
@@ -1178,7 +1178,7 @@ device.asm                                                           PAGE   20
      999              
     1000 000000dd 0006          LRETR     ; [CPU_ALU] 
     1001                      ; return occurs ; [] 
-    1002                      .dwattr $C$DW$44, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+    1002                      .dwattr $C$DW$44, DW_AT_TI_end_file("../src_device/device.c")
     1003                      .dwattr $C$DW$44, DW_AT_TI_end_line(0xf9)
     1004                      .dwattr $C$DW$44, DW_AT_TI_end_column(0x01)
     1005                      .dwendentry
@@ -1194,16 +1194,16 @@ device.asm                                                           PAGE   20
     1015                      .dwattr $C$DW$46, DW_AT_high_pc(0x00)
     1016                      .dwattr $C$DW$46, DW_AT_linkage_name("Device_init")
     1017                      .dwattr $C$DW$46, DW_AT_external
-    1018                      .dwattr $C$DW$46, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+    1018                      .dwattr $C$DW$46, DW_AT_decl_file("../src_device/device.c")
     1019                      .dwattr $C$DW$46, DW_AT_decl_line(0x48)
     1020                      .dwattr $C$DW$46, DW_AT_decl_column(0x06)
     1021                      .dwattr $C$DW$46, DW_AT_TI_max_frame_size(-2)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   21
 
-    1022                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1022                      .dwpsn  file "../src_device/device.c",line 73,column 1,is_stmt,address ||Device_init||,isa 0
     1023              
     1024                      .dwfde $C$DW$CIE, ||Device_init||
     1025              
@@ -1232,7 +1232,7 @@ device.asm                                                           PAGE   21
     1045                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
     1046 00000008 761A          EDIS      ; [CPU_ALU] |1956| 
     1047 00000009 FF69          SPM       #0                    ; [CPU_ALU] 
-    1048                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1048                      .dwpsn  file "../src_device/device.c",line 106,column 5,is_stmt,isa 0
     1049 0000000a 9A00          MOVB      AL,#0                 ; [CPU_ALU] |106| 
     1050              $C$DW$47        .dwtag  DW_TAG_TI_branch
     1051                      .dwattr $C$DW$47, DW_AT_low_pc(0x00)
@@ -1250,7 +1250,7 @@ device.asm                                                           PAGE   21
     1061 00000011 92C4          MOV       AL,*+XAR4[0]          ; [CPU_ALU] |106| 
     1062 00000012 6003          B         ||$C$L4||,NEQ         ; [CPU_ALU] |106| 
     1063                      ; branchcc occurs ; [] |106| 
-    1064                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1064                      .dwpsn  file "../src_device/device.c",line 109,column 9,is_stmt,isa 0
     1065              $C$DW$48        .dwtag  DW_TAG_TI_branch
     1066                      .dwattr $C$DW$48, DW_AT_low_pc(0x00)
     1067                      .dwattr $C$DW$48, DW_AT_name("Device_configureTMXAnalogTrim")
@@ -1258,14 +1258,14 @@ device.asm                                                           PAGE   21
     1069              
     1070 00000013 7640!         LCR       #||Device_configureTMXAnalogTrim|| ; [CPU_ALU] |109| 
          00000014 0000 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   22
 
     1071                      ; call occurs [#||Device_configureTMXAnalogTrim||] ; [] |109| 
     1072 00000015       ||$C$L4||:    
-    1073                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1073                      .dwpsn  file "../src_device/device.c",line 115,column 5,is_stmt,isa 0
     1074 00000015 9A94          MOV       AL,#148               ; [CPU_ALU] |115| 
     1075 00000016 28A8          MOV       AH,#32769             ; [CPU_ALU] |115| 
          00000017 8001 
@@ -1317,8 +1317,8 @@ device.asm                                                           PAGE   22
     1117 00000034 06BE                                                  POP ACC  
     1118                                                            
     1119 00000035 FF69          SPM       #0                    ; [CPU_ALU] 
-    1120                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+    1120                      .dwpsn  file "../src_device/device.c",line 148,column 5,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   23
@@ -1333,7 +1333,7 @@ device.asm                                                           PAGE   23
     1127                      ; call occurs [#||Device_enableAllPeripherals||] ; [] |148| 
     1128 00000038 761F!         MOVW      DP,#||Example_Result|| ; [CPU_ARAU] 
          00000039 0000 
-    1129                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1129                      .dwpsn  file "../src_device/device.c",line 153,column 5,is_stmt,isa 0
     1130 0000003a 0201          MOVB      ACC,#1                ; [CPU_ALU] |153| 
     1131 0000003b 1E00!         MOVL      @||Example_Result||,ACC ; [CPU_ALU] |153| 
     1132              $C$DW$52        .dwtag  DW_TAG_TI_branch
@@ -1342,7 +1342,7 @@ device.asm                                                           PAGE   23
     1135              
     1136 0000003c 0006          LRETR     ; [CPU_ALU] 
     1137                      ; return occurs ; [] 
-    1138                      .dwattr $C$DW$46, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+    1138                      .dwattr $C$DW$46, DW_AT_TI_end_file("../src_device/device.c")
     1139                      .dwattr $C$DW$46, DW_AT_TI_end_line(0x9a)
     1140                      .dwattr $C$DW$46, DW_AT_TI_end_column(0x01)
     1141                      .dwendentry
@@ -1359,11 +1359,11 @@ device.asm                                                           PAGE   23
     1152                      .dwattr $C$DW$53, DW_AT_linkage_name("Device_bootCPU2")
     1153                      .dwattr $C$DW$53, DW_AT_external
     1154                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$42)
-    1155                      .dwattr $C$DW$53, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_suppo
+    1155                      .dwattr $C$DW$53, DW_AT_decl_file("../src_device/device.c")
     1156                      .dwattr $C$DW$53, DW_AT_decl_line(0x1c4)
     1157                      .dwattr $C$DW$53, DW_AT_decl_column(0x01)
     1158                      .dwattr $C$DW$53, DW_AT_TI_max_frame_size(-6)
-    1159                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1159                      .dwpsn  file "../src_device/device.c",line 453,column 1,is_stmt,address ||Device_bootCPU2||,isa 0
     1160              
     1161                      .dwfde $C$DW$CIE, ||Device_bootCPU2||
     1162              $C$DW$54        .dwtag  DW_TAG_formal_parameter
@@ -1378,7 +1378,7 @@ device.asm                                                           PAGE   23
     1171              ;* FUNCTION ENVIRONMENT                                        *
     1172              ;*                                                             *
     1173              ;* FUNCTION PROPERTIES                                         *
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   24
@@ -1404,23 +1404,23 @@ device.asm                                                           PAGE   24
     1192 00000000 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
     1193                      .dwcfi  save_reg_to_mem, 7, 2
     1194                      .dwcfi  cfa_offset, -4
-    1195                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1195                      .dwpsn  file "../src_device/device.c",line 462,column 5,is_stmt,isa 0
     1196 00000001 8F05          MOVL      XAR4,#327712          ; [CPU_ARAU] |462| 
          00000002 0020 
     1197 00000003 BE03          MOVB      XAR6,#3               ; [CPU_ALU] |462| 
     1198 00000004 AABD          MOVL      *SP++,XAR2            ; [CPU_ALU] 
     1199                      .dwcfi  save_reg_to_mem, 9, 4
     1200                      .dwcfi  cfa_offset, -6
-    1201                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1201                      .dwpsn  file "../src_device/device.c",line 453,column 1,is_stmt,isa 0
     1202 00000005 86A9          MOVL      XAR2,ACC              ; [CPU_ALU] |453| 
-    1203                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1203                      .dwpsn  file "../src_device/device.c",line 462,column 5,is_stmt,isa 0
     1204 00000006 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |462| 
     1205 00000007 9B00          MOVB      AH,#0                 ; [CPU_ALU] |462| 
     1206 00000008 900F          ANDB      AL,#0x0f              ; [CPU_ALU] |462| 
     1207 00000009 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |462| 
     1208 0000000a 6007          B         ||$C$L5||,NEQ         ; [CPU_ALU] |462| 
     1209                      ; branchcc occurs ; [] |462| 
-    1210                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1210                      .dwpsn  file "../src_device/device.c",line 469,column 9,is_stmt,isa 0
     1211 0000000b 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |469| 
     1212 0000000c 9000          ANDB      AL,#0                 ; [CPU_ALU] |469| 
     1213 0000000d 18A8          AND       AH,#32768             ; [CPU_ALU] |469| 
@@ -1429,16 +1429,16 @@ device.asm                                                           PAGE   24
     1215 00000010 6014          B         ||$C$L8||,NEQ         ; [CPU_ALU] |469| 
     1216                      ; branchcc occurs ; [] |469| 
     1217 00000011       ||$C$L5||:    
-    1218                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1218                      .dwpsn  file "../src_device/device.c",line 486,column 9,is_stmt,isa 0
     1219 00000011 41C4          TBIT      *+XAR4[0],#1          ; [CPU_ALU] |486| 
     1220 00000012 6CFF          B         ||$C$L5||,NTC         ; [CPU_ALU] |486| 
     1221                      ; branchcc occurs ; [] |486| 
-    1222                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1222                      .dwpsn  file "../src_device/device.c",line 493,column 12,is_stmt,isa 0
     1223 00000013 8F05          MOVL      XAR4,#327688          ; [CPU_ARAU] |493| 
          00000014 0008 
     1224 00000015       ||$C$L6||:    
     1225 00000015 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |493| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   25
@@ -1458,19 +1458,19 @@ device.asm                                                           PAGE   25
     1237 0000001f FF58          TEST      ACC                   ; [CPU_ALU] |493| 
     1238 00000020 60F5          B         ||$C$L6||,NEQ         ; [CPU_ALU] |493| 
     1239                      ; branchcc occurs ; [] |493| 
-    1240                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1240                      .dwpsn  file "../src_device/device.c",line 499,column 5,is_stmt,isa 0
     1241 00000021 020C          MOVB      ACC,#12               ; [CPU_ALU] |499| 
     1242 00000022 0FA2          CMPL      ACC,XAR2              ; [CPU_ALU] |499| 
     1243 00000023 6604          B         ||$C$L9||,HI          ; [CPU_ALU] |499| 
     1244                      ; branchcc occurs ; [] |499| 
     1245 00000024       ||$C$L8||:    
-    1246                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1246                      .dwpsn  file "../src_device/device.c",line 676,column 5,is_stmt,isa 0
     1247 00000024 B601          MOVB      XAR7,#1               ; [CPU_ALU] |676| 
     1248 00000025 FFEF          B         ||$C$L18||,UNC        ; [CPU_ALU] |676| 
          00000026 0147 
     1249                      ; branch occurs ; [] |676| 
     1250 00000027       ||$C$L9||:    
-    1251                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1251                      .dwpsn  file "../src_device/device.c",line 509,column 9,is_stmt,isa 0
     1252 00000027 C4A2          MOVL      XAR6,XAR2             ; [CPU_ALU] |509| 
     1253 00000028 0204          MOVB      ACC,#4                ; [CPU_ALU] |509| 
     1254 00000029 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |509| 
@@ -1498,7 +1498,7 @@ device.asm                                                           PAGE   25
     1273                      ; branchcc occurs ; [] |509| 
     1274 00000039 0207          MOVB      ACC,#7                ; [CPU_ALU] |509| 
     1275 0000003a 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |509| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   26
@@ -1516,7 +1516,7 @@ device.asm                                                           PAGE   26
          00000042 7CBC 
     1284                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.
     1285 00000043 761A          EDIS      ; [CPU_ALU] |738| 
-    1286                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1286                      .dwpsn  file "../src_device/device.c",line 636,column 18,is_stmt,isa 0
     1287 00000044 D402          MOVB      XAR4,#2               ; [CPU_ALU] |636| 
     1288 00000045 0247          MOVB      ACC,#71               ; [CPU_ALU] |636| 
     1289              $C$DW$57        .dwtag  DW_TAG_TI_branch
@@ -1527,7 +1527,7 @@ device.asm                                                           PAGE   26
     1294 00000046 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |636| 
          00000047 0000 
     1295                      ; call occurs [#||GPIO_setControllerCore||] ; [] |636| 
-    1296                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1296                      .dwpsn  file "../src_device/device.c",line 637,column 18,is_stmt,isa 0
     1297 00000048 28A9          MOV       AL,#3589              ; [CPU_ALU] |637| 
          00000049 0E05 
     1298 0000004a 9B86          MOV       AH,#134               ; [CPU_ALU] |637| 
@@ -1539,7 +1539,7 @@ device.asm                                                           PAGE   26
     1304 0000004b 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |637| 
          0000004c 0000 
     1305                      ; call occurs [#||GPIO_setPinConfig||] ; [] |637| 
-    1306                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1306                      .dwpsn  file "../src_device/device.c",line 638,column 18,is_stmt,isa 0
     1307 0000004d D403          MOVB      XAR4,#3               ; [CPU_ALU] |638| 
     1308 0000004e 0247          MOVB      ACC,#71               ; [CPU_ALU] |638| 
     1309              $C$DW$59        .dwtag  DW_TAG_TI_branch
@@ -1550,7 +1550,7 @@ device.asm                                                           PAGE   26
     1314 0000004f 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |638| 
          00000050 0000 
     1315                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |638| 
-    1316                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1316                      .dwpsn  file "../src_device/device.c",line 640,column 18,is_stmt,isa 0
     1317 00000051 D402          MOVB      XAR4,#2               ; [CPU_ALU] |640| 
     1318 00000052 0246          MOVB      ACC,#70               ; [CPU_ALU] |640| 
     1319              $C$DW$60        .dwtag  DW_TAG_TI_branch
@@ -1558,7 +1558,7 @@ device.asm                                                           PAGE   26
     1321                      .dwattr $C$DW$60, DW_AT_name("GPIO_setControllerCore")
     1322                      .dwattr $C$DW$60, DW_AT_TI_call
     1323              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   27
@@ -1566,7 +1566,7 @@ device.asm                                                           PAGE   27
     1324 00000053 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |640| 
          00000054 0000 
     1325                      ; call occurs [#||GPIO_setControllerCore||] ; [] |640| 
-    1326                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1326                      .dwpsn  file "../src_device/device.c",line 641,column 18,is_stmt,isa 0
     1327 00000055 28A9          MOV       AL,#3077              ; [CPU_ALU] |641| 
          00000056 0C05 
     1328 00000057 9B86          MOV       AH,#134               ; [CPU_ALU] |641| 
@@ -1578,7 +1578,7 @@ device.asm                                                           PAGE   27
     1334 00000058 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |641| 
          00000059 0000 
     1335                      ; call occurs [#||GPIO_setPinConfig||] ; [] |641| 
-    1336                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1336                      .dwpsn  file "../src_device/device.c",line 642,column 18,is_stmt,isa 0
     1337 0000005a D403          MOVB      XAR4,#3               ; [CPU_ALU] |642| 
     1338 0000005b 0246          MOVB      ACC,#70               ; [CPU_ALU] |642| 
     1339              $C$DW$62        .dwtag  DW_TAG_TI_branch
@@ -1594,7 +1594,7 @@ device.asm                                                           PAGE   27
     1348                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.
     1349 0000005f BFA9          MOV32     ACC,*(0:0x7cbc)       ; [CPU_FPU] |702| 
          00000060 7CBC 
-    1350                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1350                      .dwpsn  file "../src_device/device.c",line 651,column 18,is_stmt,isa 0
     1351 00000061 8F05          MOVL      XAR4,#381450          ; [CPU_ARAU] |651| 
          00000062 D20A 
     1352                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.
@@ -1604,7 +1604,7 @@ device.asm                                                           PAGE   27
          00000066 FFFF 
     1355 00000067 BDA9          MOV32     *(0:0x7cbc),ACC       ; [CPU_FPU] |702| 
          00000068 7CBC 
-    1356                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1356                      .dwpsn  file "../src_device/device.c",line 651,column 18,is_stmt,isa 0
     1357 00000069 020C          MOVB      ACC,#12               ; [CPU_ALU] |651| 
     1358 0000006a C0C4          AND       *+XAR4[0],AL          ; [CPU_ALU] |651| 
     1359 0000006b C1CC          AND       *+XAR4[1],AH          ; [CPU_ALU] |651| 
@@ -1616,9 +1616,9 @@ device.asm                                                           PAGE   27
     1364 00000070 99CC          OR        *+XAR4[1],AH          ; [CPU_ALU] |995| 
     1365                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
     1366 00000071 761A          EDIS      ; [CPU_ALU] |996| 
-    1367                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1367                      .dwpsn  file "../src_device/device.c",line 656,column 16,is_stmt,isa 0
     1368 00000072 FFEF          B         ||$C$L17||,UNC        ; [CPU_ALU] |656| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   28
@@ -1636,27 +1636,27 @@ device.asm                                                           PAGE   28
     1376 00000079 7622          EALLOW    ; [CPU_ALU] |3005| 
     1377                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
     1378 0000007a 5001          ORB       AL,#0x01              ; [CPU_ALU] |3006| 
-    1379                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1379                      .dwpsn  file "../src_device/device.c",line 591,column 18,is_stmt,isa 0
     1380 0000007b 8F45          MOVL      XAR5,#381440          ; [CPU_ARAU] |591| 
          0000007c D200 
-    1381                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1381                      .dwpsn  file "../src_device/device.c",line 592,column 18,is_stmt,isa 0
     1382 0000007d BE02          MOVB      XAR6,#2               ; [CPU_ALU] |592| 
     1383                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
     1384 0000007e 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |3006| 
-    1385                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1385                      .dwpsn  file "../src_device/device.c",line 591,column 18,is_stmt,isa 0
     1386 0000007f 9A00          MOVB      AL,#0                 ; [CPU_ALU] |591| 
     1387 00000080 28A8          MOV       AH,#42405             ; [CPU_ALU] |591| 
          00000081 A5A5 
-    1388                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1388                      .dwpsn  file "../src_device/device.c",line 592,column 18,is_stmt,isa 0
     1389 00000082 8F05          MOVL      XAR4,#381484          ; [CPU_ARAU] |592| 
          00000083 D22C 
-    1390                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1390                      .dwpsn  file "../src_device/device.c",line 591,column 18,is_stmt,isa 0
     1391 00000084 1EC5          MOVL      *+XAR5[0],ACC         ; [CPU_ALU] |591| 
-    1392                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1392                      .dwpsn  file "../src_device/device.c",line 592,column 18,is_stmt,isa 0
     1393 00000085 C2C4          MOVL      *+XAR4[0],XAR6        ; [CPU_ALU] |592| 
-    1394                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1394                      .dwpsn  file "../src_device/device.c",line 593,column 18,is_stmt,isa 0
     1395 00000086 761A          EDIS      ; [CPU_ALU] |593| 
-    1396                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1396                      .dwpsn  file "../src_device/device.c",line 595,column 18,is_stmt,isa 0
     1397 00000087 D400          MOVB      XAR4,#0               ; [CPU_ALU] |595| 
     1398 00000088 0220          MOVB      ACC,#32               ; [CPU_ALU] |595| 
     1399              $C$DW$63        .dwtag  DW_TAG_TI_branch
@@ -1667,7 +1667,7 @@ device.asm                                                           PAGE   28
     1404 00000089 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |595| 
          0000008a 0000 
     1405                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |595| 
-    1406                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1406                      .dwpsn  file "../src_device/device.c",line 596,column 18,is_stmt,isa 0
     1407 0000008b D403          MOVB      XAR4,#3               ; [CPU_ALU] |596| 
     1408 0000008c 0220          MOVB      ACC,#32               ; [CPU_ALU] |596| 
     1409              $C$DW$64        .dwtag  DW_TAG_TI_branch
@@ -1678,12 +1678,12 @@ device.asm                                                           PAGE   28
     1414 0000008d 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |596| 
          0000008e 0000 
     1415                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |596| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   29
 
-    1416                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1416                      .dwpsn  file "../src_device/device.c",line 597,column 18,is_stmt,isa 0
     1417 0000008f 9A01          MOV       AL,#1                 ; [CPU_ALU] |597| 
     1418 00000090 9B46          MOV       AH,#70                ; [CPU_ALU] |597| 
     1419              $C$DW$65        .dwtag  DW_TAG_TI_branch
@@ -1694,7 +1694,7 @@ device.asm                                                           PAGE   29
     1424 00000091 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |597| 
          00000092 0000 
     1425                      ; call occurs [#||GPIO_setPinConfig||] ; [] |597| 
-    1426                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1426                      .dwpsn  file "../src_device/device.c",line 598,column 18,is_stmt,isa 0
     1427 00000093 D402          MOVB      XAR4,#2               ; [CPU_ALU] |598| 
     1428 00000094 0220          MOVB      ACC,#32               ; [CPU_ALU] |598| 
     1429              $C$DW$66        .dwtag  DW_TAG_TI_branch
@@ -1705,7 +1705,7 @@ device.asm                                                           PAGE   29
     1434 00000095 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |598| 
          00000096 0000 
     1435                      ; call occurs [#||GPIO_setControllerCore||] ; [] |598| 
-    1436                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1436                      .dwpsn  file "../src_device/device.c",line 600,column 18,is_stmt,isa 0
     1437 00000097 D400          MOVB      XAR4,#0               ; [CPU_ALU] |600| 
     1438 00000098 0221          MOVB      ACC,#33               ; [CPU_ALU] |600| 
     1439              $C$DW$67        .dwtag  DW_TAG_TI_branch
@@ -1716,7 +1716,7 @@ device.asm                                                           PAGE   29
     1444 00000099 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |600| 
          0000009a 0000 
     1445                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |600| 
-    1446                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1446                      .dwpsn  file "../src_device/device.c",line 601,column 18,is_stmt,isa 0
     1447 0000009b D403          MOVB      XAR4,#3               ; [CPU_ALU] |601| 
     1448 0000009c 0221          MOVB      ACC,#33               ; [CPU_ALU] |601| 
     1449              $C$DW$68        .dwtag  DW_TAG_TI_branch
@@ -1727,7 +1727,7 @@ device.asm                                                           PAGE   29
     1454 0000009d 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |601| 
          0000009e 0000 
     1455                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |601| 
-    1456                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1456                      .dwpsn  file "../src_device/device.c",line 602,column 18,is_stmt,isa 0
     1457 0000009f 28A9          MOV       AL,#513               ; [CPU_ALU] |602| 
          000000a0 0201 
     1458 000000a1 9B46          MOV       AH,#70                ; [CPU_ALU] |602| 
@@ -1738,15 +1738,15 @@ device.asm                                                           PAGE   29
     1463              
     1464 000000a2 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |602| 
          000000a3 0000 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   30
 
     1465                      ; call occurs [#||GPIO_setPinConfig||] ; [] |602| 
-    1466                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1466                      .dwpsn  file "../src_device/device.c",line 603,column 18,is_stmt,isa 0
     1467 000000a4 0221          MOVB      ACC,#33               ; [CPU_ALU] |603| 
-    1468                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1468                      .dwpsn  file "../src_device/device.c",line 605,column 17,is_stmt,isa 0
     1469 000000a5 FFEF          B         ||$C$L16||,UNC        ; [CPU_ALU] |605| 
          000000a6 00B4 
     1470                      ; branch occurs ; [] |605| 
@@ -1762,16 +1762,16 @@ device.asm                                                           PAGE   30
     1478                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
     1479 000000ad 5001          ORB       AL,#0x01              ; [CPU_ALU] |3006| 
     1480 000000ae 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |3006| 
-    1481                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1481                      .dwpsn  file "../src_device/device.c",line 553,column 18,is_stmt,isa 0
     1482 000000af 9A00          MOVB      AL,#0                 ; [CPU_ALU] |553| 
     1483 000000b0 28A8          MOV       AH,#42405             ; [CPU_ALU] |553| 
          000000b1 A5A5 
     1484 000000b2 8F05          MOVL      XAR4,#381440          ; [CPU_ARAU] |553| 
          000000b3 D200 
     1485 000000b4 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |553| 
-    1486                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1486                      .dwpsn  file "../src_device/device.c",line 554,column 18,is_stmt,isa 0
     1487 000000b5 761A          EDIS      ; [CPU_ALU] |554| 
-    1488                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1488                      .dwpsn  file "../src_device/device.c",line 556,column 18,is_stmt,isa 0
     1489 000000b6 D400          MOVB      XAR4,#0               ; [CPU_ALU] |556| 
     1490 000000b7 0210          MOVB      ACC,#16               ; [CPU_ALU] |556| 
     1491              $C$DW$70        .dwtag  DW_TAG_TI_branch
@@ -1782,7 +1782,7 @@ device.asm                                                           PAGE   30
     1496 000000b8 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |556| 
          000000b9 0000 
     1497                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |556| 
-    1498                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1498                      .dwpsn  file "../src_device/device.c",line 557,column 18,is_stmt,isa 0
     1499 000000ba D403          MOVB      XAR4,#3               ; [CPU_ALU] |557| 
     1500 000000bb 0210          MOVB      ACC,#16               ; [CPU_ALU] |557| 
     1501              $C$DW$71        .dwtag  DW_TAG_TI_branch
@@ -1793,12 +1793,12 @@ device.asm                                                           PAGE   30
     1506 000000bc 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |557| 
          000000bd 0000 
     1507                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |557| 
-    1508                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1508                      .dwpsn  file "../src_device/device.c",line 558,column 18,is_stmt,isa 0
     1509 000000be 8F08          MOVL      XAR4,#524289          ; [CPU_ARAU] |558| 
          000000bf 0001 
     1510 000000c0 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |558| 
     1511              $C$DW$72        .dwtag  DW_TAG_TI_branch
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   31
@@ -1810,7 +1810,7 @@ device.asm                                                           PAGE   31
     1516 000000c1 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |558| 
          000000c2 0000 
     1517                      ; call occurs [#||GPIO_setPinConfig||] ; [] |558| 
-    1518                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1518                      .dwpsn  file "../src_device/device.c",line 559,column 18,is_stmt,isa 0
     1519 000000c3 D402          MOVB      XAR4,#2               ; [CPU_ALU] |559| 
     1520 000000c4 0210          MOVB      ACC,#16               ; [CPU_ALU] |559| 
     1521              $C$DW$73        .dwtag  DW_TAG_TI_branch
@@ -1821,7 +1821,7 @@ device.asm                                                           PAGE   31
     1526 000000c5 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |559| 
          000000c6 0000 
     1527                      ; call occurs [#||GPIO_setControllerCore||] ; [] |559| 
-    1528                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1528                      .dwpsn  file "../src_device/device.c",line 561,column 18,is_stmt,isa 0
     1529 000000c7 D400          MOVB      XAR4,#0               ; [CPU_ALU] |561| 
     1530 000000c8 0211          MOVB      ACC,#17               ; [CPU_ALU] |561| 
     1531              $C$DW$74        .dwtag  DW_TAG_TI_branch
@@ -1832,7 +1832,7 @@ device.asm                                                           PAGE   31
     1536 000000c9 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |561| 
          000000ca 0000 
     1537                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |561| 
-    1538                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1538                      .dwpsn  file "../src_device/device.c",line 562,column 18,is_stmt,isa 0
     1539 000000cb D403          MOVB      XAR4,#3               ; [CPU_ALU] |562| 
     1540 000000cc 0211          MOVB      ACC,#17               ; [CPU_ALU] |562| 
     1541              $C$DW$75        .dwtag  DW_TAG_TI_branch
@@ -1843,7 +1843,7 @@ device.asm                                                           PAGE   31
     1546 000000cd 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |562| 
          000000ce 0000 
     1547                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |562| 
-    1548                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1548                      .dwpsn  file "../src_device/device.c",line 563,column 18,is_stmt,isa 0
     1549 000000cf 8F08          MOVL      XAR4,#524801          ; [CPU_ARAU] |563| 
          000000d0 0201 
     1550 000000d1 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |563| 
@@ -1855,10 +1855,10 @@ device.asm                                                           PAGE   31
     1556 000000d2 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |563| 
          000000d3 0000 
     1557                      ; call occurs [#||GPIO_setPinConfig||] ; [] |563| 
-    1558                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1558                      .dwpsn  file "../src_device/device.c",line 564,column 18,is_stmt,isa 0
     1559 000000d4 D402          MOVB      XAR4,#2               ; [CPU_ALU] |564| 
     1560 000000d5 0211          MOVB      ACC,#17               ; [CPU_ALU] |564| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   32
@@ -1871,7 +1871,7 @@ device.asm                                                           PAGE   32
     1566 000000d6 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |564| 
          000000d7 0000 
     1567                      ; call occurs [#||GPIO_setControllerCore||] ; [] |564| 
-    1568                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1568                      .dwpsn  file "../src_device/device.c",line 566,column 18,is_stmt,isa 0
     1569 000000d8 0212          MOVB      ACC,#18               ; [CPU_ALU] |566| 
     1570 000000d9 D400          MOVB      XAR4,#0               ; [CPU_ALU] |566| 
     1571              $C$DW$78        .dwtag  DW_TAG_TI_branch
@@ -1882,7 +1882,7 @@ device.asm                                                           PAGE   32
     1576 000000da 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |566| 
          000000db 0000 
     1577                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |566| 
-    1578                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1578                      .dwpsn  file "../src_device/device.c",line 567,column 18,is_stmt,isa 0
     1579 000000dc D403          MOVB      XAR4,#3               ; [CPU_ALU] |567| 
     1580 000000dd 0212          MOVB      ACC,#18               ; [CPU_ALU] |567| 
     1581              $C$DW$79        .dwtag  DW_TAG_TI_branch
@@ -1893,7 +1893,7 @@ device.asm                                                           PAGE   32
     1586 000000de 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |567| 
          000000df 0000 
     1587                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |567| 
-    1588                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1588                      .dwpsn  file "../src_device/device.c",line 568,column 18,is_stmt,isa 0
     1589 000000e0 8F08          MOVL      XAR4,#525313          ; [CPU_ARAU] |568| 
          000000e1 0401 
     1590 000000e2 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |568| 
@@ -1905,7 +1905,7 @@ device.asm                                                           PAGE   32
     1596 000000e3 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |568| 
          000000e4 0000 
     1597                      ; call occurs [#||GPIO_setPinConfig||] ; [] |568| 
-    1598                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1598                      .dwpsn  file "../src_device/device.c",line 569,column 18,is_stmt,isa 0
     1599 000000e5 D402          MOVB      XAR4,#2               ; [CPU_ALU] |569| 
     1600 000000e6 0212          MOVB      ACC,#18               ; [CPU_ALU] |569| 
     1601              $C$DW$81        .dwtag  DW_TAG_TI_branch
@@ -1916,9 +1916,9 @@ device.asm                                                           PAGE   32
     1606 000000e7 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |569| 
          000000e8 0000 
     1607                      ; call occurs [#||GPIO_setControllerCore||] ; [] |569| 
-    1608                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1608                      .dwpsn  file "../src_device/device.c",line 571,column 18,is_stmt,isa 0
     1609 000000e9 D401          MOVB      XAR4,#1               ; [CPU_ALU] |571| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   33
@@ -1932,7 +1932,7 @@ device.asm                                                           PAGE   33
     1616 000000eb 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |571| 
          000000ec 0000 
     1617                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |571| 
-    1618                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1618                      .dwpsn  file "../src_device/device.c",line 572,column 18,is_stmt,isa 0
     1619 000000ed D403          MOVB      XAR4,#3               ; [CPU_ALU] |572| 
     1620 000000ee 0213          MOVB      ACC,#19               ; [CPU_ALU] |572| 
     1621              $C$DW$83        .dwtag  DW_TAG_TI_branch
@@ -1943,7 +1943,7 @@ device.asm                                                           PAGE   33
     1626 000000ef 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |572| 
          000000f0 0000 
     1627                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |572| 
-    1628                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1628                      .dwpsn  file "../src_device/device.c",line 573,column 18,is_stmt,isa 0
     1629 000000f1 8F08          MOVL      XAR4,#525824          ; [CPU_ARAU] |573| 
          000000f2 0600 
     1630 000000f3 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |573| 
@@ -1955,9 +1955,9 @@ device.asm                                                           PAGE   33
     1636 000000f4 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |573| 
          000000f5 0000 
     1637                      ; call occurs [#||GPIO_setPinConfig||] ; [] |573| 
-    1638                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1638                      .dwpsn  file "../src_device/device.c",line 574,column 18,is_stmt,isa 0
     1639 000000f6 0213          MOVB      ACC,#19               ; [CPU_ALU] |574| 
-    1640                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1640                      .dwpsn  file "../src_device/device.c",line 576,column 17,is_stmt,isa 0
     1641 000000f7 6F62          B         ||$C$L16||,UNC        ; [CPU_ALU] |576| 
     1642                      ; branch occurs ; [] |576| 
     1643 000000f8       ||$C$L13||:    
@@ -1971,32 +1971,32 @@ device.asm                                                           PAGE   33
     1649 000000fd 7622          EALLOW    ; [CPU_ALU] |3005| 
     1650                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
     1651 000000fe 5001          ORB       AL,#0x01              ; [CPU_ALU] |3006| 
-    1652                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1652                      .dwpsn  file "../src_device/device.c",line 524,column 18,is_stmt,isa 0
     1653 000000ff 8F45          MOVL      XAR5,#381440          ; [CPU_ARAU] |524| 
          00000100 D200 
-    1654                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1654                      .dwpsn  file "../src_device/device.c",line 525,column 18,is_stmt,isa 0
     1655 00000101 BE02          MOVB      XAR6,#2               ; [CPU_ALU] |525| 
     1656                      .dwpsn  file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysct
     1657 00000102 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |3006| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   34
 
-    1658                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1658                      .dwpsn  file "../src_device/device.c",line 524,column 18,is_stmt,isa 0
     1659 00000103 9A00          MOVB      AL,#0                 ; [CPU_ALU] |524| 
     1660 00000104 28A8          MOV       AH,#42405             ; [CPU_ALU] |524| 
          00000105 A5A5 
-    1661                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1661                      .dwpsn  file "../src_device/device.c",line 525,column 18,is_stmt,isa 0
     1662 00000106 8F05          MOVL      XAR4,#381484          ; [CPU_ARAU] |525| 
          00000107 D22C 
-    1663                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1663                      .dwpsn  file "../src_device/device.c",line 524,column 18,is_stmt,isa 0
     1664 00000108 1EC5          MOVL      *+XAR5[0],ACC         ; [CPU_ALU] |524| 
-    1665                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1665                      .dwpsn  file "../src_device/device.c",line 525,column 18,is_stmt,isa 0
     1666 00000109 C2C4          MOVL      *+XAR4[0],XAR6        ; [CPU_ALU] |525| 
-    1667                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1667                      .dwpsn  file "../src_device/device.c",line 526,column 18,is_stmt,isa 0
     1668 0000010a 761A          EDIS      ; [CPU_ALU] |526| 
-    1669                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1669                      .dwpsn  file "../src_device/device.c",line 528,column 18,is_stmt,isa 0
     1670 0000010b D401          MOVB      XAR4,#1               ; [CPU_ALU] |528| 
     1671 0000010c 021D          MOVB      ACC,#29               ; [CPU_ALU] |528| 
     1672              $C$DW$85        .dwtag  DW_TAG_TI_branch
@@ -2007,7 +2007,7 @@ device.asm                                                           PAGE   34
     1677 0000010d 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |528| 
          0000010e 0000 
     1678                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |528| 
-    1679                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1679                      .dwpsn  file "../src_device/device.c",line 529,column 18,is_stmt,isa 0
     1680 0000010f D403          MOVB      XAR4,#3               ; [CPU_ALU] |529| 
     1681 00000110 021D          MOVB      ACC,#29               ; [CPU_ALU] |529| 
     1682              $C$DW$86        .dwtag  DW_TAG_TI_branch
@@ -2018,7 +2018,7 @@ device.asm                                                           PAGE   34
     1687 00000111 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |529| 
          00000112 0000 
     1688                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |529| 
-    1689                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1689                      .dwpsn  file "../src_device/device.c",line 530,column 18,is_stmt,isa 0
     1690 00000113 8F08          MOVL      XAR4,#530945          ; [CPU_ARAU] |530| 
          00000114 1A01 
     1691 00000115 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |530| 
@@ -2030,7 +2030,7 @@ device.asm                                                           PAGE   34
     1697 00000116 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |530| 
          00000117 0000 
     1698                      ; call occurs [#||GPIO_setPinConfig||] ; [] |530| 
-    1699                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1699                      .dwpsn  file "../src_device/device.c",line 531,column 18,is_stmt,isa 0
     1700 00000118 D402          MOVB      XAR4,#2               ; [CPU_ALU] |531| 
     1701 00000119 021D          MOVB      ACC,#29               ; [CPU_ALU] |531| 
     1702              $C$DW$88        .dwtag  DW_TAG_TI_branch
@@ -2038,7 +2038,7 @@ device.asm                                                           PAGE   34
     1704                      .dwattr $C$DW$88, DW_AT_name("GPIO_setControllerCore")
     1705                      .dwattr $C$DW$88, DW_AT_TI_call
     1706              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   35
@@ -2046,7 +2046,7 @@ device.asm                                                           PAGE   35
     1707 0000011a 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |531| 
          0000011b 0000 
     1708                      ; call occurs [#||GPIO_setControllerCore||] ; [] |531| 
-    1709                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1709                      .dwpsn  file "../src_device/device.c",line 533,column 18,is_stmt,isa 0
     1710 0000011c D400          MOVB      XAR4,#0               ; [CPU_ALU] |533| 
     1711 0000011d 021C          MOVB      ACC,#28               ; [CPU_ALU] |533| 
     1712              $C$DW$89        .dwtag  DW_TAG_TI_branch
@@ -2057,7 +2057,7 @@ device.asm                                                           PAGE   35
     1717 0000011e 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |533| 
          0000011f 0000 
     1718                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |533| 
-    1719                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1719                      .dwpsn  file "../src_device/device.c",line 534,column 18,is_stmt,isa 0
     1720 00000120 D403          MOVB      XAR4,#3               ; [CPU_ALU] |534| 
     1721 00000121 021C          MOVB      ACC,#28               ; [CPU_ALU] |534| 
     1722              $C$DW$90        .dwtag  DW_TAG_TI_branch
@@ -2068,7 +2068,7 @@ device.asm                                                           PAGE   35
     1727 00000122 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |534| 
          00000123 0000 
     1728                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |534| 
-    1729                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1729                      .dwpsn  file "../src_device/device.c",line 535,column 18,is_stmt,isa 0
     1730 00000124 8F08          MOVL      XAR4,#530433          ; [CPU_ARAU] |535| 
          00000125 1801 
     1731 00000126 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |535| 
@@ -2080,16 +2080,16 @@ device.asm                                                           PAGE   35
     1737 00000127 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |535| 
          00000128 0000 
     1738                      ; call occurs [#||GPIO_setPinConfig||] ; [] |535| 
-    1739                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1739                      .dwpsn  file "../src_device/device.c",line 536,column 18,is_stmt,isa 0
     1740 00000129 021C          MOVB      ACC,#28               ; [CPU_ALU] |536| 
-    1741                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1741                      .dwpsn  file "../src_device/device.c",line 538,column 17,is_stmt,isa 0
     1742 0000012a 6F2F          B         ||$C$L16||,UNC        ; [CPU_ALU] |538| 
     1743                      ; branch occurs ; [] |538| 
     1744 0000012b       ||$C$L14||:    
-    1745                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1745                      .dwpsn  file "../src_device/device.c",line 609,column 22,is_stmt,isa 0
     1746 0000012b D13A          MOVB      XAR1,#58              ; [CPU_ALU] |609| 
     1747 0000012c       ||$C$L15||:    
-    1748                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1748                      .dwpsn  file "../src_device/device.c",line 611,column 22,is_stmt,isa 0
     1749 0000012c 0EA1          MOVU      ACC,AR1               ; [CPU_ALU] |611| 
     1750 0000012d D400          MOVB      XAR4,#0               ; [CPU_ALU] |611| 
     1751              $C$DW$92        .dwtag  DW_TAG_TI_branch
@@ -2098,14 +2098,14 @@ device.asm                                                           PAGE   35
     1754                      .dwattr $C$DW$92, DW_AT_TI_call
     1755              
     1756 0000012e 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |611| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   36
 
          0000012f 0000 
     1757                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |611| 
-    1758                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1758                      .dwpsn  file "../src_device/device.c",line 612,column 22,is_stmt,isa 0
     1759 00000130 D403          MOVB      XAR4,#3               ; [CPU_ALU] |612| 
     1760 00000131 0EA1          MOVU      ACC,AR1               ; [CPU_ALU] |612| 
     1761              $C$DW$93        .dwtag  DW_TAG_TI_branch
@@ -2116,7 +2116,7 @@ device.asm                                                           PAGE   36
     1766 00000132 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |612| 
          00000133 0000 
     1767                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |612| 
-    1768                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1768                      .dwpsn  file "../src_device/device.c",line 613,column 22,is_stmt,isa 0
     1769 00000134 D402          MOVB      XAR4,#2               ; [CPU_ALU] |613| 
     1770 00000135 0EA1          MOVU      ACC,AR1               ; [CPU_ALU] |613| 
     1771              $C$DW$94        .dwtag  DW_TAG_TI_branch
@@ -2127,13 +2127,13 @@ device.asm                                                           PAGE   36
     1776 00000136 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |613| 
          00000137 0000 
     1777                      ; call occurs [#||GPIO_setControllerCore||] ; [] |613| 
-    1778                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1778                      .dwpsn  file "../src_device/device.c",line 609,column 29,is_stmt,isa 0
     1779 00000138 D901          ADDB      XAR1,#1               ; [CPU_ALU] |609| 
     1780 00000139 92A1          MOV       AL,AR1                ; [CPU_ALU] |609| 
     1781 0000013a 5241          CMPB      AL,#65                ; [CPU_ALU] |609| 
     1782 0000013b 69F1          B         ||$C$L15||,LOS        ; [CPU_ALU] |609| 
     1783                      ; branchcc occurs ; [] |609| 
-    1784                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1784                      .dwpsn  file "../src_device/device.c",line 616,column 18,is_stmt,isa 0
     1785 0000013c 0245          MOVB      ACC,#69               ; [CPU_ALU] |616| 
     1786 0000013d D400          MOVB      XAR4,#0               ; [CPU_ALU] |616| 
     1787              $C$DW$95        .dwtag  DW_TAG_TI_branch
@@ -2144,7 +2144,7 @@ device.asm                                                           PAGE   36
     1792 0000013e 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |616| 
          0000013f 0000 
     1793                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |616| 
-    1794                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1794                      .dwpsn  file "../src_device/device.c",line 617,column 18,is_stmt,isa 0
     1795 00000140 D403          MOVB      XAR4,#3               ; [CPU_ALU] |617| 
     1796 00000141 0245          MOVB      ACC,#69               ; [CPU_ALU] |617| 
     1797              $C$DW$96        .dwtag  DW_TAG_TI_branch
@@ -2155,10 +2155,10 @@ device.asm                                                           PAGE   36
     1802 00000142 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |617| 
          00000143 0000 
     1803                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |617| 
-    1804                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1804                      .dwpsn  file "../src_device/device.c",line 618,column 18,is_stmt,isa 0
     1805 00000144 FF29          MOV       ACC,#17157 << 9       ; [CPU_ALU] |618| 
          00000145 4305 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   37
@@ -2171,7 +2171,7 @@ device.asm                                                           PAGE   37
     1811 00000146 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |618| 
          00000147 0000 
     1812                      ; call occurs [#||GPIO_setPinConfig||] ; [] |618| 
-    1813                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1813                      .dwpsn  file "../src_device/device.c",line 619,column 18,is_stmt,isa 0
     1814 00000148 D402          MOVB      XAR4,#2               ; [CPU_ALU] |619| 
     1815 00000149 0245          MOVB      ACC,#69               ; [CPU_ALU] |619| 
     1816              $C$DW$98        .dwtag  DW_TAG_TI_branch
@@ -2182,7 +2182,7 @@ device.asm                                                           PAGE   37
     1821 0000014a 7640!         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |619| 
          0000014b 0000 
     1822                      ; call occurs [#||GPIO_setControllerCore||] ; [] |619| 
-    1823                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1823                      .dwpsn  file "../src_device/device.c",line 621,column 18,is_stmt,isa 0
     1824 0000014c D400          MOVB      XAR4,#0               ; [CPU_ALU] |621| 
     1825 0000014d 0246          MOVB      ACC,#70               ; [CPU_ALU] |621| 
     1826              $C$DW$99        .dwtag  DW_TAG_TI_branch
@@ -2193,7 +2193,7 @@ device.asm                                                           PAGE   37
     1831 0000014e 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |621| 
          0000014f 0000 
     1832                      ; call occurs [#||GPIO_setDirectionMode||] ; [] |621| 
-    1833                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1833                      .dwpsn  file "../src_device/device.c",line 622,column 18,is_stmt,isa 0
     1834 00000150 D403          MOVB      XAR4,#3               ; [CPU_ALU] |622| 
     1835 00000151 0246          MOVB      ACC,#70               ; [CPU_ALU] |622| 
     1836              $C$DW$100       .dwtag  DW_TAG_TI_branch
@@ -2204,7 +2204,7 @@ device.asm                                                           PAGE   37
     1841 00000152 7640!         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |622| 
          00000153 0000 
     1842                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |622| 
-    1843                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1843                      .dwpsn  file "../src_device/device.c",line 623,column 18,is_stmt,isa 0
     1844 00000154 FF2A          MOV       ACC,#8579 << 10       ; [CPU_ALU] |623| 
          00000155 2183 
     1845              $C$DW$101       .dwtag  DW_TAG_TI_branch
@@ -2215,10 +2215,10 @@ device.asm                                                           PAGE   37
     1850 00000156 7640!         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |623| 
          00000157 0000 
     1851                      ; call occurs [#||GPIO_setPinConfig||] ; [] |623| 
-    1852                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1852                      .dwpsn  file "../src_device/device.c",line 624,column 18,is_stmt,isa 0
     1853 00000158 0246          MOVB      ACC,#70               ; [CPU_ALU] |624| 
     1854 00000159       ||$C$L16||:    
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   38
@@ -2233,31 +2233,31 @@ device.asm                                                           PAGE   38
          0000015b 0000 
     1862                      ; call occurs [#||GPIO_setControllerCore||] ; [] |624| 
     1863 0000015c       ||$C$L17||:    
-    1864                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1864                      .dwpsn  file "../src_device/device.c",line 663,column 9,is_stmt,isa 0
     1865 0000015c 7685          MOVL      XAR6,#327714          ; [CPU_ARAU] |663| 
          0000015d 0022 
-    1866                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1866                      .dwpsn  file "../src_device/device.c",line 668,column 9,is_stmt,isa 0
     1867 0000015e 28AB          MOV       PL,#19                ; [CPU_ALU] |668| 
          0000015f 0013 
     1868 00000160 2BAA          MOV       PH,#0                 ; [CPU_ALU] |668| 
     1869 00000161 8F45          MOVL      XAR5,#327696          ; [CPU_ARAU] |668| 
          00000162 0010 
-    1870                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1870                      .dwpsn  file "../src_device/device.c",line 673,column 9,is_stmt,isa 0
     1871 00000163 9A01          MOV       AL,#1                 ; [CPU_ALU] |673| 
     1872 00000164 28A8          MOV       AH,#32768             ; [CPU_ALU] |673| 
          00000165 8000 
     1873 00000166 8F05          MOVL      XAR4,#327684          ; [CPU_ARAU] |673| 
          00000167 0004 
-    1874                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1874                      .dwpsn  file "../src_device/device.c",line 676,column 5,is_stmt,isa 0
     1875 00000168 B600          MOVB      XAR7,#0               ; [CPU_ALU] |676| 
-    1876                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1876                      .dwpsn  file "../src_device/device.c",line 663,column 9,is_stmt,isa 0
     1877 00000169 AAC6          MOVL      *+XAR6[0],XAR2        ; [CPU_ALU] |663| 
-    1878                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1878                      .dwpsn  file "../src_device/device.c",line 668,column 9,is_stmt,isa 0
     1879 0000016a A9C5          MOVL      *+XAR5[0],P           ; [CPU_ALU] |668| 
-    1880                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1880                      .dwpsn  file "../src_device/device.c",line 673,column 9,is_stmt,isa 0
     1881 0000016b 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |673| 
     1882 0000016c       ||$C$L18||:    
-    1883                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/sou
+    1883                      .dwpsn  file "../src_device/device.c",line 676,column 5,is_stmt,isa 0
     1884 0000016c 86BE          MOVL      XAR2,*--SP            ; [CPU_ALU] |676| 
     1885                      .dwcfi  cfa_offset, -4
     1886                      .dwcfi  restore_reg, 9
@@ -2271,14 +2271,14 @@ device.asm                                                           PAGE   38
     1894              
     1895 0000016f 0006          LRETR     ; [CPU_ALU] 
     1896                      ; return occurs ; [] 
-    1897                      .dwattr $C$DW$53, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_sup
+    1897                      .dwattr $C$DW$53, DW_AT_TI_end_file("../src_device/device.c")
     1898                      .dwattr $C$DW$53, DW_AT_TI_end_line(0x2a5)
     1899                      .dwattr $C$DW$53, DW_AT_TI_end_column(0x01)
     1900                      .dwendentry
     1901                      .dwendtag $C$DW$53
     1902              
     1903              ;**************************************************************
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   39
@@ -2338,7 +2338,7 @@ device.asm                                                           PAGE   39
     1956                      .dwattr $C$DW$104, DW_AT_decl_column(0x05)
     1957              
     1958              $C$DW$105       .dwtag  DW_TAG_enumerator
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   40
@@ -2398,7 +2398,7 @@ device.asm                                                           PAGE   40
     2011                      .dwattr $C$DW$112, DW_AT_decl_line(0x18b)
     2012                      .dwattr $C$DW$112, DW_AT_decl_column(0x05)
     2013              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   41
@@ -2458,7 +2458,7 @@ device.asm                                                           PAGE   41
     2066                      .dwattr $C$DW$120, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f
     2067                      .dwattr $C$DW$120, DW_AT_decl_line(0x193)
     2068                      .dwattr $C$DW$120, DW_AT_decl_column(0x05)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   42
@@ -2518,7 +2518,7 @@ device.asm                                                           PAGE   42
     2121                      .dwattr $C$DW$128, DW_AT_const_value(0x203)
     2122                      .dwattr $C$DW$128, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f
     2123                      .dwattr $C$DW$128, DW_AT_decl_line(0x19b)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   43
@@ -2578,7 +2578,7 @@ device.asm                                                           PAGE   43
     2176                      .dwattr $C$DW$136, DW_AT_name("SYSCTL_PERIPH_CLK_SD2")
     2177                      .dwattr $C$DW$136, DW_AT_const_value(0x106)
     2178                      .dwattr $C$DW$136, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   44
@@ -2638,7 +2638,7 @@ device.asm                                                           PAGE   44
     2231              $C$DW$144       .dwtag  DW_TAG_enumerator
     2232                      .dwattr $C$DW$144, DW_AT_name("SYSCTL_PERIPH_CLK_I2CA")
     2233                      .dwattr $C$DW$144, DW_AT_const_value(0x09)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   45
@@ -2698,7 +2698,7 @@ device.asm                                                           PAGE   45
     2286              
     2287              $C$DW$152       .dwtag  DW_TAG_enumerator
     2288                      .dwattr $C$DW$152, DW_AT_name("SYSCTL_PERIPH_CLK_ADCA")
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   46
@@ -2758,7 +2758,7 @@ device.asm                                                           PAGE   46
     2341                      .dwattr $C$DW$159, DW_AT_decl_column(0x05)
     2342              
     2343              $C$DW$160       .dwtag  DW_TAG_enumerator
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   47
@@ -2818,7 +2818,7 @@ device.asm                                                           PAGE   47
     2396              
     2397                      .dwendtag $C$DW$TU$19
     2398              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   48
@@ -2878,7 +2878,7 @@ device.asm                                                           PAGE   48
     2451              
     2452              $C$DW$172       .dwtag  DW_TAG_enumerator
     2453                      .dwattr $C$DW$172, DW_AT_name("SYSCTL_LSPCLK_PRESCALE_10")
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   49
@@ -2938,7 +2938,7 @@ device.asm                                                           PAGE   49
     2506                      .dwattr $C$DW$176, DW_AT_name("SYSCTL_CPUSEL1_ECAP")
     2507                      .dwattr $C$DW$176, DW_AT_const_value(0x01)
     2508                      .dwattr $C$DW$176, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   50
@@ -2998,7 +2998,7 @@ device.asm                                                           PAGE   50
     2561              $C$DW$184       .dwtag  DW_TAG_enumerator
     2562                      .dwattr $C$DW$184, DW_AT_name("SYSCTL_CPUSEL11_ADC")
     2563                      .dwattr $C$DW$184, DW_AT_const_value(0x0b)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   51
@@ -3058,7 +3058,7 @@ device.asm                                                           PAGE   51
     2616                      .dwattr $C$DW$188, DW_AT_const_value(0x01)
     2617                      .dwattr $C$DW$188, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f
     2618                      .dwattr $C$DW$188, DW_AT_decl_line(0x26e)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   52
@@ -3118,7 +3118,7 @@ device.asm                                                           PAGE   52
     2671                      .dwattr $C$DW$192, DW_AT_decl_line(0x319)
     2672                      .dwattr $C$DW$192, DW_AT_decl_column(0x05)
     2673              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   53
@@ -3178,7 +3178,7 @@ device.asm                                                           PAGE   53
     2726                      .dwattr $C$DW$T$29, DW_AT_byte_size(0x01)
     2727              $C$DW$197       .dwtag  DW_TAG_enumerator
     2728                      .dwattr $C$DW$197, DW_AT_name("GPIO_PORT_A")
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   54
@@ -3238,7 +3238,7 @@ device.asm                                                           PAGE   54
     2781                      .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$29)
     2782                      .dwattr $C$DW$T$30, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/
     2783                      .dwattr $C$DW$T$30, DW_AT_decl_line(0xc4)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   55
@@ -3298,7 +3298,7 @@ device.asm                                                           PAGE   55
     2836                      .dwattr $C$DW$205, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f
     2837                      .dwattr $C$DW$205, DW_AT_decl_line(0x97)
     2838                      .dwattr $C$DW$205, DW_AT_decl_column(0x05)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   56
@@ -3358,7 +3358,7 @@ device.asm                                                           PAGE   56
     2891                      .dwattr $C$DW$209, DW_AT_decl_column(0x05)
     2892              
     2893              $C$DW$210       .dwtag  DW_TAG_enumerator
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   57
@@ -3418,7 +3418,7 @@ device.asm                                                           PAGE   57
     2946                      .dwattr $C$DW$T$4, DW_AT_name("bool")
     2947                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
     2948              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   58
@@ -3478,7 +3478,7 @@ device.asm                                                           PAGE   58
     3001              
     3002              $C$DW$TU$10     .dwtag  DW_TAG_type_unit
     3003                      .dwmtype  $C$DW$T$10
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   59
@@ -3538,7 +3538,7 @@ device.asm                                                           PAGE   59
     3056              $C$DW$TU$13     .dwtag  DW_TAG_type_unit
     3057                      .dwmtype  $C$DW$T$13
     3058              $C$DW$T$13      .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   60
@@ -3598,7 +3598,7 @@ device.asm                                                           PAGE   60
     3111              $C$DW$TU$15     .dwtag  DW_TAG_type_unit
     3112                      .dwmtype  $C$DW$T$15
     3113              $C$DW$T$15      .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   61
@@ -3658,7 +3658,7 @@ device.asm                                                           PAGE   61
     3166                      .dwattr $C$DW$T$57, DW_AT_address_class(0x20)
     3167              
     3168                      .dwendtag $C$DW$TU$57
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:17 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 device.asm                                                           PAGE   62

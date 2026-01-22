@@ -1,12 +1,12 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Wed Jan 21 17:05:16 2026                 *
+;* Date/Time created: Thu Jan 22 11:16:45 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$CU, DW_AT_name("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\fcl_f2837x_tmdxiddk\f2837x_RAM")
@@ -379,7 +379,7 @@ $C$DW$56	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$56, DW_AT_location[DW_OP_addr ||tformatRxData||]
 	.dwattr $C$DW$56, DW_AT_type(*$C$DW$T$113)
 	.dwattr $C$DW$56, DW_AT_external
-	.dwattr $C$DW$56, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$56, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$56, DW_AT_decl_line(0x40)
 	.dwattr $C$DW$56, DW_AT_decl_column(0x13)
 
@@ -391,7 +391,7 @@ $C$DW$57	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$57, DW_AT_location[DW_OP_addr ||tformatData||]
 	.dwattr $C$DW$57, DW_AT_type(*$C$DW$T$56)
 	.dwattr $C$DW$57, DW_AT_external
-	.dwattr $C$DW$57, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$57, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$57, DW_AT_decl_line(0x3f)
 	.dwattr $C$DW$57, DW_AT_decl_column(0x17)
 
@@ -403,13 +403,13 @@ $C$DW$58	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$58, DW_AT_location[DW_OP_addr ||tformatCRCtable||]
 	.dwattr $C$DW$58, DW_AT_type(*$C$DW$T$111)
 	.dwattr $C$DW$58, DW_AT_external
-	.dwattr $C$DW$58, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$58, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$58, DW_AT_decl_line(0x39)
 	.dwattr $C$DW$58, DW_AT_decl_column(0x0a)
 
 	.sblock	".bss"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{CF5C1DB4-7A11-4071-8755-B658E577CD0C} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{14E4BFC8-12AE-4C1E-A3DD-598E291DE491} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{CB156BED-6254-48C6-B573-B85B003F2B4B} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{9B770024-8A1C-43B3-AEBD-30F154A632F0} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{0ABB868F-8BB3-4C76-84D3-27E917C38949} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{626C2DA2-3A5B-453A-873E-6F4FF9E36EF7} 
 	.sect	".text:tformat_setupGPIO"
 	.clink
 	.global	||tformat_setupGPIO||
@@ -420,11 +420,11 @@ $C$DW$59	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$59, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$59, DW_AT_linkage_name("tformat_setupGPIO")
 	.dwattr $C$DW$59, DW_AT_external
-	.dwattr $C$DW$59, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$59, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$59, DW_AT_decl_line(0x86)
 	.dwattr $C$DW$59, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$59, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 135,column 1,is_stmt,address ||tformat_setupGPIO||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 135,column 1,is_stmt,address ||tformat_setupGPIO||,isa 0
 
 	.dwfde $C$DW$CIE, ||tformat_setupGPIO||
 
@@ -440,7 +440,7 @@ $C$DW$59	.dwtag  DW_TAG_subprogram
 ||tformat_setupGPIO||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 141,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 141,column 5,is_stmt,isa 0
         MOVB      ACC,#7                ; [CPU_ALU] |141| 
         MOVB      XAR4,#0               ; [CPU_ALU] |141| 
 $C$DW$60	.dwtag  DW_TAG_TI_branch
@@ -450,7 +450,7 @@ $C$DW$60	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |141| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |141| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 142,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 142,column 5,is_stmt,isa 0
         MOVL      XAR4,#396801          ; [CPU_ARAU] |142| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |142| 
 $C$DW$61	.dwtag  DW_TAG_TI_branch
@@ -460,7 +460,7 @@ $C$DW$61	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |142| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |142| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 148,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 148,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |148| 
         MOVB      ACC,#24               ; [CPU_ALU] |148| 
 $C$DW$62	.dwtag  DW_TAG_TI_branch
@@ -470,7 +470,7 @@ $C$DW$62	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |148| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |148| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 149,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 149,column 5,is_stmt,isa 0
         MOVL      XAR4,#528390          ; [CPU_ARAU] |149| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |149| 
 $C$DW$63	.dwtag  DW_TAG_TI_branch
@@ -480,7 +480,7 @@ $C$DW$63	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |149| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |149| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 150,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 150,column 5,is_stmt,isa 0
         MOVB      XAR4,#3               ; [CPU_ALU] |150| 
         MOVB      ACC,#24               ; [CPU_ALU] |150| 
 $C$DW$64	.dwtag  DW_TAG_TI_branch
@@ -490,7 +490,7 @@ $C$DW$64	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |150| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |150| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 155,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 155,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |155| 
         MOVB      ACC,#25               ; [CPU_ALU] |155| 
 $C$DW$65	.dwtag  DW_TAG_TI_branch
@@ -500,7 +500,7 @@ $C$DW$65	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |155| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |155| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 156,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 156,column 5,is_stmt,isa 0
         MOVL      XAR4,#528902          ; [CPU_ARAU] |156| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |156| 
 $C$DW$66	.dwtag  DW_TAG_TI_branch
@@ -510,7 +510,7 @@ $C$DW$66	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |156| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |156| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 157,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 157,column 5,is_stmt,isa 0
         MOVB      XAR4,#3               ; [CPU_ALU] |157| 
         MOVB      ACC,#25               ; [CPU_ALU] |157| 
 $C$DW$67	.dwtag  DW_TAG_TI_branch
@@ -520,7 +520,7 @@ $C$DW$67	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |157| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |157| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 163,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 163,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |163| 
         MOVB      ACC,#26               ; [CPU_ALU] |163| 
 $C$DW$68	.dwtag  DW_TAG_TI_branch
@@ -530,7 +530,7 @@ $C$DW$68	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |163| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |163| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 164,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 164,column 5,is_stmt,isa 0
         MOVL      XAR4,#529414          ; [CPU_ARAU] |164| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |164| 
 $C$DW$69	.dwtag  DW_TAG_TI_branch
@@ -540,7 +540,7 @@ $C$DW$69	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |164| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |164| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 165,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 165,column 5,is_stmt,isa 0
         MOVB      XAR4,#3               ; [CPU_ALU] |165| 
         MOVB      ACC,#26               ; [CPU_ALU] |165| 
 $C$DW$70	.dwtag  DW_TAG_TI_branch
@@ -550,7 +550,7 @@ $C$DW$70	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |165| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |165| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 170,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 170,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |170| 
         MOVB      ACC,#27               ; [CPU_ALU] |170| 
 $C$DW$71	.dwtag  DW_TAG_TI_branch
@@ -560,7 +560,7 @@ $C$DW$71	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |170| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |170| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 171,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 171,column 5,is_stmt,isa 0
         MOVL      XAR4,#529926          ; [CPU_ARAU] |171| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |171| 
 $C$DW$72	.dwtag  DW_TAG_TI_branch
@@ -570,7 +570,7 @@ $C$DW$72	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |171| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |171| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 172,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 172,column 5,is_stmt,isa 0
         MOVB      XAR4,#3               ; [CPU_ALU] |172| 
         MOVB      ACC,#27               ; [CPU_ALU] |172| 
 $C$DW$73	.dwtag  DW_TAG_TI_branch
@@ -580,7 +580,7 @@ $C$DW$73	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |172| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |172| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 178,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 178,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |178| 
         MOVB      ACC,#34               ; [CPU_ALU] |178| 
 $C$DW$74	.dwtag  DW_TAG_TI_branch
@@ -590,7 +590,7 @@ $C$DW$74	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |178| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |178| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 179,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 179,column 5,is_stmt,isa 0
         MOV       AL,#1025              ; [CPU_ALU] |179| 
         MOV       AH,#70                ; [CPU_ALU] |179| 
 $C$DW$75	.dwtag  DW_TAG_TI_branch
@@ -600,7 +600,7 @@ $C$DW$75	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |179| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |179| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 184,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 184,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |184| 
         MOVB      ACC,#32               ; [CPU_ALU] |184| 
 $C$DW$76	.dwtag  DW_TAG_TI_branch
@@ -610,7 +610,7 @@ $C$DW$76	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |184| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |184| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 185,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 185,column 5,is_stmt,isa 0
         MOVB      XAR4,#1               ; [CPU_ALU] |185| 
         MOVB      ACC,#32               ; [CPU_ALU] |185| 
 $C$DW$77	.dwtag  DW_TAG_TI_branch
@@ -626,7 +626,7 @@ $C$DW$78	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$59, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$59, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$59, DW_AT_TI_end_line(0xba)
 	.dwattr $C$DW$59, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -642,11 +642,11 @@ $C$DW$79	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$79, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$79, DW_AT_linkage_name("tformat_configEPWM4")
 	.dwattr $C$DW$79, DW_AT_external
-	.dwattr $C$DW$79, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$79, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$79, DW_AT_decl_line(0x121)
 	.dwattr $C$DW$79, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$79, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 290,column 1,is_stmt,address ||tformat_configEPWM4||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 290,column 1,is_stmt,address ||tformat_configEPWM4||,isa 0
 
 	.dwfde $C$DW$CIE, ||tformat_configEPWM4||
 
@@ -685,7 +685,7 @@ $C$DW$80	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$79, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$79, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$79, DW_AT_TI_end_line(0x138)
 	.dwattr $C$DW$79, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -701,11 +701,11 @@ $C$DW$81	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$81, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$81, DW_AT_linkage_name("tformat_configXBAR")
 	.dwattr $C$DW$81, DW_AT_external
-	.dwattr $C$DW$81, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$81, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$81, DW_AT_decl_line(0xbc)
 	.dwattr $C$DW$81, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$81, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 189,column 1,is_stmt,address ||tformat_configXBAR||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 189,column 1,is_stmt,address ||tformat_configXBAR||,isa 0
 
 	.dwfde $C$DW$CIE, ||tformat_configXBAR||
 
@@ -728,7 +728,7 @@ $C$DW$81	.dwtag  DW_TAG_subprogram
         MOV       *(0:0x7900),AL        ; [CPU_ALU] |971| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 973,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |973| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 194,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 194,column 5,is_stmt,isa 0
         MOV       AH,#513               ; [CPU_ALU] |194| 
         MOVB      AL,#0                 ; [CPU_ALU] |194| 
 $C$DW$82	.dwtag  DW_TAG_TI_branch
@@ -746,7 +746,7 @@ $C$DW$82	.dwtag  DW_TAG_TI_branch
         MOV32     *(0:0x7a60),ACC       ; [CPU_FPU] |1075| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 1077,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |1077| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 200,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 200,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |200| 
         MOV       AH,#6658              ; [CPU_ALU] |200| 
 $C$DW$83	.dwtag  DW_TAG_TI_branch
@@ -770,7 +770,7 @@ $C$DW$84	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$81, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$81, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$81, DW_AT_TI_end_line(0xca)
 	.dwattr $C$DW$81, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -786,11 +786,11 @@ $C$DW$85	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$85, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$85, DW_AT_linkage_name("tformat_configCLBConnect")
 	.dwattr $C$DW$85, DW_AT_external
-	.dwattr $C$DW$85, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$85, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$85, DW_AT_decl_line(0xcc)
 	.dwattr $C$DW$85, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$85, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 205,column 1,is_stmt,address ||tformat_configCLBConnect||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 205,column 1,is_stmt,address ||tformat_configCLBConnect||,isa 0
 
 	.dwfde $C$DW$CIE, ||tformat_configCLBConnect||
 
@@ -883,7 +883,7 @@ $C$DW$86	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$85, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$85, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$85, DW_AT_TI_end_line(0x107)
 	.dwattr $C$DW$85, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -899,11 +899,11 @@ $C$DW$87	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$87, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$87, DW_AT_linkage_name("tformat_init")
 	.dwattr $C$DW$87, DW_AT_external
-	.dwattr $C$DW$87, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$87, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$87, DW_AT_decl_line(0x45)
 	.dwattr $C$DW$87, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$87, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 70,column 1,is_stmt,address ||tformat_init||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 70,column 1,is_stmt,address ||tformat_init||,isa 0
 
 	.dwfde $C$DW$CIE, ||tformat_init||
 
@@ -930,7 +930,7 @@ $C$DW$87	.dwtag  DW_TAG_subprogram
         OR        *+XAR4[1],AH          ; [CPU_ALU] |995| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 996,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |996| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 77,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 77,column 5,is_stmt,isa 0
 $C$DW$88	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$88, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$88, DW_AT_name("tformat_configEPWM4")
@@ -938,7 +938,7 @@ $C$DW$88	.dwtag  DW_TAG_TI_branch
 
         LCR       #||tformat_configEPWM4|| ; [CPU_ALU] |77| 
         ; call occurs [#||tformat_configEPWM4||] ; [] |77| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 82,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 82,column 5,is_stmt,isa 0
         MOVB      AH,#1                 ; [CPU_ALU] |82| 
         MOVL      XAR4,#||tformatCRCtable|| ; [CPU_ARAU] |82| 
         MOVB      AL,#8                 ; [CPU_ALU] |82| 
@@ -949,7 +949,7 @@ $C$DW$89	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_generateCRCTable|| ; [CPU_ALU] |82| 
         ; call occurs [#||PM_tformat_generateCRCTable||] ; [] |82| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 89,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 89,column 5,is_stmt,isa 0
 $C$DW$90	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$90, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$90, DW_AT_name("tformat_setupGPIO")
@@ -957,7 +957,7 @@ $C$DW$90	.dwtag  DW_TAG_TI_branch
 
         LCR       #||tformat_setupGPIO|| ; [CPU_ALU] |89| 
         ; call occurs [#||tformat_setupGPIO||] ; [] |89| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 94,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 94,column 5,is_stmt,isa 0
 $C$DW$91	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$91, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$91, DW_AT_name("tformat_configXBAR")
@@ -965,7 +965,7 @@ $C$DW$91	.dwtag  DW_TAG_TI_branch
 
         LCR       #||tformat_configXBAR|| ; [CPU_ALU] |94| 
         ; call occurs [#||tformat_configXBAR||] ; [] |94| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 96,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 96,column 5,is_stmt,isa 0
         MOV       AL,#61568             ; [CPU_ALU] |96| 
         MOV       AH,#762               ; [CPU_ALU] |96| 
 $C$DW$92	.dwtag  DW_TAG_TI_branch
@@ -975,7 +975,7 @@ $C$DW$92	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupPeriph|| ; [CPU_ALU] |96| 
         ; call occurs [#||PM_tformat_setupPeriph||] ; [] |96| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 97,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 97,column 5,is_stmt,isa 0
         MOVB      ACC,#20               ; [CPU_ALU] |97| 
 $C$DW$93	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$93, DW_AT_low_pc(0x00)
@@ -984,7 +984,7 @@ $C$DW$93	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setFreq|| ; [CPU_ALU] |97| 
         ; call occurs [#||PM_tformat_setFreq||] ; [] |97| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 98,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 98,column 5,is_stmt,isa 0
 $C$DW$94	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$94, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$94, DW_AT_name("tformat_configCLBConnect")
@@ -995,13 +995,13 @@ $C$DW$94	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/spi.h",line 486,column 5,is_stmt,isa 0
         MOV       AR6,*(0:0x6110)       ; [CPU_ALU] |486| 
         AND       AR6,#0xff7f           ; [CPU_ALU] |486| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 104,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 104,column 5,is_stmt,isa 0
         MOVB      ACC,#4                ; [CPU_ALU] |104| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |104| 
         MOV       ACC,#24848            ; [CPU_ALU] |104| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/spi.h",line 486,column 5,is_stmt,isa 0
         MOV       *(0:0x6110),AR6       ; [CPU_ALU] |486| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 104,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 104,column 5,is_stmt,isa 0
 $C$DW$95	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$95, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$95, DW_AT_name("SPI_disableInterrupt")
@@ -1009,7 +1009,7 @@ $C$DW$95	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SPI_disableInterrupt|| ; [CPU_ALU] |104| 
         ; call occurs [#||SPI_disableInterrupt||] ; [] |104| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 109,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 109,column 5,is_stmt,isa 0
         MOVB      ACC,#4                ; [CPU_ALU] |109| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |109| 
         MOV       ACC,#24848            ; [CPU_ALU] |109| 
@@ -1020,7 +1020,7 @@ $C$DW$96	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SPI_clearInterruptStatus|| ; [CPU_ALU] |109| 
         ; call occurs [#||SPI_clearInterruptStatus||] ; [] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 110,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 110,column 5,is_stmt,isa 0
         MOVB      ACC,#4                ; [CPU_ALU] |110| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |110| 
         MOV       ACC,#24848            ; [CPU_ALU] |110| 
@@ -1037,15 +1037,15 @@ $C$DW$97	.dwtag  DW_TAG_TI_branch
         MOVB      XAR6,#1               ; [CPU_ALU] |473| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/spi.h",line 463,column 5,is_stmt,isa 0
         ORB       AL,#0x80              ; [CPU_ALU] |463| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 121,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 121,column 5,is_stmt,isa 0
         MOV       AH,#915               ; [CPU_ALU] |121| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/spi.h",line 463,column 5,is_stmt,isa 0
         MOV       *(0:0x6110),AL        ; [CPU_ALU] |463| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 121,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 121,column 5,is_stmt,isa 0
         MOV       AL,#34558             ; [CPU_ALU] |121| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV32     *(0:0x7f0a),XAR6      ; [CPU_FPU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 121,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 121,column 5,is_stmt,isa 0
 $C$DW$98	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$98, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$98, DW_AT_name("SysCtl_delay")
@@ -1061,7 +1061,7 @@ $C$DW$99	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$87, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$87, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$87, DW_AT_TI_end_line(0x84)
 	.dwattr $C$DW$87, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -1078,11 +1078,11 @@ $C$DW$100	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$100, DW_AT_linkage_name("tformat_exCommands")
 	.dwattr $C$DW$100, DW_AT_external
 	.dwattr $C$DW$100, DW_AT_type(*$C$DW$T$20)
-	.dwattr $C$DW$100, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$100, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$100, DW_AT_decl_line(0x14e)
 	.dwattr $C$DW$100, DW_AT_decl_column(0x0a)
 	.dwattr $C$DW$100, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 335,column 1,is_stmt,address ||tformat_exCommands||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 335,column 1,is_stmt,address ||tformat_exCommands||,isa 0
 
 	.dwfde $C$DW$CIE, ||tformat_exCommands||
 
@@ -1109,7 +1109,7 @@ $C$DW$101	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -4
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 340,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 340,column 5,is_stmt,isa 0
         MOV       AL,#38463             ; [CPU_ALU] |340| 
         MOVB      XAR4,#11              ; [CPU_ALU] |340| 
         MOVB      XAR5,#11              ; [CPU_ALU] |340| 
@@ -1122,7 +1122,7 @@ $C$DW$102	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupCommandReadoutOrReset|| ; [CPU_ALU] |340| 
         ; call occurs [#||PM_tformat_setupCommandReadoutOrReset||] ; [] |340| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 345,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 345,column 5,is_stmt,isa 0
 $C$DW$103	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$103, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$103, DW_AT_name("PM_tformat_startOperation")
@@ -1132,12 +1132,12 @@ $C$DW$103	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||PM_tformat_startOperation||] ; [] |345| 
 ||$C$L1||:    
         MOVW      DP,#||tformatData||+15 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 346,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 346,column 11,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+15 ; [CPU_ALU] |346| 
         CMPB      AL,#1                 ; [CPU_ALU] |346| 
         B         ||$C$L1||,NEQ         ; [CPU_ALU] |346| 
         ; branchcc occurs ; [] |346| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 347,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 347,column 5,is_stmt,isa 0
 $C$DW$104	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$104, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$104, DW_AT_name("PM_tformat_receiveDataID3")
@@ -1146,7 +1146,7 @@ $C$DW$104	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_receiveDataID3|| ; [CPU_ALU] |347| 
         ; call occurs [#||PM_tformat_receiveDataID3||] ; [] |347| 
         MOVW      DP,#||tformatData||+10 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 348,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 348,column 5,is_stmt,isa 0
         MOVZ      AR6,@$BLOCKED(||tformatData||)+11 ; [CPU_ALU] |348| 
         MOVU      ACC,@$BLOCKED(||tformatData||)+10 ; [CPU_ALU] |348| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |348| 
@@ -1154,7 +1154,7 @@ $C$DW$104	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |348| 
  ESTOP0
 ||$C$L2||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 353,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 353,column 5,is_stmt,isa 0
         MOVB      *-SP[1],#5,UNC        ; [CPU_ALU] |353| 
         MOV       AL,#37503             ; [CPU_ALU] |353| 
         MOVB      XAR4,#4               ; [CPU_ALU] |353| 
@@ -1168,7 +1168,7 @@ $C$DW$105	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupCommandReadoutOrReset|| ; [CPU_ALU] |353| 
         ; call occurs [#||PM_tformat_setupCommandReadoutOrReset||] ; [] |353| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 358,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 358,column 5,is_stmt,isa 0
 $C$DW$106	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$106, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$106, DW_AT_name("PM_tformat_startOperation")
@@ -1178,12 +1178,12 @@ $C$DW$106	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||PM_tformat_startOperation||] ; [] |358| 
 ||$C$L3||:    
         MOVW      DP,#||tformatData||+15 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 359,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 359,column 11,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+15 ; [CPU_ALU] |359| 
         CMPB      AL,#1                 ; [CPU_ALU] |359| 
         B         ||$C$L3||,NEQ         ; [CPU_ALU] |359| 
         ; branchcc occurs ; [] |359| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 360,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 360,column 5,is_stmt,isa 0
 $C$DW$107	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$107, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$107, DW_AT_name("PM_tformat_receiveDataID2")
@@ -1192,7 +1192,7 @@ $C$DW$107	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_receiveDataID2|| ; [CPU_ALU] |360| 
         ; call occurs [#||PM_tformat_receiveDataID2||] ; [] |360| 
         MOVW      DP,#||tformatData||+10 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 361,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 361,column 5,is_stmt,isa 0
         MOVZ      AR6,@$BLOCKED(||tformatData||)+11 ; [CPU_ALU] |361| 
         MOVU      ACC,@$BLOCKED(||tformatData||)+10 ; [CPU_ALU] |361| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |361| 
@@ -1200,7 +1200,7 @@ $C$DW$107	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |361| 
  ESTOP0
 ||$C$L4||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 366,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 366,column 5,is_stmt,isa 0
         MOV       ACC,#1598             ; [CPU_ALU] |366| 
         SPM       #0                    ; [CPU_ALU] 
 $C$DW$108	.dwtag  DW_TAG_TI_branch
@@ -1210,7 +1210,7 @@ $C$DW$108	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SysCtl_delay||     ; [CPU_ALU] |366| 
         ; call occurs [#||SysCtl_delay||] ; [] |366| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 367,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 367,column 5,is_stmt,isa 0
         MOVB      *-SP[1],#7,UNC        ; [CPU_ALU] |367| 
         MOV       AL,#36927             ; [CPU_ALU] |367| 
         MOVB      XAR4,#6               ; [CPU_ALU] |367| 
@@ -1223,7 +1223,7 @@ $C$DW$109	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupCommandReadoutOrReset|| ; [CPU_ALU] |367| 
         ; call occurs [#||PM_tformat_setupCommandReadoutOrReset||] ; [] |367| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 372,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 372,column 5,is_stmt,isa 0
 $C$DW$110	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$110, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$110, DW_AT_name("PM_tformat_startOperation")
@@ -1233,12 +1233,12 @@ $C$DW$110	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||PM_tformat_startOperation||] ; [] |372| 
 ||$C$L5||:    
         MOVW      DP,#||tformatData||+15 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 373,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 373,column 11,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+15 ; [CPU_ALU] |373| 
         CMPB      AL,#1                 ; [CPU_ALU] |373| 
         B         ||$C$L5||,NEQ         ; [CPU_ALU] |373| 
         ; branchcc occurs ; [] |373| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 374,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 374,column 5,is_stmt,isa 0
 $C$DW$111	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$111, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$111, DW_AT_name("PM_tformat_receiveDataID0_1_7_8_C")
@@ -1247,7 +1247,7 @@ $C$DW$111	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_receiveDataID0_1_7_8_C|| ; [CPU_ALU] |374| 
         ; call occurs [#||PM_tformat_receiveDataID0_1_7_8_C||] ; [] |374| 
         MOVW      DP,#||tformatData||+10 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 375,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 375,column 5,is_stmt,isa 0
         MOVZ      AR6,@$BLOCKED(||tformatData||)+11 ; [CPU_ALU] |375| 
         MOVU      ACC,@$BLOCKED(||tformatData||)+10 ; [CPU_ALU] |375| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |375| 
@@ -1255,7 +1255,7 @@ $C$DW$111	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |375| 
  ESTOP0
 ||$C$L6||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 380,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 380,column 5,is_stmt,isa 0
         MOV       ACC,#1598             ; [CPU_ALU] |380| 
         SPM       #0                    ; [CPU_ALU] 
 $C$DW$112	.dwtag  DW_TAG_TI_branch
@@ -1265,7 +1265,7 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SysCtl_delay||     ; [CPU_ALU] |380| 
         ; call occurs [#||SysCtl_delay||] ; [] |380| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 381,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 381,column 5,is_stmt,isa 0
         MOVB      *-SP[1],#7,UNC        ; [CPU_ALU] |381| 
         MOV       AL,#38015             ; [CPU_ALU] |381| 
         MOVB      XAR4,#6               ; [CPU_ALU] |381| 
@@ -1278,7 +1278,7 @@ $C$DW$113	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupCommandReadoutOrReset|| ; [CPU_ALU] |381| 
         ; call occurs [#||PM_tformat_setupCommandReadoutOrReset||] ; [] |381| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 386,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 386,column 5,is_stmt,isa 0
 $C$DW$114	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$114, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$114, DW_AT_name("PM_tformat_startOperation")
@@ -1288,12 +1288,12 @@ $C$DW$114	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||PM_tformat_startOperation||] ; [] |386| 
 ||$C$L7||:    
         MOVW      DP,#||tformatData||+15 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 387,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 387,column 11,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+15 ; [CPU_ALU] |387| 
         CMPB      AL,#1                 ; [CPU_ALU] |387| 
         B         ||$C$L7||,NEQ         ; [CPU_ALU] |387| 
         ; branchcc occurs ; [] |387| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 388,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 388,column 5,is_stmt,isa 0
 $C$DW$115	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$115, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$115, DW_AT_name("PM_tformat_receiveDataID0_1_7_8_C")
@@ -1302,7 +1302,7 @@ $C$DW$115	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_receiveDataID0_1_7_8_C|| ; [CPU_ALU] |388| 
         ; call occurs [#||PM_tformat_receiveDataID0_1_7_8_C||] ; [] |388| 
         MOVW      DP,#||tformatData||+10 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 389,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 389,column 5,is_stmt,isa 0
         MOVZ      AR6,@$BLOCKED(||tformatData||)+11 ; [CPU_ALU] |389| 
         MOVU      ACC,@$BLOCKED(||tformatData||)+10 ; [CPU_ALU] |389| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |389| 
@@ -1310,7 +1310,7 @@ $C$DW$115	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |389| 
  ESTOP0
 ||$C$L8||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 394,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 394,column 5,is_stmt,isa 0
         MOV       ACC,#1598             ; [CPU_ALU] |394| 
         SPM       #0                    ; [CPU_ALU] 
 $C$DW$116	.dwtag  DW_TAG_TI_branch
@@ -1320,7 +1320,7 @@ $C$DW$116	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SysCtl_delay||     ; [CPU_ALU] |394| 
         ; call occurs [#||SysCtl_delay||] ; [] |394| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 396,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 396,column 5,is_stmt,isa 0
         MOVB      AL,#1                 ; [CPU_ALU] |396| 
 $C$DW$117	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$117, DW_AT_low_pc(0x00)
@@ -1329,7 +1329,7 @@ $C$DW$117	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupCommandReadEEPROM|| ; [CPU_ALU] |396| 
         ; call occurs [#||PM_tformat_setupCommandReadEEPROM||] ; [] |396| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 397,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 397,column 5,is_stmt,isa 0
 $C$DW$118	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$118, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$118, DW_AT_name("PM_tformat_startOperation")
@@ -1339,12 +1339,12 @@ $C$DW$118	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||PM_tformat_startOperation||] ; [] |397| 
 ||$C$L9||:    
         MOVW      DP,#||tformatData||+15 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 398,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 398,column 11,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+15 ; [CPU_ALU] |398| 
         CMPB      AL,#1                 ; [CPU_ALU] |398| 
         B         ||$C$L9||,NEQ         ; [CPU_ALU] |398| 
         ; branchcc occurs ; [] |398| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 399,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 399,column 5,is_stmt,isa 0
 $C$DW$119	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$119, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$119, DW_AT_name("PM_tformat_receiveDataIDD")
@@ -1353,7 +1353,7 @@ $C$DW$119	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_receiveDataIDD|| ; [CPU_ALU] |399| 
         ; call occurs [#||PM_tformat_receiveDataIDD||] ; [] |399| 
         MOVW      DP,#||tformatData||+10 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 400,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 400,column 5,is_stmt,isa 0
         MOVZ      AR6,@$BLOCKED(||tformatData||)+11 ; [CPU_ALU] |400| 
         MOVU      ACC,@$BLOCKED(||tformatData||)+10 ; [CPU_ALU] |400| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |400| 
@@ -1361,7 +1361,7 @@ $C$DW$119	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |400| 
  ESTOP0
 ||$C$L10||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 405,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 405,column 5,is_stmt,isa 0
         MOVL      XAR4,#719998          ; [CPU_ARAU] |405| 
         SPM       #0                    ; [CPU_ALU] 
         MOVL      ACC,XAR4              ; [CPU_ALU] |405| 
@@ -1372,7 +1372,7 @@ $C$DW$120	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SysCtl_delay||     ; [CPU_ALU] |405| 
         ; call occurs [#||SysCtl_delay||] ; [] |405| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 407,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 407,column 5,is_stmt,isa 0
         MOVB      AL,#1                 ; [CPU_ALU] |407| 
         MOVB      AH,#35                ; [CPU_ALU] |407| 
 $C$DW$121	.dwtag  DW_TAG_TI_branch
@@ -1382,7 +1382,7 @@ $C$DW$121	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupCommandWriteEEPROM|| ; [CPU_ALU] |407| 
         ; call occurs [#||PM_tformat_setupCommandWriteEEPROM||] ; [] |407| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 408,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 408,column 5,is_stmt,isa 0
 $C$DW$122	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$122, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$122, DW_AT_name("PM_tformat_startOperation")
@@ -1392,12 +1392,12 @@ $C$DW$122	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||PM_tformat_startOperation||] ; [] |408| 
 ||$C$L11||:    
         MOVW      DP,#||tformatData||+15 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 409,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 409,column 11,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+15 ; [CPU_ALU] |409| 
         CMPB      AL,#1                 ; [CPU_ALU] |409| 
         B         ||$C$L11||,NEQ        ; [CPU_ALU] |409| 
         ; branchcc occurs ; [] |409| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 410,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 410,column 5,is_stmt,isa 0
 $C$DW$123	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$123, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$123, DW_AT_name("PM_tformat_receiveDataID6")
@@ -1406,7 +1406,7 @@ $C$DW$123	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_receiveDataID6|| ; [CPU_ALU] |410| 
         ; call occurs [#||PM_tformat_receiveDataID6||] ; [] |410| 
         MOVW      DP,#||tformatData||+10 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 411,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 411,column 5,is_stmt,isa 0
         MOVZ      AR6,@$BLOCKED(||tformatData||)+11 ; [CPU_ALU] |411| 
         MOVU      ACC,@$BLOCKED(||tformatData||)+10 ; [CPU_ALU] |411| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |411| 
@@ -1414,7 +1414,7 @@ $C$DW$123	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |411| 
  ESTOP0
 ||$C$L12||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 416,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 416,column 5,is_stmt,isa 0
         MOVL      XAR4,#719998          ; [CPU_ARAU] |416| 
         SPM       #0                    ; [CPU_ALU] 
         MOVL      ACC,XAR4              ; [CPU_ALU] |416| 
@@ -1425,7 +1425,7 @@ $C$DW$124	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SysCtl_delay||     ; [CPU_ALU] |416| 
         ; call occurs [#||SysCtl_delay||] ; [] |416| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 418,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 418,column 5,is_stmt,isa 0
         MOVB      AL,#1                 ; [CPU_ALU] |418| 
 $C$DW$125	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$125, DW_AT_low_pc(0x00)
@@ -1434,7 +1434,7 @@ $C$DW$125	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupCommandReadEEPROM|| ; [CPU_ALU] |418| 
         ; call occurs [#||PM_tformat_setupCommandReadEEPROM||] ; [] |418| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 419,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 419,column 5,is_stmt,isa 0
 $C$DW$126	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$126, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$126, DW_AT_name("PM_tformat_startOperation")
@@ -1444,12 +1444,12 @@ $C$DW$126	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||PM_tformat_startOperation||] ; [] |419| 
 ||$C$L13||:    
         MOVW      DP,#||tformatData||+15 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 420,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 420,column 11,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+15 ; [CPU_ALU] |420| 
         CMPB      AL,#1                 ; [CPU_ALU] |420| 
         B         ||$C$L13||,NEQ        ; [CPU_ALU] |420| 
         ; branchcc occurs ; [] |420| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 421,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 421,column 5,is_stmt,isa 0
 $C$DW$127	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$127, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$127, DW_AT_name("PM_tformat_receiveDataIDD")
@@ -1458,18 +1458,18 @@ $C$DW$127	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_receiveDataIDD|| ; [CPU_ALU] |421| 
         ; call occurs [#||PM_tformat_receiveDataIDD||] ; [] |421| 
         MOVW      DP,#||tformatData||+11 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 422,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 422,column 5,is_stmt,isa 0
         MOVZ      AR6,@$BLOCKED(||tformatData||)+11 ; [CPU_ALU] |422| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 421,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 421,column 5,is_stmt,isa 0
         MOVZ      AR1,AL                ; [CPU_ALU] |421| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 422,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 422,column 5,is_stmt,isa 0
         MOVU      ACC,@$BLOCKED(||tformatData||)+10 ; [CPU_ALU] |422| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |422| 
         B         ||$C$L14||,EQ         ; [CPU_ALU] |422| 
         ; branchcc occurs ; [] |422| 
  ESTOP0
 ||$C$L14||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 427,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 427,column 5,is_stmt,isa 0
         MOV       ACC,#1598             ; [CPU_ALU] |427| 
         SPM       #0                    ; [CPU_ALU] 
 $C$DW$128	.dwtag  DW_TAG_TI_branch
@@ -1479,7 +1479,7 @@ $C$DW$128	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SysCtl_delay||     ; [CPU_ALU] |427| 
         ; call occurs [#||SysCtl_delay||] ; [] |427| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 428,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 428,column 5,is_stmt,isa 0
         MOV       AL,AR1                ; [CPU_ALU] |428| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -4
@@ -1492,7 +1492,7 @@ $C$DW$129	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$100, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$100, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$100, DW_AT_TI_end_line(0x1ad)
 	.dwattr $C$DW$100, DW_AT_TI_end_column(0x05)
 	.dwendentry
@@ -1508,11 +1508,11 @@ $C$DW$130	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$130, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$130, DW_AT_linkage_name("tformat_error")
 	.dwattr $C$DW$130, DW_AT_external
-	.dwattr $C$DW$130, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$130, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$130, DW_AT_decl_line(0x109)
 	.dwattr $C$DW$130, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$130, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 266,column 1,is_stmt,address ||tformat_error||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 266,column 1,is_stmt,address ||tformat_error||,isa 0
 
 	.dwfde $C$DW$CIE, ||tformat_error||
 
@@ -1530,10 +1530,10 @@ $C$DW$130	.dwtag  DW_TAG_subprogram
 	.dwcfi	save_reg_to_mem, 26, 0
  ESTOP0
 ||$C$L15||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 268,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 268,column 5,is_stmt,isa 0
         B         ||$C$L15||,UNC        ; [CPU_ALU] |268| 
         ; branch occurs ; [] |268| 
-	.dwattr $C$DW$130, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$130, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$130, DW_AT_TI_end_line(0x10d)
 	.dwattr $C$DW$130, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -1550,11 +1550,11 @@ $C$DW$131	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$131, DW_AT_linkage_name("tformat_checkCRC")
 	.dwattr $C$DW$131, DW_AT_external
 	.dwattr $C$DW$131, DW_AT_type(*$C$DW$T$20)
-	.dwattr $C$DW$131, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$131, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$131, DW_AT_decl_line(0x13a)
 	.dwattr $C$DW$131, DW_AT_decl_column(0x0a)
 	.dwattr $C$DW$131, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 315,column 1,is_stmt,address ||tformat_checkCRC||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 315,column 1,is_stmt,address ||tformat_checkCRC||,isa 0
 
 	.dwfde $C$DW$CIE, ||tformat_checkCRC||
 $C$DW$132	.dwtag  DW_TAG_formal_parameter
@@ -1586,7 +1586,7 @@ $C$DW$134	.dwtag  DW_TAG_variable
 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 318,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 318,column 9,is_stmt,isa 0
         MOVZ      AR7,AL                ; [CPU_ALU] |318| 
         MOVU      ACC,AH                ; [CPU_ALU] |318| 
         MOVB      XAR6,#0               ; [CPU_ALU] |318| 
@@ -1599,7 +1599,7 @@ $C$DW$135	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$131, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$131, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$131, DW_AT_TI_end_line(0x144)
 	.dwattr $C$DW$131, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -1616,12 +1616,12 @@ $C$DW$136	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$136, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$136, DW_AT_linkage_name("spiRxFIFOISR")
 	.dwattr $C$DW$136, DW_AT_external
-	.dwattr $C$DW$136, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$136, DW_AT_decl_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$136, DW_AT_decl_line(0x110)
 	.dwattr $C$DW$136, DW_AT_decl_column(0x10)
 	.dwattr $C$DW$136, DW_AT_TI_interrupt
 	.dwattr $C$DW$136, DW_AT_TI_max_frame_size(-28)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 273,column 1,is_stmt,address ||spiRxFIFOISR||,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 273,column 1,is_stmt,address ||spiRxFIFOISR||,isa 0
 
 	.dwfde $C$DW$CIE, ||spiRxFIFOISR||
 
@@ -1700,15 +1700,15 @@ $C$DW$137	.dwtag  DW_TAG_variable
         CLRC      AMODE                 ; [CPU_ALU] 
         MOVW      DP,#||tformatData||+16 ; [CPU_ARAU] 
         MOVZ      AR7,@$BLOCKED(||tformatData||)+16 ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 276,column 16,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 276,column 16,is_stmt,isa 0
         MOVB      AL,#1                 ; [CPU_ALU] |276| 
         ADD       AL,AR7                ; [CPU_ALU] |276| 
         AND       AL,AL,#0xfffe         ; [CPU_ALU] |276| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 276,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 276,column 9,is_stmt,isa 0
         MOVB      XAR0,#0,EQ            ; [CPU_ALU] |276| 
         B         ||$C$L17||,EQ         ; [CPU_ALU] 
         ; branchcc occurs ; [] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 276,column 44,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 276,column 44,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+16 ; [CPU_ALU] |276| 
         ADDB      AL,#1                 ; [CPU_ALU] |276| 
         LSR       AL,1                  ; [CPU_ALU] |276| 
@@ -1717,18 +1717,18 @@ $C$DW$137	.dwtag  DW_TAG_variable
         MOV       ACC,AR6 << #1         ; [CPU_ALU] |276| 
         MOVZ      AR0,AL                ; [CPU_ALU] |276| 
         SUBB      XAR6,#1               ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 276,column 16,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 276,column 16,is_stmt,isa 0
         RPTB      ||$C$L17||,AR6        ; [CPU_ALU] |276| 
         ; repeat block starts ; [] 
 ||$C$L16||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/spi.h",line 852,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x6117)        ; [CPU_ALU] |852| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 278,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 278,column 9,is_stmt,isa 0
         ANDB      AL,#255               ; [CPU_ALU] |278| 
         MOV       *XAR4++,AL            ; [CPU_ALU] |278| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/spi.h",line 852,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x6117)        ; [CPU_ALU] |852| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 278,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 278,column 9,is_stmt,isa 0
         ANDB      AL,#255               ; [CPU_ALU] |278| 
         MOV       *XAR4++,AL            ; [CPU_ALU] |278| 
         NOP       ; [CPU_ALU] 
@@ -1742,12 +1742,12 @@ $C$DW$137	.dwtag  DW_TAG_variable
 ; Peeled loop iterations for unrolled loop:
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/spi.h",line 852,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x6117)        ; [CPU_ALU] |852| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 278,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 278,column 9,is_stmt,isa 0
         MOVL      XAR4,#||tformatRxData|| ; [CPU_ARAU] |278| 
         ANDB      AL,#255               ; [CPU_ALU] |278| 
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |278| 
 ||$C$L18||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 281,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 281,column 5,is_stmt,isa 0
 $C$DW$138	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$138, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$138, DW_AT_name("readTformatEncPosition")
@@ -1755,7 +1755,7 @@ $C$DW$138	.dwtag  DW_TAG_TI_branch
 
         LCR       #||readTformatEncPosition|| ; [CPU_ALU] |281| 
         ; call occurs [#||readTformatEncPosition||] ; [] |281| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 283,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 283,column 5,is_stmt,isa 0
         MOVB      ACC,#4                ; [CPU_ALU] |283| 
         MOVL      XAR4,#24848           ; [CPU_ARAU] |283| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |283| 
@@ -1773,7 +1773,7 @@ $C$DW$139	.dwtag  DW_TAG_TI_branch
         MOV       *(0:0x0ce1),AL        ; [CPU_ALU] |379| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -26
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c",line 285,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_tformat_f2837x_config.c",line 285,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||tformatData||)+15,#1,UNC ; [CPU_ALU] |285| 
         MOV32     R3H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -24
@@ -1821,7 +1821,7 @@ $C$DW$140	.dwtag  DW_TAG_TI_branch
 
         IRET      ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$136, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c")
+	.dwattr $C$DW$136, DW_AT_TI_end_file("../sources/fcl_tformat_f2837x_config.c")
 	.dwattr $C$DW$136, DW_AT_TI_end_line(0x11e)
 	.dwattr $C$DW$136, DW_AT_TI_end_column(0x01)
 	.dwendentry

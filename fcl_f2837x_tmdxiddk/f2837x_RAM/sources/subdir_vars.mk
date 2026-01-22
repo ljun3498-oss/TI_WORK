@@ -6,17 +6,17 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CLA_SRCS += \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cla_code.cla \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk_cla_tasks.cla 
+../sources/fcl_cla_code.cla \
+../sources/fcl_f2837x_tmdxiddk_cla_tasks.cla 
 
 C_SRCS += \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_sfra_gui.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/source/speed_observer.c 
+../sources/dlog_4ch_f.c \
+../sources/fcl_cpu_code.c \
+../sources/fcl_f2837x_sfra_gui.c \
+../sources/fcl_f2837x_tmdxiddk.c \
+../sources/fcl_tformat_f2837x_config.c \
+../sources/sfra_gui_scicomms_driverlib.c \
+../sources/speed_observer.c 
 
 CLA_DEPS += \
 ./sources/fcl_cla_code.d \
@@ -67,12 +67,12 @@ CLA_DEPS__QUOTED += \
 "sources\fcl_f2837x_tmdxiddk_cla_tasks.d" 
 
 C_SRCS__QUOTED += \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_sfra_gui.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_tformat_f2837x_config.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/source/speed_observer.c" 
+"../sources/dlog_4ch_f.c" \
+"../sources/fcl_cpu_code.c" \
+"../sources/fcl_f2837x_sfra_gui.c" \
+"../sources/fcl_f2837x_tmdxiddk.c" \
+"../sources/fcl_tformat_f2837x_config.c" \
+"../sources/sfra_gui_scicomms_driverlib.c" \
+"../sources/speed_observer.c" 
 
 

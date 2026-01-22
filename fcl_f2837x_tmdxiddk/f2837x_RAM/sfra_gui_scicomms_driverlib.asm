@@ -1,12 +1,12 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Wed Jan 21 17:05:16 2026                 *
+;* Date/Time created: Thu Jan 22 11:16:45 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$CU, DW_AT_name("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\fcl_f2837x_tmdxiddk\f2837x_RAM")
@@ -131,7 +131,7 @@ $C$DW$20	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$20, DW_AT_location[DW_OP_addr ||SFRA_GUI_commsOKflg||]
 	.dwattr $C$DW$20, DW_AT_type(*$C$DW$T$65)
 	.dwattr $C$DW$20, DW_AT_external
-	.dwattr $C$DW$20, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$20, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$20, DW_AT_decl_line(0x48)
 	.dwattr $C$DW$20, DW_AT_decl_column(0x12)
 
@@ -143,7 +143,7 @@ $C$DW$21	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$21, DW_AT_location[DW_OP_addr ||SFRA_GUI_serialCommsTimer||]
 	.dwattr $C$DW$21, DW_AT_type(*$C$DW$T$65)
 	.dwattr $C$DW$21, DW_AT_external
-	.dwattr $C$DW$21, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$21, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$21, DW_AT_decl_line(0x49)
 	.dwattr $C$DW$21, DW_AT_decl_column(0x12)
 
@@ -155,7 +155,7 @@ $C$DW$22	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$22, DW_AT_location[DW_OP_addr ||SFRA_GUI_lowByteFlag||]
 	.dwattr $C$DW$22, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$22, DW_AT_external
-	.dwattr $C$DW$22, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$22, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$22, DW_AT_decl_line(0x4d)
 	.dwattr $C$DW$22, DW_AT_decl_column(0x0a)
 
@@ -167,7 +167,7 @@ $C$DW$23	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$23, DW_AT_location[DW_OP_addr ||SFRA_GUI_sendTaskPtr||]
 	.dwattr $C$DW$23, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$23, DW_AT_external
-	.dwattr $C$DW$23, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$23, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$23, DW_AT_decl_line(0x4e)
 	.dwattr $C$DW$23, DW_AT_decl_column(0x0a)
 
@@ -179,7 +179,7 @@ $C$DW$24	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$24, DW_AT_location[DW_OP_addr ||SFRA_GUI_rxChar||]
 	.dwattr $C$DW$24, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$24, DW_AT_external
-	.dwattr $C$DW$24, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$24, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$24, DW_AT_decl_line(0x4f)
 	.dwattr $C$DW$24, DW_AT_decl_column(0x0a)
 
@@ -191,7 +191,7 @@ $C$DW$25	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$25, DW_AT_location[DW_OP_addr ||SFRA_GUI_rxWord||]
 	.dwattr $C$DW$25, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$25, DW_AT_external
-	.dwattr $C$DW$25, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$25, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$25, DW_AT_decl_line(0x50)
 	.dwattr $C$DW$25, DW_AT_decl_column(0x0a)
 
@@ -203,7 +203,7 @@ $C$DW$26	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$26, DW_AT_location[DW_OP_addr ||SFRA_GUI_taskDoneFlag||]
 	.dwattr $C$DW$26, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$26, DW_AT_external
-	.dwattr $C$DW$26, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$26, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$26, DW_AT_decl_line(0x52)
 	.dwattr $C$DW$26, DW_AT_decl_column(0x0a)
 
@@ -215,7 +215,7 @@ $C$DW$27	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$27, DW_AT_location[DW_OP_addr ||SFRA_GUI_numWords||]
 	.dwattr $C$DW$27, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$27, DW_AT_external
-	.dwattr $C$DW$27, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$27, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$27, DW_AT_decl_line(0x53)
 	.dwattr $C$DW$27, DW_AT_decl_column(0x0a)
 
@@ -227,7 +227,7 @@ $C$DW$28	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$28, DW_AT_location[DW_OP_addr ||SFRA_GUI_wordsLeftToGet||]
 	.dwattr $C$DW$28, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$28, DW_AT_external
-	.dwattr $C$DW$28, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$28, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$28, DW_AT_decl_line(0x54)
 	.dwattr $C$DW$28, DW_AT_decl_column(0x0a)
 
@@ -239,7 +239,7 @@ $C$DW$29	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$29, DW_AT_location[DW_OP_addr ||SFRA_GUI_dataOut16||]
 	.dwattr $C$DW$29, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$29, DW_AT_external
-	.dwattr $C$DW$29, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$29, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$29, DW_AT_decl_line(0x56)
 	.dwattr $C$DW$29, DW_AT_decl_column(0x0a)
 
@@ -251,7 +251,7 @@ $C$DW$30	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$30, DW_AT_location[DW_OP_addr ||SFRA_GUI_rcvTskPtrShdw||]
 	.dwattr $C$DW$30, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$30, DW_AT_external
-	.dwattr $C$DW$30, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$30, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$30, DW_AT_decl_line(0x5f)
 	.dwattr $C$DW$30, DW_AT_decl_column(0x0a)
 
@@ -263,7 +263,7 @@ $C$DW$31	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$31, DW_AT_location[DW_OP_addr ||SFRA_GUI_delayer||]
 	.dwattr $C$DW$31, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$31, DW_AT_external
-	.dwattr $C$DW$31, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$31, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$31, DW_AT_decl_line(0x61)
 	.dwattr $C$DW$31, DW_AT_decl_column(0x09)
 
@@ -275,7 +275,7 @@ $C$DW$32	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$32, DW_AT_location[DW_OP_addr ||SFRA_GUI_memGetPtr||]
 	.dwattr $C$DW$32, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$32, DW_AT_external
-	.dwattr $C$DW$32, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$32, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$32, DW_AT_decl_line(0x63)
 	.dwattr $C$DW$32, DW_AT_decl_column(0x09)
 
@@ -287,7 +287,7 @@ $C$DW$33	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$33, DW_AT_location[DW_OP_addr ||SFRA_GUI_memGetAmount||]
 	.dwattr $C$DW$33, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$33, DW_AT_external
-	.dwattr $C$DW$33, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$33, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$33, DW_AT_decl_line(0x65)
 	.dwattr $C$DW$33, DW_AT_decl_column(0x09)
 
@@ -299,7 +299,7 @@ $C$DW$34	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$34, DW_AT_location[DW_OP_addr ||SFRA_GUI_memSetPtr||]
 	.dwattr $C$DW$34, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$34, DW_AT_external
-	.dwattr $C$DW$34, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$34, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$34, DW_AT_decl_line(0x67)
 	.dwattr $C$DW$34, DW_AT_decl_column(0x09)
 
@@ -311,7 +311,7 @@ $C$DW$35	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$35, DW_AT_location[DW_OP_addr ||SFRA_GUI_led_flag||]
 	.dwattr $C$DW$35, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$35, DW_AT_external
-	.dwattr $C$DW$35, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$35, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$35, DW_AT_decl_line(0x6c)
 	.dwattr $C$DW$35, DW_AT_decl_column(0x0a)
 
@@ -323,7 +323,7 @@ $C$DW$36	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$36, DW_AT_location[DW_OP_addr ||SFRA_GUI_led_gpio||]
 	.dwattr $C$DW$36, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$36, DW_AT_external
-	.dwattr $C$DW$36, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$36, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$36, DW_AT_decl_line(0x6d)
 	.dwattr $C$DW$36, DW_AT_decl_column(0x0a)
 
@@ -335,7 +335,7 @@ $C$DW$37	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$37, DW_AT_location[DW_OP_addr ||SFRA_GUI_sweep_start||]
 	.dwattr $C$DW$37, DW_AT_type(*$C$DW$T$42)
 	.dwattr $C$DW$37, DW_AT_external
-	.dwattr $C$DW$37, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$37, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$37, DW_AT_decl_line(0x6f)
 	.dwattr $C$DW$37, DW_AT_decl_column(0x0a)
 
@@ -347,7 +347,7 @@ $C$DW$38	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$38, DW_AT_location[DW_OP_addr ||SFRA_GUI_rcvTaskPointer||]
 	.dwattr $C$DW$38, DW_AT_type(*$C$DW$T$52)
 	.dwattr $C$DW$38, DW_AT_external
-	.dwattr $C$DW$38, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$38, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$38, DW_AT_decl_line(0x39)
 	.dwattr $C$DW$38, DW_AT_decl_column(0x08)
 
@@ -359,7 +359,7 @@ $C$DW$39	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$39, DW_AT_location[DW_OP_addr ||SFRA_GUI_sci_base_addr||]
 	.dwattr $C$DW$39, DW_AT_type(*$C$DW$T$48)
 	.dwattr $C$DW$39, DW_AT_external
-	.dwattr $C$DW$39, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$39, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$39, DW_AT_decl_line(0x4b)
 	.dwattr $C$DW$39, DW_AT_decl_column(0x13)
 
@@ -371,7 +371,7 @@ $C$DW$40	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$40, DW_AT_location[DW_OP_addr ||SFRA_GUI_dataOut32||]
 	.dwattr $C$DW$40, DW_AT_type(*$C$DW$T$83)
 	.dwattr $C$DW$40, DW_AT_external
-	.dwattr $C$DW$40, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$40, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$40, DW_AT_decl_line(0x57)
 	.dwattr $C$DW$40, DW_AT_decl_column(0x09)
 
@@ -383,7 +383,7 @@ $C$DW$41	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$41, DW_AT_location[DW_OP_addr ||SFRA_GUI_memDataPtr16||]
 	.dwattr $C$DW$41, DW_AT_type(*$C$DW$T$64)
 	.dwattr $C$DW$41, DW_AT_external
-	.dwattr $C$DW$41, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$41, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$41, DW_AT_decl_line(0x59)
 	.dwattr $C$DW$41, DW_AT_decl_column(0x0a)
 
@@ -395,7 +395,7 @@ $C$DW$42	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$42, DW_AT_location[DW_OP_addr ||SFRA_GUI_memDataPtr32||]
 	.dwattr $C$DW$42, DW_AT_type(*$C$DW$T$84)
 	.dwattr $C$DW$42, DW_AT_external
-	.dwattr $C$DW$42, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$42, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$42, DW_AT_decl_line(0x5a)
 	.dwattr $C$DW$42, DW_AT_decl_column(0x0a)
 
@@ -407,7 +407,7 @@ $C$DW$43	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$43, DW_AT_location[DW_OP_addr ||SFRA_GUI_memGetAddress||]
 	.dwattr $C$DW$43, DW_AT_type(*$C$DW$T$34)
 	.dwattr $C$DW$43, DW_AT_external
-	.dwattr $C$DW$43, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$43, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$43, DW_AT_decl_line(0x64)
 	.dwattr $C$DW$43, DW_AT_decl_column(0x0a)
 
@@ -419,7 +419,7 @@ $C$DW$44	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$44, DW_AT_location[DW_OP_addr ||SFRA_GUI_memSetValue||]
 	.dwattr $C$DW$44, DW_AT_type(*$C$DW$T$34)
 	.dwattr $C$DW$44, DW_AT_external
-	.dwattr $C$DW$44, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$44, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$44, DW_AT_decl_line(0x68)
 	.dwattr $C$DW$44, DW_AT_decl_column(0x0a)
 
@@ -431,7 +431,7 @@ $C$DW$45	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$45, DW_AT_location[DW_OP_addr ||SFRA_GUI_temp||]
 	.dwattr $C$DW$45, DW_AT_type(*$C$DW$T$34)
 	.dwattr $C$DW$45, DW_AT_external
-	.dwattr $C$DW$45, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$45, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$45, DW_AT_decl_line(0x6a)
 	.dwattr $C$DW$45, DW_AT_decl_column(0x0a)
 
@@ -443,7 +443,7 @@ $C$DW$46	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$46, DW_AT_location[DW_OP_addr ||SFRA_GUI_cmdPacket||]
 	.dwattr $C$DW$46, DW_AT_type(*$C$DW$T$74)
 	.dwattr $C$DW$46, DW_AT_external
-	.dwattr $C$DW$46, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$46, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$46, DW_AT_decl_line(0x51)
 	.dwattr $C$DW$46, DW_AT_decl_column(0x0a)
 
@@ -455,7 +455,7 @@ $C$DW$47	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$47, DW_AT_location[DW_OP_addr ||SFRA_GUI_cmdDispatcher||]
 	.dwattr $C$DW$47, DW_AT_type(*$C$DW$T$53)
 	.dwattr $C$DW$47, DW_AT_external
-	.dwattr $C$DW$47, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$47, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$47, DW_AT_decl_line(0x3e)
 	.dwattr $C$DW$47, DW_AT_decl_column(0x08)
 
@@ -467,7 +467,7 @@ $C$DW$48	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$48, DW_AT_location[DW_OP_addr ||SFRA_GUI_varSetTxtList||]
 	.dwattr $C$DW$48, DW_AT_type(*$C$DW$T$67)
 	.dwattr $C$DW$48, DW_AT_external
-	.dwattr $C$DW$48, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$48, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$48, DW_AT_decl_line(0x40)
 	.dwattr $C$DW$48, DW_AT_decl_column(0x13)
 
@@ -479,7 +479,7 @@ $C$DW$49	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$49, DW_AT_location[DW_OP_addr ||SFRA_GUI_varSetBtnList||]
 	.dwattr $C$DW$49, DW_AT_type(*$C$DW$T$67)
 	.dwattr $C$DW$49, DW_AT_external
-	.dwattr $C$DW$49, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$49, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$49, DW_AT_decl_line(0x41)
 	.dwattr $C$DW$49, DW_AT_decl_column(0x13)
 
@@ -491,7 +491,7 @@ $C$DW$50	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$50, DW_AT_location[DW_OP_addr ||SFRA_GUI_varSetSldrList||]
 	.dwattr $C$DW$50, DW_AT_type(*$C$DW$T$67)
 	.dwattr $C$DW$50, DW_AT_external
-	.dwattr $C$DW$50, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$50, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$50, DW_AT_decl_line(0x42)
 	.dwattr $C$DW$50, DW_AT_decl_column(0x13)
 
@@ -503,7 +503,7 @@ $C$DW$51	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$51, DW_AT_location[DW_OP_addr ||SFRA_GUI_varGetList||]
 	.dwattr $C$DW$51, DW_AT_type(*$C$DW$T$67)
 	.dwattr $C$DW$51, DW_AT_external
-	.dwattr $C$DW$51, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$51, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$51, DW_AT_decl_line(0x43)
 	.dwattr $C$DW$51, DW_AT_decl_column(0x13)
 
@@ -515,7 +515,7 @@ $C$DW$52	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$52, DW_AT_location[DW_OP_addr ||SFRA_GUI_arrayGetList||]
 	.dwattr $C$DW$52, DW_AT_type(*$C$DW$T$87)
 	.dwattr $C$DW$52, DW_AT_external
-	.dwattr $C$DW$52, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$52, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$52, DW_AT_decl_line(0x44)
 	.dwattr $C$DW$52, DW_AT_decl_column(0x13)
 
@@ -527,7 +527,7 @@ $C$DW$53	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$53, DW_AT_location[DW_OP_addr ||SFRA_GUI_dataGetList||]
 	.dwattr $C$DW$53, DW_AT_type(*$C$DW$T$67)
 	.dwattr $C$DW$53, DW_AT_external
-	.dwattr $C$DW$53, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$53, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$53, DW_AT_decl_line(0x45)
 	.dwattr $C$DW$53, DW_AT_decl_column(0x13)
 
@@ -539,13 +539,13 @@ $C$DW$54	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$54, DW_AT_location[DW_OP_addr ||SFRA_GUI_dataSetList||]
 	.dwattr $C$DW$54, DW_AT_type(*$C$DW$T$95)
 	.dwattr $C$DW$54, DW_AT_external
-	.dwattr $C$DW$54, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$54, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$54, DW_AT_decl_line(0x46)
 	.dwattr $C$DW$54, DW_AT_decl_column(0x14)
 
 	.sblock	".bss"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{EA6CC326-60D9-42FE-85C3-7175D4759839} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{5D2032F0-8E33-49F4-8087-6E015454AA80} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{0A8082C7-39F0-45D9-BCEA-4B895FA9B338} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{3FB04AD2-22FA-45D0-9B6D-5E84589E480B} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{AC7F50A5-4499-44B4-B651-FC186E70D444} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{3EC508CE-1774-4020-AC82-950C5F0DE511} 
 	.sect	".text:__signbitl"
 	.clink
 	.global	||__signbitl||
@@ -2733,11 +2733,11 @@ $C$DW$185	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$185, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$185, DW_AT_linkage_name("SFRA_GUI_spareTsk08")
 	.dwattr $C$DW$185, DW_AT_external
-	.dwattr $C$DW$185, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$185, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$185, DW_AT_decl_line(0x2f4)
 	.dwattr $C$DW$185, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$185, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 757,column 1,is_stmt,address ||SFRA_GUI_spareTsk08||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 757,column 1,is_stmt,address ||SFRA_GUI_spareTsk08||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_spareTsk08||
 
@@ -2754,7 +2754,7 @@ $C$DW$185	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||SFRA_GUI_taskDoneFlag|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 761,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 761,column 5,is_stmt,isa 0
         MOVB      @||SFRA_GUI_taskDoneFlag||,#1,UNC ; [CPU_ALU] |761| 
 $C$DW$186	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$186, DW_AT_low_pc(0x00)
@@ -2762,7 +2762,7 @@ $C$DW$186	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$185, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$185, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$185, DW_AT_TI_end_line(0x2fa)
 	.dwattr $C$DW$185, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2778,11 +2778,11 @@ $C$DW$187	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$187, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$187, DW_AT_linkage_name("SFRA_GUI_setText")
 	.dwattr $C$DW$187, DW_AT_external
-	.dwattr $C$DW$187, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$187, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$187, DW_AT_decl_line(0x27d)
 	.dwattr $C$DW$187, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$187, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 638,column 1,is_stmt,address ||SFRA_GUI_setText||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 638,column 1,is_stmt,address ||SFRA_GUI_setText||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_setText||
 
@@ -2799,7 +2799,7 @@ $C$DW$187	.dwtag  DW_TAG_subprogram
 ;* AR5   assigned to $O$C1
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 639,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 639,column 5,is_stmt,isa 0
         MOVL      XAR5,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |639| 
         CLRC      SXM                   ; [CPU_ALU] 
         MOVL      XAR4,#||SFRA_GUI_varSetTxtList|| ; [CPU_ARAU] |639| 
@@ -2809,7 +2809,7 @@ $C$DW$187	.dwtag  DW_TAG_subprogram
         MOV       AL,*+XAR5[2]          ; [CPU_ALU] |639| 
         MOVW      DP,#||SFRA_GUI_taskDoneFlag|| ; [CPU_ARAU] 
         MOV       *+XAR4[0],AL          ; [CPU_ALU] |639| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 644,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 644,column 5,is_stmt,isa 0
         MOVB      @||SFRA_GUI_taskDoneFlag||,#1,UNC ; [CPU_ALU] |644| 
 $C$DW$188	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$188, DW_AT_low_pc(0x00)
@@ -2817,7 +2817,7 @@ $C$DW$188	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$187, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$187, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$187, DW_AT_TI_end_line(0x285)
 	.dwattr $C$DW$187, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2833,11 +2833,11 @@ $C$DW$189	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$189, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$189, DW_AT_linkage_name("SFRA_GUI_setSlider")
 	.dwattr $C$DW$189, DW_AT_external
-	.dwattr $C$DW$189, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$189, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$189, DW_AT_decl_line(0x297)
 	.dwattr $C$DW$189, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$189, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 664,column 1,is_stmt,address ||SFRA_GUI_setSlider||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 664,column 1,is_stmt,address ||SFRA_GUI_setSlider||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_setSlider||
 
@@ -2854,7 +2854,7 @@ $C$DW$189	.dwtag  DW_TAG_subprogram
 ;* AR5   assigned to $O$C1
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 665,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 665,column 5,is_stmt,isa 0
         MOVL      XAR5,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |665| 
         CLRC      SXM                   ; [CPU_ALU] 
         MOVL      XAR4,#||SFRA_GUI_varSetSldrList|| ; [CPU_ARAU] |665| 
@@ -2864,7 +2864,7 @@ $C$DW$189	.dwtag  DW_TAG_subprogram
         MOV       AL,*+XAR5[2]          ; [CPU_ALU] |665| 
         MOVW      DP,#||SFRA_GUI_taskDoneFlag|| ; [CPU_ARAU] 
         MOV       *+XAR4[0],AL          ; [CPU_ALU] |665| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 669,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 669,column 5,is_stmt,isa 0
         MOVB      @||SFRA_GUI_taskDoneFlag||,#1,UNC ; [CPU_ALU] |669| 
 $C$DW$190	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$190, DW_AT_low_pc(0x00)
@@ -2872,7 +2872,7 @@ $C$DW$190	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$189, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$189, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$189, DW_AT_TI_end_line(0x29e)
 	.dwattr $C$DW$189, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2888,11 +2888,11 @@ $C$DW$191	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$191, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$191, DW_AT_linkage_name("SFRA_GUI_setData32")
 	.dwattr $C$DW$191, DW_AT_external
-	.dwattr $C$DW$191, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$191, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$191, DW_AT_decl_line(0x2d9)
 	.dwattr $C$DW$191, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$191, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 730,column 1,is_stmt,address ||SFRA_GUI_setData32||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 730,column 1,is_stmt,address ||SFRA_GUI_setData32||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_setData32||
 
@@ -2910,7 +2910,7 @@ $C$DW$191	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||SFRA_GUI_memSetPtr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 731,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 731,column 5,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_memSetPtr|| ; [CPU_ALU] |731| 
         B         ||$C$L24||,EQ         ; [CPU_ALU] |731| 
         ; branchcc occurs ; [] |731| 
@@ -2918,42 +2918,42 @@ $C$DW$191	.dwtag  DW_TAG_subprogram
         B         ||$C$L26||,NEQ        ; [CPU_ALU] |731| 
         ; branchcc occurs ; [] |731| 
         MOVW      DP,#||SFRA_GUI_cmdPacket||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 741,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 741,column 13,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |741| 
         MOVZ      AR6,@||SFRA_GUI_cmdPacket||+2 ; [CPU_ALU] |741| 
         CLRC      SXM                   ; [CPU_ALU] 
         MOVU      ACC,*+XAR4[2]         ; [CPU_ALU] |741| 
         MOVW      DP,#||SFRA_GUI_temp|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 742,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 742,column 13,is_stmt,isa 0
         LSL       ACC,16                ; [CPU_ALU] |742| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 741,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 741,column 13,is_stmt,isa 0
         MOVL      @||SFRA_GUI_temp||,XAR6 ; [CPU_ALU] |741| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 742,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 742,column 13,is_stmt,isa 0
         ADDL      @||SFRA_GUI_memSetValue||,ACC ; [CPU_ALU] |742| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 744,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 744,column 13,is_stmt,isa 0
         MOV       ACC,*+XAR4[1] << 1    ; [CPU_FPU] |744| 
         MOVL      XAR4,#||SFRA_GUI_dataSetList|| ; [CPU_ARAU] |744| 
         ADDL      XAR4,ACC              ; [CPU_ALU] |744| 
         MOVL      XAR4,*+XAR4[0]        ; [CPU_ALU] |744| 
         MOVL      ACC,@||SFRA_GUI_memSetValue|| ; [CPU_ALU] |744| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 746,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 746,column 13,is_stmt,isa 0
         MOV       @||SFRA_GUI_memSetPtr||,#0 ; [CPU_ALU] |746| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 744,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 744,column 13,is_stmt,isa 0
         MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |744| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 748,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 748,column 13,is_stmt,isa 0
         B         ||$C$L25||,UNC        ; [CPU_ALU] |748| 
         ; branch occurs ; [] |748| 
 ||$C$L24||:    
         MOVW      DP,#||SFRA_GUI_cmdPacket||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 734,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 734,column 13,is_stmt,isa 0
         MOVU      ACC,@||SFRA_GUI_cmdPacket||+2 ; [CPU_ALU] |734| 
         MOVW      DP,#||SFRA_GUI_memSetPtr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 735,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 735,column 13,is_stmt,isa 0
         MOVB      @||SFRA_GUI_memSetPtr||,#1,UNC ; [CPU_ALU] |735| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 734,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 734,column 13,is_stmt,isa 0
         MOVL      @||SFRA_GUI_memSetValue||,ACC ; [CPU_ALU] |734| 
 ||$C$L25||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 737,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 737,column 13,is_stmt,isa 0
         MOVB      @||SFRA_GUI_taskDoneFlag||,#1,UNC ; [CPU_ALU] |737| 
 ||$C$L26||:    
 $C$DW$192	.dwtag  DW_TAG_TI_branch
@@ -2962,7 +2962,7 @@ $C$DW$192	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$191, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$191, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$191, DW_AT_TI_end_line(0x2ef)
 	.dwattr $C$DW$191, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2978,11 +2978,11 @@ $C$DW$193	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$193, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$193, DW_AT_linkage_name("SFRA_GUI_setButton")
 	.dwattr $C$DW$193, DW_AT_external
-	.dwattr $C$DW$193, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$193, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$193, DW_AT_decl_line(0x28a)
 	.dwattr $C$DW$193, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$193, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 651,column 1,is_stmt,address ||SFRA_GUI_setButton||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 651,column 1,is_stmt,address ||SFRA_GUI_setButton||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_setButton||
 
@@ -2999,7 +2999,7 @@ $C$DW$193	.dwtag  DW_TAG_subprogram
 ;* AR5   assigned to $O$C1
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 652,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 652,column 5,is_stmt,isa 0
         MOVL      XAR5,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |652| 
         CLRC      SXM                   ; [CPU_ALU] 
         MOVL      XAR4,#||SFRA_GUI_varSetBtnList|| ; [CPU_ARAU] |652| 
@@ -3009,7 +3009,7 @@ $C$DW$193	.dwtag  DW_TAG_subprogram
         MOV       AL,*+XAR5[2]          ; [CPU_ALU] |652| 
         MOVW      DP,#||SFRA_GUI_taskDoneFlag|| ; [CPU_ARAU] 
         MOV       *+XAR4[0],AL          ; [CPU_ALU] |652| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 657,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 657,column 5,is_stmt,isa 0
         MOVB      @||SFRA_GUI_taskDoneFlag||,#1,UNC ; [CPU_ALU] |657| 
 $C$DW$194	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$194, DW_AT_low_pc(0x00)
@@ -3017,7 +3017,7 @@ $C$DW$194	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$193, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$193, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$193, DW_AT_TI_end_line(0x292)
 	.dwattr $C$DW$193, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3033,11 +3033,11 @@ $C$DW$195	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$195, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$195, DW_AT_linkage_name("SFRA_GUI_sendData")
 	.dwattr $C$DW$195, DW_AT_external
-	.dwattr $C$DW$195, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$195, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$195, DW_AT_decl_line(0x2ff)
 	.dwattr $C$DW$195, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$195, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 768,column 1,is_stmt,address ||SFRA_GUI_sendData||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 768,column 1,is_stmt,address ||SFRA_GUI_sendData||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_sendData||
 
@@ -3173,7 +3173,7 @@ $C$DW$213	.dwtag  DW_TAG_variable
 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 771,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 771,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |771| 
         MOV       AL,*+XAR4[0]          ; [CPU_ALU] |771| 
         CMPB      AL,#4                 ; [CPU_ALU] |771| 
@@ -3183,7 +3183,7 @@ $C$DW$213	.dwtag  DW_TAG_variable
         B         ||$C$L45||,EQ         ; [CPU_ALU] |771| 
         ; branchcc occurs ; [] |771| 
         MOVW      DP,#||SFRA_GUI_sendTaskPtr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 816,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 816,column 9,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_sendTaskPtr|| ; [CPU_ALU] |816| 
         CMPB      AL,#2                 ; [CPU_ALU] |816| 
         B         ||$C$L27||,GT         ; [CPU_ALU] |816| 
@@ -3222,22 +3222,22 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
 	.dwcfi	restore_state
 ||$C$L28||:    
         CLRC      SXM                   ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 819,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 819,column 9,is_stmt,isa 0
         MOVL      XAR5,#||SFRA_GUI_arrayGetList|| ; [CPU_ARAU] |819| 
         MOV       ACC,*+XAR4[1] << 1    ; [CPU_ALU] |819| 
         ADDL      XAR5,ACC              ; [CPU_ALU] |819| 
         MOVL      XAR5,*+XAR5[0]        ; [CPU_ALU] |819| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 821,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 821,column 9,is_stmt,isa 0
         MOVL      XAR6,*+XAR5[0]        ; [CPU_ALU] |821| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 822,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 822,column 9,is_stmt,isa 0
         MOV       AL,*+XAR4[2]          ; [CPU_ALU] |822| 
         MOV       @||SFRA_GUI_wordsLeftToGet||,AL ; [CPU_ALU] |822| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 819,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 819,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_memDataPtr32||,XAR5 ; [CPU_ALU] |819| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 821,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 821,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_dataOut32||,XAR6 ; [CPU_ALU] |821| 
 ||$C$L29||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 827,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 827,column 13,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_wordsLeftToGet|| ; [CPU_ALU] |827| 
         B         ||$C$L56||,EQ         ; [CPU_ALU] |827| 
         ; branchcc occurs ; [] |827| 
@@ -3263,7 +3263,7 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L31||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 829,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 829,column 17,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |829| 
         B         ||$C$L33||,NEQ        ; [CPU_ALU] |829| 
         ; branchcc occurs ; [] |829| 
@@ -3279,7 +3279,7 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
         MOVW      DP,#||SFRA_GUI_sendTaskPtr|| ; [CPU_ARAU] 
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 833,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 833,column 21,is_stmt,isa 0
         MOVB      @||SFRA_GUI_sendTaskPtr||,#2,UNC ; [CPU_ALU] |833| 
 ||$C$L33||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1014,column 1,is_stmt,isa 0
@@ -3304,7 +3304,7 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L35||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 844,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 844,column 13,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |844| 
         B         ||$C$L37||,NEQ        ; [CPU_ALU] |844| 
         ; branchcc occurs ; [] |844| 
@@ -3323,7 +3323,7 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
         MOVW      DP,#||SFRA_GUI_sendTaskPtr|| ; [CPU_ARAU] 
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 848,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 848,column 17,is_stmt,isa 0
         MOVB      @||SFRA_GUI_sendTaskPtr||,#3,UNC ; [CPU_ALU] |848| 
 ||$C$L37||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1014,column 1,is_stmt,isa 0
@@ -3348,7 +3348,7 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L39||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 852,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 852,column 13,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |852| 
         B         ||$C$L41||,NEQ        ; [CPU_ALU] |852| 
         ; branchcc occurs ; [] |852| 
@@ -3364,7 +3364,7 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
         MOVW      DP,#||SFRA_GUI_sendTaskPtr|| ; [CPU_ARAU] 
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 856,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 856,column 17,is_stmt,isa 0
         MOVB      @||SFRA_GUI_sendTaskPtr||,#4,UNC ; [CPU_ALU] |856| 
 ||$C$L41||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1014,column 1,is_stmt,isa 0
@@ -3389,7 +3389,7 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L43||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 863,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 863,column 13,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |863| 
         B         ||$C$L57||,NEQ        ; [CPU_ALU] |863| 
         ; branchcc occurs ; [] |863| 
@@ -3409,23 +3409,23 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |919| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1114,column 5,is_stmt,isa 0
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 868,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 868,column 17,is_stmt,isa 0
         ADDB      XAR5,#2               ; [CPU_ALU] |868| 
         MOVW      DP,#||SFRA_GUI_memDataPtr32|| ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1114,column 5,is_stmt,isa 0
         MOV       *+XAR4[AR0],AL        ; [CPU_FPU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 869,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 869,column 17,is_stmt,isa 0
         MOVL      ACC,*+XAR5[0]         ; [CPU_ALU] |869| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 868,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 868,column 17,is_stmt,isa 0
         MOVL      @||SFRA_GUI_memDataPtr32||,XAR5 ; [CPU_ALU] |868| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 869,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 869,column 17,is_stmt,isa 0
         MOVL      @||SFRA_GUI_dataOut32||,ACC ; [CPU_ALU] |869| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 871,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 871,column 17,is_stmt,isa 0
         B         ||$C$L55||,UNC        ; [CPU_ALU] |871| 
         ; branch occurs ; [] |871| 
 ||$C$L45||:    
         MOVW      DP,#||SFRA_GUI_sendTaskPtr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 771,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 771,column 9,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_sendTaskPtr|| ; [CPU_ALU] |771| 
         B         ||$C$L46||,EQ         ; [CPU_ALU] |771| 
         ; branchcc occurs ; [] |771| 
@@ -3445,24 +3445,24 @@ $C$DW$216	.dwtag  DW_TAG_TI_branch
 	.dwcfi	restore_state
 ||$C$L46||:    
         CLRC      SXM                   ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 775,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 775,column 13,is_stmt,isa 0
         MOV       ACC,*+XAR4[1] << 1    ; [CPU_ALU] |775| 
         MOVL      XAR4,#||SFRA_GUI_varGetList|| ; [CPU_ARAU] |775| 
         ADDL      XAR4,ACC              ; [CPU_ALU] |775| 
         MOVL      XAR7,*+XAR4[0]        ; [CPU_ALU] |775| 
         MOVL      @||SFRA_GUI_memDataPtr16||,XAR7 ; [CPU_ALU] |775| 
         MOVW      DP,#||SFRA_GUI_cmdPacket||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 777,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 777,column 13,is_stmt,isa 0
         MOV       AL,*+XAR7[0]          ; [CPU_ALU] |777| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 778,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 778,column 13,is_stmt,isa 0
         MOV       AH,@||SFRA_GUI_cmdPacket||+2 ; [CPU_ALU] |778| 
         MOVW      DP,#||SFRA_GUI_dataOut16|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 777,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 777,column 13,is_stmt,isa 0
         MOV       @||SFRA_GUI_dataOut16||,AL ; [CPU_ALU] |777| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 778,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 778,column 13,is_stmt,isa 0
         MOV       @||SFRA_GUI_wordsLeftToGet||,AH ; [CPU_ALU] |778| 
 ||$C$L47||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 784,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 784,column 13,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_wordsLeftToGet|| ; [CPU_ALU] |784| 
         B         ||$C$L56||,EQ         ; [CPU_ALU] |784| 
         ; branchcc occurs ; [] |784| 
@@ -3488,7 +3488,7 @@ $C$DW$216	.dwtag  DW_TAG_TI_branch
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L49||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 786,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 786,column 17,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |786| 
         B         ||$C$L51||,NEQ        ; [CPU_ALU] |786| 
         ; branchcc occurs ; [] |786| 
@@ -3504,7 +3504,7 @@ $C$DW$216	.dwtag  DW_TAG_TI_branch
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
         MOVW      DP,#||SFRA_GUI_sendTaskPtr|| ; [CPU_ARAU] 
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 790,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 790,column 17,is_stmt,isa 0
         MOVB      @||SFRA_GUI_sendTaskPtr||,#2,UNC ; [CPU_ALU] |790| 
 ||$C$L51||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1014,column 1,is_stmt,isa 0
@@ -3529,7 +3529,7 @@ $C$DW$216	.dwtag  DW_TAG_TI_branch
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L53||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 801,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 801,column 13,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |801| 
         B         ||$C$L57||,NEQ        ; [CPU_ALU] |801| 
         ; branchcc occurs ; [] |801| 
@@ -3548,20 +3548,20 @@ $C$DW$216	.dwtag  DW_TAG_TI_branch
 	.dwcfi	remember_state
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1114,column 5,is_stmt,isa 0
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 806,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 806,column 17,is_stmt,isa 0
         ADDB      XAR7,#1               ; [CPU_ALU] |806| 
         MOVW      DP,#||SFRA_GUI_memDataPtr16|| ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1114,column 5,is_stmt,isa 0
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 806,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 806,column 17,is_stmt,isa 0
         MOVL      @||SFRA_GUI_memDataPtr16||,XAR7 ; [CPU_ALU] |806| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 807,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 807,column 17,is_stmt,isa 0
         MOV       AL,*+XAR7[0]          ; [CPU_ALU] |807| 
         MOV       @||SFRA_GUI_dataOut16||,AL ; [CPU_ALU] |807| 
 ||$C$L55||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 808,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 808,column 17,is_stmt,isa 0
         DEC       @||SFRA_GUI_wordsLeftToGet|| ; [CPU_ALU] |808| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 809,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 809,column 17,is_stmt,isa 0
         MOVB      @||SFRA_GUI_sendTaskPtr||,#1,UNC ; [CPU_ALU] |809| 
 $C$DW$217	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$217, DW_AT_low_pc(0x00)
@@ -3571,9 +3571,9 @@ $C$DW$217	.dwtag  DW_TAG_TI_branch
         ; return occurs ; [] 
 	.dwcfi	restore_state
 ||$C$L56||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 795,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 795,column 17,is_stmt,isa 0
         MOV       @||SFRA_GUI_sendTaskPtr||,#0 ; [CPU_ALU] |795| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 796,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 796,column 17,is_stmt,isa 0
         MOVB      @||SFRA_GUI_taskDoneFlag||,#1,UNC ; [CPU_ALU] |796| 
 ||$C$L57||:    
 $C$DW$218	.dwtag  DW_TAG_TI_branch
@@ -3582,7 +3582,7 @@ $C$DW$218	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$195, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$195, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$195, DW_AT_TI_end_line(0x36f)
 	.dwattr $C$DW$195, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3598,11 +3598,11 @@ $C$DW$219	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$219, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$219, DW_AT_linkage_name("SFRA_GUI_echoDataByte")
 	.dwattr $C$DW$219, DW_AT_external
-	.dwattr $C$DW$219, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$219, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$219, DW_AT_decl_line(0x1fd)
 	.dwattr $C$DW$219, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$219, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 510,column 1,is_stmt,address ||SFRA_GUI_echoDataByte||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 510,column 1,is_stmt,address ||SFRA_GUI_echoDataByte||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_echoDataByte||
 
@@ -3660,7 +3660,7 @@ $C$DW$222	.dwtag  DW_TAG_variable
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L59||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 514,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 514,column 5,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |514| 
         B         ||$C$L61||,NEQ        ; [CPU_ALU] |514| 
         ; branchcc occurs ; [] |514| 
@@ -3674,12 +3674,12 @@ $C$DW$222	.dwtag  DW_TAG_variable
         ; branchcc occurs ; [] |919| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1114,column 5,is_stmt,isa 0
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 517,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 517,column 9,is_stmt,isa 0
         MOVL      XAR5,#||SFRA_GUI_packWord|| ; [CPU_ARAU] |517| 
         MOVW      DP,#||SFRA_GUI_rcvTaskPointer|| ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1114,column 5,is_stmt,isa 0
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 517,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 517,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR5 ; [CPU_ALU] |517| 
 ||$C$L61||:    
 $C$DW$223	.dwtag  DW_TAG_TI_branch
@@ -3688,7 +3688,7 @@ $C$DW$223	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$219, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$219, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$219, DW_AT_TI_end_line(0x20b)
 	.dwattr $C$DW$219, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3704,11 +3704,11 @@ $C$DW$224	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$224, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$224, DW_AT_linkage_name("SFRA_GUI_getDataByte")
 	.dwattr $C$DW$224, DW_AT_external
-	.dwattr $C$DW$224, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$224, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$224, DW_AT_decl_line(0x1d9)
 	.dwattr $C$DW$224, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$224, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 474,column 1,is_stmt,address ||SFRA_GUI_getDataByte||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 474,column 1,is_stmt,address ||SFRA_GUI_getDataByte||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_getDataByte||
 
@@ -3742,22 +3742,22 @@ $C$DW$226	.dwtag  DW_TAG_variable
         MOVL      XAR4,@||SFRA_GUI_sci_base_addr|| ; [CPU_ALU] |1168| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1177,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[5]          ; [CPU_ALU] |1177| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 478,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 478,column 5,is_stmt,isa 0
         TBIT      AL,#6                 ; [CPU_ALU] |478| 
         B         ||$C$L62||,TC         ; [CPU_ALU] |478| 
         ; branchcc occurs ; [] |478| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 495,column 10,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 495,column 10,is_stmt,isa 0
         CMP       @||SFRA_GUI_serialCommsTimer||,#1000 ; [CPU_ALU] |495| 
         B         ||$C$L64||,LEQ        ; [CPU_ALU] |495| 
         ; branchcc occurs ; [] |495| 
 	.dwcfi	remember_state
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 497,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 497,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_commsOKflg||,#0 ; [CPU_ALU] |497| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 501,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 501,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_getCmdByte|| ; [CPU_ARAU] |501| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 502,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 502,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |502| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 501,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 501,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |501| 
 $C$DW$227	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$227, DW_AT_low_pc(0x00)
@@ -3777,15 +3777,15 @@ $C$DW$227	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[7]          ; [CPU_ALU] |1257| 
         MOVW      DP,#||SFRA_GUI_rcvTaskPointer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 484,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 484,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_echoDataByte|| ; [CPU_ARAU] |484| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         ANDB      AL,#0xff              ; [CPU_ALU] |1257| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 484,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 484,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_FPU] |484| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_rxChar||,AL ; [CPU_ALU] |1257| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 489,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 489,column 9,is_stmt,isa 0
 $C$DW$228	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$228, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$228, DW_AT_name("SFRA_GUI_echoDataByte")
@@ -3800,7 +3800,7 @@ $C$DW$229	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$224, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$224, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$224, DW_AT_TI_end_line(0x1f8)
 	.dwattr $C$DW$224, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3816,11 +3816,11 @@ $C$DW$230	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$230, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$230, DW_AT_linkage_name("SFRA_GUI_packWord")
 	.dwattr $C$DW$230, DW_AT_external
-	.dwattr $C$DW$230, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$230, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$230, DW_AT_decl_line(0x210)
 	.dwattr $C$DW$230, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$230, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 529,column 1,is_stmt,address ||SFRA_GUI_packWord||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 529,column 1,is_stmt,address ||SFRA_GUI_packWord||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_packWord||
 
@@ -3837,25 +3837,25 @@ $C$DW$230	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||SFRA_GUI_lowByteFlag|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 530,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 530,column 5,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_lowByteFlag|| ; [CPU_ALU] |530| 
         CMPB      AL,#1                 ; [CPU_ALU] |530| 
         B         ||$C$L65||,EQ         ; [CPU_ALU] |530| 
         ; branchcc occurs ; [] |530| 
 	.dwcfi	remember_state
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 543,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 543,column 9,is_stmt,isa 0
         MOV       ACC,@||SFRA_GUI_rxChar|| << #8 ; [CPU_ALU] |543| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 549,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 549,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_cmdInterpreter|| ; [CPU_ARAU] |549| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 544,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 544,column 9,is_stmt,isa 0
         MOVB      @||SFRA_GUI_lowByteFlag||,#1,UNC ; [CPU_ALU] |544| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 555,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 555,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_taskDoneFlag||,#0 ; [CPU_ALU] |555| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 543,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 543,column 9,is_stmt,isa 0
         OR        @||SFRA_GUI_rxWord||,AL ; [CPU_ALU] |543| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 549,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 549,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |549| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 548,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 548,column 9,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_rxWord|| ; [CPU_ALU] |548| 
         MOVW      DP,#||SFRA_GUI_cmdPacket||+2 ; [CPU_ARAU] 
         MOV       @||SFRA_GUI_cmdPacket||+2,AL ; [CPU_ALU] |548| 
@@ -3867,17 +3867,17 @@ $C$DW$231	.dwtag  DW_TAG_TI_branch
         ; return occurs ; [] 
 	.dwcfi	restore_state
 ||$C$L65||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 532,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 532,column 9,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_rxChar|| ; [CPU_ALU] |532| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 534,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 534,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_getDataByte|| ; [CPU_ARAU] |534| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 533,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 533,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_lowByteFlag||,#0 ; [CPU_ALU] |533| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 532,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 532,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_rxWord||,AL ; [CPU_ALU] |532| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 534,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 534,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |534| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 539,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 539,column 9,is_stmt,isa 0
 $C$DW$232	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$232, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$232, DW_AT_name("SFRA_GUI_getDataByte")
@@ -3891,7 +3891,7 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$230, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$230, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$230, DW_AT_TI_end_line(0x22d)
 	.dwattr $C$DW$230, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3907,11 +3907,11 @@ $C$DW$234	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$234, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$234, DW_AT_linkage_name("SFRA_GUI_echoSizeByte")
 	.dwattr $C$DW$234, DW_AT_external
-	.dwattr $C$DW$234, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$234, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$234, DW_AT_decl_line(0x1c1)
 	.dwattr $C$DW$234, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$234, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 450,column 1,is_stmt,address ||SFRA_GUI_echoSizeByte||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 450,column 1,is_stmt,address ||SFRA_GUI_echoSizeByte||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_echoSizeByte||
 
@@ -3969,7 +3969,7 @@ $C$DW$237	.dwtag  DW_TAG_variable
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L67||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 454,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 454,column 5,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |454| 
         B         ||$C$L69||,NEQ        ; [CPU_ALU] |454| 
         ; branchcc occurs ; [] |454| 
@@ -3985,16 +3985,16 @@ $C$DW$237	.dwtag  DW_TAG_variable
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
         MOVW      DP,#||SFRA_GUI_rxChar|| ; [CPU_ARAU] 
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 458,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 458,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_getDataByte|| ; [CPU_ARAU] |458| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 466,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 466,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |466| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 457,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 457,column 9,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_rxChar|| ; [CPU_ALU] |457| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 458,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 458,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |458| 
         MOVW      DP,#||SFRA_GUI_cmdPacket||+1 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 457,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 457,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_cmdPacket||+1,AL ; [CPU_ALU] |457| 
 ||$C$L69||:    
 $C$DW$238	.dwtag  DW_TAG_TI_branch
@@ -4003,7 +4003,7 @@ $C$DW$238	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$234, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$234, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$234, DW_AT_TI_end_line(0x1d4)
 	.dwattr $C$DW$234, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4019,11 +4019,11 @@ $C$DW$239	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$239, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$239, DW_AT_linkage_name("SFRA_GUI_getSizeByte")
 	.dwattr $C$DW$239, DW_AT_external
-	.dwattr $C$DW$239, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$239, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$239, DW_AT_decl_line(0x19c)
 	.dwattr $C$DW$239, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$239, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 413,column 1,is_stmt,address ||SFRA_GUI_getSizeByte||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 413,column 1,is_stmt,address ||SFRA_GUI_getSizeByte||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_getSizeByte||
 
@@ -4057,22 +4057,22 @@ $C$DW$241	.dwtag  DW_TAG_variable
         MOVL      XAR4,@||SFRA_GUI_sci_base_addr|| ; [CPU_ALU] |1168| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1177,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[5]          ; [CPU_ALU] |1177| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 417,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 417,column 5,is_stmt,isa 0
         TBIT      AL,#6                 ; [CPU_ALU] |417| 
         B         ||$C$L70||,TC         ; [CPU_ALU] |417| 
         ; branchcc occurs ; [] |417| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 435,column 10,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 435,column 10,is_stmt,isa 0
         CMP       @||SFRA_GUI_serialCommsTimer||,#1000 ; [CPU_ALU] |435| 
         B         ||$C$L72||,LEQ        ; [CPU_ALU] |435| 
         ; branchcc occurs ; [] |435| 
 	.dwcfi	remember_state
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 437,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 437,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_commsOKflg||,#0 ; [CPU_ALU] |437| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 441,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 441,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_getCmdByte|| ; [CPU_ARAU] |441| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 442,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 442,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |442| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 441,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 441,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |441| 
 $C$DW$242	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$242, DW_AT_low_pc(0x00)
@@ -4092,15 +4092,15 @@ $C$DW$242	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[7]          ; [CPU_ALU] |1257| 
         MOVW      DP,#||SFRA_GUI_rcvTaskPointer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 424,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 424,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_echoSizeByte|| ; [CPU_ARAU] |424| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         ANDB      AL,#0xff              ; [CPU_ALU] |1257| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 424,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 424,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_FPU] |424| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_rxChar||,AL ; [CPU_ALU] |1257| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 429,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 429,column 9,is_stmt,isa 0
 $C$DW$243	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$243, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$243, DW_AT_name("SFRA_GUI_echoSizeByte")
@@ -4115,7 +4115,7 @@ $C$DW$244	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$239, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$239, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$239, DW_AT_TI_end_line(0x1bc)
 	.dwattr $C$DW$239, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4131,11 +4131,11 @@ $C$DW$245	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$245, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$245, DW_AT_linkage_name("SFRA_GUI_echoCmdByte")
 	.dwattr $C$DW$245, DW_AT_external
-	.dwattr $C$DW$245, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$245, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$245, DW_AT_decl_line(0x183)
 	.dwattr $C$DW$245, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$245, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 388,column 1,is_stmt,address ||SFRA_GUI_echoCmdByte||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 388,column 1,is_stmt,address ||SFRA_GUI_echoCmdByte||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_echoCmdByte||
 
@@ -4193,7 +4193,7 @@ $C$DW$248	.dwtag  DW_TAG_variable
         CMPB      AH,#0                 ; [CPU_ALU] |1028| 
         MOVB      AL,#1,NEQ             ; [CPU_ALU] |1028| 
 ||$C$L74||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 392,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 392,column 5,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |392| 
         B         ||$C$L76||,NEQ        ; [CPU_ALU] |392| 
         ; branchcc occurs ; [] |392| 
@@ -4209,16 +4209,16 @@ $C$DW$248	.dwtag  DW_TAG_variable
         MOVB      XAR0,#9               ; [CPU_ALU] |1114| 
         MOVW      DP,#||SFRA_GUI_rxChar|| ; [CPU_ARAU] 
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 396,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 396,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_getSizeByte|| ; [CPU_ARAU] |396| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 404,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 404,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |404| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 395,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 395,column 9,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_rxChar|| ; [CPU_ALU] |395| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 396,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 396,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |396| 
         MOVW      DP,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 395,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 395,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_cmdPacket||,AL ; [CPU_ALU] |395| 
 ||$C$L76||:    
 $C$DW$249	.dwtag  DW_TAG_TI_branch
@@ -4227,7 +4227,7 @@ $C$DW$249	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$245, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$245, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$245, DW_AT_TI_end_line(0x197)
 	.dwattr $C$DW$245, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4243,11 +4243,11 @@ $C$DW$250	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$250, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$250, DW_AT_linkage_name("SFRA_GUI_getData")
 	.dwattr $C$DW$250, DW_AT_external
-	.dwattr $C$DW$250, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$250, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$250, DW_AT_decl_line(0x2b4)
 	.dwattr $C$DW$250, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$250, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 693,column 1,is_stmt,address ||SFRA_GUI_getData||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 693,column 1,is_stmt,address ||SFRA_GUI_getData||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_getData||
 
@@ -4264,7 +4264,7 @@ $C$DW$250	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||SFRA_GUI_memGetPtr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 694,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 694,column 5,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_memGetPtr|| ; [CPU_ALU] |694| 
         B         ||$C$L77||,EQ         ; [CPU_ALU] |694| 
         ; branchcc occurs ; [] |694| 
@@ -4272,25 +4272,25 @@ $C$DW$250	.dwtag  DW_TAG_subprogram
         B         ||$C$L78||,NEQ        ; [CPU_ALU] |694| 
         ; branchcc occurs ; [] |694| 
         MOVW      DP,#||SFRA_GUI_cmdPacket||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 706,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 706,column 13,is_stmt,isa 0
         MOVZ      AR6,@||SFRA_GUI_cmdPacket||+2 ; [CPU_ALU] |706| 
         MOVU      ACC,@||SFRA_GUI_cmdPacket||+2 ; [CPU_ALU] |706| 
         MOVW      DP,#||SFRA_GUI_temp|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 707,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 707,column 13,is_stmt,isa 0
         LSL       ACC,16                ; [CPU_ALU] |707| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 706,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 706,column 13,is_stmt,isa 0
         MOVL      @||SFRA_GUI_temp||,XAR6 ; [CPU_FPU] |706| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 707,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 707,column 13,is_stmt,isa 0
         ADDL      @||SFRA_GUI_memGetAddress||,ACC ; [CPU_ALU] |707| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 710,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 710,column 13,is_stmt,isa 0
         MOVL      XAR7,@||SFRA_GUI_memGetAddress|| ; [CPU_ALU] |710| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 709,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 709,column 13,is_stmt,isa 0
         MOVL      ACC,@||SFRA_GUI_memGetAddress|| ; [CPU_ALU] |709| 
         MOVL      @||SFRA_GUI_memDataPtr16||,ACC ; [CPU_ALU] |709| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 710,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 710,column 13,is_stmt,isa 0
         MOV       AL,*+XAR7[0]          ; [CPU_ALU] |710| 
         MOV       @||SFRA_GUI_dataOut16||,AL ; [CPU_ALU] |710| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 711,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 711,column 13,is_stmt,isa 0
 $C$DW$251	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$251, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$251, DW_AT_name("SFRA_GUI_sendData")
@@ -4298,13 +4298,13 @@ $C$DW$251	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SFRA_GUI_sendData|| ; [CPU_ALU] |711| 
         ; call occurs [#||SFRA_GUI_sendData||] ; [] |711| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 713,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 713,column 13,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_taskDoneFlag|| ; [CPU_ALU] |713| 
         CMPB      AL,#1                 ; [CPU_ALU] |713| 
         B         ||$C$L78||,NEQ        ; [CPU_ALU] |713| 
         ; branchcc occurs ; [] |713| 
 	.dwcfi	remember_state
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 715,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 715,column 17,is_stmt,isa 0
         MOV       @||SFRA_GUI_memGetPtr||,#0 ; [CPU_ALU] |715| 
 $C$DW$252	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$252, DW_AT_low_pc(0x00)
@@ -4315,18 +4315,18 @@ $C$DW$252	.dwtag  DW_TAG_TI_branch
 	.dwcfi	restore_state
 ||$C$L77||:    
         MOVW      DP,#||SFRA_GUI_cmdPacket||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 697,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 697,column 13,is_stmt,isa 0
         MOVU      ACC,@||SFRA_GUI_cmdPacket||+2 ; [CPU_ALU] |697| 
         MOVW      DP,#||SFRA_GUI_memGetPtr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 698,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 698,column 13,is_stmt,isa 0
         MOVB      @||SFRA_GUI_memGetPtr||,#1,UNC ; [CPU_ALU] |698| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 700,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 700,column 13,is_stmt,isa 0
         MOVB      @||SFRA_GUI_wordsLeftToGet||,#1,UNC ; [CPU_ALU] |700| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 701,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 701,column 13,is_stmt,isa 0
         MOVB      @||SFRA_GUI_sendTaskPtr||,#1,UNC ; [CPU_ALU] |701| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 702,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 702,column 13,is_stmt,isa 0
         MOVB      @||SFRA_GUI_taskDoneFlag||,#1,UNC ; [CPU_ALU] |702| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 697,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 697,column 13,is_stmt,isa 0
         MOVL      @||SFRA_GUI_memGetAddress||,ACC ; [CPU_ALU] |697| 
 ||$C$L78||:    
 $C$DW$253	.dwtag  DW_TAG_TI_branch
@@ -4335,7 +4335,7 @@ $C$DW$253	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$250, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$250, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$250, DW_AT_TI_end_line(0x2d4)
 	.dwattr $C$DW$250, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4351,11 +4351,11 @@ $C$DW$254	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$254, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$254, DW_AT_linkage_name("SFRA_GUI_lifePulseTsk")
 	.dwattr $C$DW$254, DW_AT_external
-	.dwattr $C$DW$254, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$254, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$254, DW_AT_decl_line(0x25a)
 	.dwattr $C$DW$254, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$254, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 603,column 1,is_stmt,address ||SFRA_GUI_lifePulseTsk||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 603,column 1,is_stmt,address ||SFRA_GUI_lifePulseTsk||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_lifePulseTsk||
 
@@ -4393,12 +4393,12 @@ $C$DW$257	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||SFRA_GUI_led_flag|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 604,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 604,column 5,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_led_flag|| ; [CPU_ALU] |604| 
         CMPB      AL,#1                 ; [CPU_ALU] |604| 
         B         ||$C$L81||,NEQ        ; [CPU_ALU] |604| 
         ; branchcc occurs ; [] |604| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 609,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 609,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |609| 
         MOV       AL,*+XAR4[2]          ; [CPU_ALU] |609| 
         B         ||$C$L79||,NEQ        ; [CPU_ALU] |609| 
@@ -4424,7 +4424,7 @@ $C$DW$257	.dwtag  DW_TAG_variable
         MOVL      XAR4,ACC              ; [CPU_ALU] |505| 
         MOVL      *+XAR4[6],XAR6        ; [CPU_ALU] |505| 
 ||$C$L79||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 616,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 616,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |616| 
         MOV       AL,*+XAR4[2]          ; [CPU_ALU] |616| 
         CMPB      AL,#1                 ; [CPU_ALU] |616| 
@@ -4451,7 +4451,7 @@ $C$DW$257	.dwtag  DW_TAG_variable
         MOVL      XAR4,ACC              ; [CPU_ALU] |505| 
         MOVL      *+XAR4[6],XAR6        ; [CPU_ALU] |505| 
 ||$C$L80||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 623,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 623,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |623| 
         MOV       AL,*+XAR4[2]          ; [CPU_ALU] |623| 
         CMPB      AL,#2                 ; [CPU_ALU] |623| 
@@ -4478,11 +4478,11 @@ $C$DW$257	.dwtag  DW_TAG_variable
         MOVL      XAR4,ACC              ; [CPU_ALU] |505| 
         MOVL      *+XAR4[6],XAR6        ; [CPU_ALU] |505| 
 ||$C$L81||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 629,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 629,column 5,is_stmt,isa 0
         MOVB      @||SFRA_GUI_commsOKflg||,#1,UNC ; [CPU_ALU] |629| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 631,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 631,column 5,is_stmt,isa 0
         MOVB      @||SFRA_GUI_taskDoneFlag||,#1,UNC ; [CPU_ALU] |631| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 630,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 630,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |630| 
 $C$DW$258	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$258, DW_AT_low_pc(0x00)
@@ -4490,7 +4490,7 @@ $C$DW$258	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$254, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$254, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$254, DW_AT_TI_end_line(0x278)
 	.dwattr $C$DW$254, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4506,11 +4506,11 @@ $C$DW$259	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$259, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$259, DW_AT_linkage_name("SFRA_GUI_getCmdByte")
 	.dwattr $C$DW$259, DW_AT_external
-	.dwattr $C$DW$259, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$259, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$259, DW_AT_decl_line(0x146)
 	.dwattr $C$DW$259, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$259, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 327,column 1,is_stmt,address ||SFRA_GUI_getCmdByte||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 327,column 1,is_stmt,address ||SFRA_GUI_getCmdByte||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_getCmdByte||
 
@@ -4565,7 +4565,7 @@ $C$DW$264	.dwtag  DW_TAG_variable
         MOVL      XAR4,@||SFRA_GUI_sci_base_addr|| ; [CPU_ALU] |1168| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1177,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[5]          ; [CPU_ALU] |1177| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 331,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 331,column 5,is_stmt,isa 0
         TBIT      AL,#6                 ; [CPU_ALU] |331| 
         B         ||$C$L83||,TC         ; [CPU_ALU] |331| 
         ; branchcc occurs ; [] |331| 
@@ -4573,7 +4573,7 @@ $C$DW$264	.dwtag  DW_TAG_variable
         MOVL      XAR4,@||SFRA_GUI_sci_base_addr|| ; [CPU_ALU] |1168| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1177,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[5]          ; [CPU_ALU] |1177| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 349,column 10,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 349,column 10,is_stmt,isa 0
         TBIT      AL,#5                 ; [CPU_ALU] |349| 
         B         ||$C$L82||,TC         ; [CPU_ALU] |349| 
         ; branchcc occurs ; [] |349| 
@@ -4587,13 +4587,13 @@ $C$DW$264	.dwtag  DW_TAG_variable
         OR        *+XAR4[1],#0x0023     ; [CPU_ALU] |527| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1304,column 1,is_stmt,isa 0
         MOVL      XAR4,@||SFRA_GUI_sci_base_addr|| ; [CPU_ALU] |1304| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 361,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 361,column 9,is_stmt,isa 0
         MOVB      ACC,#6                ; [CPU_ALU] |361| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1313,column 5,is_stmt,isa 0
         AND       *+XAR4[1],#0xffdf     ; [CPU_ALU] |1313| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1314,column 5,is_stmt,isa 0
         OR        *+XAR4[1],#0x0020     ; [CPU_ALU] |1314| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 361,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 361,column 9,is_stmt,isa 0
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |361| 
         MOVL      ACC,@||SFRA_GUI_sci_base_addr|| ; [CPU_ALU] |361| 
 $C$DW$265	.dwtag  DW_TAG_TI_branch
@@ -4605,15 +4605,15 @@ $C$DW$265	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||SCI_clearInterruptStatus||] ; [] |361| 
  RPT#8 || NOP
         MOVW      DP,#||SFRA_GUI_serialCommsTimer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 376,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 376,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_getCmdByte|| ; [CPU_ARAU] |376| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 370,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 370,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |370| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 369,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 369,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_sendTaskPtr||,#0 ; [CPU_ALU] |369| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 376,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 376,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |376| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 375,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 375,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_commsOKflg||,#0 ; [CPU_ALU] |375| 
         B         ||$C$L85||,UNC        ; [CPU_ALU] 
         ; branch occurs ; [] 
@@ -4628,17 +4628,17 @@ $C$DW$265	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[7]          ; [CPU_ALU] |1257| 
         MOVW      DP,#||SFRA_GUI_serialCommsTimer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 337,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 337,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_echoCmdByte|| ; [CPU_ARAU] |337| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         ANDB      AL,#0xff              ; [CPU_ALU] |1257| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 338,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 338,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |338| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 337,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 337,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |337| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1257,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_rxChar||,AL ; [CPU_ALU] |1257| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 343,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 343,column 9,is_stmt,isa 0
 $C$DW$266	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$266, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$266, DW_AT_name("SFRA_GUI_echoCmdByte")
@@ -4656,7 +4656,7 @@ $C$DW$267	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$259, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$259, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$259, DW_AT_TI_end_line(0x17e)
 	.dwattr $C$DW$259, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4672,11 +4672,11 @@ $C$DW$268	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$268, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$268, DW_AT_linkage_name("SFRA_GUI_cmdInterpreter")
 	.dwattr $C$DW$268, DW_AT_external
-	.dwattr $C$DW$268, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$268, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$268, DW_AT_decl_line(0x232)
 	.dwattr $C$DW$268, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$268, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 563,column 1,is_stmt,address ||SFRA_GUI_cmdInterpreter||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 563,column 1,is_stmt,address ||SFRA_GUI_cmdInterpreter||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_cmdInterpreter||
 
@@ -4693,13 +4693,13 @@ $C$DW$268	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||SFRA_GUI_taskDoneFlag|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 564,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 564,column 5,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_taskDoneFlag|| ; [CPU_ALU] |564| 
         B         ||$C$L86||,NEQ        ; [CPU_ALU] |564| 
         ; branchcc occurs ; [] |564| 
         CLRC      SXM                   ; [CPU_ALU] 
         MOVW      DP,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 569,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 569,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_cmdDispatcher|| ; [CPU_ARAU] |569| 
         MOV       ACC,@||SFRA_GUI_cmdPacket|| << 1 ; [CPU_ALU] |569| 
         ADDL      XAR4,ACC              ; [CPU_ALU] |569| 
@@ -4713,25 +4713,25 @@ $C$DW$269	.dwtag  DW_TAG_TI_branch
         ; call occurs [XAR7] ; [] |569| 
 ||$C$L86||:    
         MOVW      DP,#||SFRA_GUI_serialCommsTimer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 576,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 576,column 5,is_stmt,isa 0
         CMP       @||SFRA_GUI_serialCommsTimer||,#2500 ; [CPU_ALU] |576| 
         B         ||$C$L87||,LEQ        ; [CPU_ALU] |576| 
         ; branchcc occurs ; [] |576| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 578,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 578,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_commsOKflg||,#0 ; [CPU_ALU] |578| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 582,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 582,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_getCmdByte|| ; [CPU_ARAU] |582| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 583,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 583,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |583| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 582,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 582,column 9,is_stmt,isa 0
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |582| 
 ||$C$L87||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 585,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 585,column 5,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_taskDoneFlag|| ; [CPU_ALU] |585| 
         CMPB      AL,#1                 ; [CPU_ALU] |585| 
         B         ||$C$L88||,NEQ        ; [CPU_ALU] |585| 
         ; branchcc occurs ; [] |585| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 587,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 587,column 9,is_stmt,isa 0
         MOVL      XAR4,#||SFRA_GUI_getCmdByte|| ; [CPU_ARAU] |587| 
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR4 ; [CPU_ALU] |587| 
 ||$C$L88||:    
@@ -4741,7 +4741,7 @@ $C$DW$270	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$268, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$268, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$268, DW_AT_TI_end_line(0x251)
 	.dwattr $C$DW$268, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4757,11 +4757,11 @@ $C$DW$271	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$271, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$271, DW_AT_linkage_name("SFRA_GUI_runSerialHostComms")
 	.dwattr $C$DW$271, DW_AT_external
-	.dwattr $C$DW$271, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$271, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$271, DW_AT_decl_line(0x133)
 	.dwattr $C$DW$271, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$271, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 308,column 1,is_stmt,address ||SFRA_GUI_runSerialHostComms||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 308,column 1,is_stmt,address ||SFRA_GUI_runSerialHostComms||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_runSerialHostComms||
 $C$DW$272	.dwtag  DW_TAG_formal_parameter
@@ -4789,19 +4789,19 @@ $C$DW$273	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||SFRA_GUI_sweep_start|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 309,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 309,column 5,is_stmt,isa 0
         MOV       AL,@||SFRA_GUI_sweep_start|| ; [CPU_ALU] |309| 
         CMPB      AL,#1                 ; [CPU_ALU] |309| 
         B         ||$C$L89||,NEQ        ; [CPU_ALU] |309| 
         ; branchcc occurs ; [] |309| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 312,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 312,column 9,is_stmt,isa 0
         MOVB      XAR0,#22              ; [CPU_ALU] |312| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 311,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 311,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_sweep_start||,#0 ; [CPU_ALU] |311| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 312,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 312,column 9,is_stmt,isa 0
         MOVB      *+XAR4[AR0],#1,UNC    ; [CPU_ALU] |312| 
 ||$C$L89||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 317,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 317,column 5,is_stmt,isa 0
         MOVL      XAR7,@||SFRA_GUI_rcvTaskPointer|| ; [CPU_ALU] |317| 
 $C$DW$274	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$274, DW_AT_low_pc(0x00)
@@ -4811,7 +4811,7 @@ $C$DW$274	.dwtag  DW_TAG_TI_branch
         LCR       *XAR7                 ; [CPU_ALU] |317| 
         ; call occurs [XAR7] ; [] |317| 
         MOVW      DP,#||SFRA_GUI_serialCommsTimer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 319,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 319,column 5,is_stmt,isa 0
         INC       @||SFRA_GUI_serialCommsTimer|| ; [CPU_ALU] |319| 
 $C$DW$275	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$275, DW_AT_low_pc(0x00)
@@ -4819,7 +4819,7 @@ $C$DW$275	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$271, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$271, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$271, DW_AT_TI_end_line(0x140)
 	.dwattr $C$DW$271, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4835,11 +4835,11 @@ $C$DW$276	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$276, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$276, DW_AT_linkage_name("SFRA_GUI_config")
 	.dwattr $C$DW$276, DW_AT_external
-	.dwattr $C$DW$276, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$276, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$276, DW_AT_decl_line(0x71)
 	.dwattr $C$DW$276, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$276, DW_AT_TI_max_frame_size(-30)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 125,column 1,is_stmt,address ||SFRA_GUI_config||,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 125,column 1,is_stmt,address ||SFRA_GUI_config||,isa 0
 
 	.dwfde $C$DW$CIE, ||SFRA_GUI_config||
 $C$DW$277	.dwtag  DW_TAG_formal_parameter
@@ -5043,7 +5043,7 @@ $C$DW$304	.dwtag  DW_TAG_variable
         MOVL      ACC,*-SP[32]          ; [CPU_ALU] |125| 
         MOVL      *-SP[14],ACC          ; [CPU_ALU] |125| 
         MOVL      ACC,*-SP[36]          ; [CPU_ALU] |125| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 132,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 132,column 5,is_stmt,isa 0
 $C$DW$305	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$305, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$305, DW_AT_name("GPIO_setPinConfig")
@@ -5052,7 +5052,7 @@ $C$DW$305	.dwtag  DW_TAG_TI_branch
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |132| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |132| 
         MOVL      ACC,*-SP[18]          ; [CPU_ALU] |132| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 133,column 5,is_stmt,isa 0
 $C$DW$306	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$306, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$306, DW_AT_name("GPIO_setPinConfig")
@@ -5061,7 +5061,7 @@ $C$DW$306	.dwtag  DW_TAG_TI_branch
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |133| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |133| 
         MOV       AL,*-SP[11]           ; [CPU_ALU] |133| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 134,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 134,column 5,is_stmt,isa 0
         MOVB      XAR4,#3               ; [CPU_ALU] |134| 
         MOVU      ACC,AL                ; [CPU_ALU] |134| 
 $C$DW$307	.dwtag  DW_TAG_TI_branch
@@ -5071,7 +5071,7 @@ $C$DW$307	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |134| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |134| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 135,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 135,column 5,is_stmt,isa 0
         MOVB      XAR4,#3               ; [CPU_ALU] |135| 
         MOVU      ACC,AR1               ; [CPU_ALU] |135| 
 $C$DW$308	.dwtag  DW_TAG_TI_branch
@@ -5082,7 +5082,7 @@ $C$DW$308	.dwtag  DW_TAG_TI_branch
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |135| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |135| 
         MOVL      ACC,*-SP[14]          ; [CPU_ALU] |135| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 145,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 145,column 5,is_stmt,isa 0
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |145| 
         MOVL      ACC,*-SP[16]          ; [CPU_ALU] |145| 
         MOVL      *-SP[4],ACC           ; [CPU_ALU] |145| 
@@ -5098,11 +5098,11 @@ $C$DW$309	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||SCI_setConfig||] ; [] |145| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1357,column 1,is_stmt,isa 0
         MOVL      XAR4,*-SP[8]          ; [CPU_ALU] |1357| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 155,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 155,column 5,is_stmt,isa 0
         MOVB      ACC,#6                ; [CPU_ALU] |155| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1366,column 5,is_stmt,isa 0
         AND       *+XAR4[0],#0xffef     ; [CPU_ALU] |1366| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 155,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 155,column 5,is_stmt,isa 0
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |155| 
         MOVL      ACC,*-SP[8]           ; [CPU_ALU] |155| 
 $C$DW$310	.dwtag  DW_TAG_TI_branch
@@ -5118,34 +5118,34 @@ $C$DW$310	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[1],#0x0023     ; [CPU_ALU] |527| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1304,column 1,is_stmt,isa 0
         MOVL      XAR4,*-SP[8]          ; [CPU_ALU] |1304| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 163,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 163,column 5,is_stmt,isa 0
         MOVB      ACC,#10               ; [CPU_ALU] |163| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1313,column 5,is_stmt,isa 0
         AND       *+XAR4[1],#0xffdf     ; [CPU_ALU] |1313| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1314,column 5,is_stmt,isa 0
         OR        *+XAR4[1],#0x0020     ; [CPU_ALU] |1314| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 163,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 163,column 5,is_stmt,isa 0
         ADDL      ACC,*-SP[8]           ; [CPU_ALU] |163| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |163| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 164,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 164,column 5,is_stmt,isa 0
         MOVB      ACC,#11               ; [CPU_ALU] |164| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 163,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 163,column 5,is_stmt,isa 0
         MOV       *+XAR4[0],#32832      ; [CPU_ALU] |163| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 164,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 164,column 5,is_stmt,isa 0
         ADDL      ACC,*-SP[8]           ; [CPU_ALU] |164| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |164| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 165,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 165,column 5,is_stmt,isa 0
         MOVB      ACC,#12               ; [CPU_ALU] |165| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 164,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 164,column 5,is_stmt,isa 0
         MOV       *+XAR4[0],#8271       ; [CPU_ALU] |164| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 165,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 165,column 5,is_stmt,isa 0
         ADDL      ACC,*-SP[8]           ; [CPU_ALU] |165| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |165| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 170,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 170,column 5,is_stmt,isa 0
         MOVB      ACC,#6                ; [CPU_ALU] |170| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 165,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 165,column 5,is_stmt,isa 0
         MOV       *+XAR4[0],#0          ; [CPU_ALU] |165| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 170,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 170,column 5,is_stmt,isa 0
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |170| 
         MOVL      ACC,*-SP[8]           ; [CPU_ALU] |170| 
 $C$DW$311	.dwtag  DW_TAG_TI_branch
@@ -5156,135 +5156,135 @@ $C$DW$311	.dwtag  DW_TAG_TI_branch
         LCR       #||SCI_clearInterruptStatus|| ; [CPU_ALU] |170| 
         ; call occurs [#||SCI_clearInterruptStatus||] ; [] |170| 
         MOVL      XAR4,*-SP[22]         ; [CPU_ALU] |170| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 249,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 249,column 5,is_stmt,isa 0
         MOVL      XAR6,XAR4             ; [CPU_ALU] |249| 
         ADDB      XAR6,#14              ; [CPU_ALU] |249| 
         MOVL      XT,XAR6               ; [CPU_ALU] |249| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 240,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 240,column 5,is_stmt,isa 0
         MOVL      XAR6,XAR4             ; [CPU_ALU] |240| 
         MOVL      XAR5,#||SFRA_GUI_varGetList|| ; [CPU_ARAU] |240| 
         ADDB      XAR6,#25              ; [CPU_ALU] |240| 
         MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |240| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 241,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 241,column 5,is_stmt,isa 0
         MOVL      XAR6,XAR4             ; [CPU_ALU] |241| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 250,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 250,column 5,is_stmt,isa 0
         MOVL      ACC,XAR4              ; [CPU_ALU] |250| 
         ADDB      ACC,#20               ; [CPU_ALU] |250| 
         MOVL      P,ACC                 ; [CPU_ALU] |250| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 241,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 241,column 5,is_stmt,isa 0
         ADDB      XAR6,#24              ; [CPU_ALU] |241| 
         MOVL      *+XAR5[2],XAR6        ; [CPU_ALU] |241| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 242,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 242,column 5,is_stmt,isa 0
         MOVL      XAR6,XAR4             ; [CPU_ALU] |242| 
         MOVW      DP,#||SFRA_GUI_serialCommsTimer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 250,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 250,column 5,is_stmt,isa 0
         MOVL      ACC,XAR4              ; [CPU_ALU] |250| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
         MOVL      XAR7,#||SFRA_GUI_dataSetList|| ; [CPU_ARAU] |248| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 242,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 242,column 5,is_stmt,isa 0
         ADDB      XAR6,#26              ; [CPU_ALU] |242| 
         MOVL      *+XAR5[4],XAR6        ; [CPU_ALU] |242| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
         MOVL      XAR6,XAR4             ; [CPU_ALU] |248| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 208,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 208,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |208| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 250,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 250,column 5,is_stmt,isa 0
         ADDB      ACC,#20               ; [CPU_ALU] |250| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 230,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 230,column 5,is_stmt,isa 0
         MOVB      XAR0,#8               ; [CPU_ALU] |230| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
         ADDB      XAR6,#18              ; [CPU_ALU] |248| 
         MOVL      *+XAR7[0],XAR6        ; [CPU_ALU] |248| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 249,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 249,column 5,is_stmt,isa 0
         MOVL      XAR6,XAR4             ; [CPU_ALU] |249| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 226,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 226,column 5,is_stmt,isa 0
         MOVL      XAR5,#||SFRA_GUI_cmdDispatcher|| ; [CPU_ARAU] |226| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 209,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 209,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_commsOKflg||,#0 ; [CPU_ALU] |209| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 250,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 250,column 5,is_stmt,isa 0
         MOVL      *+XAR7[4],ACC         ; [CPU_ALU] |250| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 249,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 249,column 5,is_stmt,isa 0
         ADDB      XAR6,#14              ; [CPU_ALU] |249| 
         MOVL      *+XAR7[2],XAR6        ; [CPU_ALU] |249| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 230,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 230,column 5,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_getVariable|| ; [CPU_ARAU] |230| 
         MOVL      *+XAR5[AR0],XAR6      ; [CPU_ALU] |230| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 231,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 231,column 5,is_stmt,isa 0
         MOVB      XAR0,#10              ; [CPU_ALU] |231| 
         MOVL      XAR6,#||SFRA_GUI_getArray|| ; [CPU_ARAU] |231| 
         MOVL      *+XAR5[AR0],XAR6      ; [CPU_ALU] |231| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 232,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 232,column 5,is_stmt,isa 0
         MOVB      XAR0,#12              ; [CPU_ALU] |232| 
         MOVL      XAR6,#||SFRA_GUI_getData|| ; [CPU_ARAU] |232| 
         MOVL      *+XAR5[AR0],XAR6      ; [CPU_ALU] |232| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 233,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 233,column 5,is_stmt,isa 0
         MOVB      XAR0,#14              ; [CPU_ALU] |233| 
         MOVL      XAR6,#||SFRA_GUI_setData32|| ; [CPU_ARAU] |233| 
         MOVL      *+XAR5[AR0],XAR6      ; [CPU_ALU] |233| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 211,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 211,column 5,is_stmt,isa 0
         MOVL      XAR6,*-SP[8]          ; [CPU_ALU] |211| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 255,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 255,column 5,is_stmt,isa 0
         MOVB      XAR0,#12              ; [CPU_ALU] |255| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
         MOVL      XAR2,XAR4             ; [CPU_ALU] |248| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 205,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 205,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |205| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 211,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 211,column 5,is_stmt,isa 0
         MOVL      @||SFRA_GUI_sci_base_addr||,XAR6 ; [CPU_ALU] |211| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 226,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 226,column 5,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_lifePulseTsk|| ; [CPU_ARAU] |226| 
         MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |226| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 255,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 255,column 5,is_stmt,isa 0
         MOVL      XAR0,*+XAR4[AR0]      ; [CPU_ALU] |255| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 227,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 227,column 5,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_setText|| ; [CPU_ARAU] |227| 
         MOVL      *+XAR5[2],XAR6        ; [CPU_ALU] |227| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 228,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 228,column 5,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_setButton|| ; [CPU_ARAU] |228| 
         MOVL      *+XAR5[4],XAR6        ; [CPU_ALU] |228| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 229,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 229,column 5,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_setSlider|| ; [CPU_ARAU] |229| 
         MOVL      *+XAR5[6],XAR6        ; [CPU_ALU] |229| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 176,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 176,column 5,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_getCmdByte|| ; [CPU_ARAU] |176| 
         MOVL      @||SFRA_GUI_rcvTaskPointer||,XAR6 ; [CPU_ALU] |176| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 238,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 238,column 5,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_sweep_start|| ; [CPU_ARAU] |238| 
         MOVW      DP,#||SFRA_GUI_varSetBtnList|| ; [CPU_ARAU] 
         MOVL      @||SFRA_GUI_varSetBtnList||,XAR6 ; [CPU_ALU] |238| 
         MOVW      DP,#||SFRA_GUI_dataOut32|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 191,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 191,column 5,is_stmt,isa 0
         MOVB      XAR6,#0               ; [CPU_ALU] |191| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 234,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 234,column 5,is_stmt,isa 0
         MOVL      XAR7,#||SFRA_GUI_spareTsk08|| ; [CPU_ARAU] |234| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
         ADDB      XAR2,#18              ; [CPU_ALU] |248| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 205,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 205,column 5,is_stmt,isa 0
         MOVL      @||SFRA_GUI_memSetValue||,ACC ; [CPU_FPU] |205| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 191,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 191,column 5,is_stmt,isa 0
         MOVL      @||SFRA_GUI_dataOut32||,XAR6 ; [CPU_FPU] |191| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 201,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 201,column 5,is_stmt,isa 0
         MOVL      @||SFRA_GUI_memGetAddress||,XAR6 ; [CPU_FPU] |201| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 184,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 184,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_sendTaskPtr||,#0 ; [CPU_FPU] |184| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 188,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 188,column 5,is_stmt,isa 0
         MOVB      @||SFRA_GUI_lowByteFlag||,#1,UNC ; [CPU_FPU] |188| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 190,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 190,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_dataOut16||,#0 ; [CPU_FPU] |190| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 196,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 196,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_rcvTskPtrShdw||,#0 ; [CPU_FPU] |196| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 198,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 198,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_delayer||,#0 ; [CPU_FPU] |198| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 200,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 200,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_memGetPtr||,#0 ; [CPU_FPU] |200| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 202,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 202,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_memGetAmount||,#0 ; [CPU_FPU] |202| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 204,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 204,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_memSetPtr||,#0 ; [CPU_FPU] |204| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 207,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 207,column 5,is_stmt,isa 0
         MOV       @||SFRA_GUI_sweep_start||,#0 ; [CPU_FPU] |207| 
         MOV       AL,*-SP[10]           ; [CPU_FPU] |207| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 218,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 218,column 9,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |218| 
         MOV       *XAR6++,#0            ; [CPU_FPU] |218| 
         MOV       *XAR6++,#0            ; [CPU_FPU] |218| 
@@ -5292,87 +5292,87 @@ $C$DW$311	.dwtag  DW_TAG_TI_branch
         MOV       *XAR6++,#0            ; [CPU_FPU] |218| 
         MOV       *XAR6++,#0            ; [CPU_FPU] |218| 
         MOV       *+XAR6[0],#0          ; [CPU_FPU] |218| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 258,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 258,column 5,is_stmt,isa 0
         CMPB      AL,#2                 ; [CPU_ALU] |258| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 255,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 255,column 5,is_stmt,isa 0
         MOVL      XAR6,#||SFRA_GUI_arrayGetList|| ; [CPU_ARAU] |255| 
         MOVL      *+XAR6[0],XAR0        ; [CPU_FPU] |255| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 234,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 234,column 5,is_stmt,isa 0
         MOVB      XAR0,#16              ; [CPU_FPU] |234| 
         MOVL      *+XAR5[AR0],XAR7      ; [CPU_FPU] |234| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 258,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 258,column 5,is_stmt,isa 0
         B         ||$C$L90||,EQ         ; [CPU_ALU] |258| 
         ; branchcc occurs ; [] |258| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 271,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 271,column 9,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[4]        ; [CPU_ALU] |271| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 272,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 272,column 9,is_stmt,isa 0
         MOVL      XAR7,*+XAR4[6]        ; [CPU_ALU] |272| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 274,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 274,column 9,is_stmt,isa 0
         MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |274| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 275,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 275,column 9,is_stmt,isa 0
         MOVB      XAR0,#8               ; [CPU_ALU] |275| 
         MOVL      XAR4,*+XAR4[2]        ; [CPU_ALU] |275| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 274,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 274,column 9,is_stmt,isa 0
         MOVL      *+XAR6[6],ACC         ; [CPU_ALU] |274| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 271,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 271,column 9,is_stmt,isa 0
         MOVL      *+XAR6[2],XAR5        ; [CPU_ALU] |271| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 272,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 272,column 9,is_stmt,isa 0
         MOVL      *+XAR6[4],XAR7        ; [CPU_ALU] |272| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 275,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 275,column 9,is_stmt,isa 0
         MOVL      *+XAR6[AR0],XAR4      ; [CPU_ALU] |275| 
         B         ||$C$L91||,UNC        ; [CPU_ALU] |275| 
         ; branch occurs ; [] |275| 
 ||$C$L90||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 263,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 263,column 9,is_stmt,isa 0
         MOVB      XAR0,#8               ; [CPU_ALU] |263| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 260,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 260,column 9,is_stmt,isa 0
         MOVL      XAR5,#||SFRA_GUI_arrayGetList|| ; [CPU_ARAU] |260| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 263,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 263,column 9,is_stmt,isa 0
         MOVL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |263| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 260,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 260,column 9,is_stmt,isa 0
         MOVL      XAR7,*+XAR4[4]        ; [CPU_ALU] |260| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 261,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 261,column 9,is_stmt,isa 0
         MOVL      XAR6,*+XAR4[6]        ; [CPU_ALU] |261| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 264,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 264,column 9,is_stmt,isa 0
         MOVB      XAR0,#10              ; [CPU_ALU] |264| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 263,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 263,column 9,is_stmt,isa 0
         MOVL      *+XAR5[6],ACC         ; [CPU_ALU] |263| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 264,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 264,column 9,is_stmt,isa 0
         MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |264| 
         MOVB      XAR1,#8               ; [CPU_ALU] |264| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 260,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 260,column 9,is_stmt,isa 0
         MOVL      *+XAR5[2],XAR7        ; [CPU_ALU] |260| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 261,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 261,column 9,is_stmt,isa 0
         MOVL      *+XAR5[4],XAR6        ; [CPU_ALU] |261| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 264,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 264,column 9,is_stmt,isa 0
         MOVL      *+XAR5[AR1],XAR4      ; [CPU_ALU] |264| 
 ||$C$L91||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 280,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 280,column 5,is_stmt,isa 0
         MOVB      XAR0,#10              ; [CPU_ALU] |280| 
         MOVL      XAR4,#||SFRA_GUI_arrayGetList|| ; [CPU_ARAU] |280| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 282,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 282,column 5,is_stmt,isa 0
         MOV       AL,*-SP[9]            ; [CPU_ALU] |282| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 281,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 281,column 5,is_stmt,isa 0
         MOVB      XAR1,#12              ; [CPU_ALU] |281| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 280,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 280,column 5,is_stmt,isa 0
         MOVL      *+XAR4[AR0],XAR2      ; [CPU_ALU] |280| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 285,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 285,column 5,is_stmt,isa 0
         CMPB      AL,#1                 ; [CPU_ALU] |285| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 282,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 282,column 5,is_stmt,isa 0
         MOVB      XAR0,#14              ; [CPU_ALU] |282| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 281,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 281,column 5,is_stmt,isa 0
         MOVL      *+XAR4[AR1],XT        ; [CPU_FPU] |281| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 282,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 282,column 5,is_stmt,isa 0
         MOVL      *+XAR4[AR0],P         ; [CPU_FPU] |282| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 285,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 285,column 5,is_stmt,isa 0
         B         ||$C$L92||,EQ         ; [CPU_ALU] |285| 
         ; branchcc occurs ; [] |285| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 295,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 295,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_led_flag||,#0 ; [CPU_ALU] |295| 
         B         ||$C$L93||,UNC        ; [CPU_ALU] |295| 
         ; branch occurs ; [] |295| 
 ||$C$L92||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 287,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 287,column 9,is_stmt,isa 0
         MOVU      ACC,AR3               ; [CPU_ALU] |287| 
         MOVB      XAR4,#1               ; [CPU_ALU] |287| 
 $C$DW$312	.dwtag  DW_TAG_TI_branch
@@ -5382,7 +5382,7 @@ $C$DW$312	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |287| 
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |287| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 288,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 288,column 9,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |288| 
         MOVU      ACC,AR3               ; [CPU_ALU] |288| 
 $C$DW$313	.dwtag  DW_TAG_TI_branch
@@ -5393,7 +5393,7 @@ $C$DW$313	.dwtag  DW_TAG_TI_branch
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |288| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |288| 
         MOVL      ACC,*-SP[20]          ; [CPU_ALU] |288| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 289,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 289,column 9,is_stmt,isa 0
 $C$DW$314	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$314, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$314, DW_AT_name("GPIO_setPinConfig")
@@ -5402,9 +5402,9 @@ $C$DW$314	.dwtag  DW_TAG_TI_branch
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |289| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |289| 
         MOVW      DP,#||SFRA_GUI_led_flag|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 290,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 290,column 9,is_stmt,isa 0
         MOVB      @||SFRA_GUI_led_flag||,#1,UNC ; [CPU_ALU] |290| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c",line 291,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui_scicomms_driverlib.c",line 291,column 9,is_stmt,isa 0
         MOV       @||SFRA_GUI_led_gpio||,AR3 ; [CPU_ALU] |291| 
 ||$C$L93||:    
         SUBB      SP,#22                ; [CPU_ARAU] 
@@ -5424,7 +5424,7 @@ $C$DW$315	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$276, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c")
+	.dwattr $C$DW$276, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
 	.dwattr $C$DW$276, DW_AT_TI_end_line(0x12a)
 	.dwattr $C$DW$276, DW_AT_TI_end_column(0x01)
 	.dwendentry

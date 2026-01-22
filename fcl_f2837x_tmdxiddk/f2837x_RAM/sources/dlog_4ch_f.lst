@@ -1,17 +1,17 @@
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Wed Jan 21 17:05:16 2026                 *
+       3              ;* Date/Time created: Thu Jan 22 11:16:44 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
        7              
        8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
-       9                      .dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog
+       9                      .dwattr $C$DW$CU, DW_AT_name("../sources/dlog_4ch_f.c")
       10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2
       11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
       12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\fcl_f2837x_tmdxiddk\f2837x_RAM")
@@ -27,11 +27,11 @@ dlog_4ch_f.asm                                                       PAGE    1
       22                      .dwattr $C$DW$1, DW_AT_high_pc(0x00)
       23                      .dwattr $C$DW$1, DW_AT_linkage_name("DLOG_4CH_F_init")
       24                      .dwattr $C$DW$1, DW_AT_external
-      25                      .dwattr $C$DW$1, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/dat
+      25                      .dwattr $C$DW$1, DW_AT_decl_file("../sources/dlog_4ch_f.c")
       26                      .dwattr $C$DW$1, DW_AT_decl_line(0x34)
       27                      .dwattr $C$DW$1, DW_AT_decl_column(0x06)
       28                      .dwattr $C$DW$1, DW_AT_TI_max_frame_size(-2)
-      29                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      29                      .dwpsn  file "../sources/dlog_4ch_f.c",line 53,column 1,is_stmt,address ||DLOG_4CH_F_init||,isa 0
       30              
       31                      .dwfde $C$DW$CIE, ||DLOG_4CH_F_init||
       32              $C$DW$2 .dwtag  DW_TAG_formal_parameter
@@ -58,56 +58,56 @@ dlog_4ch_f.asm                                                       PAGE    1
       53              
       54                      .dwcfi  cfa_offset, -2
       55                      .dwcfi  save_reg_to_mem, 26, 0
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    2
 
-      56                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      56                      .dwpsn  file "../sources/dlog_4ch_f.c",line 58,column 2,is_stmt,isa 0
       57 00000000 D008          MOVB      XAR0,#8               ; [CPU_ALU] |58| 
       58 00000001 0200          MOVB      ACC,#0                ; [CPU_ALU] |58| 
       59 00000002 1E94          MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |58| 
-      60                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      60                      .dwpsn  file "../sources/dlog_4ch_f.c",line 59,column 2,is_stmt,isa 0
       61 00000003 D00A          MOVB      XAR0,#10              ; [CPU_ALU] |59| 
-      62                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      62                      .dwpsn  file "../sources/dlog_4ch_f.c",line 62,column 2,is_stmt,isa 0
       63 00000004 E590          ZERO      R0H                   ; [CPU_FPU] |62| 
-      64                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      64                      .dwpsn  file "../sources/dlog_4ch_f.c",line 59,column 2,is_stmt,isa 0
       65 00000005 1E94          MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |59| 
-      66                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      66                      .dwpsn  file "../sources/dlog_4ch_f.c",line 60,column 2,is_stmt,isa 0
       67 00000006 D00C          MOVB      XAR0,#12              ; [CPU_ALU] |60| 
       68 00000007 1E94          MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |60| 
-      69                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      69                      .dwpsn  file "../sources/dlog_4ch_f.c",line 54,column 2,is_stmt,isa 0
       70 00000008 1EC4          MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |54| 
-      71                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      71                      .dwpsn  file "../sources/dlog_4ch_f.c",line 55,column 2,is_stmt,isa 0
       72 00000009 1ED4          MOVL      *+XAR4[2],ACC         ; [CPU_ALU] |55| 
-      73                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      73                      .dwpsn  file "../sources/dlog_4ch_f.c",line 56,column 2,is_stmt,isa 0
       74 0000000a 1EE4          MOVL      *+XAR4[4],ACC         ; [CPU_ALU] |56| 
-      75                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      75                      .dwpsn  file "../sources/dlog_4ch_f.c",line 57,column 2,is_stmt,isa 0
       76 0000000b 1EF4          MOVL      *+XAR4[6],ACC         ; [CPU_ALU] |57| 
-      77                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      77                      .dwpsn  file "../sources/dlog_4ch_f.c",line 61,column 2,is_stmt,isa 0
       78 0000000c D00E          MOVB      XAR0,#14              ; [CPU_ALU] |61| 
       79 0000000d 1E94          MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |61| 
-      80                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      80                      .dwpsn  file "../sources/dlog_4ch_f.c",line 62,column 2,is_stmt,isa 0
       81 0000000e D010          MOVB      XAR0,#16              ; [CPU_ALU] |62| 
       82 0000000f E203          MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |62| 
          00000010 0094 
-      83                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      83                      .dwpsn  file "../sources/dlog_4ch_f.c",line 63,column 2,is_stmt,isa 0
       84 00000011 D012          MOVB      XAR0,#18              ; [CPU_ALU] |63| 
       85 00000012 E203          MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |63| 
          00000013 0094 
-      86                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      86                      .dwpsn  file "../sources/dlog_4ch_f.c",line 64,column 2,is_stmt,isa 0
       87 00000014 D014          MOVB      XAR0,#20              ; [CPU_ALU] |64| 
       88 00000015 2B94          MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |64| 
-      89                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      89                      .dwpsn  file "../sources/dlog_4ch_f.c",line 65,column 2,is_stmt,isa 0
       90 00000016 D015          MOVB      XAR0,#21              ; [CPU_ALU] |65| 
       91 00000017 2B94          MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |65| 
-      92                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      92                      .dwpsn  file "../sources/dlog_4ch_f.c",line 66,column 2,is_stmt,isa 0
       93 00000018 D016          MOVB      XAR0,#22              ; [CPU_ALU] |66| 
       94 00000019 2B94          MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |66| 
-      95                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      95                      .dwpsn  file "../sources/dlog_4ch_f.c",line 67,column 2,is_stmt,isa 0
       96 0000001a D017          MOVB      XAR0,#23              ; [CPU_ALU] |67| 
       97 0000001b 2B94          MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |67| 
-      98                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+      98                      .dwpsn  file "../sources/dlog_4ch_f.c",line 68,column 2,is_stmt,isa 0
       99 0000001c D018          MOVB      XAR0,#24              ; [CPU_ALU] |68| 
      100 0000001d 2B94          MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |68| 
      101              $C$DW$4 .dwtag  DW_TAG_TI_branch
@@ -116,9 +116,9 @@ dlog_4ch_f.asm                                                       PAGE    2
      104              
      105 0000001e 0006          LRETR     ; [CPU_ALU] 
      106                      ; return occurs ; [] 
-     107                      .dwattr $C$DW$1, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/d
+     107                      .dwattr $C$DW$1, DW_AT_TI_end_file("../sources/dlog_4ch_f.c")
      108                      .dwattr $C$DW$1, DW_AT_TI_end_line(0x45)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    3
@@ -137,11 +137,11 @@ dlog_4ch_f.asm                                                       PAGE    3
      120                      .dwattr $C$DW$5, DW_AT_high_pc(0x00)
      121                      .dwattr $C$DW$5, DW_AT_linkage_name("DLOG_4CH_F_FUNC")
      122                      .dwattr $C$DW$5, DW_AT_external
-     123                      .dwattr $C$DW$5, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/dat
+     123                      .dwattr $C$DW$5, DW_AT_decl_file("../sources/dlog_4ch_f.c")
      124                      .dwattr $C$DW$5, DW_AT_decl_line(0x48)
      125                      .dwattr $C$DW$5, DW_AT_decl_column(0x06)
      126                      .dwattr $C$DW$5, DW_AT_TI_max_frame_size(-6)
-     127                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     127                      .dwpsn  file "../sources/dlog_4ch_f.c",line 73,column 1,is_stmt,address ||DLOG_4CH_F_FUNC||,isa 0
      128              
      129                      .dwfde $C$DW$CIE, ||DLOG_4CH_F_FUNC||
      130              $C$DW$6 .dwtag  DW_TAG_formal_parameter
@@ -176,9 +176,9 @@ dlog_4ch_f.asm                                                       PAGE    3
      159                      .dwcfi  cfa_offset, -4
      160 00000001 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
      161                      .dwcfi  cfa_offset, -6
-     162                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     162                      .dwpsn  file "../sources/dlog_4ch_f.c",line 74,column 2,is_stmt,isa 0
      163 00000002 D014          MOVB      XAR0,#20              ; [CPU_ALU] |74| 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    4
@@ -190,25 +190,25 @@ dlog_4ch_f.asm                                                       PAGE    4
      168 00000006 5202          CMPB      AL,#2                 ; [CPU_ALU] |74| 
      169 00000007 6055          B         ||$C$L3||,NEQ         ; [CPU_ALU] |74| 
      170                      ; branchcc occurs ; [] |74| 
-     171                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     171                      .dwpsn  file "../sources/dlog_4ch_f.c",line 86,column 13,is_stmt,isa 0
      172 00000008 D016          MOVB      XAR0,#22              ; [CPU_ALU] |86| 
      173 00000009 9294          MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |86| 
-     174                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     174                      .dwpsn  file "../sources/dlog_4ch_f.c",line 88,column 13,is_stmt,isa 0
      175 0000000a D015          MOVB      XAR0,#21              ; [CPU_ALU] |88| 
-     176                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     176                      .dwpsn  file "../sources/dlog_4ch_f.c",line 86,column 13,is_stmt,isa 0
      177 0000000b 9C01          ADDB      AL,#1                 ; [CPU_ALU] |86| 
-     178                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     178                      .dwpsn  file "../sources/dlog_4ch_f.c",line 88,column 13,is_stmt,isa 0
      179 0000000c 5494          CMP       AL,*+XAR4[AR0]        ; [CPU_ALU] |88| 
      180 0000000d 6038          B         ||$C$L1||,NEQ         ; [CPU_ALU] |88| 
      181                      ; branchcc occurs ; [] |88| 
-     182                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     182                      .dwpsn  file "../sources/dlog_4ch_f.c",line 90,column 17,is_stmt,isa 0
      183 0000000e D016          MOVB      XAR0,#22              ; [CPU_ALU] |90| 
      184 0000000f 3B01          SETC      SXM                   ; [CPU_ALU] 
-     185                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     185                      .dwpsn  file "../sources/dlog_4ch_f.c",line 91,column 17,is_stmt,isa 0
      186 00000010 83C4          MOVL      XAR5,*+XAR4[0]        ; [CPU_ALU] |91| 
-     187                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     187                      .dwpsn  file "../sources/dlog_4ch_f.c",line 90,column 17,is_stmt,isa 0
      188 00000011 2B94          MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |90| 
-     189                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     189                      .dwpsn  file "../sources/dlog_4ch_f.c",line 91,column 17,is_stmt,isa 0
      190 00000012 D018          MOVB      XAR0,#24              ; [CPU_ALU] |91| 
      191 00000013 5603          MOV       ACC,*+XAR4[AR0] << 1  ; [CPU_ALU] |91| 
          00000014 0194 
@@ -217,7 +217,7 @@ dlog_4ch_f.asm                                                       PAGE    4
      194 00000017 0794          ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |91| 
      195 00000018 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |91| 
      196 00000019 C2C5          MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |91| 
-     197                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     197                      .dwpsn  file "../sources/dlog_4ch_f.c",line 92,column 17,is_stmt,isa 0
      198 0000001a 83D4          MOVL      XAR5,*+XAR4[2]        ; [CPU_ALU] |92| 
      199 0000001b D018          MOVB      XAR0,#24              ; [CPU_ALU] |92| 
      200 0000001c 5603          MOV       ACC,*+XAR4[AR0] << 1  ; [CPU_ALU] |92| 
@@ -227,7 +227,7 @@ dlog_4ch_f.asm                                                       PAGE    4
      203 00000020 0794          ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |92| 
      204 00000021 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |92| 
      205 00000022 C2C5          MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |92| 
-     206                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     206                      .dwpsn  file "../sources/dlog_4ch_f.c",line 93,column 17,is_stmt,isa 0
      207 00000023 83E4          MOVL      XAR5,*+XAR4[4]        ; [CPU_ALU] |93| 
      208 00000024 D018          MOVB      XAR0,#24              ; [CPU_ALU] |93| 
      209 00000025 5603          MOV       ACC,*+XAR4[AR0] << 1  ; [CPU_ALU] |93| 
@@ -237,8 +237,8 @@ dlog_4ch_f.asm                                                       PAGE    4
      212 00000029 0794          ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |93| 
      213 0000002a 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |93| 
      214 0000002b C2C5          MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |93| 
-     215                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+     215                      .dwpsn  file "../sources/dlog_4ch_f.c",line 94,column 17,is_stmt,isa 0
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    5
@@ -251,11 +251,11 @@ dlog_4ch_f.asm                                                       PAGE    5
      220 00000031 C4C5          MOVL      XAR6,*+XAR5[0]        ; [CPU_ALU] |94| 
      221 00000032 0794          ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |94| 
      222 00000033 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |94| 
-     223                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     223                      .dwpsn  file "../sources/dlog_4ch_f.c",line 97,column 17,is_stmt,isa 0
      224 00000034 D018          MOVB      XAR0,#24              ; [CPU_ALU] |97| 
-     225                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     225                      .dwpsn  file "../sources/dlog_4ch_f.c",line 94,column 17,is_stmt,isa 0
      226 00000035 C2C5          MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |94| 
-     227                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     227                      .dwpsn  file "../sources/dlog_4ch_f.c",line 97,column 17,is_stmt,isa 0
      228 00000036 9294          MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |97| 
      229 00000037 D017          MOVB      XAR0,#23              ; [CPU_ALU] |97| 
      230 00000038 9C01          ADDB      AL,#1                 ; [CPU_ALU] |97| 
@@ -266,13 +266,13 @@ dlog_4ch_f.asm                                                       PAGE    5
          0000003d 0094 
      234 0000003e 601E          B         ||$C$L3||,NEQ         ; [CPU_ALU] 
      235                      ; branchcc occurs ; [] 
-     236                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     236                      .dwpsn  file "../sources/dlog_4ch_f.c",line 99,column 21,is_stmt,isa 0
      237 0000003f D118          MOVB      XAR1,#24              ; [CPU_ALU] |99| 
-     238                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     238                      .dwpsn  file "../sources/dlog_4ch_f.c",line 100,column 21,is_stmt,isa 0
      239 00000040 D014          MOVB      XAR0,#20              ; [CPU_ALU] |100| 
-     240                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     240                      .dwpsn  file "../sources/dlog_4ch_f.c",line 99,column 21,is_stmt,isa 0
      241 00000041 2B9C          MOV       *+XAR4[AR1],#0        ; [CPU_ALU] |99| 
-     242                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     242                      .dwpsn  file "../sources/dlog_4ch_f.c",line 100,column 21,is_stmt,isa 0
      243 00000042 56BF          MOVB      *+XAR4[AR0],#1,UNC    ; [CPU_ALU] |100| 
          00000043 0194 
      244 00000044 6F18          B         ||$C$L3||,UNC         ; [CPU_ALU] |100| 
@@ -283,7 +283,7 @@ dlog_4ch_f.asm                                                       PAGE    5
      249 00000047 6F15          B         ||$C$L3||,UNC         ; [CPU_ALU] 
      250                      ; branch occurs ; [] 
      251 00000048       ||$C$L2||:    
-     252                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     252                      .dwpsn  file "../sources/dlog_4ch_f.c",line 77,column 13,is_stmt,isa 0
      253 00000048 83C4          MOVL      XAR5,*+XAR4[0]        ; [CPU_ALU] |77| 
      254 00000049 D012          MOVB      XAR0,#18              ; [CPU_ALU] |77| 
      255 0000004a E2AF          MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |77| 
@@ -298,7 +298,7 @@ dlog_4ch_f.asm                                                       PAGE    5
      261 00000052 D010          MOVB      XAR0,#16              ; [CPU_ALU] |77| 
      262 00000053 E2AF          MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |77| 
          00000054 0194 
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    6
@@ -306,13 +306,13 @@ dlog_4ch_f.asm                                                       PAGE    6
      263 00000055 E694          CMPF32    R1H,R0H               ; [CPU_FPU] |77| 
          00000056 0001 
      264 00000057 AD14          MOVST0    ZF, NF                ; [CPU_FPU] |77| 
-     265                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     265                      .dwpsn  file "../sources/dlog_4ch_f.c",line 81,column 17,is_stmt,isa 0
      266 00000058 56B4          MOVB      XAR0,#20,LT           ; [CPU_ALU] |81| 
          00000059 14A0 
      267 0000005a 56B4          MOVB      *+XAR4[AR0],#2,LT     ; [CPU_ALU] |81| 
          0000005b 0294 
      268 0000005c       ||$C$L3||:    
-     269                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch
+     269                      .dwpsn  file "../sources/dlog_4ch_f.c",line 106,column 2,is_stmt,isa 0
      270 0000005c 83C4          MOVL      XAR5,*+XAR4[0]        ; [CPU_ALU] |106| 
      271 0000005d D010          MOVB      XAR0,#16              ; [CPU_ALU] |106| 
      272 0000005e 06C5          MOVL      ACC,*+XAR5[0]         ; [CPU_ALU] |106| 
@@ -328,7 +328,7 @@ dlog_4ch_f.asm                                                       PAGE    6
      282              
      283 00000062 0006          LRETR     ; [CPU_ALU] 
      284                      ; return occurs ; [] 
-     285                      .dwattr $C$DW$5, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/d
+     285                      .dwattr $C$DW$5, DW_AT_TI_end_file("../sources/dlog_4ch_f.c")
      286                      .dwattr $C$DW$5, DW_AT_TI_end_line(0x6b)
      287                      .dwattr $C$DW$5, DW_AT_TI_end_column(0x01)
      288                      .dwendentry
@@ -358,7 +358,7 @@ dlog_4ch_f.asm                                                       PAGE    6
      312                      .dwcfi  same_value, 11
      313                      .dwcfi  same_value, 59
      314                      .dwcfi  same_value, 63
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    7
@@ -418,7 +418,7 @@ dlog_4ch_f.asm                                                       PAGE    7
      367                      .dwattr $C$DW$13, DW_AT_name("output_ptr1")
      368                      .dwattr $C$DW$13, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
      369                      .dwattr $C$DW$13, DW_AT_accessibility(DW_ACCESS_public)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    8
@@ -478,7 +478,7 @@ dlog_4ch_f.asm                                                       PAGE    8
      422                      .dwattr $C$DW$19, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
      423                      .dwattr $C$DW$19, DW_AT_accessibility(DW_ACCESS_public)
      424                      .dwattr $C$DW$19, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/da
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    9
@@ -538,7 +538,7 @@ dlog_4ch_f.asm                                                       PAGE    9
      477                      .dwattr $C$DW$T$24, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/
      478                      .dwattr $C$DW$T$24, DW_AT_decl_line(0x4b)
      479                      .dwattr $C$DW$T$24, DW_AT_decl_column(0x02)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   10
@@ -598,7 +598,7 @@ dlog_4ch_f.asm                                                       PAGE   10
      532              $C$DW$TU$6      .dwtag  DW_TAG_type_unit
      533                      .dwmtype  $C$DW$T$6
      534              $C$DW$T$6       .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   11
@@ -658,7 +658,7 @@ dlog_4ch_f.asm                                                       PAGE   11
      587                      .dwattr $C$DW$T$21, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/mac
      588                      .dwattr $C$DW$T$21, DW_AT_decl_line(0x40)
      589                      .dwattr $C$DW$T$21, DW_AT_decl_column(0x1d)
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   12
@@ -718,7 +718,7 @@ dlog_4ch_f.asm                                                       PAGE   12
      642              
      643                      .dwendtag $C$DW$TU$14
      644              
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   13
@@ -778,7 +778,7 @@ dlog_4ch_f.asm                                                       PAGE   13
      697              $C$DW$TU$18     .dwtag  DW_TAG_type_unit
      698                      .dwmtype  $C$DW$T$18
      699              $C$DW$T$18      .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Wed Jan 21 17:05:16 2026
+TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:45 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   14

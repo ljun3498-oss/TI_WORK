@@ -22,10 +22,14 @@ ORDERED_OBJS += \
 "./src_device/F2837xD_CodeStartBranch.obj" \
 "./src_device/F2837xD_GlobalVariableDefs.obj" \
 "./src_device/device.obj" \
+"./src_driver/adc.obj" \
+"./src_driver/cla.obj" \
+"./src_driver/eqep.obj" \
 "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/ccs/Release/driverlib.lib" \
 "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/lib/sfra_f32_tmu_eabi.lib" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/cmd/F2837xD_Headers_nonBIOS_cpu1_eabi.cmd" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/cmd/iddk_servo_2837x_ram_lnk_cpu1.cmd" \
+"../src_device/F2837xD_Headers_nonBIOS_cpu1_eabi.cmd" \
+"../src_device/iddk_servo_2837x_flash_lnk_cpu1.cmd" \
+"../src_device/iddk_servo_2837x_ram_lnk_cpu1.cmd" \
 $(GEN_CMDS__FLAG) \
 -lPM_tformat_lib_f2837x.lib \
 -llibc.a \
@@ -40,9 +44,11 @@ RMDIR := RMDIR /S/Q
 -include subdir_vars.mk
 -include sources/subdir_vars.mk
 -include src_device/subdir_vars.mk
+-include src_driver/subdir_vars.mk
 -include subdir_rules.mk
 -include sources/subdir_rules.mk
 -include src_device/subdir_rules.mk
+-include src_driver/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -160,10 +166,10 @@ fcl_f2837x_tmdxiddk.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "sources/dlog_4ch_f.lst" "sources/fcl_cla_code.lst" "sources/fcl_cpu_code.lst" "sources/fcl_f2837x_sfra_gui.lst" "sources/fcl_f2837x_tmdxiddk.lst" "sources/fcl_f2837x_tmdxiddk_cla_tasks.lst" "sources/fcl_tformat_f2837x_config.lst" "sources/sfra_gui_scicomms_driverlib.lst" "sources/speed_observer.lst" "src_device/F2837xD_CodeStartBranch.lst" "src_device/F2837xD_GlobalVariableDefs.lst" "src_device/device.lst" 
-	-$(RM) "sources\dlog_4ch_f.obj" "sources\fcl_cla_code.obj" "sources\fcl_cpu_code.obj" "sources\fcl_f2837x_sfra_gui.obj" "sources\fcl_f2837x_tmdxiddk.obj" "sources\fcl_f2837x_tmdxiddk_cla_tasks.obj" "sources\fcl_tformat_f2837x_config.obj" "sources\sfra_gui_scicomms_driverlib.obj" "sources\speed_observer.obj" "src_device\F2837xD_CodeStartBranch.obj" "src_device\F2837xD_GlobalVariableDefs.obj" "src_device\device.obj" 
-	-$(RM) "sources\dlog_4ch_f.d" "sources\fcl_cpu_code.d" "sources\fcl_f2837x_sfra_gui.d" "sources\fcl_f2837x_tmdxiddk.d" "sources\fcl_tformat_f2837x_config.d" "sources\sfra_gui_scicomms_driverlib.d" "sources\speed_observer.d" "src_device\F2837xD_GlobalVariableDefs.d" "src_device\device.d" 
-	-$(RM) "sources/dlog_4ch_f.asm" "sources/fcl_cla_code.asm" "sources/fcl_cpu_code.asm" "sources/fcl_f2837x_sfra_gui.asm" "sources/fcl_f2837x_tmdxiddk.asm" "sources/fcl_f2837x_tmdxiddk_cla_tasks.asm" "sources/fcl_tformat_f2837x_config.asm" "sources/sfra_gui_scicomms_driverlib.asm" "sources/speed_observer.asm" "src_device/F2837xD_CodeStartBranch.asm" "src_device/F2837xD_GlobalVariableDefs.asm" "src_device/device.asm" 
+	-$(RM) "sources/dlog_4ch_f.lst" "sources/fcl_cla_code.lst" "sources/fcl_cpu_code.lst" "sources/fcl_f2837x_sfra_gui.lst" "sources/fcl_f2837x_tmdxiddk.lst" "sources/fcl_f2837x_tmdxiddk_cla_tasks.lst" "sources/fcl_tformat_f2837x_config.lst" "sources/sfra_gui_scicomms_driverlib.lst" "sources/speed_observer.lst" "src_device/F2837xD_CodeStartBranch.lst" "src_device/F2837xD_GlobalVariableDefs.lst" "src_device/device.lst" "src_driver/adc.lst" "src_driver/cla.lst" "src_driver/eqep.lst" 
+	-$(RM) "sources\dlog_4ch_f.obj" "sources\fcl_cla_code.obj" "sources\fcl_cpu_code.obj" "sources\fcl_f2837x_sfra_gui.obj" "sources\fcl_f2837x_tmdxiddk.obj" "sources\fcl_f2837x_tmdxiddk_cla_tasks.obj" "sources\fcl_tformat_f2837x_config.obj" "sources\sfra_gui_scicomms_driverlib.obj" "sources\speed_observer.obj" "src_device\F2837xD_CodeStartBranch.obj" "src_device\F2837xD_GlobalVariableDefs.obj" "src_device\device.obj" "src_driver\adc.obj" "src_driver\cla.obj" "src_driver\eqep.obj" 
+	-$(RM) "sources\dlog_4ch_f.d" "sources\fcl_cpu_code.d" "sources\fcl_f2837x_sfra_gui.d" "sources\fcl_f2837x_tmdxiddk.d" "sources\fcl_tformat_f2837x_config.d" "sources\sfra_gui_scicomms_driverlib.d" "sources\speed_observer.d" "src_device\F2837xD_GlobalVariableDefs.d" "src_device\device.d" "src_driver\adc.d" "src_driver\cla.d" "src_driver\eqep.d" 
+	-$(RM) "sources/dlog_4ch_f.asm" "sources/fcl_cla_code.asm" "sources/fcl_cpu_code.asm" "sources/fcl_f2837x_sfra_gui.asm" "sources/fcl_f2837x_tmdxiddk.asm" "sources/fcl_f2837x_tmdxiddk_cla_tasks.asm" "sources/fcl_tformat_f2837x_config.asm" "sources/sfra_gui_scicomms_driverlib.asm" "sources/speed_observer.asm" "src_device/F2837xD_CodeStartBranch.asm" "src_device/F2837xD_GlobalVariableDefs.asm" "src_device/device.asm" "src_driver/adc.asm" "src_driver/cla.asm" "src_driver/eqep.asm" 
 	-$(RM) "sources\fcl_cla_code.d" "sources\fcl_f2837x_tmdxiddk_cla_tasks.d" 
 	-$(RM) "src_device\F2837xD_CodeStartBranch.d" 
 	-@echo 'Finished clean'

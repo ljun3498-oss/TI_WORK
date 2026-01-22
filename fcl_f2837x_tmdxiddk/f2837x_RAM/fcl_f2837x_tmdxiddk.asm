@@ -1,12 +1,12 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Wed Jan 21 17:05:17 2026                 *
+;* Date/Time created: Thu Jan 22 11:16:46 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$CU, DW_AT_name("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\fcl_f2837x_tmdxiddk\f2837x_RAM")
@@ -422,7 +422,7 @@ $C$DW$59	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$59, DW_AT_linkage_name("Cla1Task5")
 	.dwattr $C$DW$59, DW_AT_declaration
 	.dwattr $C$DW$59, DW_AT_external
-	.dwattr $C$DW$59, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$59, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$59, DW_AT_decl_line(0xcd)
 	.dwattr $C$DW$59, DW_AT_decl_column(0x19)
 	.dwendtag $C$DW$59
@@ -433,7 +433,7 @@ $C$DW$60	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$60, DW_AT_linkage_name("Cla1Task6")
 	.dwattr $C$DW$60, DW_AT_declaration
 	.dwattr $C$DW$60, DW_AT_external
-	.dwattr $C$DW$60, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$60, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$60, DW_AT_decl_line(0xce)
 	.dwattr $C$DW$60, DW_AT_decl_column(0x19)
 	.dwendtag $C$DW$60
@@ -444,7 +444,7 @@ $C$DW$61	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$61, DW_AT_linkage_name("Cla1Task7")
 	.dwattr $C$DW$61, DW_AT_declaration
 	.dwattr $C$DW$61, DW_AT_external
-	.dwattr $C$DW$61, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$61, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$61, DW_AT_decl_line(0xcf)
 	.dwattr $C$DW$61, DW_AT_decl_column(0x19)
 	.dwendtag $C$DW$61
@@ -455,7 +455,7 @@ $C$DW$62	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$62, DW_AT_linkage_name("Cla1Task8")
 	.dwattr $C$DW$62, DW_AT_declaration
 	.dwattr $C$DW$62, DW_AT_external
-	.dwattr $C$DW$62, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$62, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$62, DW_AT_decl_line(0xd0)
 	.dwattr $C$DW$62, DW_AT_decl_column(0x19)
 	.dwendtag $C$DW$62
@@ -615,7 +615,7 @@ $C$DW$89	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$89, DW_AT_location[DW_OP_addr ||serialCommsTimer||]
 	.dwattr $C$DW$89, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$89, DW_AT_external
-	.dwattr $C$DW$89, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$89, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$89, DW_AT_decl_line(0xf7)
 	.dwattr $C$DW$89, DW_AT_decl_column(0x0a)
 
@@ -633,7 +633,7 @@ $C$DW$90	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$90, DW_AT_location[DW_OP_addr ||offsetCalCounter||]
 	.dwattr $C$DW$90, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$90, DW_AT_external
-	.dwattr $C$DW$90, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$90, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$90, DW_AT_decl_line(0x111)
 	.dwattr $C$DW$90, DW_AT_decl_column(0x0a)
 
@@ -651,7 +651,7 @@ $C$DW$91	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$91, DW_AT_location[DW_OP_addr ||hlt||]
 	.dwattr $C$DW$91, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$91, DW_AT_external
-	.dwattr $C$DW$91, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$91, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$91, DW_AT_decl_line(0x114)
 	.dwattr $C$DW$91, DW_AT_decl_column(0x0a)
 
@@ -669,7 +669,7 @@ $C$DW$92	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$92, DW_AT_location[DW_OP_addr ||llt||]
 	.dwattr $C$DW$92, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$92, DW_AT_external
-	.dwattr $C$DW$92, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$92, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$92, DW_AT_decl_line(0x115)
 	.dwattr $C$DW$92, DW_AT_decl_column(0x0a)
 
@@ -687,7 +687,7 @@ $C$DW$93	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$93, DW_AT_location[DW_OP_addr ||clkPrescale||]
 	.dwattr $C$DW$93, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$93, DW_AT_external
-	.dwattr $C$DW$93, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$93, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$93, DW_AT_decl_line(0x11a)
 	.dwattr $C$DW$93, DW_AT_decl_column(0x0a)
 
@@ -705,7 +705,7 @@ $C$DW$94	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$94, DW_AT_location[DW_OP_addr ||sampWin||]
 	.dwattr $C$DW$94, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$94, DW_AT_external
-	.dwattr $C$DW$94, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$94, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$94, DW_AT_decl_line(0x11b)
 	.dwattr $C$DW$94, DW_AT_decl_column(0x0a)
 
@@ -723,7 +723,7 @@ $C$DW$95	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$95, DW_AT_location[DW_OP_addr ||thresh||]
 	.dwattr $C$DW$95, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$95, DW_AT_external
-	.dwattr $C$DW$95, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$95, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$95, DW_AT_decl_line(0x11c)
 	.dwattr $C$DW$95, DW_AT_decl_column(0x0a)
 
@@ -741,7 +741,7 @@ $C$DW$96	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$96, DW_AT_location[DW_OP_addr ||LEM_curHi||]
 	.dwattr $C$DW$96, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$96, DW_AT_external
-	.dwattr $C$DW$96, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$96, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$96, DW_AT_decl_line(0x11d)
 	.dwattr $C$DW$96, DW_AT_decl_column(0x0a)
 
@@ -759,7 +759,7 @@ $C$DW$97	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$97, DW_AT_location[DW_OP_addr ||LEM_curLo||]
 	.dwattr $C$DW$97, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$97, DW_AT_external
-	.dwattr $C$DW$97, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$97, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$97, DW_AT_decl_line(0x11e)
 	.dwattr $C$DW$97, DW_AT_decl_column(0x0a)
 
@@ -777,7 +777,7 @@ $C$DW$98	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$98, DW_AT_location[DW_OP_addr ||SHUNT_curHi||]
 	.dwattr $C$DW$98, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$98, DW_AT_external
-	.dwattr $C$DW$98, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$98, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$98, DW_AT_decl_line(0x11f)
 	.dwattr $C$DW$98, DW_AT_decl_column(0x0a)
 
@@ -795,7 +795,7 @@ $C$DW$99	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$99, DW_AT_location[DW_OP_addr ||SHUNT_curLo||]
 	.dwattr $C$DW$99, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$99, DW_AT_external
-	.dwattr $C$DW$99, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$99, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$99, DW_AT_decl_line(0x120)
 	.dwattr $C$DW$99, DW_AT_decl_column(0x0a)
 
@@ -813,7 +813,7 @@ $C$DW$100	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$100, DW_AT_location[DW_OP_addr ||enableFlag||]
 	.dwattr $C$DW$100, DW_AT_type(*$C$DW$T$306)
 	.dwattr $C$DW$100, DW_AT_external
-	.dwattr $C$DW$100, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$100, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$100, DW_AT_decl_line(0x125)
 	.dwattr $C$DW$100, DW_AT_decl_column(0x13)
 
@@ -831,7 +831,7 @@ $C$DW$101	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$101, DW_AT_location[DW_OP_addr ||backTicker||]
 	.dwattr $C$DW$101, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$101, DW_AT_external
-	.dwattr $C$DW$101, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$101, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$101, DW_AT_decl_line(0x129)
 	.dwattr $C$DW$101, DW_AT_decl_column(0x0a)
 
@@ -849,7 +849,7 @@ $C$DW$102	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$102, DW_AT_location[DW_OP_addr ||tripFlagDMC||]
 	.dwattr $C$DW$102, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$102, DW_AT_external
-	.dwattr $C$DW$102, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$102, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$102, DW_AT_decl_line(0x12a)
 	.dwattr $C$DW$102, DW_AT_decl_column(0x0a)
 
@@ -867,7 +867,7 @@ $C$DW$103	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$103, DW_AT_location[DW_OP_addr ||clearTripFlagDMC||]
 	.dwattr $C$DW$103, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$103, DW_AT_external
-	.dwattr $C$DW$103, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$103, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$103, DW_AT_decl_line(0x12b)
 	.dwattr $C$DW$103, DW_AT_decl_column(0x0a)
 
@@ -885,7 +885,7 @@ $C$DW$104	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$104, DW_AT_location[DW_OP_addr ||runMotor||]
 	.dwattr $C$DW$104, DW_AT_type(*$C$DW$T$173)
 	.dwattr $C$DW$104, DW_AT_external
-	.dwattr $C$DW$104, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$104, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$104, DW_AT_decl_line(0x12c)
 	.dwattr $C$DW$104, DW_AT_decl_column(0x10)
 
@@ -903,7 +903,7 @@ $C$DW$105	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$105, DW_AT_location[DW_OP_addr ||ledCnt1||]
 	.dwattr $C$DW$105, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$105, DW_AT_external
-	.dwattr $C$DW$105, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$105, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$105, DW_AT_decl_line(0x12e)
 	.dwattr $C$DW$105, DW_AT_decl_column(0x0a)
 
@@ -921,7 +921,7 @@ $C$DW$106	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$106, DW_AT_location[DW_OP_addr ||speedLoopPrescaler||]
 	.dwattr $C$DW$106, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$106, DW_AT_external
-	.dwattr $C$DW$106, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$106, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$106, DW_AT_decl_line(0x130)
 	.dwattr $C$DW$106, DW_AT_decl_column(0x0a)
 
@@ -939,7 +939,7 @@ $C$DW$107	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$107, DW_AT_location[DW_OP_addr ||speedLoopCount||]
 	.dwattr $C$DW$107, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$107, DW_AT_external
-	.dwattr $C$DW$107, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$107, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$107, DW_AT_decl_line(0x131)
 	.dwattr $C$DW$107, DW_AT_decl_column(0x0a)
 
@@ -957,7 +957,7 @@ $C$DW$108	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$108, DW_AT_location[DW_OP_addr ||lsw2EntryFlag||]
 	.dwattr $C$DW$108, DW_AT_type(*$C$DW$T$306)
 	.dwattr $C$DW$108, DW_AT_external
-	.dwattr $C$DW$108, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$108, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$108, DW_AT_decl_line(0x133)
 	.dwattr $C$DW$108, DW_AT_decl_column(0x13)
 
@@ -975,7 +975,7 @@ $C$DW$109	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$109, DW_AT_location[DW_OP_addr ||FCL_cycleCount||]
 	.dwattr $C$DW$109, DW_AT_type(*$C$DW$T$306)
 	.dwattr $C$DW$109, DW_AT_external
-	.dwattr $C$DW$109, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$109, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$109, DW_AT_decl_line(0x138)
 	.dwattr $C$DW$109, DW_AT_decl_column(0x14)
 
@@ -993,7 +993,7 @@ $C$DW$110	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$110, DW_AT_location[DW_OP_addr ||fclClrCntr||]
 	.dwattr $C$DW$110, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$110, DW_AT_external
-	.dwattr $C$DW$110, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$110, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$110, DW_AT_decl_line(0x139)
 	.dwattr $C$DW$110, DW_AT_decl_column(0x0b)
 
@@ -1011,7 +1011,7 @@ $C$DW$111	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$111, DW_AT_location[DW_OP_addr ||fclCycleCountMax||]
 	.dwattr $C$DW$111, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$111, DW_AT_external
-	.dwattr $C$DW$111, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$111, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$111, DW_AT_decl_line(0x13a)
 	.dwattr $C$DW$111, DW_AT_decl_column(0x0b)
 
@@ -1029,7 +1029,7 @@ $C$DW$112	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$112, DW_AT_location[DW_OP_addr ||posPtrMax||]
 	.dwattr $C$DW$112, DW_AT_type(*$C$DW$T$33)
 	.dwattr $C$DW$112, DW_AT_external
-	.dwattr $C$DW$112, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$112, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$112, DW_AT_decl_line(0x170)
 	.dwattr $C$DW$112, DW_AT_decl_column(0x09)
 
@@ -1047,7 +1047,7 @@ $C$DW$113	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$113, DW_AT_location[DW_OP_addr ||posPtr||]
 	.dwattr $C$DW$113, DW_AT_type(*$C$DW$T$33)
 	.dwattr $C$DW$113, DW_AT_external
-	.dwattr $C$DW$113, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$113, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$113, DW_AT_decl_line(0x171)
 	.dwattr $C$DW$113, DW_AT_decl_column(0x09)
 
@@ -1065,7 +1065,7 @@ $C$DW$114	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$114, DW_AT_location[DW_OP_addr ||tFormat_encCmdStatus||]
 	.dwattr $C$DW$114, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$114, DW_AT_external
-	.dwattr $C$DW$114, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$114, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$114, DW_AT_decl_line(0x1b4)
 	.dwattr $C$DW$114, DW_AT_decl_column(0x0a)
 
@@ -1083,7 +1083,7 @@ $C$DW$115	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$115, DW_AT_location[DW_OP_addr ||tFormat_crcError||]
 	.dwattr $C$DW$115, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$115, DW_AT_external
-	.dwattr $C$DW$115, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$115, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$115, DW_AT_decl_line(0x1b5)
 	.dwattr $C$DW$115, DW_AT_decl_column(0x0a)
 
@@ -1095,7 +1095,7 @@ $C$DW$116	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$116, DW_AT_location[DW_OP_addr ||tFormat_dataId||]
 	.dwattr $C$DW$116, DW_AT_type(*$C$DW$T$36)
 	.dwattr $C$DW$116, DW_AT_external
-	.dwattr $C$DW$116, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$116, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$116, DW_AT_decl_line(0x1b6)
 	.dwattr $C$DW$116, DW_AT_decl_column(0x0a)
 
@@ -1162,7 +1162,7 @@ $C$DW$123	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$123, DW_AT_location[DW_OP_addr ||Alpha_State_Ptr||]
 	.dwattr $C$DW$123, DW_AT_type(*$C$DW$T$213)
 	.dwattr $C$DW$123, DW_AT_external
-	.dwattr $C$DW$123, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$123, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$123, DW_AT_decl_line(0xc5)
 	.dwattr $C$DW$123, DW_AT_decl_column(0x08)
 
@@ -1174,7 +1174,7 @@ $C$DW$124	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$124, DW_AT_location[DW_OP_addr ||A_Task_Ptr||]
 	.dwattr $C$DW$124, DW_AT_type(*$C$DW$T$213)
 	.dwattr $C$DW$124, DW_AT_external
-	.dwattr $C$DW$124, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$124, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$124, DW_AT_decl_line(0xc6)
 	.dwattr $C$DW$124, DW_AT_decl_column(0x08)
 
@@ -1186,7 +1186,7 @@ $C$DW$125	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$125, DW_AT_location[DW_OP_addr ||B_Task_Ptr||]
 	.dwattr $C$DW$125, DW_AT_type(*$C$DW$T$213)
 	.dwattr $C$DW$125, DW_AT_external
-	.dwattr $C$DW$125, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$125, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$125, DW_AT_decl_line(0xc7)
 	.dwattr $C$DW$125, DW_AT_decl_column(0x08)
 
@@ -1198,7 +1198,7 @@ $C$DW$126	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$126, DW_AT_location[DW_OP_addr ||C_Task_Ptr||]
 	.dwattr $C$DW$126, DW_AT_type(*$C$DW$T$213)
 	.dwattr $C$DW$126, DW_AT_external
-	.dwattr $C$DW$126, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$126, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$126, DW_AT_decl_line(0xc8)
 	.dwattr $C$DW$126, DW_AT_decl_column(0x08)
 
@@ -1215,7 +1215,7 @@ $C$DW$127	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$127, DW_AT_location[DW_OP_addr ||offset_lemV||]
 	.dwattr $C$DW$127, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$127, DW_AT_external
-	.dwattr $C$DW$127, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$127, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$127, DW_AT_decl_line(0x108)
 	.dwattr $C$DW$127, DW_AT_decl_column(0x0b)
 
@@ -1232,7 +1232,7 @@ $C$DW$128	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$128, DW_AT_location[DW_OP_addr ||offset_lemW||]
 	.dwattr $C$DW$128, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$128, DW_AT_external
-	.dwattr $C$DW$128, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$128, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$128, DW_AT_decl_line(0x109)
 	.dwattr $C$DW$128, DW_AT_decl_column(0x0b)
 
@@ -1244,7 +1244,7 @@ $C$DW$129	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$129, DW_AT_location[DW_OP_addr ||offset_SDFMV||]
 	.dwattr $C$DW$129, DW_AT_type(*$C$DW$T$346)
 	.dwattr $C$DW$129, DW_AT_external
-	.dwattr $C$DW$129, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$129, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$129, DW_AT_decl_line(0x10b)
 	.dwattr $C$DW$129, DW_AT_decl_column(0x14)
 
@@ -1256,7 +1256,7 @@ $C$DW$130	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$130, DW_AT_location[DW_OP_addr ||offset_SDFMW||]
 	.dwattr $C$DW$130, DW_AT_type(*$C$DW$T$346)
 	.dwattr $C$DW$130, DW_AT_external
-	.dwattr $C$DW$130, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$130, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$130, DW_AT_decl_line(0x10c)
 	.dwattr $C$DW$130, DW_AT_decl_column(0x14)
 
@@ -1273,7 +1273,7 @@ $C$DW$131	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$131, DW_AT_location[DW_OP_addr ||K1||]
 	.dwattr $C$DW$131, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$131, DW_AT_external
-	.dwattr $C$DW$131, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$131, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$131, DW_AT_decl_line(0x10e)
 	.dwattr $C$DW$131, DW_AT_decl_column(0x0b)
 
@@ -1290,7 +1290,7 @@ $C$DW$132	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$132, DW_AT_location[DW_OP_addr ||K2||]
 	.dwattr $C$DW$132, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$132, DW_AT_external
-	.dwattr $C$DW$132, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$132, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$132, DW_AT_decl_line(0x10f)
 	.dwattr $C$DW$132, DW_AT_decl_column(0x0b)
 
@@ -1307,7 +1307,7 @@ $C$DW$133	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$133, DW_AT_location[DW_OP_addr ||curLimit||]
 	.dwattr $C$DW$133, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$133, DW_AT_external
-	.dwattr $C$DW$133, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$133, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$133, DW_AT_decl_line(0x117)
 	.dwattr $C$DW$133, DW_AT_decl_column(0x0b)
 
@@ -1325,7 +1325,7 @@ $C$DW$134	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$134, DW_AT_location[DW_OP_addr ||isrTicker||]
 	.dwattr $C$DW$134, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$134, DW_AT_external
-	.dwattr $C$DW$134, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$134, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$134, DW_AT_decl_line(0x127)
 	.dwattr $C$DW$134, DW_AT_decl_column(0x0a)
 
@@ -1342,7 +1342,7 @@ $C$DW$135	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$135, DW_AT_location[DW_OP_addr ||fclLatencyInMicroSec||]
 	.dwattr $C$DW$135, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$135, DW_AT_external
-	.dwattr $C$DW$135, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$135, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$135, DW_AT_decl_line(0x13b)
 	.dwattr $C$DW$135, DW_AT_decl_column(0x0b)
 
@@ -1359,7 +1359,7 @@ $C$DW$136	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$136, DW_AT_location[DW_OP_addr ||maxModIndex||]
 	.dwattr $C$DW$136, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$136, DW_AT_external
-	.dwattr $C$DW$136, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$136, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$136, DW_AT_decl_line(0x13c)
 	.dwattr $C$DW$136, DW_AT_decl_column(0x0b)
 
@@ -1376,7 +1376,7 @@ $C$DW$137	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$137, DW_AT_location[DW_OP_addr ||T||]
 	.dwattr $C$DW$137, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$137, DW_AT_external
-	.dwattr $C$DW$137, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$137, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$137, DW_AT_decl_line(0x141)
 	.dwattr $C$DW$137, DW_AT_decl_column(0x0b)
 
@@ -1393,7 +1393,7 @@ $C$DW$138	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$138, DW_AT_location[DW_OP_addr ||VdTesting||]
 	.dwattr $C$DW$138, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$138, DW_AT_external
-	.dwattr $C$DW$138, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$138, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$138, DW_AT_decl_line(0x142)
 	.dwattr $C$DW$138, DW_AT_decl_column(0x0b)
 
@@ -1410,7 +1410,7 @@ $C$DW$139	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$139, DW_AT_location[DW_OP_addr ||VqTesting||]
 	.dwattr $C$DW$139, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$139, DW_AT_external
-	.dwattr $C$DW$139, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$139, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$139, DW_AT_decl_line(0x143)
 	.dwattr $C$DW$139, DW_AT_decl_column(0x0b)
 
@@ -1427,7 +1427,7 @@ $C$DW$140	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$140, DW_AT_location[DW_OP_addr ||IdRef||]
 	.dwattr $C$DW$140, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$140, DW_AT_external
-	.dwattr $C$DW$140, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$140, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$140, DW_AT_decl_line(0x144)
 	.dwattr $C$DW$140, DW_AT_decl_column(0x0b)
 
@@ -1444,7 +1444,7 @@ $C$DW$141	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$141, DW_AT_location[DW_OP_addr ||tempIdRef||]
 	.dwattr $C$DW$141, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$141, DW_AT_external
-	.dwattr $C$DW$141, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$141, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$141, DW_AT_decl_line(0x145)
 	.dwattr $C$DW$141, DW_AT_decl_column(0x0b)
 
@@ -1461,7 +1461,7 @@ $C$DW$142	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$142, DW_AT_location[DW_OP_addr ||IqRef||]
 	.dwattr $C$DW$142, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$142, DW_AT_external
-	.dwattr $C$DW$142, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$142, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$142, DW_AT_decl_line(0x146)
 	.dwattr $C$DW$142, DW_AT_decl_column(0x0b)
 
@@ -1478,7 +1478,7 @@ $C$DW$143	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$143, DW_AT_location[DW_OP_addr ||speedRef||]
 	.dwattr $C$DW$143, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$143, DW_AT_external
-	.dwattr $C$DW$143, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$143, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$143, DW_AT_decl_line(0x147)
 	.dwattr $C$DW$143, DW_AT_decl_column(0x0b)
 
@@ -1495,7 +1495,7 @@ $C$DW$144	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$144, DW_AT_location[DW_OP_addr ||lsw1Speed||]
 	.dwattr $C$DW$144, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$144, DW_AT_external
-	.dwattr $C$DW$144, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$144, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$144, DW_AT_decl_line(0x148)
 	.dwattr $C$DW$144, DW_AT_decl_column(0x0b)
 
@@ -1512,7 +1512,7 @@ $C$DW$145	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$145, DW_AT_location[DW_OP_addr ||alignCntr||]
 	.dwattr $C$DW$145, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$145, DW_AT_external
-	.dwattr $C$DW$145, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$145, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$145, DW_AT_decl_line(0x163)
 	.dwattr $C$DW$145, DW_AT_decl_column(0x0b)
 
@@ -1529,7 +1529,7 @@ $C$DW$146	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$146, DW_AT_location[DW_OP_addr ||alignCnt||]
 	.dwattr $C$DW$146, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$146, DW_AT_external
-	.dwattr $C$DW$146, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$146, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$146, DW_AT_decl_line(0x164)
 	.dwattr $C$DW$146, DW_AT_decl_column(0x0b)
 
@@ -1546,7 +1546,7 @@ $C$DW$147	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$147, DW_AT_location[DW_OP_addr ||alignInitCnt||]
 	.dwattr $C$DW$147, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$147, DW_AT_external
-	.dwattr $C$DW$147, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$147, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$147, DW_AT_decl_line(0x165)
 	.dwattr $C$DW$147, DW_AT_decl_column(0x0b)
 
@@ -1563,7 +1563,7 @@ $C$DW$148	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$148, DW_AT_location[DW_OP_addr ||IdRef_start||]
 	.dwattr $C$DW$148, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$148, DW_AT_external
-	.dwattr $C$DW$148, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$148, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$148, DW_AT_decl_line(0x166)
 	.dwattr $C$DW$148, DW_AT_decl_column(0x0b)
 
@@ -1580,7 +1580,7 @@ $C$DW$149	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$149, DW_AT_location[DW_OP_addr ||IdRef_run||]
 	.dwattr $C$DW$149, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$149, DW_AT_external
-	.dwattr $C$DW$149, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$149, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$149, DW_AT_decl_line(0x167)
 	.dwattr $C$DW$149, DW_AT_decl_column(0x0b)
 
@@ -1597,7 +1597,7 @@ $C$DW$150	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$150, DW_AT_location[DW_OP_addr ||posCntr||]
 	.dwattr $C$DW$150, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$150, DW_AT_external
-	.dwattr $C$DW$150, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$150, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$150, DW_AT_decl_line(0x16c)
 	.dwattr $C$DW$150, DW_AT_decl_column(0x0b)
 
@@ -1614,7 +1614,7 @@ $C$DW$151	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$151, DW_AT_location[DW_OP_addr ||posCntrMax||]
 	.dwattr $C$DW$151, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$151, DW_AT_external
-	.dwattr $C$DW$151, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$151, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$151, DW_AT_decl_line(0x16d)
 	.dwattr $C$DW$151, DW_AT_decl_column(0x0b)
 
@@ -1631,7 +1631,7 @@ $C$DW$152	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$152, DW_AT_location[DW_OP_addr ||posSlewRate||]
 	.dwattr $C$DW$152, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$152, DW_AT_external
-	.dwattr $C$DW$152, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$152, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$152, DW_AT_decl_line(0x16e)
 	.dwattr $C$DW$152, DW_AT_decl_column(0x0b)
 
@@ -1648,7 +1648,7 @@ $C$DW$153	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$153, DW_AT_location[DW_OP_addr ||dlogCh1||]
 	.dwattr $C$DW$153, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$153, DW_AT_external
-	.dwattr $C$DW$153, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$153, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$153, DW_AT_decl_line(0x17a)
 	.dwattr $C$DW$153, DW_AT_decl_column(0x0b)
 
@@ -1665,7 +1665,7 @@ $C$DW$154	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$154, DW_AT_location[DW_OP_addr ||dlogCh2||]
 	.dwattr $C$DW$154, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$154, DW_AT_external
-	.dwattr $C$DW$154, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$154, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$154, DW_AT_decl_line(0x17b)
 	.dwattr $C$DW$154, DW_AT_decl_column(0x0b)
 
@@ -1682,7 +1682,7 @@ $C$DW$155	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$155, DW_AT_location[DW_OP_addr ||dlogCh3||]
 	.dwattr $C$DW$155, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$155, DW_AT_external
-	.dwattr $C$DW$155, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$155, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$155, DW_AT_decl_line(0x17c)
 	.dwattr $C$DW$155, DW_AT_decl_column(0x0b)
 
@@ -1699,7 +1699,7 @@ $C$DW$156	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$156, DW_AT_location[DW_OP_addr ||dlogCh4||]
 	.dwattr $C$DW$156, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$156, DW_AT_external
-	.dwattr $C$DW$156, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$156, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$156, DW_AT_decl_line(0x17d)
 	.dwattr $C$DW$156, DW_AT_decl_column(0x0b)
 
@@ -1716,7 +1716,7 @@ $C$DW$157	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$157, DW_AT_location[DW_OP_addr ||angMax||]
 	.dwattr $C$DW$157, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$157, DW_AT_external
-	.dwattr $C$DW$157, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$157, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$157, DW_AT_decl_line(0x1b0)
 	.dwattr $C$DW$157, DW_AT_decl_column(0x10)
 
@@ -1728,7 +1728,7 @@ $C$DW$158	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$158, DW_AT_location[DW_OP_addr ||tformatAngle||]
 	.dwattr $C$DW$158, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$158, DW_AT_external
-	.dwattr $C$DW$158, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$158, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$158, DW_AT_decl_line(0x1b1)
 	.dwattr $C$DW$158, DW_AT_decl_column(0x10)
 
@@ -1740,7 +1740,7 @@ $C$DW$159	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$159, DW_AT_location[DW_OP_addr ||tformatSpd||]
 	.dwattr $C$DW$159, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$159, DW_AT_external
-	.dwattr $C$DW$159, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$159, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$159, DW_AT_decl_line(0x1b2)
 	.dwattr $C$DW$159, DW_AT_decl_column(0x10)
 
@@ -1752,7 +1752,7 @@ $C$DW$160	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$160, DW_AT_location[DW_OP_addr ||retVal1||]
 	.dwattr $C$DW$160, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$160, DW_AT_external
-	.dwattr $C$DW$160, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$160, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$160, DW_AT_decl_line(0x1b8)
 	.dwattr $C$DW$160, DW_AT_decl_column(0x0a)
 
@@ -1764,7 +1764,7 @@ $C$DW$161	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$161, DW_AT_location[DW_OP_addr ||crcResult||]
 	.dwattr $C$DW$161, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$161, DW_AT_external
-	.dwattr $C$DW$161, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$161, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$161, DW_AT_decl_line(0x1b8)
 	.dwattr $C$DW$161, DW_AT_decl_column(0x13)
 
@@ -1776,7 +1776,7 @@ $C$DW$162	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$162, DW_AT_location[DW_OP_addr ||position||]
 	.dwattr $C$DW$162, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$162, DW_AT_external
-	.dwattr $C$DW$162, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$162, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$162, DW_AT_decl_line(0x1b8)
 	.dwattr $C$DW$162, DW_AT_decl_column(0x1e)
 
@@ -1788,7 +1788,7 @@ $C$DW$163	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$163, DW_AT_location[DW_OP_addr ||turns||]
 	.dwattr $C$DW$163, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$163, DW_AT_external
-	.dwattr $C$DW$163, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$163, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$163, DW_AT_decl_line(0x1b8)
 	.dwattr $C$DW$163, DW_AT_decl_column(0x28)
 
@@ -1840,7 +1840,7 @@ $C$DW$169	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$169, DW_AT_location[DW_OP_addr ||vTimer0||]
 	.dwattr $C$DW$169, DW_AT_type(*$C$DW$T$305)
 	.dwattr $C$DW$169, DW_AT_external
-	.dwattr $C$DW$169, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$169, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$169, DW_AT_decl_line(0xf4)
 	.dwattr $C$DW$169, DW_AT_decl_column(0x0a)
 
@@ -1859,7 +1859,7 @@ $C$DW$170	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$170, DW_AT_location[DW_OP_addr ||vTimer1||]
 	.dwattr $C$DW$170, DW_AT_type(*$C$DW$T$305)
 	.dwattr $C$DW$170, DW_AT_external
-	.dwattr $C$DW$170, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$170, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$170, DW_AT_decl_line(0xf5)
 	.dwattr $C$DW$170, DW_AT_decl_column(0x0a)
 
@@ -1878,7 +1878,7 @@ $C$DW$171	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$171, DW_AT_location[DW_OP_addr ||vTimer2||]
 	.dwattr $C$DW$171, DW_AT_type(*$C$DW$T$305)
 	.dwattr $C$DW$171, DW_AT_external
-	.dwattr $C$DW$171, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$171, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$171, DW_AT_decl_line(0xf6)
 	.dwattr $C$DW$171, DW_AT_decl_column(0x0a)
 
@@ -1900,7 +1900,7 @@ $C$DW$172	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$172, DW_AT_location[DW_OP_addr ||pwmHandle||]
 	.dwattr $C$DW$172, DW_AT_type(*$C$DW$T$322)
 	.dwattr $C$DW$172, DW_AT_external
-	.dwattr $C$DW$172, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$172, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$172, DW_AT_decl_line(0xea)
 	.dwattr $C$DW$172, DW_AT_decl_column(0x0a)
 
@@ -1922,7 +1922,7 @@ $C$DW$173	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$173, DW_AT_location[DW_OP_addr ||dacHandle||]
 	.dwattr $C$DW$173, DW_AT_type(*$C$DW$T$322)
 	.dwattr $C$DW$173, DW_AT_external
-	.dwattr $C$DW$173, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$173, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$173, DW_AT_decl_line(0xef)
 	.dwattr $C$DW$173, DW_AT_decl_column(0x0a)
 
@@ -1946,7 +1946,7 @@ $C$DW$174	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$174, DW_AT_location[DW_OP_addr ||adcHandle||]
 	.dwattr $C$DW$174, DW_AT_type(*$C$DW$T$321)
 	.dwattr $C$DW$174, DW_AT_external
-	.dwattr $C$DW$174, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$174, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$174, DW_AT_decl_line(0xe1)
 	.dwattr $C$DW$174, DW_AT_decl_column(0x0a)
 
@@ -1979,7 +1979,7 @@ $C$DW$176	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$176, DW_AT_location[DW_OP_addr ||ipark1||]
 	.dwattr $C$DW$176, DW_AT_type(*$C$DW$T$189)
 	.dwattr $C$DW$176, DW_AT_external
-	.dwattr $C$DW$176, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$176, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$176, DW_AT_decl_line(0x14c)
 	.dwattr $C$DW$176, DW_AT_decl_column(0x08)
 
@@ -1997,7 +1997,7 @@ $C$DW$177	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$177, DW_AT_location[DW_OP_addr ||posEncElecTheta||]
 	.dwattr $C$DW$177, DW_AT_type(*$C$DW$T$343)
 	.dwattr $C$DW$177, DW_AT_external
-	.dwattr $C$DW$177, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$177, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$177, DW_AT_decl_line(0x160)
 	.dwattr $C$DW$177, DW_AT_decl_column(0x0b)
 
@@ -2015,7 +2015,7 @@ $C$DW$178	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$178, DW_AT_location[DW_OP_addr ||posEncMechTheta||]
 	.dwattr $C$DW$178, DW_AT_type(*$C$DW$T$343)
 	.dwattr $C$DW$178, DW_AT_external
-	.dwattr $C$DW$178, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$178, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$178, DW_AT_decl_line(0x161)
 	.dwattr $C$DW$178, DW_AT_decl_column(0x0b)
 
@@ -2042,7 +2042,7 @@ $C$DW$179	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$179, DW_AT_location[DW_OP_addr ||rc1||]
 	.dwattr $C$DW$179, DW_AT_type(*$C$DW$T$178)
 	.dwattr $C$DW$179, DW_AT_external
-	.dwattr $C$DW$179, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$179, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$179, DW_AT_decl_line(0x157)
 	.dwattr $C$DW$179, DW_AT_decl_column(0x09)
 
@@ -2063,7 +2063,7 @@ $C$DW$180	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$180, DW_AT_location[DW_OP_addr ||posArray||]
 	.dwattr $C$DW$180, DW_AT_type(*$C$DW$T$344)
 	.dwattr $C$DW$180, DW_AT_external
-	.dwattr $C$DW$180, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$180, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$180, DW_AT_decl_line(0x16b)
 	.dwattr $C$DW$180, DW_AT_decl_column(0x0b)
 
@@ -2089,7 +2089,7 @@ $C$DW$181	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$181, DW_AT_location[DW_OP_addr ||tFormat||]
 	.dwattr $C$DW$181, DW_AT_type(*$C$DW$T$194)
 	.dwattr $C$DW$181, DW_AT_external
-	.dwattr $C$DW$181, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$181, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$181, DW_AT_decl_line(0x1ad)
 	.dwattr $C$DW$181, DW_AT_decl_column(0x11)
 
@@ -2121,7 +2121,7 @@ $C$DW$184	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$184, DW_AT_location[DW_OP_addr ||speed1||]
 	.dwattr $C$DW$184, DW_AT_type(*$C$DW$T$193)
 	.dwattr $C$DW$184, DW_AT_external
-	.dwattr $C$DW$184, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$184, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$184, DW_AT_decl_line(0x15d)
 	.dwattr $C$DW$184, DW_AT_decl_column(0x11)
 
@@ -2170,7 +2170,7 @@ $C$DW$187	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$187, DW_AT_location[DW_OP_addr ||volt1||]
 	.dwattr $C$DW$187, DW_AT_type(*$C$DW$T$192)
 	.dwattr $C$DW$187, DW_AT_external
-	.dwattr $C$DW$187, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$187, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$187, DW_AT_decl_line(0x15a)
 	.dwattr $C$DW$187, DW_AT_decl_column(0x0e)
 
@@ -2198,7 +2198,7 @@ $C$DW$188	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$188, DW_AT_location[DW_OP_addr ||pi_pos||]
 	.dwattr $C$DW$188, DW_AT_type(*$C$DW$T$191)
 	.dwattr $C$DW$188, DW_AT_external
-	.dwattr $C$DW$188, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$188, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$188, DW_AT_decl_line(0x151)
 	.dwattr $C$DW$188, DW_AT_decl_column(0x11)
 
@@ -2210,7 +2210,7 @@ $C$DW$189	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$189, DW_AT_location[DW_OP_addr ||dlog_4ch1||]
 	.dwattr $C$DW$189, DW_AT_type(*$C$DW$T$182)
 	.dwattr $C$DW$189, DW_AT_external
-	.dwattr $C$DW$189, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$189, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$189, DW_AT_decl_line(0x180)
 	.dwattr $C$DW$189, DW_AT_decl_column(0x0c)
 
@@ -2240,7 +2240,7 @@ $C$DW$190	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$190, DW_AT_location[DW_OP_addr ||spdObs||]
 	.dwattr $C$DW$190, DW_AT_type(*$C$DW$T$197)
 	.dwattr $C$DW$190, DW_AT_external
-	.dwattr $C$DW$190, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$190, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$190, DW_AT_decl_line(0x1af)
 	.dwattr $C$DW$190, DW_AT_decl_column(0x10)
 
@@ -2262,7 +2262,7 @@ $C$DW$192	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$192, DW_AT_location[DW_OP_addr ||pid_pos||]
 	.dwattr $C$DW$192, DW_AT_type(*$C$DW$T$190)
 	.dwattr $C$DW$192, DW_AT_external
-	.dwattr $C$DW$192, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$192, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$192, DW_AT_decl_line(0x150)
 	.dwattr $C$DW$192, DW_AT_decl_column(0x11)
 
@@ -2298,7 +2298,7 @@ $C$DW$193	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$193, DW_AT_location[DW_OP_addr ||pid_spd||]
 	.dwattr $C$DW$193, DW_AT_type(*$C$DW$T$180)
 	.dwattr $C$DW$193, DW_AT_external
-	.dwattr $C$DW$193, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$193, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$193, DW_AT_decl_line(0x152)
 	.dwattr $C$DW$193, DW_AT_decl_column(0x11)
 
@@ -2316,7 +2316,7 @@ $C$DW$194	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$194, DW_AT_location[DW_OP_addr ||DBUFF_4CH1||]
 	.dwattr $C$DW$194, DW_AT_type(*$C$DW$T$345)
 	.dwattr $C$DW$194, DW_AT_external
-	.dwattr $C$DW$194, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$194, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$194, DW_AT_decl_line(0x176)
 	.dwattr $C$DW$194, DW_AT_decl_column(0x0b)
 
@@ -2334,7 +2334,7 @@ $C$DW$195	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$195, DW_AT_location[DW_OP_addr ||DBUFF_4CH2||]
 	.dwattr $C$DW$195, DW_AT_type(*$C$DW$T$345)
 	.dwattr $C$DW$195, DW_AT_external
-	.dwattr $C$DW$195, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$195, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$195, DW_AT_decl_line(0x177)
 	.dwattr $C$DW$195, DW_AT_decl_column(0x0b)
 
@@ -2352,7 +2352,7 @@ $C$DW$196	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$196, DW_AT_location[DW_OP_addr ||DBUFF_4CH3||]
 	.dwattr $C$DW$196, DW_AT_type(*$C$DW$T$345)
 	.dwattr $C$DW$196, DW_AT_external
-	.dwattr $C$DW$196, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$196, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$196, DW_AT_decl_line(0x178)
 	.dwattr $C$DW$196, DW_AT_decl_column(0x0b)
 
@@ -2370,14 +2370,14 @@ $C$DW$197	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$197, DW_AT_location[DW_OP_addr ||DBUFF_4CH4||]
 	.dwattr $C$DW$197, DW_AT_type(*$C$DW$T$345)
 	.dwattr $C$DW$197, DW_AT_external
-	.dwattr $C$DW$197, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$197, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$197, DW_AT_decl_line(0x179)
 	.dwattr $C$DW$197, DW_AT_decl_column(0x0b)
 
 	.sblock	".bss"
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{D29C7F75-669D-42BB-B4F4-EA2925362EBC} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{F7E084AA-5EDA-4A9D-91E6-B9F48281E1C6} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{B8EA127A-B7DF-4CD5-B30E-F215D7674A18} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{E85A6BD0-C5B4-4CE0-A5A2-07E871DD3957} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{8572FB07-8FE3-4E99-9D4A-ACF80C9B3CF9} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{C9DC3A9D-1D96-4B5C-BC6F-306E400C2F4A} 
 	.sect	".text:setupCpuTimer"
 	.clink
 	.global	||setupCpuTimer||
@@ -2388,11 +2388,11 @@ $C$DW$198	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$198, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$198, DW_AT_linkage_name("setupCpuTimer")
 	.dwattr $C$DW$198, DW_AT_external
-	.dwattr $C$DW$198, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$198, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$198, DW_AT_decl_line(0x252)
 	.dwattr $C$DW$198, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$198, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 595,column 1,is_stmt,address ||setupCpuTimer||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 595,column 1,is_stmt,address ||setupCpuTimer||,isa 0
 
 	.dwfde $C$DW$CIE, ||setupCpuTimer||
 $C$DW$199	.dwtag  DW_TAG_formal_parameter
@@ -2447,16 +2447,16 @@ $C$DW$204	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -4
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 379,column 5,is_stmt,isa 0
         MOVB      XAR6,#0               ; [CPU_ALU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 595,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 595,column 1,is_stmt,isa 0
         MOVL      XAR1,ACC              ; [CPU_ALU] |595| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 379,column 5,is_stmt,isa 0
         MOV       *(0:0x0c07),AR6       ; [CPU_ALU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 595,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 595,column 1,is_stmt,isa 0
         MOVL      XAR7,*-SP[6]          ; [CPU_ALU] |595| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 380,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |380| 
         MOV       *(0:0x0c06),AL        ; [CPU_ALU] |380| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 599,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 599,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |599| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 335,column 5,is_stmt,isa 0
         MOVL      *+XAR1[2],XAR7        ; [CPU_ALU] |335| 
@@ -2465,7 +2465,7 @@ $C$DW$204	.dwtag  DW_TAG_variable
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 260,column 5,is_stmt,isa 0
         ORB       AL,#0x10              ; [CPU_ALU] |260| 
         MOV       *+XAR1[4],AL          ; [CPU_ALU] |260| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 599,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 599,column 5,is_stmt,isa 0
         MOVL      ACC,XAR1              ; [CPU_ALU] |599| 
 $C$DW$205	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$205, DW_AT_low_pc(0x00)
@@ -2490,7 +2490,7 @@ $C$DW$206	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$198, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$198, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$198, DW_AT_TI_end_line(0x25d)
 	.dwattr $C$DW$198, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2507,11 +2507,11 @@ $C$DW$207	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$207, DW_AT_linkage_name("ramper")
 	.dwattr $C$DW$207, DW_AT_external
 	.dwattr $C$DW$207, DW_AT_type(*$C$DW$T$19)
-	.dwattr $C$DW$207, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$207, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$207, DW_AT_decl_line(0xe1e)
 	.dwattr $C$DW$207, DW_AT_decl_column(0x0b)
 	.dwattr $C$DW$207, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3615,column 1,is_stmt,address ||ramper||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3615,column 1,is_stmt,address ||ramper||,isa 0
 
 	.dwfde $C$DW$CIE, ||ramper||
 $C$DW$208	.dwtag  DW_TAG_formal_parameter
@@ -2566,10 +2566,10 @@ $C$DW$213	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -4
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3620,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3620,column 5,is_stmt,isa 0
         SUBF32    R4H,R0H,R1H           ; [CPU_FPU] |3620| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3622,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3622,column 9,is_stmt,isa 0
         CMPF32    R4H,R2H               ; [CPU_FPU] |3622| 
         MOVST0    ZF, NF                ; [CPU_FPU] |3622| 
         B         ||$C$L1||,LEQ         ; [CPU_ALU] |3622| 
@@ -2598,7 +2598,7 @@ $C$DW$214	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$207, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$207, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$207, DW_AT_TI_end_line(0xe30)
 	.dwattr $C$DW$207, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2615,11 +2615,11 @@ $C$DW$215	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$215, DW_AT_linkage_name("refPosGen8")
 	.dwattr $C$DW$215, DW_AT_external
 	.dwattr $C$DW$215, DW_AT_type(*$C$DW$T$19)
-	.dwattr $C$DW$215, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$215, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$215, DW_AT_decl_line(0xe51)
 	.dwattr $C$DW$215, DW_AT_decl_column(0x0b)
 	.dwattr $C$DW$215, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3666,column 1,is_stmt,address ||refPosGen8||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3666,column 1,is_stmt,address ||refPosGen8||,isa 0
 
 	.dwfde $C$DW$CIE, ||refPosGen8||
 $C$DW$216	.dwtag  DW_TAG_formal_parameter
@@ -2646,7 +2646,7 @@ $C$DW$217	.dwtag  DW_TAG_formal_parameter
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||posSlewRate||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3667,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3667,column 5,is_stmt,isa 0
         MOV32     R2H,@||posSlewRate||  ; [CPU_FPU] |3667| 
 $C$DW$218	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$218, DW_AT_low_pc(0x00)
@@ -2661,7 +2661,7 @@ $C$DW$219	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$215, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$215, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$215, DW_AT_TI_end_line(0xe56)
 	.dwattr $C$DW$215, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2678,11 +2678,11 @@ $C$DW$220	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$220, DW_AT_linkage_name("refPosGen")
 	.dwattr $C$DW$220, DW_AT_external
 	.dwattr $C$DW$220, DW_AT_type(*$C$DW$T$19)
-	.dwattr $C$DW$220, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$220, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$220, DW_AT_decl_line(0xe37)
 	.dwattr $C$DW$220, DW_AT_decl_column(0x0b)
 	.dwattr $C$DW$220, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3640,column 1,is_stmt,address ||refPosGen||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3640,column 1,is_stmt,address ||refPosGen||,isa 0
 
 	.dwfde $C$DW$CIE, ||refPosGen||
 $C$DW$221	.dwtag  DW_TAG_formal_parameter
@@ -2724,19 +2724,19 @@ $C$DW$223	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -6
         SETC      SXM                   ; [CPU_ALU] 
         MOVW      DP,#||posPtr||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3641,column 18,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3641,column 18,is_stmt,isa 0
         MOVL      XAR4,#||posArray||    ; [CPU_ARAU] |3641| 
         MOV       ACC,@||posPtr|| << 1  ; [CPU_ALU] |3641| 
         ADDL      XAR4,ACC              ; [CPU_ALU] |3641| 
         MOVW      DP,#||posSlewRate||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3640,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3640,column 1,is_stmt,isa 0
         MOV32     R1H,R0H               ; [CPU_FPU] |3640| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3643,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3643,column 5,is_stmt,isa 0
         MOV32     R2H,@||posSlewRate||  ; [CPU_FPU] |3643| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3641,column 18,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3641,column 18,is_stmt,isa 0
         MOV32     R0H,*+XAR4[0]         ; [CPU_FPU] |3641| 
         MOV32     R4H,R0H               ; [CPU_FPU] |3641| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3643,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3643,column 5,is_stmt,isa 0
 $C$DW$224	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$224, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$224, DW_AT_name("ramper")
@@ -2745,12 +2745,12 @@ $C$DW$224	.dwtag  DW_TAG_TI_branch
         LCR       #||ramper||           ; [CPU_ALU] |3643| 
         ; call occurs [#||ramper||] ; [] |3643| 
         MOV32     R1H,R0H               ; [CPU_FPU] |3643| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3645,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3645,column 5,is_stmt,isa 0
         CMPF32    R4H,R1H               ; [CPU_FPU] |3645| 
         MOVST0    ZF, NF                ; [CPU_FPU] |3645| 
         B         ||$C$L4||,NEQ         ; [CPU_ALU] |3645| 
         ; branchcc occurs ; [] |3645| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3649,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3649,column 9,is_stmt,isa 0
         MOV32     R0H,@||posCntr||      ; [CPU_FPU] |3649| 
         ADDF32    R2H,R0H,#16256        ; [CPU_FPU] |3649| 
         MOV32     R4H,@||posCntrMax||   ; [CPU_FPU] |3649| 
@@ -2759,31 +2759,31 @@ $C$DW$224	.dwtag  DW_TAG_TI_branch
         B         ||$C$L3||,GT          ; [CPU_ALU] |3649| 
         ; branchcc occurs ; [] |3649| 
         MOV32     @||posCntr||,R2H      ; [CPU_FPU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3662,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3662,column 5,is_stmt,isa 0
         B         ||$C$L4||,UNC         ; [CPU_ALU] |3662| 
         ; branch occurs ; [] |3662| 
 ||$C$L3||:    
         MOVW      DP,#||posPtrMax||     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3651,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3651,column 13,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |3651| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3655,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3655,column 13,is_stmt,isa 0
         MOV       AL,@||posPtrMax||     ; [CPU_ALU] |3655| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3653,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3653,column 13,is_stmt,isa 0
         INC       @||posPtr||           ; [CPU_ALU] |3653| 
         MOVW      DP,#||posCntr||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3651,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3651,column 13,is_stmt,isa 0
         MOV32     @||posCntr||,R0H      ; [CPU_FPU] |3651| 
         MOVW      DP,#||posPtr||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3655,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3655,column 13,is_stmt,isa 0
         CMP       AL,@||posPtr||        ; [CPU_ALU] |3655| 
         B         ||$C$L4||,GT          ; [CPU_ALU] |3655| 
         ; branchcc occurs ; [] |3655| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3657,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3657,column 17,is_stmt,isa 0
         MOV       @||posPtr||,#0        ; [CPU_ALU] |3657| 
 ||$C$L4||:    
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3662,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3662,column 5,is_stmt,isa 0
         MOV32     R0H,R1H               ; [CPU_FPU] |3662| 
         MOV32     R4H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -2
@@ -2794,7 +2794,7 @@ $C$DW$225	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$220, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$220, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$220, DW_AT_TI_end_line(0xe4f)
 	.dwattr $C$DW$220, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2810,11 +2810,11 @@ $C$DW$226	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$226, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$226, DW_AT_linkage_name("readTformatEncPosition")
 	.dwattr $C$DW$226, DW_AT_external
-	.dwattr $C$DW$226, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$226, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$226, DW_AT_decl_line(0x483)
 	.dwattr $C$DW$226, DW_AT_decl_column(0x0d)
 	.dwattr $C$DW$226, DW_AT_TI_max_frame_size(-14)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1156,column 1,is_stmt,address ||readTformatEncPosition||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1156,column 1,is_stmt,address ||readTformatEncPosition||,isa 0
 
 	.dwfde $C$DW$CIE, ||readTformatEncPosition||
 
@@ -2885,14 +2885,14 @@ $C$DW$230	.dwtag  DW_TAG_variable
         ADDB      SP,#4                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -14
         MOVW      DP,#||tFormat_dataId|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1158,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1158,column 5,is_stmt,isa 0
         MOVZ      AR6,@||tFormat_dataId|| ; [CPU_ALU] |1158| 
         CLRC      SXM                   ; [CPU_ALU] 
         MOV       ACC,#38463            ; [CPU_ALU] |1158| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |1158| 
         B         ||$C$L15||,NEQ        ; [CPU_ALU] |1158| 
         ; branchcc occurs ; [] |1158| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1160,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1160,column 9,is_stmt,isa 0
 $C$DW$231	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$231, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$231, DW_AT_name("PM_tformat_receiveDataID3")
@@ -2901,20 +2901,20 @@ $C$DW$231	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_receiveDataID3|| ; [CPU_ALU] |1160| 
         ; call occurs [#||PM_tformat_receiveDataID3||] ; [] |1160| 
         MOVW      DP,#||tformatData||+10 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1161,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1161,column 9,is_stmt,isa 0
         MOVZ      AR6,@$BLOCKED(||tformatData||)+11 ; [CPU_ALU] |1161| 
         MOVU      ACC,@$BLOCKED(||tformatData||)+10 ; [CPU_ALU] |1161| 
         CMPL      ACC,XAR6              ; [CPU_ALU] |1161| 
         B         ||$C$L5||,EQ          ; [CPU_ALU] |1161| 
         ; branchcc occurs ; [] |1161| 
         MOVW      DP,#||tFormat_crcError|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1163,column 14,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1163,column 14,is_stmt,isa 0
         MOVB      @||tFormat_crcError||,#1,UNC ; [CPU_ALU] |1163| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1164,column 14,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1164,column 14,is_stmt,isa 0
         MOV       @||runMotor||,#0      ; [CPU_ALU] |1164| 
 ||$C$L5||:    
         MOVW      DP,#||tformatData||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1167,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1167,column 9,is_stmt,isa 0
         MOV       AL,@$BLOCKED(||tformatData||)+2 ; [CPU_ALU] |1167| 
         MOVZ      AR4,@$BLOCKED(||tformatData||)+4 ; [CPU_ALU] |1167| 
         MOV       AH,@$BLOCKED(||tformatData||)+3 ; [CPU_ALU] |1167| 
@@ -2928,7 +2928,7 @@ $C$DW$232	.dwtag  DW_TAG_TI_branch
         MOVW      DP,#||position||      ; [CPU_ARAU] 
         MOVL      @||position||,ACC     ; [CPU_ALU] |1167| 
         MOVW      DP,#||tformatData||+6 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1171,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1171,column 9,is_stmt,isa 0
         MOVZ      AR4,@$BLOCKED(||tformatData||)+8 ; [CPU_ALU] |1171| 
         MOV       AL,@$BLOCKED(||tformatData||)+6 ; [CPU_ALU] |1171| 
         MOV       AH,@$BLOCKED(||tformatData||)+7 ; [CPU_ALU] |1171| 
@@ -2940,30 +2940,30 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_updatePositionOrTurns|| ; [CPU_ALU] |1171| 
         ; call occurs [#||PM_tformat_updatePositionOrTurns||] ; [] |1171| 
         MOVW      DP,#||turns||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1181,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1181,column 9,is_stmt,isa 0
         UI32TOF32 R0H,@||position||     ; [CPU_FPU] |1181| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1171,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1171,column 9,is_stmt,isa 0
         MOVL      @||turns||,ACC        ; [CPU_ALU] |1171| 
         MOVW      DP,#||tFormat||+10    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1181,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1181,column 9,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||tFormat||)+10 ; [CPU_FPU] |1181| 
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
         MPYF32    R2H,R1H,R0H           ; [CPU_FPU] |1181| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1182,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1182,column 9,is_stmt,isa 0
         MOV       AL,@||lsw||           ; [CPU_ALU] |1182| 
         MOVW      DP,#||tFormat_encCmdStatus|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1175,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1175,column 9,is_stmt,isa 0
         MOV       @||tFormat_encCmdStatus||,#0 ; [CPU_ALU] |1175| 
         MOVW      DP,#||tFormat_dataId|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1176,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1176,column 9,is_stmt,isa 0
         MOV       @||tFormat_dataId||,#0 ; [CPU_ALU] |1176| 
         MOVW      DP,#||tFormat||+4     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1181,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1181,column 9,is_stmt,isa 0
         MOV32     @$BLOCKED(||tFormat||)+4,R2H ; [CPU_FPU] |1181| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1182,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1182,column 9,is_stmt,isa 0
         B         ||$C$L6||,NEQ         ; [CPU_ALU] |1182| 
         ; branchcc occurs ; [] |1182| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1184,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1184,column 13,is_stmt,isa 0
         MOVIZ     R1H,#15820            ; [CPU_FPU] |1184| 
         MOVIZ     R0H,#16230            ; [CPU_FPU] |1184| 
         MOVXI     R1H,#52429            ; [CPU_FPU] |1184| 
@@ -2982,24 +2982,25 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
 ||$C$L6||:    
         MOV32     R0H,@$BLOCKED(||tFormat||)+8 ; [CPU_FPU] 
 ||$C$L7||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1188,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1188,column 9,is_stmt,isa 0
         SUBF32    R0H,R2H,R0H           ; [CPU_FPU] |1188| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1190,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1190,column 9,is_stmt,isa 0
         CMPF32    R0H,#0                ; [CPU_FPU] |1190| 
         MOVST0    ZF, NF                ; [CPU_FPU] |1190| 
         B         ||$C$L8||,GEQ         ; [CPU_ALU] |1190| 
         ; branchcc occurs ; [] |1190| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1191,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1191,column 13,is_stmt,isa 0
         ADDF32    R0H,R0H,#16256        ; [CPU_FPU] |1191| 
         NOP       ; [CPU_ALU] 
 ||$C$L8||:    
         MOV32     @$BLOCKED(||tFormat||)+2,R0H ; [CPU_FPU] |1191| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
         UI16TOF32 R1H,@$BLOCKED(||tFormat||)+14 ; [CPU_FPU] |1194| 
         MOVW      DP,#||spdObs||+22     ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/include/speed_observer.h",line 94,column 24,is_stmt,isa 0
         ZERO      R7H                   ; [CPU_FPU] |94| 
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
 
         MPYF32    R2H,R0H,R1H           ; [CPU_FPU] |1194| 
 ||      MOV32     R5H,@$BLOCKED(||spdObs||)+22 ; [CPU_FPU] |94| 
@@ -3007,12 +3008,12 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
         MOVW      DP,#||T||             ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/include/speed_observer.h",line 93,column 1,is_stmt,isa 0
         MOV32     R4H,@||T||            ; [CPU_FPU] |93| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
         F32TOI32  R3H,R2H               ; [CPU_FPU] |1194| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/include/speed_observer.h",line 94,column 24,is_stmt,isa 0
         MOV32     R0H,R5H               ; [CPU_FPU] |94| 
         MOVW      DP,#||spdObs||+24     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
         I32TOF32  R6H,R3H               ; [CPU_FPU] |1194| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/include/speed_observer.h",line 94,column 24,is_stmt,isa 0
         NEGF32    R0H,R0H               ; [CPU_FPU] |94| 
@@ -3020,13 +3021,15 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
         MOV32     R3H,@$BLOCKED(||spdObs||)+2 ; [CPU_FPU] |99| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/include/speed_observer.h",line 94,column 24,is_stmt,isa 0
         MAXF32    R7H,R0H               ; [CPU_FPU] |94| 
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
 
         MOV32     R0H,@$BLOCKED(||spdObs||)+24 ; [CPU_FPU] |94| 
 ||      SUBF32    R2H,R2H,R6H           ; [CPU_FPU] |1194| 
 
         MOVW      DP,#||tFormat||       ; [CPU_ARAU] 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/include/speed_observer.h",line 94,column 24,is_stmt,isa 0
         MINF32    R7H,R5H               ; [CPU_FPU] |94| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/include/speed_observer.h",line 99,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1194,column 9,is_stmt,isa 0
 
         MOV32     @$BLOCKED(||tFormat||),R2H ; [CPU_FPU] |1194| 
 ||      SUBF32    R1H,R2H,R3H           ; [CPU_FPU] |99| 
@@ -3123,16 +3126,16 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
         ADDF32    R3H,R3H,#16256        ; [CPU_FPU] |118| 
         NOP       ; [CPU_ALU] 
 ||$C$L12||:    
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1113,column 5,is_stmt,isa 0
 
         MPYF32    R1H,R4H,R0H           ; [CPU_FPU] |1113| 
 ||      MOV32     @$BLOCKED(||spdObs||)+2,R3H ; [CPU_FPU] |118| 
 
         MOVW      DP,#||speedWe||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1113,column 5,is_stmt,isa 0
         ADDF32    R1H,R1H,R3H           ; [CPU_FPU] |1113| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/observers/speed_observer/include/speed_observer.h",line 121,column 5,is_stmt,isa 0
         MOV32     @||speedWe||,R0H      ; [CPU_FPU] |121| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1116,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1116,column 5,is_stmt,isa 0
         CMPF32    R1H,#16256            ; [CPU_FPU] |1116| 
         MOVST0    ZF, NF                ; [CPU_FPU] |1116| 
         B         ||$C$L13||,GT         ; [CPU_ALU] |1116| 
@@ -3141,17 +3144,17 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
         MOVST0    ZF, NF                ; [CPU_FPU] |1116| 
         B         ||$C$L14||,GEQ        ; [CPU_ALU] |1116| 
         ; branchcc occurs ; [] |1116| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1119,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1119,column 5,is_stmt,isa 0
         ADDF32    R1H,R1H,#16256        ; [CPU_FPU] |1119| 
         B         ||$C$L14||,UNC        ; [CPU_ALU] |1119| 
         ; branch occurs ; [] |1119| 
 ||$C$L13||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1116,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1116,column 5,is_stmt,isa 0
         ADDF32    R1H,R1H,#49024        ; [CPU_FPU] |1116| 
         NOP       ; [CPU_ALU] 
 ||$C$L14||:    
         MOVW      DP,#||pangle||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1119,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1119,column 5,is_stmt,isa 0
         MOV32     @||pangle||,R1H       ; [CPU_FPU] |1119| 
 ||$C$L15||:    
         SUBB      SP,#4                 ; [CPU_ARAU] 
@@ -3174,7 +3177,7 @@ $C$DW$234	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$226, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$226, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$226, DW_AT_TI_end_line(0x4b4)
 	.dwattr $C$DW$226, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3188,11 +3191,11 @@ $C$DW$235	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$235, DW_AT_low_pc(||buildLevel46||)
 	.dwattr $C$DW$235, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$235, DW_AT_linkage_name("buildLevel46")
-	.dwattr $C$DW$235, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$235, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$235, DW_AT_decl_line(0x7d3)
 	.dwattr $C$DW$235, DW_AT_decl_column(0x0d)
 	.dwattr $C$DW$235, DW_AT_TI_max_frame_size(-20)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2004,column 1,is_stmt,address ||buildLevel46||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2004,column 1,is_stmt,address ||buildLevel46||,isa 0
 
 	.dwfde $C$DW$CIE, ||buildLevel46||
 
@@ -3256,27 +3259,27 @@ $C$DW$236	.dwtag  DW_TAG_variable
         MOV32     ACC,*(0:0x5e16)       ; [CPU_FPU] |833| 
         MOVW      DP,#||offset_SDFMV||  ; [CPU_ARAU] 
         SETC      SXM                   ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 499,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 499,column 5,is_stmt,isa 0
         MOV32     R3H,@||offset_SDFMV|| ; [CPU_FPU] |499| 
         SFR       ACC,16                ; [CPU_ALU] |499| 
         MOV32     R0H,ACC               ; [CPU_FPU] |499| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sdfm.h",line 833,column 5,is_stmt,isa 0
         MOV32     ACC,*(0:0x5e26)       ; [CPU_FPU] |833| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 503,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 503,column 5,is_stmt,isa 0
         SFR       ACC,16                ; [CPU_ALU] |503| 
         MOV32     R1H,ACC               ; [CPU_FPU] |503| 
         MOVW      DP,#||FCL_params||+4  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 499,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 499,column 5,is_stmt,isa 0
         I32TOF32  R4H,R0H               ; [CPU_FPU] |499| 
         MOV32     R0H,@$BLOCKED(||FCL_params||)+4 ; [CPU_FPU] |499| 
         MOVW      DP,#||offset_SDFMW||  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 503,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 503,column 5,is_stmt,isa 0
         I32TOF32  R2H,R1H               ; [CPU_FPU] |503| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 499,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 499,column 5,is_stmt,isa 0
         MPYF32    R4H,R0H,R4H           ; [CPU_FPU] |499| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 503,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 503,column 5,is_stmt,isa 0
         MPYF32    R0H,R0H,R2H           ; [CPU_FPU] |503| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 499,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 499,column 5,is_stmt,isa 0
 
         SUBF32    R2H,R4H,R3H           ; [CPU_FPU] |499| 
 ||      MOV32     R1H,@||offset_SDFMW|| ; [CPU_FPU] |503| 
@@ -3287,9 +3290,9 @@ $C$DW$236	.dwtag  DW_TAG_variable
 ||      SUBF32    R0H,R0H,R1H           ; [CPU_FPU] |503| 
 
         MOVW      DP,#||currentSenW||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 503,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 503,column 5,is_stmt,isa 0
         MOV32     @||currentSenW||,R0H  ; [CPU_FPU] |503| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2046,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2046,column 5,is_stmt,isa 0
 $C$DW$237	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$237, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$237, DW_AT_name("FCL_runSDFMAbsEncPICtrl")
@@ -3303,31 +3306,31 @@ $C$DW$237	.dwtag  DW_TAG_TI_branch
         MOV32     *(0:0x7f02),XAR4      ; [CPU_FPU] |473| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 1987,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x4004)        ; [CPU_ALU] |1987| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 518,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 518,column 5,is_stmt,isa 0
         CMP       AL,@||FCL_cycleCount|| ; [CPU_ALU] |518| 
         B         ||$C$L16||,HIS        ; [CPU_ALU] |518| 
         ; branchcc occurs ; [] |518| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2207,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x4063)        ; [CPU_ALU] |2207| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 520,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 520,column 9,is_stmt,isa 0
         SUBR      @||FCL_cycleCount||,AL ; [CPU_ALU] |520| 
 ||$C$L16||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 522,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 522,column 5,is_stmt,isa 0
         MOV       AL,@||FCL_cycleCount|| ; [CPU_ALU] |522| 
         CMP       AL,@||fclCycleCountMax|| ; [CPU_ALU] |522| 
         B         ||$C$L17||,LOS        ; [CPU_ALU] |522| 
         ; branchcc occurs ; [] |522| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 524,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 524,column 9,is_stmt,isa 0
         MOV       AL,@||FCL_cycleCount|| ; [CPU_ALU] |524| 
         MOV       @||fclCycleCountMax||,AL ; [CPU_ALU] |524| 
 ||$C$L17||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 526,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 526,column 5,is_stmt,isa 0
         MOV       AL,@||fclClrCntr||    ; [CPU_ALU] |526| 
         B         ||$C$L18||,EQ         ; [CPU_ALU] |526| 
         ; branchcc occurs ; [] |526| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 528,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 528,column 9,is_stmt,isa 0
         MOV       @||fclCycleCountMax||,#0 ; [CPU_ALU] |528| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 529,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 529,column 9,is_stmt,isa 0
         MOV       @||fclClrCntr||,#0    ; [CPU_ALU] |529| 
 ||$C$L18||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 469,column 9,is_stmt,isa 0
@@ -3335,32 +3338,32 @@ $C$DW$237	.dwtag  DW_TAG_TI_branch
         SETC      SXM                   ; [CPU_ALU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sdfm.h",line 833,column 5,is_stmt,isa 0
         MOV32     ACC,*(0:0x5e36)       ; [CPU_FPU] |833| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
         SFR       ACC,16                ; [CPU_ALU] |483| 
         MOV32     R1H,ACC               ; [CPU_FPU] |483| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 532,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 532,column 5,is_stmt,isa 0
         UI16TOF32 R2H,@||fclCycleCountMax|| ; [CPU_FPU] |532| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
         MOVIZ     R0H,#15467            ; [CPU_FPU] |483| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 532,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 532,column 5,is_stmt,isa 0
         MOVIZ     R7H,#15395            ; [CPU_FPU] |532| 
         MOVW      DP,#||FCL_params||+26 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
         I32TOF32  R1H,R1H               ; [CPU_FPU] |483| 
         MOVXI     R0H,#55644            ; [CPU_FPU] |483| 
         MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |483| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 532,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 532,column 5,is_stmt,isa 0
         MOVXI     R7H,#55050            ; [CPU_FPU] |532| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
         MAXF32    R0H,#16256            ; [CPU_FPU] |483| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 532,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 532,column 5,is_stmt,isa 0
 
         MOV32     @$BLOCKED(||FCL_params||)+26,R0H ; [CPU_FPU] |2072| 
 ||      MPYF32    R1H,R7H,R2H           ; [CPU_FPU] |532| 
 
         MOVW      DP,#||fclLatencyInMicroSec|| ; [CPU_ARAU] 
         MOV32     @||fclLatencyInMicroSec||,R1H ; [CPU_FPU] |532| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2088,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2088,column 5,is_stmt,isa 0
 $C$DW$238	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$238, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$238, DW_AT_name("FCL_runAbsEncPICtrlWrap")
@@ -3369,30 +3372,30 @@ $C$DW$238	.dwtag  DW_TAG_TI_branch
         LCR       #||FCL_runAbsEncPICtrlWrap|| ; [CPU_ALU] |2088| 
         ; call occurs [#||FCL_runAbsEncPICtrlWrap||] ; [] |2088| 
         MOVW      DP,#||runMotor||      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2100,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2100,column 5,is_stmt,isa 0
         MOV       AL,@||runMotor||      ; [CPU_ALU] |2100| 
         B         ||$C$L21||,EQ         ; [CPU_ALU] |2100| 
         ; branchcc occurs ; [] |2100| 
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2107,column 10,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2107,column 10,is_stmt,isa 0
         MOV       AL,@||lsw||           ; [CPU_ALU] |2107| 
         B         ||$C$L20||,NEQ        ; [CPU_ALU] |2107| 
         ; branchcc occurs ; [] |2107| 
         MOVW      DP,#||IdRef_start||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2110,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2110,column 9,is_stmt,isa 0
         MOV32     R0H,@||IdRef_start||  ; [CPU_FPU] |2110| 
         MOVW      DP,#||tempIdRef||     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2113,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2113,column 9,is_stmt,isa 0
         MOV32     R2H,@||tempIdRef||    ; [CPU_FPU] |2113| 
         MOV32     *-SP[4],R2H           ; [CPU_FPU] |2113| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2110,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2110,column 9,is_stmt,isa 0
         MOV32     @||IdRef||,R0H        ; [CPU_FPU] |2110| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2113,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2113,column 9,is_stmt,isa 0
         CMPF32    R2H,R0H               ; [CPU_FPU] |2113| 
         MOVST0    ZF, NF                ; [CPU_FPU] |2113| 
         B         ||$C$L22||,LT         ; [CPU_ALU] |2113| 
         ; branchcc occurs ; [] |2113| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2117,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2117,column 13,is_stmt,isa 0
         MOV32     R2H,@||alignCntr||    ; [CPU_FPU] |2117| 
         ADDF32    R2H,R2H,#16256        ; [CPU_FPU] |2117| 
         MOV32     R3H,@||alignCnt||     ; [CPU_FPU] |2117| 
@@ -3401,50 +3404,50 @@ $C$DW$238	.dwtag  DW_TAG_TI_branch
         B         ||$C$L19||,GEQ        ; [CPU_ALU] |2117| 
         ; branchcc occurs ; [] |2117| 
         MOV32     @||alignCntr||,R2H    ; [CPU_FPU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2139,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2139,column 5,is_stmt,isa 0
         B         ||$C$L27||,UNC        ; [CPU_ALU] |2139| 
         ; branch occurs ; [] |2139| 
 ||$C$L19||:    
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2119,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2119,column 17,is_stmt,isa 0
         ZERO      R2H                   ; [CPU_FPU] |2119| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2126,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2126,column 17,is_stmt,isa 0
         MOVB      @||lsw||,#2,UNC       ; [CPU_ALU] |2126| 
         MOVW      DP,#||alignCntr||     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2119,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2119,column 17,is_stmt,isa 0
         MOV32     @||alignCntr||,R2H    ; [CPU_FPU] |2119| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2144,column 10,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2144,column 10,is_stmt,isa 0
         B         ||$C$L26||,UNC        ; [CPU_ALU] |2144| 
         ; branch occurs ; [] |2144| 
 ||$C$L20||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2131,column 10,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2131,column 10,is_stmt,isa 0
         CMPB      AL,#2                 ; [CPU_ALU] |2131| 
         B         ||$C$L22||,NEQ        ; [CPU_ALU] |2131| 
         ; branchcc occurs ; [] |2131| 
         MOVW      DP,#||IdRef_run||     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2133,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2133,column 9,is_stmt,isa 0
         MOV32     R0H,@||IdRef_run||    ; [CPU_FPU] |2133| 
         MOVW      DP,#||tempIdRef||     ; [CPU_ARAU] 
         MOV32     R1H,@||tempIdRef||    ; [CPU_FPU] 
         MOV32     *-SP[4],R1H           ; [CPU_FPU] 
         MOV32     @||IdRef||,R0H        ; [CPU_FPU] |2133| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2144,column 10,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2144,column 10,is_stmt,isa 0
         B         ||$C$L26||,UNC        ; [CPU_ALU] |2144| 
         ; branch occurs ; [] |2144| 
 ||$C$L21||:    
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2103,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2103,column 9,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |2103| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2104,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2104,column 9,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |2104| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2102,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2102,column 9,is_stmt,isa 0
         MOV       @||lsw||,#0           ; [CPU_ALU] |2102| 
         MOVW      DP,#||IdRef||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2103,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2103,column 9,is_stmt,isa 0
         MOV32     @||IdRef||,R1H        ; [CPU_FPU] |2103| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2104,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2104,column 9,is_stmt,isa 0
         MOV32     @||tempIdRef||,R0H    ; [CPU_FPU] |2104| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2105,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2105,column 9,is_stmt,isa 0
 $C$DW$239	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$239, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$239, DW_AT_name("FCL_resetController")
@@ -3454,7 +3457,7 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||FCL_resetController||] ; [] |2105| 
 ||$C$L22||:    
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2139,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2139,column 5,is_stmt,isa 0
         MOV       AL,@||lsw||           ; [CPU_ALU] |2139| 
         MOVW      DP,#||IdRef||         ; [CPU_ARAU] 
         MOV32     R1H,@||tempIdRef||    ; [CPU_FPU] 
@@ -3462,11 +3465,11 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         MOV32     *-SP[4],R1H           ; [CPU_FPU] 
         B         ||$C$L27||,EQ         ; [CPU_ALU] |2139| 
         ; branchcc occurs ; [] |2139| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2144,column 10,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2144,column 10,is_stmt,isa 0
         CMPB      AL,#1                 ; [CPU_ALU] |2144| 
         B         ||$C$L26||,NEQ        ; [CPU_ALU] |2144| 
         ; branchcc occurs ; [] |2144| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2146,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2146,column 9,is_stmt,isa 0
         MOV32     R2H,@||speedRef||     ; [CPU_FPU] |2146| 
         CMPF32    R2H,#0                ; [CPU_FPU] |2146| 
         MOVST0    ZF, NF                ; [CPU_FPU] |2146| 
@@ -3487,17 +3490,17 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         B         ||$C$L28||,UNC        ; [CPU_ALU] 
         ; branch occurs ; [] 
 ||$C$L26||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2150,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2150,column 9,is_stmt,isa 0
         MOV32     R2H,@||speedRef||     ; [CPU_FPU] |2150| 
         B         ||$C$L25||,UNC        ; [CPU_ALU] |2150| 
         ; branch occurs ; [] |2150| 
 ||$C$L27||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2141,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2141,column 9,is_stmt,isa 0
         ZERO      R3H                   ; [CPU_FPU] |2141| 
         MOVW      DP,#||rc1||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2142,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2142,column 9,is_stmt,isa 0
         ZERO      R2H                   ; [CPU_FPU] |2142| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2141,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2141,column 9,is_stmt,isa 0
         MOV32     @$BLOCKED(||rc1||),R3H ; [CPU_FPU] |2141| 
 ||$C$L28||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 73,column 2,is_stmt,isa 0
@@ -3557,7 +3560,7 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
 ||$C$L33||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
         MOV32     R2H,@$BLOCKED(||rc1||)+6 ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2158,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2158,column 5,is_stmt,isa 0
         MOVL      XAR4,#||rg1||         ; [CPU_ARAU] |2158| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||rc1||)+4 ; [CPU_FPU] |109| 
@@ -3573,7 +3576,7 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         ADDF32    R2H,R4H,R7H           ; [CPU_FPU] |68| 
 ||      MOV32     @$BLOCKED(||rc1||)+10,R3H ; [CPU_FPU] |109| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2158,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2158,column 5,is_stmt,isa 0
         MOV32     *+XAR4[0],R3H         ; [CPU_FPU] |2158| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rampgen.h",line 71,column 2,is_stmt,isa 0
         CMPF32    R2H,#16256            ; [CPU_FPU] |71| 
@@ -3602,32 +3605,32 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         MOV32     @$BLOCKED(||rg1||)+4,R2H ; [CPU_FPU] |73| 
 ||$C$L37||:    
         MOVW      DP,#||tFormat||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2182,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2182,column 5,is_stmt,isa 0
         MOVL      XAR7,@$BLOCKED(||tFormat||) ; [CPU_ALU] |2182| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2183,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2183,column 5,is_stmt,isa 0
         MOVL      XAR6,@$BLOCKED(||tFormat||)+2 ; [CPU_ALU] |2183| 
         MOVW      DP,#||speedLoopPrescaler|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2207,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2207,column 5,is_stmt,isa 0
         MOV       AL,@||speedLoopPrescaler|| ; [CPU_ALU] |2207| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2205,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2205,column 5,is_stmt,isa 0
         INC       @||speedLoopCount||   ; [CPU_ALU] |2205| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rampgen.h",line 80,column 2,is_stmt,isa 0
         MOV32     *-SP[10],R2H          ; [CPU_FPU] |80| 
         MOVW      DP,#||rg1||+8         ; [CPU_ARAU] 
         MOV32     @$BLOCKED(||rg1||)+8,R2H ; [CPU_FPU] |80| 
         MOVW      DP,#||posEncElecTheta||+12 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2182,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2182,column 5,is_stmt,isa 0
         MOVL      @||posEncElecTheta||+12,XAR7 ; [CPU_ALU] |2182| 
         MOVW      DP,#||posEncMechTheta||+12 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2183,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2183,column 5,is_stmt,isa 0
         MOVL      @||posEncMechTheta||+12,XAR6 ; [CPU_ALU] |2183| 
         MOVW      DP,#||speedLoopCount|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2207,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2207,column 5,is_stmt,isa 0
         CMP       AL,@||speedLoopCount|| ; [CPU_ALU] |2207| 
         B         ||$C$L38||,LOS        ; [CPU_ALU] |2207| 
         ; branchcc occurs ; [] |2207| 
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2220,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2220,column 5,is_stmt,isa 0
         AND       AL,@||lsw||,#0xfffe   ; [CPU_ALU] |2220| 
         MOVW      DP,#||speedWe||       ; [CPU_ARAU] 
         MOV32     R4H,@||speedWe||      ; [CPU_FPU] 
@@ -3640,6 +3643,7 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 123,column 2,is_stmt,isa 0
         MOV32     R6H,@$BLOCKED(||pid_spd||)+18 ; [CPU_FPU] |123| 
         MOVW      DP,#||speedWe||       ; [CPU_ARAU] 
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2214,column 12,is_stmt,isa 0
 
         MPYF32    R6H,R3H,R6H           ; [CPU_FPU] |123| 
 ||      MOV32     R4H,@||speedWe||      ; [CPU_FPU] |2214| 
@@ -3693,13 +3697,14 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         ADDF32    R5H,R5H,R1H           ; [CPU_FPU] |124| 
 ||      MOV32     *-SP[8],R5H           ; [CPU_FPU] |123| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2209,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2209,column 12,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||),R3H ; [CPU_FPU] |2209| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 128,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2214,column 12,is_stmt,isa 0
 
         ADDF32    R7H,R5H,R6H           ; [CPU_FPU] |128| 
 ||      MOV32     @$BLOCKED(||pid_spd||)+2,R4H ; [CPU_FPU] |2214| 
 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 128,column 2,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||pid_spd||)+12 ; [CPU_FPU] |128| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 125,column 2,is_stmt,isa 0
 
@@ -3732,19 +3737,19 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         ZERO      R3H                   ; [CPU_FPU] |140| 
 ||$C$L40||:    
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2220,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2220,column 5,is_stmt,isa 0
         AND       AL,@||lsw||,#0xfffe   ; [CPU_ALU] |2220| 
         MOVW      DP,#||pid_spd||+38    ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 140,column 2,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||)+38,R3H ; [CPU_FPU] |140| 
         MOVW      DP,#||speedLoopCount|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2217,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2217,column 12,is_stmt,isa 0
         MOV       @||speedLoopCount||,#0 ; [CPU_ALU] |2217| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2220,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2220,column 5,is_stmt,isa 0
         B         ||$C$L41||,EQ         ; [CPU_ALU] |2220| 
         ; branchcc occurs ; [] |2220| 
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2233,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2233,column 5,is_stmt,isa 0
         MOV       AL,@||lsw||           ; [CPU_ALU] |2233| 
         MOV32     R3H,*-SP[6]           ; [CPU_FPU] |2233| 
         MOVW      DP,#||pid_spd||+24    ; [CPU_ARAU] 
@@ -3760,34 +3765,34 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         B         ||$C$L46||,UNC        ; [CPU_ALU] |2233| 
         ; branch occurs ; [] |2233| 
 ||$C$L41||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2222,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2222,column 12,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |2222| 
         MOVW      DP,#||pid_spd||+34    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2223,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2223,column 12,is_stmt,isa 0
         ZERO      R7H                   ; [CPU_FPU] |2223| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2224,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2224,column 12,is_stmt,isa 0
         ZERO      R6H                   ; [CPU_FPU] |2224| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2225,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2225,column 12,is_stmt,isa 0
         ZERO      R5H                   ; [CPU_FPU] |2225| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2226,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2226,column 12,is_stmt,isa 0
         ZERO      R3H                   ; [CPU_FPU] |2226| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2227,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2227,column 12,is_stmt,isa 0
         ZERO      R2H                   ; [CPU_FPU] |2227| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2222,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2222,column 12,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||)+34,R1H ; [CPU_FPU] |2222| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2223,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2223,column 12,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||)+36,R7H ; [CPU_FPU] |2223| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2224,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2224,column 12,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||)+32,R6H ; [CPU_FPU] |2224| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2225,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2225,column 12,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||)+28,R5H ; [CPU_FPU] |2225| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2226,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2226,column 12,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||)+26,R3H ; [CPU_FPU] |2226| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2227,column 12,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2227,column 12,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||)+24,R2H ; [CPU_FPU] |2227| 
 ||$C$L42||:    
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2233,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2233,column 5,is_stmt,isa 0
         MOV       AL,@||lsw||           ; [CPU_ALU] |2233| 
         B         ||$C$L46||,EQ         ; [CPU_ALU] |2233| 
         ; branchcc occurs ; [] |2233| 
@@ -3812,7 +3817,7 @@ $C$DW$239	.dwtag  DW_TAG_TI_branch
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
         MOV32     @$BLOCKED(||pi_iq||),R2H ; [CPU_FPU] |2233| 
 ||$C$L47||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2244,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2244,column 5,is_stmt,isa 0
         MOVIZ     R2H,#14119            ; [CPU_FPU] |2244| 
         MOV32     R1H,*-SP[4]           ; [CPU_FPU] |2244| 
         MOVXI     R2H,#50604            ; [CPU_FPU] |2244| 
@@ -3824,21 +3829,21 @@ $C$DW$240	.dwtag  DW_TAG_TI_branch
         LCR       #||ramper||           ; [CPU_ALU] |2244| 
         ; call occurs [#||ramper||] ; [] |2244| 
         MOVW      DP,#||pi_id||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2256,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2256,column 5,is_stmt,isa 0
         MOVL      XAR7,@$BLOCKED(||pi_id||)+2 ; [CPU_ALU] |2256| 
         MOVW      DP,#||posEncElecTheta||+12 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2244,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2244,column 5,is_stmt,isa 0
         MOV32     R1H,*-SP[10]          ; [CPU_FPU] |2244| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2254,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2254,column 5,is_stmt,isa 0
         MOVL      P,@||posEncElecTheta||+12 ; [CPU_ALU] |2254| 
         MOVW      DP,#||dlogCh1||       ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
         ADDF32    R1H,R1H,#16256        ; [CPU_FPU] |330| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2254,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2254,column 5,is_stmt,isa 0
         MOVL      @||dlogCh1||,P        ; [CPU_ALU] |2254| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
         MPYF32    R1H,R1H,#17664        ; [CPU_FPU] |330| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2256,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2256,column 5,is_stmt,isa 0
         MOVL      @||dlogCh3||,XAR7     ; [CPU_ALU] |2256| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
         F32TOUI16 R2H,R1H               ; [CPU_FPU] |330| 
@@ -3847,7 +3852,7 @@ $C$DW$240	.dwtag  DW_TAG_TI_branch
         MOV32     ACC,R2H               ; [CPU_FPU] |330| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MOV       AH,*(0:0x5c13)        ; [CPU_ALU] |330| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2245,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2245,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||),R0H ; [CPU_FPU] |2245| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
         AND       AL,#0x0fff            ; [CPU_ALU] |330| 
@@ -3857,7 +3862,7 @@ $C$DW$240	.dwtag  DW_TAG_TI_branch
         MPYF32    R1H,R1H,#17664        ; [CPU_FPU] |330| 
         OR        AL,AH                 ; [CPU_ALU] |330| 
         F32TOUI16 R1H,R1H               ; [CPU_FPU] |330| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2244,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2244,column 5,is_stmt,isa 0
         MOV32     @||tempIdRef||,R0H    ; [CPU_FPU] |2244| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
         MOV       *(0:0x5c13),AL        ; [CPU_ALU] |330| 
@@ -3867,15 +3872,15 @@ $C$DW$240	.dwtag  DW_TAG_TI_branch
         AND       AH,#0xf000            ; [CPU_ALU] |330| 
         MOV       AL,AR6                ; [CPU_ALU] |330| 
         AND       AL,#0x0fff            ; [CPU_ALU] |330| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2257,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2257,column 5,is_stmt,isa 0
         MOVL      XAR6,@$BLOCKED(||pi_iq||)+2 ; [CPU_FPU] |2257| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
         OR        AL,AH                 ; [CPU_ALU] |330| 
         MOVW      DP,#||dlogCh2||       ; [CPU_ARAU] 
         MOV       *(0:0x5c23),AL        ; [CPU_ALU] |330| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2255,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2255,column 5,is_stmt,isa 0
         MOV32     @||dlogCh2||,R4H      ; [CPU_FPU] |2255| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2257,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2257,column 5,is_stmt,isa 0
         MOVL      @||dlogCh4||,XAR6     ; [CPU_ALU] |2257| 
         SUBB      SP,#10                ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -10
@@ -3897,7 +3902,7 @@ $C$DW$241	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$235, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$235, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$235, DW_AT_TI_end_line(0x8db)
 	.dwattr $C$DW$235, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3914,12 +3919,12 @@ $C$DW$242	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$242, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$242, DW_AT_linkage_name("motorControlISR")
 	.dwattr $C$DW$242, DW_AT_external
-	.dwattr $C$DW$242, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$242, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$242, DW_AT_decl_line(0xa07)
 	.dwattr $C$DW$242, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$242, DW_AT_TI_interrupt
 	.dwattr $C$DW$242, DW_AT_TI_max_frame_size(-28)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2568,column 1,is_stmt,address ||motorControlISR||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2568,column 1,is_stmt,address ||motorControlISR||,isa 0
 
 	.dwfde $C$DW$CIE, ||motorControlISR||
 
@@ -3984,7 +3989,7 @@ $C$DW$242	.dwtag  DW_TAG_subprogram
         SPM       0                     ; [CPU_ALU] 
         CLRC      PAGE0,OVM             ; [CPU_ALU] 
         CLRC      AMODE                 ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2580,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2580,column 5,is_stmt,isa 0
 $C$DW$243	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$243, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$243, DW_AT_name("buildLevel46")
@@ -3993,7 +3998,7 @@ $C$DW$243	.dwtag  DW_TAG_TI_branch
         LCR       #||buildLevel46||     ; [CPU_ALU] |2580| 
         ; call occurs [#||buildLevel46||] ; [] |2580| 
  clrc INTM
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1131,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1131,column 5,is_stmt,isa 0
         MOV       AL,#38463             ; [CPU_ALU] |1131| 
         MOVB      XAR4,#11              ; [CPU_ALU] |1131| 
         MOVB      XAR5,#11              ; [CPU_ALU] |1131| 
@@ -4007,7 +4012,7 @@ $C$DW$244	.dwtag  DW_TAG_TI_branch
 
         LCR       #||PM_tformat_setupCommandReadoutOrReset|| ; [CPU_ALU] |1131| 
         ; call occurs [#||PM_tformat_setupCommandReadoutOrReset||] ; [] |1131| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1136,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1136,column 5,is_stmt,isa 0
 $C$DW$245	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$245, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$245, DW_AT_name("PM_tformat_startOperation")
@@ -4016,20 +4021,20 @@ $C$DW$245	.dwtag  DW_TAG_TI_branch
         LCR       #||PM_tformat_startOperation|| ; [CPU_ALU] |1136| 
         ; call occurs [#||PM_tformat_startOperation||] ; [] |1136| 
         MOVW      DP,#||tFormat_encCmdStatus|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1139,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1139,column 5,is_stmt,isa 0
         MOV       AL,@||tFormat_encCmdStatus|| ; [CPU_ALU] |1139| 
         MOVW      DP,#||tFormat_dataId|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1137,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1137,column 5,is_stmt,isa 0
         MOV       @||tFormat_dataId||,#38463 ; [CPU_ALU] |1137| 
         MOVW      DP,#||tFormat_encCmdStatus|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1141,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1141,column 9,is_stmt,isa 0
         MOVB      @||tFormat_encCmdStatus||,#1,EQ ; [CPU_ALU] |1141| 
         B         ||$C$L48||,EQ         ; [CPU_ALU] 
         ; branchcc occurs ; [] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1145,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1145,column 9,is_stmt,isa 0
         MOV       @||runMotor||,#0      ; [CPU_ALU] |1145| 
 ||$C$L48||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2597,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2597,column 5,is_stmt,isa 0
         MOVL      XAR4,#||dlog_4ch1||   ; [CPU_ARAU] |2597| 
 $C$DW$246	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$246, DW_AT_low_pc(0x00)
@@ -4052,11 +4057,11 @@ $C$DW$246	.dwtag  DW_TAG_TI_branch
         MOV       AL,*(0:0x4aaa)        ; [CPU_ALU] |4872| 
         ORB       AL,#0x01              ; [CPU_ALU] |4872| 
         MOV       *(0:0x4aaa),AL        ; [CPU_ALU] |4872| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2620,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2620,column 5,is_stmt,isa 0
         MOVB      ACC,#1                ; [CPU_ALU] |2620| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 819,column 5,is_stmt,isa 0
         MOV       *(0:0x7404),AR6       ; [CPU_ALU] |819| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2620,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2620,column 5,is_stmt,isa 0
         ADDL      @||isrTicker||,ACC    ; [CPU_ALU] |2620| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 379,column 5,is_stmt,isa 0
         MOV       *(0:0x0ce1),AR7       ; [CPU_FPU] |379| 
@@ -4108,7 +4113,7 @@ $C$DW$247	.dwtag  DW_TAG_TI_branch
 
         IRET      ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$242, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$242, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$242, DW_AT_TI_end_line(0xa3e)
 	.dwattr $C$DW$242, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4124,11 +4129,11 @@ $C$DW$248	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$248, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$248, DW_AT_linkage_name("configureGPIO")
 	.dwattr $C$DW$248, DW_AT_external
-	.dwattr $C$DW$248, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$248, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$248, DW_AT_decl_line(0xb9f)
 	.dwattr $C$DW$248, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$248, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2976,column 1,is_stmt,address ||configureGPIO||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2976,column 1,is_stmt,address ||configureGPIO||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureGPIO||
 
@@ -4155,7 +4160,7 @@ $C$DW$249	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -4
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2985,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2985,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |2985| 
         MOVB      XAR4,#0               ; [CPU_ALU] |2985| 
 $C$DW$250	.dwtag  DW_TAG_TI_branch
@@ -4165,7 +4170,7 @@ $C$DW$250	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |2985| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |2985| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2986,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2986,column 5,is_stmt,isa 0
         MOVL      XAR4,#393217          ; [CPU_ARAU] |2986| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |2986| 
 $C$DW$251	.dwtag  DW_TAG_TI_branch
@@ -4175,7 +4180,7 @@ $C$DW$251	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |2986| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |2986| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2987,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2987,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |2987| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |2987| 
 $C$DW$252	.dwtag  DW_TAG_TI_branch
@@ -4185,7 +4190,7 @@ $C$DW$252	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |2987| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |2987| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2990,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2990,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |2990| 
         MOVB      ACC,#1                ; [CPU_ALU] |2990| 
 $C$DW$253	.dwtag  DW_TAG_TI_branch
@@ -4195,7 +4200,7 @@ $C$DW$253	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |2990| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |2990| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2991,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2991,column 5,is_stmt,isa 0
         MOVL      XAR4,#393729          ; [CPU_ARAU] |2991| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |2991| 
 $C$DW$254	.dwtag  DW_TAG_TI_branch
@@ -4205,7 +4210,7 @@ $C$DW$254	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |2991| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |2991| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2992,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2992,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |2992| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |2992| 
         MOVB      ACC,#1                ; [CPU_ALU] |2992| 
@@ -4216,7 +4221,7 @@ $C$DW$255	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |2992| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |2992| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2995,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2995,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |2995| 
         MOVB      ACC,#2                ; [CPU_ALU] |2995| 
 $C$DW$256	.dwtag  DW_TAG_TI_branch
@@ -4226,7 +4231,7 @@ $C$DW$256	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |2995| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |2995| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2996,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2996,column 5,is_stmt,isa 0
         MOVL      XAR4,#394241          ; [CPU_ARAU] |2996| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |2996| 
 $C$DW$257	.dwtag  DW_TAG_TI_branch
@@ -4236,7 +4241,7 @@ $C$DW$257	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |2996| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |2996| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2997,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2997,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |2997| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |2997| 
         MOVB      ACC,#2                ; [CPU_ALU] |2997| 
@@ -4247,7 +4252,7 @@ $C$DW$258	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |2997| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |2997| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3000,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3000,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3000| 
         MOVB      ACC,#3                ; [CPU_ALU] |3000| 
 $C$DW$259	.dwtag  DW_TAG_TI_branch
@@ -4257,7 +4262,7 @@ $C$DW$259	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3000| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3000| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3001,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3001,column 5,is_stmt,isa 0
         MOVL      XAR4,#394753          ; [CPU_ARAU] |3001| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3001| 
 $C$DW$260	.dwtag  DW_TAG_TI_branch
@@ -4267,7 +4272,7 @@ $C$DW$260	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3001| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3001| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3002,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3002,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3002| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3002| 
         MOVB      ACC,#3                ; [CPU_ALU] |3002| 
@@ -4278,7 +4283,7 @@ $C$DW$261	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3002| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3002| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3005,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3005,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3005| 
         MOVB      ACC,#4                ; [CPU_ALU] |3005| 
 $C$DW$262	.dwtag  DW_TAG_TI_branch
@@ -4288,7 +4293,7 @@ $C$DW$262	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3005| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3005| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3006,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3006,column 5,is_stmt,isa 0
         MOVL      XAR4,#395265          ; [CPU_ARAU] |3006| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3006| 
 $C$DW$263	.dwtag  DW_TAG_TI_branch
@@ -4298,7 +4303,7 @@ $C$DW$263	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3006| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3006| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3007,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3007,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3007| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3007| 
         MOVB      ACC,#4                ; [CPU_ALU] |3007| 
@@ -4309,7 +4314,7 @@ $C$DW$264	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3007| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3007| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3010,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3010,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3010| 
         MOVB      ACC,#5                ; [CPU_ALU] |3010| 
 $C$DW$265	.dwtag  DW_TAG_TI_branch
@@ -4319,7 +4324,7 @@ $C$DW$265	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3010| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3010| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3011,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3011,column 5,is_stmt,isa 0
         MOVL      XAR4,#395777          ; [CPU_ARAU] |3011| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3011| 
 $C$DW$266	.dwtag  DW_TAG_TI_branch
@@ -4329,7 +4334,7 @@ $C$DW$266	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3011| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3011| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3012,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3012,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3012| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3012| 
         MOVB      ACC,#5                ; [CPU_ALU] |3012| 
@@ -4340,7 +4345,7 @@ $C$DW$267	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3012| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3012| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3018,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3018,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3018| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3018| 
         MOVB      ACC,#8                ; [CPU_ALU] |3018| 
@@ -4351,7 +4356,7 @@ $C$DW$268	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3018| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3018| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3019,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3019,column 5,is_stmt,isa 0
         MOVL      XAR4,#397313          ; [CPU_ARAU] |3019| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3019| 
 $C$DW$269	.dwtag  DW_TAG_TI_branch
@@ -4361,7 +4366,7 @@ $C$DW$269	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3019| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3019| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3021,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3021,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3021| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3021| 
         MOVB      ACC,#9                ; [CPU_ALU] |3021| 
@@ -4372,7 +4377,7 @@ $C$DW$270	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3021| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3021| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3022,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3022,column 5,is_stmt,isa 0
         MOVL      XAR4,#397825          ; [CPU_ARAU] |3022| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3022| 
 $C$DW$271	.dwtag  DW_TAG_TI_branch
@@ -4382,7 +4387,7 @@ $C$DW$271	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3022| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3022| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3027,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3027,column 5,is_stmt,isa 0
         MOVB      ACC,#18               ; [CPU_ALU] |3027| 
         MOVB      XAR4,#0               ; [CPU_ALU] |3027| 
 $C$DW$272	.dwtag  DW_TAG_TI_branch
@@ -4392,7 +4397,7 @@ $C$DW$272	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3027| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3027| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3028,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3028,column 5,is_stmt,isa 0
         MOVL      XAR4,#525312          ; [CPU_ARAU] |3028| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3028| 
 $C$DW$273	.dwtag  DW_TAG_TI_branch
@@ -4402,7 +4407,7 @@ $C$DW$273	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3028| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3028| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3029,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3029,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3029| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3029| 
         MOVB      ACC,#18               ; [CPU_ALU] |3029| 
@@ -4413,7 +4418,7 @@ $C$DW$274	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3029| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3029| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3030,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3030,column 5,is_stmt,isa 0
         MOVB      XAR4,#1               ; [CPU_ALU] |3030| 
         MOVB      ACC,#18               ; [CPU_ALU] |3030| 
 $C$DW$275	.dwtag  DW_TAG_TI_branch
@@ -4423,7 +4428,7 @@ $C$DW$275	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |3030| 
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3030| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3036,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3036,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3036| 
         MOVB      ACC,#20               ; [CPU_ALU] |3036| 
 $C$DW$276	.dwtag  DW_TAG_TI_branch
@@ -4433,7 +4438,7 @@ $C$DW$276	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3036| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3036| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3037,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3037,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3037| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3037| 
         MOVB      ACC,#20               ; [CPU_ALU] |3037| 
@@ -4444,7 +4449,7 @@ $C$DW$277	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3037| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3037| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3038,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3038,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3038| 
         MOVB      ACC,#20               ; [CPU_ALU] |3038| 
 $C$DW$278	.dwtag  DW_TAG_TI_branch
@@ -4454,7 +4459,7 @@ $C$DW$278	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |3038| 
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3038| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3039,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3039,column 5,is_stmt,isa 0
         MOVB      XAR4,#1               ; [CPU_ALU] |3039| 
         MOVB      ACC,#20               ; [CPU_ALU] |3039| 
 $C$DW$279	.dwtag  DW_TAG_TI_branch
@@ -4464,7 +4469,7 @@ $C$DW$279	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |3039| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |3039| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3040,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3040,column 5,is_stmt,isa 0
         MOVL      XAR4,#526337          ; [CPU_ARAU] |3040| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3040| 
 $C$DW$280	.dwtag  DW_TAG_TI_branch
@@ -4474,7 +4479,7 @@ $C$DW$280	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3040| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3040| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3043,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3043,column 5,is_stmt,isa 0
         MOVB      ACC,#21               ; [CPU_ALU] |3043| 
         MOVB      XAR4,#0               ; [CPU_ALU] |3043| 
 $C$DW$281	.dwtag  DW_TAG_TI_branch
@@ -4484,7 +4489,7 @@ $C$DW$281	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3043| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3043| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3044,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3044,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3044| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3044| 
         MOVB      ACC,#21               ; [CPU_ALU] |3044| 
@@ -4495,7 +4500,7 @@ $C$DW$282	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3044| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3044| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3045,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3045,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3045| 
         MOVB      ACC,#21               ; [CPU_ALU] |3045| 
 $C$DW$283	.dwtag  DW_TAG_TI_branch
@@ -4505,7 +4510,7 @@ $C$DW$283	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |3045| 
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3045| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3046,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3046,column 5,is_stmt,isa 0
         MOVB      XAR4,#1               ; [CPU_ALU] |3046| 
         MOVB      ACC,#21               ; [CPU_ALU] |3046| 
 $C$DW$284	.dwtag  DW_TAG_TI_branch
@@ -4515,7 +4520,7 @@ $C$DW$284	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |3046| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |3046| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3047,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3047,column 5,is_stmt,isa 0
         MOVL      XAR4,#526849          ; [CPU_ARAU] |3047| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3047| 
 $C$DW$285	.dwtag  DW_TAG_TI_branch
@@ -4525,7 +4530,7 @@ $C$DW$285	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3047| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3047| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3050,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3050,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3050| 
         MOVB      ACC,#23               ; [CPU_ALU] |3050| 
 $C$DW$286	.dwtag  DW_TAG_TI_branch
@@ -4535,7 +4540,7 @@ $C$DW$286	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3050| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3050| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3051,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3051,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3051| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3051| 
         MOVB      ACC,#23               ; [CPU_ALU] |3051| 
@@ -4546,7 +4551,7 @@ $C$DW$287	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3051| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3051| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3052,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3052,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3052| 
         MOVB      ACC,#23               ; [CPU_ALU] |3052| 
 $C$DW$288	.dwtag  DW_TAG_TI_branch
@@ -4556,7 +4561,7 @@ $C$DW$288	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |3052| 
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3052| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3053,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3053,column 5,is_stmt,isa 0
         MOVB      XAR4,#1               ; [CPU_ALU] |3053| 
         MOVB      ACC,#23               ; [CPU_ALU] |3053| 
 $C$DW$289	.dwtag  DW_TAG_TI_branch
@@ -4566,7 +4571,7 @@ $C$DW$289	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |3053| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |3053| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3054,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3054,column 5,is_stmt,isa 0
         MOVL      XAR4,#527873          ; [CPU_ARAU] |3054| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3054| 
 $C$DW$290	.dwtag  DW_TAG_TI_branch
@@ -4576,7 +4581,7 @@ $C$DW$290	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3054| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3054| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3057,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3057,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3057| 
         MOVB      ACC,#28               ; [CPU_ALU] |3057| 
 $C$DW$291	.dwtag  DW_TAG_TI_branch
@@ -4586,7 +4591,7 @@ $C$DW$291	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3057| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3057| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3058,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3058,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3058| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3058| 
         MOVB      ACC,#28               ; [CPU_ALU] |3058| 
@@ -4597,7 +4602,7 @@ $C$DW$292	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3058| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3058| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3059,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3059,column 5,is_stmt,isa 0
         MOVL      XAR4,#530433          ; [CPU_ARAU] |3059| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3059| 
 $C$DW$293	.dwtag  DW_TAG_TI_branch
@@ -4607,7 +4612,7 @@ $C$DW$293	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3059| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3059| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3062,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3062,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3062| 
         MOVB      ACC,#29               ; [CPU_ALU] |3062| 
 $C$DW$294	.dwtag  DW_TAG_TI_branch
@@ -4617,7 +4622,7 @@ $C$DW$294	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3062| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3062| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3063,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3063,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3063| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3063| 
         MOVB      ACC,#29               ; [CPU_ALU] |3063| 
@@ -4628,7 +4633,7 @@ $C$DW$295	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3063| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3063| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3064,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3064,column 5,is_stmt,isa 0
         MOVL      XAR4,#530945          ; [CPU_ARAU] |3064| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3064| 
 $C$DW$296	.dwtag  DW_TAG_TI_branch
@@ -4638,7 +4643,7 @@ $C$DW$296	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3064| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3064| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3071,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3071,column 5,is_stmt,isa 0
         MOV       ACC,#1121 << 12       ; [CPU_ALU] |3071| 
 $C$DW$297	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$297, DW_AT_low_pc(0x00)
@@ -4647,7 +4652,7 @@ $C$DW$297	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3071| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3071| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3072,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3072,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3072| 
         MOVB      ACC,#40               ; [CPU_ALU] |3072| 
 $C$DW$298	.dwtag  DW_TAG_TI_branch
@@ -4657,7 +4662,7 @@ $C$DW$298	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |3072| 
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3072| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3073,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3073,column 5,is_stmt,isa 0
         MOVB      ACC,#2                ; [CPU_ALU] |3073| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3073| 
         MOVB      ACC,#40               ; [CPU_ALU] |3073| 
@@ -4674,7 +4679,7 @@ $C$DW$299	.dwtag  DW_TAG_TI_branch
         MOV       *(0:0x7901),AL        ; [CPU_ALU] |971| 
  EDIS
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3080,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3080,column 5,is_stmt,isa 0
         MOV       ACC,#8969 << 9        ; [CPU_ALU] |3080| 
 $C$DW$300	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$300, DW_AT_low_pc(0x00)
@@ -4683,7 +4688,7 @@ $C$DW$300	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3080| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3080| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3081,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3081,column 5,is_stmt,isa 0
         MOVB      XAR4,#1               ; [CPU_ALU] |3081| 
         MOVB      ACC,#41               ; [CPU_ALU] |3081| 
 $C$DW$301	.dwtag  DW_TAG_TI_branch
@@ -4695,11 +4700,11 @@ $C$DW$301	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3081| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVL      XAR4,#512             ; [CPU_ARAU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3086,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3086,column 5,is_stmt,isa 0
         MOV       ACC,#4613 << 10       ; [CPU_ALU] |3086| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV32     *(0:0x7f0a),XAR4      ; [CPU_FPU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3086,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3086,column 5,is_stmt,isa 0
 $C$DW$302	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$302, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$302, DW_AT_name("GPIO_setPinConfig")
@@ -4707,7 +4712,7 @@ $C$DW$302	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3086| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3086| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3087,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3087,column 5,is_stmt,isa 0
         MOVB      XAR4,#1               ; [CPU_ALU] |3087| 
         MOVB      ACC,#58               ; [CPU_ALU] |3087| 
 $C$DW$303	.dwtag  DW_TAG_TI_branch
@@ -4719,11 +4724,11 @@ $C$DW$303	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3087| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 469,column 9,is_stmt,isa 0
         MOV       ACC,#2048 << 15       ; [CPU_ALU] |469| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3091,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3091,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3091| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 469,column 9,is_stmt,isa 0
         MOV32     *(0:0x7f0c),ACC       ; [CPU_FPU] |469| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3091,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3091,column 5,is_stmt,isa 0
         MOVB      ACC,#31               ; [CPU_ALU] |3091| 
 $C$DW$304	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$304, DW_AT_low_pc(0x00)
@@ -4732,7 +4737,7 @@ $C$DW$304	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3091| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3091| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3092,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3092,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3092| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |3092| 
         MOVB      ACC,#31               ; [CPU_ALU] |3092| 
@@ -4743,7 +4748,7 @@ $C$DW$305	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3092| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3092| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3093,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3093,column 5,is_stmt,isa 0
         MOVL      XAR4,#531968          ; [CPU_ARAU] |3093| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |3093| 
 $C$DW$306	.dwtag  DW_TAG_TI_branch
@@ -4753,7 +4758,7 @@ $C$DW$306	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3093| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3093| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3094,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3094,column 5,is_stmt,isa 0
         MOVB      XAR4,#1               ; [CPU_ALU] |3094| 
         MOVB      ACC,#31               ; [CPU_ALU] |3094| 
 $C$DW$307	.dwtag  DW_TAG_TI_branch
@@ -4763,10 +4768,10 @@ $C$DW$307	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |3094| 
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3094| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3099,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3099,column 9,is_stmt,isa 0
         MOVB      XAR1,#48              ; [CPU_ALU] |3099| 
 ||$C$L49||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3101,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3101,column 9,is_stmt,isa 0
         MOVU      ACC,AR1               ; [CPU_ALU] |3101| 
         MOVB      XAR4,#0               ; [CPU_ALU] |3101| 
 $C$DW$308	.dwtag  DW_TAG_TI_branch
@@ -4776,7 +4781,7 @@ $C$DW$308	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |3101| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |3101| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3102,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3102,column 9,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |3102| 
         MOVU      ACC,AR1               ; [CPU_ALU] |3102| 
 $C$DW$309	.dwtag  DW_TAG_TI_branch
@@ -4786,7 +4791,7 @@ $C$DW$309	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |3102| 
         ; call occurs [#||GPIO_setDirectionMode||] ; [] |3102| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3103,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3103,column 9,is_stmt,isa 0
         MOVB      XAR6,#0               ; [CPU_ALU] |3103| 
         MOVU      ACC,AR1               ; [CPU_ALU] |3103| 
         MOVL      *-SP[2],XAR6          ; [CPU_ALU] |3103| 
@@ -4797,7 +4802,7 @@ $C$DW$310	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |3103| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |3103| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3104,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3104,column 9,is_stmt,isa 0
         MOVB      XAR4,#3               ; [CPU_ALU] |3104| 
         MOVU      ACC,AR1               ; [CPU_ALU] |3104| 
 $C$DW$311	.dwtag  DW_TAG_TI_branch
@@ -4807,13 +4812,13 @@ $C$DW$311	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |3104| 
         ; call occurs [#||GPIO_setQualificationMode||] ; [] |3104| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3099,column 19,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3099,column 19,is_stmt,isa 0
         ADDB      XAR1,#1               ; [CPU_ALU] |3099| 
         MOV       AL,AR1                ; [CPU_ALU] |3099| 
         CMPB      AL,#53                ; [CPU_ALU] |3099| 
         B         ||$C$L49||,LOS        ; [CPU_ALU] |3099| 
         ; branchcc occurs ; [] |3099| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3108,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3108,column 5,is_stmt,isa 0
         MOV       AL,#7                 ; [CPU_ALU] |3108| 
         MOV       AH,#72                ; [CPU_ALU] |3108| 
 $C$DW$312	.dwtag  DW_TAG_TI_branch
@@ -4823,7 +4828,7 @@ $C$DW$312	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3108| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3108| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3109,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3109,column 5,is_stmt,isa 0
         MOV       AL,#519               ; [CPU_ALU] |3109| 
         MOV       AH,#72                ; [CPU_ALU] |3109| 
 $C$DW$313	.dwtag  DW_TAG_TI_branch
@@ -4833,7 +4838,7 @@ $C$DW$313	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3109| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3112,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3112,column 5,is_stmt,isa 0
         MOV       AL,#1031              ; [CPU_ALU] |3112| 
         MOV       AH,#72                ; [CPU_ALU] |3112| 
 $C$DW$314	.dwtag  DW_TAG_TI_branch
@@ -4843,7 +4848,7 @@ $C$DW$314	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3112| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3112| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3113,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3113,column 5,is_stmt,isa 0
         MOV       AL,#1543              ; [CPU_ALU] |3113| 
         MOV       AH,#72                ; [CPU_ALU] |3113| 
 $C$DW$315	.dwtag  DW_TAG_TI_branch
@@ -4853,7 +4858,7 @@ $C$DW$315	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3113| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3113| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3116,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3116,column 5,is_stmt,isa 0
         MOV       AL,#2055              ; [CPU_ALU] |3116| 
         MOV       AH,#72                ; [CPU_ALU] |3116| 
 $C$DW$316	.dwtag  DW_TAG_TI_branch
@@ -4863,7 +4868,7 @@ $C$DW$316	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |3116| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |3116| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3117,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3117,column 5,is_stmt,isa 0
         MOV       AL,#2567              ; [CPU_ALU] |3117| 
         MOV       AH,#72                ; [CPU_ALU] |3117| 
 $C$DW$317	.dwtag  DW_TAG_TI_branch
@@ -4884,7 +4889,7 @@ $C$DW$318	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$248, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$248, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$248, DW_AT_TI_end_line(0xc30)
 	.dwattr $C$DW$248, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4900,11 +4905,11 @@ $C$DW$319	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$319, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$319, DW_AT_linkage_name("configurePWM_1chUpCnt")
 	.dwattr $C$DW$319, DW_AT_external
-	.dwattr $C$DW$319, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$319, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$319, DW_AT_decl_line(0xd7d)
 	.dwattr $C$DW$319, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$319, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3454,column 1,is_stmt,address ||configurePWM_1chUpCnt||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3454,column 1,is_stmt,address ||configurePWM_1chUpCnt||,isa 0
 
 	.dwfde $C$DW$CIE, ||configurePWM_1chUpCnt||
 $C$DW$320	.dwtag  DW_TAG_formal_parameter
@@ -5044,7 +5049,7 @@ $C$DW$323	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$319, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$319, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$319, DW_AT_TI_end_line(0xda3)
 	.dwattr $C$DW$319, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5060,11 +5065,11 @@ $C$DW$324	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$324, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$324, DW_AT_linkage_name("configurePWM")
 	.dwattr $C$DW$324, DW_AT_external
-	.dwattr $C$DW$324, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$324, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$324, DW_AT_decl_line(0xce3)
 	.dwattr $C$DW$324, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$324, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3300,column 1,is_stmt,address ||configurePWM||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3300,column 1,is_stmt,address ||configurePWM||,isa 0
 
 	.dwfde $C$DW$CIE, ||configurePWM||
 
@@ -5102,7 +5107,7 @@ $C$DW$325	.dwtag  DW_TAG_variable
  EDIS
         MOVB      XAR6,#2               ; [CPU_ALU] 
         MOVL      XAR5,#||pwmHandle||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3308,column 19,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3308,column 19,is_stmt,isa 0
         RPTB      ||$C$L51||,AR6        ; [CPU_ALU] |3308| 
         ; repeat block starts ; [] 
 ||$C$L50||:    
@@ -5340,14 +5345,14 @@ $C$DW$325	.dwtag  DW_TAG_variable
         AND       AL,#65087             ; [CPU_ALU] |2756| 
         MOV32     *(0:0x7940),ACC       ; [CPU_FPU] |2756| 
  EDIS
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3421,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3421,column 5,is_stmt,isa 0
         MOVL      XAR4,#10000           ; [CPU_ALU] |3421| 
         SPM       #0                    ; [CPU_ALU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 1706,column 9,is_stmt,isa 0
         MOV       AL,*(0:0x4900)        ; [CPU_ALU] |1706| 
         AND       AL,#0xffcf            ; [CPU_ALU] |1706| 
         MOV       *(0:0x4900),AL        ; [CPU_ALU] |1706| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3421,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3421,column 5,is_stmt,isa 0
         MOV       ACC,#18944            ; [CPU_ALU] |3421| 
 $C$DW$326	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$326, DW_AT_low_pc(0x00)
@@ -5400,7 +5405,7 @@ $C$DW$327	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$324, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$324, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$324, DW_AT_TI_end_line(0xd78)
 	.dwattr $C$DW$324, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5416,11 +5421,11 @@ $C$DW$328	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$328, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$328, DW_AT_linkage_name("configureSDFM")
 	.dwattr $C$DW$328, DW_AT_external
-	.dwattr $C$DW$328, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$328, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$328, DW_AT_decl_line(0xdd4)
 	.dwattr $C$DW$328, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$328, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3541,column 1,is_stmt,address ||configureSDFM||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3541,column 1,is_stmt,address ||configureSDFM||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureSDFM||
 
@@ -5472,7 +5477,7 @@ $C$DW$330	.dwtag  DW_TAG_variable
         MOVL      *SP++,XAR3            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 11, 6
 	.dwcfi	cfa_offset, -8
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3547,column 19,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3547,column 19,is_stmt,isa 0
         RPTB      ||$C$L53||,AR6        ; [CPU_ALU] |3547| 
         ; repeat block starts ; [] 
 ||$C$L52||:    
@@ -5532,7 +5537,7 @@ $C$DW$330	.dwtag  DW_TAG_variable
         OR        AL,#0x3000            ; [CPU_ALU] |556| 
         MOV       *+XAR4[0],AL          ; [CPU_ALU] |556| 
  EDIS
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3547,column 19,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3547,column 19,is_stmt,isa 0
         ADDB      XAR2,#16              ; [CPU_ALU] |3547| 
         MOVL      ACC,P                 ; [CPU_FPU] |3547| 
         ADDB      XAR1,#16              ; [CPU_ALU] |3547| 
@@ -5587,7 +5592,7 @@ $C$DW$331	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$328, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$328, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$328, DW_AT_TI_end_line(0xe15)
 	.dwattr $C$DW$328, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5603,11 +5608,11 @@ $C$DW$332	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$332, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$332, DW_AT_linkage_name("configureADC")
 	.dwattr $C$DW$332, DW_AT_external
-	.dwattr $C$DW$332, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$332, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$332, DW_AT_decl_line(0xa4a)
 	.dwattr $C$DW$332, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$332, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2635,column 1,is_stmt,address ||configureADC||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2635,column 1,is_stmt,address ||configureADC||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureADC||
 
@@ -5634,7 +5639,7 @@ $C$DW$332	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -6
         MOVB      XAR2,#2               ; [CPU_ALU] 
 ||$C$L54||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2661,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2661,column 9,is_stmt,isa 0
         MOVL      ACC,*+XAR1[0]         ; [CPU_ALU] |2661| 
         MOVB      XAR4,#0               ; [CPU_ALU] |2661| 
         MOVB      XAR5,#0               ; [CPU_ALU] |2661| 
@@ -5680,12 +5685,12 @@ $C$DW$333	.dwtag  DW_TAG_TI_branch
         MOVL      XAR4,ACC              ; [CPU_ALU] |1099| 
         MOV       *+XAR4[0],AR6         ; [CPU_ALU] |1099| 
  EDIS
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2658,column 19,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2658,column 19,is_stmt,isa 0
         BANZ      ||$C$L54||,AR2--      ; [CPU_ALU] |2658| 
         ; branchcc occurs ; [] |2658| 
         CLRC      SXM                   ; [CPU_ALU] 
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2678,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2678,column 5,is_stmt,isa 0
         MOV       ACC,#59998            ; [CPU_ALU] |2678| 
 $C$DW$334	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$334, DW_AT_low_pc(0x00)
@@ -5749,7 +5754,7 @@ $C$DW$335	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$332, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$332, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$332, DW_AT_TI_end_line(0xad6)
 	.dwattr $C$DW$332, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5765,11 +5770,11 @@ $C$DW$336	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$336, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$336, DW_AT_linkage_name("initFCLVars")
 	.dwattr $C$DW$336, DW_AT_external
-	.dwattr $C$DW$336, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$336, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$336, DW_AT_decl_line(0x1bf)
 	.dwattr $C$DW$336, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$336, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 448,column 1,is_stmt,address ||initFCLVars||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 448,column 1,is_stmt,address ||initFCLVars||,isa 0
 
 	.dwfde $C$DW$CIE, ||initFCLVars||
 
@@ -5788,94 +5793,94 @@ $C$DW$336	.dwtag  DW_TAG_subprogram
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 451,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 451,column 5,is_stmt,isa 0
         MOVIZ     R0H,#16250            ; [CPU_FPU] |451| 
         MOVW      DP,#||maxModIndex||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 466,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 466,column 5,is_stmt,isa 0
         MOVIZ     R4H,#16204            ; [CPU_FPU] |466| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 467,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 467,column 5,is_stmt,isa 0
         MOVIZ     R3H,#16632            ; [CPU_FPU] |467| 
         MOV32     *SP++,R5H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 63, 4
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 469,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 469,column 5,is_stmt,isa 0
         MOVIZ     R2H,#17604            ; [CPU_FPU] |469| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 470,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 470,column 5,is_stmt,isa 0
         MOVIZ     R1H,#17754            ; [CPU_FPU] |470| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 451,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 451,column 5,is_stmt,isa 0
         MOVXI     R0H,#57672            ; [CPU_FPU] |451| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 465,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 465,column 5,is_stmt,isa 0
         MOVIZ     R5H,#15316            ; [CPU_FPU] |465| 
         MOV32     *SP++,R6H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 67, 6
 	.dwcfi	cfa_offset, -8
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 451,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 451,column 5,is_stmt,isa 0
         MOV32     @||maxModIndex||,R0H  ; [CPU_FPU] |451| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 466,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 466,column 5,is_stmt,isa 0
         MOVXI     R4H,#52429            ; [CPU_FPU] |466| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 464,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 464,column 5,is_stmt,isa 0
         MOVIZ     R6H,#15316            ; [CPU_FPU] |464| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 467,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 467,column 5,is_stmt,isa 0
         MOVXI     R3H,#62915            ; [CPU_FPU] |467| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 452,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 452,column 5,is_stmt,isa 0
         MOVIZ     R0H,#19737            ; [CPU_FPU] |452| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 469,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 469,column 5,is_stmt,isa 0
         MOVXI     R2H,#22908            ; [CPU_FPU] |469| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 470,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 470,column 5,is_stmt,isa 0
         MOVXI     R1H,#10889            ; [CPU_FPU] |470| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 465,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 465,column 5,is_stmt,isa 0
         MOVXI     R5H,#65012            ; [CPU_FPU] |465| 
         MOV32     *SP++,R7H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 71, 8
 	.dwcfi	cfa_offset, -10
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 452,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 452,column 5,is_stmt,isa 0
         MOVXI     R0H,#8192             ; [CPU_FPU] |452| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 463,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 463,column 5,is_stmt,isa 0
         MOVIZ     R7H,#16406            ; [CPU_FPU] |463| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 464,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 464,column 5,is_stmt,isa 0
         MOVXI     R6H,#65012            ; [CPU_FPU] |464| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 452,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 452,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||),R0H ; [CPU_FPU] |452| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 457,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 457,column 5,is_stmt,isa 0
         MOVIZ     R0H,#14874            ; [CPU_FPU] |457| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 463,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 463,column 5,is_stmt,isa 0
         MOVXI     R7H,#26214            ; [CPU_FPU] |463| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 465,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 465,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+16,R5H ; [CPU_FPU] |465| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 466,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 466,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+28,R4H ; [CPU_FPU] |466| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 457,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 457,column 5,is_stmt,isa 0
         MOVXI     R0H,#29461            ; [CPU_FPU] |457| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 464,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 464,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+14,R6H ; [CPU_FPU] |464| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 467,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 467,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+20,R3H ; [CPU_FPU] |467| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 469,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 469,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+30,R2H ; [CPU_FPU] |469| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 470,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 470,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+22,R1H ; [CPU_FPU] |470| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 457,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 457,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+2,R0H ; [CPU_FPU] |457| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 463,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 463,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+12,R7H ; [CPU_FPU] |463| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 458,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 458,column 5,is_stmt,isa 0
         MOVIZ     R0H,#14388            ; [CPU_FPU] |458| 
         MOVXI     R0H,#42446            ; [CPU_FPU] |458| 
         MOV32     @$BLOCKED(||FCL_params||)+4,R0H ; [CPU_FPU] |458| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 459,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 459,column 5,is_stmt,isa 0
         MOVIZ     R0H,#19844            ; [CPU_FPU] |459| 
         MOVXI     R0H,#39986            ; [CPU_FPU] |459| 
         MOV32     @$BLOCKED(||FCL_params||)+6,R0H ; [CPU_FPU] |459| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 461,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 461,column 5,is_stmt,isa 0
         MOVIZ     R0H,#14545            ; [CPU_FPU] |461| 
         MOVXI     R0H,#46871            ; [CPU_FPU] |461| 
         MOV32     @$BLOCKED(||FCL_params||)+8,R0H ; [CPU_FPU] |461| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 462,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 462,column 5,is_stmt,isa 0
         MOVIZ     R0H,#16406            ; [CPU_FPU] |462| 
         MOVXI     R0H,#26214            ; [CPU_FPU] |462| 
         MOV32     @$BLOCKED(||FCL_params||)+10,R0H ; [CPU_FPU] |462| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 470,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 470,column 5,is_stmt,isa 0
         MOVIZ     R0H,#17754            ; [CPU_FPU] |470| 
         MOVXI     R0H,#10889            ; [CPU_FPU] |470| 
         MOV32     @$BLOCKED(||FCL_params||)+24,R0H ; [CPU_FPU] |470| 
@@ -5897,7 +5902,7 @@ $C$DW$337	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$336, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$336, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$336, DW_AT_TI_end_line(0x1da)
 	.dwattr $C$DW$336, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5913,11 +5918,11 @@ $C$DW$338	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$338, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$338, DW_AT_linkage_name("configureDAC")
 	.dwattr $C$DW$338, DW_AT_external
-	.dwattr $C$DW$338, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$338, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$338, DW_AT_decl_line(0xb79)
 	.dwattr $C$DW$338, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$338, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2938,column 1,is_stmt,address ||configureDAC||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2938,column 1,is_stmt,address ||configureDAC||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureDAC||
 
@@ -5936,7 +5941,7 @@ $C$DW$338	.dwtag  DW_TAG_subprogram
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVB      XAR6,#2               ; [CPU_ALU] 
         MOVL      XAR4,#||dacHandle||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2947,column 19,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2947,column 19,is_stmt,isa 0
         RPTB      ||$C$L56||,AR6        ; [CPU_ALU] |2947| 
         ; repeat block starts ; [] 
 ||$C$L55||:    
@@ -5983,7 +5988,7 @@ $C$DW$339	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$338, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$338, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$338, DW_AT_TI_end_line(0xb9a)
 	.dwattr $C$DW$338, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5999,11 +6004,11 @@ $C$DW$340	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$340, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$340, DW_AT_linkage_name("configurePositionSensing")
 	.dwattr $C$DW$340, DW_AT_external
-	.dwattr $C$DW$340, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$340, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$340, DW_AT_decl_line(0xca1)
 	.dwattr $C$DW$340, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$340, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3234,column 1,is_stmt,address ||configurePositionSensing||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3234,column 1,is_stmt,address ||configurePositionSensing||,isa 0
 
 	.dwfde $C$DW$CIE, ||configurePositionSensing||
 
@@ -6023,32 +6028,32 @@ $C$DW$340	.dwtag  DW_TAG_subprogram
 	.dwcfi	save_reg_to_mem, 26, 0
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 414,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x5114)        ; [CPU_ALU] |414| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3273,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3273,column 5,is_stmt,isa 0
         MOVIZ     R0H,#18432            ; [CPU_FPU] |3273| 
         MOVW      DP,#||tFormat||+12    ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 414,column 5,is_stmt,isa 0
         AND       AL,#0x31ff            ; [CPU_ALU] |414| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3273,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3273,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||tFormat||)+12,R0H ; [CPU_FPU] |3273| 
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 2
 	.dwcfi	cfa_offset, -4
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 414,column 5,is_stmt,isa 0
         MOV       *(0:0x5114),AL        ; [CPU_ALU] |414| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16585            ; [CPU_FPU] |3289| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3274,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3274,column 5,is_stmt,isa 0
         MOVIZ     R0H,#14080            ; [CPU_FPU] |3274| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1612,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x5115)        ; [CPU_ALU] |1612| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3237,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3237,column 5,is_stmt,isa 0
         MOVIZ     R3H,#14545            ; [CPU_FPU] |3237| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3274,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3274,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||tFormat||)+10,R0H ; [CPU_FPU] |3274| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1612,column 5,is_stmt,isa 0
         AND       AL,#0x3fff            ; [CPU_ALU] |1612| 
         MOVW      DP,#||spdObs||+8      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3279,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3279,column 5,is_stmt,isa 0
         MOVIZ     R0H,#16672            ; [CPU_FPU] |3279| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1612,column 5,is_stmt,isa 0
         OR        AL,#0x8000            ; [CPU_ALU] |1612| 
@@ -6057,46 +6062,46 @@ $C$DW$340	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -6
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 460,column 5,is_stmt,isa 0
         MOVL      XAR4,#9999            ; [CPU_ARAU] |460| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
         MOVIZ     R2H,#16256            ; [CPU_FPU] |3289| 
         MOVXI     R1H,#4059             ; [CPU_FPU] |3289| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3279,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3279,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||spdObs||)+8,R0H ; [CPU_FPU] |3279| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1612,column 5,is_stmt,isa 0
         MOV       *(0:0x5115),AL        ; [CPU_ALU] |1612| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3280,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3280,column 5,is_stmt,isa 0
         MOVIZ     R0H,#16880            ; [CPU_FPU] |3280| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1434,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x5115)        ; [CPU_ALU] |1434| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3280,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3280,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||spdObs||)+10,R0H ; [CPU_FPU] |3280| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1434,column 5,is_stmt,isa 0
         AND       AL,AL,#0xff9f         ; [CPU_ALU] |1434| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3239,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3239,column 5,is_stmt,isa 0
         MOVB      XAR6,#0               ; [CPU_ALU] |3239| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3281,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3281,column 5,is_stmt,isa 0
         MOVIZ     R0H,#16256            ; [CPU_FPU] |3281| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1434,column 5,is_stmt,isa 0
         ORB       AL,#0x14              ; [CPU_ALU] |1434| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3237,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3237,column 5,is_stmt,isa 0
         MOVXI     R3H,#46871            ; [CPU_FPU] |3237| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3281,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3281,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||spdObs||)+14,R0H ; [CPU_FPU] |3281| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3285,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3285,column 5,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |3285| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1434,column 5,is_stmt,isa 0
         MOV       *(0:0x5115),AL        ; [CPU_ALU] |1434| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3285,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3285,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||spdObs||)+20,R0H ; [CPU_FPU] |3285| 
         MOVW      DP,#||T||             ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 454,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x5115)        ; [CPU_ALU] |454| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
         MOV32     R0H,@||T||            ; [CPU_FPU] |3288| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 454,column 5,is_stmt,isa 0
         AND       AL,#0xdfff            ; [CPU_ALU] |454| 
         OR        AL,#0x1000            ; [CPU_ALU] |454| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
 
         MPYF32    R1H,R1H,R0H           ; [CPU_FPU] |3289| 
 ||      MOV32     *SP++,R6H             ; [CPU_FPU] 
@@ -6107,84 +6112,84 @@ $C$DW$340	.dwtag  DW_TAG_subprogram
         MPYF32    R1H,R1H,#16544        ; [CPU_FPU] |3289| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 454,column 5,is_stmt,isa 0
         MOV       *(0:0x5115),AL        ; [CPU_ALU] |454| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
         ADDF32    R1H,R1H,#16256        ; [CPU_FPU] |3289| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
         MPYF32    R0H,R0H,#17274        ; [CPU_FPU] |3288| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 460,column 5,is_stmt,isa 0
         MOV32     *(0:0x5104),XAR4      ; [CPU_FPU] |460| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
         DIVF32    R4H,R2H,R1H           ; [CPU_FPU] |3289| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16256            ; [CPU_FPU] |3288| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3276,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3276,column 5,is_stmt,isa 0
         MOVIZ     R2H,#16240            ; [CPU_FPU] |3276| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1049,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x5117)        ; [CPU_ALU] |1049| 
         AND       AL,#0xefff            ; [CPU_ALU] |1049| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
         DIVF32    R6H,R1H,R0H           ; [CPU_FPU] |3288| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3282,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3282,column 5,is_stmt,isa 0
         MOVIZ     R0H,#49024            ; [CPU_FPU] |3282| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3276,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3276,column 5,is_stmt,isa 0
         MOVXI     R2H,#8389             ; [CPU_FPU] |3276| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3283,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3283,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16243            ; [CPU_FPU] |3283| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3282,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3282,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||spdObs||)+16,R0H ; [CPU_FPU] |3282| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3290,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3290,column 5,is_stmt,isa 0
         SUBF32    R5H,#16256,R4H        ; [CPU_FPU] |3290| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1049,column 5,is_stmt,isa 0
         MOV       *(0:0x5117),AL        ; [CPU_ALU] |1049| 
         MOVW      DP,#||tFormat||+14    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3275,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3275,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||tFormat||)+14,#4,UNC ; [CPU_ALU] |3275| 
         MOVW      DP,#||qep1||+12       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3284,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3284,column 5,is_stmt,isa 0
         MOVIZ     R0H,#15820            ; [CPU_FPU] |3284| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3236,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3236,column 5,is_stmt,isa 0
         MOV       @$BLOCKED(||qep1||)+12,#2500 ; [CPU_ALU] |3236| 
         MOVW      DP,#||speed1||+8      ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1137,column 5,is_stmt,isa 0
         MOV32     *(0:0x5110),XAR4      ; [CPU_FPU] |1137| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3283,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3283,column 5,is_stmt,isa 0
         MOVXI     R1H,#13107            ; [CPU_FPU] |3283| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3284,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3284,column 5,is_stmt,isa 0
         MOVXI     R0H,#52429            ; [CPU_FPU] |3284| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3291,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3291,column 5,is_stmt,isa 0
         MOVL      XAR4,#3720            ; [CPU_ARAU] |3291| 
         MOVL      @$BLOCKED(||speed1||)+8,XAR4 ; [CPU_ALU] |3291| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1142,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x5115)        ; [CPU_ALU] |1142| 
         MOVW      DP,#||qep1||+14       ; [CPU_ARAU] 
         ORB       AL,#0x02              ; [CPU_ALU] |1142| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3237,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3237,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||qep1||)+10,R3H ; [CPU_FPU] |3237| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3239,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3239,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||qep1||)+14,XAR6 ; [CPU_ALU] |3239| 
         MOVW      DP,#||tFormat||+8     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3276,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3276,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||tFormat||)+8,R2H ; [CPU_FPU] |3276| 
         MOVW      DP,#||spdObs||+22     ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1142,column 5,is_stmt,isa 0
         MOV       *(0:0x5115),AL        ; [CPU_ALU] |1142| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3283,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3283,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||spdObs||)+22,R1H ; [CPU_FPU] |3283| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3284,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3284,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||spdObs||)+24,R0H ; [CPU_FPU] |3284| 
         MOVW      DP,#||speed1||+10     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3290,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3290,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||speed1||)+14,R5H ; [CPU_FPU] |3290| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3288,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||speed1||)+10,R6H ; [CPU_FPU] |3288| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3289,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||speed1||)+12,R4H ; [CPU_FPU] |3289| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 894,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x5116)        ; [CPU_ALU] |894| 
         MOVW      DP,#||qep1||+13       ; [CPU_ARAU] 
         AND       AL,AL,#0xfff0         ; [CPU_ALU] |894| 
         ORB       AL,#0x75              ; [CPU_ALU] |894| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3238,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3238,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||qep1||)+13,#4,UNC ; [CPU_FPU] |3238| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 894,column 5,is_stmt,isa 0
         MOV       *(0:0x5116),AL        ; [CPU_ALU] |894| 
@@ -6207,7 +6212,7 @@ $C$DW$341	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$340, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$340, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$340, DW_AT_TI_end_line(0xcde)
 	.dwattr $C$DW$340, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -6223,11 +6228,11 @@ $C$DW$342	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$342, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$342, DW_AT_linkage_name("configureCMPSS")
 	.dwattr $C$DW$342, DW_AT_external
-	.dwattr $C$DW$342, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$342, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$342, DW_AT_decl_line(0xb2f)
 	.dwattr $C$DW$342, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$342, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2864,column 1,is_stmt,address ||configureCMPSS||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2864,column 1,is_stmt,address ||configureCMPSS||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureCMPSS||
 $C$DW$343	.dwtag  DW_TAG_formal_parameter
@@ -6316,15 +6321,15 @@ $C$DW$348	.dwtag  DW_TAG_variable
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 631,column 5,is_stmt,isa 0
         MOVB      XAR0,#18              ; [CPU_ALU] |631| 
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2893,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2893,column 5,is_stmt,isa 0
         MOV       AL,@||thresh||        ; [CPU_ALU] |2893| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 601,column 5,is_stmt,isa 0
         MOV       *+XAR1[6],AR4         ; [CPU_ALU] |601| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2893,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2893,column 5,is_stmt,isa 0
         MOVZ      AR4,@||clkPrescale||  ; [CPU_ALU] |2893| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 631,column 5,is_stmt,isa 0
         MOV       *+XAR1[AR0],AR5       ; [CPU_ALU] |631| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2893,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2893,column 5,is_stmt,isa 0
         MOVZ      AR5,@||sampWin||      ; [CPU_ALU] |2893| 
         MOV       *-SP[1],AL            ; [CPU_ALU] |2893| 
         MOVL      ACC,XAR1              ; [CPU_ALU] |2893| 
@@ -6343,7 +6348,7 @@ $C$DW$349	.dwtag  DW_TAG_TI_branch
  EDIS
         MOVW      DP,#||thresh||        ; [CPU_ARAU] 
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2899,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2899,column 5,is_stmt,isa 0
         MOV       AL,@||thresh||        ; [CPU_ALU] |2899| 
         MOVZ      AR4,@||clkPrescale||  ; [CPU_ALU] |2899| 
         MOVZ      AR5,@||sampWin||      ; [CPU_ALU] |2899| 
@@ -6375,7 +6380,7 @@ $C$DW$350	.dwtag  DW_TAG_TI_branch
         OR        *+XAR1[0],#0x8000     ; [CPU_ALU] |265| 
  EDIS
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2909,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2909,column 5,is_stmt,isa 0
         MOV       ACC,#19998            ; [CPU_ALU] |2909| 
 $C$DW$351	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$351, DW_AT_low_pc(0x00)
@@ -6395,7 +6400,7 @@ $C$DW$352	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$342, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$342, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$342, DW_AT_TI_end_line(0xb60)
 	.dwattr $C$DW$342, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -6411,11 +6416,11 @@ $C$DW$353	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$353, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$353, DW_AT_linkage_name("configureHVDMCProtection")
 	.dwattr $C$DW$353, DW_AT_external
-	.dwattr $C$DW$353, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$353, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$353, DW_AT_decl_line(0xc36)
 	.dwattr $C$DW$353, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$353, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3127,column 1,is_stmt,address ||configureHVDMCProtection||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3127,column 1,is_stmt,address ||configureHVDMCProtection||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureHVDMCProtection||
 
@@ -6436,7 +6441,7 @@ $C$DW$353	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||curLimit||      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3137,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3137,column 5,is_stmt,isa 0
         MOVIZ     R0H,#15875            ; [CPU_FPU] |3137| 
         MOV32     R1H,@||curLimit||     ; [CPU_FPU] |3137| 
         MPYF32    R1H,R1H,#17664        ; [CPU_FPU] |3137| 
@@ -6444,25 +6449,25 @@ $C$DW$353	.dwtag  DW_TAG_subprogram
         MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |3137| 
         NOP       ; [CPU_ALU] 
         ADDF32    R1H,R0H,#17664        ; [CPU_FPU] |3137| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3138,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3138,column 5,is_stmt,isa 0
         SUBF32    R0H,#17664,R0H        ; [CPU_FPU] |3138| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3137,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3137,column 5,is_stmt,isa 0
         F32TOUI16 R1H,R1H               ; [CPU_FPU] |3137| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3138,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3138,column 5,is_stmt,isa 0
         F32TOUI16 R0H,R0H               ; [CPU_FPU] |3138| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3137,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3137,column 5,is_stmt,isa 0
         MOV32     XAR4,R1H              ; [CPU_FPU] |3137| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3138,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3138,column 5,is_stmt,isa 0
         MOV32     XAR5,R0H              ; [CPU_FPU] |3138| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3140,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3140,column 5,is_stmt,isa 0
         MOVL      XAR6,#23680           ; [CPU_ARAU] |3140| 
         MOVL      ACC,XAR6              ; [CPU_ALU] |3140| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3137,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3137,column 5,is_stmt,isa 0
         MOV       @||LEM_curHi||,AR4    ; [CPU_ALU] |3137| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3138,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3138,column 5,is_stmt,isa 0
         MOV       @||LEM_curLo||,AR5    ; [CPU_ALU] |3138| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3140,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3140,column 5,is_stmt,isa 0
 $C$DW$354	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$354, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$354, DW_AT_name("configureCMPSS")
@@ -6471,7 +6476,7 @@ $C$DW$354	.dwtag  DW_TAG_TI_branch
         LCR       #||configureCMPSS||   ; [CPU_ALU] |3140| 
         ; call occurs [#||configureCMPSS||] ; [] |3140| 
         MOVW      DP,#||LEM_curHi||     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3141,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3141,column 5,is_stmt,isa 0
         MOV       ACC,#23744            ; [CPU_ALU] |3141| 
         MOVZ      AR4,@||LEM_curHi||    ; [CPU_ALU] |3141| 
         MOVZ      AR5,@||LEM_curLo||    ; [CPU_ALU] |3141| 
@@ -6483,17 +6488,17 @@ $C$DW$355	.dwtag  DW_TAG_TI_branch
         LCR       #||configureCMPSS||   ; [CPU_ALU] |3141| 
         ; call occurs [#||configureCMPSS||] ; [] |3141| 
  EALLOW
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3158,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3158,column 5,is_stmt,isa 0
         MOVB      XAR6,#0               ; [CPU_ALU] |3158| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3159,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3159,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |3159| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3158,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3158,column 5,is_stmt,isa 0
         MOV32     *(0:0x7a00),XAR6      ; [CPU_FPU] |3158| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3159,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3159,column 5,is_stmt,isa 0
         MOV32     *(0:0x7a02),ACC       ; [CPU_FPU] |3159| 
  EDIS
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3164,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3164,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |3164| 
         MOVB      AH,#1                 ; [CPU_ALU] |3164| 
 $C$DW$356	.dwtag  DW_TAG_TI_branch
@@ -6503,7 +6508,7 @@ $C$DW$356	.dwtag  DW_TAG_TI_branch
 
         LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |3164| 
         ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |3164| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3167,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3167,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |3167| 
         MOV       AH,#2049              ; [CPU_ALU] |3167| 
 $C$DW$357	.dwtag  DW_TAG_TI_branch
@@ -6513,7 +6518,7 @@ $C$DW$357	.dwtag  DW_TAG_TI_branch
 
         LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |3167| 
         ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |3167| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3170,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3170,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |3170| 
         MOV       AH,#1025              ; [CPU_ALU] |3170| 
 $C$DW$358	.dwtag  DW_TAG_TI_branch
@@ -6523,7 +6528,7 @@ $C$DW$358	.dwtag  DW_TAG_TI_branch
 
         LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |3170| 
         ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |3170| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3173,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3173,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |3173| 
         MOV       AH,#5121              ; [CPU_ALU] |3173| 
 $C$DW$359	.dwtag  DW_TAG_TI_branch
@@ -6533,7 +6538,7 @@ $C$DW$359	.dwtag  DW_TAG_TI_branch
 
         LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |3173| 
         ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |3173| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3176,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3176,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |3176| 
         MOV       AH,#1537              ; [CPU_ALU] |3176| 
 $C$DW$360	.dwtag  DW_TAG_TI_branch
@@ -6557,7 +6562,7 @@ $C$DW$360	.dwtag  DW_TAG_TI_branch
  EDIS
         MOVB      XAR6,#2               ; [CPU_ALU] 
         MOVL      XAR5,#||pwmHandle||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3188,column 19,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3188,column 19,is_stmt,isa 0
         RPTB      ||$C$L58||,AR6        ; [CPU_ALU] |3188| 
         ; repeat block starts ; [] 
 ||$C$L57||:    
@@ -6678,7 +6683,7 @@ $C$DW$361	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$353, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$353, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$353, DW_AT_TI_end_line(0xc9a)
 	.dwattr $C$DW$353, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -6694,11 +6699,11 @@ $C$DW$362	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$362, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$362, DW_AT_linkage_name("configureCLA")
 	.dwattr $C$DW$362, DW_AT_external
-	.dwattr $C$DW$362, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$362, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$362, DW_AT_decl_line(0xadd)
 	.dwattr $C$DW$362, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$362, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2782,column 1,is_stmt,address ||configureCLA||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2782,column 1,is_stmt,address ||configureCLA||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureCLA||
 
@@ -6715,7 +6720,7 @@ $C$DW$362	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
  EALLOW
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2805,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2805,column 5,is_stmt,isa 0
         MOV       AL,#4                 ; [CPU_ALU] |2805| 
         MOV       AH,#768               ; [CPU_ALU] |2805| 
         SPM       #0                    ; [CPU_ALU] 
@@ -6727,7 +6732,7 @@ $C$DW$363	.dwtag  DW_TAG_TI_branch
         LCR       #||MemCfg_initSections|| ; [CPU_ALU] |2805| 
         ; call occurs [#||MemCfg_initSections||] ; [] |2805| 
 ||$C$L59||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2806,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2806,column 11,is_stmt,isa 0
         MOV       AL,#4                 ; [CPU_ALU] |2806| 
         MOV       AH,#768               ; [CPU_ALU] |2806| 
 $C$DW$364	.dwtag  DW_TAG_TI_branch
@@ -6740,7 +6745,7 @@ $C$DW$364	.dwtag  DW_TAG_TI_branch
         CMPB      AL,#1                 ; [CPU_ALU] |2806| 
         B         ||$C$L59||,NEQ        ; [CPU_ALU] |2806| 
         ; branchcc occurs ; [] |2806| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2810,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2810,column 5,is_stmt,isa 0
         MOV       AL,#2                 ; [CPU_ALU] |2810| 
         MOV       AH,#768               ; [CPU_ALU] |2810| 
 $C$DW$365	.dwtag  DW_TAG_TI_branch
@@ -6751,7 +6756,7 @@ $C$DW$365	.dwtag  DW_TAG_TI_branch
         LCR       #||MemCfg_initSections|| ; [CPU_ALU] |2810| 
         ; call occurs [#||MemCfg_initSections||] ; [] |2810| 
 ||$C$L60||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2811,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2811,column 11,is_stmt,isa 0
         MOV       AL,#2                 ; [CPU_ALU] |2811| 
         MOV       AH,#768               ; [CPU_ALU] |2811| 
 $C$DW$366	.dwtag  DW_TAG_TI_branch
@@ -6764,7 +6769,7 @@ $C$DW$366	.dwtag  DW_TAG_TI_branch
         CMPB      AL,#1                 ; [CPU_ALU] |2811| 
         B         ||$C$L60||,NEQ        ; [CPU_ALU] |2811| 
         ; branchcc occurs ; [] |2811| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2817,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2817,column 5,is_stmt,isa 0
         MOV       AL,#16                ; [CPU_ALU] |2817| 
         MOV       AH,#256               ; [CPU_ALU] |2817| 
         MOVB      XAR4,#1               ; [CPU_ALU] |2817| 
@@ -6781,7 +6786,7 @@ $C$DW$367	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[0],#16         ; [CPU_ALU] |338| 
         OR        *+XAR4[1],#256        ; [CPU_ALU] |338| 
  EDIS
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2820,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2820,column 5,is_stmt,isa 0
         MOV       AL,#32                ; [CPU_ALU] |2820| 
         MOV       AH,#256               ; [CPU_ALU] |2820| 
         SPM       #0                    ; [CPU_ALU] 
@@ -6799,7 +6804,7 @@ $C$DW$368	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[0],#32         ; [CPU_ALU] |338| 
         OR        *+XAR4[1],#256        ; [CPU_ALU] |338| 
  EDIS
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2826,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2826,column 5,is_stmt,isa 0
         MOV       AL,#4                 ; [CPU_ALU] |2826| 
         MOV       AH,#256               ; [CPU_ALU] |2826| 
         SPM       #0                    ; [CPU_ALU] 
@@ -6817,7 +6822,7 @@ $C$DW$369	.dwtag  DW_TAG_TI_branch
         AND       *+XAR4[0],#65531      ; [CPU_ALU] |345| 
         AND       *+XAR4[1],#65279      ; [CPU_ALU] |345| 
  EDIS
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2829,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2829,column 5,is_stmt,isa 0
         MOV       AL,#8                 ; [CPU_ALU] |2829| 
         MOV       AH,#256               ; [CPU_ALU] |2829| 
         SPM       #0                    ; [CPU_ALU] 
@@ -6896,7 +6901,7 @@ $C$DW$371	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$362, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$362, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$362, DW_AT_TI_end_line(0xb28)
 	.dwattr $C$DW$362, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -6912,11 +6917,11 @@ $C$DW$372	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$372, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$372, DW_AT_linkage_name("configurePIControllers")
 	.dwattr $C$DW$372, DW_AT_external
-	.dwattr $C$DW$372, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$372, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$372, DW_AT_decl_line(0xe5c)
 	.dwattr $C$DW$372, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$372, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3677,column 1,is_stmt,address ||configurePIControllers||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3677,column 1,is_stmt,address ||configurePIControllers||,isa 0
 
 	.dwfde $C$DW$CIE, ||configurePIControllers||
 
@@ -6938,162 +6943,162 @@ $C$DW$372	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||maxModIndex||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3717,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3717,column 5,is_stmt,isa 0
         MOV32     R0H,@||maxModIndex||  ; [CPU_FPU] |3717| 
         MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |3717| 
         MOVW      DP,#||pi_id||+18      ; [CPU_ARAU] 
         MOV32     @$BLOCKED(||pi_id||)+18,R1H ; [CPU_FPU] |3717| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3718,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3718,column 5,is_stmt,isa 0
         MPYF32    R1H,R0H,#48896        ; [CPU_FPU] |3718| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3728,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3728,column 5,is_stmt,isa 0
         MOVIZ     R2H,#16204            ; [CPU_FPU] |3728| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3718,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3718,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+20,R1H ; [CPU_FPU] |3718| 
         MOVW      DP,#||pi_pos||+6      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3679,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3679,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16256            ; [CPU_FPU] |3679| 
         MOV32     @$BLOCKED(||pi_pos||)+6,R1H ; [CPU_FPU] |3679| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3682,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3682,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16256            ; [CPU_FPU] |3682| 
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 2
 	.dwcfi	cfa_offset, -4
         MOV32     @$BLOCKED(||pi_pos||)+10,R1H ; [CPU_FPU] |3682| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3683,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3683,column 5,is_stmt,isa 0
         MOVIZ     R1H,#49024            ; [CPU_FPU] |3683| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3728,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3728,column 5,is_stmt,isa 0
         MOVXI     R2H,#52429            ; [CPU_FPU] |3728| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3683,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3683,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_pos||)+12,R1H ; [CPU_FPU] |3683| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3686,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3686,column 5,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |3686| 
         MOVW      DP,#||pid_pos||       ; [CPU_ARAU] 
         MOV32     @$BLOCKED(||pid_pos||),R1H ; [CPU_FPU] |3686| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3687,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3687,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_pos||)+2,R1H ; [CPU_FPU] |3687| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3688,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3688,column 5,is_stmt,isa 0
         MOVIZ     R1H,#48896            ; [CPU_FPU] |3688| 
         MOV32     @$BLOCKED(||pid_pos||)+18,R1H ; [CPU_FPU] |3688| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3689,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3689,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16128            ; [CPU_FPU] |3689| 
         MOV32     @$BLOCKED(||pid_pos||)+16,R1H ; [CPU_FPU] |3689| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3690,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3690,column 5,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |3690| 
         MOV32     @$BLOCKED(||pid_pos||)+20,R1H ; [CPU_FPU] |3690| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3692,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3692,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16256            ; [CPU_FPU] |3692| 
         MOV32     @$BLOCKED(||pid_pos||)+6,R1H ; [CPU_FPU] |3692| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3693,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3693,column 5,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |3693| 
         MOV32     @$BLOCKED(||pid_pos||)+24,R1H ; [CPU_FPU] |3693| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3694,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3694,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_pos||)+28,R1H ; [CPU_FPU] |3694| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3697,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3697,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_pos||)+30,R1H ; [CPU_FPU] |3697| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3698,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3698,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_pos||)+8,R1H ; [CPU_FPU] |3698| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3699,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3699,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_pos||)+10,R1H ; [CPU_FPU] |3699| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3700,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3700,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_pos||)+12,R1H ; [CPU_FPU] |3700| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3701,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3701,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_pos||)+22,R1H ; [CPU_FPU] |3701| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3702,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3702,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_pos||)+14,R1H ; [CPU_FPU] |3702| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3705,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3705,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16256            ; [CPU_FPU] |3705| 
         MOVW      DP,#||pid_spd||+12    ; [CPU_ARAU] 
         MOV32     @$BLOCKED(||pid_spd||)+12,R1H ; [CPU_FPU] |3705| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3707,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3707,column 5,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |3707| 
         MOV32     @$BLOCKED(||pid_spd||)+16,R1H ; [CPU_FPU] |3707| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3708,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3708,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16256            ; [CPU_FPU] |3708| 
         MOV32     @$BLOCKED(||pid_spd||)+10,R1H ; [CPU_FPU] |3708| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3713,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3713,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16256            ; [CPU_FPU] |3713| 
         MOVW      DP,#||pi_id||+10      ; [CPU_ARAU] 
         MOV32     @$BLOCKED(||pi_id||)+10,R1H ; [CPU_FPU] |3713| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3719,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3719,column 5,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |3719| 
         MOV32     @$BLOCKED(||pi_id||),R1H ; [CPU_FPU] |3719| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3720,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3720,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+4,R1H ; [CPU_FPU] |3720| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3721,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3721,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+6,R1H ; [CPU_FPU] |3721| 
         MOVW      DP,#||pi_iq||+10      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3724,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3724,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16256            ; [CPU_FPU] |3724| 
         MOV32     @$BLOCKED(||pi_iq||)+10,R1H ; [CPU_FPU] |3724| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3730,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3730,column 5,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |3730| 
         MOV32     @$BLOCKED(||pi_iq||),R1H ; [CPU_FPU] |3730| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3731,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3731,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+4,R1H ; [CPU_FPU] |3731| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3732,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3732,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+6,R1H ; [CPU_FPU] |3732| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3695,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3695,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16230            ; [CPU_FPU] |3695| 
         MOVW      DP,#||pid_pos||+26    ; [CPU_ARAU] 
         MOVXI     R1H,#26214            ; [CPU_FPU] |3695| 
         MOV32     @$BLOCKED(||pid_pos||)+26,R1H ; [CPU_FPU] |3695| 
         MOVW      DP,#||pid_spd||+14    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3706,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3706,column 5,is_stmt,isa 0
         MOVIZ     R1H,#14979            ; [CPU_FPU] |3706| 
         MOVXI     R1H,#4719             ; [CPU_FPU] |3706| 
         MOV32     @$BLOCKED(||pid_spd||)+14,R1H ; [CPU_FPU] |3706| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3709,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3709,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16243            ; [CPU_FPU] |3709| 
         MOVXI     R1H,#13107            ; [CPU_FPU] |3709| 
 
         MOV32     @$BLOCKED(||pid_spd||)+20,R1H ; [CPU_FPU] |3709| 
 ||      MPYF32    R4H,R2H,R0H           ; [CPU_FPU] |3728| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3729,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3729,column 5,is_stmt,isa 0
         MOVIZ     R1H,#48972            ; [CPU_FPU] |3729| 
         MOVW      DP,#||T||             ; [CPU_ARAU] 
         MOVXI     R1H,#52429            ; [CPU_FPU] |3729| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3714,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3714,column 5,is_stmt,isa 0
 
         MOV32     R0H,@||T||            ; [CPU_FPU] |3714| 
 ||      MPYF32    R3H,R1H,R0H           ; [CPU_FPU] |3729| 
 
         MOVW      DP,#||pi_id||+12      ; [CPU_ARAU] 
         MPYF32    R1H,R0H,#16840        ; [CPU_FPU] |3714| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3680,column 5,is_stmt,isa 0
         MOVIZ     R0H,#14979            ; [CPU_FPU] |3680| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3714,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3714,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+12,R1H ; [CPU_FPU] |3714| 
         MOVW      DP,#||pi_iq||+12      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3680,column 5,is_stmt,isa 0
         MOVXI     R0H,#4719             ; [CPU_FPU] |3680| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3725,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3725,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+12,R1H ; [CPU_FPU] |3725| 
         MOVW      DP,#||pi_pos||+8      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3680,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_pos||)+8,R0H ; [CPU_FPU] |3680| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3715,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3715,column 5,is_stmt,isa 0
         MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |3715| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3710,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3710,column 5,is_stmt,isa 0
         MOVIZ     R0H,#49011            ; [CPU_FPU] |3710| 
         MOVW      DP,#||pid_spd||+22    ; [CPU_ARAU] 
         MOVXI     R0H,#13107            ; [CPU_FPU] |3710| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3715,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3715,column 5,is_stmt,isa 0
         ADDF32    R2H,R1H,#16256        ; [CPU_FPU] |3715| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3710,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3710,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pid_spd||)+22,R0H ; [CPU_FPU] |3710| 
         MOVW      DP,#||pi_id||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3715,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3715,column 5,is_stmt,isa 0
         ADDF32    R1H,R1H,#49024        ; [CPU_FPU] |3715| 
         MOV32     @$BLOCKED(||pi_id||)+14,R2H ; [CPU_FPU] |3715| 
         MOV32     @$BLOCKED(||pi_id||)+16,R1H ; [CPU_FPU] |3715| 
         MOVW      DP,#||pi_iq||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3728,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3728,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+18,R4H ; [CPU_FPU] |3728| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3726,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3726,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+14,R2H ; [CPU_FPU] |3726| 
         MOV32     @$BLOCKED(||pi_iq||)+16,R1H ; [CPU_FPU] |3726| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3729,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3729,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+20,R3H ; [CPU_FPU] |3729| 
         MOV32     R4H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -2
@@ -7104,7 +7109,7 @@ $C$DW$373	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$372, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$372, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$372, DW_AT_TI_end_line(0xe95)
 	.dwattr $C$DW$372, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7120,11 +7125,11 @@ $C$DW$374	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$374, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$374, DW_AT_linkage_name("C3")
 	.dwattr $C$DW$374, DW_AT_external
-	.dwattr $C$DW$374, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$374, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$374, DW_AT_decl_line(0x5a5)
 	.dwattr $C$DW$374, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$374, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1447,column 1,is_stmt,address ||C3||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1447,column 1,is_stmt,address ||C3||,isa 0
 
 	.dwfde $C$DW$CIE, ||C3||
 
@@ -7140,7 +7145,7 @@ $C$DW$374	.dwtag  DW_TAG_subprogram
 ||C3||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1451,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1451,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C1||          ; [CPU_ARAU] |1451| 
         MOVW      DP,#||C_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||C_Task_Ptr||,XAR4  ; [CPU_ALU] |1451| 
@@ -7150,7 +7155,7 @@ $C$DW$375	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$374, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$374, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$374, DW_AT_TI_end_line(0x5ad)
 	.dwattr $C$DW$374, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7166,11 +7171,11 @@ $C$DW$376	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$376, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$376, DW_AT_linkage_name("C2")
 	.dwattr $C$DW$376, DW_AT_external
-	.dwattr $C$DW$376, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$376, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$376, DW_AT_decl_line(0x59a)
 	.dwattr $C$DW$376, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$376, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1436,column 1,is_stmt,address ||C2||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1436,column 1,is_stmt,address ||C2||,isa 0
 
 	.dwfde $C$DW$CIE, ||C2||
 
@@ -7186,7 +7191,7 @@ $C$DW$376	.dwtag  DW_TAG_subprogram
 ||C2||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1440,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1440,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C3||          ; [CPU_ARAU] |1440| 
         MOVW      DP,#||C_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||C_Task_Ptr||,XAR4  ; [CPU_ALU] |1440| 
@@ -7196,7 +7201,7 @@ $C$DW$377	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$376, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$376, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$376, DW_AT_TI_end_line(0x5a2)
 	.dwattr $C$DW$376, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7212,11 +7217,11 @@ $C$DW$378	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$378, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$378, DW_AT_linkage_name("B3")
 	.dwattr $C$DW$378, DW_AT_external
-	.dwattr $C$DW$378, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$378, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$378, DW_AT_decl_line(0x574)
 	.dwattr $C$DW$378, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$378, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1398,column 1,is_stmt,address ||B3||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1398,column 1,is_stmt,address ||B3||,isa 0
 
 	.dwfde $C$DW$CIE, ||B3||
 
@@ -7232,7 +7237,7 @@ $C$DW$378	.dwtag  DW_TAG_subprogram
 ||B3||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1402,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1402,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B1||          ; [CPU_ARAU] |1402| 
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||B_Task_Ptr||,XAR4  ; [CPU_ALU] |1402| 
@@ -7242,7 +7247,7 @@ $C$DW$379	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$378, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$378, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$378, DW_AT_TI_end_line(0x57c)
 	.dwattr $C$DW$378, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7258,11 +7263,11 @@ $C$DW$380	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$380, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$380, DW_AT_linkage_name("B2")
 	.dwattr $C$DW$380, DW_AT_external
-	.dwattr $C$DW$380, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$380, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$380, DW_AT_decl_line(0x569)
 	.dwattr $C$DW$380, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$380, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1387,column 1,is_stmt,address ||B2||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1387,column 1,is_stmt,address ||B2||,isa 0
 
 	.dwfde $C$DW$CIE, ||B2||
 
@@ -7278,7 +7283,7 @@ $C$DW$380	.dwtag  DW_TAG_subprogram
 ||B2||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1391,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1391,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B3||          ; [CPU_ARAU] |1391| 
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||B_Task_Ptr||,XAR4  ; [CPU_ALU] |1391| 
@@ -7288,7 +7293,7 @@ $C$DW$381	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$380, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$380, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$380, DW_AT_TI_end_line(0x571)
 	.dwattr $C$DW$380, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7304,11 +7309,11 @@ $C$DW$382	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$382, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$382, DW_AT_linkage_name("A3")
 	.dwattr $C$DW$382, DW_AT_external
-	.dwattr $C$DW$382, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$382, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$382, DW_AT_decl_line(0x546)
 	.dwattr $C$DW$382, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$382, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1352,column 1,is_stmt,address ||A3||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1352,column 1,is_stmt,address ||A3||,isa 0
 
 	.dwfde $C$DW$CIE, ||A3||
 
@@ -7324,7 +7329,7 @@ $C$DW$382	.dwtag  DW_TAG_subprogram
 ||A3||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1356,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1356,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A1||          ; [CPU_ARAU] |1356| 
         MOVW      DP,#||A_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||A_Task_Ptr||,XAR4  ; [CPU_ALU] |1356| 
@@ -7334,7 +7339,7 @@ $C$DW$383	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$382, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$382, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$382, DW_AT_TI_end_line(0x54e)
 	.dwattr $C$DW$382, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7350,11 +7355,11 @@ $C$DW$384	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$384, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$384, DW_AT_linkage_name("A2")
 	.dwattr $C$DW$384, DW_AT_external
-	.dwattr $C$DW$384, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$384, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$384, DW_AT_decl_line(0x53b)
 	.dwattr $C$DW$384, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$384, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1341,column 1,is_stmt,address ||A2||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1341,column 1,is_stmt,address ||A2||,isa 0
 
 	.dwfde $C$DW$CIE, ||A2||
 
@@ -7370,7 +7375,7 @@ $C$DW$384	.dwtag  DW_TAG_subprogram
 ||A2||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1345,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1345,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A3||          ; [CPU_ARAU] |1345| 
         MOVW      DP,#||A_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||A_Task_Ptr||,XAR4  ; [CPU_ALU] |1345| 
@@ -7380,7 +7385,7 @@ $C$DW$385	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$384, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$384, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$384, DW_AT_TI_end_line(0x543)
 	.dwattr $C$DW$384, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7396,11 +7401,11 @@ $C$DW$386	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$386, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$386, DW_AT_linkage_name("C1")
 	.dwattr $C$DW$386, DW_AT_external
-	.dwattr $C$DW$386, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$386, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$386, DW_AT_decl_line(0x585)
 	.dwattr $C$DW$386, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$386, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1415,column 1,is_stmt,address ||C1||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1415,column 1,is_stmt,address ||C1||,isa 0
 
 	.dwfde $C$DW$CIE, ||C1||
 
@@ -7417,16 +7422,16 @@ $C$DW$386	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||ledCnt1||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1417,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1417,column 5,is_stmt,isa 0
         MOV       AL,@||ledCnt1||       ; [CPU_ALU] |1417| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1419,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1419,column 9,is_stmt,isa 0
         MOVB      @||ledCnt1||,#200,EQ  ; [CPU_ALU] |1419| 
         B         ||$C$L61||,EQ         ; [CPU_ALU] 
         ; branchcc occurs ; [] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1423,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1423,column 9,is_stmt,isa 0
         DEC       @||ledCnt1||          ; [CPU_ALU] |1423| 
 ||$C$L61||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1428,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1428,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C2||          ; [CPU_ARAU] |1428| 
         MOVW      DP,#||C_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||C_Task_Ptr||,XAR4  ; [CPU_ALU] |1428| 
@@ -7436,7 +7441,7 @@ $C$DW$387	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$386, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$386, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$386, DW_AT_TI_end_line(0x597)
 	.dwattr $C$DW$386, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7452,11 +7457,11 @@ $C$DW$388	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$388, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$388, DW_AT_linkage_name("B1")
 	.dwattr $C$DW$388, DW_AT_external
-	.dwattr $C$DW$388, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$388, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$388, DW_AT_decl_line(0x557)
 	.dwattr $C$DW$388, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$388, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1369,column 1,is_stmt,address ||B1||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1369,column 1,is_stmt,address ||B1||,isa 0
 
 	.dwfde $C$DW$CIE, ||B1||
 
@@ -7472,7 +7477,7 @@ $C$DW$388	.dwtag  DW_TAG_subprogram
 ||B1||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1380,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1380,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B2||          ; [CPU_ARAU] |1380| 
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||B_Task_Ptr||,XAR4  ; [CPU_ALU] |1380| 
@@ -7482,7 +7487,7 @@ $C$DW$389	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$388, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$388, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$388, DW_AT_TI_end_line(0x566)
 	.dwattr $C$DW$388, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7498,11 +7503,11 @@ $C$DW$390	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$390, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$390, DW_AT_linkage_name("configureCMPSSFilter")
 	.dwattr $C$DW$390, DW_AT_external
-	.dwattr $C$DW$390, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$390, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$390, DW_AT_decl_line(0xb65)
 	.dwattr $C$DW$390, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$390, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2918,column 1,is_stmt,address ||configureCMPSSFilter||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2918,column 1,is_stmt,address ||configureCMPSSFilter||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureCMPSSFilter||
 $C$DW$391	.dwtag  DW_TAG_formal_parameter
@@ -7560,15 +7565,15 @@ $C$DW$396	.dwtag  DW_TAG_variable
         MOVW      DP,#||thresh||        ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 631,column 5,is_stmt,isa 0
         MOVB      XAR0,#18              ; [CPU_ALU] |631| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2924,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2924,column 5,is_stmt,isa 0
         MOV       AL,@||thresh||        ; [CPU_ALU] |2924| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 601,column 5,is_stmt,isa 0
         MOV       *+XAR1[6],AR4         ; [CPU_ALU] |601| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2924,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2924,column 5,is_stmt,isa 0
         MOVZ      AR4,@||clkPrescale||  ; [CPU_ALU] |2924| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 631,column 5,is_stmt,isa 0
         MOV       *+XAR1[AR0],AR5       ; [CPU_ALU] |631| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2924,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2924,column 5,is_stmt,isa 0
         MOVZ      AR5,@||sampWin||      ; [CPU_ALU] |2924| 
         MOV       *-SP[1],AL            ; [CPU_ALU] |2924| 
         MOVL      ACC,XAR1              ; [CPU_ALU] |2924| 
@@ -7580,7 +7585,7 @@ $C$DW$397	.dwtag  DW_TAG_TI_branch
         LCR       #||CMPSS_configFilterHigh|| ; [CPU_ALU] |2924| 
         ; call occurs [#||CMPSS_configFilterHigh||] ; [] |2924| 
         MOVW      DP,#||thresh||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 2927,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 2927,column 5,is_stmt,isa 0
         MOV       AL,@||thresh||        ; [CPU_ALU] |2927| 
         MOVZ      AR4,@||clkPrescale||  ; [CPU_ALU] |2927| 
         MOVZ      AR5,@||sampWin||      ; [CPU_ALU] |2927| 
@@ -7604,7 +7609,7 @@ $C$DW$399	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$390, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$390, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$390, DW_AT_TI_end_line(0xb72)
 	.dwattr $C$DW$390, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7620,11 +7625,11 @@ $C$DW$400	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$400, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$400, DW_AT_linkage_name("A1")
 	.dwattr $C$DW$400, DW_AT_external
-	.dwattr $C$DW$400, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$400, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$400, DW_AT_decl_line(0x4f3)
 	.dwattr $C$DW$400, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$400, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1269,column 1,is_stmt,address ||A1||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1269,column 1,is_stmt,address ||A1||,isa 0
 
 	.dwfde $C$DW$CIE, ||A1||
 
@@ -7647,7 +7652,7 @@ $C$DW$400	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||curLimit||      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1273,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1273,column 5,is_stmt,isa 0
         MOVIZ     R0H,#15875            ; [CPU_FPU] |1273| 
         MOV32     R1H,@||curLimit||     ; [CPU_FPU] |1273| 
         MPYF32    R1H,R1H,#17664        ; [CPU_FPU] |1273| 
@@ -7655,28 +7660,28 @@ $C$DW$400	.dwtag  DW_TAG_subprogram
         MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |1273| 
         NOP       ; [CPU_ALU] 
         ADDF32    R1H,R0H,#17664        ; [CPU_FPU] |1273| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1274,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1274,column 5,is_stmt,isa 0
         SUBF32    R0H,#17664,R0H        ; [CPU_FPU] |1274| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1273,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1273,column 5,is_stmt,isa 0
         F32TOUI16 R1H,R1H               ; [CPU_FPU] |1273| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1274,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1274,column 5,is_stmt,isa 0
         F32TOUI16 R0H,R0H               ; [CPU_FPU] |1274| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1273,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1273,column 5,is_stmt,isa 0
         MOV32     XAR4,R1H              ; [CPU_FPU] |1273| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1274,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1274,column 5,is_stmt,isa 0
         MOV32     XAR5,R0H              ; [CPU_FPU] |1274| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1278,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1278,column 5,is_stmt,isa 0
         MOV       ACC,#23680            ; [CPU_ALU] |1278| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1273,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1273,column 5,is_stmt,isa 0
         MOV       @||LEM_curHi||,AR4    ; [CPU_ALU] |1273| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1275,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1275,column 5,is_stmt,isa 0
         MOV       @||SHUNT_curHi||,AR4  ; [CPU_ALU] |1275| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1274,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1274,column 5,is_stmt,isa 0
         MOV       @||LEM_curLo||,AR5    ; [CPU_ALU] |1274| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1276,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1276,column 5,is_stmt,isa 0
         MOV       @||SHUNT_curLo||,AR5  ; [CPU_ALU] |1276| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1278,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1278,column 5,is_stmt,isa 0
 $C$DW$401	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$401, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$401, DW_AT_name("configureCMPSSFilter")
@@ -7685,7 +7690,7 @@ $C$DW$401	.dwtag  DW_TAG_TI_branch
         LCR       #||configureCMPSSFilter|| ; [CPU_ALU] |1278| 
         ; call occurs [#||configureCMPSSFilter||] ; [] |1278| 
         MOVW      DP,#||LEM_curHi||     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1279,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1279,column 5,is_stmt,isa 0
         MOV       ACC,#23744            ; [CPU_ALU] |1279| 
         MOVZ      AR4,@||LEM_curHi||    ; [CPU_ALU] |1279| 
         MOVZ      AR5,@||LEM_curLo||    ; [CPU_ALU] |1279| 
@@ -7699,21 +7704,21 @@ $C$DW$402	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4391,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x4093)        ; [CPU_ALU] |4391| 
         ANDB      AL,#0x7f              ; [CPU_ALU] |4391| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1287,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1287,column 5,is_stmt,isa 0
         TBIT      AL,#2                 ; [CPU_ALU] |1287| 
         B         ||$C$L62||,TC         ; [CPU_ALU] |1287| 
         ; branchcc occurs ; [] |1287| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4391,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x4193)        ; [CPU_ALU] |4391| 
         ANDB      AL,#0x7f              ; [CPU_ALU] |4391| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1287,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1287,column 5,is_stmt,isa 0
         TBIT      AL,#2                 ; [CPU_ALU] |1287| 
         B         ||$C$L62||,TC         ; [CPU_ALU] |1287| 
         ; branchcc occurs ; [] |1287| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4391,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x4293)        ; [CPU_ALU] |4391| 
         ANDB      AL,#0x7f              ; [CPU_ALU] |4391| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1287,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1287,column 5,is_stmt,isa 0
         TBIT      AL,#2                 ; [CPU_ALU] |1287| 
         B         ||$C$L63||,NTC        ; [CPU_ALU] |1287| 
         ; branchcc occurs ; [] |1287| 
@@ -7735,13 +7740,13 @@ $C$DW$402	.dwtag  DW_TAG_TI_branch
         MOV       *(0:0x429b),AL        ; [CPU_ALU] |4654| 
  EDIS
         MOVW      DP,#||tripFlagDMC||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1295,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1295,column 9,is_stmt,isa 0
         MOVB      @||tripFlagDMC||,#1,UNC ; [CPU_ALU] |1295| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1296,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1296,column 9,is_stmt,isa 0
         MOV       @||runMotor||,#0      ; [CPU_ALU] |1296| 
 ||$C$L63||:    
         MOVW      DP,#||clearTripFlagDMC|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1300,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1300,column 5,is_stmt,isa 0
         MOV       AL,@||clearTripFlagDMC|| ; [CPU_ALU] |1300| 
         B         ||$C$L64||,EQ         ; [CPU_ALU] |1300| 
         ; branchcc occurs ; [] |1300| 
@@ -7751,16 +7756,16 @@ $C$DW$402	.dwtag  DW_TAG_TI_branch
         MOVL      XAR4,#512             ; [CPU_ARAU] |473| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 469,column 9,is_stmt,isa 0
         MOV32     *(0:0x7f0c),XAR5      ; [CPU_FPU] |469| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1304,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1304,column 9,is_stmt,isa 0
         MOV       @||tripFlagDMC||,#0   ; [CPU_ALU] |1304| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1305,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1305,column 9,is_stmt,isa 0
         MOV       @||clearTripFlagDMC||,#0 ; [CPU_ALU] |1305| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1309,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1309,column 9,is_stmt,isa 0
         MOVB      ACC,#38               ; [CPU_ALU] |1309| 
         SPM       #0                    ; [CPU_ALU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV32     *(0:0x7f0a),XAR4      ; [CPU_FPU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1309,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1309,column 9,is_stmt,isa 0
 $C$DW$403	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$403, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$403, DW_AT_name("SysCtl_delay")
@@ -7827,7 +7832,7 @@ $C$DW$403	.dwtag  DW_TAG_TI_branch
         MOV       *(0:0x5d23),AL        ; [CPU_ALU] |809| 
  EDIS
 ||$C$L64||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1334,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1334,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A2||          ; [CPU_ARAU] |1334| 
         MOVW      DP,#||A_Task_Ptr||    ; [CPU_ARAU] 
         SPM       #0                    ; [CPU_ALU] 
@@ -7838,7 +7843,7 @@ $C$DW$404	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$400, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$400, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$400, DW_AT_TI_end_line(0x538)
 	.dwattr $C$DW$400, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7854,11 +7859,11 @@ $C$DW$405	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$405, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$405, DW_AT_linkage_name("A0")
 	.dwattr $C$DW$405, DW_AT_external
-	.dwattr $C$DW$405, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$405, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$405, DW_AT_decl_line(0x4bb)
 	.dwattr $C$DW$405, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$405, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1212,column 1,is_stmt,address ||A0||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1212,column 1,is_stmt,address ||A0||,isa 0
 
 	.dwfde $C$DW$CIE, ||A0||
 
@@ -7882,12 +7887,12 @@ $C$DW$405	.dwtag  DW_TAG_subprogram
         MOVW      DP,#||A_Task_Ptr||    ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0c04)        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1219,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1219,column 9,is_stmt,isa 0
         MOVL      XAR7,@||A_Task_Ptr||  ; [CPU_ALU] |1219| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         OR        AL,#0x8000            ; [CPU_ALU] |169| 
         MOV       *(0:0x0c04),AL        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1219,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1219,column 9,is_stmt,isa 0
 $C$DW$406	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$406, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$406, DW_AT_TI_call
@@ -7896,13 +7901,13 @@ $C$DW$406	.dwtag  DW_TAG_TI_branch
         LCR       *XAR7                 ; [CPU_ALU] |1219| 
         ; call occurs [XAR7] ; [] |1219| 
         MOVW      DP,#||vTimer0||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1222,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1222,column 9,is_stmt,isa 0
         INC       @||vTimer0||          ; [CPU_ALU] |1222| 
         MOVW      DP,#||serialCommsTimer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1223,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1223,column 9,is_stmt,isa 0
         INC       @||serialCommsTimer|| ; [CPU_ALU] |1223| 
 ||$C$L65||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1226,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1226,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B0||          ; [CPU_ARAU] |1226| 
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
         MOVL      @||Alpha_State_Ptr||,XAR4 ; [CPU_ALU] |1226| 
@@ -7912,7 +7917,7 @@ $C$DW$407	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$405, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$405, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$405, DW_AT_TI_end_line(0x4cb)
 	.dwattr $C$DW$405, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7928,11 +7933,11 @@ $C$DW$408	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$408, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$408, DW_AT_linkage_name("B0")
 	.dwattr $C$DW$408, DW_AT_external
-	.dwattr $C$DW$408, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$408, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$408, DW_AT_decl_line(0x4cd)
 	.dwattr $C$DW$408, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$408, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1230,column 1,is_stmt,address ||B0||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1230,column 1,is_stmt,address ||B0||,isa 0
 
 	.dwfde $C$DW$CIE, ||B0||
 
@@ -7956,12 +7961,12 @@ $C$DW$408	.dwtag  DW_TAG_subprogram
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0c0c)        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1237,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1237,column 9,is_stmt,isa 0
         MOVL      XAR7,@||B_Task_Ptr||  ; [CPU_ALU] |1237| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         OR        AL,#0x8000            ; [CPU_ALU] |169| 
         MOV       *(0:0x0c0c),AL        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1237,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1237,column 9,is_stmt,isa 0
 $C$DW$409	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$409, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$409, DW_AT_TI_call
@@ -7970,10 +7975,10 @@ $C$DW$409	.dwtag  DW_TAG_TI_branch
         LCR       *XAR7                 ; [CPU_ALU] |1237| 
         ; call occurs [XAR7] ; [] |1237| 
         MOVW      DP,#||vTimer1||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1240,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1240,column 9,is_stmt,isa 0
         INC       @||vTimer1||          ; [CPU_ALU] |1240| 
 ||$C$L66||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1243,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1243,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C0||          ; [CPU_ARAU] |1243| 
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
         MOVL      @||Alpha_State_Ptr||,XAR4 ; [CPU_ALU] |1243| 
@@ -7983,7 +7988,7 @@ $C$DW$410	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$408, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$408, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$408, DW_AT_TI_end_line(0x4dc)
 	.dwattr $C$DW$408, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -7999,11 +8004,11 @@ $C$DW$411	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$411, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$411, DW_AT_linkage_name("C0")
 	.dwattr $C$DW$411, DW_AT_external
-	.dwattr $C$DW$411, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$411, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$411, DW_AT_decl_line(0x4de)
 	.dwattr $C$DW$411, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$411, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1247,column 1,is_stmt,address ||C0||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1247,column 1,is_stmt,address ||C0||,isa 0
 
 	.dwfde $C$DW$CIE, ||C0||
 
@@ -8027,12 +8032,12 @@ $C$DW$411	.dwtag  DW_TAG_subprogram
         MOVW      DP,#||C_Task_Ptr||    ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0c14)        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1254,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1254,column 9,is_stmt,isa 0
         MOVL      XAR7,@||C_Task_Ptr||  ; [CPU_ALU] |1254| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         OR        AL,#0x8000            ; [CPU_ALU] |169| 
         MOV       *(0:0x0c14),AL        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1254,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1254,column 9,is_stmt,isa 0
 $C$DW$412	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$412, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$412, DW_AT_TI_call
@@ -8041,10 +8046,10 @@ $C$DW$412	.dwtag  DW_TAG_TI_branch
         LCR       *XAR7                 ; [CPU_ALU] |1254| 
         ; call occurs [XAR7] ; [] |1254| 
         MOVW      DP,#||vTimer2||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1256,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1256,column 9,is_stmt,isa 0
         INC       @||vTimer2||          ; [CPU_ALU] |1256| 
 ||$C$L67||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1259,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1259,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A0||          ; [CPU_ARAU] |1259| 
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
         MOVL      @||Alpha_State_Ptr||,XAR4 ; [CPU_ALU] |1259| 
@@ -8054,7 +8059,7 @@ $C$DW$413	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$411, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$411, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$411, DW_AT_TI_end_line(0x4ec)
 	.dwattr $C$DW$411, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -8070,11 +8075,11 @@ $C$DW$414	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$414, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$414, DW_AT_linkage_name("main")
 	.dwattr $C$DW$414, DW_AT_external
-	.dwattr $C$DW$414, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$414, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$414, DW_AT_decl_line(0x263)
 	.dwattr $C$DW$414, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$414, DW_AT_TI_max_frame_size(-20)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 612,column 1,is_stmt,address ||main||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 612,column 1,is_stmt,address ||main||,isa 0
 
 	.dwfde $C$DW$CIE, ||main||
 
@@ -8129,7 +8134,7 @@ $C$DW$415	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -16
         ADDB      SP,#4                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -20
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 616,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 616,column 5,is_stmt,isa 0
 $C$DW$416	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$416, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$416, DW_AT_name("Device_init")
@@ -8137,7 +8142,7 @@ $C$DW$416	.dwtag  DW_TAG_TI_branch
 
         LCR       #||Device_init||      ; [CPU_ALU] |616| 
         ; call occurs [#||Device_init||] ; [] |616| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 621,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 621,column 5,is_stmt,isa 0
 $C$DW$417	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$417, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$417, DW_AT_name("Device_initGPIO")
@@ -8146,20 +8151,20 @@ $C$DW$417	.dwtag  DW_TAG_TI_branch
         LCR       #||Device_initGPIO||  ; [CPU_ALU] |621| 
         ; call occurs [#||Device_initGPIO||] ; [] |621| 
         MOVW      DP,#||enableFlag||    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 624,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 624,column 11,is_stmt,isa 0
         MOV       AL,@||enableFlag||    ; [CPU_ALU] |624| 
         B         ||$C$L69||,NEQ        ; [CPU_ALU] |624| 
         ; branchcc occurs ; [] |624| 
 ||$C$L68||:    
         MOV       AL,@||enableFlag||    ; [CPU_ALU] |624| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 626,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 626,column 9,is_stmt,isa 0
         INC       @||backTicker||       ; [CPU_ALU] |626| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 624,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 624,column 11,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |624| 
         B         ||$C$L68||,EQ         ; [CPU_ALU] |624| 
         ; branchcc occurs ; [] |624| 
 ||$C$L69||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 630,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 630,column 11,is_stmt,isa 0
 $C$DW$418	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$418, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$418, DW_AT_name("FCL_getSwVersion")
@@ -8174,9 +8179,9 @@ $C$DW$418	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |630| 
 ||$C$L70||:    
         MOVW      DP,#||backTicker||    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 632,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 632,column 9,is_stmt,isa 0
         INC       @||backTicker||       ; [CPU_ALU] |632| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 630,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 630,column 11,is_stmt,isa 0
 $C$DW$419	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$419, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$419, DW_AT_name("FCL_getSwVersion")
@@ -8190,7 +8195,7 @@ $C$DW$419	.dwtag  DW_TAG_TI_branch
         B         ||$C$L70||,NEQ        ; [CPU_ALU] |630| 
         ; branchcc occurs ; [] |630| 
 ||$C$L71||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 639,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 639,column 5,is_stmt,isa 0
 $C$DW$420	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$420, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$420, DW_AT_name("Interrupt_initModule")
@@ -8198,7 +8203,7 @@ $C$DW$420	.dwtag  DW_TAG_TI_branch
 
         LCR       #||Interrupt_initModule|| ; [CPU_ALU] |639| 
         ; call occurs [#||Interrupt_initModule||] ; [] |639| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 645,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 645,column 5,is_stmt,isa 0
 $C$DW$421	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$421, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$421, DW_AT_name("Interrupt_initVectorTable")
@@ -8206,7 +8211,7 @@ $C$DW$421	.dwtag  DW_TAG_TI_branch
 
         LCR       #||Interrupt_initVectorTable|| ; [CPU_ALU] |645| 
         ; call occurs [#||Interrupt_initVectorTable||] ; [] |645| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 675,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 675,column 5,is_stmt,isa 0
         MOVL      XAR4,#10000           ; [CPU_ARAU] |675| 
         MOV       ACC,#3072             ; [CPU_ALU] |675| 
         MOVL      *-SP[2],XAR4          ; [CPU_ALU] |675| 
@@ -8217,7 +8222,7 @@ $C$DW$422	.dwtag  DW_TAG_TI_branch
 
         LCR       #||setupCpuTimer||    ; [CPU_ALU] |675| 
         ; call occurs [#||setupCpuTimer||] ; [] |675| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 676,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 676,column 5,is_stmt,isa 0
         MOVL      XAR4,#20000           ; [CPU_ARAU] |676| 
         MOV       ACC,#3080             ; [CPU_ALU] |676| 
         MOVL      *-SP[2],XAR4          ; [CPU_ALU] |676| 
@@ -8228,7 +8233,7 @@ $C$DW$423	.dwtag  DW_TAG_TI_branch
 
         LCR       #||setupCpuTimer||    ; [CPU_ALU] |676| 
         ; call occurs [#||setupCpuTimer||] ; [] |676| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 677,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 677,column 5,is_stmt,isa 0
         MOVL      XAR4,#30000           ; [CPU_ARAU] |677| 
         MOV       ACC,#3088             ; [CPU_ALU] |677| 
         MOVL      *-SP[2],XAR4          ; [CPU_ALU] |677| 
@@ -8240,23 +8245,23 @@ $C$DW$424	.dwtag  DW_TAG_TI_branch
         LCR       #||setupCpuTimer||    ; [CPU_ALU] |677| 
         ; call occurs [#||setupCpuTimer||] ; [] |677| 
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 680,column 5,is_stmt,isa 0
         MOVL      XAR7,#||A0||          ; [CPU_ARAU] |680| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 681,column 5,is_stmt,isa 0
         MOVL      XAR6,#||A1||          ; [CPU_ARAU] |681| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 682,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 682,column 5,is_stmt,isa 0
         MOVL      XAR5,#||B1||          ; [CPU_ARAU] |682| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 683,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 683,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C1||          ; [CPU_ARAU] |683| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 680,column 5,is_stmt,isa 0
         MOVL      @||Alpha_State_Ptr||,XAR7 ; [CPU_ALU] |680| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 681,column 5,is_stmt,isa 0
         MOVL      @||A_Task_Ptr||,XAR6  ; [CPU_ALU] |681| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 682,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 682,column 5,is_stmt,isa 0
         MOVL      @||B_Task_Ptr||,XAR5  ; [CPU_ALU] |682| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 683,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 683,column 5,is_stmt,isa 0
         MOVL      @||C_Task_Ptr||,XAR4  ; [CPU_ALU] |683| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 690,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 690,column 5,is_stmt,isa 0
 $C$DW$425	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$425, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$425, DW_AT_name("configureGPIO")
@@ -8271,7 +8276,7 @@ $C$DW$425	.dwtag  DW_TAG_TI_branch
         MOV32     *(0:0x7942),ACC       ; [CPU_FPU] |2810| 
  EDIS
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 699,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 699,column 5,is_stmt,isa 0
         MOVB      AL,#12                ; [CPU_ALU] |699| 
         MOV       AH,#6657              ; [CPU_ALU] |699| 
 $C$DW$426	.dwtag  DW_TAG_TI_branch
@@ -8287,7 +8292,7 @@ $C$DW$426	.dwtag  DW_TAG_TI_branch
         OR        AL,#8192              ; [CPU_ALU] |656| 
         MOV32     *(0:0x7aac),ACC       ; [CPU_FPU] |656| 
  EDIS
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 703,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 703,column 5,is_stmt,isa 0
         MOVL      XAR4,#398851          ; [CPU_ARAU] |703| 
         SPM       #0                    ; [CPU_ALU] 
         MOVL      ACC,XAR4              ; [CPU_ALU] |703| 
@@ -8298,7 +8303,7 @@ $C$DW$427	.dwtag  DW_TAG_TI_branch
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |703| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |703| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 708,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 708,column 5,is_stmt,isa 0
 $C$DW$428	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$428, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$428, DW_AT_name("configurePWM")
@@ -8306,7 +8311,7 @@ $C$DW$428	.dwtag  DW_TAG_TI_branch
 
         LCR       #||configurePWM||     ; [CPU_ALU] |708| 
         ; call occurs [#||configurePWM||] ; [] |708| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 713,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 713,column 5,is_stmt,isa 0
 $C$DW$429	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$429, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$429, DW_AT_name("configureSDFM")
@@ -8314,7 +8319,7 @@ $C$DW$429	.dwtag  DW_TAG_TI_branch
 
         LCR       #||configureSDFM||    ; [CPU_ALU] |713| 
         ; call occurs [#||configureSDFM||] ; [] |713| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 718,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 718,column 5,is_stmt,isa 0
 $C$DW$430	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$430, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$430, DW_AT_name("configureADC")
@@ -8322,7 +8327,7 @@ $C$DW$430	.dwtag  DW_TAG_TI_branch
 
         LCR       #||configureADC||     ; [CPU_ALU] |718| 
         ; call occurs [#||configureADC||] ; [] |718| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 729,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 729,column 5,is_stmt,isa 0
         MOVL      XAR5,#2848            ; [CPU_ARAU] |729| 
         MOVL      XAR4,#29696           ; [CPU_ARAU] |729| 
         MOVL      *-SP[2],XAR5          ; [CPU_ALU] |729| 
@@ -8337,7 +8342,7 @@ $C$DW$431	.dwtag  DW_TAG_TI_branch
 
         LCR       #||FCL_initADC||      ; [CPU_ALU] |729| 
         ; call occurs [#||FCL_initADC||] ; [] |729| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 738,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 738,column 5,is_stmt,isa 0
         MOVL      XAR5,#16640           ; [CPU_ARAU] |738| 
         MOVL      XAR4,#16896           ; [CPU_ARAU] |738| 
         MOV       ACC,#16384            ; [CPU_ALU] |738| 
@@ -8350,7 +8355,7 @@ $C$DW$432	.dwtag  DW_TAG_TI_branch
 
         LCR       #||FCL_initPWM||      ; [CPU_ALU] |738| 
         ; call occurs [#||FCL_initPWM||] ; [] |738| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 743,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 743,column 5,is_stmt,isa 0
         MOV       ACC,#20736            ; [CPU_ALU] |743| 
 $C$DW$433	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$433, DW_AT_low_pc(0x00)
@@ -8359,7 +8364,7 @@ $C$DW$433	.dwtag  DW_TAG_TI_branch
 
         LCR       #||FCL_initQEP||      ; [CPU_ALU] |743| 
         ; call occurs [#||FCL_initQEP||] ; [] |743| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 746,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 746,column 5,is_stmt,isa 0
 $C$DW$434	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$434, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$434, DW_AT_name("initFCLVars")
@@ -8385,7 +8390,7 @@ $C$DW$434	.dwtag  DW_TAG_TI_branch
         MOV       AL,*(0:0x40a4)        ; [CPU_ALU] |5071| 
         OR        AL,#0x0800            ; [CPU_ALU] |5071| 
         MOV       *(0:0x40a4),AL        ; [CPU_ALU] |5071| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 775,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 775,column 5,is_stmt,isa 0
 $C$DW$435	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$435, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$435, DW_AT_name("configureDAC")
@@ -8393,7 +8398,7 @@ $C$DW$435	.dwtag  DW_TAG_TI_branch
 
         LCR       #||configureDAC||     ; [CPU_ALU] |775| 
         ; call occurs [#||configureDAC||] ; [] |775| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 783,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 783,column 5,is_stmt,isa 0
 $C$DW$436	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$436, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$436, DW_AT_name("configurePositionSensing")
@@ -8401,7 +8406,7 @@ $C$DW$436	.dwtag  DW_TAG_TI_branch
 
         LCR       #||configurePositionSensing|| ; [CPU_ALU] |783| 
         ; call occurs [#||configurePositionSensing||] ; [] |783| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 791,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 791,column 5,is_stmt,isa 0
 $C$DW$437	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$437, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$437, DW_AT_name("configureHVDMCProtection")
@@ -8416,7 +8421,7 @@ $C$DW$437	.dwtag  DW_TAG_TI_branch
         MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |2882| 
  EDIS
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 803,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 803,column 5,is_stmt,isa 0
 $C$DW$438	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$438, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$438, DW_AT_name("configureCLA")
@@ -8424,7 +8429,7 @@ $C$DW$438	.dwtag  DW_TAG_TI_branch
 
         LCR       #||configureCLA||     ; [CPU_ALU] |803| 
         ; call occurs [#||configureCLA||] ; [] |803| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 830,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 830,column 5,is_stmt,isa 0
 $C$DW$439	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$439, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$439, DW_AT_name("configurePIControllers")
@@ -8432,7 +8437,7 @@ $C$DW$439	.dwtag  DW_TAG_TI_branch
 
         LCR       #||configurePIControllers|| ; [CPU_ALU] |830| 
         ; call occurs [#||configurePIControllers||] ; [] |830| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 831,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 831,column 5,is_stmt,isa 0
 $C$DW$440	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$440, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$440, DW_AT_name("FCL_resetController")
@@ -8440,61 +8445,61 @@ $C$DW$440	.dwtag  DW_TAG_TI_branch
 
         LCR       #||FCL_resetController|| ; [CPU_ALU] |831| 
         ; call occurs [#||FCL_resetController||] ; [] |831| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 835,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 835,column 5,is_stmt,isa 0
         ZERO      R7H                   ; [CPU_FPU] |835| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 836,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 836,column 5,is_stmt,isa 0
         ZERO      R6H                   ; [CPU_FPU] |836| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 842,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 842,column 5,is_stmt,isa 0
         ZERO      R5H                   ; [CPU_FPU] |842| 
         MOVW      DP,#||T||             ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 841,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 841,column 5,is_stmt,isa 0
         MOVIZ     R1H,#15692            ; [CPU_FPU] |841| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 847,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 847,column 5,is_stmt,isa 0
         MOVIZ     R0H,#15605            ; [CPU_FPU] |847| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 834,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 834,column 5,is_stmt,isa 0
         MOV32     R4H,@||T||            ; [CPU_FPU] |834| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 837,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 837,column 5,is_stmt,isa 0
         MOVIZ     R3H,#16256            ; [CPU_FPU] |837| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 838,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 838,column 5,is_stmt,isa 0
         MOVIZ     R2H,#16256            ; [CPU_FPU] |838| 
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 851,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 851,column 5,is_stmt,isa 0
         MOV       @||lsw||,#0           ; [CPU_ALU] |851| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 841,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 841,column 5,is_stmt,isa 0
         MOVXI     R1H,#52429            ; [CPU_FPU] |841| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 862,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 862,column 5,is_stmt,isa 0
         MOVL      XAR4,#||dlog_4ch1||   ; [CPU_ARAU] |862| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 847,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 847,column 5,is_stmt,isa 0
         MOVXI     R0H,#49807            ; [CPU_FPU] |847| 
         MOVW      DP,#||runMotor||      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 834,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 834,column 5,is_stmt,isa 0
         MPYF32    R4H,R4H,#17274        ; [CPU_FPU] |834| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 852,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 852,column 5,is_stmt,isa 0
         MOV       @||runMotor||,#0      ; [CPU_ALU] |852| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 853,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 853,column 5,is_stmt,isa 0
         MOV       @||ledCnt1||,#0       ; [CPU_ALU] |853| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 854,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 854,column 5,is_stmt,isa 0
         MOVB      @||fclClrCntr||,#1,UNC ; [CPU_ALU] |854| 
         MOVW      DP,#||rg1||+4         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 835,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 835,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||rg1||)+4,R7H ; [CPU_FPU] |835| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 836,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 836,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||rg1||)+8,R6H ; [CPU_FPU] |836| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 837,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 837,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||rg1||)+6,R3H ; [CPU_FPU] |837| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 838,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 838,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||rg1||)+10,R2H ; [CPU_FPU] |838| 
         MOVW      DP,#||speedRef||      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 841,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 841,column 5,is_stmt,isa 0
         MOV32     @||speedRef||,R1H     ; [CPU_FPU] |841| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 842,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 842,column 5,is_stmt,isa 0
         MOV32     @||IdRef||,R5H        ; [CPU_FPU] |842| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 847,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 847,column 5,is_stmt,isa 0
         MOV32     @||IqRef||,R0H        ; [CPU_FPU] |847| 
         MOVW      DP,#||rg1||+2         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 834,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 834,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||rg1||)+2,R4H ; [CPU_FPU] |834| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 862,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 862,column 5,is_stmt,isa 0
 $C$DW$441	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$441, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$441, DW_AT_name("DLOG_4CH_F_init")
@@ -8502,63 +8507,63 @@ $C$DW$441	.dwtag  DW_TAG_TI_branch
 
         LCR       #||DLOG_4CH_F_init||  ; [CPU_ALU] |862| 
         ; call occurs [#||DLOG_4CH_F_init||] ; [] |862| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 863,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 863,column 5,is_stmt,isa 0
         MOVL      XAR3,#||dlogCh1||     ; [CPU_ARAU] |863| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 864,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 864,column 5,is_stmt,isa 0
         MOVL      XAR2,#||dlogCh2||     ; [CPU_ARAU] |864| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 865,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 865,column 5,is_stmt,isa 0
         MOVL      XAR1,#||dlogCh3||     ; [CPU_ARAU] |865| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4777,column 9,is_stmt,isa 0
         MOV       AL,*(0:0x4aa4)        ; [CPU_ALU] |4777| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 873,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 873,column 5,is_stmt,isa 0
         MOVIZ     R0H,#15395            ; [CPU_FPU] |873| 
         MOVW      DP,#||dlog_4ch1||+23  ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4777,column 9,is_stmt,isa 0
         AND       AL,#0xffbf            ; [CPU_ALU] |4777| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 866,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 866,column 5,is_stmt,isa 0
         MOVL      XAR0,#||dlogCh4||     ; [CPU_ARAU] |866| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 867,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 867,column 5,is_stmt,isa 0
         MOVL      XAR7,#||DBUFF_4CH1||  ; [CPU_ARAU] |867| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 868,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 868,column 5,is_stmt,isa 0
         MOVL      XAR6,#||DBUFF_4CH2||  ; [CPU_ARAU] |868| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 869,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 869,column 5,is_stmt,isa 0
         MOVL      XAR5,#||DBUFF_4CH3||  ; [CPU_ARAU] |869| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4777,column 9,is_stmt,isa 0
         MOV       *(0:0x4aa4),AL        ; [CPU_ALU] |4777| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 870,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 870,column 5,is_stmt,isa 0
         MOVL      XAR4,#||DBUFF_4CH4||  ; [CPU_ARAU] |870| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 873,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 873,column 5,is_stmt,isa 0
         MOVXI     R0H,#55050            ; [CPU_FPU] |873| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4787,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x4aa4)        ; [CPU_ALU] |4787| 
         AND       AL,AL,#0xfffc         ; [CPU_ALU] |4787| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 871,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 871,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||dlog_4ch1||)+23,#200,UNC ; [CPU_ALU] |871| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 872,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 872,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||dlog_4ch1||)+21,#5,UNC ; [CPU_ALU] |872| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 874,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 874,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||dlog_4ch1||)+20,#2,UNC ; [CPU_ALU] |874| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4787,column 5,is_stmt,isa 0
         ORB       AL,#0x04              ; [CPU_ALU] |4787| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 863,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 863,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||),XAR3 ; [CPU_ALU] |863| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 864,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 864,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+2,XAR2 ; [CPU_ALU] |864| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 865,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 865,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+4,XAR1 ; [CPU_ALU] |865| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 866,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 866,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+6,XAR0 ; [CPU_ALU] |866| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 867,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 867,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+8,XAR7 ; [CPU_ALU] |867| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 868,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 868,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+10,XAR6 ; [CPU_ALU] |868| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 869,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 869,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+12,XAR5 ; [CPU_ALU] |869| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 870,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 870,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+14,XAR4 ; [CPU_ALU] |870| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4787,column 5,is_stmt,isa 0
         MOV       *(0:0x4aa4),AL        ; [CPU_ALU] |4787| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 873,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 873,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||dlog_4ch1||)+18,R0H ; [CPU_FPU] |873| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4817,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x4aa6)        ; [CPU_ALU] |4817| 
@@ -8629,26 +8634,26 @@ $C$DW$441	.dwtag  DW_TAG_TI_branch
         OR        AH,#4                 ; [CPU_ALU] |995| 
         MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |995| 
  EDIS
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 941,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 941,column 5,is_stmt,isa 0
         ZERO      R3H                   ; [CPU_FPU] |941| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 942,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 942,column 5,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |942| 
         SETC      SXM                   ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 943,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 943,column 5,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |943| 
         MOVW      DP,#||offsetCalCounter|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 945,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 945,column 9,is_stmt,isa 0
         MOV       @||offsetCalCounter||,#0 ; [CPU_ALU] |945| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 941,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 941,column 5,is_stmt,isa 0
         MOV32     R4H,R3H               ; [CPU_FPU] |941| 
         MOVW      DP,#||offset_SDFMV||  ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 347,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x5115)        ; [CPU_ALU] |347| 
         ORB       AL,#0x08              ; [CPU_ALU] |347| 
         MOV       *(0:0x5115),AL        ; [CPU_ALU] |347| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 942,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 942,column 5,is_stmt,isa 0
         MOV32     @||offset_SDFMV||,R1H ; [CPU_FPU] |942| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 943,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 943,column 5,is_stmt,isa 0
         MOV32     @||offset_SDFMW||,R0H ; [CPU_FPU] |943| 
 ||$C$L72||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4872,column 5,is_stmt,isa 0
@@ -8662,14 +8667,14 @@ $C$DW$441	.dwtag  DW_TAG_TI_branch
         B         ||$C$L73||,NTC        ; [CPU_ALU] |4847| 
         ; branchcc occurs ; [] |4847| 
         MOVW      DP,#||offsetCalCounter|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 952,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 952,column 9,is_stmt,isa 0
         CMP       @||offsetCalCounter||,#2000 ; [CPU_ALU] |952| 
         B         ||$C$L74||,LOS        ; [CPU_ALU] |952| 
         ; branchcc occurs ; [] |952| 
         MOVW      DP,#||FCL_params||+4  ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sdfm.h",line 833,column 5,is_stmt,isa 0
         MOV32     ACC,*(0:0x5e16)       ; [CPU_FPU] |833| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 957,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 957,column 13,is_stmt,isa 0
         MOV32     R2H,@$BLOCKED(||FCL_params||)+4 ; [CPU_FPU] |957| 
         SFR       ACC,16                ; [CPU_ALU] |957| 
         MOV32     R0H,ACC               ; [CPU_FPU] |957| 
@@ -8691,7 +8696,7 @@ $C$DW$441	.dwtag  DW_TAG_TI_branch
         MOV32     @||offset_SDFMV||,R5H ; [CPU_FPU] |957| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sdfm.h",line 833,column 5,is_stmt,isa 0
         MOV32     ACC,*(0:0x5e26)       ; [CPU_FPU] |833| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 961,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 961,column 13,is_stmt,isa 0
         SFR       ACC,16                ; [CPU_ALU] |961| 
         MOV32     R5H,ACC               ; [CPU_FPU] |961| 
         NOP       ; [CPU_ALU] 
@@ -8712,37 +8717,37 @@ $C$DW$441	.dwtag  DW_TAG_TI_branch
         MOV32     @||offset_SDFMW||,R2H ; [CPU_FPU] |961| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 923,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0b00)        ; [CPU_ALU] |923| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
         MOVU      ACC,AL                ; [CPU_ALU] |974| 
         MOV32     R2H,ACC               ; [CPU_FPU] |974| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 923,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0b20)        ; [CPU_ALU] |923| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
         MOVU      ACC,AL                ; [CPU_ALU] |977| 
         MOV32     R6H,ACC               ; [CPU_FPU] |977| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
         UI32TOF32 R5H,R2H               ; [CPU_FPU] |974| 
         NOP       ; [CPU_ALU] 
         MPYF32    R5H,R7H,R5H           ; [CPU_FPU] |974| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
         UI32TOF32 R2H,R6H               ; [CPU_FPU] |977| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
         MPYF32    R5H,R5H,#14720        ; [CPU_FPU] |974| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
         MPYF32    R0H,R7H,R2H           ; [CPU_FPU] |977| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
         MPYF32    R6H,R4H,R1H           ; [CPU_FPU] |974| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
         MPYF32    R7H,R3H,R1H           ; [CPU_FPU] |977| 
         MPYF32    R0H,R0H,#14720        ; [CPU_FPU] |977| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 974,column 13,is_stmt,isa 0
         ADDF32    R4H,R5H,R6H           ; [CPU_FPU] |974| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 977,column 13,is_stmt,isa 0
         ADDF32    R3H,R0H,R7H           ; [CPU_FPU] |977| 
 ||$C$L74||:    
         MOVW      DP,#||offsetCalCounter|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 945,column 57,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 945,column 57,is_stmt,isa 0
         INC       @||offsetCalCounter|| ; [CPU_ALU] |945| 
         CMP       @||offsetCalCounter||,#22000 ; [CPU_ALU] |945| 
         B         ||$C$L72||,LO         ; [CPU_ALU] |945| 
@@ -8753,14 +8758,14 @@ $C$DW$441	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 1545,column 5,is_stmt,isa 0
         MPYF32    R1H,R4H,#17792        ; [CPU_FPU] |1545| 
         MPYF32    R0H,R3H,#17792        ; [CPU_FPU] |1545| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
         MOVIZ     R7H,#15467            ; [CPU_FPU] |483| 
         MOV32     @||offset_lemV||,R4H  ; [CPU_FPU] 
         SFR       ACC,16                ; [CPU_ALU] |483| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 1545,column 5,is_stmt,isa 0
         F32TOUI16 R1H,R1H               ; [CPU_FPU] |1545| 
         F32TOUI16 R0H,R0H               ; [CPU_FPU] |1545| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
         MOVXI     R7H,#55644            ; [CPU_FPU] |483| 
         MOV32     R2H,ACC               ; [CPU_FPU] |483| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 1545,column 5,is_stmt,isa 0
@@ -8769,17 +8774,17 @@ $C$DW$441	.dwtag  DW_TAG_TI_branch
         MOVW      DP,#||FCL_params||+26 ; [CPU_ARAU] 
         MOV32     ACC,R0H               ; [CPU_FPU] |1545| 
         MOV       AH,AR6                ; [CPU_ALU] |1545| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
         I32TOF32  R1H,R2H               ; [CPU_FPU] |483| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 1545,column 5,is_stmt,isa 0
         MOV       *(0:0x7443),AH        ; [CPU_ALU] |1545| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 483,column 5,is_stmt,isa 0
         MPYF32    R0H,R7H,R1H           ; [CPU_FPU] |483| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 1545,column 5,is_stmt,isa 0
         MOV       *(0:0x74c3),AL        ; [CPU_ALU] |1545| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 487,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 487,column 9,is_stmt,isa 0
         MAXF32    R0H,#16256            ; [CPU_FPU] |487| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 986,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 986,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||FCL_params||)+26,R0H ; [CPU_FPU] |986| 
  EALLOW
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 259,column 5,is_stmt,isa 0
@@ -8787,7 +8792,7 @@ $C$DW$441	.dwtag  DW_TAG_TI_branch
         MOV32     *(0:0x0d94),XAR4      ; [CPU_FPU] |259| 
  EDIS
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1022,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1022,column 5,is_stmt,isa 0
         MOV       AL,#1539              ; [CPU_ALU] |1022| 
         MOV       AH,#74                ; [CPU_ALU] |1022| 
 $C$DW$442	.dwtag  DW_TAG_TI_branch
@@ -8797,7 +8802,7 @@ $C$DW$442	.dwtag  DW_TAG_TI_branch
 
         LCR       #||Interrupt_enable|| ; [CPU_ALU] |1022| 
         ; call occurs [#||Interrupt_enable||] ; [] |1022| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1024,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1024,column 5,is_stmt,isa 0
 $C$DW$443	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$443, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$443, DW_AT_name("tformat_init")
@@ -8805,7 +8810,7 @@ $C$DW$443	.dwtag  DW_TAG_TI_branch
 
         LCR       #||tformat_init||     ; [CPU_ALU] |1024| 
         ; call occurs [#||tformat_init||] ; [] |1024| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1025,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1025,column 5,is_stmt,isa 0
         MOV       ACC,#31998            ; [CPU_ALU] |1025| 
 $C$DW$444	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$444, DW_AT_low_pc(0x00)
@@ -8816,12 +8821,12 @@ $C$DW$444	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||SysCtl_delay||] ; [] |1025| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4872,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x4aaa)        ; [CPU_ALU] |4872| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1045,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1045,column 5,is_stmt,isa 0
         MOV       AH,#146               ; [CPU_ALU] |1045| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4872,column 5,is_stmt,isa 0
         ORB       AL,#0x01              ; [CPU_ALU] |4872| 
         MOV       *(0:0x4aaa),AL        ; [CPU_ALU] |4872| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1045,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1045,column 5,is_stmt,isa 0
         MOV       AL,#779               ; [CPU_ALU] |1045| 
 $C$DW$445	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$445, DW_AT_low_pc(0x00)
@@ -8836,7 +8841,7 @@ $C$DW$445	.dwtag  DW_TAG_TI_branch
  clrc DBGM
 ||$C$L75||:    
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1064,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1064,column 9,is_stmt,isa 0
         MOVL      XAR7,@||Alpha_State_Ptr|| ; [CPU_ALU] |1064| 
         SPM       #0                    ; [CPU_ALU] 
 $C$DW$446	.dwtag  DW_TAG_TI_branch
@@ -8846,10 +8851,10 @@ $C$DW$446	.dwtag  DW_TAG_TI_branch
 
         LCR       *XAR7                 ; [CPU_ALU] |1064| 
         ; call occurs [XAR7] ; [] |1064| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1066,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1066,column 5,is_stmt,isa 0
         B         ||$C$L75||,UNC        ; [CPU_ALU] |1066| 
         ; branch occurs ; [] |1066| 
-	.dwattr $C$DW$414, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$414, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$414, DW_AT_TI_end_line(0x42b)
 	.dwattr $C$DW$414, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -8865,11 +8870,11 @@ $C$DW$447	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$447, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$447, DW_AT_linkage_name("configurePWM_1chUpDwnCnt")
 	.dwattr $C$DW$447, DW_AT_external
-	.dwattr $C$DW$447, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$447, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$447, DW_AT_decl_line(0xda8)
 	.dwattr $C$DW$447, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$447, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3497,column 1,is_stmt,address ||configurePWM_1chUpDwnCnt||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3497,column 1,is_stmt,address ||configurePWM_1chUpDwnCnt||,isa 0
 
 	.dwfde $C$DW$CIE, ||configurePWM_1chUpDwnCnt||
 $C$DW$448	.dwtag  DW_TAG_formal_parameter
@@ -8926,7 +8931,7 @@ $C$DW$453	.dwtag  DW_TAG_variable
         MOVL      XAR4,ACC              ; [CPU_ALU] |3497| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2182,column 5,is_stmt,isa 0
         MOVB      XAR1,#99              ; [CPU_ALU] |2182| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 3497,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 3497,column 1,is_stmt,isa 0
         MOV       AL,AR6                ; [CPU_ALU] |3497| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2182,column 5,is_stmt,isa 0
         LSR       AL,1                  ; [CPU_ALU] |2182| 
@@ -9032,7 +9037,7 @@ $C$DW$454	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$447, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$447, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$447, DW_AT_TI_end_line(0xdcf)
 	.dwattr $C$DW$447, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -9049,11 +9054,11 @@ $C$DW$455	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$455, DW_AT_linkage_name("angleEstimator_QEP")
 	.dwattr $C$DW$455, DW_AT_external
 	.dwattr $C$DW$455, DW_AT_type(*$C$DW$T$19)
-	.dwattr $C$DW$455, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$455, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$455, DW_AT_decl_line(0x434)
 	.dwattr $C$DW$455, DW_AT_decl_column(0x0b)
 	.dwattr $C$DW$455, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1077,column 1,is_stmt,address ||angleEstimator_QEP||,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1077,column 1,is_stmt,address ||angleEstimator_QEP||,isa 0
 
 	.dwfde $C$DW$CIE, ||angleEstimator_QEP||
 
@@ -9078,7 +9083,7 @@ $C$DW$456	.dwtag  DW_TAG_variable
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -4
         MOVW      DP,#||lsw||           ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1080,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1080,column 5,is_stmt,isa 0
         MOV       AL,@||lsw||           ; [CPU_ALU] |1080| 
         CMPB      AL,#1                 ; [CPU_ALU] |1080| 
         B         ||$C$L78||,EQ         ; [CPU_ALU] |1080| 
@@ -9086,24 +9091,24 @@ $C$DW$456	.dwtag  DW_TAG_variable
         CMPB      AL,#2                 ; [CPU_ALU] |1080| 
         B         ||$C$L76||,EQ         ; [CPU_ALU] |1080| 
         ; branchcc occurs ; [] |1080| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1098,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1098,column 13,is_stmt,isa 0
         ZERO      R3H                   ; [CPU_FPU] |1098| 
         MOVW      DP,#||rg1||+8         ; [CPU_ARAU] 
         ZERO      R2H                   ; [CPU_FPU] |1098| 
         ZERO      R1H                   ; [CPU_FPU] |1098| 
         MOV32     @$BLOCKED(||rg1||)+8,R3H ; [CPU_FPU] |1098| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1102,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1102,column 5,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |1102| 
         MOVW      DP,#||spdObs||+6      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1098,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1098,column 13,is_stmt,isa 0
         MOV32     @$BLOCKED(||spdObs||)+6,R2H ; [CPU_FPU] |1098| 
         MOV32     @$BLOCKED(||spdObs||)+2,R1H ; [CPU_FPU] |1098| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1102,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1102,column 5,is_stmt,isa 0
         B         ||$C$L79||,UNC        ; [CPU_ALU] |1102| 
         ; branch occurs ; [] |1102| 
 ||$C$L76||:    
         MOVW      DP,#||spdObs||+6      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1084,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1084,column 13,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||spdObs||)+6 ; [CPU_FPU] |1084| 
         MOVW      DP,#||T||             ; [CPU_ARAU] 
         MOV32     R1H,@||T||            ; [CPU_FPU] |1084| 
@@ -9112,28 +9117,28 @@ $C$DW$456	.dwtag  DW_TAG_variable
         MOV32     R3H,@$BLOCKED(||spdObs||)+2 ; [CPU_FPU] |1084| 
         ADDF32    R0H,R1H,R3H           ; [CPU_FPU] |1084| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1087,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1087,column 13,is_stmt,isa 0
         CMPF32    R0H,#16256            ; [CPU_FPU] |1087| 
         MOVST0    ZF, NF                ; [CPU_FPU] |1087| 
         B         ||$C$L77||,LEQ        ; [CPU_ALU] |1087| 
         ; branchcc occurs ; [] |1087| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1102,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1102,column 5,is_stmt,isa 0
         ADDF32    R0H,R0H,#49024        ; [CPU_FPU] |1102| 
         B         ||$C$L79||,UNC        ; [CPU_ALU] |1102| 
         ; branch occurs ; [] |1102| 
 ||$C$L77||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1087,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1087,column 13,is_stmt,isa 0
         CMPF32    R0H,#0                ; [CPU_FPU] |1087| 
         MOVST0    ZF, NF                ; [CPU_FPU] |1087| 
         B         ||$C$L79||,GEQ        ; [CPU_ALU] |1087| 
         ; branchcc occurs ; [] |1087| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1102,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1102,column 5,is_stmt,isa 0
         ADDF32    R0H,R0H,#16256        ; [CPU_FPU] |1102| 
         B         ||$C$L79||,UNC        ; [CPU_ALU] |1102| 
         ; branch occurs ; [] |1102| 
 ||$C$L78||:    
         MOVW      DP,#||rg1||+8         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c",line 1093,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_f2837x_tmdxiddk.c",line 1093,column 13,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||rg1||)+8 ; [CPU_FPU] |1093| 
 ||$C$L79||:    
         SUBB      SP,#2                 ; [CPU_ARAU] 
@@ -9144,7 +9149,7 @@ $C$DW$457	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$455, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$455, DW_AT_TI_end_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$455, DW_AT_TI_end_line(0x44f)
 	.dwattr $C$DW$455, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -18490,7 +18495,7 @@ $C$DW$1292	.dwtag  DW_TAG_member
 	.dwattr $C$DW$1292, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$1292, DW_AT_name("ElecTheta")
 	.dwattr $C$DW$1292, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$1292, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$1292, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$1292, DW_AT_decl_line(0x192)
 	.dwattr $C$DW$1292, DW_AT_decl_column(0x13)
 
@@ -18499,7 +18504,7 @@ $C$DW$1293	.dwtag  DW_TAG_member
 	.dwattr $C$DW$1293, DW_AT_name("MechTheta")
 	.dwattr $C$DW$1293, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
 	.dwattr $C$DW$1293, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$1293, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$1293, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$1293, DW_AT_decl_line(0x193)
 	.dwattr $C$DW$1293, DW_AT_decl_column(0x13)
 
@@ -18508,7 +18513,7 @@ $C$DW$1294	.dwtag  DW_TAG_member
 	.dwattr $C$DW$1294, DW_AT_name("RawTheta")
 	.dwattr $C$DW$1294, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
 	.dwattr $C$DW$1294, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$1294, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$1294, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$1294, DW_AT_decl_line(0x194)
 	.dwattr $C$DW$1294, DW_AT_decl_column(0x13)
 
@@ -18517,7 +18522,7 @@ $C$DW$1295	.dwtag  DW_TAG_member
 	.dwattr $C$DW$1295, DW_AT_name("Speed")
 	.dwattr $C$DW$1295, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
 	.dwattr $C$DW$1295, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$1295, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$1295, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$1295, DW_AT_decl_line(0x195)
 	.dwattr $C$DW$1295, DW_AT_decl_column(0x13)
 
@@ -18526,7 +18531,7 @@ $C$DW$1296	.dwtag  DW_TAG_member
 	.dwattr $C$DW$1296, DW_AT_name("InitTheta")
 	.dwattr $C$DW$1296, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
 	.dwattr $C$DW$1296, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$1296, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$1296, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$1296, DW_AT_decl_line(0x196)
 	.dwattr $C$DW$1296, DW_AT_decl_column(0x13)
 
@@ -18535,7 +18540,7 @@ $C$DW$1297	.dwtag  DW_TAG_member
 	.dwattr $C$DW$1297, DW_AT_name("MechScaler")
 	.dwattr $C$DW$1297, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
 	.dwattr $C$DW$1297, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$1297, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$1297, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$1297, DW_AT_decl_line(0x198)
 	.dwattr $C$DW$1297, DW_AT_decl_column(0x13)
 
@@ -18544,7 +18549,7 @@ $C$DW$1298	.dwtag  DW_TAG_member
 	.dwattr $C$DW$1298, DW_AT_name("StepsPerTurn")
 	.dwattr $C$DW$1298, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
 	.dwattr $C$DW$1298, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$1298, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$1298, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$1298, DW_AT_decl_line(0x199)
 	.dwattr $C$DW$1298, DW_AT_decl_column(0x13)
 
@@ -18553,11 +18558,11 @@ $C$DW$1299	.dwtag  DW_TAG_member
 	.dwattr $C$DW$1299, DW_AT_name("PolePairs")
 	.dwattr $C$DW$1299, DW_AT_data_member_location[DW_OP_plus_uconst 0xe]
 	.dwattr $C$DW$1299, DW_AT_accessibility(DW_ACCESS_public)
-	.dwattr $C$DW$1299, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$1299, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$1299, DW_AT_decl_line(0x19a)
 	.dwattr $C$DW$1299, DW_AT_decl_column(0x13)
 
-	.dwattr $C$DW$T$48, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$T$48, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$T$48, DW_AT_decl_line(0x191)
 	.dwattr $C$DW$T$48, DW_AT_decl_column(0x10)
 	.dwendtag $C$DW$T$48
@@ -18570,7 +18575,7 @@ $C$DW$TU$194	.dwtag  DW_TAG_type_unit
 $C$DW$T$194	.dwtag  DW_TAG_typedef
 	.dwattr $C$DW$T$194, DW_AT_name("ABS_ENCODER")
 	.dwattr $C$DW$T$194, DW_AT_type(*$C$DW$T$48)
-	.dwattr $C$DW$T$194, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/tmdxiddk379d/f2837x/source/fcl_f2837x_tmdxiddk.c")
+	.dwattr $C$DW$T$194, DW_AT_decl_file("../sources/fcl_f2837x_tmdxiddk.c")
 	.dwattr $C$DW$T$194, DW_AT_decl_line(0x19c)
 	.dwattr $C$DW$T$194, DW_AT_decl_column(0x08)
 

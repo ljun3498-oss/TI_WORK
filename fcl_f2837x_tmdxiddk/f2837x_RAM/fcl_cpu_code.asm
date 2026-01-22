@@ -1,12 +1,12 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Wed Jan 21 17:05:16 2026                 *
+;* Date/Time created: Thu Jan 22 11:16:45 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$CU, DW_AT_name("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\fcl_f2837x_tmdxiddk\f2837x_RAM")
@@ -18,7 +18,7 @@ $C$DW$1	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$1, DW_AT_location[DW_OP_addr ||lsw||]
 	.dwattr $C$DW$1, DW_AT_type(*$C$DW$T$121)
 	.dwattr $C$DW$1, DW_AT_external
-	.dwattr $C$DW$1, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$1, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$1, DW_AT_decl_line(0x4a)
 	.dwattr $C$DW$1, DW_AT_decl_column(0x11)
 
@@ -28,7 +28,7 @@ $C$DW$2	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$2, DW_AT_type(*$C$DW$T$151)
 	.dwattr $C$DW$2, DW_AT_declaration
 	.dwattr $C$DW$2, DW_AT_external
-	.dwattr $C$DW$2, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$2, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$2, DW_AT_decl_line(0x14a)
 	.dwattr $C$DW$2, DW_AT_decl_column(0x1a)
 
@@ -40,7 +40,7 @@ $C$DW$3	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$3, DW_AT_location[DW_OP_addr ||currentSenV||]
 	.dwattr $C$DW$3, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$3, DW_AT_external
-	.dwattr $C$DW$3, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$3, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$3, DW_AT_decl_line(0x43)
 	.dwattr $C$DW$3, DW_AT_decl_column(0x11)
 
@@ -52,7 +52,7 @@ $C$DW$4	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$4, DW_AT_location[DW_OP_addr ||currentSenW||]
 	.dwattr $C$DW$4, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$4, DW_AT_external
-	.dwattr $C$DW$4, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$4, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$4, DW_AT_decl_line(0x44)
 	.dwattr $C$DW$4, DW_AT_decl_column(0x11)
 
@@ -64,7 +64,7 @@ $C$DW$5	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$5, DW_AT_location[DW_OP_addr ||pangle||]
 	.dwattr $C$DW$5, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$5, DW_AT_external
-	.dwattr $C$DW$5, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$5, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$5, DW_AT_decl_line(0x4d)
 	.dwattr $C$DW$5, DW_AT_decl_column(0x11)
 
@@ -76,7 +76,7 @@ $C$DW$6	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$6, DW_AT_location[DW_OP_addr ||ClaQep||]
 	.dwattr $C$DW$6, DW_AT_type(*$C$DW$T$129)
 	.dwattr $C$DW$6, DW_AT_external
-	.dwattr $C$DW$6, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$6, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$6, DW_AT_decl_line(0x5f)
 	.dwattr $C$DW$6, DW_AT_decl_column(0x0e)
 
@@ -88,7 +88,7 @@ $C$DW$7	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$7, DW_AT_location[DW_OP_addr ||speedWePrev||]
 	.dwattr $C$DW$7, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$7, DW_AT_external
-	.dwattr $C$DW$7, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$7, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$7, DW_AT_decl_line(0x63)
 	.dwattr $C$DW$7, DW_AT_decl_column(0x0b)
 
@@ -100,7 +100,7 @@ $C$DW$8	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$8, DW_AT_location[DW_OP_addr ||speedWe||]
 	.dwattr $C$DW$8, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$8, DW_AT_external
-	.dwattr $C$DW$8, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$8, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$8, DW_AT_decl_line(0x64)
 	.dwattr $C$DW$8, DW_AT_decl_column(0x0b)
 
@@ -112,7 +112,7 @@ $C$DW$9	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$9, DW_AT_location[DW_OP_addr ||curA_PPBRESULT||]
 	.dwattr $C$DW$9, DW_AT_type(*$C$DW$T$21)
 	.dwattr $C$DW$9, DW_AT_external
-	.dwattr $C$DW$9, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$9, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$9, DW_AT_decl_line(0x67)
 	.dwattr $C$DW$9, DW_AT_decl_column(0x0a)
 
@@ -124,7 +124,7 @@ $C$DW$10	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$10, DW_AT_location[DW_OP_addr ||curB_PPBRESULT||]
 	.dwattr $C$DW$10, DW_AT_type(*$C$DW$T$21)
 	.dwattr $C$DW$10, DW_AT_external
-	.dwattr $C$DW$10, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$10, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$10, DW_AT_decl_line(0x67)
 	.dwattr $C$DW$10, DW_AT_decl_column(0x1a)
 
@@ -136,7 +136,7 @@ $C$DW$11	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$11, DW_AT_location[DW_OP_addr ||AdcIntFlag||]
 	.dwattr $C$DW$11, DW_AT_type(*$C$DW$T$131)
 	.dwattr $C$DW$11, DW_AT_external
-	.dwattr $C$DW$11, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$11, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$11, DW_AT_decl_line(0x68)
 	.dwattr $C$DW$11, DW_AT_decl_column(0x1f)
 
@@ -148,7 +148,7 @@ $C$DW$12	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$12, DW_AT_location[DW_OP_addr ||pwmCompA||]
 	.dwattr $C$DW$12, DW_AT_type(*$C$DW$T$156)
 	.dwattr $C$DW$12, DW_AT_external
-	.dwattr $C$DW$12, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$12, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$12, DW_AT_decl_line(0x6a)
 	.dwattr $C$DW$12, DW_AT_decl_column(0x0c)
 
@@ -160,7 +160,7 @@ $C$DW$13	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$13, DW_AT_location[DW_OP_addr ||pwmCompB||]
 	.dwattr $C$DW$13, DW_AT_type(*$C$DW$T$156)
 	.dwattr $C$DW$13, DW_AT_external
-	.dwattr $C$DW$13, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$13, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$13, DW_AT_decl_line(0x6b)
 	.dwattr $C$DW$13, DW_AT_decl_column(0x0c)
 
@@ -172,7 +172,7 @@ $C$DW$14	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$14, DW_AT_location[DW_OP_addr ||pwmCompC||]
 	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$156)
 	.dwattr $C$DW$14, DW_AT_external
-	.dwattr $C$DW$14, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$14, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$14, DW_AT_decl_line(0x6c)
 	.dwattr $C$DW$14, DW_AT_decl_column(0x0c)
 
@@ -199,7 +199,7 @@ $C$DW$17	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$17, DW_AT_location[DW_OP_addr ||clarke1||]
 	.dwattr $C$DW$17, DW_AT_type(*$C$DW$T$123)
 	.dwattr $C$DW$17, DW_AT_external
-	.dwattr $C$DW$17, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$17, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$17, DW_AT_decl_line(0x41)
 	.dwattr $C$DW$17, DW_AT_decl_column(0x11)
 
@@ -211,7 +211,7 @@ $C$DW$18	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$18, DW_AT_location[DW_OP_addr ||clarke2||]
 	.dwattr $C$DW$18, DW_AT_type(*$C$DW$T$123)
 	.dwattr $C$DW$18, DW_AT_external
-	.dwattr $C$DW$18, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$18, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$18, DW_AT_decl_line(0x42)
 	.dwattr $C$DW$18, DW_AT_decl_column(0x11)
 
@@ -223,7 +223,7 @@ $C$DW$19	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$19, DW_AT_location[DW_OP_addr ||rg1||]
 	.dwattr $C$DW$19, DW_AT_type(*$C$DW$T$128)
 	.dwattr $C$DW$19, DW_AT_external
-	.dwattr $C$DW$19, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$19, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$19, DW_AT_decl_line(0x57)
 	.dwattr $C$DW$19, DW_AT_decl_column(0x11)
 
@@ -235,7 +235,7 @@ $C$DW$20	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$20, DW_AT_location[DW_OP_addr ||park1||]
 	.dwattr $C$DW$20, DW_AT_type(*$C$DW$T$124)
 	.dwattr $C$DW$20, DW_AT_external
-	.dwattr $C$DW$20, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$20, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$20, DW_AT_decl_line(0x46)
 	.dwattr $C$DW$20, DW_AT_decl_column(0x11)
 
@@ -247,7 +247,7 @@ $C$DW$21	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$21, DW_AT_location[DW_OP_addr ||D_cpu||]
 	.dwattr $C$DW$21, DW_AT_type(*$C$DW$T$166)
 	.dwattr $C$DW$21, DW_AT_external
-	.dwattr $C$DW$21, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$21, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$21, DW_AT_decl_line(0x5c)
 	.dwattr $C$DW$21, DW_AT_decl_column(0x0e)
 
@@ -259,7 +259,7 @@ $C$DW$22	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$22, DW_AT_location[DW_OP_addr ||Q_cla||]
 	.dwattr $C$DW$22, DW_AT_type(*$C$DW$T$166)
 	.dwattr $C$DW$22, DW_AT_external
-	.dwattr $C$DW$22, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$22, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$22, DW_AT_decl_line(0x5e)
 	.dwattr $C$DW$22, DW_AT_decl_column(0x0e)
 
@@ -271,7 +271,7 @@ $C$DW$23	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$23, DW_AT_location[DW_OP_addr ||svgen1||]
 	.dwattr $C$DW$23, DW_AT_type(*$C$DW$T$125)
 	.dwattr $C$DW$23, DW_AT_external
-	.dwattr $C$DW$23, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$23, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$23, DW_AT_decl_line(0x48)
 	.dwattr $C$DW$23, DW_AT_decl_column(0x11)
 
@@ -283,7 +283,7 @@ $C$DW$24	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$24, DW_AT_location[DW_OP_addr ||qep1||]
 	.dwattr $C$DW$24, DW_AT_type(*$C$DW$T$126)
 	.dwattr $C$DW$24, DW_AT_external
-	.dwattr $C$DW$24, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$24, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$24, DW_AT_decl_line(0x50)
 	.dwattr $C$DW$24, DW_AT_decl_column(0x11)
 
@@ -305,7 +305,7 @@ $C$DW$26	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$26, DW_AT_location[DW_OP_addr ||pi_id||]
 	.dwattr $C$DW$26, DW_AT_type(*$C$DW$T$127)
 	.dwattr $C$DW$26, DW_AT_external
-	.dwattr $C$DW$26, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$26, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$26, DW_AT_decl_line(0x53)
 	.dwattr $C$DW$26, DW_AT_decl_column(0x14)
 
@@ -317,7 +317,7 @@ $C$DW$27	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$27, DW_AT_location[DW_OP_addr ||pi_iq||]
 	.dwattr $C$DW$27, DW_AT_type(*$C$DW$T$127)
 	.dwattr $C$DW$27, DW_AT_external
-	.dwattr $C$DW$27, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$27, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$27, DW_AT_decl_line(0x54)
 	.dwattr $C$DW$27, DW_AT_decl_column(0x14)
 
@@ -339,14 +339,14 @@ $C$DW$29	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$29, DW_AT_location[DW_OP_addr ||FCL_params||]
 	.dwattr $C$DW$29, DW_AT_type(*$C$DW$T$135)
 	.dwattr $C$DW$29, DW_AT_external
-	.dwattr $C$DW$29, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$29, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$29, DW_AT_decl_line(0x5a)
 	.dwattr $C$DW$29, DW_AT_decl_column(0x12)
 
 	.sblock	".bss"
 	.sblock	"ClaData"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{9FC42DC0-81D7-4F59-BAFB-D99770BB8E7E} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{114CADCD-644B-4669-93C6-BEE2C1B5F786} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{91609B40-FE36-40F5-A0DD-89293CB5FA71} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{E890C7EE-9B19-41CA-A228-B9068D728567} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{97F11A26-0C80-4E30-B9FE-B89065D077C9} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{E3D88E43-D43B-4D5F-B6B1-CD5F1A339936} 
 	.sect	".text:__signbitl"
 	.clink
 	.global	||__signbitl||
@@ -2534,11 +2534,11 @@ $C$DW$160	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$160, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$160, DW_AT_linkage_name("FCL_runSDFMPICtrl")
 	.dwattr $C$DW$160, DW_AT_external
-	.dwattr $C$DW$160, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$160, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$160, DW_AT_decl_line(0x1c7)
 	.dwattr $C$DW$160, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$160, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 456,column 1,is_stmt,address ||FCL_runSDFMPICtrl||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 456,column 1,is_stmt,address ||FCL_runSDFMPICtrl||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runSDFMPICtrl||
 
@@ -2606,47 +2606,47 @@ $C$DW$164	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -10
 ||$C$L24||:    
         MOVW      DP,#||PieCtrlRegs||+23 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 468,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 468,column 5,is_stmt,isa 0
         TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#0 ; [CPU_ALU] |468| 
         B         ||$C$L24||,NTC        ; [CPU_ALU] |468| 
         ; branchcc occurs ; [] |468| 
         MOVW      DP,#||currentSenW||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
         MOV32     R1H,@||currentSenW||  ; [CPU_FPU] |475| 
         MOVIZ     R3H,#16147            ; [CPU_FPU] |475| 
         MOVW      DP,#||pangle||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 468,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 468,column 5,is_stmt,isa 0
         MOV32     R0H,@||pangle||       ; [CPU_FPU] |468| 
         MOVW      DP,#||currentSenV||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
         MOVXI     R3H,#52538            ; [CPU_FPU] |475| 
 
         MOV32     R2H,@||currentSenV||  ; [CPU_FPU] |475| 
 ||      ADDF32    R4H,R1H,R1H           ; [CPU_FPU] |475| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 468,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 468,column 5,is_stmt,isa 0
         SINPUF32  R1H,R0H               ; [CPU_FPU] |468| 
         COSPUF32  R0H,R0H               ; [CPU_FPU] |468| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
         ADDF32    R4H,R4H,R2H           ; [CPU_FPU] |475| 
         MPYF32    R5H,R2H,R1H           ; [CPU_FPU] |475| 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |475| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 477,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 477,column 5,is_stmt,isa 0
         MPYF32    R2H,R2H,R0H           ; [CPU_FPU] |477| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
         MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |475| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 477,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 477,column 5,is_stmt,isa 0
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |477| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
         SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |475| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 477,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 477,column 5,is_stmt,isa 0
 
         MOV32     R3H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |477| 
 ||      ADDF32    R2H,R2H,R3H           ; [CPU_FPU] |477| 
 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 475,column 5,is_stmt,isa 0
 
         SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |477| 
 ||      MOV32     R7H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |475| 
@@ -2660,7 +2660,7 @@ $C$DW$164	.dwtag  DW_TAG_variable
         MOV32     @$BLOCKED(||pi_iq||)+4,R3H ; [CPU_FPU] |475| 
   IACK  #0x0002
         MOVW      DP,#||pi_id||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 485,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 485,column 5,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||pi_id||)+14 ; [CPU_FPU] |485| 
         MPYF32    R2H,R2H,R3H           ; [CPU_FPU] |485| 
         MOV32     R4H,@$BLOCKED(||pi_id||)+8 ; [CPU_FPU] |485| 
@@ -2683,13 +2683,13 @@ $C$DW$164	.dwtag  DW_TAG_variable
 ||      MOV32     @$BLOCKED(||pi_id||)+6,R2H ; [CPU_FPU] |485| 
 
 ||$C$L25||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 494,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 494,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |494| 
         TBIT      AL,#1                 ; [CPU_ALU] |494| 
         B         ||$C$L25||,NTC        ; [CPU_ALU] |494| 
         ; branchcc occurs ; [] |494| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 500,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 500,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_iq||)+6 ; [CPU_FPU] |500| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
 
@@ -2701,11 +2701,11 @@ $C$DW$164	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pwmCompA||      ; [CPU_ARAU] 
         SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |500| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 508,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 508,column 5,is_stmt,isa 0
         ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |508| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 500,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 500,column 5,is_stmt,isa 0
         MPYF32    R2H,R7H,R1H           ; [CPU_FPU] |500| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 508,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 508,column 5,is_stmt,isa 0
         MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |508| 
         MOVL      XAR6,@||pwmCompA||    ; [CPU_ALU] |508| 
         SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |508| 
@@ -2734,7 +2734,7 @@ $C$DW$164	.dwtag  DW_TAG_variable
         MOV32     *+XAR6[0],R1H         ; [CPU_FPU] |508| 
         MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |508| 
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |508| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 510,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 510,column 5,is_stmt,isa 0
         MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |510| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -2754,7 +2754,7 @@ $C$DW$165	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$160, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$160, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$160, DW_AT_TI_end_line(0x201)
 	.dwattr $C$DW$160, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2770,11 +2770,11 @@ $C$DW$166	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$166, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$166, DW_AT_linkage_name("FCL_runSDFMComplexCtrl")
 	.dwattr $C$DW$166, DW_AT_external
-	.dwattr $C$DW$166, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$166, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$166, DW_AT_decl_line(0x36b)
 	.dwattr $C$DW$166, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$166, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 876,column 1,is_stmt,address ||FCL_runSDFMComplexCtrl||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 876,column 1,is_stmt,address ||FCL_runSDFMComplexCtrl||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runSDFMComplexCtrl||
 
@@ -2843,38 +2843,38 @@ $C$DW$170	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -10
 ||$C$L26||:    
         MOVW      DP,#||PieCtrlRegs||+23 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 888,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 888,column 5,is_stmt,isa 0
         TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#0 ; [CPU_ALU] |888| 
         B         ||$C$L26||,NTC        ; [CPU_ALU] |888| 
         ; branchcc occurs ; [] |888| 
         MOVW      DP,#||currentSenW||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
         MOV32     R1H,@||currentSenW||  ; [CPU_FPU] |894| 
         MOVIZ     R3H,#16147            ; [CPU_FPU] |894| 
         MOVW      DP,#||pangle||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 888,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 888,column 5,is_stmt,isa 0
 
         ADDF32    R4H,R1H,R1H           ; [CPU_FPU] |894| 
 ||      MOV32     R0H,@||pangle||       ; [CPU_FPU] |888| 
 
         MOVW      DP,#||currentSenV||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
         MOVXI     R3H,#52538            ; [CPU_FPU] |894| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 888,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 888,column 5,is_stmt,isa 0
         SINPUF32  R1H,R0H               ; [CPU_FPU] |888| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
         MOV32     R2H,@||currentSenV||  ; [CPU_FPU] |894| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 888,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 888,column 5,is_stmt,isa 0
         COSPUF32  R0H,R0H               ; [CPU_FPU] |888| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
         ADDF32    R4H,R4H,R2H           ; [CPU_FPU] |894| 
         MPYF32    R5H,R2H,R1H           ; [CPU_FPU] |894| 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |894| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 896,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 896,column 5,is_stmt,isa 0
         MPYF32    R2H,R2H,R0H           ; [CPU_FPU] |896| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
         MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |894| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 896,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 896,column 5,is_stmt,isa 0
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |896| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
 
@@ -2882,23 +2882,23 @@ $C$DW$170	.dwtag  DW_TAG_variable
 ||      ADDF32    R2H,R2H,R3H           ; [CPU_FPU] |896| 
 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
 
         MOV32     R7H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |894| 
 ||      SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |894| 
 
         MOVW      DP,#||Q_cla||+8       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 896,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 896,column 5,is_stmt,isa 0
         SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |896| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
         SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |894| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 896,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 896,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+8,R2H ; [CPU_FPU] |896| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 894,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+10,R3H ; [CPU_FPU] |894| 
   IACK  #0x0004
         MOVW      DP,#||D_cpu||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||D_cpu||)+2 ; [CPU_FPU] |126| 
 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |126| 
@@ -2916,11 +2916,11 @@ $C$DW$170	.dwtag  DW_TAG_variable
         ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |126| 
 ||      MOV32     R5H,@$BLOCKED(||pi_id||)+18 ; [CPU_FPU] |133| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
         MOV32     R6H,@$BLOCKED(||pi_id||)+20 ; [CPU_FPU] |133| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+6,R2H ; [CPU_FPU] |126| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
         MINF32    R5H,R2H               ; [CPU_FPU] |133| 
         MOV32     R2H,R5H               ; [CPU_FPU] |133| 
         MAXF32    R2H,R6H               ; [CPU_FPU] |133| 
@@ -2932,13 +2932,13 @@ $C$DW$170	.dwtag  DW_TAG_variable
 ||      MOV32     @$BLOCKED(||pi_id||)+6,R2H ; [CPU_FPU] |133| 
 
 ||$C$L27||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 911,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 911,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |911| 
         TBIT      AL,#2                 ; [CPU_ALU] |911| 
         B         ||$C$L27||,NTC        ; [CPU_ALU] |911| 
         ; branchcc occurs ; [] |911| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 917,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 917,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_iq||)+6 ; [CPU_FPU] |917| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
 
@@ -2950,11 +2950,11 @@ $C$DW$170	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pwmCompA||      ; [CPU_ARAU] 
         SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |917| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 925,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 925,column 5,is_stmt,isa 0
         ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |925| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 917,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 917,column 5,is_stmt,isa 0
         MPYF32    R2H,R7H,R1H           ; [CPU_FPU] |917| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 925,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 925,column 5,is_stmt,isa 0
         MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |925| 
         MOVL      XAR6,@||pwmCompA||    ; [CPU_ALU] |925| 
         SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |925| 
@@ -2983,7 +2983,7 @@ $C$DW$170	.dwtag  DW_TAG_variable
         MOV32     *+XAR6[0],R1H         ; [CPU_FPU] |925| 
         MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |925| 
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |925| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 926,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 926,column 5,is_stmt,isa 0
         MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |926| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -3003,7 +3003,7 @@ $C$DW$171	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$166, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$166, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$166, DW_AT_TI_end_line(0x3a0)
 	.dwattr $C$DW$166, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3019,11 +3019,11 @@ $C$DW$172	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$172, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$172, DW_AT_linkage_name("FCL_runSDFMAbsEncPICtrl")
 	.dwattr $C$DW$172, DW_AT_external
-	.dwattr $C$DW$172, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$172, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$172, DW_AT_decl_line(0x247)
 	.dwattr $C$DW$172, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$172, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 584,column 1,is_stmt,address ||FCL_runSDFMAbsEncPICtrl||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 584,column 1,is_stmt,address ||FCL_runSDFMAbsEncPICtrl||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runSDFMAbsEncPICtrl||
 
@@ -3081,30 +3081,30 @@ $C$DW$176	.dwtag  DW_TAG_variable
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
         MOV32     R1H,@||currentSenW||  ; [CPU_FPU] |603| 
         MOVIZ     R3H,#16147            ; [CPU_FPU] |603| 
         MOVW      DP,#||pangle||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 596,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 596,column 5,is_stmt,isa 0
         MOV32     R0H,@||pangle||       ; [CPU_FPU] |596| 
         MOV32     *SP++,R5H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 63, 4
 	.dwcfi	cfa_offset, -6
         MOVW      DP,#||currentSenV||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
 
         MOV32     R2H,@||currentSenV||  ; [CPU_FPU] |603| 
 ||      ADDF32    R4H,R1H,R1H           ; [CPU_FPU] |603| 
 
         MOVXI     R3H,#52538            ; [CPU_FPU] |603| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 596,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 596,column 5,is_stmt,isa 0
         SINPUF32  R1H,R0H               ; [CPU_FPU] |596| 
         MOV32     *SP++,R6H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 67, 6
 	.dwcfi	cfa_offset, -8
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
         COSPUF32  R0H,R0H               ; [CPU_FPU] |596| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
 
         ADDF32    R4H,R4H,R2H           ; [CPU_FPU] |603| 
 ||      MOV32     *SP++,R7H             ; [CPU_FPU] 
@@ -3116,17 +3116,17 @@ $C$DW$176	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |603| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 605,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 605,column 5,is_stmt,isa 0
         MPYF32    R2H,R2H,R0H           ; [CPU_FPU] |605| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
         MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |603| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 605,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 605,column 5,is_stmt,isa 0
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |605| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
         SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |603| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 605,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 605,column 5,is_stmt,isa 0
         ADDF32    R2H,R2H,R3H           ; [CPU_FPU] |605| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 603,column 5,is_stmt,isa 0
 
         SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |603| 
 ||      MOV32     R4H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |605| 
@@ -3137,10 +3137,10 @@ $C$DW$176	.dwtag  DW_TAG_variable
 ||      SUBF32    R2H,R4H,R2H           ; [CPU_FPU] |605| 
 
         MOVW      DP,#||pi_id||+4       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 605,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 605,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+4,R2H ; [CPU_FPU] |605| 
   IACK  #0x0002
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 612,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 612,column 5,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||pi_id||)+14 ; [CPU_FPU] |612| 
         MPYF32    R2H,R2H,R3H           ; [CPU_FPU] |612| 
         MOV32     R3H,@$BLOCKED(||pi_id||)+8 ; [CPU_FPU] |612| 
@@ -3158,16 +3158,16 @@ $C$DW$176	.dwtag  DW_TAG_variable
         MPYF32    R3H,R2H,R0H           ; [CPU_FPU] |614| 
 ||      MOV32     @$BLOCKED(||pi_id||)+6,R3H ; [CPU_FPU] |612| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 615,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 615,column 5,is_stmt,isa 0
         MPYF32    R2H,R2H,R1H           ; [CPU_FPU] |615| 
 ||$C$L28||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 621,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 621,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |621| 
         TBIT      AL,#1                 ; [CPU_ALU] |621| 
         B         ||$C$L28||,NTC        ; [CPU_ALU] |621| 
         ; branchcc occurs ; [] |621| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 627,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 627,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_iq||)+6 ; [CPU_FPU] |627| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
 
@@ -3179,11 +3179,11 @@ $C$DW$176	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pwmCompA||      ; [CPU_ARAU] 
         SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |627| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 635,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 635,column 5,is_stmt,isa 0
         ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |635| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 627,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 627,column 5,is_stmt,isa 0
         MPYF32    R2H,R7H,R1H           ; [CPU_FPU] |627| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 635,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 635,column 5,is_stmt,isa 0
         MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |635| 
         MOVL      XAR6,@||pwmCompA||    ; [CPU_ALU] |635| 
         SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |635| 
@@ -3212,7 +3212,7 @@ $C$DW$176	.dwtag  DW_TAG_variable
         MOV32     *+XAR6[0],R1H         ; [CPU_FPU] |635| 
         MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |635| 
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |635| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 637,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 637,column 5,is_stmt,isa 0
         MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |637| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -3232,7 +3232,7 @@ $C$DW$177	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$172, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$172, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$172, DW_AT_TI_end_line(0x280)
 	.dwattr $C$DW$172, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3248,11 +3248,11 @@ $C$DW$178	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$178, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$178, DW_AT_linkage_name("FCL_runSDFMAbsEncComplexCtrl")
 	.dwattr $C$DW$178, DW_AT_external
-	.dwattr $C$DW$178, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$178, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$178, DW_AT_decl_line(0x3e1)
 	.dwattr $C$DW$178, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$178, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 994,column 1,is_stmt,address ||FCL_runSDFMAbsEncComplexCtrl||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 994,column 1,is_stmt,address ||FCL_runSDFMAbsEncComplexCtrl||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runSDFMAbsEncComplexCtrl||
 
@@ -3311,30 +3311,30 @@ $C$DW$182	.dwtag  DW_TAG_variable
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
         MOV32     R1H,@||currentSenW||  ; [CPU_FPU] |1012| 
         MOVIZ     R3H,#16147            ; [CPU_FPU] |1012| 
         MOVW      DP,#||pangle||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1006,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1006,column 5,is_stmt,isa 0
         MOV32     R0H,@||pangle||       ; [CPU_FPU] |1006| 
         MOV32     *SP++,R5H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 63, 4
 	.dwcfi	cfa_offset, -6
         MOVW      DP,#||currentSenV||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
 
         MOV32     R2H,@||currentSenV||  ; [CPU_FPU] |1012| 
 ||      ADDF32    R4H,R1H,R1H           ; [CPU_FPU] |1012| 
 
         MOVXI     R3H,#52538            ; [CPU_FPU] |1012| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1006,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1006,column 5,is_stmt,isa 0
         SINPUF32  R1H,R0H               ; [CPU_FPU] |1006| 
         MOV32     *SP++,R6H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 67, 6
 	.dwcfi	cfa_offset, -8
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
         COSPUF32  R0H,R0H               ; [CPU_FPU] |1006| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
 
         ADDF32    R4H,R4H,R2H           ; [CPU_FPU] |1012| 
 ||      MOV32     *SP++,R7H             ; [CPU_FPU] 
@@ -3346,30 +3346,30 @@ $C$DW$182	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |1012| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1014,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1014,column 5,is_stmt,isa 0
         MPYF32    R2H,R2H,R0H           ; [CPU_FPU] |1014| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
         MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |1012| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1014,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1014,column 5,is_stmt,isa 0
 
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |1014| 
 ||      MOV32     R4H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |1014| 
 
         MOVW      DP,#||Q_cla||+10      ; [CPU_ARAU] 
         ADDF32    R2H,R2H,R3H           ; [CPU_FPU] |1014| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
         SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |1012| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1014,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1014,column 5,is_stmt,isa 0
         SUBF32    R2H,R4H,R2H           ; [CPU_FPU] |1014| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
         SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |1012| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1014,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1014,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+8,R2H ; [CPU_FPU] |1014| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1012,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+10,R3H ; [CPU_FPU] |1012| 
   IACK  #0x0004
         MOVW      DP,#||D_cpu||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||D_cpu||)+2 ; [CPU_FPU] |126| 
 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |126| 
@@ -3384,11 +3384,11 @@ $C$DW$182	.dwtag  DW_TAG_variable
         ADDF32    R3H,R3H,R2H           ; [CPU_FPU] |126| 
         MOV32     R2H,@$BLOCKED(||pi_id||)+6 ; [CPU_FPU] |126| 
         ADDF32    R2H,R2H,R3H           ; [CPU_FPU] |126| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_id||)+18 ; [CPU_FPU] |133| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+6,R2H ; [CPU_FPU] |126| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||pi_id||)+20 ; [CPU_FPU] |133| 
         MINF32    R2H,R4H               ; [CPU_FPU] |133| 
         MOV32     @$BLOCKED(||pi_id||)+6,R2H ; [CPU_FPU] |133| 
@@ -3398,16 +3398,16 @@ $C$DW$182	.dwtag  DW_TAG_variable
         MPYF32    R3H,R2H,R0H           ; [CPU_FPU] |1022| 
 ||      MOV32     @$BLOCKED(||pi_id||)+6,R3H ; [CPU_FPU] |133| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1023,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1023,column 5,is_stmt,isa 0
         MPYF32    R2H,R2H,R1H           ; [CPU_FPU] |1023| 
 ||$C$L29||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1029,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1029,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1029| 
         TBIT      AL,#2                 ; [CPU_ALU] |1029| 
         B         ||$C$L29||,NTC        ; [CPU_ALU] |1029| 
         ; branchcc occurs ; [] |1029| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1035,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1035,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_iq||)+6 ; [CPU_FPU] |1035| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
 
@@ -3419,11 +3419,11 @@ $C$DW$182	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pwmCompA||      ; [CPU_ARAU] 
         SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |1035| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1043,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1043,column 5,is_stmt,isa 0
         ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |1043| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1035,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1035,column 5,is_stmt,isa 0
         MPYF32    R2H,R7H,R1H           ; [CPU_FPU] |1035| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1043,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1043,column 5,is_stmt,isa 0
         MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |1043| 
         MOVL      XAR6,@||pwmCompA||    ; [CPU_ALU] |1043| 
         SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |1043| 
@@ -3452,7 +3452,7 @@ $C$DW$182	.dwtag  DW_TAG_variable
         MOV32     *+XAR6[0],R1H         ; [CPU_FPU] |1043| 
         MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |1043| 
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |1043| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1044,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1044,column 5,is_stmt,isa 0
         MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |1044| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -3472,7 +3472,7 @@ $C$DW$183	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$178, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$178, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$178, DW_AT_TI_end_line(0x416)
 	.dwattr $C$DW$178, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3488,11 +3488,11 @@ $C$DW$184	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$184, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$184, DW_AT_linkage_name("FCL_runQEPWrap")
 	.dwattr $C$DW$184, DW_AT_external
-	.dwattr $C$DW$184, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$184, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$184, DW_AT_decl_line(0x30d)
 	.dwattr $C$DW$184, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$184, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 782,column 1,is_stmt,address ||FCL_runQEPWrap||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 782,column 1,is_stmt,address ||FCL_runQEPWrap||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runQEPWrap||
 
@@ -3509,7 +3509,7 @@ $C$DW$184	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
 ||$C$L30||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 786,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 786,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |786| 
         TBIT      AL,#0                 ; [CPU_ALU] |786| 
         B         ||$C$L30||,NTC        ; [CPU_ALU] |786| 
@@ -3521,17 +3521,17 @@ $C$DW$184	.dwtag  DW_TAG_subprogram
         MOV       *(0:0x1422),AL        ; [CPU_ALU] |648| 
  EDIS
 ||$C$L31||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 796,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 796,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |796| 
         TBIT      AL,#3                 ; [CPU_ALU] |796| 
         B         ||$C$L31||,NTC        ; [CPU_ALU] |796| 
         ; branchcc occurs ; [] |796| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 801,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 801,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |801| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 379,column 5,is_stmt,isa 0
         MOV       AH,#1024              ; [CPU_ALU] |379| 
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 801,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 801,column 5,is_stmt,isa 0
         AND       AL,#0xfff6            ; [CPU_ALU] |801| 
         MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |801| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 379,column 5,is_stmt,isa 0
@@ -3542,7 +3542,7 @@ $C$DW$185	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$184, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$184, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$184, DW_AT_TI_end_line(0x328)
 	.dwattr $C$DW$184, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3558,11 +3558,11 @@ $C$DW$186	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$186, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$186, DW_AT_linkage_name("FCL_runPICtrlWrap")
 	.dwattr $C$DW$186, DW_AT_external
-	.dwattr $C$DW$186, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$186, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$186, DW_AT_decl_line(0x286)
 	.dwattr $C$DW$186, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$186, DW_AT_TI_max_frame_size(-14)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 647,column 1,is_stmt,address ||FCL_runPICtrlWrap||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 647,column 1,is_stmt,address ||FCL_runPICtrlWrap||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runPICtrlWrap||
 
@@ -3608,7 +3608,7 @@ $C$DW$186	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -14
   IACK  #0x0008
         MOVW      DP,#||FCL_params||+26 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 666,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 666,column 5,is_stmt,isa 0
         MOVIZ     R0H,#16275            ; [CPU_FPU] |666| 
         MOV32     R1H,@$BLOCKED(||FCL_params||)+26 ; [CPU_FPU] |666| 
         MOVXI     R0H,#13107            ; [CPU_FPU] |666| 
@@ -3621,71 +3621,71 @@ $C$DW$186	.dwtag  DW_TAG_subprogram
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 677,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 677,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||FCL_params||)+12 ; [CPU_FPU] |677| 
         MPYF32    R1H,R2H,R0H           ; [CPU_FPU] |677| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 676,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 676,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||FCL_params||)+24 ; [CPU_FPU] |676| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 677,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 677,column 5,is_stmt,isa 0
         MPYF32    R3H,R0H,R1H           ; [CPU_FPU] |677| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 667,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 667,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+8 ; [CPU_FPU] |667| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 677,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 677,column 5,is_stmt,isa 0
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |677| 
         MOVW      DP,#||pi_iq||+12      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 679,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 679,column 5,is_stmt,isa 0
         MPYF32    R7H,R3H,#16128        ; [CPU_FPU] |679| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 677,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 677,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+12,R3H ; [CPU_FPU] |677| 
         MOVW      DP,#||FCL_params||+16 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 676,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 676,column 5,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||FCL_params||)+16 ; [CPU_FPU] |676| 
         MPYF32    R3H,R2H,R3H           ; [CPU_FPU] |676| 
         NOP       ; [CPU_ALU] 
         MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |676| 
         MOVW      DP,#||pi_iq||+4       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 679,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 679,column 5,is_stmt,isa 0
         SUBF32    R4H,R7H,R3H           ; [CPU_FPU] |679| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 681,column 5,is_stmt,isa 0
         MOV32     R5H,@$BLOCKED(||pi_iq||)+4 ; [CPU_FPU] |681| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 679,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 679,column 5,is_stmt,isa 0
 
         MPYF32    R0H,R4H,R5H           ; [CPU_FPU] |681| 
 ||      MOV32     @$BLOCKED(||pi_iq||)+16,R4H ; [CPU_FPU] |679| 
 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 671,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 671,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_id||)+4 ; [CPU_FPU] |671| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 681,column 5,is_stmt,isa 0
         MOV32     *-SP[4],R0H           ; [CPU_FPU] |681| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 689,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 689,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |689| 
         SUBF32    R0H,R0H,R4H           ; [CPU_FPU] |689| 
         NOP       ; [CPU_ALU] 
         MOV32     @$BLOCKED(||pi_id||)+2,R0H ; [CPU_FPU] |689| 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 690,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 690,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |690| 
         SUBF32    R0H,R0H,R5H           ; [CPU_FPU] |690| 
         NOP       ; [CPU_ALU] 
         MOV32     @$BLOCKED(||pi_iq||)+2,R0H ; [CPU_FPU] |690| 
         MOVW      DP,#||FCL_params||+10 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 667,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 667,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||FCL_params||)+10 ; [CPU_FPU] |667| 
         MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |667| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 666,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 666,column 5,is_stmt,isa 0
         MOV32     R5H,@$BLOCKED(||FCL_params||)+22 ; [CPU_FPU] |666| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 667,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 667,column 5,is_stmt,isa 0
         MPYF32    R0H,R5H,R0H           ; [CPU_FPU] |667| 
         NOP       ; [CPU_ALU] 
         MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |667| 
         MOVW      DP,#||pi_id||+12      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 669,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 669,column 5,is_stmt,isa 0
         MPYF32    R6H,R0H,#16128        ; [CPU_FPU] |669| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 667,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 667,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+12,R0H ; [CPU_FPU] |667| 
         MOVW      DP,#||speed1||+6      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 681,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||speed1||)+6 ; [CPU_FPU] |681| 
         MOVW      DP,#||speedWePrev||   ; [CPU_ARAU] 
         MOV32     *-SP[2],R0H           ; [CPU_FPU] |681| 
@@ -3701,16 +3701,16 @@ $C$DW$186	.dwtag  DW_TAG_subprogram
         MOV32     R1H,*-SP[2]           ; [CPU_FPU] |681| 
 ||      MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |681| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 683,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 683,column 5,is_stmt,isa 0
         MOV32     @||speedWePrev||,R1H  ; [CPU_FPU] |683| 
         MOVW      DP,#||FCL_params||+14 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 666,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 666,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+14 ; [CPU_FPU] |666| 
         MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |666| 
         NOP       ; [CPU_ALU] 
         MPYF32    R1H,R5H,R1H           ; [CPU_FPU] |666| 
         MOVW      DP,#||pi_id||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 669,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 669,column 5,is_stmt,isa 0
         ADDF32    R5H,R1H,R6H           ; [CPU_FPU] |669| 
         SUBF32    R2H,R6H,R1H           ; [CPU_FPU] |669| 
         MOV32     @$BLOCKED(||pi_id||)+14,R5H ; [CPU_FPU] |669| 
@@ -3719,35 +3719,35 @@ $C$DW$186	.dwtag  DW_TAG_subprogram
 ||      MOV32     @$BLOCKED(||pi_id||)+16,R2H ; [CPU_FPU] |669| 
 
         MOVW      DP,#||pi_iq||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 679,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 679,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+14,R6H ; [CPU_FPU] |679| 
         MOVW      DP,#||pi_id||+10      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 666,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 666,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+10,R1H ; [CPU_FPU] |666| 
         MOVW      DP,#||pi_iq||+10      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 671,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 671,column 5,is_stmt,isa 0
 
         MOV32     @$BLOCKED(||pi_iq||)+10,R3H ; [CPU_FPU] |676| 
 ||      MPYF32    R4H,R2H,R4H           ; [CPU_FPU] |671| 
 
         MOVW      DP,#||pi_id||+8       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 676,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 676,column 5,is_stmt,isa 0
         MOV32     R1H,*-SP[4]           ; [CPU_FPU] |676| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 671,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 671,column 5,is_stmt,isa 0
 
         ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |681| 
 ||      MOV32     @$BLOCKED(||pi_id||)+8,R4H ; [CPU_FPU] |671| 
 
         MOVW      DP,#||pi_iq||+8       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 681,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+8,R0H ; [CPU_FPU] |681| 
 ||$C$L32||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 695,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 695,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |695| 
         TBIT      AL,#3                 ; [CPU_ALU] |695| 
         B         ||$C$L32||,NTC        ; [CPU_ALU] |695| 
         ; branchcc occurs ; [] |695| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 700,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 700,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |700| 
         AND       AL,#0xfff4            ; [CPU_ALU] |700| 
         SPM       #0                    ; [CPU_FPU] 
@@ -3772,7 +3772,7 @@ $C$DW$187	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$186, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$186, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$186, DW_AT_TI_end_line(0x2bf)
 	.dwattr $C$DW$186, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3788,11 +3788,11 @@ $C$DW$188	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$188, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$188, DW_AT_linkage_name("FCL_runPICtrl")
 	.dwattr $C$DW$188, DW_AT_external
-	.dwattr $C$DW$188, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$188, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$188, DW_AT_decl_line(0x186)
 	.dwattr $C$DW$188, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$188, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 391,column 1,is_stmt,address ||FCL_runPICtrl||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 391,column 1,is_stmt,address ||FCL_runPICtrl||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runPICtrl||
 
@@ -3871,7 +3871,7 @@ $C$DW$194	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -10
 ||$C$L33||:    
         MOVW      DP,#||PieCtrlRegs||+23 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 403,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 403,column 5,is_stmt,isa 0
         TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#0 ; [CPU_ALU] |403| 
         B         ||$C$L33||,NTC        ; [CPU_ALU] |403| 
         ; branchcc occurs ; [] |403| 
@@ -3901,21 +3901,21 @@ $C$DW$194	.dwtag  DW_TAG_variable
         ADDF32    R4H,R4H,R7H           ; [CPU_FPU] |403| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MPYF32    R3H,R6H,R4H           ; [CPU_FPU] |403| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 410,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 410,column 5,is_stmt,isa 0
         MPYF32    R5H,R1H,R7H           ; [CPU_FPU] |410| 
         MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |410| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 412,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 412,column 5,is_stmt,isa 0
         MPYF32    R4H,R0H,R7H           ; [CPU_FPU] |412| 
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |412| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 410,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 410,column 5,is_stmt,isa 0
         SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |410| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 412,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 412,column 5,is_stmt,isa 0
 
         MOV32     R3H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |412| 
 ||      ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |412| 
 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 410,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 410,column 5,is_stmt,isa 0
 
         MOV32     R7H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |410| 
 ||      SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |412| 
@@ -3929,7 +3929,7 @@ $C$DW$194	.dwtag  DW_TAG_variable
         MOV32     @$BLOCKED(||pi_iq||)+4,R3H ; [CPU_FPU] |410| 
   IACK  #0x0002
         MOVW      DP,#||pi_id||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 420,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 420,column 5,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||pi_id||)+14 ; [CPU_FPU] |420| 
         MPYF32    R2H,R2H,R3H           ; [CPU_FPU] |420| 
         MOV32     R4H,@$BLOCKED(||pi_id||)+8 ; [CPU_FPU] |420| 
@@ -3952,13 +3952,13 @@ $C$DW$194	.dwtag  DW_TAG_variable
 ||      MPYF32    R2H,R1H,R4H           ; [CPU_FPU] |423| 
 
 ||$C$L35||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 429,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 429,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |429| 
         TBIT      AL,#1                 ; [CPU_ALU] |429| 
         B         ||$C$L35||,NTC        ; [CPU_ALU] |429| 
         ; branchcc occurs ; [] |429| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 435,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 435,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_iq||)+6 ; [CPU_FPU] |435| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
 
@@ -3970,11 +3970,11 @@ $C$DW$194	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pwmCompA||      ; [CPU_ARAU] 
         SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |435| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 443,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 443,column 5,is_stmt,isa 0
         ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |443| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 435,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 435,column 5,is_stmt,isa 0
         MPYF32    R2H,R7H,R1H           ; [CPU_FPU] |435| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 443,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 443,column 5,is_stmt,isa 0
         MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |443| 
         MOVL      XAR6,@||pwmCompA||    ; [CPU_ALU] |443| 
         SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |443| 
@@ -4003,7 +4003,7 @@ $C$DW$194	.dwtag  DW_TAG_variable
         MOV32     *+XAR6[0],R1H         ; [CPU_FPU] |443| 
         MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |443| 
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |443| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 445,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 445,column 5,is_stmt,isa 0
         MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |445| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -4023,7 +4023,7 @@ $C$DW$195	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$188, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$188, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$188, DW_AT_TI_end_line(0x1c0)
 	.dwattr $C$DW$188, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4039,11 +4039,11 @@ $C$DW$196	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$196, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$196, DW_AT_linkage_name("FCL_runComplexCtrlWrap")
 	.dwattr $C$DW$196, DW_AT_external
-	.dwattr $C$DW$196, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$196, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$196, DW_AT_decl_line(0x41c)
 	.dwattr $C$DW$196, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$196, DW_AT_TI_max_frame_size(-18)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1053,column 1,is_stmt,address ||FCL_runComplexCtrlWrap||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1053,column 1,is_stmt,address ||FCL_runComplexCtrlWrap||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runComplexCtrlWrap||
 
@@ -4095,7 +4095,7 @@ $C$DW$197	.dwtag  DW_TAG_variable
         ADDB      SP,#8                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -18
         MOVW      DP,#||FCL_params||+26 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1055,column 24,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1055,column 24,is_stmt,isa 0
         MOVIZ     R0H,#16275            ; [CPU_FPU] |1055| 
         MOV32     R1H,@$BLOCKED(||FCL_params||)+26 ; [CPU_FPU] |1055| 
         MOVXI     R0H,#13107            ; [CPU_FPU] |1055| 
@@ -4106,7 +4106,7 @@ $C$DW$197	.dwtag  DW_TAG_variable
         MOV32     R1H,@$BLOCKED(||FCL_params||)+20 ; [CPU_FPU] |1055| 
         DIVF32    R4H,R1H,R0H           ; [CPU_FPU] |1055| 
   IACK  #0x0008
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1063,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1063,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||FCL_params||)+30 ; [CPU_FPU] |1063| 
         MOVW      DP,#||speed1||+6      ; [CPU_ARAU] 
         MOV32     R2H,@$BLOCKED(||speed1||)+6 ; [CPU_FPU] |1063| 
@@ -4118,32 +4118,32 @@ $C$DW$197	.dwtag  DW_TAG_variable
         MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |1063| 
 ||      MOV32     R3H,@$BLOCKED(||FCL_params||)+10 ; [CPU_FPU] |1066| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1066,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1066,column 5,is_stmt,isa 0
         MOV32     R2H,@$BLOCKED(||FCL_params||)+14 ; [CPU_FPU] |1066| 
         DIVF32    R2H,R3H,R2H           ; [CPU_FPU] |1066| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1063,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1063,column 5,is_stmt,isa 0
         DIV2PIF32 R5H,R0H               ; [CPU_FPU] |1063| 
         MOVW      DP,#||Q_cla||         ; [CPU_ARAU] 
         COSPUF32  R3H,R5H               ; [CPU_FPU] |1063| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1064,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1064,column 5,is_stmt,isa 0
         DIV2PIF32 R0H,R0H               ; [CPU_FPU] |1064| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1066,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1066,column 5,is_stmt,isa 0
         NEGF32    R2H,R2H               ; [CPU_FPU] |1066| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1064,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1064,column 5,is_stmt,isa 0
         SINPUF32  R0H,R0H               ; [CPU_FPU] |1064| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1063,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1063,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||),R3H ; [CPU_FPU] |1063| 
         MOVW      DP,#||D_cpu||         ; [CPU_ARAU] 
         MOV32     @$BLOCKED(||D_cpu||),R3H ; [CPU_FPU] |1063| 
         MOVW      DP,#||Q_cla||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1064,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1064,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+2,R0H ; [CPU_FPU] |1064| 
         MOVW      DP,#||D_cpu||+2       ; [CPU_ARAU] 
 
         MPYF32    R0H,R1H,R2H           ; [CPU_FPU] |1066| 
 ||      MOV32     @$BLOCKED(||D_cpu||)+2,R0H ; [CPU_FPU] |1064| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1066,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1066,column 5,is_stmt,isa 0
 $C$DW$198	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$198, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$198, DW_AT_name("expf")
@@ -4152,7 +4152,7 @@ $C$DW$198	.dwtag  DW_TAG_TI_branch
         LCR       #||expf||             ; [CPU_ALU] |1066| 
         ; call occurs [#||expf||] ; [] |1066| 
         MOVW      DP,#||FCL_params||+16 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1067,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1067,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+16 ; [CPU_FPU] |1067| 
         MOV32     R2H,@$BLOCKED(||FCL_params||)+12 ; [CPU_FPU] |1067| 
         DIVF32    R1H,R2H,R1H           ; [CPU_FPU] |1067| 
@@ -4161,12 +4161,12 @@ $C$DW$198	.dwtag  DW_TAG_TI_branch
         MOV32     R2H,@$BLOCKED(||FCL_params||)+8 ; [CPU_FPU] |1067| 
         MOVW      DP,#||D_cpu||+4       ; [CPU_ARAU] 
         NEGF32    R1H,R1H               ; [CPU_FPU] |1067| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1066,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1066,column 5,is_stmt,isa 0
 
         MPYF32    R0H,R2H,R1H           ; [CPU_FPU] |1067| 
 ||      MOV32     @$BLOCKED(||D_cpu||)+4,R0H ; [CPU_FPU] |1066| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1067,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1067,column 5,is_stmt,isa 0
 $C$DW$199	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$199, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$199, DW_AT_name("expf")
@@ -4175,7 +4175,7 @@ $C$DW$199	.dwtag  DW_TAG_TI_branch
         LCR       #||expf||             ; [CPU_ALU] |1067| 
         ; call occurs [#||expf||] ; [] |1067| 
         MOVW      DP,#||speed1||+6      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1083,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1083,column 5,is_stmt,isa 0
         MOV32     R6H,@$BLOCKED(||speed1||)+6 ; [CPU_FPU] |1083| 
         MOVW      DP,#||speedWePrev||   ; [CPU_ARAU] 
         MOV32     R1H,@||speedWePrev||  ; [CPU_FPU] |1083| 
@@ -4185,28 +4185,28 @@ $C$DW$199	.dwtag  DW_TAG_TI_branch
         MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |1083| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MOV32     *-SP[4],R1H           ; [CPU_FPU] |1083| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1092,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1092,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |1092| 
         MOVW      DP,#||Q_cla||+8       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
         MOV32     R2H,@$BLOCKED(||Q_cla||)+8 ; [CPU_FPU] |1082| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1092,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1092,column 5,is_stmt,isa 0
         SUBF32    R1H,R1H,R2H           ; [CPU_FPU] |1092| 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
         MOV32     *-SP[6],R1H           ; [CPU_FPU] |1092| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1093,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1093,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |1093| 
         MOVW      DP,#||Q_cla||+10      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1083,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1083,column 5,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||Q_cla||)+10 ; [CPU_FPU] |1083| 
         MOVW      DP,#||FCL_params||+8  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1093,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1093,column 5,is_stmt,isa 0
         SUBF32    R1H,R1H,R3H           ; [CPU_FPU] |1093| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1069,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1069,column 5,is_stmt,isa 0
         MOV32     R7H,@$BLOCKED(||FCL_params||)+8 ; [CPU_FPU] |1069| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1093,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1093,column 5,is_stmt,isa 0
         MOV32     *-SP[8],R1H           ; [CPU_FPU] |1093| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1069,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1069,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+22 ; [CPU_FPU] |1069| 
         MPYF32    R1H,R7H,R1H           ; [CPU_FPU] |1069| 
         NOP       ; [CPU_ALU] 
@@ -4225,13 +4225,13 @@ $C$DW$199	.dwtag  DW_TAG_TI_branch
         SQRTF32   R5H,R1H               ; [CPU_FPU] |1069| 
         NOP       ; [CPU_ALU] 
         MOV32     R1H,@$BLOCKED(||FCL_params||)+10 ; [CPU_FPU] |1069| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1067,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1067,column 5,is_stmt,isa 0
 
         MPYF32    R1H,R4H,R1H           ; [CPU_FPU] |1069| 
 ||      MOV32     *-SP[2],R0H           ; [CPU_FPU] |1067| 
 
         MOVW      DP,#||D_cpu||+4       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1069,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1069,column 5,is_stmt,isa 0
 
         MOV32     R5H,@$BLOCKED(||D_cpu||)+4 ; [CPU_FPU] |1069| 
 ||      MPYF32    R0H,R5H,R1H           ; [CPU_FPU] |1069| 
@@ -4246,7 +4246,7 @@ $C$DW$199	.dwtag  DW_TAG_TI_branch
         NOP       ; [CPU_ALU] 
         MOV32     @$BLOCKED(||D_cpu||)+6,R1H ; [CPU_FPU] |1069| 
         MOVW      DP,#||FCL_params||+24 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1072,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1072,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||FCL_params||)+24 ; [CPU_FPU] |1072| 
         MPYF32    R7H,R7H,R0H           ; [CPU_FPU] |1072| 
         NOP       ; [CPU_ALU] 
@@ -4273,28 +4273,28 @@ $C$DW$199	.dwtag  DW_TAG_TI_branch
 
         SUBF32    R7H,#16256,R0H        ; [CPU_FPU] |1072| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1098,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1098,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1098| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1072,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1072,column 5,is_stmt,isa 0
         DIVF32    R4H,R4H,R7H           ; [CPU_FPU] |1072| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1098,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1098,column 5,is_stmt,isa 0
         AND       AL,#0xfffa            ; [CPU_ALU] |1098| 
         MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |1098| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
         NEGF32    R1H,R1H               ; [CPU_FPU] |1082| 
         MOVW      DP,#||Q_cla||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1072,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1072,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+6,R4H ; [CPU_FPU] |1072| 
         MOVW      DP,#||speedWePrev||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
 
         MOV32     @||speedWePrev||,R6H  ; [CPU_FPU] |1086| 
 ||      MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |1082| 
 
         MOVW      DP,#||Q_cla||+4       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1083,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1083,column 5,is_stmt,isa 0
         NEGF32    R4H,R4H               ; [CPU_FPU] |1083| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1067,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1067,column 5,is_stmt,isa 0
 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |1083| 
 ||      MOV32     @$BLOCKED(||Q_cla||)+4,R0H ; [CPU_FPU] |1067| 
@@ -4304,33 +4304,33 @@ $C$DW$199	.dwtag  DW_TAG_TI_branch
         MOV32     R0H,*-SP[6]           ; [CPU_FPU] |1067| 
 ||      MPYF32    R2H,R0H,R3H           ; [CPU_FPU] |1083| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1092,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1092,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+2,R0H ; [CPU_FPU] |1092| 
         MOVW      DP,#||pi_iq||+2       ; [CPU_ARAU] 
         MOV32     R0H,*-SP[8]           ; [CPU_FPU] |1092| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
 
         MOV32     @$BLOCKED(||pi_iq||)+2,R0H ; [CPU_FPU] |1093| 
 ||      MPYF32    R1H,R5H,R1H           ; [CPU_FPU] |1082| 
 
         MOVW      DP,#||D_cpu||+12      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1098,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1098,column 5,is_stmt,isa 0
         MOV32     R0H,*-SP[4]           ; [CPU_FPU] |1098| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1082,column 5,is_stmt,isa 0
 
         ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |1083| 
 ||      MOV32     @$BLOCKED(||D_cpu||)+12,R1H ; [CPU_FPU] |1082| 
 
         MOVW      DP,#||Q_cla||+12      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1083,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1083,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+12,R0H ; [CPU_FPU] |1083| 
 ||$C$L36||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1104,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1104,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1104| 
         TBIT      AL,#3                 ; [CPU_ALU] |1104| 
         B         ||$C$L36||,NTC        ; [CPU_ALU] |1104| 
         ; branchcc occurs ; [] |1104| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1105,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1105,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1105| 
         AND       AL,#0xfff7            ; [CPU_ALU] |1105| 
         MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |1105| 
@@ -4354,7 +4354,7 @@ $C$DW$200	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$196, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$196, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$196, DW_AT_TI_end_line(0x454)
 	.dwattr $C$DW$196, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4370,11 +4370,11 @@ $C$DW$201	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$201, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$201, DW_AT_linkage_name("FCL_runComplexCtrl")
 	.dwattr $C$DW$201, DW_AT_external
-	.dwattr $C$DW$201, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$201, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$201, DW_AT_decl_line(0x32f)
 	.dwattr $C$DW$201, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$201, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 816,column 1,is_stmt,address ||FCL_runComplexCtrl||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 816,column 1,is_stmt,address ||FCL_runComplexCtrl||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runComplexCtrl||
 
@@ -4454,7 +4454,7 @@ $C$DW$207	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -10
 ||$C$L37||:    
         MOVW      DP,#||PieCtrlRegs||+23 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 828,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 828,column 5,is_stmt,isa 0
         TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#0 ; [CPU_ALU] |828| 
         B         ||$C$L37||,NTC        ; [CPU_ALU] |828| 
         ; branchcc occurs ; [] |828| 
@@ -4484,34 +4484,34 @@ $C$DW$207	.dwtag  DW_TAG_variable
         ADDF32    R4H,R4H,R7H           ; [CPU_FPU] |828| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MPYF32    R3H,R6H,R4H           ; [CPU_FPU] |828| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 834,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 834,column 5,is_stmt,isa 0
         MPYF32    R5H,R1H,R7H           ; [CPU_FPU] |834| 
         MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |834| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 836,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 836,column 5,is_stmt,isa 0
         MPYF32    R4H,R0H,R7H           ; [CPU_FPU] |836| 
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |836| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 834,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 834,column 5,is_stmt,isa 0
         SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |834| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 836,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 836,column 5,is_stmt,isa 0
 
         MOV32     R3H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |836| 
 ||      ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |836| 
 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 834,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 834,column 5,is_stmt,isa 0
 
         MOV32     R7H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |834| 
 ||      SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |836| 
 
         MOVW      DP,#||Q_cla||+8       ; [CPU_ARAU] 
         SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |834| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 836,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 836,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+8,R2H ; [CPU_FPU] |836| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 834,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 834,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+10,R3H ; [CPU_FPU] |834| 
   IACK  #0x0004
         MOVW      DP,#||D_cpu||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||D_cpu||)+2 ; [CPU_FPU] |126| 
 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |126| 
@@ -4529,11 +4529,11 @@ $C$DW$207	.dwtag  DW_TAG_variable
         ADDF32    R4H,R3H,R5H           ; [CPU_FPU] |126| 
 ||      MOV32     R6H,@$BLOCKED(||pi_id||)+18 ; [CPU_FPU] |133| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
         MOV32     R7H,@$BLOCKED(||pi_id||)+20 ; [CPU_FPU] |133| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+6,R4H ; [CPU_FPU] |126| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
         MINF32    R6H,R4H               ; [CPU_FPU] |133| 
         MOV32     R4H,R6H               ; [CPU_FPU] |133| 
         MAXF32    R4H,R7H               ; [CPU_FPU] |133| 
@@ -4545,13 +4545,13 @@ $C$DW$207	.dwtag  DW_TAG_variable
 ||      MPYF32    R2H,R1H,R4H           ; [CPU_FPU] |845| 
 
 ||$C$L39||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 851,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 851,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |851| 
         TBIT      AL,#2                 ; [CPU_ALU] |851| 
         B         ||$C$L39||,NTC        ; [CPU_ALU] |851| 
         ; branchcc occurs ; [] |851| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 857,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 857,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_iq||)+6 ; [CPU_FPU] |857| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
 
@@ -4563,11 +4563,11 @@ $C$DW$207	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pwmCompA||      ; [CPU_ARAU] 
         SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |857| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 865,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 865,column 5,is_stmt,isa 0
         ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |865| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 857,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 857,column 5,is_stmt,isa 0
         MPYF32    R2H,R7H,R1H           ; [CPU_FPU] |857| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 865,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 865,column 5,is_stmt,isa 0
         MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |865| 
         MOVL      XAR6,@||pwmCompA||    ; [CPU_ALU] |865| 
         SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |865| 
@@ -4596,7 +4596,7 @@ $C$DW$207	.dwtag  DW_TAG_variable
         MOV32     *+XAR6[0],R1H         ; [CPU_FPU] |865| 
         MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |865| 
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |865| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 866,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 866,column 5,is_stmt,isa 0
         MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |866| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -4616,7 +4616,7 @@ $C$DW$208	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$201, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$201, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$201, DW_AT_TI_end_line(0x364)
 	.dwattr $C$DW$201, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4632,11 +4632,11 @@ $C$DW$209	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$209, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$209, DW_AT_linkage_name("FCL_runAbsEncPICtrlWrap")
 	.dwattr $C$DW$209, DW_AT_external
-	.dwattr $C$DW$209, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$209, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$209, DW_AT_decl_line(0x2c5)
 	.dwattr $C$DW$209, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$209, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 710,column 1,is_stmt,address ||FCL_runAbsEncPICtrlWrap||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 710,column 1,is_stmt,address ||FCL_runAbsEncPICtrlWrap||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runAbsEncPICtrlWrap||
 
@@ -4668,7 +4668,7 @@ $C$DW$209	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||FCL_params||+26 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 724,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 724,column 5,is_stmt,isa 0
         MOVIZ     R0H,#16147            ; [CPU_FPU] |724| 
         MOV32     R1H,@$BLOCKED(||FCL_params||)+26 ; [CPU_FPU] |724| 
         MOVXI     R0H,#13107            ; [CPU_FPU] |724| 
@@ -4678,14 +4678,14 @@ $C$DW$209	.dwtag  DW_TAG_subprogram
         DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |724| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 753,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 753,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |753| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 725,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 725,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+10 ; [CPU_FPU] |725| 
         MPYF32    R2H,R0H,R1H           ; [CPU_FPU] |725| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 724,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 724,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+22 ; [CPU_FPU] |724| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 725,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 725,column 5,is_stmt,isa 0
         MPYF32    R3H,R1H,R2H           ; [CPU_FPU] |725| 
         MOV32     R2H,@$BLOCKED(||FCL_params||)+8 ; [CPU_FPU] |725| 
 
@@ -4695,17 +4695,17 @@ $C$DW$209	.dwtag  DW_TAG_subprogram
 	.dwcfi	save_reg_to_mem, 59, 2
 	.dwcfi	cfa_offset, -4
         MOVW      DP,#||pi_id||+12      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 727,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 727,column 5,is_stmt,isa 0
         MPYF32    R4H,R3H,#16128        ; [CPU_FPU] |727| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 725,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 725,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+12,R3H ; [CPU_FPU] |725| 
         MOVW      DP,#||FCL_params||+14 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 724,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 724,column 5,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||FCL_params||)+14 ; [CPU_FPU] |724| 
         MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |724| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 753,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 753,column 5,is_stmt,isa 0
         AND       AL,#0xfffd            ; [CPU_ALU] |753| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 724,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 724,column 5,is_stmt,isa 0
 
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |724| 
 ||      MOV32     *SP++,R5H             ; [CPU_FPU] 
@@ -4715,7 +4715,7 @@ $C$DW$209	.dwtag  DW_TAG_subprogram
         MOVW      DP,#||pi_id||+10      ; [CPU_ARAU] 
         MOV32     @$BLOCKED(||pi_id||)+10,R3H ; [CPU_FPU] |724| 
         MOVW      DP,#||FCL_params||+12 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 727,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 727,column 5,is_stmt,isa 0
 
         ADDF32    R6H,R3H,R4H           ; [CPU_FPU] |727| 
 ||      MOV32     *SP++,R6H             ; [CPU_FPU] 
@@ -4725,7 +4725,7 @@ $C$DW$209	.dwtag  DW_TAG_subprogram
         MOV32     R3H,@$BLOCKED(||FCL_params||)+12 ; [CPU_FPU] |735| 
 ||      SUBF32    R1H,R4H,R3H           ; [CPU_FPU] |727| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 734,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 734,column 5,is_stmt,isa 0
 
         MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |735| 
 ||      MOV32     R4H,@$BLOCKED(||FCL_params||)+16 ; [CPU_FPU] |734| 
@@ -4733,90 +4733,90 @@ $C$DW$209	.dwtag  DW_TAG_subprogram
         MOV32     R0H,@$BLOCKED(||FCL_params||)+24 ; [CPU_FPU] |734| 
 ||      MPYF32    R4H,R0H,R4H           ; [CPU_FPU] |734| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 735,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 735,column 5,is_stmt,isa 0
         MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |735| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 753,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 753,column 5,is_stmt,isa 0
         MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |753| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 735,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 735,column 5,is_stmt,isa 0
         MPYF32    R2H,R2H,R3H           ; [CPU_FPU] |735| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 734,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 734,column 5,is_stmt,isa 0
         MPYF32    R0H,R0H,R4H           ; [CPU_FPU] |734| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 737,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 737,column 5,is_stmt,isa 0
         MPYF32    R4H,R2H,#16128        ; [CPU_FPU] |737| 
         MOVW      DP,#||pi_iq||+16      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 734,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 734,column 5,is_stmt,isa 0
 
         SUBF32    R3H,R4H,R0H           ; [CPU_FPU] |737| 
 ||      MOV32     @$BLOCKED(||pi_iq||)+10,R0H ; [CPU_FPU] |734| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 735,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 735,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+12,R2H ; [CPU_FPU] |735| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 737,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 737,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+16,R3H ; [CPU_FPU] |737| 
 
         MOV32     R0H,@$BLOCKED(||pi_iq||)+4 ; [CPU_FPU] |739| 
 ||      ADDF32    R5H,R0H,R4H           ; [CPU_FPU] |737| 
 
         MOVW      DP,#||speedWe||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 739,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 739,column 5,is_stmt,isa 0
         MOV32     R2H,@||speedWe||      ; [CPU_FPU] |739| 
         MOVW      DP,#||speedWePrev||   ; [CPU_ARAU] 
         MOV32     R4H,@||speedWePrev||  ; [CPU_FPU] |739| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 741,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 741,column 5,is_stmt,isa 0
         MOV32     @||speedWePrev||,R2H  ; [CPU_FPU] |741| 
         MOVW      DP,#||FCL_params||+28 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 739,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 739,column 5,is_stmt,isa 0
 
         MOV32     R2H,@$BLOCKED(||FCL_params||)+28 ; [CPU_FPU] |739| 
 ||      SUBF32    R4H,R2H,R4H           ; [CPU_FPU] |739| 
 
         MOVW      DP,#||pi_id||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 727,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 727,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+14,R6H ; [CPU_FPU] |727| 
         MOVW      DP,#||pi_iq||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 737,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 737,column 5,is_stmt,isa 0
 
         MOV32     @$BLOCKED(||pi_iq||)+14,R5H ; [CPU_FPU] |737| 
 ||      MPYF32    R3H,R3H,R0H           ; [CPU_FPU] |739| 
 
         MOVW      DP,#||pi_id||+16      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 727,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 727,column 5,is_stmt,isa 0
 
         MOV32     @$BLOCKED(||pi_id||)+16,R1H ; [CPU_FPU] |727| 
 ||      MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |739| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 747,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 747,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |747| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 729,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 729,column 5,is_stmt,isa 0
 
         MOV32     R3H,@$BLOCKED(||pi_id||)+4 ; [CPU_FPU] |729| 
 ||      ADDF32    R2H,R2H,R3H           ; [CPU_FPU] |739| 
 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 747,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 747,column 5,is_stmt,isa 0
         SUBF32    R4H,R4H,R3H           ; [CPU_FPU] |747| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 729,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 729,column 5,is_stmt,isa 0
 
         MOV32     R3H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |748| 
 ||      MPYF32    R1H,R1H,R3H           ; [CPU_FPU] |729| 
 
         MOVW      DP,#||pi_id||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 747,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 747,column 5,is_stmt,isa 0
 
         MOV32     @$BLOCKED(||pi_id||)+2,R4H ; [CPU_FPU] |747| 
 ||      SUBF32    R0H,R3H,R0H           ; [CPU_FPU] |748| 
 
         MOVW      DP,#||pi_iq||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 748,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 748,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+2,R0H ; [CPU_FPU] |748| 
         MOVW      DP,#||pi_id||+8       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 729,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 729,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+8,R1H ; [CPU_FPU] |729| 
         MOVW      DP,#||pi_iq||+8       ; [CPU_ARAU] 
         MOV32     R6H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -6
 	.dwcfi	restore_reg, 67
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 739,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 739,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+8,R2H ; [CPU_FPU] |739| 
         MOV32     R5H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -4
@@ -4830,7 +4830,7 @@ $C$DW$210	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$209, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$209, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$209, DW_AT_TI_end_line(0x2f2)
 	.dwattr $C$DW$209, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4846,11 +4846,11 @@ $C$DW$211	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$211, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$211, DW_AT_linkage_name("FCL_runAbsEncPICtrl")
 	.dwattr $C$DW$211, DW_AT_external
-	.dwattr $C$DW$211, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$211, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$211, DW_AT_decl_line(0x207)
 	.dwattr $C$DW$211, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$211, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 520,column 1,is_stmt,address ||FCL_runAbsEncPICtrl||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 520,column 1,is_stmt,address ||FCL_runAbsEncPICtrl||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runAbsEncPICtrl||
 
@@ -4919,7 +4919,7 @@ $C$DW$217	.dwtag  DW_TAG_variable
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 532,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 532,column 5,is_stmt,isa 0
         MOV32     R0H,@||pangle||       ; [CPU_FPU] |532| 
         MOVW      DP,#||AdcIntFlag||    ; [CPU_ARAU] 
         SINPUF32  R1H,R0H               ; [CPU_FPU] |532| 
@@ -4954,21 +4954,21 @@ $C$DW$217	.dwtag  DW_TAG_variable
         ADDF32    R4H,R4H,R7H           ; [CPU_FPU] |532| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MPYF32    R3H,R6H,R4H           ; [CPU_FPU] |532| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 539,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 539,column 5,is_stmt,isa 0
         MPYF32    R5H,R1H,R7H           ; [CPU_FPU] |539| 
         MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |539| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 541,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 541,column 5,is_stmt,isa 0
         MPYF32    R4H,R0H,R7H           ; [CPU_FPU] |541| 
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |541| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 539,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 539,column 5,is_stmt,isa 0
         SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |539| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 541,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 541,column 5,is_stmt,isa 0
 
         MOV32     R3H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |541| 
 ||      ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |541| 
 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 539,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 539,column 5,is_stmt,isa 0
 
         MOV32     R7H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |539| 
 ||      SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |541| 
@@ -4982,7 +4982,7 @@ $C$DW$217	.dwtag  DW_TAG_variable
         MOV32     @$BLOCKED(||pi_iq||)+4,R3H ; [CPU_FPU] |539| 
   IACK  #0x0002
         MOVW      DP,#||pi_id||+14      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 548,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 548,column 5,is_stmt,isa 0
         MOV32     R3H,@$BLOCKED(||pi_id||)+14 ; [CPU_FPU] |548| 
         MPYF32    R2H,R2H,R3H           ; [CPU_FPU] |548| 
         MOV32     R4H,@$BLOCKED(||pi_id||)+8 ; [CPU_FPU] |548| 
@@ -5005,13 +5005,13 @@ $C$DW$217	.dwtag  DW_TAG_variable
 ||      MPYF32    R2H,R1H,R4H           ; [CPU_FPU] |551| 
 
 ||$C$L41||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 557,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 557,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |557| 
         TBIT      AL,#1                 ; [CPU_ALU] |557| 
         B         ||$C$L41||,NTC        ; [CPU_ALU] |557| 
         ; branchcc occurs ; [] |557| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 563,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 563,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_iq||)+6 ; [CPU_FPU] |563| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
 
@@ -5023,11 +5023,11 @@ $C$DW$217	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pwmCompA||      ; [CPU_ARAU] 
         SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |563| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 571,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 571,column 5,is_stmt,isa 0
         ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |571| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 563,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 563,column 5,is_stmt,isa 0
         MPYF32    R2H,R7H,R1H           ; [CPU_FPU] |563| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 571,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 571,column 5,is_stmt,isa 0
         MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |571| 
         MOVL      XAR6,@||pwmCompA||    ; [CPU_ALU] |571| 
         SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |571| 
@@ -5056,7 +5056,7 @@ $C$DW$217	.dwtag  DW_TAG_variable
         MOV32     *+XAR6[0],R1H         ; [CPU_FPU] |571| 
         MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |571| 
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |571| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 573,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 573,column 5,is_stmt,isa 0
         MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |573| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -5076,7 +5076,7 @@ $C$DW$218	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$211, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$211, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$211, DW_AT_TI_end_line(0x240)
 	.dwattr $C$DW$211, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5092,11 +5092,11 @@ $C$DW$219	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$219, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$219, DW_AT_linkage_name("FCL_runAbsEncComplexCtrlWrap")
 	.dwattr $C$DW$219, DW_AT_external
-	.dwattr $C$DW$219, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$219, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$219, DW_AT_decl_line(0x45a)
 	.dwattr $C$DW$219, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$219, DW_AT_TI_max_frame_size(-14)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1115,column 1,is_stmt,address ||FCL_runAbsEncComplexCtrlWrap||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1115,column 1,is_stmt,address ||FCL_runAbsEncComplexCtrlWrap||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runAbsEncComplexCtrlWrap||
 
@@ -5147,7 +5147,7 @@ $C$DW$220	.dwtag  DW_TAG_variable
         ADDB      SP,#4                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -14
         MOVW      DP,#||FCL_params||+30 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+30 ; [CPU_FPU] |1120| 
         MOVW      DP,#||speedWe||       ; [CPU_ARAU] 
         MOV32     R2H,@||speedWe||      ; [CPU_FPU] |1120| 
@@ -5156,43 +5156,43 @@ $C$DW$220	.dwtag  DW_TAG_variable
         MPYF32    R2H,R2H,R1H           ; [CPU_FPU] |1120| 
 ||      MOV32     R3H,@$BLOCKED(||FCL_params||)+8 ; [CPU_FPU] |1120| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
         MOV32     R0H,@$BLOCKED(||FCL_params||)+14 ; [CPU_FPU] |1123| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
 
         MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |1120| 
 ||      MOV32     R4H,@$BLOCKED(||FCL_params||)+26 ; [CPU_FPU] |1117| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+10 ; [CPU_FPU] |1123| 
         DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |1123| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
         DIV2PIF32 R1H,R2H               ; [CPU_FPU] |1120| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
         MOV32     R5H,@$BLOCKED(||FCL_params||)+20 ; [CPU_FPU] |1117| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
         COSPUF32  R1H,R1H               ; [CPU_FPU] |1120| 
         MOVW      DP,#||Q_cla||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1121,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1121,column 5,is_stmt,isa 0
         DIV2PIF32 R2H,R2H               ; [CPU_FPU] |1121| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
         NEGF32    R0H,R0H               ; [CPU_FPU] |1123| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||),R1H ; [CPU_FPU] |1120| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1121,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1121,column 5,is_stmt,isa 0
         SINPUF32  R2H,R2H               ; [CPU_FPU] |1121| 
         MOVW      DP,#||D_cpu||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1120,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||D_cpu||),R1H ; [CPU_FPU] |1120| 
         MOVW      DP,#||Q_cla||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1121,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1121,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+2,R2H ; [CPU_FPU] |1121| 
         MOVW      DP,#||D_cpu||+2       ; [CPU_ARAU] 
 
         MOV32     @$BLOCKED(||D_cpu||)+2,R2H ; [CPU_FPU] |1121| 
 ||      MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |1123| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
 $C$DW$221	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$221, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$221, DW_AT_name("expf")
@@ -5201,7 +5201,7 @@ $C$DW$221	.dwtag  DW_TAG_TI_branch
         LCR       #||expf||             ; [CPU_ALU] |1123| 
         ; call occurs [#||expf||] ; [] |1123| 
         MOVW      DP,#||FCL_params||+16 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1124,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1124,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+16 ; [CPU_FPU] |1124| 
         MOV32     R2H,@$BLOCKED(||FCL_params||)+12 ; [CPU_FPU] |1124| 
         DIVF32    R1H,R2H,R1H           ; [CPU_FPU] |1124| 
@@ -5210,12 +5210,12 @@ $C$DW$221	.dwtag  DW_TAG_TI_branch
         MOV32     R2H,@$BLOCKED(||FCL_params||)+8 ; [CPU_FPU] |1124| 
         MOVW      DP,#||D_cpu||+4       ; [CPU_ARAU] 
         NEGF32    R1H,R1H               ; [CPU_FPU] |1124| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1123,column 5,is_stmt,isa 0
 
         MPYF32    R0H,R2H,R1H           ; [CPU_FPU] |1124| 
 ||      MOV32     @$BLOCKED(||D_cpu||)+4,R0H ; [CPU_FPU] |1123| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1124,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1124,column 5,is_stmt,isa 0
 $C$DW$222	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$222, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$222, DW_AT_name("expf")
@@ -5227,30 +5227,30 @@ $C$DW$222	.dwtag  DW_TAG_TI_branch
         MOV32     R3H,R0H               ; [CPU_FPU] |1124| 
         MOV32     @$BLOCKED(||Q_cla||)+4,R0H ; [CPU_FPU] |1124| 
         MOVW      DP,#||FCL_params||+8  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1126,column 5,is_stmt,isa 0
         MOV32     R1H,@$BLOCKED(||FCL_params||)+8 ; [CPU_FPU] |1126| 
         MOV32     R0H,@$BLOCKED(||FCL_params||)+22 ; [CPU_FPU] |1126| 
         MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |1126| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
         DIV2PIF32 R2H,R0H               ; [CPU_FPU] |1126| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
         MOVIZ     R0H,#16275            ; [CPU_FPU] |1117| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1126,column 5,is_stmt,isa 0
         COSPUF32  R2H,R2H               ; [CPU_FPU] |1126| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
         MOVXI     R0H,#13107            ; [CPU_FPU] |1117| 
         MPYF32    R0H,R0H,R4H           ; [CPU_FPU] |1117| 
         NOP       ; [CPU_ALU] 
         MPYF32    R4H,R0H,#16128        ; [CPU_FPU] |1117| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1126,column 5,is_stmt,isa 0
         ADDF32    R0H,R2H,R2H           ; [CPU_FPU] |1126| 
         NOP       ; [CPU_ALU] 
         SUBF32    R0H,#16384,R0H        ; [CPU_FPU] |1126| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1117,column 24,is_stmt,isa 0
         DIVF32    R4H,R5H,R4H           ; [CPU_FPU] |1117| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1126,column 5,is_stmt,isa 0
         SQRTF32   R6H,R0H               ; [CPU_FPU] |1126| 
         MOV32     R2H,@$BLOCKED(||FCL_params||)+10 ; [CPU_FPU] |1126| 
         MOVW      DP,#||D_cpu||+4       ; [CPU_ARAU] 
@@ -5269,7 +5269,7 @@ $C$DW$222	.dwtag  DW_TAG_TI_branch
         NOP       ; [CPU_ALU] 
         MOV32     @$BLOCKED(||D_cpu||)+6,R2H ; [CPU_FPU] |1126| 
         MOVW      DP,#||FCL_params||+24 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1129,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1129,column 5,is_stmt,isa 0
         MOV32     R5H,@$BLOCKED(||FCL_params||)+24 ; [CPU_FPU] |1129| 
         MPYF32    R5H,R1H,R5H           ; [CPU_FPU] |1129| 
         MOV32     R1H,@$BLOCKED(||FCL_params||)+12 ; [CPU_FPU] |1129| 
@@ -5292,22 +5292,22 @@ $C$DW$222	.dwtag  DW_TAG_TI_branch
         NOP       ; [CPU_ALU] 
         MPYF32    R1H,R4H,R1H           ; [CPU_FPU] |1129| 
         SUBF32    R4H,#16256,R3H        ; [CPU_FPU] |1129| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1155,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1155,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1155| 
         AND       AL,#0xfffb            ; [CPU_ALU] |1155| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1129,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1129,column 5,is_stmt,isa 0
         DIVF32    R1H,R1H,R4H           ; [CPU_FPU] |1129| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1155,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1155,column 5,is_stmt,isa 0
         MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |1155| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
         NEGF32    R2H,R2H               ; [CPU_FPU] |1139| 
         MOVW      DP,#||Q_cla||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1140,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1140,column 5,is_stmt,isa 0
         MOV32     R6H,@||speedWe||      ; [CPU_FPU] |1140| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1129,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1129,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+6,R1H ; [CPU_FPU] |1129| 
         MOVW      DP,#||speedWePrev||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1140,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1140,column 5,is_stmt,isa 0
         MOV32     R4H,@||speedWePrev||  ; [CPU_FPU] |1140| 
         MOVW      DP,#||FCL_params||+28 ; [CPU_ARAU] 
         SUBF32    R5H,R6H,R4H           ; [CPU_FPU] |1140| 
@@ -5316,28 +5316,28 @@ $C$DW$222	.dwtag  DW_TAG_TI_branch
         MPYF32    R4H,R5H,R4H           ; [CPU_FPU] |1140| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MOV32     *-SP[2],R4H           ; [CPU_FPU] |1140| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1149,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1149,column 5,is_stmt,isa 0
         MOV32     R5H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |1149| 
         MOVW      DP,#||Q_cla||+8       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||Q_cla||)+8 ; [CPU_FPU] |1139| 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1149,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1149,column 5,is_stmt,isa 0
         SUBF32    R5H,R5H,R4H           ; [CPU_FPU] |1149| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
 
         MOV32     R7H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |1150| 
 ||      MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |1139| 
 
         MOVW      DP,#||Q_cla||+10      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1149,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1149,column 5,is_stmt,isa 0
         MOV32     *-SP[4],R5H           ; [CPU_FPU] |1149| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
 
         MOV32     R5H,@$BLOCKED(||Q_cla||)+10 ; [CPU_FPU] |1140| 
 ||      MPYF32    R0H,R0H,R2H           ; [CPU_FPU] |1139| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1140,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1140,column 5,is_stmt,isa 0
         MPYF32    R1H,R5H,R1H           ; [CPU_FPU] |1140| 
         MOVW      DP,#||pi_id||+2       ; [CPU_ARAU] 
         MPYF32    R2H,R3H,R1H           ; [CPU_FPU] |1140| 
@@ -5346,24 +5346,24 @@ $C$DW$222	.dwtag  DW_TAG_TI_branch
         MOV32     R1H,*-SP[4]           ; [CPU_FPU] |1140| 
 ||      ADDF32    R2H,R2H,R1H           ; [CPU_FPU] |1140| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1149,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1149,column 5,is_stmt,isa 0
 
         MOV32     @$BLOCKED(||pi_id||)+2,R1H ; [CPU_FPU] |1149| 
 ||      SUBF32    R7H,R7H,R5H           ; [CPU_FPU] |1150| 
 
         MOVW      DP,#||pi_iq||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1150,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1150,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+2,R7H ; [CPU_FPU] |1150| 
         MOVW      DP,#||speedWePrev||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1143,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1143,column 5,is_stmt,isa 0
         MOV32     @||speedWePrev||,R6H  ; [CPU_FPU] |1143| 
         MOVW      DP,#||D_cpu||+12      ; [CPU_ARAU] 
         SUBB      SP,#4                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -10
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1139,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||D_cpu||)+12,R0H ; [CPU_FPU] |1139| 
         MOVW      DP,#||Q_cla||+12      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 1140,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 1140,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+12,R2H ; [CPU_FPU] |1140| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -5383,7 +5383,7 @@ $C$DW$223	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$219, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$219, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$219, DW_AT_TI_end_line(0x486)
 	.dwattr $C$DW$219, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5399,11 +5399,11 @@ $C$DW$224	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$224, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$224, DW_AT_linkage_name("FCL_runAbsEncComplexCtrl")
 	.dwattr $C$DW$224, DW_AT_external
-	.dwattr $C$DW$224, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$224, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$224, DW_AT_decl_line(0x3a6)
 	.dwattr $C$DW$224, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$224, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 935,column 1,is_stmt,address ||FCL_runAbsEncComplexCtrl||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 935,column 1,is_stmt,address ||FCL_runAbsEncComplexCtrl||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runAbsEncComplexCtrl||
 
@@ -5473,7 +5473,7 @@ $C$DW$230	.dwtag  DW_TAG_variable
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 947,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 947,column 5,is_stmt,isa 0
         MOV32     R0H,@||pangle||       ; [CPU_FPU] |947| 
         MOVW      DP,#||AdcIntFlag||    ; [CPU_ARAU] 
         SINPUF32  R1H,R0H               ; [CPU_FPU] |947| 
@@ -5508,34 +5508,34 @@ $C$DW$230	.dwtag  DW_TAG_variable
         ADDF32    R4H,R4H,R7H           ; [CPU_FPU] |947| 
         MOVW      DP,#||pi_id||         ; [CPU_ARAU] 
         MPYF32    R3H,R6H,R4H           ; [CPU_FPU] |947| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 953,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 953,column 5,is_stmt,isa 0
         MPYF32    R5H,R1H,R7H           ; [CPU_FPU] |953| 
         MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |953| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 955,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 955,column 5,is_stmt,isa 0
         MPYF32    R4H,R0H,R7H           ; [CPU_FPU] |955| 
         MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |955| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 953,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 953,column 5,is_stmt,isa 0
         SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |953| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 955,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 955,column 5,is_stmt,isa 0
 
         MOV32     R3H,@$BLOCKED(||pi_id||) ; [CPU_FPU] |955| 
 ||      ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |955| 
 
         MOVW      DP,#||pi_iq||         ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 953,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 953,column 5,is_stmt,isa 0
 
         MOV32     R7H,@$BLOCKED(||pi_iq||) ; [CPU_FPU] |953| 
 ||      SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |955| 
 
         MOVW      DP,#||Q_cla||+8       ; [CPU_ARAU] 
         SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |953| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 955,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 955,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+8,R2H ; [CPU_FPU] |955| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 953,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 953,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+10,R3H ; [CPU_FPU] |953| 
   IACK  #0x0004
         MOVW      DP,#||D_cpu||+2       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||D_cpu||)+2 ; [CPU_FPU] |126| 
 
         MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |126| 
@@ -5553,11 +5553,11 @@ $C$DW$230	.dwtag  DW_TAG_variable
         ADDF32    R4H,R3H,R5H           ; [CPU_FPU] |126| 
 ||      MOV32     R6H,@$BLOCKED(||pi_id||)+18 ; [CPU_FPU] |133| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
         MOV32     R7H,@$BLOCKED(||pi_id||)+20 ; [CPU_FPU] |133| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 126,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_id||)+6,R4H ; [CPU_FPU] |126| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 133,column 5,is_stmt,isa 0
         MINF32    R6H,R4H               ; [CPU_FPU] |133| 
         MOV32     R4H,R6H               ; [CPU_FPU] |133| 
         MAXF32    R4H,R7H               ; [CPU_FPU] |133| 
@@ -5569,13 +5569,13 @@ $C$DW$230	.dwtag  DW_TAG_variable
 ||      MPYF32    R2H,R1H,R4H           ; [CPU_FPU] |964| 
 
 ||$C$L43||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 970,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 970,column 11,is_stmt,isa 0
         MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |970| 
         TBIT      AL,#2                 ; [CPU_ALU] |970| 
         B         ||$C$L43||,NTC        ; [CPU_ALU] |970| 
         ; branchcc occurs ; [] |970| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 976,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 976,column 5,is_stmt,isa 0
         MOV32     R4H,@$BLOCKED(||pi_iq||)+6 ; [CPU_FPU] |976| 
         MOVW      DP,#||FCL_params||    ; [CPU_ARAU] 
 
@@ -5587,11 +5587,11 @@ $C$DW$230	.dwtag  DW_TAG_variable
 
         MOVW      DP,#||pwmCompA||      ; [CPU_ARAU] 
         SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |976| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 984,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 984,column 5,is_stmt,isa 0
         ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |984| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 976,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 976,column 5,is_stmt,isa 0
         MPYF32    R2H,R7H,R1H           ; [CPU_FPU] |976| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 984,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 984,column 5,is_stmt,isa 0
         MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |984| 
         MOVL      XAR6,@||pwmCompA||    ; [CPU_ALU] |984| 
         SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |984| 
@@ -5620,7 +5620,7 @@ $C$DW$230	.dwtag  DW_TAG_variable
         MOV32     *+XAR6[0],R1H         ; [CPU_FPU] |984| 
         MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |984| 
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |984| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 985,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 985,column 5,is_stmt,isa 0
         MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |985| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
@@ -5640,7 +5640,7 @@ $C$DW$231	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$224, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$224, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$224, DW_AT_TI_end_line(0x3db)
 	.dwattr $C$DW$224, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5656,11 +5656,11 @@ $C$DW$232	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$232, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$232, DW_AT_linkage_name("FCL_resetController")
 	.dwattr $C$DW$232, DW_AT_external
-	.dwattr $C$DW$232, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$232, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$232, DW_AT_decl_line(0x178)
 	.dwattr $C$DW$232, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$232, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 377,column 1,is_stmt,address ||FCL_resetController||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 377,column 1,is_stmt,address ||FCL_resetController||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_resetController||
 
@@ -5676,7 +5676,7 @@ $C$DW$232	.dwtag  DW_TAG_subprogram
 ||FCL_resetController||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 378,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 378,column 5,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |378| 
         MOVW      DP,#||pi_id||+6       ; [CPU_ARAU] 
         MOV32     *SP++,R4H             ; [CPU_FPU] 
@@ -5687,35 +5687,35 @@ $C$DW$232	.dwtag  DW_TAG_subprogram
         MOV32     *SP++,R5H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 63, 4
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 380,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 380,column 5,is_stmt,isa 0
         ZERO      R4H                   ; [CPU_FPU] |380| 
         MOVW      DP,#||pi_iq||+6       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 381,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 381,column 5,is_stmt,isa 0
         ZERO      R3H                   ; [CPU_FPU] |381| 
         ZERO      R2H                   ; [CPU_FPU] |381| 
         ZERO      R1H                   ; [CPU_FPU] |381| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 380,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 380,column 5,is_stmt,isa 0
         ZERO      R5H                   ; [CPU_FPU] |380| 
         MOV32     *SP++,R6H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 67, 6
 	.dwcfi	cfa_offset, -8
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 379,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 379,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||pi_iq||)+6,R0H ; [CPU_FPU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 380,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 380,column 5,is_stmt,isa 0
         ZERO      R6H                   ; [CPU_FPU] |380| 
         MOV32     *SP++,R7H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 71, 8
 	.dwcfi	cfa_offset, -10
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 379,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 379,column 5,is_stmt,isa 0
         ZERO      R7H                   ; [CPU_FPU] |379| 
         MOV32     @$BLOCKED(||pi_iq||)+8,R7H ; [CPU_FPU] |379| 
         MOVW      DP,#||D_cpu||+10      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 380,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 380,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||D_cpu||)+10,R6H ; [CPU_FPU] |380| 
         MOV32     @$BLOCKED(||D_cpu||)+8,R5H ; [CPU_FPU] |380| 
         MOV32     @$BLOCKED(||D_cpu||)+12,R4H ; [CPU_FPU] |380| 
         MOVW      DP,#||Q_cla||+10      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 381,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 381,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||Q_cla||)+10,R3H ; [CPU_FPU] |381| 
         MOV32     @$BLOCKED(||Q_cla||)+8,R2H ; [CPU_FPU] |381| 
         MOV32     @$BLOCKED(||Q_cla||)+12,R1H ; [CPU_FPU] |381| 
@@ -5723,7 +5723,7 @@ $C$DW$232	.dwtag  DW_TAG_subprogram
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
 	.dwcfi	restore_reg, 71
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 383,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 383,column 5,is_stmt,isa 0
         MOV32     @||speedWePrev||,R0H  ; [CPU_FPU] |383| 
         MOV32     R6H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -6
@@ -5740,7 +5740,7 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$232, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$232, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$232, DW_AT_TI_end_line(0x180)
 	.dwattr $C$DW$232, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5756,11 +5756,11 @@ $C$DW$234	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$234, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$234, DW_AT_linkage_name("FCL_initQEP")
 	.dwattr $C$DW$234, DW_AT_external
-	.dwattr $C$DW$234, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$234, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$234, DW_AT_decl_line(0x16d)
 	.dwattr $C$DW$234, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$234, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 366,column 1,is_stmt,address ||FCL_initQEP||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 366,column 1,is_stmt,address ||FCL_initQEP||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_initQEP||
 $C$DW$235	.dwtag  DW_TAG_formal_parameter
@@ -5788,7 +5788,7 @@ $C$DW$236	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||ClaQep||        ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 367,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 367,column 5,is_stmt,isa 0
         MOVL      @||ClaQep||,ACC       ; [CPU_ALU] |367| 
 $C$DW$237	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$237, DW_AT_low_pc(0x00)
@@ -5796,7 +5796,7 @@ $C$DW$237	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$234, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$234, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$234, DW_AT_TI_end_line(0x172)
 	.dwattr $C$DW$234, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5812,11 +5812,11 @@ $C$DW$238	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$238, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$238, DW_AT_linkage_name("FCL_initPWM")
 	.dwattr $C$DW$238, DW_AT_external
-	.dwattr $C$DW$238, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$238, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$238, DW_AT_decl_line(0x152)
 	.dwattr $C$DW$238, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$238, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 339,column 1,is_stmt,address ||FCL_initPWM||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 339,column 1,is_stmt,address ||FCL_initPWM||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_initPWM||
 $C$DW$239	.dwtag  DW_TAG_formal_parameter
@@ -5870,33 +5870,33 @@ $C$DW$244	.dwtag  DW_TAG_variable
 	.dwcfi	save_reg_to_mem, 26, 0
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         MOVL      XAR4,ACC              ; [CPU_ALU] |2398| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 339,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 339,column 1,is_stmt,isa 0
         MOVL      XAR7,*-SP[4]          ; [CPU_ALU] |339| 
         MOVL      XAR6,*-SP[6]          ; [CPU_ALU] |339| 
         MOVW      DP,#||pwmCompC||      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 343,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 343,column 5,is_stmt,isa 0
         ADDB      ACC,#106              ; [CPU_ALU] |343| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         MOVL      XAR5,XAR7             ; [CPU_ALU] |2398| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 345,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 345,column 5,is_stmt,isa 0
         MOVL      XAR0,XAR6             ; [CPU_ALU] |345| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         ADDB      XAR4,#8               ; [CPU_ALU] |2398| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 343,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 343,column 5,is_stmt,isa 0
         MOVL      @||pwmCompA||,ACC     ; [CPU_FPU] |343| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         OR        *+XAR4[0],#0x0010     ; [CPU_ALU] |2398| 
         ADDB      XAR5,#8               ; [CPU_ALU] |2398| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 345,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 345,column 5,is_stmt,isa 0
         ADDB      XAR0,#106             ; [CPU_ALU] |345| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 344,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 344,column 5,is_stmt,isa 0
         ADDB      XAR7,#106             ; [CPU_ALU] |344| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         ADDB      XAR6,#8               ; [CPU_ALU] |2398| 
         OR        *+XAR5[0],#0x0010     ; [CPU_ALU] |2398| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 345,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 345,column 5,is_stmt,isa 0
         MOVL      @||pwmCompC||,XAR0    ; [CPU_ALU] |345| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 344,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 344,column 5,is_stmt,isa 0
         MOVL      @||pwmCompB||,XAR7    ; [CPU_ALU] |344| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         OR        *+XAR6[0],#0x0010     ; [CPU_ALU] |2398| 
@@ -5906,7 +5906,7 @@ $C$DW$245	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$238, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$238, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$238, DW_AT_TI_end_line(0x15c)
 	.dwattr $C$DW$238, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5922,11 +5922,11 @@ $C$DW$246	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$246, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$246, DW_AT_linkage_name("FCL_initADC")
 	.dwattr $C$DW$246, DW_AT_external
-	.dwattr $C$DW$246, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$246, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$246, DW_AT_decl_line(0x15e)
 	.dwattr $C$DW$246, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$246, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 353,column 1,is_stmt,address ||FCL_initADC||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 353,column 1,is_stmt,address ||FCL_initADC||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_initADC||
 $C$DW$247	.dwtag  DW_TAG_formal_parameter
@@ -5992,7 +5992,7 @@ $C$DW$255	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVL      XAR6,ACC              ; [CPU_ALU] |353| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 358,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 358,column 5,is_stmt,isa 0
         MOV       ACC,AR4 << #1         ; [CPU_ALU] |358| 
         ORB       AL,#0x10              ; [CPU_ALU] |358| 
         MOVZ      AR7,AL                ; [CPU_ALU] |358| 
@@ -6000,18 +6000,18 @@ $C$DW$255	.dwtag  DW_TAG_variable
         MOVL      ACC,XAR6              ; [CPU_ALU] |358| 
         ADDU      ACC,AR7               ; [CPU_ALU] |358| 
         MOVL      @||curA_PPBRESULT||,ACC ; [CPU_ALU] |358| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 359,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 359,column 5,is_stmt,isa 0
         MOV       ACC,AR5 << #1         ; [CPU_ALU] |359| 
         ORB       AL,#0x10              ; [CPU_ALU] |359| 
         MOVZ      AR7,AL                ; [CPU_ALU] |359| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 353,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 353,column 1,is_stmt,isa 0
         MOVL      ACC,*-SP[4]           ; [CPU_ALU] |353| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 359,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 359,column 5,is_stmt,isa 0
         ADDU      ACC,AR7               ; [CPU_ALU] |359| 
         MOVL      @||curB_PPBRESULT||,ACC ; [CPU_ALU] |359| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 353,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 353,column 1,is_stmt,isa 0
         MOVL      ACC,*-SP[6]           ; [CPU_ALU] |353| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 360,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 360,column 5,is_stmt,isa 0
         ADDB      ACC,#3                ; [CPU_ALU] |360| 
         MOVL      @||AdcIntFlag||,ACC   ; [CPU_ALU] |360| 
 $C$DW$256	.dwtag  DW_TAG_TI_branch
@@ -6020,7 +6020,7 @@ $C$DW$256	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$246, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$246, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$246, DW_AT_TI_end_line(0x16b)
 	.dwattr $C$DW$246, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -6037,11 +6037,11 @@ $C$DW$257	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$257, DW_AT_linkage_name("FCL_getSwVersion")
 	.dwattr $C$DW$257, DW_AT_external
 	.dwattr $C$DW$257, DW_AT_type(*$C$DW$T$21)
-	.dwattr $C$DW$257, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$257, DW_AT_decl_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$257, DW_AT_decl_line(0x300)
 	.dwattr $C$DW$257, DW_AT_decl_column(0x0a)
 	.dwattr $C$DW$257, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 769,column 1,is_stmt,address ||FCL_getSwVersion||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 769,column 1,is_stmt,address ||FCL_getSwVersion||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_getSwVersion||
 
@@ -6057,7 +6057,7 @@ $C$DW$257	.dwtag  DW_TAG_subprogram
 ||FCL_getSwVersion||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c",line 773,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code.c",line 773,column 5,is_stmt,isa 0
         MOVB      ACC,#7                ; [CPU_ALU] |773| 
 $C$DW$258	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$258, DW_AT_low_pc(0x00)
@@ -6065,7 +6065,7 @@ $C$DW$258	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$257, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code.c")
+	.dwattr $C$DW$257, DW_AT_TI_end_file("../sources/fcl_cpu_code.c")
 	.dwattr $C$DW$257, DW_AT_TI_end_line(0x306)
 	.dwattr $C$DW$257, DW_AT_TI_end_column(0x01)
 	.dwendentry
