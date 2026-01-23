@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Thu Jan 22 11:16:50 2026                 *
+       3              ;* Date/Time created: Sat Jan 24 00:11:01 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ cla.asm                                                              PAGE    1
       53              $C$DW$5 .dwtag  DW_TAG_formal_parameter
       54                      .dwattr $C$DW$5, DW_AT_name("trigger")
       55                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$23)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    2
@@ -118,7 +118,7 @@ cla.asm                                                              PAGE    2
      107 0000000a 8F00          MOVL      XAR4,#31110           ; [CPU_ARAU] |69| 
          0000000b 7986 
      108 0000000c 6F03          B         ||$C$L2||,UNC         ; [CPU_ALU] |69| 
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    3
@@ -178,7 +178,7 @@ cla.asm                                                              PAGE    3
      160                      .dwcfi  same_value, 9
      161                      .dwcfi  same_value, 10
      162                      .dwcfi  same_value, 11
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    4
@@ -238,7 +238,7 @@ cla.asm                                                              PAGE    4
      215              $C$DW$16        .dwtag  DW_TAG_enumerator
      216                      .dwattr $C$DW$16, DW_AT_name("CLA_TASK_6")
      217                      .dwattr $C$DW$16, DW_AT_const_value(0x05)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    5
@@ -298,7 +298,7 @@ cla.asm                                                              PAGE    5
      270              $C$DW$T$22      .dwtag  DW_TAG_enumeration_type
      271                      .dwattr $C$DW$T$22, DW_AT_byte_size(0x01)
      272              $C$DW$20        .dwtag  DW_TAG_enumerator
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    6
@@ -358,7 +358,7 @@ cla.asm                                                              PAGE    6
      325                      .dwattr $C$DW$27, DW_AT_decl_line(0x9b)
      326                      .dwattr $C$DW$27, DW_AT_decl_column(0x05)
      327              
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    7
@@ -418,7 +418,7 @@ cla.asm                                                              PAGE    7
      380                      .dwattr $C$DW$35, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2
      381                      .dwattr $C$DW$35, DW_AT_decl_line(0xa3)
      382                      .dwattr $C$DW$35, DW_AT_decl_column(0x05)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    8
@@ -478,7 +478,7 @@ cla.asm                                                              PAGE    8
      435                      .dwattr $C$DW$43, DW_AT_const_value(0x1f)
      436                      .dwattr $C$DW$43, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2
      437                      .dwattr $C$DW$43, DW_AT_decl_line(0xac)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE    9
@@ -538,7 +538,7 @@ cla.asm                                                              PAGE    9
      490                      .dwattr $C$DW$51, DW_AT_name("CLA_TRIGGER_EPWM6INT")
      491                      .dwattr $C$DW$51, DW_AT_const_value(0x29)
      492                      .dwattr $C$DW$51, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   10
@@ -598,7 +598,7 @@ cla.asm                                                              PAGE   10
      545              $C$DW$59        .dwtag  DW_TAG_enumerator
      546                      .dwattr $C$DW$59, DW_AT_name("CLA_TRIGGER_TINT1")
      547                      .dwattr $C$DW$59, DW_AT_const_value(0x45)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   11
@@ -658,7 +658,7 @@ cla.asm                                                              PAGE   11
      600              
      601              $C$DW$67        .dwtag  DW_TAG_enumerator
      602                      .dwattr $C$DW$67, DW_AT_name("CLA_TRIGGER_ECAP3INT")
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   12
@@ -718,7 +718,7 @@ cla.asm                                                              PAGE   12
      655                      .dwattr $C$DW$74, DW_AT_decl_column(0x05)
      656              
      657              $C$DW$75        .dwtag  DW_TAG_enumerator
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   13
@@ -778,7 +778,7 @@ cla.asm                                                              PAGE   13
      710                      .dwattr $C$DW$82, DW_AT_decl_line(0xdf)
      711                      .dwattr $C$DW$82, DW_AT_decl_column(0x05)
      712              
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   14
@@ -838,7 +838,7 @@ cla.asm                                                              PAGE   14
      765              
      766              $C$DW$T$24      .dwtag  DW_TAG_const_type
      767                      .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$87)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   15
@@ -898,7 +898,7 @@ cla.asm                                                              PAGE   15
      820              $C$DW$TU$8      .dwtag  DW_TAG_type_unit
      821                      .dwmtype  $C$DW$T$8
      822              $C$DW$T$8       .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   16
@@ -958,7 +958,7 @@ cla.asm                                                              PAGE   16
      875                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
      876              
      877                      .dwendtag $C$DW$TU$13
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   17
@@ -1018,7 +1018,7 @@ cla.asm                                                              PAGE   17
      930              
      931                      .dwendtag $C$DW$TU$16
      932              
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:50 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 cla.asm                                                              PAGE   18

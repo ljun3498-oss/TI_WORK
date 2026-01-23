@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Thu Jan 22 11:16:48 2026                 *
+       3              ;* Date/Time created: Sat Jan 24 00:11:01 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ adc.asm                                                              PAGE    1
       53              $C$DW$5 .dwtag  DW_TAG_formal_parameter
       54                      .dwattr $C$DW$5, DW_AT_name("ppbNumber")
       55                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$26)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    2
@@ -118,7 +118,7 @@ adc.asm                                                              PAGE    2
      108 00000000 80A4          MOVZ      AR7,AR4               ; [CPU_ALU] |306| 
      109 00000001 B2BD          MOVL      *SP++,XAR1            ; [CPU_ALU] 
      110                      .dwcfi  save_reg_to_mem, 7, 2
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    3
@@ -178,7 +178,7 @@ adc.asm                                                              PAGE    3
      158                      .dwattr $C$DW$3, DW_AT_TI_end_line(0x156)
      159                      .dwattr $C$DW$3, DW_AT_TI_end_column(0x01)
      160                      .dwendentry
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    4
@@ -238,7 +238,7 @@ adc.asm                                                              PAGE    4
      213              
      214              ;* PL    assigned to resolution
      215              $C$DW$18        .dwtag  DW_TAG_variable
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    5
@@ -298,7 +298,7 @@ adc.asm                                                              PAGE    5
      261                      ; branch occurs ; [] |248| 
      262 0000001a       ||$C$L2||:    
      263                      .dwpsn  file "../src_driver/adc.c",line 244,column 13,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    6
@@ -358,7 +358,7 @@ adc.asm                                                              PAGE    6
      310 0000003b       ||$C$L5||:    
      311 0000003b 8BBE          MOVL      XAR1,*--SP            ; [CPU_ALU] 
      312                      .dwcfi  cfa_offset, -2
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    7
@@ -418,7 +418,7 @@ adc.asm                                                              PAGE    7
      365              ;* AR2   assigned to resolution
      366              $C$DW$25        .dwtag  DW_TAG_variable
      367                      .dwattr $C$DW$25, DW_AT_name("resolution")
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    8
@@ -478,7 +478,7 @@ adc.asm                                                              PAGE    8
      412                      .dwpsn  file "../src_driver/adc.c",line 202,column 5,is_stmt,isa 0
      413 00000021 6F21          B         ||$C$L9||,UNC         ; [CPU_ALU] |202| 
      414                      ; branch occurs ; [] |202| 
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE    9
@@ -538,7 +538,7 @@ adc.asm                                                              PAGE    9
      458                      .dwattr $C$DW$26, DW_AT_TI_indirect
      459              
      460 00000042 3E67          LCR       *XAR7                 ; [CPU_ALU] |138| 
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   10
@@ -598,7 +598,7 @@ adc.asm                                                              PAGE   10
      513                      ; return occurs ; [] 
      514                      .dwattr $C$DW$22, DW_AT_TI_end_file("../src_driver/adc.c")
      515                      .dwattr $C$DW$22, DW_AT_TI_end_line(0xd5)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   11
@@ -658,7 +658,7 @@ adc.asm                                                              PAGE   11
      568              
      569              ;* AR4   assigned to resolution
      570              $C$DW$33        .dwtag  DW_TAG_variable
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   12
@@ -718,7 +718,7 @@ adc.asm                                                              PAGE   12
      620              
      621 00000010 0006          LRETR     ; [CPU_ALU] 
      622                      ; return occurs ; [] 
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   13
@@ -778,7 +778,7 @@ adc.asm                                                              PAGE   13
      675              $C$DW$39        .dwtag  DW_TAG_enumerator
      676                      .dwattr $C$DW$39, DW_AT_name("ADC_RESOLUTION_16BIT")
      677                      .dwattr $C$DW$39, DW_AT_const_value(0x40)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   14
@@ -838,7 +838,7 @@ adc.asm                                                              PAGE   14
      730                      .dwattr $C$DW$42, DW_AT_decl_column(0x05)
      731              
      732                      .dwattr $C$DW$T$22, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   15
@@ -898,7 +898,7 @@ adc.asm                                                              PAGE   15
      785                      .dwattr $C$DW$46, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2
      786                      .dwattr $C$DW$46, DW_AT_decl_line(0x136)
      787                      .dwattr $C$DW$46, DW_AT_decl_column(0x05)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   16
@@ -958,7 +958,7 @@ adc.asm                                                              PAGE   16
      840                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
      841              
      842                      .dwendtag $C$DW$TU$4
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   17
@@ -1018,7 +1018,7 @@ adc.asm                                                              PAGE   17
      895              $C$DW$TU$10     .dwtag  DW_TAG_type_unit
      896                      .dwmtype  $C$DW$T$10
      897              $C$DW$T$10      .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   18
@@ -1078,7 +1078,7 @@ adc.asm                                                              PAGE   18
      950                      .dwmtype  $C$DW$T$35
      951              $C$DW$T$35      .dwtag  DW_TAG_typedef
      952                      .dwattr $C$DW$T$35, DW_AT_name("__int32_t")
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   19
@@ -1138,7 +1138,7 @@ adc.asm                                                              PAGE   19
     1005              
     1006              $C$DW$TU$31     .dwtag  DW_TAG_type_unit
     1007                      .dwmtype  $C$DW$T$31
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   20
@@ -1198,7 +1198,7 @@ adc.asm                                                              PAGE   20
     1060                      .dwmtype  $C$DW$T$17
     1061              $C$DW$T$17      .dwtag  DW_TAG_base_type
     1062                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
-TMS320C2000 Assembler PC v22.6.2 Thu Jan 22 11:16:49 2026
+TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 adc.asm                                                              PAGE   21

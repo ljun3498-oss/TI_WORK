@@ -41,6 +41,15 @@
                     "C28xx_CPU1"
                 ]
             }
+        },
+        {
+            "name": "fcl_f2837x_tmdxiddk",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "fcl_f2837x_tmdxiddk",
+                "resourceId": "/fcl_f2837x_tmdxiddk"
+            }
         }
     ]
 }

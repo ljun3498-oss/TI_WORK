@@ -768,13 +768,7 @@ interrupt void adc_isr(void)
             
             // 使用角度误差作为切闭环条件
             static uint32_t sync_cnt = 0;
-            static uint32_t timeout_cnt = 0;
             float angle_threshold = 5.0f * (M_PI_F / 180.0f); // 5度阈值
-            
-            // 增加超时计数器
-            timeout_cnt++;
-            
-            // 角度误差满足条件时的同步逻辑
             if (fabsf(angle_err) < angle_threshold) {
                 sync_cnt++;
                 if (sync_cnt > 500) { // 持续500个控制周期
@@ -783,9 +777,8 @@ interrupt void adc_isr(void)
                     Iq_int = 0.0f;
                     // 重置Iq_ref为0，准备软启动
                     Iq_ref = 0.0f;
-                    // 重置计数器
+                    // 重置同步计数器
                     sync_cnt = 0;
-                    timeout_cnt = 0;
                     SwitchControlState(STATE_CLOSED_LOOP);
                 }
             } else {
@@ -793,24 +786,13 @@ interrupt void adc_isr(void)
                 sync_cnt = 0;
             }
             
-            // 超时机制：如果同步时间过长，强制进入闭环
-            uint32_t timeout_threshold = 5000; // 5000个控制周期（约0.25秒，基于20kHz控制频率）
-            if (timeout_cnt > timeout_threshold) {
-                // 清零PI积分项
-                Id_int = 0.0f;
-                Iq_int = 0.0f;
-                // 重置Iq_ref为0，准备软启动
-                Iq_ref = 0.0f;
-                // 重置计数器
-                sync_cnt = 0;
-                timeout_cnt = 0;
-                SwitchControlState(STATE_CLOSED_LOOP);
-            }
-            
             break;
         }
         
         case STATE_CLOSED_LOOP: {
+            // 读取真实ADC电流值
+            ADC_Read_Current();
+            
             // 更新编码器数据
             Encoder_update();
             float real_encoder_angle_elec_rad = Encoder_getElecAngle();
@@ -820,21 +802,6 @@ interrupt void adc_isr(void)
             angle_with_offset = fmodf(angle_with_offset, 2.0f * M_PI_F);
             if (angle_with_offset < 0.0f) {
                 angle_with_offset += 2.0f * M_PI_F;
-            }
-            
-            // 使用虚拟电流值进行测试
-            float current_amplitude = 6.0f; // 电流振幅
-            
-            // 生成虚拟三相电流（满足Ia + Ib + Ic = 0）
-            Ia_meas = current_amplitude * sinf(angle_with_offset);
-            Ib_meas = current_amplitude * sinf(angle_with_offset - 2.0f * M_PI_F / 3.0f);
-            Ic_meas = current_amplitude * sinf(angle_with_offset + 2.0f * M_PI_F / 3.0f);
-            
-            // 验证三相电流和为0（理论上应该为0，这里做个检查）
-            float current_sum = Ia_meas + Ib_meas + Ic_meas;
-            if (fabsf(current_sum) > 0.001f) {
-                // 修正微小误差，确保和为0
-                Ic_meas = -(Ia_meas + Ib_meas);
             }
             
             // 执行FOC算法
