@@ -91,12 +91,6 @@ FOC_auto_start.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/h
 FOC_auto_start.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/version.h
 FOC_auto_start.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
 FOC_auto_start.obj: C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h
-FOC_auto_start.obj: ../model/foc.h
-FOC_auto_start.obj: ../model/foc_core.h
-FOC_auto_start.obj: ../model/foc_svpwm.h
-FOC_auto_start.obj: ../model/foc_encoder.h
-FOC_auto_start.obj: ../model/foc_adc.h
-FOC_auto_start.obj: ../model/foc_pwm.h
 
 ../FOC_auto_start.C:
 
@@ -279,16 +273,4 @@ C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/version.h:
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h:
 
 C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h:
-
-../model/foc.h:
-
-../model/foc_core.h:
-
-../model/foc_svpwm.h:
-
-../model/foc_encoder.h:
-
-../model/foc_adc.h:
-
-../model/foc_pwm.h:
 

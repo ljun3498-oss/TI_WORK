@@ -3,9 +3,13 @@
 model/foc_adc.obj: ../model/foc_adc.c
 model/foc_adc.obj: ../model/foc_adc.h
 model/foc_adc.obj: ../model/foc_core.h
-model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h
+model/foc_adc.obj: C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/driverlib.h
+model/foc_adc.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h
+model/foc_adc.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/adc.h
+model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h
 model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h
 model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/linkage.h
+model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h
 model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_stdint40.h
 model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/stdint.h
 model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/cdefs.h
@@ -13,13 +17,6 @@ model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/
 model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h
 model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_stdint.h
 model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h
-model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h
-model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h
-model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h
-model/foc_adc.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h
-model/foc_adc.obj: C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/driverlib.h
-model/foc_adc.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h
-model/foc_adc.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/adc.h
 model/foc_adc.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_adc.h
 model/foc_adc.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_sysctl.h
 model/foc_adc.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_types.h
@@ -100,11 +97,19 @@ model/foc_adc.obj: C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/de
 
 ../model/foc_core.h:
 
-D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h:
+C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/driverlib.h:
+
+C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h:
+
+C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/adc.h:
+
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h:
 
 D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h:
 
 D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/linkage.h:
+
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h:
 
 D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_stdint40.h:
 
@@ -119,20 +124,6 @@ D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h:
 D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_stdint.h:
 
 D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h:
-
-D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdbool.h:
-
-D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h:
-
-D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h:
-
-D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h:
-
-C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/driverlib.h:
-
-C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h:
-
-C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/adc.h:
 
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw_adc.h:
 

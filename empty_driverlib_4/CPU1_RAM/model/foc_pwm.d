@@ -89,9 +89,6 @@ model/foc_pwm.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/inc/hw
 model/foc_pwm.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/version.h
 model/foc_pwm.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
 model/foc_pwm.obj: ../model/foc_core.h
-model/foc_pwm.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h
-model/foc_pwm.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h
-model/foc_pwm.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h
 model/foc_pwm.obj: C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h
 
 ../model/foc_pwm.c:
@@ -271,12 +268,6 @@ C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/version.h:
 C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h:
 
 ../model/foc_core.h:
-
-D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h:
-
-D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h:
-
-D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h:
 
 C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_4/device/device.h:
 
