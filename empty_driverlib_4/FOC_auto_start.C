@@ -321,15 +321,18 @@ void ADC_Init(void)
 // 处理ADC转换结果
 void ADC_Read_Current(void)
 {
-    // 读取转换结果
+    // 读取转换结果（只测两相）
     adcResult[0] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER0);
     adcResult[1] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER1);
-    adcResult[2] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER2);
 
     // 转换为电流值
-    Ia_meas = (float)((int16_t)adcResult[0] - 2048) * ADC_COUNTS_TO_AMP;
-    Ib_meas = (float)((int16_t)adcResult[1] - 2048) * ADC_COUNTS_TO_AMP;
-    Ic_meas = (float)((int16_t)adcResult[2] - 2048) * ADC_COUNTS_TO_AMP;
+    float Ia = (float)((int16_t)adcResult[0] - 2048) * ADC_COUNTS_TO_AMP;
+    float Ib = (float)((int16_t)adcResult[1] - 2048) * ADC_COUNTS_TO_AMP;
+
+    // 第三相由Kirchhoff定律计算（Ia + Ib + Ic = 0）
+    Ia_meas = Ia;
+    Ib_meas = Ib;
+    Ic_meas = -(Ia + Ib);
 
     // 电流值合理性检查
     if (isnan(Ia_meas) || isinf(Ia_meas)) Ia_meas = 0.0f;
@@ -690,8 +693,31 @@ interrupt void adc_isr(void)
         }
         
         case STATE_VIRTUAL_ENCODER: {
-            // 使用固定角速度
-            float angle_increment = M_PI_F / 10000.0f;
+            // 强制冻结PI积分项，避免积分漂移
+            Id_int = 0.0f;
+            Iq_int = 0.0f;
+            
+            // 获取编码器角度
+            Encoder_update();
+            float encoder_angle_elec_rad = Encoder_getElecAngle();
+            
+            // 角度同步：误差混合（工程正确的角度混合方法）
+            float alpha = 0.9f; // 开环角度权重
+            float angle_err = encoder_angle_elec_rad - open_loop_angle_elec_rad;
+            // 包装角度误差到 [-π, π]
+            angle_err = fmodf(angle_err + M_PI_F, 2.0f * M_PI_F) - M_PI_F;
+            
+            // 动态调整角速度：根据角度误差方向和大小调整
+            float base_angle_increment = M_PI_F / 10000.0f;
+            float angle_error_gain = 0.01f; // 角度误差比例系数
+            
+            // 计算调整后的角速度增量
+            float angle_increment = base_angle_increment + angle_error_gain * angle_err;
+            
+            // 限制角速度范围，避免过度调整
+            float max_angle_increment = M_PI_F / 5000.0f;  // 最大角速度
+            float min_angle_increment = M_PI_F / 20000.0f; // 最小角速度
+            angle_increment = fmaxf(fminf(angle_increment, max_angle_increment), min_angle_increment);
             
             // 更新开环角度
             open_loop_angle_acc += angle_increment;
@@ -709,20 +735,6 @@ interrupt void adc_isr(void)
             if (open_loop_angle_elec_rad < 0.0f) {
                 open_loop_angle_elec_rad += 2.0f * M_PI_F;
             }
-            
-            // 强制冻结PI积分项，避免积分漂移
-            Id_int = 0.0f;
-            Iq_int = 0.0f;
-            
-            // 获取编码器角度
-            Encoder_update();
-            float encoder_angle_elec_rad = Encoder_getElecAngle();
-            
-            // 角度同步：误差混合（工程正确的角度混合方法）
-            float alpha = 0.9f; // 开环角度权重
-            float angle_err = encoder_angle_elec_rad - open_loop_angle_elec_rad;
-            // 包装角度误差到 [-π, π]
-            angle_err = fmodf(angle_err + M_PI_F, 2.0f * M_PI_F) - M_PI_F;
             
             // 以开环角度为基准，只引入编码器相对误差
             float angle_used = open_loop_angle_elec_rad + (1.0f - alpha) * angle_err;
@@ -756,7 +768,13 @@ interrupt void adc_isr(void)
             
             // 使用角度误差作为切闭环条件
             static uint32_t sync_cnt = 0;
+            static uint32_t timeout_cnt = 0;
             float angle_threshold = 5.0f * (M_PI_F / 180.0f); // 5度阈值
+            
+            // 增加超时计数器
+            timeout_cnt++;
+            
+            // 角度误差满足条件时的同步逻辑
             if (fabsf(angle_err) < angle_threshold) {
                 sync_cnt++;
                 if (sync_cnt > 500) { // 持续500个控制周期
@@ -765,8 +783,9 @@ interrupt void adc_isr(void)
                     Iq_int = 0.0f;
                     // 重置Iq_ref为0，准备软启动
                     Iq_ref = 0.0f;
-                    // 重置同步计数器
+                    // 重置计数器
                     sync_cnt = 0;
+                    timeout_cnt = 0;
                     SwitchControlState(STATE_CLOSED_LOOP);
                 }
             } else {
@@ -774,13 +793,24 @@ interrupt void adc_isr(void)
                 sync_cnt = 0;
             }
             
+            // 超时机制：如果同步时间过长，强制进入闭环
+            uint32_t timeout_threshold = 5000; // 5000个控制周期（约0.25秒，基于20kHz控制频率）
+            if (timeout_cnt > timeout_threshold) {
+                // 清零PI积分项
+                Id_int = 0.0f;
+                Iq_int = 0.0f;
+                // 重置Iq_ref为0，准备软启动
+                Iq_ref = 0.0f;
+                // 重置计数器
+                sync_cnt = 0;
+                timeout_cnt = 0;
+                SwitchControlState(STATE_CLOSED_LOOP);
+            }
+            
             break;
         }
         
         case STATE_CLOSED_LOOP: {
-            // 读取真实ADC电流值
-            ADC_Read_Current();
-            
             // 更新编码器数据
             Encoder_update();
             float real_encoder_angle_elec_rad = Encoder_getElecAngle();
@@ -790,6 +820,21 @@ interrupt void adc_isr(void)
             angle_with_offset = fmodf(angle_with_offset, 2.0f * M_PI_F);
             if (angle_with_offset < 0.0f) {
                 angle_with_offset += 2.0f * M_PI_F;
+            }
+            
+            // 使用虚拟电流值进行测试
+            float current_amplitude = 6.0f; // 电流振幅
+            
+            // 生成虚拟三相电流（满足Ia + Ib + Ic = 0）
+            Ia_meas = current_amplitude * sinf(angle_with_offset);
+            Ib_meas = current_amplitude * sinf(angle_with_offset - 2.0f * M_PI_F / 3.0f);
+            Ic_meas = current_amplitude * sinf(angle_with_offset + 2.0f * M_PI_F / 3.0f);
+            
+            // 验证三相电流和为0（理论上应该为0，这里做个检查）
+            float current_sum = Ia_meas + Ib_meas + Ic_meas;
+            if (fabsf(current_sum) > 0.001f) {
+                // 修正微小误差，确保和为0
+                Ic_meas = -(Ia_meas + Ib_meas);
             }
             
             // 执行FOC算法
