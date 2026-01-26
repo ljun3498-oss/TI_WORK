@@ -7,7 +7,6 @@ SHELL = cmd.exe
 # Add inputs and outputs from these tool invocations to the build variables 
 CMD_SRCS += \
 ../src_device/F2837xD_Headers_nonBIOS_cpu1_eabi.cmd \
-../src_device/iddk_servo_2837x_flash_lnk_cpu1.cmd \
 ../src_device/iddk_servo_2837x_ram_lnk_cpu1.cmd 
 
 ASM_SRCS += \

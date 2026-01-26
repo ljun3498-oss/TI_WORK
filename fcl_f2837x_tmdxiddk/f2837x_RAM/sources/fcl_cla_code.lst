@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320x280xx Control Law Accelerator G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Sat Jan 24 00:10:58 2026                 *
+       3              ;* Date/Time created: Sun Jan 25 20:51:25 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6              
@@ -58,7 +58,7 @@ fcl_cla_code.asm                                                     PAGE    1
       53                      .dwattr $C$DW$5, DW_AT_name("pangle")
       54                      .dwattr $C$DW$5, DW_AT_linkage_name("pangle")
       55                      .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$19)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    2
@@ -118,7 +118,7 @@ fcl_cla_code.asm                                                     PAGE    2
      108              $C$DW$10        .dwtag  DW_TAG_variable
      109                      .dwattr $C$DW$10, DW_AT_name("task3_cnt")
      110                      .dwattr $C$DW$10, DW_AT_linkage_name("task3_cnt")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    3
@@ -178,7 +178,7 @@ fcl_cla_code.asm                                                     PAGE    3
      163                      .dwpsn  file "../sources/fcl_cla_code.cla",line 219,column 5,is_stmt,isa 0
      164 00000000 0000          MMOVIZ    MR0,#0                ; [CPU_FPU] |219| 
          00000001 7840 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    4
@@ -238,7 +238,7 @@ fcl_cla_code.asm                                                     PAGE    4
      193 00000032 00F0          MMOVXI    MR0,#240              ; [CPU_FPU] |226| 
          00000033 7880 
      194 00000034 0010!         MMOV16    @qep1+16,MR0          ; [CPU_FPU] |226| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    5
@@ -298,7 +298,7 @@ fcl_cla_code.asm                                                     PAGE    5
          00000063 7FA0 
      224                      .dwpsn  file "../sources/fcl_cla_code.cla",line 247,column 13,is_stmt,isa 0
      225 00000064 0000          MMOVIZ    MR1,#0                ; [CPU_FPU] |247| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    6
@@ -358,7 +358,7 @@ fcl_cla_code.asm                                                     PAGE    6
          00000095 7585 
      254 00000096 000C          MBCNDD    $C$L3,UNC             ; [CPU_FPU] |259| 
          00000097 798E 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    7
@@ -418,7 +418,7 @@ fcl_cla_code.asm                                                     PAGE    7
      293                      .dwattr $C$DW$14, DW_AT_high_pc(0x00)
      294                      .dwattr $C$DW$14, DW_AT_linkage_name("Cla1Task3")
      295                      .dwattr $C$DW$14, DW_AT_external
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    8
@@ -478,7 +478,7 @@ fcl_cla_code.asm                                                     PAGE    8
          00000013 74C0 
      339                      .dwpsn  file "../sources/fcl_cla_code.cla",line 200,column 5,is_stmt,isa 0
      340 00000014 0001          MMINF32   MR1,MR0               ; [CPU_FPU] |200| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE    9
@@ -538,7 +538,7 @@ fcl_cla_code.asm                                                     PAGE    9
      377                      .dwattr $C$DW$16, DW_AT_low_pc(Cla1Task2)
      378                      .dwattr $C$DW$16, DW_AT_high_pc(0x00)
      379                      .dwattr $C$DW$16, DW_AT_linkage_name("Cla1Task2")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   10
@@ -598,7 +598,7 @@ fcl_cla_code.asm                                                     PAGE   10
          00000017 7AC0 
      421                      .dwpsn  file "../sources/fcl_cla_code.cla",line 181,column 5,is_stmt,isa 0
      422 00000018 0000          MMOVIZ    MR1,#0                ; [CPU_FPU] |181| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   11
@@ -658,7 +658,7 @@ fcl_cla_code.asm                                                     PAGE   11
      465              ;***************************************************************
      466              ;* FNAME: Cla1Task1                     FR SIZE:   0           *
      467              ;*                                                             *
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   12
@@ -718,7 +718,7 @@ fcl_cla_code.asm                                                     PAGE   12
      503 00000022 0064          MBCNDD    $C$L5,NEQ             ; [CPU_FPU] |89| 
          00000023 7980 
      504 00000024 0000          MNOP      ; [CPU_FPU] 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   13
@@ -778,7 +778,7 @@ fcl_cla_code.asm                                                     PAGE   13
      533 00000054 0000          MNOP      ; [CPU_FPU] |107| 
          00000055 7FA0 
      534 00000056 0000          MNOP      ; [CPU_FPU] |107| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   14
@@ -838,7 +838,7 @@ fcl_cla_code.asm                                                     PAGE   14
      566 00000080 0000!         MMOV32    @qep1,MR0             ; [CPU_FPU] |135| 
          00000081 74C0 
      567 00000082 0000          MNOP      ; [CPU_FPU] 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   15
@@ -898,7 +898,7 @@ fcl_cla_code.asm                                                     PAGE   15
          000000ab 7FA0 
      600 000000ac 000A!         MMOV32    MR0,@qep1+10          ; [CPU_FPU] |84| 
          000000ad 73C0 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   16
@@ -958,7 +958,7 @@ fcl_cla_code.asm                                                     PAGE   16
      635                      .dwattr $C$DW$18, DW_AT_TI_end_column(0x01)
      636                      .dwendentry
      637                      .dwendtag $C$DW$18
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   17
@@ -1018,7 +1018,7 @@ fcl_cla_code.asm                                                     PAGE   17
      690                      .dwattr $C$DW$22, DW_AT_decl_line(0x42)
      691                      .dwattr $C$DW$22, DW_AT_decl_column(0x05)
      692              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   18
@@ -1078,7 +1078,7 @@ fcl_cla_code.asm                                                     PAGE   18
      745                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$21)
      746                      .dwattr $C$DW$26, DW_AT_name("QepPeriod")
      747                      .dwattr $C$DW$26, DW_AT_data_member_location[DW_OP_plus_uconst 0x5]
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   19
@@ -1138,7 +1138,7 @@ fcl_cla_code.asm                                                     PAGE   19
      800                      .dwattr $C$DW$32, DW_AT_name("CalibratedAngle")
      801                      .dwattr $C$DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0xe]
      802                      .dwattr $C$DW$32, DW_AT_accessibility(DW_ACCESS_public)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   20
@@ -1198,7 +1198,7 @@ fcl_cla_code.asm                                                     PAGE   20
      855                      .dwattr $C$DW$35, DW_AT_decl_line(0x19)
      856                      .dwattr $C$DW$35, DW_AT_decl_column(0x10)
      857              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   21
@@ -1258,7 +1258,7 @@ fcl_cla_code.asm                                                     PAGE   21
      910                      .dwattr $C$DW$41, DW_AT_decl_column(0x10)
      911              
      912              $C$DW$42        .dwtag  DW_TAG_member
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   22
@@ -1318,7 +1318,7 @@ fcl_cla_code.asm                                                     PAGE   22
      965                      .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$19)
      966                      .dwattr $C$DW$45, DW_AT_name("Freq")
      967                      .dwattr $C$DW$45, DW_AT_accessibility(DW_ACCESS_public)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   23
@@ -1378,7 +1378,7 @@ fcl_cla_code.asm                                                     PAGE   23
     1020                      .dwendtag $C$DW$T$28
     1021              
     1022                      .dwendtag $C$DW$TU$28
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   24
@@ -1438,7 +1438,7 @@ fcl_cla_code.asm                                                     PAGE   24
     1075                      .dwendtag $C$DW$TU$59
     1076              
     1077              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   25
@@ -1498,7 +1498,7 @@ fcl_cla_code.asm                                                     PAGE   25
     1130                      .dwattr $C$DW$58, DW_AT_name("QPOSSLAT")
     1131                      .dwattr $C$DW$58, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
     1132                      .dwattr $C$DW$58, DW_AT_accessibility(DW_ACCESS_public)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   26
@@ -1558,7 +1558,7 @@ fcl_cla_code.asm                                                     PAGE   26
     1185                      .dwattr $C$DW$64, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
     1186                      .dwattr $C$DW$64, DW_AT_accessibility(DW_ACCESS_public)
     1187                      .dwattr $C$DW$64, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_suppo
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   27
@@ -1618,7 +1618,7 @@ fcl_cla_code.asm                                                     PAGE   27
     1240                      .dwattr $C$DW$70, DW_AT_accessibility(DW_ACCESS_public)
     1241                      .dwattr $C$DW$70, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_suppo
     1242                      .dwattr $C$DW$70, DW_AT_decl_line(0xec)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   28
@@ -1678,7 +1678,7 @@ fcl_cla_code.asm                                                     PAGE   28
     1295                      .dwattr $C$DW$76, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_suppo
     1296                      .dwattr $C$DW$76, DW_AT_decl_line(0xf2)
     1297                      .dwattr $C$DW$76, DW_AT_decl_column(0x2e)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   29
@@ -1738,7 +1738,7 @@ fcl_cla_code.asm                                                     PAGE   29
     1350                      .dwattr $C$DW$79, DW_AT_decl_line(0x5e)
     1351                      .dwattr $C$DW$79, DW_AT_decl_column(0x0c)
     1352              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   30
@@ -1798,7 +1798,7 @@ fcl_cla_code.asm                                                     PAGE   30
     1405                      .dwattr $C$DW$T$34, DW_AT_decl_column(0x07)
     1406                      .dwendtag $C$DW$T$34
     1407              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   31
@@ -1858,7 +1858,7 @@ fcl_cla_code.asm                                                     PAGE   31
     1460                      .dwattr $C$DW$88, DW_AT_bit_offset(0x0b)
     1461                      .dwattr $C$DW$88, DW_AT_bit_size(0x01)
     1462                      .dwattr $C$DW$88, DW_AT_accessibility(DW_ACCESS_public)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   32
@@ -1918,7 +1918,7 @@ fcl_cla_code.asm                                                     PAGE   32
     1515                      .dwattr $C$DW$93, DW_AT_decl_column(0x0c)
     1516              
     1517              $C$DW$94        .dwtag  DW_TAG_member
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   33
@@ -1978,7 +1978,7 @@ fcl_cla_code.asm                                                     PAGE   33
     1570                      .dwattr $C$DW$98, DW_AT_type(*$C$DW$T$35)
     1571                      .dwattr $C$DW$98, DW_AT_name("bit")
     1572                      .dwattr $C$DW$98, DW_AT_accessibility(DW_ACCESS_public)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   34
@@ -2038,7 +2038,7 @@ fcl_cla_code.asm                                                     PAGE   34
     1625                      .dwattr $C$DW$102, DW_AT_bit_size(0x01)
     1626                      .dwattr $C$DW$102, DW_AT_accessibility(DW_ACCESS_public)
     1627                      .dwattr $C$DW$102, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_supp
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   35
@@ -2098,7 +2098,7 @@ fcl_cla_code.asm                                                     PAGE   35
     1680              
     1681              $C$DW$108       .dwtag  DW_TAG_member
     1682                      .dwattr $C$DW$108, DW_AT_type(*$C$DW$T$32)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   36
@@ -2158,7 +2158,7 @@ fcl_cla_code.asm                                                     PAGE   36
     1735              
     1736                      .dwendtag $C$DW$TU$38
     1737              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   37
@@ -2218,7 +2218,7 @@ fcl_cla_code.asm                                                     PAGE   37
     1790                      .dwattr $C$DW$116, DW_AT_accessibility(DW_ACCESS_public)
     1791                      .dwattr $C$DW$116, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_supp
     1792                      .dwattr $C$DW$116, DW_AT_decl_line(0x7a)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   38
@@ -2278,7 +2278,7 @@ fcl_cla_code.asm                                                     PAGE   38
     1845              $C$DW$122       .dwtag  DW_TAG_member
     1846                      .dwattr $C$DW$122, DW_AT_type(*$C$DW$T$32)
     1847                      .dwattr $C$DW$122, DW_AT_name("IEL")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   39
@@ -2338,7 +2338,7 @@ fcl_cla_code.asm                                                     PAGE   39
     1900                      .dwattr $C$DW$126, DW_AT_accessibility(DW_ACCESS_public)
     1901                      .dwattr $C$DW$126, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_supp
     1902                      .dwattr $C$DW$126, DW_AT_decl_line(0x87)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   40
@@ -2398,7 +2398,7 @@ fcl_cla_code.asm                                                     PAGE   40
     1955                      .dwattr $C$DW$130, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_supp
     1956                      .dwattr $C$DW$130, DW_AT_decl_line(0x4d)
     1957                      .dwattr $C$DW$130, DW_AT_decl_column(0x0c)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   41
@@ -2458,7 +2458,7 @@ fcl_cla_code.asm                                                     PAGE   41
     2010                      .dwattr $C$DW$136, DW_AT_type(*$C$DW$T$32)
     2011                      .dwattr $C$DW$136, DW_AT_name("PCRM")
     2012                      .dwattr $C$DW$136, DW_AT_bit_offset(0x02)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   42
@@ -2518,7 +2518,7 @@ fcl_cla_code.asm                                                     PAGE   42
     2065              
     2066              
     2067              $C$DW$TU$43     .dwtag  DW_TAG_type_unit
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   43
@@ -2578,7 +2578,7 @@ fcl_cla_code.asm                                                     PAGE   43
     2120                      .dwattr $C$DW$144, DW_AT_decl_line(0xce)
     2121                      .dwattr $C$DW$144, DW_AT_decl_column(0x0c)
     2122              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   44
@@ -2638,7 +2638,7 @@ fcl_cla_code.asm                                                     PAGE   44
     2175                      .dwattr $C$DW$T$44, DW_AT_name("QEPSTS_REG")
     2176                      .dwattr $C$DW$T$44, DW_AT_byte_size(0x01)
     2177              $C$DW$149       .dwtag  DW_TAG_member
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   45
@@ -2698,7 +2698,7 @@ fcl_cla_code.asm                                                     PAGE   45
     2230                      .dwattr $C$DW$153, DW_AT_bit_offset(0x0d)
     2231                      .dwattr $C$DW$153, DW_AT_bit_size(0x01)
     2232                      .dwattr $C$DW$153, DW_AT_accessibility(DW_ACCESS_public)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   46
@@ -2758,7 +2758,7 @@ fcl_cla_code.asm                                                     PAGE   46
     2285                      .dwattr $C$DW$158, DW_AT_decl_column(0x0c)
     2286              
     2287              $C$DW$159       .dwtag  DW_TAG_member
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   47
@@ -2818,7 +2818,7 @@ fcl_cla_code.asm                                                     PAGE   47
     2340                      .dwendtag $C$DW$T$45
     2341              
     2342                      .dwendtag $C$DW$TU$45
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   48
@@ -2878,7 +2878,7 @@ fcl_cla_code.asm                                                     PAGE   48
     2395                      .dwattr $C$DW$167, DW_AT_bit_size(0x01)
     2396                      .dwattr $C$DW$167, DW_AT_accessibility(DW_ACCESS_public)
     2397                      .dwattr $C$DW$167, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_supp
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   49
@@ -2938,7 +2938,7 @@ fcl_cla_code.asm                                                     PAGE   49
     2450              
     2451              $C$DW$173       .dwtag  DW_TAG_member
     2452                      .dwattr $C$DW$173, DW_AT_type(*$C$DW$T$32)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   50
@@ -2998,7 +2998,7 @@ fcl_cla_code.asm                                                     PAGE   50
     2505                      .dwattr $C$DW$178, DW_AT_bit_size(0x04)
     2506                      .dwattr $C$DW$178, DW_AT_accessibility(DW_ACCESS_public)
     2507                      .dwattr $C$DW$178, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_supp
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   51
@@ -3058,7 +3058,7 @@ fcl_cla_code.asm                                                     PAGE   51
     2560                      .dwattr $C$DW$181, DW_AT_accessibility(DW_ACCESS_public)
     2561                      .dwattr $C$DW$181, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\device_supp
     2562                      .dwattr $C$DW$181, DW_AT_decl_line(0x69)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   52
@@ -3118,7 +3118,7 @@ fcl_cla_code.asm                                                     PAGE   52
     2615              
     2616              $C$DW$T$50      .dwtag  DW_TAG_union_type
     2617                      .dwattr $C$DW$T$50, DW_AT_name("QPOSCTL_REG")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   53
@@ -3178,7 +3178,7 @@ fcl_cla_code.asm                                                     PAGE   53
     2670              
     2671              $C$DW$TU$6      .dwtag  DW_TAG_type_unit
     2672                      .dwmtype  $C$DW$T$6
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   54
@@ -3238,7 +3238,7 @@ fcl_cla_code.asm                                                     PAGE   54
     2725              $C$DW$T$20      .dwtag  DW_TAG_typedef
     2726                      .dwattr $C$DW$T$20, DW_AT_name("__uint16_t")
     2727                      .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$9)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   55
@@ -3298,7 +3298,7 @@ fcl_cla_code.asm                                                     PAGE   55
     2780              
     2781              $C$DW$TU$11     .dwtag  DW_TAG_type_unit
     2782                      .dwmtype  $C$DW$T$11
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   56
@@ -3358,7 +3358,7 @@ fcl_cla_code.asm                                                     PAGE   56
     2835              
     2836              
     2837              $C$DW$TU$13     .dwtag  DW_TAG_type_unit
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   57
@@ -3418,7 +3418,7 @@ fcl_cla_code.asm                                                     PAGE   57
     2890                      .dwmtype  $C$DW$T$19
     2891              $C$DW$T$19      .dwtag  DW_TAG_typedef
     2892                      .dwattr $C$DW$T$19, DW_AT_name("float32_t")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   58
@@ -3478,7 +3478,7 @@ fcl_cla_code.asm                                                     PAGE   58
     2945                      .dwattr $C$DW$190, DW_AT_type(*$C$DW$T$19)
     2946                      .dwattr $C$DW$190, DW_AT_name("expVal")
     2947                      .dwattr $C$DW$190, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   59
@@ -3538,7 +3538,7 @@ fcl_cla_code.asm                                                     PAGE   59
     3000                      .dwattr $C$DW$T$71, DW_AT_name("cmplxPars_t")
     3001                      .dwattr $C$DW$T$71, DW_AT_type(*$C$DW$T$53)
     3002                      .dwattr $C$DW$T$71, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/includ
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:25 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_cla_code.asm                                                     PAGE   60

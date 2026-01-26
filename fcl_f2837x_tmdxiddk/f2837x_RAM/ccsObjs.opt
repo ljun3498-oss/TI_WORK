@@ -16,7 +16,6 @@
 "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/ccs/Release/driverlib.lib"
 "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/lib/sfra_f32_tmu_eabi.lib"
 "../src_device/F2837xD_Headers_nonBIOS_cpu1_eabi.cmd"
-"../src_device/iddk_servo_2837x_flash_lnk_cpu1.cmd"
 "../src_device/iddk_servo_2837x_ram_lnk_cpu1.cmd"
 -lPM_tformat_lib_f2837x.lib
 -llibc.a

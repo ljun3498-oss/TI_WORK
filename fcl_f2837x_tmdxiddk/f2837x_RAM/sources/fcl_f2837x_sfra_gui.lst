@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Sat Jan 24 00:10:59 2026                 *
+       3              ;* Date/Time created: Sun Jan 25 20:51:26 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    1
       53              
       54              $C$DW$10        .dwtag  DW_TAG_formal_parameter
       55                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$20)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    2
@@ -118,7 +118,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    2
      108              
      109              $C$DW$23        .dwtag  DW_TAG_formal_parameter
      110                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$19)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    3
@@ -178,7 +178,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    3
      163              $C$DW$37        .dwtag  DW_TAG_variable
      164                      .dwattr $C$DW$37, DW_AT_name("sfra1")
      165                      .dwattr $C$DW$37, DW_AT_linkage_name("sfra1")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    4
@@ -238,7 +238,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    4
      218                      .dwattr $C$DW$41, DW_AT_decl_line(0x39)
      219                      .dwattr $C$DW$41, DW_AT_decl_column(0x0b)
      220              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    5
@@ -298,7 +298,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    5
      273                      .dwattr $C$DW$45, DW_AT_TI_max_frame_size(-24)
      274                      .dwpsn  file "../sources/fcl_f2837x_sfra_gui.c",line 66,column 1,is_stmt,address ||configureSFRA||,is
      275              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    6
@@ -358,7 +358,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    6
      326                      .dwpsn  file "../sources/fcl_f2837x_sfra_gui.c",line 66,column 1,is_stmt,isa 0
      327 00000007 59A9          MOVZ      AR1,AL                ; [CPU_ALU] |66| 
      328 00000008 E6CF          MOV32     R4H,R0H               ; [CPU_FPU] |66| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    7
@@ -418,7 +418,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    7
      366 00000030 7640!         LCR       #||SFRA_F32_config||  ; [CPU_ALU] |75| 
          00000031 0000 
      367                      ; call occurs [#||SFRA_F32_config||] ; [] |75| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    8
@@ -478,7 +478,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    8
      405 00000057 A04E          MOVL      *-SP[14],XAR5         ; [CPU_ALU] |114| 
      406 00000058 D51C          MOVB      XAR5,#28              ; [CPU_ALU] |114| 
      407 00000059 794F          MOV       *-SP[15],AR1          ; [CPU_ALU] |114| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE    9
@@ -538,7 +538,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE    9
      458                      .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$55)
      459                      .dwattr $C$DW$57, DW_AT_location[DW_OP_reg12]
      460              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   10
@@ -598,7 +598,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   10
      508                      .dwattr $C$DW$60, DW_AT_TI_return
      509              
      510 00000016 0006          LRETR     ; [CPU_ALU] 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   11
@@ -658,7 +658,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   11
      562 00000002 BE00          MOVB      XAR6,#0               ; [CPU_ALU] |366| 
      563 00000003 9000          ANDB      AL,#0                 ; [CPU_ALU] |366| 
      564 00000004 18A8          AND       AH,#32768             ; [CPU_ALU] |366| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   12
@@ -718,7 +718,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   12
      615              $C$DW$67        .dwtag  DW_TAG_variable
      616                      .dwattr $C$DW$67, DW_AT_name("d")
      617                      .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$54)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   13
@@ -778,7 +778,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   13
      665                      .dwattr $C$DW$70, DW_AT_name("__relaxed_sqrtf")
      666                      .dwattr $C$DW$70, DW_AT_low_pc(||__relaxed_sqrtf||)
      667                      .dwattr $C$DW$70, DW_AT_high_pc(0x00)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   14
@@ -838,7 +838,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   14
      719 00000000               .sect   ".text:__relaxed_sinf"
      720                      .clink
      721                      .global ||__relaxed_sinf||
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   15
@@ -898,7 +898,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   15
      772                      ; return occurs ; [] 
      773                      .dwattr $C$DW$74, DW_AT_TI_end_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/mat
      774                      .dwattr $C$DW$74, DW_AT_TI_end_line(0x10b)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   16
@@ -958,7 +958,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   16
      827                      .dwattr $C$DW$82, DW_AT_type(*$C$DW$T$50)
      828                      .dwattr $C$DW$82, DW_AT_location[DW_OP_regx 0x2f]
      829              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   17
@@ -1018,7 +1018,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   17
      877                      .dwattr $C$DW$85, DW_AT_type(*$C$DW$T$16)
      878                      .dwattr $C$DW$85, DW_AT_location[DW_OP_regx 0x2b]
      879              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   18
@@ -1078,7 +1078,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   18
      931                      .dwattr $C$DW$89, DW_AT_decl_column(0x10)
      932                      .dwattr $C$DW$89, DW_AT_TI_max_frame_size(-2)
      933                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h",line 233,column 1,
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   19
@@ -1138,7 +1138,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   19
      985                      .dwattr $C$DW$94, DW_AT_low_pc(||__relaxed_cosf||)
      986                      .dwattr $C$DW$94, DW_AT_high_pc(0x00)
      987                      .dwattr $C$DW$94, DW_AT_linkage_name("__relaxed_cosf")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   20
@@ -1198,7 +1198,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   20
     1038              
     1039 00000000               .sect   ".text:__relaxed_atanf"
     1040                      .clink
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   21
@@ -1258,7 +1258,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   21
     1090 0000000b 7700          NOP       ; [CPU_ALU] 
     1091 0000000c 7700          NOP       ; [CPU_ALU] 
     1092 0000000d E710          ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |276| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   22
@@ -1318,7 +1318,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   22
     1143              ;* FUNCTION PROPERTIES                                         *
     1144              ;*                            0 Parameter,  0 Auto,  0 SOE     *
     1145              ;***************************************************************
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   23
@@ -1378,7 +1378,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   23
     1194                      .dwattr $C$DW$108, DW_AT_name("__isnormall")
     1195                      .dwattr $C$DW$108, DW_AT_low_pc(||__isnormall||)
     1196                      .dwattr $C$DW$108, DW_AT_high_pc(0x00)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   24
@@ -1438,7 +1438,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   24
     1248 0000000e 18AB          AND       PL,#2047              ; [CPU_ALU] |360| 
          0000000f 07FF 
     1249 00000010 18AA          AND       PH,#0                 ; [CPU_ALU] |360| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   25
@@ -1498,7 +1498,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   25
     1296                      .dwattr $C$DW$113, DW_AT_type(*$C$DW$T$10)
     1297                      .dwattr $C$DW$113, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_def
     1298                      .dwattr $C$DW$113, DW_AT_decl_line(0x163)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   26
@@ -1558,7 +1558,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   26
     1346              $C$DW$116       .dwtag  DW_TAG_TI_branch
     1347                      .dwattr $C$DW$116, DW_AT_low_pc(0x00)
     1348                      .dwattr $C$DW$116, DW_AT_TI_return
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   27
@@ -1618,7 +1618,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   27
     1401                      .dwcfi  save_reg_to_mem, 26, 0
     1402 00000000 FE04          ADDB      SP,#4                 ; [CPU_ARAU] 
     1403                      .dwcfi  cfa_offset, -6
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   28
@@ -1678,7 +1678,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   28
     1448                      ; return occurs ; [] 
     1449                      .dwattr $C$DW$117, DW_AT_TI_end_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_d
     1450                      .dwattr $C$DW$117, DW_AT_TI_end_line(0x161)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   29
@@ -1738,7 +1738,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   29
     1503 00000002 06D4          MOVL      ACC,*+XAR4[2]         ; [CPU_ALU] |348| 
     1504 00000003 28AC          MOV       T,#48                 ; [CPU_ALU] |348| 
          00000004 0030 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   30
@@ -1798,7 +1798,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   30
     1550 00000000               .sect   ".text:__isnanf"
     1551                      .clink
     1552                      .global ||__isnanf||
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   31
@@ -1858,7 +1858,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   31
     1602                      ; branchcc occurs ; [] |345| 
     1603 0000000a A9A9          MOVL      ACC,P                 ; [CPU_ALU] |345| 
     1604 0000000b 917F          ANDB      AH,#127               ; [CPU_ALU] |345| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   32
@@ -1918,7 +1918,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   32
     1656              ;* AR4   assigned to $O$S1
     1657              ;* AR4   assigned to d
     1658              $C$DW$133       .dwtag  DW_TAG_variable
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   33
@@ -1978,7 +1978,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   33
     1703 00000023 92A4          MOV       AL,AR4                ; [CPU_ALU] |342| 
     1704              $C$DW$135       .dwtag  DW_TAG_TI_branch
     1705                      .dwattr $C$DW$135, DW_AT_low_pc(0x00)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   34
@@ -2038,7 +2038,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   34
     1758                      .dwcfi  cfa_offset, -2
     1759                      .dwcfi  save_reg_to_mem, 26, 0
     1760 00000000 FE04          ADDB      SP,#4                 ; [CPU_ARAU] 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   35
@@ -2098,7 +2098,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   35
     1805                      .dwattr $C$DW$136, DW_AT_TI_end_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_d
     1806                      .dwattr $C$DW$136, DW_AT_TI_end_line(0x17b)
     1807                      .dwattr $C$DW$136, DW_AT_TI_end_column(0x4c)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   36
@@ -2158,7 +2158,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   36
     1858 00000004 80A9          MOVZ      AR7,AL                ; [CPU_ALU] |375| 
     1859 00000005 BE00          MOVB      XAR6,#0               ; [CPU_ALU] |375| 
     1860 00000006 FF20          MOV       ACC,#32640            ; [CPU_ALU] |375| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   37
@@ -2218,7 +2218,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   37
     1911              ;* FUNCTION PROPERTIES                                         *
     1912              ;*                            4 Parameter,  0 Auto,  0 SOE     *
     1913              ;***************************************************************
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   38
@@ -2278,7 +2278,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   38
     1959 0000001f 5200          CMPB      AL,#0                 ; [CPU_ALU] |377| 
     1960 00000020 56B1          MOVB      XAR4,#1,EQ            ; [CPU_ALU] |377| 
          00000021 01A4 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   39
@@ -2338,7 +2338,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   39
     2013                      .dwattr $C$DW$152, DW_AT_name("e")
     2014                      .dwattr $C$DW$152, DW_AT_type(*$C$DW$T$56)
     2015                      .dwattr $C$DW$152, DW_AT_location[DW_OP_reg12]
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   40
@@ -2398,7 +2398,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   40
     2064                      .dwattr $C$DW$155, DW_AT_location[DW_OP_regx 0x2b]
     2065              
     2066              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   41
@@ -2458,7 +2458,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   41
     2115                      .dwattr $C$DW$158, DW_AT_external
     2116                      .dwattr $C$DW$158, DW_AT_type(*$C$DW$T$10)
     2117                      .dwattr $C$DW$158, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_def
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   42
@@ -2518,7 +2518,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   42
     2166                      .dwattr $C$DW$158, DW_AT_TI_end_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_d
     2167                      .dwattr $C$DW$158, DW_AT_TI_end_line(0x14f)
     2168                      .dwattr $C$DW$158, DW_AT_TI_end_column(0x2e)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   43
@@ -2578,7 +2578,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   43
     2221                      .dwcfi  cfa_offset, -10
     2222 00000001 C4D4          MOVL      XAR6,*+XAR4[2]        ; [CPU_ALU] |431| 
     2223 00000002 06C4          MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |431| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   44
@@ -2638,7 +2638,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   44
     2269 00000029 A0AB          MOVL      P,XAR5                ; [CPU_ALU] |436| 
     2270 0000002a A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |436| 
     2271 0000002b 28AC          MOV       T,#52                 ; [CPU_ALU] |436| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   45
@@ -2698,7 +2698,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   45
     2314 00000050 6F02          B         ||$C$L14||,UNC        ; [CPU_ALU] |436| 
     2315                      ; branch occurs ; [] |436| 
     2316 00000051       ||$C$L13||:    
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   46
@@ -2758,7 +2758,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   46
     2369              $C$DW$172       .dwtag  DW_TAG_variable
     2370                      .dwattr $C$DW$172, DW_AT_name("f")
     2371                      .dwattr $C$DW$172, DW_AT_type(*$C$DW$T$50)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   47
@@ -2818,7 +2818,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   47
     2419                      .dwattr $C$DW$175, DW_AT_low_pc(0x00)
     2420                      .dwattr $C$DW$175, DW_AT_TI_return
     2421              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   48
@@ -2878,7 +2878,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   48
     2473                      .dwattr $C$DW$179, DW_AT_name("d")
     2474                      .dwattr $C$DW$179, DW_AT_type(*$C$DW$T$53)
     2475                      .dwattr $C$DW$179, DW_AT_location[DW_OP_reg12]
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   49
@@ -2938,7 +2938,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   49
     2525 00000016 2B41          MOV       *-SP[1],#0            ; [CPU_ALU] |419| 
     2526 00000017 A348          MOVL      P,*-SP[8]             ; [CPU_ALU] |419| 
     2527 00000018 0646          MOVL      ACC,*-SP[6]           ; [CPU_ALU] |419| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   50
@@ -2998,7 +2998,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   50
     2572 0000003b 28A9          MOV       AL,#-1                ; [CPU_ALU] |419| 
          0000003c FFFF 
     2573 0000003d 6F15          B         ||$C$L23||,UNC        ; [CPU_ALU] |419| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   51
@@ -3058,7 +3058,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   51
     2621                      .global ||SFRA_F32_initFreqArrayWithLogSteps||
     2622                      .global ||SFRA_GUI_config||
     2623                      .global ||__c28xabi_cmpull||
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   52
@@ -3118,7 +3118,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   52
     2676                      .gmember  ".text:__relaxed_atanf"
     2677                      .endgroup
     2678                      .group    "__relaxed_cosf", 1
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   53
@@ -3178,7 +3178,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   53
     2731                      .dwcfi  same_value, 71
     2732                      .dwendentry
     2733                      .dwendtag $C$DW$CU
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   54
@@ -3238,7 +3238,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   54
     2786                      .dwattr $C$DW$190, DW_AT_decl_line(0x44)
     2787                      .dwattr $C$DW$190, DW_AT_decl_column(0x10)
     2788              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   55
@@ -3298,7 +3298,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   55
     2841                      .dwattr $C$DW$196, DW_AT_decl_column(0x0f)
     2842              
     2843              $C$DW$197       .dwtag  DW_TAG_member
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   56
@@ -3358,7 +3358,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   56
     2896              
     2897              $C$DW$203       .dwtag  DW_TAG_member
     2898                      .dwattr $C$DW$203, DW_AT_type(*$C$DW$T$22)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   57
@@ -3418,7 +3418,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   57
     2951              
     2952              
     2953              $C$DW$TU$2      .dwtag  DW_TAG_type_unit
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   58
@@ -3478,7 +3478,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   58
     3006                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
     3007              
     3008                      .dwendtag $C$DW$TU$8
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   59
@@ -3538,7 +3538,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   59
     3061              
     3062                      .dwendtag $C$DW$TU$11
     3063              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   60
@@ -3598,7 +3598,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   60
     3116              
     3117                      .dwendtag $C$DW$TU$13
     3118              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   61
@@ -3658,7 +3658,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   61
     3171              
     3172                      .dwendtag $C$DW$TU$15
     3173              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   62
@@ -3718,7 +3718,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   62
     3226                      .dwendtag $C$DW$T$51
     3227              
     3228                      .dwendtag $C$DW$TU$51
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   63
@@ -3778,7 +3778,7 @@ fcl_f2837x_sfra_gui.asm                                              PAGE   63
     3281              
     3282              $C$DW$TU$55     .dwtag  DW_TAG_type_unit
     3283                      .dwmtype  $C$DW$T$55
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:00 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 fcl_f2837x_sfra_gui.asm                                              PAGE   64

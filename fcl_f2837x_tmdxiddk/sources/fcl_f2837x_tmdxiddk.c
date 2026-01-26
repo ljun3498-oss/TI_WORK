@@ -82,6 +82,11 @@
 #include <stdint.h>
 #include "fcl_cpu_cla.h"
 #include "fcl_f2837x_tmdxiddk_settings.h"
+
+// Force BUILDLEVEL to FCL_LEVEL2
+#undef BUILDLEVEL
+#define BUILDLEVEL FCL_LEVEL2
+
 #include "fcl_f2837x_sfra_settings.h"
 #include "fcl_f2837x_enum.h"
 #include "fcl_tformat_f2837x_config.h"
@@ -297,7 +302,7 @@ uint32_t isrTicker = 0;
 uint16_t backTicker = 0;
 uint16_t tripFlagDMC = 0;        //PWM trip status
 uint16_t clearTripFlagDMC = 0;
-MotorRunStop_e runMotor = MOTOR_STOP;
+MotorRunStop_e runMotor = MOTOR_RUN;
 
 uint16_t ledCnt1 = 0;
 
@@ -320,11 +325,11 @@ float32_t maxModIndex = 0;             // max modulation index
 // ****************************************************************************
 float32_t T = 0.001f / ISR_FREQUENCY;  // Samping period (sec), see parameter.h
 float32_t VdTesting = 0.0f;          // Vd reference (pu)
-float32_t VqTesting = 0.10f;         // Vq reference (pu)
+float32_t VqTesting = 1.10f;         // Vq reference (pu)
 float32_t IdRef     = 0.0f;          // Id reference (pu)
 float32_t tempIdRef = 0.0f;          // tempId reference (pu)
 float32_t IqRef     = 0.0f;          // Iq reference (pu)
-float32_t speedRef  = 0.0f;          // For Closed Loop tests
+float32_t speedRef  = 0.2f;          // For Closed Loop tests
 float32_t lsw1Speed = 0.02f;         // initial force rotation speed in search
                                     // of QEP index pulse
 
@@ -620,6 +625,9 @@ void main(void)
     //
     Device_initGPIO();
 
+    // For testing purpose, set enableFlag to true
+    enableFlag = true;
+
     // Waiting for enable flag set
     while(enableFlag == false)
     {
@@ -643,6 +651,24 @@ void main(void)
     // This will populate the entire table, even if the interrupt
     // is not used in this example.  This is useful for debug purposes.
     Interrupt_initVectorTable();
+
+    // Debug: Check BUILDLEVEL value and ISR ticker
+    #if(BUILDLEVEL == FCL_LEVEL1)
+        dlogCh1 = 1.0;
+    #elif(BUILDLEVEL == FCL_LEVEL2)
+        dlogCh1 = 2.0;
+    #elif(BUILDLEVEL == FCL_LEVEL3)
+        dlogCh1 = 3.0;
+    #elif(BUILDLEVEL == FCL_LEVEL4)
+        dlogCh1 = 4.0;
+    #elif(BUILDLEVEL == FCL_LEVEL5)
+        dlogCh1 = 5.0;
+    #elif(BUILDLEVEL == FCL_LEVEL6)
+        dlogCh1 = 6.0;
+    #endif
+    
+    // Debug: Check ISR ticker
+    dlogCh2 = (float32_t)isrTicker;
 
     // *************** SFRA & SFRA_GUI COMM INIT CODE START *******************
 #if(BUILDLEVEL == FCL_LEVEL6)
@@ -849,7 +875,7 @@ void main(void)
 
     // Init FLAGS
     lsw      = ENC_ALIGNMENT;
-    runMotor = MOTOR_STOP;
+    runMotor = MOTOR_RUN;
     ledCnt1  = 0;
     fclClrCntr = 1;
 

@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Sat Jan 24 00:11:02 2026                 *
+       3              ;* Date/Time created: Sun Jan 25 20:51:28 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ eqep.asm                                                             PAGE    1
       53                      .dwattr $C$DW$6, DW_AT_name("invertStrobe")
       54                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$24)
       55                      .dwattr $C$DW$6, DW_AT_location[DW_OP_breg20 -6]
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    2
@@ -118,7 +118,7 @@ eqep.asm                                                             PAGE    2
      108 00000005 5201          CMPB      AL,#1                 ; [CPU_ALU] |105| 
      109 00000006 6106          B         ||$C$L1||,EQ          ; [CPU_ALU] |105| 
      110                      ; branchcc occurs ; [] |105| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    3
@@ -178,7 +178,7 @@ eqep.asm                                                             PAGE    3
      158 00000026 1AC4          OR        *+XAR4[0],#0x0040     ; [CPU_ALU] |131| 
          00000027 0040 
      159 00000028       ||$C$L6||:    
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    4
@@ -238,7 +238,7 @@ eqep.asm                                                             PAGE    4
      210                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$20)
      211                      .dwattr $C$DW$14, DW_AT_location[DW_OP_reg0]
      212              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    5
@@ -298,7 +298,7 @@ eqep.asm                                                             PAGE    5
      265 00000003 D017          MOVB      XAR0,#23              ; [CPU_ALU] |73| 
      266 00000004 CDA4          AND       AH,AR4,#0xc000        ; [CPU_ALU] |73| 
          00000005 C000 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    6
@@ -358,7 +358,7 @@ eqep.asm                                                             PAGE    6
      316                      .dwcfi  same_value, 6
      317                      .dwcfi  same_value, 7
      318                      .dwcfi  same_value, 8
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    7
@@ -418,7 +418,7 @@ eqep.asm                                                             PAGE    7
      371              
      372              $C$DW$TU$7      .dwtag  DW_TAG_type_unit
      373                      .dwmtype  $C$DW$T$7
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    8
@@ -478,7 +478,7 @@ eqep.asm                                                             PAGE    8
      426                      .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$11)
      427                      .dwattr $C$DW$T$21, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/mac
      428                      .dwattr $C$DW$T$21, DW_AT_decl_line(0x41)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE    9
@@ -538,7 +538,7 @@ eqep.asm                                                             PAGE    9
      481                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$13)
      482                      .dwattr $C$DW$T$19, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/mac
      483                      .dwattr $C$DW$T$19, DW_AT_decl_line(0x43)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE   10
@@ -598,7 +598,7 @@ eqep.asm                                                             PAGE   10
      536                      .dwattr $C$DW$T$16, DW_AT_name("float")
      537                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
      538              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:02 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:28 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 eqep.asm                                                             PAGE   11

@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Sat Jan 24 00:11:01 2026                 *
+       3              ;* Date/Time created: Sun Jan 25 20:51:27 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ speed_observer.asm                                                   PAGE    1
       53                      .dwattr $C$DW$3, DW_AT_location[DW_OP_reg12]
       54              
       55                      .dwcfi  cfa_offset, -2
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    2
@@ -118,7 +118,7 @@ speed_observer.asm                                                   PAGE    2
      103                      .dwattr $C$DW$6, DW_AT_linkage_name("__signbitf")
      104                      .dwattr $C$DW$6, DW_AT_external
      105                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$10)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    3
@@ -178,7 +178,7 @@ speed_observer.asm                                                   PAGE    3
      155                      .dwendtag $C$DW$6
      156              
      157 00000000               .sect   ".text:__signbit"
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    4
@@ -238,7 +238,7 @@ speed_observer.asm                                                   PAGE    4
      209 00000009 18AA          AND       PH,#0                 ; [CPU_ALU] |364| 
          0000000a 0000 
      210 0000000b 9000          ANDB      AL,#0                 ; [CPU_ALU] |364| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    5
@@ -298,7 +298,7 @@ speed_observer.asm                                                   PAGE    5
      260              
      261              ;***************************************************************
      262              ;* FNAME: __relaxed_sqrtf               FR SIZE:   0           *
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    6
@@ -358,7 +358,7 @@ speed_observer.asm                                                   PAGE    6
      314              $C$DW$20        .dwtag  DW_TAG_formal_parameter
      315                      .dwattr $C$DW$20, DW_AT_name("x")
      316                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$16)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    7
@@ -418,7 +418,7 @@ speed_observer.asm                                                   PAGE    7
      367                      .dwattr $C$DW$23, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.
      368                      .dwattr $C$DW$23, DW_AT_decl_line(0x11c)
      369                      .dwattr $C$DW$23, DW_AT_decl_column(0x10)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    8
@@ -478,7 +478,7 @@ speed_observer.asm                                                   PAGE    8
      419 0000000c E700          MPYF32    R1H,R1H,R2H           ; [CPU_FPU] |286| 
          0000000d 0089 
      420 0000000e 7700          NOP       ; [CPU_ALU] 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE    9
@@ -538,7 +538,7 @@ speed_observer.asm                                                   PAGE    9
      472              ||__relaxed_fminf||:
      473              ;* R1    assigned to y
      474              $C$DW$32        .dwtag  DW_TAG_variable
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   10
@@ -598,7 +598,7 @@ speed_observer.asm                                                   PAGE   10
      526              ;*                                                             *
      527              ;* FUNCTION ENVIRONMENT                                        *
      528              ;*                                                             *
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   11
@@ -658,7 +658,7 @@ speed_observer.asm                                                   PAGE   11
      580              ;***************************************************************
      581              ;* FNAME: __relaxed_cosf                FR SIZE:   0           *
      582              ;*                                                             *
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   12
@@ -718,7 +718,7 @@ speed_observer.asm                                                   PAGE   12
      633                      .dwfde $C$DW$CIE, ||__relaxed_atanf||
      634              $C$DW$44        .dwtag  DW_TAG_formal_parameter
      635                      .dwattr $C$DW$44, DW_AT_name("x")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   13
@@ -778,7 +778,7 @@ speed_observer.asm                                                   PAGE   13
      683                      .dwendentry
      684                      .dwendtag $C$DW$43
      685              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   14
@@ -838,7 +838,7 @@ speed_observer.asm                                                   PAGE   14
      738                      .dwcfi  save_reg_to_mem, 26, 0
      739                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h",line 281,column 3,
      740 00000000 E27C          QUADF32   R1H,R0H,R0H,R1H       ; [CPU_FPU] |281| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   15
@@ -898,7 +898,7 @@ speed_observer.asm                                                   PAGE   15
      789              
      790              ;***************************************************************
      791              ;* FNAME: __isnormall                   FR SIZE:   4           *
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   16
@@ -958,7 +958,7 @@ speed_observer.asm                                                   PAGE   16
      840 00000019 28AC          MOV       T,#48                 ; [CPU_ALU] |360| 
          0000001a 0030 
      841 0000001b 565B          LSR64     ACC:P,T               ; [CPU_ALU] |360| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   17
@@ -1018,7 +1018,7 @@ speed_observer.asm                                                   PAGE   17
      891              ;*                                                             *
      892              ;* FUNCTION PROPERTIES                                         *
      893              ;*                            0 Parameter,  0 Auto,  0 SOE     *
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   18
@@ -1078,7 +1078,7 @@ speed_observer.asm                                                   PAGE   18
      941                      .dwattr $C$DW$62, DW_AT_low_pc(||__isnormal||)
      942                      .dwattr $C$DW$62, DW_AT_high_pc(0x00)
      943                      .dwattr $C$DW$62, DW_AT_linkage_name("__isnormal")
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   19
@@ -1138,7 +1138,7 @@ speed_observer.asm                                                   PAGE   19
          0000000f 07FF 
      995 00000010 18AA          AND       PH,#0                 ; [CPU_ALU] |352| 
          00000011 0000 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   20
@@ -1198,7 +1198,7 @@ speed_observer.asm                                                   PAGE   20
     1043                      .dwattr $C$DW$67, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs
     1044                      .dwattr $C$DW$67, DW_AT_decl_line(0x15b)
     1045                      .dwattr $C$DW$67, DW_AT_decl_column(0x18)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   21
@@ -1258,7 +1258,7 @@ speed_observer.asm                                                   PAGE   21
     1095 00000013 18A9          AND       AL,#65535             ; [CPU_ALU] |348| 
          00000014 FFFF 
     1096 00000015 910F          ANDB      AH,#15                ; [CPU_ALU] |348| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   22
@@ -1318,7 +1318,7 @@ speed_observer.asm                                                   PAGE   22
     1145              $C$DW$73        .dwtag  DW_TAG_formal_parameter
     1146                      .dwattr $C$DW$73, DW_AT_name("f")
     1147                      .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$16)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   23
@@ -1378,7 +1378,7 @@ speed_observer.asm                                                   PAGE   23
     1196                      .dwendtag $C$DW$72
     1197              
     1198 00000000               .sect   ".text:__isnan"
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   24
@@ -1438,7 +1438,7 @@ speed_observer.asm                                                   PAGE   24
     1250 00000007 D400          MOVB      XAR4,#0               ; [CPU_ALU] |342| 
     1251 00000008 565B          LSR64     ACC:P,T               ; [CPU_ALU] |342| 
     1252 00000009 2BAA          MOV       PH,#0                 ; [CPU_ALU] |342| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   25
@@ -1498,7 +1498,7 @@ speed_observer.asm                                                   PAGE   25
     1298                      .dwattr $C$DW$81, DW_AT_name("__isinfl")
     1299                      .dwattr $C$DW$81, DW_AT_low_pc(||__isinfl||)
     1300                      .dwattr $C$DW$81, DW_AT_high_pc(0x00)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   26
@@ -1558,7 +1558,7 @@ speed_observer.asm                                                   PAGE   26
     1350 0000000e 0FAB          CMPL      ACC,P                 ; [CPU_ALU] |379| 
     1351 0000000f 6013          B         ||$C$L7||,NEQ         ; [CPU_ALU] |379| 
     1352                      ; branchcc occurs ; [] |379| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   27
@@ -1618,7 +1618,7 @@ speed_observer.asm                                                   PAGE   27
     1400                      .dwattr $C$DW$86, DW_AT_decl_line(0x176)
     1401                      .dwattr $C$DW$86, DW_AT_decl_column(0x18)
     1402                      .dwattr $C$DW$86, DW_AT_TI_max_frame_size(-2)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   28
@@ -1678,7 +1678,7 @@ speed_observer.asm                                                   PAGE   28
     1451 00000010 0006          LRETR     ; [CPU_ALU] 
     1452                      ; return occurs ; [] 
     1453                      .dwattr $C$DW$86, DW_AT_TI_end_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_de
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   29
@@ -1738,7 +1738,7 @@ speed_observer.asm                                                   PAGE   29
     1506 00000001 C5C4          MOVL      XAR7,*+XAR4[0]        ; [CPU_ALU] |377| 
     1507 00000002 06D4          MOVL      ACC,*+XAR4[2]         ; [CPU_ALU] |377| 
     1508 00000003 28AC          MOV       T,#48                 ; [CPU_ALU] |377| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   30
@@ -1798,7 +1798,7 @@ speed_observer.asm                                                   PAGE   30
     1553              
     1554 00000000               .sect   ".text:__isfinitel"
     1555                      .clink
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   31
@@ -1858,7 +1858,7 @@ speed_observer.asm                                                   PAGE   31
     1605 0000000b 0FA7          CMPL      ACC,XAR7              ; [CPU_ALU] |339| 
     1606 0000000c 56B0          MOVB      XAR6,#1,NEQ           ; [CPU_ALU] |339| 
          0000000d 01A6 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   32
@@ -1918,7 +1918,7 @@ speed_observer.asm                                                   PAGE   32
     1659              
     1660                      .dwcfi  cfa_offset, -2
     1661                      .dwcfi  save_reg_to_mem, 26, 0
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   33
@@ -1978,7 +1978,7 @@ speed_observer.asm                                                   PAGE   33
     1710              ;* FUNCTION ENVIRONMENT                                        *
     1711              ;*                                                             *
     1712              ;* FUNCTION PROPERTIES                                         *
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   34
@@ -2038,7 +2038,7 @@ speed_observer.asm                                                   PAGE   34
     1761                      .dwattr $C$DW$107, DW_AT_decl_line(0x1ae)
     1762                      .dwattr $C$DW$107, DW_AT_decl_column(0x18)
     1763                      .dwattr $C$DW$107, DW_AT_TI_max_frame_size(-10)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   35
@@ -2098,7 +2098,7 @@ speed_observer.asm                                                   PAGE   35
          00000010 7FF0 
     1814 00000011 0FA6          CMPL      ACC,XAR6              ; [CPU_ALU] |436| 
     1815 00000012 6016          B         ||$C$L11||,NEQ        ; [CPU_ALU] |436| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   36
@@ -2158,7 +2158,7 @@ speed_observer.asm                                                   PAGE   36
     1861              
     1862 00000037 7640!         LCR       #||__c28xabi_cmpull|| ; [CPU_ALU] |436| 
          00000038 0000 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   37
@@ -2218,7 +2218,7 @@ speed_observer.asm                                                   PAGE   37
     1909              
     1910 00000000               .sect   ".text:__fpclassifyf"
     1911                      .clink
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   38
@@ -2278,7 +2278,7 @@ speed_observer.asm                                                   PAGE   38
     1961                      ; branchcc occurs ; [] |402| 
     1962 00000009 A9A9          MOVL      ACC,P                 ; [CPU_ALU] |402| 
     1963 0000000a 917F          ANDB      AH,#127               ; [CPU_ALU] |402| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   39
@@ -2338,7 +2338,7 @@ speed_observer.asm                                                   PAGE   39
     2013              
     2014 00000020 0006          LRETR     ; [CPU_ALU] 
     2015                      ; return occurs ; [] 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   40
@@ -2398,7 +2398,7 @@ speed_observer.asm                                                   PAGE   40
     2068                      .dwattr $C$DW$125, DW_AT_location[DW_OP_breg20 -8]
     2069              
     2070              ;* AR5   assigned to $O$C1
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   41
@@ -2458,7 +2458,7 @@ speed_observer.asm                                                   PAGE   41
     2116 00000022 5200          CMPB      AL,#0                 ; [CPU_ALU] |419| 
     2117 00000023 6103          B         ||$C$L19||,EQ         ; [CPU_ALU] |419| 
     2118                      ; branchcc occurs ; [] |419| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   42
@@ -2518,7 +2518,7 @@ speed_observer.asm                                                   PAGE   42
     2163                      .dwattr $C$DW$129, DW_AT_low_pc(0x00)
     2164                      .dwattr $C$DW$129, DW_AT_name("__c28xabi_cmpull")
     2165                      .dwattr $C$DW$129, DW_AT_TI_call
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   43
@@ -2578,7 +2578,7 @@ speed_observer.asm                                                   PAGE   43
     2216                      .endgroup
     2217                      .group    "__isinf", 1
     2218                      .gmember  ".text:__isinf"
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   44
@@ -2638,7 +2638,7 @@ speed_observer.asm                                                   PAGE   44
     2271                      .group    "__signbitf", 1
     2272                      .gmember  ".text:__signbitf"
     2273                      .endgroup
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   45
@@ -2698,7 +2698,7 @@ speed_observer.asm                                                   PAGE   45
     2326              
     2327                      .dwendtag $C$DW$TU$4
     2328              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   46
@@ -2758,7 +2758,7 @@ speed_observer.asm                                                   PAGE   46
     2381                      .dwmtype  $C$DW$T$10
     2382              $C$DW$T$10      .dwtag  DW_TAG_base_type
     2383                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   47
@@ -2818,7 +2818,7 @@ speed_observer.asm                                                   PAGE   47
     2436              
     2437                      .dwendtag $C$DW$TU$15
     2438              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   48
@@ -2878,7 +2878,7 @@ speed_observer.asm                                                   PAGE   48
     2491              $C$DW$TU$18     .dwtag  DW_TAG_type_unit
     2492                      .dwmtype  $C$DW$T$18
     2493              $C$DW$T$18      .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:11:01 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:27 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 speed_observer.asm                                                   PAGE   49

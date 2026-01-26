@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Sat Jan 24 00:10:59 2026                 *
+       3              ;* Date/Time created: Sun Jan 25 20:51:26 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ dlog_4ch_f.asm                                                       PAGE    1
       53              
       54                      .dwcfi  cfa_offset, -2
       55                      .dwcfi  save_reg_to_mem, 26, 0
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    2
@@ -118,7 +118,7 @@ dlog_4ch_f.asm                                                       PAGE    2
      106                      ; return occurs ; [] 
      107                      .dwattr $C$DW$1, DW_AT_TI_end_file("../sources/dlog_4ch_f.c")
      108                      .dwattr $C$DW$1, DW_AT_TI_end_line(0x45)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    3
@@ -178,7 +178,7 @@ dlog_4ch_f.asm                                                       PAGE    3
      161                      .dwcfi  cfa_offset, -6
      162                      .dwpsn  file "../sources/dlog_4ch_f.c",line 74,column 2,is_stmt,isa 0
      163 00000002 D014          MOVB      XAR0,#20              ; [CPU_ALU] |74| 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    4
@@ -238,7 +238,7 @@ dlog_4ch_f.asm                                                       PAGE    4
      213 0000002a 83A9          MOVL      XAR5,ACC              ; [CPU_ALU] |93| 
      214 0000002b C2C5          MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |93| 
      215                      .dwpsn  file "../sources/dlog_4ch_f.c",line 94,column 17,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    5
@@ -298,7 +298,7 @@ dlog_4ch_f.asm                                                       PAGE    5
      261 00000052 D010          MOVB      XAR0,#16              ; [CPU_ALU] |77| 
      262 00000053 E2AF          MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |77| 
          00000054 0194 
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    6
@@ -358,7 +358,7 @@ dlog_4ch_f.asm                                                       PAGE    6
      312                      .dwcfi  same_value, 11
      313                      .dwcfi  same_value, 59
      314                      .dwcfi  same_value, 63
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    7
@@ -418,7 +418,7 @@ dlog_4ch_f.asm                                                       PAGE    7
      367                      .dwattr $C$DW$13, DW_AT_name("output_ptr1")
      368                      .dwattr $C$DW$13, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
      369                      .dwattr $C$DW$13, DW_AT_accessibility(DW_ACCESS_public)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    8
@@ -478,7 +478,7 @@ dlog_4ch_f.asm                                                       PAGE    8
      422                      .dwattr $C$DW$19, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
      423                      .dwattr $C$DW$19, DW_AT_accessibility(DW_ACCESS_public)
      424                      .dwattr $C$DW$19, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/da
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE    9
@@ -538,7 +538,7 @@ dlog_4ch_f.asm                                                       PAGE    9
      477                      .dwattr $C$DW$T$24, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/
      478                      .dwattr $C$DW$T$24, DW_AT_decl_line(0x4b)
      479                      .dwattr $C$DW$T$24, DW_AT_decl_column(0x02)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   10
@@ -598,7 +598,7 @@ dlog_4ch_f.asm                                                       PAGE   10
      532              $C$DW$TU$6      .dwtag  DW_TAG_type_unit
      533                      .dwmtype  $C$DW$T$6
      534              $C$DW$T$6       .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   11
@@ -658,7 +658,7 @@ dlog_4ch_f.asm                                                       PAGE   11
      587                      .dwattr $C$DW$T$21, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/mac
      588                      .dwattr $C$DW$T$21, DW_AT_decl_line(0x40)
      589                      .dwattr $C$DW$T$21, DW_AT_decl_column(0x1d)
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   12
@@ -718,7 +718,7 @@ dlog_4ch_f.asm                                                       PAGE   12
      642              
      643                      .dwendtag $C$DW$TU$14
      644              
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   13
@@ -778,7 +778,7 @@ dlog_4ch_f.asm                                                       PAGE   13
      697              $C$DW$TU$18     .dwtag  DW_TAG_type_unit
      698                      .dwmtype  $C$DW$T$18
      699              $C$DW$T$18      .dwtag  DW_TAG_base_type
-TMS320C2000 Assembler PC v22.6.2 Sat Jan 24 00:10:59 2026
+TMS320C2000 Assembler PC v22.6.2 Sun Jan 25 20:51:26 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dlog_4ch_f.asm                                                       PAGE   14
