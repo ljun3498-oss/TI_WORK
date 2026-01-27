@@ -96,6 +96,8 @@ float open_loop_angle_acc = 0.0f;                // 开环累计角度，用于�
 float g_open_loop_turns = 0.0f;                  // 开环累计转圈圈数
 float g_previous_open_loop_angle = 0.0f;         // 上一次开环角度，用于计算圈数变化
 uint32_t g_open_loop_timeout_counter = 0;        // 开环模式下的中断次数计数器
+static uint32_t g_open_loop_run_counter = 0;     // 开环运行拍数计数器
+static uint32_t g_stable_angle_counter = 0;     // 角度误差稳定拍数计数器
 
 // 电流变量
 volatile float Ia_meas = 0.0f, Ib_meas = 0.0f, Ic_meas = 0.0f; // 三相电流测量值
@@ -129,6 +131,10 @@ uint16_t cl_startup_cnt = 0;                     // 闭环启动计数器
 
 // 调试计数器
 uint32_t g_debug_cnt = 0;                        // 用于确认ISR是否真正运行
+
+// 闭环切换定时器
+volatile uint32_t closed_loop_timer = 0U;
+#define CLOSED_LOOP_DELAY (20000U * 6U)  // 5秒对应的中断次数（20kHz中断频率）
 
 // SVPWM结构体定义
 typedef struct {
@@ -173,8 +179,9 @@ float clampf_val(float v, float lo, float hi)
 // Clarke变换
 void clarke_transform(float Ia, float Ib, float Ic, float* Valpha, float* Vbeta)
 {
-    *Valpha = Ia;
-    *Vbeta = (Ia + 2.0f * Ib) / sqrtf(3.0f);
+    // 标准三相Clarke变换
+    *Valpha = (2.0f/3.0f) * (Ia - 0.5f*Ib - 0.5f*Ic);
+    *Vbeta  = (2.0f/3.0f) * (0.8660254f * (Ib - Ic));
 }
 
 // Park变换
@@ -328,72 +335,32 @@ void ADC_Init(void)
 }
 
 // ADC offset 变量
-float Ia_offset = 2048.0f;
-float Ib_offset = 2048.0f;
-
-// 标定ADC offset
-void CalibrateADCOffset(void)
-{
-    uint32_t i;
-    int32_t sum_a = 0, sum_b = 0;
-    
-    // 标定前准备：确保三相0电压
-    // 将PWM占空比设为0，实现三相0电压
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, 0);
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, 0);
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, 0);
-    
-    // 短暂延时，确保电路稳定
-    DEVICE_DELAY_US(1000);
-    
-    // 连续采样2000次，计算平均值
-    for (i = 0; i < 2000; i++)
-    {
-        // 软件触发ADC转换，避免SOC触发的时序问题
-        ADC_forceSOC(ADCA_BASE, ADC_SOC_NUMBER0);
-        ADC_forceSOC(ADCA_BASE, ADC_SOC_NUMBER1);
-        
-        // 等待转换完成
-        while(!ADC_getInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1));
-        ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
-        
-        // 读取转换结果
-        adcResult[0] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER0);
-        adcResult[1] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER1);
-        sum_a += adcResult[0];
-        sum_b += adcResult[1];
-    }
-    
-    // 计算平均offset
-    Ia_offset = (float)sum_a / 2000.0f;
-    Ib_offset = (float)sum_b / 2000.0f;
-    
-    // 恢复PWM占空比到初始状态
-    EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
-    EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
-    EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
-}
+float Ia_offset = 2520.0f;
+float Ib_offset = 2520.0f;
+float Ic_offset = 2520.0f;
 
 // 处理ADC转换结果
 void ADC_Read_Current(void)
 {
-    // 读取转换结果（只测两相）
+    // 读取转换结果（三相都测）
     adcResult[0] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER0);
     adcResult[1] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER1);
+    adcResult[2] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER2);
 
     // 使用正确的电流转换公式（带offset标定）
     float Ia = ((float)adcResult[0] - Ia_offset) * ADC_COUNTS_TO_AMP;
     float Ib = ((float)adcResult[1] - Ib_offset) * ADC_COUNTS_TO_AMP;
+    float Ic = ((float)adcResult[2] - Ic_offset) * ADC_COUNTS_TO_AMP;
 
-    // 第三相由Kirchhoff定律计算（Ia + Ib + Ic = 0）
-    Ia_meas = Ia;
-    Ib_meas = Ib;
-    Ic_meas = -(Ia + Ib);
+    // 直接使用读取的三相电流
+    Ia_meas =Ia;
+    Ib_meas =Ib;
+    Ic_meas =Ic;
 
     // 电流值合理性检查
-    if (isnan(Ia_meas) || isinf(Ia_meas)) Ia_meas = 0.0f;
-    if (isnan(Ib_meas) || isinf(Ib_meas)) Ib_meas = 0.0f;
-    if (isnan(Ic_meas) || isinf(Ic_meas)) Ic_meas = 0.0f;
+    // if (isnan(Ia_meas) || isinf(Ia_meas)) Ia_meas = 0.0f;
+    // if (isnan(Ib_meas) || isinf(Ib_meas)) Ib_meas = 0.0f;
+    // if (isnan(Ic_meas) || isinf(Ic_meas)) Ic_meas = 0.0f;
 
     // 暂时禁用过流保护检查，等电流标定完成后再启用
     // if(fabsf(Ia_meas) > I_OVERCURRENT_TRIP || 
@@ -403,6 +370,53 @@ void ADC_Read_Current(void)
     //     overcurrent_fault = true;
     // }
 }
+
+// // 标定ADC offset
+// void CalibrateADCOffset(void)
+// {
+//     uint32_t i;
+//     int32_t sum_a = 0, sum_b = 0, sum_c = 0;
+    
+//     // 标定前准备：确保三相0电压
+//     // 将PWM占空比设为0，实现三相0电压
+//     EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, 0);
+//     EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, 0);
+//     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, 0);
+    
+//     // 短暂延时，确保电路稳定
+//     DEVICE_DELAY_US(1000);
+    
+//     // 连续采样2000次，计算平均值
+//     for (i = 0; i < 2000; i++)
+//     {
+//         // 软件触发ADC转换，避免SOC触发的时序问题
+//         ADC_forceSOC(ADCA_BASE, ADC_SOC_NUMBER0);
+//         ADC_forceSOC(ADCA_BASE, ADC_SOC_NUMBER1);
+//         ADC_forceSOC(ADCA_BASE, ADC_SOC_NUMBER2);
+        
+//         // 等待转换完成
+//         while(!ADC_getInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1));
+//         ADC_clearInterruptStatus(ADCA_BASE, ADC_INT_NUMBER1);
+        
+//         // 读取转换结果
+//         adcResult[0] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER0);
+//         adcResult[1] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER1);
+//         adcResult[2] = ADC_readResult(ADCARESULT_BASE, ADC_SOC_NUMBER2);
+//         sum_a += adcResult[0];
+//         sum_b += adcResult[1];
+//         sum_c += adcResult[2];
+//     }
+    
+//     // 计算平均offset
+//     Ia_offset = (float)sum_a / 2000.0f;
+//     Ib_offset = (float)sum_b / 2000.0f;
+//     Ic_offset = (float)sum_c / 2000.0f;
+    
+//     // 恢复PWM占空比到初始状态
+//     EPWM_setCounterCompareValue(EPWM1_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
+//     EPWM_setCounterCompareValue(EPWM2_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
+//     EPWM_setCounterCompareValue(EPWM3_BASE, EPWM_COUNTER_COMPARE_A, TBPRD_VAL / 2);
+// }
 
 // 初始化编码器
 void Encoder_init(void)
@@ -606,6 +620,8 @@ void SwitchControlState(ControlState new_state)
         g_control_state = new_state;
         
         if (new_state == STATE_OPEN_LOOP) {
+            // 重置闭环切换定时器
+            closed_loop_timer = 0U;
             // 进入开环模式前的准备
             g_encoder_aligned = false;
             Encoder_init();
@@ -638,7 +654,10 @@ void SwitchControlState(ControlState new_state)
             
             // 用开环电流初始化参考值，避免阶跃
             Id_ref = d_curr;
-            Iq_ref = q_curr;
+            Iq_ref = 0.0f;
+            
+            // 设置Iq参考值目标
+            Iq_ref_target = TARGET_IQ_REF;
             
             // 重置闭环启动计数器
             cl_startup_cnt = 0;
@@ -697,7 +716,7 @@ interrupt void adc_isr(void)
             float align_angle = 0.0f;
             
             // 电压模式：固定vd，vq=0
-            float vd = 0.1f * BUS_VOLTAGE; // 极小对齐电压，避免过大电流
+            float vd = 0.05f * BUS_VOLTAGE; // 极小对齐电压，避免过大电流
             float vq = 0.0f;
             
             // 电压限幅
@@ -719,12 +738,27 @@ interrupt void adc_isr(void)
             // 更新编码器数据
             Encoder_update();
             
-            //对齐完成后切换到开环模式
+            // 对齐完成后切换到开环模式
             if (g_alignment_counter >= ALIGNMENT_DURATION) {
+                // 更新编码器数据
+                Encoder_update();
+                float enc_elec = Encoder_getElecAngle();
+                
+                // 计算角度偏移量（对齐角0 - 编码器角）
+                angle_offset_rad_final = -enc_elec;
+                
+                // 包装角度到 [-π, π]
+                while (angle_offset_rad_final < -M_PI_F) angle_offset_rad_final += 2.0f * M_PI_F;
+                while (angle_offset_rad_final > M_PI_F) angle_offset_rad_final -= 2.0f * M_PI_F;
+                
                 open_loop_angle_acc = 0.0f;
                 open_loop_angle_mech_rad = 0.0f;
                 open_loop_angle_elec_rad = 0.0f;
                 g_previous_open_loop_angle = 0.0f;
+                
+                // 重置开环计数器
+                g_open_loop_run_counter = 0;
+                g_stable_angle_counter = 0;
                 
                 SwitchControlState(STATE_OPEN_LOOP);
             }
@@ -753,37 +787,33 @@ interrupt void adc_isr(void)
             float medium_angle_err = 0.34907f; // 20°
             float large_angle_err = 0.69813f; // 40°
             
-            // 额外检查：确保角度误差稳定小于5°至少100拍
-            static uint32_t stable_angle_counter = 0;
-            
             // 根据角度误差调整速度
             if (fabsf(angle_err) > large_angle_err) {
                 // 大角度误差（>40°）：降速等待
                 angle_increment = target_angle_increment * 0.2f;
-                stable_angle_counter = 0; // 角度误差过大，重置计数器
+                g_stable_angle_counter = 0; // 角度误差过大，重置计数器
             } else if (fabsf(angle_err) > medium_angle_err) {
                 // 中角度误差（20°~40°）：减速运行
                 angle_increment = target_angle_increment * 0.5f;
-                stable_angle_counter = 0; // 角度误差过大，重置计数器
+                g_stable_angle_counter = 0; // 角度误差过大，重置计数器
             } else if (fabsf(angle_err) > small_angle_err) {
                 // 小角度误差（5°~20°）：正常速度
                 angle_increment = target_angle_increment;
-                stable_angle_counter = 0; // 角度误差过大，重置计数器
+                g_stable_angle_counter = 0; // 角度误差过大，重置计数器
             } else {
                 // 角度误差小于5°：尝试切换到闭环
                 // 增加开环运行时间检查，避免上电立即切换
-                static uint32_t open_loop_run_counter = 0;
-                open_loop_run_counter++;
+                g_open_loop_run_counter++;
                 
                 // 角度误差小于阈值，累加计数器
-                stable_angle_counter++;
+                g_stable_angle_counter++;
                 
-                // 开环至少运行1000拍（0.05秒）后才允许切换
-                if (open_loop_run_counter > 1000) {
-                    if (stable_angle_counter > 100) {
-                        SwitchControlState(STATE_CLOSED_LOOP);
-                    }
-                }
+                // //开环至少运行1000拍（0.05秒）后才允许切换
+                // if (g_open_loop_run_counter > 1000) {
+                //     if (g_stable_angle_counter > 100) {
+                //         SwitchControlState(STATE_CLOSED_LOOP);
+                //     }
+                // }
             }
             
             // 更新开环角度
@@ -833,9 +863,6 @@ interrupt void adc_isr(void)
             // 递增闭环启动计数器
             cl_startup_cnt++;
             
-            // 读取真实ADC电流值
-            ADC_Read_Current();
-            
             // 更新编码器数据
             Encoder_update();
             float real_encoder_angle_elec_rad = Encoder_getElecAngle();
@@ -849,15 +876,17 @@ interrupt void adc_isr(void)
             
             // 平滑角度融合：前几拍缓慢过渡
             static float fused_angle_elec_rad = 0.0f;
-            if (cl_startup_cnt < 100) { // 前5ms缓慢过渡
-                float alpha = (float)cl_startup_cnt / 100.0f;
-                fused_angle_elec_rad = (1.0f - alpha) * open_loop_angle_elec_rad + alpha * angle_with_offset;
+            if (cl_startup_cnt < 300) { // 前15ms完全使用开环角度
+                fused_angle_elec_rad = open_loop_angle_elec_rad;
             } else {
                 fused_angle_elec_rad = angle_with_offset;
             }
             
             // 使用融合后的角度
             float angle_to_use = fused_angle_elec_rad;
+            
+            // 强制D轴为0
+            Id_ref = 0.0f;
             
             // 执行FOC算法
             float alpha, beta;
@@ -871,7 +900,9 @@ interrupt void adc_isr(void)
             g_current_iq = q;
             
             // 渐进调整电流参考值（闭环初期使用小电流）
-            if (cl_startup_cnt < 2000) {  // 前0.1秒保持小电流
+            if (cl_startup_cnt < 500) {  // 前25ms硬拉Iq
+                Iq_ref = 0.5f;   // 固定一个能拉动的值
+            } else if (cl_startup_cnt < 2000) {  // 前0.1秒保持小电流
                 float Iq_startup_step = 0.02f;  // 每拍增加0.02A，加快启动速度
                 if (Iq_ref < Iq_ref_target) {
                     Iq_ref += Iq_startup_step;
@@ -880,16 +911,16 @@ interrupt void adc_isr(void)
                     }
                 }
                 
-                // 前0.1秒保持低PI增益
+                // 前0.1秒保持正常PI增益
                 static float KP_ID_original = KP_ID_INIT;
                 static float KI_ID_original = KI_ID_INIT;
                 static float KP_IQ_original = KP_IQ_INIT;
                 static float KI_IQ_original = KI_IQ_INIT;
                 
-                KP_ID = KP_ID_original * 0.1f;
-                KI_ID = KI_ID_original * 0.1f;
-                KP_IQ = KP_IQ_original * 0.1f;
-                KI_IQ = KI_IQ_original * 0.1f;
+                KP_ID = KP_ID_original;
+                KI_ID = KI_ID_original;
+                KP_IQ = KP_IQ_original;
+                KI_IQ = KI_IQ_original;
             } else {
                 // 正常软启动：Iq_ref从当前值平滑上升到目标值
                 if (Iq_ref < Iq_ref_target) {
@@ -984,8 +1015,10 @@ int main(void)
     // 5. 初始化外设
     InitPeripherals();  
     
-    // 6. 标定ADC offset（在上电、PWM关闭状态下）
-    CalibrateADCOffset();
+    // 6. 标定ADC offset（使用用户提供的无PWM时的ADC值）
+    Ia_offset = 2254.0f;  // adcResult[0]: 2254
+    Ib_offset = 2249.0f;  // adcResult[1]: 2249
+    Ic_offset = 2253.0f;  // adcResult[2]: 2253
         
     // 7. 使能全局中断
     EINT;
