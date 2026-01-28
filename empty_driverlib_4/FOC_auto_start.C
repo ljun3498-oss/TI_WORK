@@ -119,6 +119,12 @@ float g_current_iq = 0.0f;                       // 当前Q轴电流（用于监
 float g_current_vd = 0.0f;                       // 当前D轴电压（用于监控）
 float g_current_vq = 0.0f;                       // 当前Q轴电压（用于监控）
 float angle_offset_rad_final = 0.0f;             // 冻结的角度偏移值（用于闭环控制）
+float g_current_angle_fusion_weight = 0.0f;       // 当前角度融合权重（用于监控）
+
+// 闭环角度融合相关变量
+float closed_loop_turns = 0.0f;                 // 闭环累计转圈圈数
+float closed_loop_start_turns = 0.0f;            // 闭环开始时的圈数
+float angle_fusion_weight = 0.1f;               // 角度融合权重（从10%开始）
 
 // 电流参考值抬升变量
 float Iq_ref_target = 0.0f;                      // Iq参考值目标
@@ -472,8 +478,8 @@ void Encoder_init(void)
     // 禁用位置初始化模式
     EQEP_setPositionInitMode(EQEP1_BASE, EQEP_INIT_DO_NOTHING);
 
-    // 禁用索引事件中断
-    EQEP_disableInterrupt(EQEP1_BASE, EQEP_INT_INDEX_EVNT_LATCH);
+    // 使能索引事件中断
+    EQEP_enableInterrupt(EQEP1_BASE, EQEP_INT_INDEX_EVNT_LATCH);
 
     // 使能eQEP模块
     EQEP_enableModule(EQEP1_BASE);
@@ -544,6 +550,12 @@ float Encoder_getMechAngle(void)
 float Encoder_getElecAngle(void)
 {
     return motor_angle_elec_rad;
+}
+
+// 获取编码器圈数
+float Encoder_getTurns(void)
+{
+    return ((float)encoder_continuous_pos / (float)COUNTS_PER_REV);
 }
 
 // 获取电机速度(弧度/秒)
@@ -682,17 +694,9 @@ void SwitchControlState(ControlState new_state)
             // 重置闭环启动计数器
             cl_startup_cnt = 0;
             
-            // 保存原始PI增益，用于过渡期间降低增益
-            static float KP_ID_original = KP_ID_INIT;
-            static float KI_ID_original = KI_ID_INIT;
-            static float KP_IQ_original = KP_IQ_INIT;
-            static float KI_IQ_original = KI_IQ_INIT;
-            
-            // 过渡期间降低PI增益到1/10，避免切换时的冲击
-            KP_ID = KP_ID_original * 0.1f;
-            KI_ID = KI_ID_original * 0.1f;
-            KP_IQ = KP_IQ_original * 0.1f;
-            KI_IQ = KI_IQ_original * 0.1f;
+            // 初始化角度融合相关变量
+            closed_loop_start_turns = g_open_loop_turns;
+            angle_fusion_weight = 0.1f; // 从10%开始
         }
     }
 }
@@ -760,21 +764,11 @@ interrupt void adc_isr(void)
             
             // 对齐完成后切换到开环模式
             if (g_alignment_counter >= ALIGNMENT_DURATION) {
-                // 更新编码器数据
-                Encoder_update();
-                float enc_elec = Encoder_getElecAngle();
-                
-                // 计算角度偏移量（对齐角0 - 编码器角）
-                angle_offset_rad_final = -enc_elec;
-                
-                // 包装角度到 [-π, π]
-                while (angle_offset_rad_final < -M_PI_F) angle_offset_rad_final += 2.0f * M_PI_F;
-                while (angle_offset_rad_final > M_PI_F) angle_offset_rad_final -= 2.0f * M_PI_F;
-                
                 open_loop_angle_acc = 0.0f;
                 open_loop_angle_mech_rad = 0.0f;
                 open_loop_angle_elec_rad = 0.0f;
                 g_previous_open_loop_angle = 0.0f;
+                g_open_loop_turns = 0.0f;
 
                 SwitchControlState(STATE_OPEN_LOOP);
             }
@@ -786,7 +780,6 @@ interrupt void adc_isr(void)
             // 更新编码器数据
             Encoder_update();
             g_current_encoder_angle_mech_rad = Encoder_getMechAngle();
-            float real_encoder_angle_elec_rad = Encoder_getElecAngle();
             
             // 开环角度主动前进（工业标准同步方式）
             // 1. 角度主动旋转
@@ -837,10 +830,38 @@ interrupt void adc_isr(void)
             Encoder_update();
             float real_encoder_angle_elec_rad = Encoder_getElecAngle();
             
-            // 使用带偏移的编码器角度
+            // 获取编码器实际圈数
+            float current_encoder_turns = Encoder_getTurns();
+            
+            // 计算权重：每5圈增加一次，从10%开始到100%
+            float turns_since_start = current_encoder_turns - closed_loop_start_turns;
+            float weight_increment = turns_since_start / 5.0f; // 每5圈增加一次
+            angle_fusion_weight = 0.1f + weight_increment * 0.1f; // 从10%开始，每次增加10%
+            if (angle_fusion_weight > 1.0f) {
+                angle_fusion_weight = 1.0f; // 最大100%
+            }
+            
+            // 更新监控变量
+            g_current_angle_fusion_weight = angle_fusion_weight;
+            
+            // 使用带偏移的编码器角度（真实角度）
             float angle_with_offset = real_encoder_angle_elec_rad + angle_offset_rad_final;
             while (angle_with_offset < 0.0f) angle_with_offset += 2.0f * M_PI_F;
             while (angle_with_offset >= 2.0f * M_PI_F) angle_with_offset -= 2.0f * M_PI_F;
+            
+            // 虚拟角度（开环角度继续前进）
+            open_loop_angle_acc += TARGET_ANGLE_INCREMENT;
+            float virtual_angle_elec_rad = fmodf(open_loop_angle_acc * MOTOR_POLE_PAIRS, 2.0f * M_PI_F);
+            if (virtual_angle_elec_rad < 0.0f) {
+                virtual_angle_elec_rad += 2.0f * M_PI_F;
+            }
+            
+            // 角度加权融合
+            float fused_angle = angle_fusion_weight * angle_with_offset + (1.0f - angle_fusion_weight) * virtual_angle_elec_rad;
+            
+            // 包装融合角度到 [0, 2π]
+            while (fused_angle < 0.0f) fused_angle += 2.0f * M_PI_F;
+            while (fused_angle >= 2.0f * M_PI_F) fused_angle -= 2.0f * M_PI_F;
             
             // 强制D轴为0
             Id_ref = 0.0f;
@@ -850,7 +871,7 @@ interrupt void adc_isr(void)
             clarke_transform(Ia_meas, Ib_meas, Ic_meas, &alpha, &beta);
             
             float d, q;
-            park_transform(alpha, beta, angle_with_offset, &d, &q);
+            park_transform(alpha, beta, fused_angle, &d, &q);
             
             // 监控D/Q轴电流
             g_current_id = d;
@@ -871,7 +892,7 @@ interrupt void adc_isr(void)
             
             // 逆Park变换
             float valpha, vbeta;
-            inv_park_transform(vd, vq, angle_with_offset, &valpha, &vbeta);
+            inv_park_transform(vd, vq, fused_angle, &valpha, &vbeta);
             
             // SVPWM计算
             svpwm_compute(&svpwm_handle, valpha, vbeta);
