@@ -37,8 +37,8 @@
 #define I_OVERCURRENT_TRIP  (MAX_PHASE_CURRENT_A * 1.05f) // 过流保护阈值
 
 // ADC到电流的转换系数
-#define ADC_COUNTS_TO_AMP   (20.0f / 4096.0f) // ADC计数到安培的转换系数
-#define ADC_OFFSET          2048.0f          // ADC中点偏置
+#define ADC_COUNTS_TO_AMP   (0.0111f) // ADC计数到安培的转换系数 (基于霍尔传感器参数：-20到+20A，1.65V零点)
+#define ADC_OFFSET          2253.0f          // ADC中点偏置 (1.65V对应的值)
 
 // PI控制器参数（保守值）
 #define KP_ID_INIT  0.1f                    // D轴电流环比例增益（大幅降低）
@@ -63,7 +63,7 @@ typedef enum {
 #define CL_STARTUP_DURATION 1000 // 闭环启动持续时间（拍数）
 
 // 统一控制参数（开环、虚拟、闭环三环统一）
-#define TARGET_ANGLE_INCREMENT (M_PI_F / 10000.0f)  // 目标角速度增量
+#define TARGET_ANGLE_INCREMENT (M_PI_F / 10000.0f)  // 目标角速度增量 (提高5倍)
 #define TARGET_IQ_REF 0.6f                           // 目标Q轴电流参考值（稍大扭矩）
 #define TARGET_ID_REF 0.0f                           // 目标D轴电流参考值
 #define TARGET_VMAX (BUS_VOLTAGE * 0.3f)            // 目标电压限幅值
@@ -96,8 +96,6 @@ float open_loop_angle_acc = 0.0f;                // 开环累计角度，用于�
 float g_open_loop_turns = 0.0f;                  // 开环累计转圈圈数
 float g_previous_open_loop_angle = 0.0f;         // 上一次开环角度，用于计算圈数变化
 uint32_t g_open_loop_timeout_counter = 0;        // 开环模式下的中断次数计数器
-static uint32_t g_open_loop_run_counter = 0;     // 开环运行拍数计数器
-static uint32_t g_stable_angle_counter = 0;     // 角度误差稳定拍数计数器
 
 // 电流变量
 volatile float Ia_meas = 0.0f, Ib_meas = 0.0f, Ic_meas = 0.0f; // 三相电流测量值
@@ -335,9 +333,9 @@ void ADC_Init(void)
 }
 
 // ADC offset 变量
-float Ia_offset = 2520.0f;
-float Ib_offset = 2520.0f;
-float Ic_offset = 2520.0f;
+float Ia_offset = 2254.0f;  // 基于用户实测值：1.5V对应2044，1.65V对应约2254
+float Ib_offset = 2249.0f;  // 基于用户实测值
+float Ic_offset = 2253.0f;  // 基于用户实测值
 
 // 处理ADC转换结果
 void ADC_Read_Current(void)
@@ -351,6 +349,33 @@ void ADC_Read_Current(void)
     float Ia = ((float)adcResult[0] - Ia_offset) * ADC_COUNTS_TO_AMP;
     float Ib = ((float)adcResult[1] - Ib_offset) * ADC_COUNTS_TO_AMP;
     float Ic = ((float)adcResult[2] - Ic_offset) * ADC_COUNTS_TO_AMP;
+
+    // 添加滑动平均滤波，减少噪声影响
+    static float Ia_prev = 0.0f, Ib_prev = 0.0f, Ic_prev = 0.0f;
+    float alpha = 0.9f; // 滤波系数，0-1之间，越大滤波效果越强
+    
+    // 应用滤波
+    Ia = alpha * Ia_prev + (1 - alpha) * Ia;
+    Ib = alpha * Ib_prev + (1 - alpha) * Ib;
+    Ic = alpha * Ic_prev + (1 - alpha) * Ic;
+    
+    // 更新历史值
+    Ia_prev = Ia;
+    Ib_prev = Ib;
+    Ic_prev = Ic;
+    
+    // 零点补偿，确保无电流时读数接近0
+    // 根据用户反馈，ia的零点电流在0.1A左右，需要进行补偿
+    float zero_threshold = 0.15f; // 零点阈值
+    if (fabsf(Ia) < zero_threshold) {
+        Ia = 0.0f;
+    }
+    if (fabsf(Ib) < zero_threshold) {
+        Ib = 0.0f;
+    }
+    if (fabsf(Ic) < zero_threshold) {
+        Ic = 0.0f;
+    }
 
     // 直接使用读取的三相电流
     Ia_meas =Ia;
@@ -626,11 +651,6 @@ void SwitchControlState(ControlState new_state)
             g_encoder_aligned = false;
             Encoder_init();
             Encoder_update();
-            // 重置开环运行计数器
-            static uint32_t open_loop_run_counter = 0;
-            open_loop_run_counter = 0;
-            static uint32_t stable_angle_counter = 0;
-            stable_angle_counter = 0;
         } else if (new_state == STATE_CLOSED_LOOP) {
             // 捕获开环结束时的电角度差值，作为闭环的校准基准
             Encoder_update();
@@ -648,13 +668,13 @@ void SwitchControlState(ControlState new_state)
             float d_curr, q_curr;
             park_transform(alpha, beta, real_encoder_angle_elec_rad, &d_curr, &q_curr);
             
-            // 切换闭环时强制PI积分值为0
+            // 切换闭环时强制PI积分值为0（新增：确保状态清理）
             Id_int = 0.0f;
             Iq_int = 0.0f;
             
             // 用开环电流初始化参考值，避免阶跃
             Id_ref = d_curr;
-            Iq_ref = 0.0f;
+            Iq_ref = 0.0f; // 新增：强制从0开始，避免阶跃
             
             // 设置Iq参考值目标
             Iq_ref_target = TARGET_IQ_REF;
@@ -668,7 +688,7 @@ void SwitchControlState(ControlState new_state)
             static float KP_IQ_original = KP_IQ_INIT;
             static float KI_IQ_original = KI_IQ_INIT;
             
-            // 过渡期间降低PI增益到1/10
+            // 过渡期间降低PI增益到1/10，避免切换时的冲击
             KP_ID = KP_ID_original * 0.1f;
             KI_ID = KI_ID_original * 0.1f;
             KP_IQ = KP_IQ_original * 0.1f;
@@ -755,11 +775,7 @@ interrupt void adc_isr(void)
                 open_loop_angle_mech_rad = 0.0f;
                 open_loop_angle_elec_rad = 0.0f;
                 g_previous_open_loop_angle = 0.0f;
-                
-                // 重置开环计数器
-                g_open_loop_run_counter = 0;
-                g_stable_angle_counter = 0;
-                
+
                 SwitchControlState(STATE_OPEN_LOOP);
             }
             
@@ -772,52 +788,9 @@ interrupt void adc_isr(void)
             g_current_encoder_angle_mech_rad = Encoder_getMechAngle();
             float real_encoder_angle_elec_rad = Encoder_getElecAngle();
             
-            // 计算角度误差
-            float angle_err = open_loop_angle_elec_rad - real_encoder_angle_elec_rad;
-            // 包装角度误差到 [-π, π]
-            while (angle_err > M_PI_F) angle_err -= 2.0f * M_PI_F;
-            while (angle_err < -M_PI_F) angle_err += 2.0f * M_PI_F;
-            
-            // 基于角度误差调整角速度
-            float target_angle_increment = TARGET_ANGLE_INCREMENT;
-            float angle_increment = target_angle_increment;
-            
-            // 角度误差阈值（弧度）
-            float small_angle_err = 0.08727f; // 5°
-            float medium_angle_err = 0.34907f; // 20°
-            float large_angle_err = 0.69813f; // 40°
-            
-            // 根据角度误差调整速度
-            if (fabsf(angle_err) > large_angle_err) {
-                // 大角度误差（>40°）：降速等待
-                angle_increment = target_angle_increment * 0.2f;
-                g_stable_angle_counter = 0; // 角度误差过大，重置计数器
-            } else if (fabsf(angle_err) > medium_angle_err) {
-                // 中角度误差（20°~40°）：减速运行
-                angle_increment = target_angle_increment * 0.5f;
-                g_stable_angle_counter = 0; // 角度误差过大，重置计数器
-            } else if (fabsf(angle_err) > small_angle_err) {
-                // 小角度误差（5°~20°）：正常速度
-                angle_increment = target_angle_increment;
-                g_stable_angle_counter = 0; // 角度误差过大，重置计数器
-            } else {
-                // 角度误差小于5°：尝试切换到闭环
-                // 增加开环运行时间检查，避免上电立即切换
-                g_open_loop_run_counter++;
-                
-                // 角度误差小于阈值，累加计数器
-                g_stable_angle_counter++;
-                
-                // //开环至少运行1000拍（0.05秒）后才允许切换
-                // if (g_open_loop_run_counter > 1000) {
-                //     if (g_stable_angle_counter > 100) {
-                //         SwitchControlState(STATE_CLOSED_LOOP);
-                //     }
-                // }
-            }
-            
-            // 更新开环角度
-            open_loop_angle_acc += angle_increment;
+            // 开环角度主动前进（工业标准同步方式）
+            // 1. 角度主动旋转
+            open_loop_angle_acc += TARGET_ANGLE_INCREMENT;
             open_loop_angle_mech_rad = fmodf(open_loop_angle_acc, 2.0f * M_PI_F);
             if (open_loop_angle_mech_rad < 0.0f) {
                 open_loop_angle_mech_rad += 2.0f * M_PI_F;
@@ -826,7 +799,7 @@ interrupt void adc_isr(void)
             // 计算累计圈数
             g_open_loop_turns = open_loop_angle_acc / (2.0f * M_PI_F);
             
-            // 更新电角度
+            // 2. 更新电角度
             open_loop_angle_elec_rad = open_loop_angle_mech_rad * MOTOR_POLE_PAIRS;
             open_loop_angle_elec_rad = fmodf(open_loop_angle_elec_rad, 2.0f * M_PI_F);
             if (open_loop_angle_elec_rad < 0.0f) {
@@ -835,9 +808,9 @@ interrupt void adc_isr(void)
             
             // 电压模式：固定vq，vd=0
             float vd = 0.0f;
-            float vq = 0.05f * BUS_VOLTAGE; // 稍大电压，加快开环启动
+            float vq = 0.05f * BUS_VOLTAGE;
             
-            // 电压限幅（使用统一参数）
+            // 电压限幅
             float Vmax = TARGET_VMAX;
             vd = clampf_val(vd, -Vmax, Vmax);
             vq = clampf_val(vq, -Vmax, Vmax);
@@ -860,30 +833,14 @@ interrupt void adc_isr(void)
         }
         
         case STATE_CLOSED_LOOP: {
-            // 递增闭环启动计数器
-            cl_startup_cnt++;
-            
             // 更新编码器数据
             Encoder_update();
             float real_encoder_angle_elec_rad = Encoder_getElecAngle();
             
             // 使用带偏移的编码器角度
             float angle_with_offset = real_encoder_angle_elec_rad + angle_offset_rad_final;
-            
-            // 包装角度到 [0, 2π]
             while (angle_with_offset < 0.0f) angle_with_offset += 2.0f * M_PI_F;
             while (angle_with_offset >= 2.0f * M_PI_F) angle_with_offset -= 2.0f * M_PI_F;
-            
-            // 平滑角度融合：前几拍缓慢过渡
-            static float fused_angle_elec_rad = 0.0f;
-            if (cl_startup_cnt < 300) { // 前15ms完全使用开环角度
-                fused_angle_elec_rad = open_loop_angle_elec_rad;
-            } else {
-                fused_angle_elec_rad = angle_with_offset;
-            }
-            
-            // 使用融合后的角度
-            float angle_to_use = fused_angle_elec_rad;
             
             // 强制D轴为0
             Id_ref = 0.0f;
@@ -893,83 +850,28 @@ interrupt void adc_isr(void)
             clarke_transform(Ia_meas, Ib_meas, Ic_meas, &alpha, &beta);
             
             float d, q;
-            park_transform(alpha, beta, angle_to_use, &d, &q);
+            park_transform(alpha, beta, angle_with_offset, &d, &q);
             
             // 监控D/Q轴电流
             g_current_id = d;
             g_current_iq = q;
             
-            // 渐进调整电流参考值（闭环初期使用小电流）
-            if (cl_startup_cnt < 500) {  // 前25ms硬拉Iq
-                Iq_ref = 0.5f;   // 固定一个能拉动的值
-            } else if (cl_startup_cnt < 2000) {  // 前0.1秒保持小电流
-                float Iq_startup_step = 0.02f;  // 每拍增加0.02A，加快启动速度
-                if (Iq_ref < Iq_ref_target) {
-                    Iq_ref += Iq_startup_step;
-                    if (Iq_ref > Iq_ref_target) {
-                        Iq_ref = Iq_ref_target;
-                    }
-                }
-                
-                // 前0.1秒保持正常PI增益
-                static float KP_ID_original = KP_ID_INIT;
-                static float KI_ID_original = KI_ID_INIT;
-                static float KP_IQ_original = KP_IQ_INIT;
-                static float KI_IQ_original = KI_IQ_INIT;
-                
-                KP_ID = KP_ID_original;
-                KI_ID = KI_ID_original;
-                KP_IQ = KP_IQ_original;
-                KI_IQ = KI_IQ_original;
-            } else {
-                // 正常软启动：Iq_ref从当前值平滑上升到目标值
-                if (Iq_ref < Iq_ref_target) {
-                    Iq_ref += Iq_ref_step;
-                    if (Iq_ref > Iq_ref_target) {
-                        Iq_ref = Iq_ref_target;
-                    }
-                }
-                
-                // 恢复原始PI增益
-                static float KP_ID_original = KP_ID_INIT;
-                static float KI_ID_original = KI_ID_INIT;
-                static float KP_IQ_original = KP_IQ_INIT;
-                static float KI_IQ_original = KI_IQ_INIT;
-                
-                KP_ID = KP_ID_original;
-                KI_ID = KI_ID_original;
-                KP_IQ = KP_IQ_original;
-                KI_IQ = KI_IQ_original;
-            }
-            
             // 电流环PI控制
             float vd = pi_id(Id_ref - d);
             float vq = pi_iq(Iq_ref - q);
             
-            // 更新监控变量
+            // 监控D/Q轴电压
             g_current_vd = vd;
             g_current_vq = vq;
             
-            // 闭环初期使用更严格的电压限制
-            float Vmax;
-            if (cl_startup_cnt < 2000) {  // 前0.1秒
-                Vmax = 0.3f * BUS_VOLTAGE;  // 限制在30%电压
-            } else if (cl_startup_cnt < 5000) {  // 前0.25秒
-                Vmax = 0.5f * BUS_VOLTAGE;  // 限制在50%电压
-            } else {
-                Vmax = BUS_VOLTAGE;  // 正常运行，100%电压
-            }
-            
+            // 电压限幅
+            float Vmax = TARGET_VMAX;
             vd = clampf_val(vd, -Vmax, Vmax);
             vq = clampf_val(vq, -Vmax, Vmax);
             
-            // 直接使用物理电压
-            float vd_phys = vd;
-            float vq_phys = vq;
-            
             // 逆Park变换
             float valpha, vbeta;
-            inv_park_transform(vd_phys, vq_phys, angle_to_use, &valpha, &vbeta);
+            inv_park_transform(vd, vq, angle_with_offset, &valpha, &vbeta);
             
             // SVPWM计算
             svpwm_compute(&svpwm_handle, valpha, vbeta);
@@ -1015,10 +917,7 @@ int main(void)
     // 5. 初始化外设
     InitPeripherals();  
     
-    // 6. 标定ADC offset（使用用户提供的无PWM时的ADC值）
-    Ia_offset = 2254.0f;  // adcResult[0]: 2254
-    Ib_offset = 2249.0f;  // adcResult[1]: 2249
-    Ic_offset = 2253.0f;  // adcResult[2]: 2253
+
         
     // 7. 使能全局中断
     EINT;
