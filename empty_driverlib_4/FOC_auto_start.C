@@ -64,8 +64,8 @@ typedef enum {
 
 // 统一控制参数（开环、虚拟、闭环三环统一）
 #define TARGET_ANGLE_INCREMENT (M_PI_F / 10000.0f)  // 目标角速度增量 (提高5倍)
-#define TARGET_IQ_REF 1.0f                           // 目标Q轴电流参考值（稍大扭矩）
-#define TARGET_ID_REF 0.0f                           // 目标D轴电流参考值
+#define TARGET_IQ_REF -2.5f                           // 目标Q轴电流参考值（稍大扭矩）
+#define TARGET_ID_REF 0.f                           // 目标D轴电流参考值
 #define TARGET_VMAX (BUS_VOLTAGE * 0.6f)            // 目标电压限幅值
 #define ANGLE_ERROR_GAIN 0.01f                      // 角度误差比例系数
 
@@ -119,7 +119,7 @@ float g_current_iq = 0.0f;                       // 当前Q轴电流（用于监
 float g_current_vd = 0.0f;                       // 当前D轴电压（用于监控）
 float g_current_vq = 0.0f;                       // 当前Q轴电压（用于监控）
 float angle_offset_rad_final = 0.0f;             // 冻结的角度偏移值（用于闭环控制）
-float theta_offset =  -M_PI_F / 2.0f;                       // 电角度偏置（用于调试）
+float theta_offset = -M_PI_F/2.0f;                       // 电角度偏置（用于调试）
 float g_current_angle_fusion_weight = 0.0f;       // 当前角度融合权重（用于监控）
 
 // 闭环角度融合相关变量
@@ -786,8 +786,8 @@ interrupt void adc_isr(void)
             g_current_encoder_angle_mech_rad = Encoder_getMechAngle();
             
             // 开环角度主动前进（工业标准同步方式）
-            // 1. 角度主动旋转
-            open_loop_angle_acc += TARGET_ANGLE_INCREMENT;
+            // 1. 角度主动旋转（反向）
+            open_loop_angle_acc -= TARGET_ANGLE_INCREMENT;
             open_loop_angle_mech_rad = fmodf(open_loop_angle_acc, 2.0f * M_PI_F);
             if (open_loop_angle_mech_rad < 0.0f) {
                 open_loop_angle_mech_rad += 2.0f * M_PI_F;
@@ -797,7 +797,7 @@ interrupt void adc_isr(void)
             g_open_loop_turns = open_loop_angle_acc / (2.0f * M_PI_F);
             
             // 开环1圈后切换到闭环
-            if (g_open_loop_turns >= 5.0f) {
+            if (fabsf(g_open_loop_turns) >= 5.0f) {
                 SwitchControlState(STATE_CLOSED_LOOP);
             }
             
