@@ -41,9 +41,9 @@
 #define ADC_OFFSET          2253.0f          // ADC中点偏置 (1.65V对应的值)
 
 // PI控制器参数（保守值）
-#define KP_ID_INIT  0.1f                    // D轴电流环比例增益（大幅降低）
-#define KI_ID_INIT  0.5f                   // D轴电流环积分增益（大幅降低）
-#define KP_IQ_INIT  0.1f                    // Q轴电流环比例增益（大幅降低）
+#define KP_ID_INIT  0.01f                    // D轴电流环比例增益（大幅降低）
+#define KI_ID_INIT  0.0001f                   // D轴电流环积分增益（大幅降低）
+#define KP_IQ_INIT  0.35f                    // Q轴电流环比例增益（大幅降低）
 #define KI_IQ_INIT  0.5f                   // Q轴电流环积分增益（大幅降低）
 
 // 状态机定义
@@ -64,8 +64,8 @@ typedef enum {
 
 // 统一控制参数（开环、虚拟、闭环三环统一）
 #define TARGET_ANGLE_INCREMENT (M_PI_F / 10000.0f)  // 目标角速度增量 (提高5倍)
-#define TARGET_IQ_REF -2.5f                           // 目标Q轴电流参考值（稍大扭矩）
-#define TARGET_ID_REF 0.f                           // 目标D轴电流参考值
+#define TARGET_IQ_REF -1.0f                           // 目标Q轴电流参考值（稍大扭矩）
+#define TARGET_ID_REF 0.0f                           // 目标D轴电流参考值
 #define TARGET_VMAX (BUS_VOLTAGE * 0.6f)            // 目标电压限幅值
 #define ANGLE_ERROR_GAIN 0.01f                      // 角度误差比例系数
 
