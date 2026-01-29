@@ -64,9 +64,9 @@ typedef enum {
 
 // 统一控制参数（开环、虚拟、闭环三环统一）
 #define TARGET_ANGLE_INCREMENT (M_PI_F / 10000.0f)  // 目标角速度增量 (提高5倍)
-#define TARGET_IQ_REF 0.6f                           // 目标Q轴电流参考值（稍大扭矩）
+#define TARGET_IQ_REF 1.0f                           // 目标Q轴电流参考值（稍大扭矩）
 #define TARGET_ID_REF 0.0f                           // 目标D轴电流参考值
-#define TARGET_VMAX (BUS_VOLTAGE * 0.3f)            // 目标电压限幅值
+#define TARGET_VMAX (BUS_VOLTAGE * 0.6f)            // 目标电压限幅值
 #define ANGLE_ERROR_GAIN 0.01f                      // 角度误差比例系数
 
 // SVPWM常量定义
@@ -119,6 +119,7 @@ float g_current_iq = 0.0f;                       // 当前Q轴电流（用于监
 float g_current_vd = 0.0f;                       // 当前D轴电压（用于监控）
 float g_current_vq = 0.0f;                       // 当前Q轴电压（用于监控）
 float angle_offset_rad_final = 0.0f;             // 冻结的角度偏移值（用于闭环控制）
+float theta_offset =  -M_PI_F / 2.0f;                       // 电角度偏置（用于调试）
 float g_current_angle_fusion_weight = 0.0f;       // 当前角度融合权重（用于监控）
 
 // 闭环角度融合相关变量
@@ -190,7 +191,7 @@ void clarke_transform(float Ia, float Ib, float Ic, float* Valpha, float* Vbeta)
 {
     // 标准三相Clarke变换
     *Valpha = (2.0f/3.0f) * (Ia - 0.5f*Ib - 0.5f*Ic);
-    *Vbeta  = (2.0f/3.0f) * (0.8660254f * (Ib - Ic));
+    *Vbeta  = (2.0f/3.0f) * (0.8660254f * (Ic - Ib));
 }
 
 // Park变换
@@ -795,8 +796,8 @@ interrupt void adc_isr(void)
             // 计算累计圈数
             g_open_loop_turns = open_loop_angle_acc / (2.0f * M_PI_F);
             
-            // 开环10圈后切换到闭环
-            if (g_open_loop_turns >= 10.0f) {
+            // 开环1圈后切换到闭环
+            if (g_open_loop_turns >= 5.0f) {
                 SwitchControlState(STATE_CLOSED_LOOP);
             }
             
@@ -836,7 +837,8 @@ interrupt void adc_isr(void)
         case STATE_CLOSED_LOOP: {
             // 更新编码器数据
             Encoder_update();
-            float real_encoder_angle_elec_rad = Encoder_getElecAngle();
+            float real_encoder_angle_elec_rad = -Encoder_getElecAngle();
+            real_encoder_angle_elec_rad += theta_offset;   // 新增：添加电角度偏置
             
             // 获取编码器实际圈数
             float current_encoder_turns = Encoder_getTurns();
@@ -845,51 +847,9 @@ interrupt void adc_isr(void)
             g_current_encoder_turns = current_encoder_turns;
             g_turns_since_start = fabsf(current_encoder_turns - closed_loop_start_turns);
             
-            // 计算目标权重（基于圈数，从20%开始，27圈后达到100%）
-            float target_weight = 0.2f + (g_turns_since_start / 27.0f) * 0.8f;
-            if (target_weight > 1.0f) {
-                target_weight = 1.0f;
-            }
-            if (target_weight < -1.0f) {
-                target_weight = -1.0f;
-            }
-            
-            // 更新调试变量
-            g_target_weight = target_weight;
-            
-            // 使用低通滤波平滑权重变化，减少突变
-            float filter_alpha = 0.3f;
-            angle_fusion_weight = angle_fusion_weight + filter_alpha * (target_weight - angle_fusion_weight);
-            
-            // 限制在[0.2, 1.0]范围内
-            if (angle_fusion_weight < 0.2f) angle_fusion_weight = 0.2f;
-            if (angle_fusion_weight > 1.0f) angle_fusion_weight = 1.0f;
-            
-            // 更新监控变量
-            g_current_angle_fusion_weight = angle_fusion_weight;
-            
-            // 使用带偏移的编码器角度（真实角度）
-            float angle_with_offset = real_encoder_angle_elec_rad + angle_offset_rad_final;
-            while (angle_with_offset < 0.0f) angle_with_offset += 2.0f * M_PI_F;
-            while (angle_with_offset >= 2.0f * M_PI_F) angle_with_offset -= 2.0f * M_PI_F;
-            
-            float fused_angle;
-            
-            if (angle_fusion_weight >= 1.0f) {
-                fused_angle = angle_with_offset;
-            } else {
-                // 虚拟角度（开环角度继续前进）
-                open_loop_angle_acc += TARGET_ANGLE_INCREMENT;
-                float virtual_angle_elec_rad = fmodf(open_loop_angle_acc * MOTOR_POLE_PAIRS, 2.0f * M_PI_F);
-                if (virtual_angle_elec_rad < 0.0f) {
-                    virtual_angle_elec_rad += 2.0f * M_PI_F;
-                }
-                
-                // 角度加权融合
-                fused_angle = angle_fusion_weight * angle_with_offset + (1.0f - angle_fusion_weight) * virtual_angle_elec_rad;
-            }
-            
-            // 包装融合角度到 [0, 2π]
+            // 直接使用带偏移的编码器角度（真实角度）
+            float fused_angle = real_encoder_angle_elec_rad + angle_offset_rad_final;
+            // 包装角度到 [0, 2π]
             while (fused_angle < 0.0f) fused_angle += 2.0f * M_PI_F;
             while (fused_angle >= 2.0f * M_PI_F) fused_angle -= 2.0f * M_PI_F;
             
@@ -898,6 +858,25 @@ interrupt void adc_isr(void)
             
             // 初始D轴电流为0
             Id_ref = 0.0f;
+            
+            // 闭环Iq抬升
+            if (Iq_ref_target > 0.0f) {
+                // 正向目标值
+                if (Iq_ref < Iq_ref_target) {
+                    Iq_ref += Iq_ref_step;
+                    if (Iq_ref > Iq_ref_target) {
+                        Iq_ref = Iq_ref_target;
+                    }
+                }
+            } else {
+                // 负向目标值
+                if (Iq_ref > Iq_ref_target) {
+                    Iq_ref -= Iq_ref_step;
+                    if (Iq_ref < Iq_ref_target) {
+                        Iq_ref = Iq_ref_target;
+                    }
+                }
+            }
             
             // 执行FOC算法
             float alpha, beta;
@@ -916,22 +895,6 @@ interrupt void adc_isr(void)
             
             // 计算电压矢量幅值
             float Vmag = sqrtf(vd * vd + vq * vq);
-            
-            // 弱磁控制：当电压接近限幅时，引入负的D轴电流
-            float Vratio = Vmag / Vmax;
-            float flux_weakening_threshold = 0.95f; // 电压达到95%时开始弱磁
-            float flux_weakening_gain = 0.5f; // 弱磁增益
-            
-            if (Vratio > flux_weakening_threshold) {
-                // 计算弱磁电流
-                float Id_fw = -flux_weakening_gain * (Vmag - flux_weakening_threshold * Vmax);
-                // 限制弱磁电流范围
-                Id_fw = clampf_val(Id_fw, -Iq_ref * 0.5f, 0.0f);
-                Id_ref = Id_fw;
-            }
-            
-            // 重新计算D轴电压（使用弱磁电流）
-            vd = pi_id(Id_ref - d);
             
             // 监控D/Q轴电压
             g_current_vd = vd;
