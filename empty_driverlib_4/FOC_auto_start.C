@@ -42,9 +42,16 @@
 
 // PI控制器参数（保守值）
 #define KP_ID_INIT  0.01f                    // D轴电流环比例增益（大幅降低）
-#define KI_ID_INIT  0.0001f                   // D轴电流环积分增益（大幅降低）
-#define KP_IQ_INIT  0.35f                    // Q轴电流环比例增益（大幅降低）
-#define KI_IQ_INIT  0.5f                   // Q轴电流环积分增益（大幅降低）
+#define KI_ID_INIT  0.001f                   // D轴电流环积分增益（大幅降低）
+#define KP_IQ_INIT  0.3f                    // Q轴电流环比例增益（大幅降低）
+#define KI_IQ_INIT  0.05f                   // Q轴电流环积分增益（大幅降低）
+
+// 统一控制参数（开环、虚拟、闭环三环统一）
+#define TARGET_ANGLE_INCREMENT (M_PI_F / 10000.0f)  // 目标角速度增量 (提高5倍)
+#define TARGET_IQ_REF 1.5f                           // 目标Q轴电流参考值（稍大扭矩）
+#define TARGET_ID_REF -0.0f                           // 目标D轴电流参考值
+#define TARGET_VMAX (BUS_VOLTAGE * 0.8f)            // 目标电压限幅值
+#define ANGLE_ERROR_GAIN 0.01f                      // 角度误差比例系数
 
 // 状态机定义
 typedef enum {
@@ -54,7 +61,7 @@ typedef enum {
 } ControlState;
 
 // 对齐参数
-#define ALIGNMENT_DURATION 5000  // 对齐持续时间（0.5秒，基于20kHz中断频率）
+#define ALIGNMENT_DURATION 30000  // 对齐持续时间（1秒，基于20kHz中断频率）
 
 // 开环参数
 #define OPEN_LOOP_TIMEOUT_COUNT (20000 * 3)  // 3秒超时对应的中断次数
@@ -62,12 +69,6 @@ typedef enum {
 // 闭环启动参数
 #define CL_STARTUP_DURATION 1000 // 闭环启动持续时间（拍数）
 
-// 统一控制参数（开环、虚拟、闭环三环统一）
-#define TARGET_ANGLE_INCREMENT (M_PI_F / 10000.0f)  // 目标角速度增量 (提高5倍)
-#define TARGET_IQ_REF -1.0f                           // 目标Q轴电流参考值（稍大扭矩）
-#define TARGET_ID_REF 0.0f                           // 目标D轴电流参考值
-#define TARGET_VMAX (BUS_VOLTAGE * 0.6f)            // 目标电压限幅值
-#define ANGLE_ERROR_GAIN 0.01f                      // 角度误差比例系数
 
 // SVPWM常量定义
 #define SQRT3_OVER_2 0.86602540378f  // √3/2 的值
@@ -118,23 +119,24 @@ float g_current_id = 0.0f;                       // 当前D轴电流（用于监
 float g_current_iq = 0.0f;                       // 当前Q轴电流（用于监控）
 float g_current_vd = 0.0f;                       // 当前D轴电压（用于监控）
 float g_current_vq = 0.0f;                       // 当前Q轴电压（用于监控）
-float angle_offset_rad_final = 0.0f;             // 冻结的角度偏移值（用于闭环控制）
-float theta_offset = -M_PI_F/2.0f;                       // 电角度偏置（用于调试）
-float g_current_angle_fusion_weight = 0.0f;       // 当前角度融合权重（用于监控）
 
-// 闭环角度融合相关变量
-float closed_loop_turns = 0.0f;                 // 闭环累计转圈圈数
-float closed_loop_start_turns = 0.0f;            // 闭环开始时的圈数
-float angle_fusion_weight = 0.2f;               // 角度融合权重（初始20%）
+// 监控数据缓冲区（每个参数一个数组，8个元素，循环存储）
+#define MONITOR_BUFFER_SIZE 320
+float id_buffer[MONITOR_BUFFER_SIZE] = {0.0f};     // D轴电流缓冲区
+float iq_buffer[MONITOR_BUFFER_SIZE] = {0.0f};     // Q轴电流缓冲区
+float vd_buffer[MONITOR_BUFFER_SIZE] = {0.0f};     // D轴电压缓冲区
+float vq_buffer[MONITOR_BUFFER_SIZE] = {0.0f};     // Q轴电压缓冲区
+uint8_t monitor_buffer_index = 0;                    // 缓冲区索引
 
-// 角度融合调试变量
-float g_current_encoder_turns = 0.0f;            // 当前编码器圈数（用于监控）
-float g_turns_since_start = 0.0f;             // 自闭环开始以来转的圈数（用于监控）
-float g_target_weight = 0.0f;                   // 目标权重（用于监控）
+float theta_offset = M_PI_F*0/12;              // 电角度偏置（90度，用于调试）
+float theta_align_offset = 0.0f;                  // 对齐时记录的编码器零位偏移
+
+
+
 
 // 电流参考值抬升变量
 float Iq_ref_target = 0.0f;                      // Iq参考值目标
-float Iq_ref_step = 0.05f;                       // Iq参考值抬升步长（每拍增加的量）
+float Iq_ref_step = 0.5f;                       // Iq参考值抬升步长（每拍增加的量）
 
 // 闭环启动时间跟踪
 uint16_t cl_startup_cnt = 0;                     // 闭环启动计数器
@@ -191,7 +193,7 @@ void clarke_transform(float Ia, float Ib, float Ic, float* Valpha, float* Vbeta)
 {
     // 标准三相Clarke变换
     *Valpha = (2.0f/3.0f) * (Ia - 0.5f*Ib - 0.5f*Ic);
-    *Vbeta  = (2.0f/3.0f) * (0.8660254f * (Ic - Ib));
+    *Vbeta  = (2.0f/3.0f) * (0.8660254f * (Ib - Ic));
 }
 
 // Park变换
@@ -200,8 +202,8 @@ void park_transform(float alpha, float beta, float theta, float *d, float *q)
     float cos_theta = cosf(theta);
     float sin_theta = sinf(theta);
 
-    *d = alpha * cos_theta + beta * sin_theta;
-    *q = -alpha * sin_theta + beta * cos_theta;
+    *d = -(alpha * cos_theta + beta * sin_theta);
+    *q = -(-alpha * sin_theta + beta * cos_theta);
 }
 
 // 逆Park变换
@@ -210,8 +212,8 @@ void inv_park_transform(float vd, float vq, float theta, float *alpha, float *be
     float cos_theta = cosf(theta);
     float sin_theta = sinf(theta);
 
-    *alpha = vd * cos_theta - vq * sin_theta;
-    *beta = vd * sin_theta + vq * cos_theta;
+    *alpha = (vd * cos_theta - vq * sin_theta);
+    *beta = (vd * sin_theta + vq * cos_theta);
 }
 
 // D轴电流PI控制器
@@ -364,7 +366,7 @@ void ADC_Read_Current(void)
 
     // 添加滑动平均滤波，减少噪声影响
     static float Ia_prev = 0.0f, Ib_prev = 0.0f, Ic_prev = 0.0f;
-    float alpha = 0.9f; // 滤波系数，0-1之间，越大滤波效果越强
+    float alpha = 0.7f; // 滤波系数，0-1之间，越大滤波效果越强
     
     // 应用滤波
     Ia = alpha * Ia_prev + (1 - alpha) * Ia;
@@ -552,7 +554,7 @@ float Encoder_getMechAngle(void)
 // 获取电机电角度
 float Encoder_getElecAngle(void)
 {
-    return motor_angle_elec_rad;
+    return (motor_angle_elec_rad+theta_offset);
 }
 
 // 获取编码器圈数
@@ -667,21 +669,15 @@ void SwitchControlState(ControlState new_state)
             Encoder_init();
             Encoder_update();
         } else if (new_state == STATE_CLOSED_LOOP) {
-            // 捕获开环结束时的电角度差值，作为闭环的校准基准
+            // 编码器更新
             Encoder_update();
-            float real_encoder_angle_elec_rad = Encoder_getElecAngle();
             
-            // 计算角度偏移量（开环角度 - 编码器角度）
-            angle_offset_rad_final = open_loop_angle_elec_rad - real_encoder_angle_elec_rad;
-            
-            // 包装角度误差到 [-π, π]，避免大角度跳变
-            angle_offset_rad_final = fmodf(angle_offset_rad_final + M_PI_F, 2.0f * M_PI_F) - M_PI_F;
-            
-            // 获取开环末端的实际D/Q电流（使用编码器角度）
+            // 获取当前D/Q电流（使用对齐时的编码器零位偏移角度）
             float alpha, beta;
             clarke_transform(Ia_meas, Ib_meas, Ic_meas, &alpha, &beta);
             float d_curr, q_curr;
-            park_transform(alpha, beta, real_encoder_angle_elec_rad, &d_curr, &q_curr);
+            float current_angle = Encoder_getElecAngle() - theta_align_offset;
+            park_transform(alpha, beta, current_angle, &d_curr, &q_curr);
             
             // 切换闭环时强制PI积分值为0（新增：确保状态清理）
             Id_int = 0.0f;
@@ -697,10 +693,8 @@ void SwitchControlState(ControlState new_state)
             // 重置闭环启动计数器
             cl_startup_cnt = 0;
             
-            // 初始化角度融合相关变量（使用编码器实际圈数）
-            float current_encoder_turns = Encoder_getTurns();
-            closed_loop_start_turns = current_encoder_turns;
-            angle_fusion_weight = 0.2f; // 从20%开始
+            
+            
         }
     }
 }
@@ -768,6 +762,11 @@ interrupt void adc_isr(void)
             
             // 对齐完成后切换到开环模式
             if (g_alignment_counter >= ALIGNMENT_DURATION) {
+                // 记录对齐时的编码器零位（工程标准做法）
+                Encoder_update();
+                float theta_enc = Encoder_getElecAngle();
+                theta_align_offset = theta_enc;  // 记录此刻编码器角度作为零位偏移
+                
                 open_loop_angle_acc = 0.0f;
                 open_loop_angle_mech_rad = 0.0f;
                 open_loop_angle_elec_rad = 0.0f;
@@ -797,7 +796,7 @@ interrupt void adc_isr(void)
             g_open_loop_turns = open_loop_angle_acc / (2.0f * M_PI_F);
             
             // 开环1圈后切换到闭环
-            if (fabsf(g_open_loop_turns) >= 5.0f) {
+            if (fabsf(g_open_loop_turns) >= 2.0f) {
                 SwitchControlState(STATE_CLOSED_LOOP);
             }
             
@@ -830,60 +829,54 @@ interrupt void adc_isr(void)
                 svpwm_handle.CMPA2,
                 svpwm_handle.CMPA3
             );
-            
+          
             break;
         }
         
         case STATE_CLOSED_LOOP: {
             // 更新编码器数据
             Encoder_update();
-            float real_encoder_angle_elec_rad = -Encoder_getElecAngle();
-            real_encoder_angle_elec_rad += theta_offset;   // 新增：添加电角度偏置
             
-            // 获取编码器实际圈数
-            float current_encoder_turns = Encoder_getTurns();
-            
-            // 更新调试变量
-            g_current_encoder_turns = current_encoder_turns;
-            g_turns_since_start = fabsf(current_encoder_turns - closed_loop_start_turns);
-            
-            // 直接使用带偏移的编码器角度（真实角度）
-            float fused_angle = real_encoder_angle_elec_rad + angle_offset_rad_final;
-            // 包装角度到 [0, 2π]
-            while (fused_angle < 0.0f) fused_angle += 2.0f * M_PI_F;
-            while (fused_angle >= 2.0f * M_PI_F) fused_angle -= 2.0f * M_PI_F;
+            // 使用编码器零位偏移计算实际角度（工程标准做法）
+            float theta = Encoder_getElecAngle() - theta_align_offset;
+            // 包装角度到 [0, 2π)
+            while (theta < 0.0f) theta += 2.0f * M_PI_F;
+            while (theta >= 2.0f * M_PI_F) theta -= 2.0f * M_PI_F;
             
             // 弱磁控制
             float Vmax = TARGET_VMAX;
             
             // 初始D轴电流为0
-            Id_ref = 0.0f;
+            Id_ref =TARGET_ID_REF;
             
-            // 闭环Iq抬升
-            if (Iq_ref_target > 0.0f) {
-                // 正向目标值
-                if (Iq_ref < Iq_ref_target) {
-                    Iq_ref += Iq_ref_step;
-                    if (Iq_ref > Iq_ref_target) {
-                        Iq_ref = Iq_ref_target;
-                    }
-                }
-            } else {
-                // 负向目标值
-                if (Iq_ref > Iq_ref_target) {
-                    Iq_ref -= Iq_ref_step;
-                    if (Iq_ref < Iq_ref_target) {
-                        Iq_ref = Iq_ref_target;
-                    }
-                }
-            }
+            // 暂时禁用IQ缓升，直接设置为目标值
+            Iq_ref = TARGET_IQ_REF;
+            
+            // // 闭环Iq抬升（暂时禁用）
+            // if (Iq_ref_target > 0.0f) {
+            //     // 正向目标值
+            //     if (Iq_ref < Iq_ref_target) {
+            //         Iq_ref += Iq_ref_step;
+            //         if (Iq_ref > Iq_ref_target) {
+            //             Iq_ref = Iq_ref_target;
+            //         }
+            //     }
+            // } else {
+            //     // 负向目标值
+            //     if (Iq_ref > Iq_ref_target) {
+            //         Iq_ref -= Iq_ref_step;
+            //         if (Iq_ref < Iq_ref_target) {
+            //             Iq_ref = Iq_ref_target;
+            //         }
+            //     }
+            // }
             
             // 执行FOC算法
             float alpha, beta;
             clarke_transform(Ia_meas, Ib_meas, Ic_meas, &alpha, &beta);
             
             float d, q;
-            park_transform(alpha, beta, fused_angle, &d, &q);
+            park_transform(alpha, beta, theta, &d, &q);
             
             // 监控D/Q轴电流
             g_current_id = d;
@@ -910,7 +903,7 @@ interrupt void adc_isr(void)
             
             // 逆Park变换
             float valpha, vbeta;
-            inv_park_transform(vd, vq, fused_angle, &valpha, &vbeta);
+            inv_park_transform(vd, vq, theta, &valpha, &vbeta);
             
             // SVPWM计算
             svpwm_compute(&svpwm_handle, valpha, vbeta);
@@ -921,8 +914,7 @@ interrupt void adc_isr(void)
                 svpwm_handle.CMPA2,
                 svpwm_handle.CMPA3
             );
-            
-            break;
+                        break;
         }
     }
     
@@ -935,6 +927,9 @@ interrupt void adc_isr(void)
 int main(void)
 {
     // 1. 初始化系统控制（频率、看门狗）
+    
+    
+    
     Device_init();
     Device_initGPIO();
     
@@ -965,6 +960,19 @@ int main(void)
     // 7. 主循环
     while(1)
     {
-        // 主循环为空，所有控制逻辑在ADC中断中执行
+        // 刷新监控缓冲区（每个参数一个数组）
+        if (monitor_buffer_index < MONITOR_BUFFER_SIZE) {
+            id_buffer[monitor_buffer_index] = g_current_id;
+            iq_buffer[monitor_buffer_index] = g_current_iq;
+            vd_buffer[monitor_buffer_index] = g_current_vd;
+            vq_buffer[monitor_buffer_index] = g_current_vq;
+            monitor_buffer_index++;
+        }
+        // 缓冲区满了就重置索引
+        if (monitor_buffer_index >= MONITOR_BUFFER_SIZE) {
+            monitor_buffer_index = 0;
+        }
+        
+
     }
 }
