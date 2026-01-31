@@ -49,12 +49,12 @@
 // 速度环PI控制器参数
 #define KP_SPEED_INIT  0.01f                // 速度环比例增益
 #define KI_SPEED_INIT  0.002f               // 速度环积分增益
-#define MAX_SPEED_REF_RPM  3000.0f          // 最大速度参考值（转/分钟）
+#define MAX_SPEED_REF_RPM  1000.0f          // 最大速度参考值（转/分钟）
 #define MIN_SPEED_REF_RPM  0.0f             // 最小速度参考值（转/分钟）
 
 // 统一控制参数（开环、虚拟、闭环三环统一）
 #define TARGET_ANGLE_INCREMENT (M_PI_F / 100000.0f)  // 目标角速度增量 (提高5倍)
-#define TARGET_IQ_REF 2.5f                           // 目标Q轴电流参考值（稍大扭矩）
+#define TARGET_IQ_REF 0.5f                           // 目标Q轴电流参考值（稍大扭矩）
 #define TARGET_ID_REF -1.0f                           // 目标D轴电流参考值
 #define TARGET_VMAX (BUS_VOLTAGE *0.6f)            // 目标电压限幅值
 #define ANGLE_ERROR_GAIN 0.01f                      // 角度误差比例系数
@@ -95,6 +95,21 @@ float encoder_angle_elec_continuous = 0.0f;      // 连续电气角度（弧度�
 static int32_t last_encoder_raw_pos = 0;         // 上一次原始编码器位置
 static int32_t last_encoder_continuous_pos = 0;  // 上一次连续编码器位置
 
+// M/T混合法变量
+static uint32_t last_time_tick = 0;              // 上一次时间戳（控制周期计数）
+static uint32_t last_edge_time = 0;              // 上一次编码器跳变时间
+static int32_t last_encoder_pos = 0;             // 上一次编码器位置
+static float motor_speed_filtered = 0.0f;        // 滤波后的速度
+static uint32_t no_edge_counter = 0;             // 无跳变计数器
+static bool is_zero_speed = false;               // 零速标志
+static uint32_t time_counter = 0;                // 简单时间计数器
+
+// M/T混合法参数
+#define MT_ZERO_SPEED_TIMEOUT 100               // 零速超时阈值（控制周期数）
+#define MT_LOW_SPEED_POS_DIFF_THRESHOLD 1       // 低速位置差阈值
+#define MT_FILTER_ALPHA 0.7f                     // 滤波系数
+#define MT_ZERO_SPEED_THRESHOLD 0.1f             // 零速阈值（rad/s）
+
 // 开环变量
 volatile float open_loop_angle_mech_rad = 0.0f;  // 开环虚拟机械角度(弧度)
 volatile float open_loop_angle_elec_rad = 0.0f;  // 开环虚拟电角度(弧度)
@@ -113,7 +128,7 @@ float KP_IQ = KP_IQ_INIT, KI_IQ = KI_IQ_INIT;    // Q轴PI参数
 
 // 速度环变量
 float KP_SPEED = KP_SPEED_INIT, KI_SPEED = KI_SPEED_INIT; // 速度环PI参数
-float speed_ref_rpm = -1500.0f;                  // 速度参考值（转/分钟）
+float speed_ref_rpm = 1000.0f;                  // 速度参考值（转/分钟）
 float speed_int = 0.0f;                         // 速度环积分项
 float speed_loop_output = 0.0f;                 // 速度环输出（Q轴电流参考值）
 volatile bool overcurrent_fault = false;         // 过流故障标志
@@ -133,11 +148,10 @@ float g_current_vd = 0.0f;                       // 当前D轴电压（用于监
 float g_current_vq = 0.0f;                       // 当前Q轴电压（用于监控）
 
 // 监控数据缓冲区（每个参数一个数组，8个元素，循环存储）
-#define MONITOR_BUFFER_SIZE 320
+#define MONITOR_BUFFER_SIZE 2
 float id_buffer[MONITOR_BUFFER_SIZE] = {0.0f};     // D轴电流缓冲区
 float iq_buffer[MONITOR_BUFFER_SIZE] = {0.0f};     // Q轴电流缓冲区
-float vd_buffer[MONITOR_BUFFER_SIZE] = {0.0f};     // D轴电压缓冲区
-float vq_buffer[MONITOR_BUFFER_SIZE] = {0.0f};     // Q轴电压缓冲区
+float speed_buffer[MONITOR_BUFFER_SIZE] = {0.0f};   // 转速缓冲区
 uint8_t monitor_buffer_index = 0;                    // 缓冲区索引
 
 float theta_offset = M_PI_F*0/12;              // 电角度偏置（90度，用于调试）
@@ -543,15 +557,76 @@ void Encoder_update(void)
         motor_angle_mech_rad += 2.0f * M_PI_F;
     }
     
-    // 计算电机速度(弧度/秒)
-    int32_t continuous_pos_diff = encoder_continuous_pos - last_encoder_continuous_pos;
-    motor_speed_rad = ((float)continuous_pos_diff / (float)COUNTS_PER_REV) * 2.0f * M_PI_F / DT;
-    
-    // 计算电机转速(转/分钟)
-    motor_rpm = motor_speed_rad * 60.0f / (2.0f * M_PI_F);
-    
-    // 更新上一次连续编码器位置
-    last_encoder_continuous_pos = encoder_continuous_pos;
+    // M/T混合法转速计算
+    {
+        // 更新时间计数器
+        time_counter++;
+        uint32_t current_time_tick = time_counter;
+        
+        // 计算位置差
+        int32_t pos_diff = encoder_continuous_pos - last_encoder_pos;
+        
+        // 计算速度
+        float speed_rad = 0.0f;
+        
+        if (abs(pos_diff) > 0) {
+            // 有编码器跳变
+            no_edge_counter = 0;
+            uint32_t edge_time_diff = current_time_tick - last_edge_time;
+            
+            if (abs(pos_diff) > MT_LOW_SPEED_POS_DIFF_THRESHOLD) {
+                // M法（高速）：固定周期内的脉冲数
+                speed_rad = ((float)pos_diff / (float)COUNTS_PER_REV) * 2.0f * M_PI_F / DT;
+            } else {
+                // T法（低速）：相邻脉冲的真实时间
+                if (edge_time_diff > 0) {
+                    float real_time_diff = (float)edge_time_diff * DT;
+                    speed_rad = ((float)pos_diff / (float)COUNTS_PER_REV) * 2.0f * M_PI_F / real_time_diff;
+                }
+            }
+            
+            // 更新跳变时间和位置
+            last_edge_time = current_time_tick;
+            last_encoder_pos = encoder_continuous_pos;
+        } else {
+            // 无编码器跳变
+            no_edge_counter++;
+            
+            if (no_edge_counter > MT_ZERO_SPEED_TIMEOUT) {
+                // 长时间无跳变，判定为零速
+                speed_rad = 0.0f;
+                is_zero_speed = true;
+            } else {
+                // 保持上次速度
+                speed_rad = motor_speed_filtered;
+            }
+        }
+        
+        // 溢出处理
+        if (speed_rad > 1000.0f) {
+            speed_rad = 1000.0f;
+        } else if (speed_rad < -1000.0f) {
+            speed_rad = -1000.0f;
+        }
+        
+        // 应用低通滤波
+        motor_speed_filtered = MT_FILTER_ALPHA * motor_speed_filtered + (1.0f - MT_FILTER_ALPHA) * speed_rad;
+        
+        // 零速判定（仅用于标志，不直接修改速度值）
+        is_zero_speed = (fabsf(motor_speed_filtered) < MT_ZERO_SPEED_THRESHOLD);
+        
+        // 更新速度变量
+        motor_speed_rad = motor_speed_filtered;
+        motor_rpm = motor_speed_rad * 60.0f / (2.0f * M_PI_F);
+        
+        // 零速时的特殊处理
+        if (is_zero_speed) {
+            // 可以在这里添加状态机相关的零速处理
+        }
+        
+        // 更新时间戳
+        last_time_tick = current_time_tick;
+    }
     
     // 更新上一次原始编码器位置
     last_encoder_raw_pos = encoder_raw_pos;
@@ -970,8 +1045,7 @@ int main(void)
         if (monitor_buffer_index < MONITOR_BUFFER_SIZE) {
             id_buffer[monitor_buffer_index] = g_current_id;
             iq_buffer[monitor_buffer_index] = g_current_iq;
-            vd_buffer[monitor_buffer_index] = g_current_vd;
-            vq_buffer[monitor_buffer_index] = g_current_vq;
+            speed_buffer[monitor_buffer_index] = motor_rpm;
             monitor_buffer_index++;
         }
         // 缓冲区满了就重置索引
