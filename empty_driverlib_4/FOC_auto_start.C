@@ -41,21 +41,27 @@
 #define ADC_OFFSET          2253.0f          // ADC中点偏置 (1.65V对应的值)
 
 // PI控制器参数（保守值）
-#define KP_ID_INIT  0.0f                    // D轴电流环比例增益（大幅降低）
-#define KI_ID_INIT  0.00f                   // D轴电流环积分增益（大幅降低）
+#define KP_ID_INIT  0.1f                    // D轴电流环比例增益（大幅降低）
+#define KI_ID_INIT  0.02f                   // D轴电流环积分增益（大幅降低）
 #define KP_IQ_INIT  0.2f                    // Q轴电流环比例增益（大幅降低）
 #define KI_IQ_INIT  0.04f                   // Q轴电流环积分增益（大幅降低）
 
+// 速度环PI控制器参数
+#define KP_SPEED_INIT  0.01f                // 速度环比例增益
+#define KI_SPEED_INIT  0.002f               // 速度环积分增益
+#define MAX_SPEED_REF_RPM  3000.0f          // 最大速度参考值（转/分钟）
+#define MIN_SPEED_REF_RPM  0.0f             // 最小速度参考值（转/分钟）
+
 // 统一控制参数（开环、虚拟、闭环三环统一）
 #define TARGET_ANGLE_INCREMENT (M_PI_F / 100000.0f)  // 目标角速度增量 (提高5倍)
-#define TARGET_IQ_REF 1.5f                           // 目标Q轴电流参考值（稍大扭矩）
-#define TARGET_ID_REF 0.0f                           // 目标D轴电流参考值
+#define TARGET_IQ_REF 2.5f                           // 目标Q轴电流参考值（稍大扭矩）
+#define TARGET_ID_REF -1.0f                           // 目标D轴电流参考值
 #define TARGET_VMAX (BUS_VOLTAGE *0.6f)            // 目标电压限幅值
 #define ANGLE_ERROR_GAIN 0.01f                      // 角度误差比例系数
 
 // 状态机定义
 typedef enum {
-    STATE_ALIGNMENT = 0,   // 对齐状态
+    STATE_ALIGNMENT = 1,   // 对齐状态
     STATE_OPEN_LOOP,       // 开环状态
     STATE_CLOSED_LOOP,     // 完全闭环状态
 } ControlState;
@@ -104,6 +110,12 @@ volatile float Id_ref = 0.0f, Iq_ref = 0.0f;     // D/Q轴电流参考值
 float Id_int = 0.0f, Iq_int = 0.0f;              // D/Q轴积分项
 float KP_ID = KP_ID_INIT, KI_ID = KI_ID_INIT;    // D轴PI参数
 float KP_IQ = KP_IQ_INIT, KI_IQ = KI_IQ_INIT;    // Q轴PI参数
+
+// 速度环变量
+float KP_SPEED = KP_SPEED_INIT, KI_SPEED = KI_SPEED_INIT; // 速度环PI参数
+float speed_ref_rpm = -1500.0f;                  // 速度参考值（转/分钟）
+float speed_int = 0.0f;                         // 速度环积分项
+float speed_loop_output = 0.0f;                 // 速度环输出（Q轴电流参考值）
 volatile bool overcurrent_fault = false;         // 过流故障标志
 static uint16_t adcResult[3];                    // ADC采样结果数组
 
@@ -779,13 +791,7 @@ interrupt void adc_isr(void)
         }
         
         case STATE_OPEN_LOOP: {
-            // 更新编码器数据
-            Encoder_update();
-            g_current_encoder_angle_mech_rad = Encoder_getMechAngle();
-            
-            // 开环角度主动前进（工业标准同步方式）
-            // 1. 角度主动旋转
-            open_loop_angle_acc += TARGET_ANGLE_INCREMENT;
+            // 更新编码器数INCREMENT;
             open_loop_angle_mech_rad = fmodf(open_loop_angle_acc, 2.0f * M_PI_F);
             if (open_loop_angle_mech_rad < 0.0f) {
                 open_loop_angle_mech_rad += 2.0f * M_PI_F;
@@ -855,27 +861,6 @@ interrupt void adc_isr(void)
             // 弱磁控制
             float Vmax = TARGET_VMAX;
             
-
-            
-            // // 闭环Iq抬升（暂时禁用）
-            // if (Iq_ref_target > 0.0f) {
-            //     // 正向目标值
-            //     if (Iq_ref < Iq_ref_target) {
-            //         Iq_ref += Iq_ref_step;
-            //         if (Iq_ref > Iq_ref_target) {
-            //             Iq_ref = Iq_ref_target;
-            //         }
-            //     }
-            // } else {
-            //     // 负向目标值
-            //     if (Iq_ref > Iq_ref_target) {
-            //         Iq_ref -= Iq_ref_step;
-            //         if (Iq_ref < Iq_ref_target) {
-            //             Iq_ref = Iq_ref_target;
-            //         }
-            //     }
-            // }
-            
             // 执行FOC算法
             float alpha, beta;
             clarke_transform(Ia_meas, Ib_meas, Ic_meas, &alpha, &beta);
@@ -897,14 +882,6 @@ interrupt void adc_isr(void)
             // 监控D/Q轴电压
             g_current_vd = vd;
             g_current_vq = vq;
-            
-            // // 电压限幅（圆形限幅）
-            // float Vmag_new = sqrtf(vd * vd + vq * vq);
-            // if (Vmag_new > Vmax) {
-            //     float scale = Vmax / Vmag_new;
-            //     vd *= scale;
-            //     vq *= scale;
-            // }
             
             // 逆Park变换
             float valpha, vbeta;
@@ -948,10 +925,7 @@ int main(void)
     IFR = 0x0000;
     Interrupt_initVectorTable();
     
-    // // 4. 设置电流参考值
-    // Id_ref = 0.0f;
-    // Iq_ref = 0.0f;
-    // Iq_ref_target = 1.5f;  // 稍大扭矩电流
+
 
     // 5. 初始化外设
     InitPeripherals();  
@@ -965,6 +939,33 @@ int main(void)
     // 7. 主循环
     while(1)
     {
+        // 速度环控制
+        {
+            // 计算速度误差（参考速度 - 实际速度）
+            float speed_error = speed_ref_rpm - motor_rpm;
+            
+            // 速度环PI控制
+            speed_int += KI_SPEED * speed_error * (1.0f / 1000.0f); // 主循环执行频率约1kHz
+            
+            // 积分限幅
+            float speed_int_max = 5.0f; // 积分上限（对应最大Q轴电流）
+            float speed_int_min = -5.0f; // 积分下限
+            if (speed_int > speed_int_max) speed_int = speed_int_max;
+            if (speed_int < speed_int_min) speed_int = speed_int_min;
+            
+            // 计算速度环输出
+            speed_loop_output = KP_SPEED * speed_error + speed_int;
+            
+            // 输出限幅（对应Q轴电流范围）
+            float output_max = 3.0f; // 最大输出（对应最大Q轴电流）
+            float output_min = -3.0f; // 最小输出（对应最小Q轴电流，允许反向旋转）
+            if (speed_loop_output > output_max) speed_loop_output = output_max;
+            if (speed_loop_output < output_min) speed_loop_output = output_min;
+            
+            // 将速度环输出作为Q轴电流参考值
+            Iq_ref = speed_loop_output;
+        }
+        
         // 刷新监控缓冲区（每个参数一个数组）
         if (monitor_buffer_index < MONITOR_BUFFER_SIZE) {
             id_buffer[monitor_buffer_index] = g_current_id;
