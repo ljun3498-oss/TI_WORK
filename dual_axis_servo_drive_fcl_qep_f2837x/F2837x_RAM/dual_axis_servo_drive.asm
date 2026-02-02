@@ -1,12 +1,12 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Mon Feb  2 20:54:35 2026                 *
+;* Date/Time created: Mon Feb  2 21:10:02 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$CU, DW_AT_name("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f2837x\F2837x_RAM")
@@ -299,7 +299,7 @@ $C$DW$42	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$42, DW_AT_location[DW_OP_addr ||serialCommsTimer||]
 	.dwattr $C$DW$42, DW_AT_type(*$C$DW$T$45)
 	.dwattr $C$DW$42, DW_AT_external
-	.dwattr $C$DW$42, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$42, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$42, DW_AT_decl_line(0x86)
 	.dwattr $C$DW$42, DW_AT_decl_column(0x0a)
 
@@ -317,7 +317,7 @@ $C$DW$43	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$43, DW_AT_location[DW_OP_addr ||clkPrescale||]
 	.dwattr $C$DW$43, DW_AT_type(*$C$DW$T$45)
 	.dwattr $C$DW$43, DW_AT_external
-	.dwattr $C$DW$43, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$43, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$43, DW_AT_decl_line(0x9a)
 	.dwattr $C$DW$43, DW_AT_decl_column(0x0a)
 
@@ -335,7 +335,7 @@ $C$DW$44	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$44, DW_AT_location[DW_OP_addr ||sampWin||]
 	.dwattr $C$DW$44, DW_AT_type(*$C$DW$T$45)
 	.dwattr $C$DW$44, DW_AT_external
-	.dwattr $C$DW$44, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$44, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$44, DW_AT_decl_line(0x9b)
 	.dwattr $C$DW$44, DW_AT_decl_column(0x0a)
 
@@ -353,7 +353,7 @@ $C$DW$45	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$45, DW_AT_location[DW_OP_addr ||thresh||]
 	.dwattr $C$DW$45, DW_AT_type(*$C$DW$T$45)
 	.dwattr $C$DW$45, DW_AT_external
-	.dwattr $C$DW$45, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$45, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$45, DW_AT_decl_line(0x9c)
 	.dwattr $C$DW$45, DW_AT_decl_column(0x0a)
 
@@ -371,7 +371,7 @@ $C$DW$46	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$46, DW_AT_location[DW_OP_addr ||enableFlag||]
 	.dwattr $C$DW$46, DW_AT_type(*$C$DW$T$195)
 	.dwattr $C$DW$46, DW_AT_external
-	.dwattr $C$DW$46, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$46, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$46, DW_AT_decl_line(0xa1)
 	.dwattr $C$DW$46, DW_AT_decl_column(0x13)
 
@@ -389,7 +389,7 @@ $C$DW$47	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$47, DW_AT_location[DW_OP_addr ||backTicker||]
 	.dwattr $C$DW$47, DW_AT_type(*$C$DW$T$45)
 	.dwattr $C$DW$47, DW_AT_external
-	.dwattr $C$DW$47, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$47, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$47, DW_AT_decl_line(0xa3)
 	.dwattr $C$DW$47, DW_AT_decl_column(0x0a)
 
@@ -407,7 +407,7 @@ $C$DW$48	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$48, DW_AT_location[DW_OP_addr ||led1Cnt||]
 	.dwattr $C$DW$48, DW_AT_type(*$C$DW$T$45)
 	.dwattr $C$DW$48, DW_AT_external
-	.dwattr $C$DW$48, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$48, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$48, DW_AT_decl_line(0xa5)
 	.dwattr $C$DW$48, DW_AT_decl_column(0x0a)
 
@@ -425,7 +425,7 @@ $C$DW$49	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$49, DW_AT_location[DW_OP_addr ||led2Cnt||]
 	.dwattr $C$DW$49, DW_AT_type(*$C$DW$T$45)
 	.dwattr $C$DW$49, DW_AT_external
-	.dwattr $C$DW$49, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$49, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$49, DW_AT_decl_line(0xa6)
 	.dwattr $C$DW$49, DW_AT_decl_column(0x0a)
 
@@ -443,7 +443,7 @@ $C$DW$50	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$50, DW_AT_location[DW_OP_addr ||runMotor||]
 	.dwattr $C$DW$50, DW_AT_type(*$C$DW$T$103)
 	.dwattr $C$DW$50, DW_AT_external
-	.dwattr $C$DW$50, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$50, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$50, DW_AT_decl_line(0xd8)
 	.dwattr $C$DW$50, DW_AT_decl_column(0x10)
 
@@ -461,7 +461,7 @@ $C$DW$51	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$51, DW_AT_location[DW_OP_addr ||ctrlState||]
 	.dwattr $C$DW$51, DW_AT_type(*$C$DW$T$105)
 	.dwattr $C$DW$51, DW_AT_external
-	.dwattr $C$DW$51, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$51, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$51, DW_AT_decl_line(0xd9)
 	.dwattr $C$DW$51, DW_AT_decl_column(0x0d)
 
@@ -479,7 +479,7 @@ $C$DW$52	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$52, DW_AT_location[DW_OP_addr ||flagSyncRun||]
 	.dwattr $C$DW$52, DW_AT_type(*$C$DW$T$83)
 	.dwattr $C$DW$52, DW_AT_external
-	.dwattr $C$DW$52, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$52, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$52, DW_AT_decl_line(0xda)
 	.dwattr $C$DW$52, DW_AT_decl_column(0x06)
 
@@ -491,7 +491,7 @@ $C$DW$53	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$53, DW_AT_location[DW_OP_addr ||Alpha_State_Ptr||]
 	.dwattr $C$DW$53, DW_AT_type(*$C$DW$T$155)
 	.dwattr $C$DW$53, DW_AT_external
-	.dwattr $C$DW$53, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$53, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$53, DW_AT_decl_line(0x7e)
 	.dwattr $C$DW$53, DW_AT_decl_column(0x08)
 
@@ -503,7 +503,7 @@ $C$DW$54	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$54, DW_AT_location[DW_OP_addr ||A_Task_Ptr||]
 	.dwattr $C$DW$54, DW_AT_type(*$C$DW$T$155)
 	.dwattr $C$DW$54, DW_AT_external
-	.dwattr $C$DW$54, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$54, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$54, DW_AT_decl_line(0x7f)
 	.dwattr $C$DW$54, DW_AT_decl_column(0x08)
 
@@ -515,7 +515,7 @@ $C$DW$55	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$55, DW_AT_location[DW_OP_addr ||B_Task_Ptr||]
 	.dwattr $C$DW$55, DW_AT_type(*$C$DW$T$155)
 	.dwattr $C$DW$55, DW_AT_external
-	.dwattr $C$DW$55, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$55, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$55, DW_AT_decl_line(0x80)
 	.dwattr $C$DW$55, DW_AT_decl_column(0x08)
 
@@ -527,7 +527,7 @@ $C$DW$56	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$56, DW_AT_location[DW_OP_addr ||C_Task_Ptr||]
 	.dwattr $C$DW$56, DW_AT_type(*$C$DW$T$155)
 	.dwattr $C$DW$56, DW_AT_external
-	.dwattr $C$DW$56, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$56, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$56, DW_AT_decl_line(0x81)
 	.dwattr $C$DW$56, DW_AT_decl_column(0x08)
 
@@ -544,7 +544,7 @@ $C$DW$57	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$57, DW_AT_location[DW_OP_addr ||VdTesting||]
 	.dwattr $C$DW$57, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$57, DW_AT_external
-	.dwattr $C$DW$57, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$57, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$57, DW_AT_decl_line(0xa9)
 	.dwattr $C$DW$57, DW_AT_decl_column(0x0b)
 
@@ -561,7 +561,7 @@ $C$DW$58	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$58, DW_AT_location[DW_OP_addr ||VqTesting||]
 	.dwattr $C$DW$58, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$58, DW_AT_external
-	.dwattr $C$DW$58, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$58, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$58, DW_AT_decl_line(0xaa)
 	.dwattr $C$DW$58, DW_AT_decl_column(0x0b)
 
@@ -578,7 +578,7 @@ $C$DW$59	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$59, DW_AT_location[DW_OP_addr ||posPtrMax||]
 	.dwattr $C$DW$59, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$59, DW_AT_external
-	.dwattr $C$DW$59, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$59, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$59, DW_AT_decl_line(0xae)
 	.dwattr $C$DW$59, DW_AT_decl_column(0x0b)
 
@@ -595,7 +595,7 @@ $C$DW$60	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$60, DW_AT_location[DW_OP_addr ||dlogCh1||]
 	.dwattr $C$DW$60, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$60, DW_AT_external
-	.dwattr $C$DW$60, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$60, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$60, DW_AT_decl_line(0xb5)
 	.dwattr $C$DW$60, DW_AT_decl_column(0x0b)
 
@@ -612,7 +612,7 @@ $C$DW$61	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$61, DW_AT_location[DW_OP_addr ||dlogCh2||]
 	.dwattr $C$DW$61, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$61, DW_AT_external
-	.dwattr $C$DW$61, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$61, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$61, DW_AT_decl_line(0xb6)
 	.dwattr $C$DW$61, DW_AT_decl_column(0x0b)
 
@@ -629,7 +629,7 @@ $C$DW$62	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$62, DW_AT_location[DW_OP_addr ||dlogCh3||]
 	.dwattr $C$DW$62, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$62, DW_AT_external
-	.dwattr $C$DW$62, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$62, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$62, DW_AT_decl_line(0xb7)
 	.dwattr $C$DW$62, DW_AT_decl_column(0x0b)
 
@@ -646,7 +646,7 @@ $C$DW$63	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$63, DW_AT_location[DW_OP_addr ||dlogCh4||]
 	.dwattr $C$DW$63, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$63, DW_AT_external
-	.dwattr $C$DW$63, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$63, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$63, DW_AT_decl_line(0xb8)
 	.dwattr $C$DW$63, DW_AT_decl_column(0x0b)
 
@@ -658,7 +658,7 @@ $C$DW$64	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$64, DW_AT_location[DW_OP_addr ||halHandle||]
 	.dwattr $C$DW$64, DW_AT_type(*$C$DW$T$143)
 	.dwattr $C$DW$64, DW_AT_external
-	.dwattr $C$DW$64, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$64, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$64, DW_AT_decl_line(0xc7)
 	.dwattr $C$DW$64, DW_AT_decl_column(0x0f)
 
@@ -670,7 +670,7 @@ $C$DW$65	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$65, DW_AT_location[DW_OP_addr ||FCL_cycleCount||]
 	.dwattr $C$DW$65, DW_AT_type(*$C$DW$T$196)
 	.dwattr $C$DW$65, DW_AT_external
-	.dwattr $C$DW$65, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$65, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$65, DW_AT_decl_line(0xd0)
 	.dwattr $C$DW$65, DW_AT_decl_column(0x13)
 
@@ -687,7 +687,7 @@ $C$DW$66	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$66, DW_AT_location[DW_OP_addr ||speedRef||]
 	.dwattr $C$DW$66, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$66, DW_AT_external
-	.dwattr $C$DW$66, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$66, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$66, DW_AT_decl_line(0xd3)
 	.dwattr $C$DW$66, DW_AT_decl_column(0x0b)
 
@@ -704,7 +704,7 @@ $C$DW$67	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$67, DW_AT_location[DW_OP_addr ||IdRef||]
 	.dwattr $C$DW$67, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$67, DW_AT_external
-	.dwattr $C$DW$67, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$67, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$67, DW_AT_decl_line(0xd4)
 	.dwattr $C$DW$67, DW_AT_decl_column(0x0b)
 
@@ -721,7 +721,7 @@ $C$DW$68	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$68, DW_AT_location[DW_OP_addr ||IqRef||]
 	.dwattr $C$DW$68, DW_AT_type(*$C$DW$T$19)
 	.dwattr $C$DW$68, DW_AT_external
-	.dwattr $C$DW$68, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$68, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$68, DW_AT_decl_line(0xd5)
 	.dwattr $C$DW$68, DW_AT_decl_column(0x0b)
 
@@ -739,7 +739,7 @@ $C$DW$69	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$69, DW_AT_location[DW_OP_addr ||rampDelayMax||]
 	.dwattr $C$DW$69, DW_AT_type(*$C$DW$T$22)
 	.dwattr $C$DW$69, DW_AT_external
-	.dwattr $C$DW$69, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$69, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$69, DW_AT_decl_line(0xd6)
 	.dwattr $C$DW$69, DW_AT_decl_column(0x0a)
 
@@ -822,7 +822,7 @@ $C$DW$79	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$79, DW_AT_location[DW_OP_addr ||vTimer0||]
 	.dwattr $C$DW$79, DW_AT_type(*$C$DW$T$194)
 	.dwattr $C$DW$79, DW_AT_external
-	.dwattr $C$DW$79, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$79, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$79, DW_AT_decl_line(0x83)
 	.dwattr $C$DW$79, DW_AT_decl_column(0x0a)
 
@@ -841,7 +841,7 @@ $C$DW$80	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$80, DW_AT_location[DW_OP_addr ||vTimer1||]
 	.dwattr $C$DW$80, DW_AT_type(*$C$DW$T$194)
 	.dwattr $C$DW$80, DW_AT_external
-	.dwattr $C$DW$80, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$80, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$80, DW_AT_decl_line(0x84)
 	.dwattr $C$DW$80, DW_AT_decl_column(0x0a)
 
@@ -860,7 +860,7 @@ $C$DW$81	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$81, DW_AT_location[DW_OP_addr ||vTimer2||]
 	.dwattr $C$DW$81, DW_AT_type(*$C$DW$T$194)
 	.dwattr $C$DW$81, DW_AT_external
-	.dwattr $C$DW$81, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$81, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$81, DW_AT_decl_line(0x85)
 	.dwattr $C$DW$81, DW_AT_decl_column(0x0a)
 
@@ -872,7 +872,7 @@ $C$DW$82	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$82, DW_AT_location[DW_OP_addr ||halMtrHandle||]
 	.dwattr $C$DW$82, DW_AT_type(*$C$DW$T$134)
 	.dwattr $C$DW$82, DW_AT_external
-	.dwattr $C$DW$82, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$82, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$82, DW_AT_decl_line(0xca)
 	.dwattr $C$DW$82, DW_AT_decl_column(0x10)
 
@@ -896,7 +896,7 @@ $C$DW$83	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$83, DW_AT_location[DW_OP_addr ||posArray||]
 	.dwattr $C$DW$83, DW_AT_type(*$C$DW$T$217)
 	.dwattr $C$DW$83, DW_AT_external
-	.dwattr $C$DW$83, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$83, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$83, DW_AT_decl_line(0xad)
 	.dwattr $C$DW$83, DW_AT_decl_column(0x0b)
 
@@ -908,7 +908,7 @@ $C$DW$84	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$84, DW_AT_location[DW_OP_addr ||dlog_4ch1||]
 	.dwattr $C$DW$84, DW_AT_type(*$C$DW$T$120)
 	.dwattr $C$DW$84, DW_AT_external
-	.dwattr $C$DW$84, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$84, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$84, DW_AT_decl_line(0xbb)
 	.dwattr $C$DW$84, DW_AT_decl_column(0x0c)
 
@@ -920,7 +920,7 @@ $C$DW$85	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$85, DW_AT_location[DW_OP_addr ||hal||]
 	.dwattr $C$DW$85, DW_AT_type(*$C$DW$T$141)
 	.dwattr $C$DW$85, DW_AT_external
-	.dwattr $C$DW$85, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$85, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$85, DW_AT_decl_line(0xc8)
 	.dwattr $C$DW$85, DW_AT_decl_column(0x0f)
 
@@ -932,7 +932,7 @@ $C$DW$86	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$86, DW_AT_location[DW_OP_addr ||halMtr||]
 	.dwattr $C$DW$86, DW_AT_type(*$C$DW$T$127)
 	.dwattr $C$DW$86, DW_AT_external
-	.dwattr $C$DW$86, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$86, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$86, DW_AT_decl_line(0xcc)
 	.dwattr $C$DW$86, DW_AT_decl_column(0x10)
 
@@ -960,7 +960,7 @@ $C$DW$88	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$88, DW_AT_location[DW_OP_addr ||DBUFF_4CH1||]
 	.dwattr $C$DW$88, DW_AT_type(*$C$DW$T$218)
 	.dwattr $C$DW$88, DW_AT_external
-	.dwattr $C$DW$88, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$88, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$88, DW_AT_decl_line(0xb1)
 	.dwattr $C$DW$88, DW_AT_decl_column(0x0b)
 
@@ -978,7 +978,7 @@ $C$DW$89	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$89, DW_AT_location[DW_OP_addr ||DBUFF_4CH2||]
 	.dwattr $C$DW$89, DW_AT_type(*$C$DW$T$218)
 	.dwattr $C$DW$89, DW_AT_external
-	.dwattr $C$DW$89, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$89, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$89, DW_AT_decl_line(0xb2)
 	.dwattr $C$DW$89, DW_AT_decl_column(0x0b)
 
@@ -996,7 +996,7 @@ $C$DW$90	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$90, DW_AT_location[DW_OP_addr ||DBUFF_4CH3||]
 	.dwattr $C$DW$90, DW_AT_type(*$C$DW$T$218)
 	.dwattr $C$DW$90, DW_AT_external
-	.dwattr $C$DW$90, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$90, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$90, DW_AT_decl_line(0xb3)
 	.dwattr $C$DW$90, DW_AT_decl_column(0x0b)
 
@@ -1014,7 +1014,7 @@ $C$DW$91	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$91, DW_AT_location[DW_OP_addr ||DBUFF_4CH4||]
 	.dwattr $C$DW$91, DW_AT_type(*$C$DW$T$218)
 	.dwattr $C$DW$91, DW_AT_external
-	.dwattr $C$DW$91, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$91, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$91, DW_AT_decl_line(0xb4)
 	.dwattr $C$DW$91, DW_AT_decl_column(0x0b)
 
@@ -1456,14 +1456,14 @@ $C$DW$92	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$92, DW_AT_location[DW_OP_addr ||motorVars||]
 	.dwattr $C$DW$92, DW_AT_type(*$C$DW$T$150)
 	.dwattr $C$DW$92, DW_AT_external
-	.dwattr $C$DW$92, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$92, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$92, DW_AT_decl_line(0x8f)
 	.dwattr $C$DW$92, DW_AT_decl_column(0x0e)
 
 	.sblock	".bss"
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{79537E6D-1623-4CA4-A2B9-63A454B11185} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{DF1B59F6-97B9-4777-B64B-DFC92332ED51} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{C3507DF0-B196-4F1C-A067-5A59B47228FC} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{D07DB19D-01AE-4CB8-9218-377842D2B8E9} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{6AC0FF97-49B0-4198-AB3D-1D6ECB78C26B} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{081A8CD0-BF5A-4616-B286-DAA2EB9C9F44} 
 	.sect	".text:runSyncControl"
 	.clink
 	.global	||runSyncControl||
@@ -1474,11 +1474,11 @@ $C$DW$93	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$93, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$93, DW_AT_linkage_name("runSyncControl")
 	.dwattr $C$DW$93, DW_AT_external
-	.dwattr $C$DW$93, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$93, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$93, DW_AT_decl_line(0x9cc)
 	.dwattr $C$DW$93, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$93, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2509,column 1,is_stmt,address ||runSyncControl||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2509,column 1,is_stmt,address ||runSyncControl||,isa 0
 
 	.dwfde $C$DW$CIE, ||runSyncControl||
 
@@ -1498,14 +1498,14 @@ $C$DW$93	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||flagSyncRun||   ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2510,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2510,column 5,is_stmt,isa 0
         MOV       AL,@||flagSyncRun||   ; [CPU_ALU] |2510| 
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
         B         ||$C$L4||,EQ          ; [CPU_ALU] |2510| 
         ; branchcc occurs ; [] |2510| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2512,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2512,column 9,is_stmt,isa 0
         MOVL      XAR4,#||motorVars||   ; [CPU_ARAU] |2512| 
         MOVL      XAR0,#324             ; [CPU_ALU] |2512| 
         MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |2512| 
@@ -1515,60 +1515,60 @@ $C$DW$93	.dwtag  DW_TAG_subprogram
         MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |2512| 
         B         ||$C$L1||,NEQ         ; [CPU_ALU] |2512| 
         ; branchcc occurs ; [] |2512| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2517,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2517,column 13,is_stmt,isa 0
         MOVL      XAR0,#360             ; [CPU_ALU] |2517| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2516,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2516,column 13,is_stmt,isa 0
         MOV32     R0H,@||speedRef||     ; [CPU_FPU] |2516| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2528,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2528,column 13,is_stmt,isa 0
         MOV       AL,@||ctrlState||     ; [CPU_ALU] |2528| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2529,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2529,column 13,is_stmt,isa 0
         MOV       AH,@||ctrlState||     ; [CPU_ALU] |2529| 
         MOVL      XAR1,#659             ; [CPU_ALU] |2529| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2517,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2517,column 13,is_stmt,isa 0
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |2517| 
         MOVW      DP,#||motorVars||+326 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2528,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2528,column 13,is_stmt,isa 0
         MOVL      XAR0,#327             ; [CPU_ALU] |2528| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2529,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2529,column 13,is_stmt,isa 0
         MOV       *+XAR4[AR1],AH        ; [CPU_ALU] |2529| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2528,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2528,column 13,is_stmt,isa 0
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |2528| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2516,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2516,column 13,is_stmt,isa 0
         MOVB      XAR0,#28              ; [CPU_ALU] |2516| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
         MOV       AL,@||motorVars||+326 ; [CPU_ALU] |2539| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2516,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2516,column 13,is_stmt,isa 0
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |2516| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
         CMPB      AL,#1                 ; [CPU_ALU] |2539| 
         B         ||$C$L2||,EQ          ; [CPU_ALU] |2539| 
         ; branchcc occurs ; [] |2539| 
         B         ||$C$L3||,UNC         ; [CPU_ALU] |2539| 
         ; branch occurs ; [] |2539| 
 ||$C$L1||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2533,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2533,column 13,is_stmt,isa 0
         MOVL      XAR0,#327             ; [CPU_ALU] |2533| 
         MOVW      DP,#||motorVars||+326 ; [CPU_ARAU] 
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |2533| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
         MOV       AL,@||motorVars||+326 ; [CPU_ALU] |2539| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2536,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2536,column 13,is_stmt,isa 0
         MOVL      XAR1,#360             ; [CPU_ALU] |2536| 
         ZERO      R0H                   ; [CPU_FPU] |2536| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2535,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2535,column 13,is_stmt,isa 0
         ZERO      R1H                   ; [CPU_FPU] |2535| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2534,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2534,column 13,is_stmt,isa 0
         MOVL      XAR0,#659             ; [CPU_ALU] |2534| 
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |2534| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
         CMPB      AL,#1                 ; [CPU_ALU] |2539| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2535,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2535,column 13,is_stmt,isa 0
         MOVB      XAR0,#28              ; [CPU_ALU] |2535| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2536,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2536,column 13,is_stmt,isa 0
         MOV32     *+XAR4[AR1],R0H       ; [CPU_FPU] |2536| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2535,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2535,column 13,is_stmt,isa 0
         MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |2535| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2539,column 9,is_stmt,isa 0
         B         ||$C$L3||,NEQ         ; [CPU_ALU] |2539| 
         ; branchcc occurs ; [] |2539| 
 ||$C$L2||:    
@@ -1576,13 +1576,13 @@ $C$DW$93	.dwtag  DW_TAG_subprogram
         MOV       AL,@||motorVars||+658 ; [CPU_ALU] |2539| 
         MOVW      DP,#||runMotor||      ; [CPU_ARAU] 
         CMPB      AL,#1                 ; [CPU_ALU] |2539| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2542,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2542,column 13,is_stmt,isa 0
         MOVB      @||runMotor||,#1,EQ   ; [CPU_ALU] |2542| 
         B         ||$C$L4||,EQ          ; [CPU_ALU] 
         ; branchcc occurs ; [] 
 ||$C$L3||:    
         MOVW      DP,#||runMotor||      ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2546,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2546,column 13,is_stmt,isa 0
         MOV       @||runMotor||,#0      ; [CPU_ALU] |2546| 
 ||$C$L4||:    
         MOVL      XAR1,*--SP            ; [CPU_ALU] 
@@ -1594,7 +1594,7 @@ $C$DW$94	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$93, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$93, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$93, DW_AT_TI_end_line(0x9f7)
 	.dwattr $C$DW$93, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -1610,11 +1610,11 @@ $C$DW$95	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$95, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$95, DW_AT_linkage_name("runMotorControl")
 	.dwattr $C$DW$95, DW_AT_external
-	.dwattr $C$DW$95, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$95, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$95, DW_AT_decl_line(0x954)
 	.dwattr $C$DW$95, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$95, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2389,column 1,is_stmt,address ||runMotorControl||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2389,column 1,is_stmt,address ||runMotorControl||,isa 0
 
 	.dwfde $C$DW$CIE, ||runMotorControl||
 $C$DW$96	.dwtag  DW_TAG_formal_parameter
@@ -1745,7 +1745,7 @@ $C$DW$111	.dwtag  DW_TAG_variable
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -10
         MOVL      XAR2,XAR4             ; [CPU_ALU] |2389| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2395,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2395,column 5,is_stmt,isa 0
         MOVB      XAR0,#16              ; [CPU_ALU] |2395| 
         MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |2395| 
         MOVB      XAR0,#52              ; [CPU_ALU] |2395| 
@@ -1753,33 +1753,33 @@ $C$DW$111	.dwtag  DW_TAG_variable
         MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |2395| 
         NOP       ; [CPU_ALU] 
         F32TOUI16 R0H,R0H               ; [CPU_FPU] |2395| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2397,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2397,column 5,is_stmt,isa 0
         MOVL      XAR1,#319             ; [CPU_ALU] |2397| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2395,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2395,column 5,is_stmt,isa 0
         MOVL      XAR0,#318             ; [CPU_ALU] |2395| 
         MOV32     ACC,R0H               ; [CPU_FPU] |2395| 
         ADD       AL,#2048              ; [CPU_ALU] |2395| 
         MOV       *+XAR2[AR0],AL        ; [CPU_ALU] |2395| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2397,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2397,column 5,is_stmt,isa 0
         MOVB      XAR0,#16              ; [CPU_ALU] |2397| 
         MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |2397| 
         MOVB      XAR0,#52              ; [CPU_ALU] |2397| 
         MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |2397| 
         MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |2397| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2389,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2389,column 1,is_stmt,isa 0
         MOVL      XAR3,XAR5             ; [CPU_ALU] |2389| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2397,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2397,column 5,is_stmt,isa 0
         F32TOUI16 R0H,R0H               ; [CPU_FPU] |2397| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2389,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2389,column 1,is_stmt,isa 0
         MOVL      XAR4,XAR5             ; [CPU_ALU] |2389| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2400,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2400,column 5,is_stmt,isa 0
         MOVL      XAR0,#318             ; [CPU_ALU] |2400| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2397,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2397,column 5,is_stmt,isa 0
         MOV32     ACC,R0H               ; [CPU_FPU] |2397| 
         MOV       AH,#2048              ; [CPU_ALU] |2397| 
         SUB       AH,AL                 ; [CPU_ALU] |2397| 
         MOV       *+XAR2[AR1],AH        ; [CPU_ALU] |2397| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2400,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2400,column 5,is_stmt,isa 0
         MOV       AL,*+XAR2[AR0]        ; [CPU_ALU] |2400| 
         MOVL      XAR0,#319             ; [CPU_ALU] |2400| 
         MOV       AH,*+XAR2[AR0]        ; [CPU_ALU] |2400| 
@@ -1790,7 +1790,7 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
 
         LCR       #||HAL_setupCMPSS_DACValue|| ; [CPU_ALU] |2400| 
         ; call occurs [#||HAL_setupCMPSS_DACValue||] ; [] |2400| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2403,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2403,column 5,is_stmt,isa 0
         MOVL      XAR1,#274             ; [CPU_ALU] |2403| 
         MOVIZ     R1H,#15948            ; [CPU_FPU] |2403| 
         MOVIZ     R0H,#16204            ; [CPU_FPU] |2403| 
@@ -1807,7 +1807,7 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |2403| 
         NOP       ; [CPU_ALU] 
         MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |2403| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2405,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2405,column 5,is_stmt,isa 0
         MOVL      XAR0,#302             ; [CPU_ALU] |2405| 
         MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |2405| 
         MOVL      XAR0,#300             ; [CPU_ALU] |2405| 
@@ -1822,7 +1822,7 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         MOVST0    ZF, NF                ; [CPU_FPU] |2405| 
         B         ||$C$L5||,LT          ; [CPU_ALU] |2405| 
         ; branchcc occurs ; [] |2405| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2412,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2412,column 9,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |2412| 
         ADD       ACC,#81 << 2          ; [CPU_ALU] |2412| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |2412| 
@@ -1830,7 +1830,7 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         B         ||$C$L6||,UNC         ; [CPU_ALU] |2412| 
         ; branch occurs ; [] |2412| 
 ||$C$L5||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2408,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2408,column 9,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |2408| 
         ADD       ACC,#81 << 2          ; [CPU_ALU] |2408| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |2408| 
@@ -1841,7 +1841,7 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         ADDL      ACC,*+XAR3[0]         ; [CPU_ALU] |4391| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |4391| 
         AND       AL,*+XAR4[0],#0x007f  ; [CPU_ALU] |4391| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2416,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2416,column 5,is_stmt,isa 0
         TBIT      AL,#2                 ; [CPU_ALU] |2416| 
         B         ||$C$L7||,TC          ; [CPU_ALU] |2416| 
         ; branchcc occurs ; [] |2416| 
@@ -1850,7 +1850,7 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         ADDL      ACC,*+XAR3[2]         ; [CPU_ALU] |4391| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |4391| 
         AND       AL,*+XAR4[0],#0x007f  ; [CPU_ALU] |4391| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2416,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2416,column 5,is_stmt,isa 0
         TBIT      AL,#2                 ; [CPU_ALU] |2416| 
         B         ||$C$L7||,TC          ; [CPU_ALU] |2416| 
         ; branchcc occurs ; [] |2416| 
@@ -1859,7 +1859,7 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         ADDL      ACC,*+XAR3[4]         ; [CPU_ALU] |4391| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |4391| 
         AND       AL,*+XAR4[0],#0x007f  ; [CPU_ALU] |4391| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2416,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2416,column 5,is_stmt,isa 0
         TBIT      AL,#2                 ; [CPU_ALU] |2416| 
         B         ||$C$L8||,NTC         ; [CPU_ALU] |2416| 
         ; branchcc occurs ; [] |2416| 
@@ -1912,26 +1912,26 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         LSL       ACC,1                 ; [CPU_ALU] |473| 
         ADD       ACC,#127 << 8         ; [CPU_ALU] |473| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2428,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2428,column 9,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |2428| 
         ADD       ACC,#81 << 2          ; [CPU_ALU] |2428| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVL      *+XAR4[2],XAR6        ; [CPU_FPU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2428,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2428,column 9,is_stmt,isa 0
         MOVL      XAR4,ACC              ; [CPU_ALU] |2428| 
         OR        *+XAR4[0],#0x0001     ; [CPU_ALU] |2428| 
 ||$C$L8||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2431,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2431,column 5,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |2431| 
         ADD       ACC,#325 << 0         ; [CPU_ALU] |2431| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |2431| 
         MOVL      XAR0,#324             ; [CPU_ALU] |2431| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2433,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2433,column 5,is_stmt,isa 0
         MOVZ      AR6,*+XAR2[AR0]       ; [CPU_ALU] |2433| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2431,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2431,column 5,is_stmt,isa 0
         MOV       AL,*+XAR2[AR0]        ; [CPU_ALU] |2431| 
         OR        *+XAR4[0],AL          ; [CPU_ALU] |2431| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2433,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2433,column 5,is_stmt,isa 0
         MOV       AL,AR6                ; [CPU_ALU] |2433| 
         B         ||$C$L9||,EQ          ; [CPU_ALU] |2433| 
         ; branchcc occurs ; [] |2433| 
@@ -1943,11 +1943,11 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         CLRC      SXM                   ; [CPU_ALU] 
         AND       AL,PL,#0x001f         ; [CPU_ALU] |473| 
         MOVZ      AR4,PL                ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2436,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2436,column 9,is_stmt,isa 0
         MOVL      XAR1,#327             ; [CPU_ALU] |2436| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV       T,AL                  ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2435,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2435,column 9,is_stmt,isa 0
         MOVL      XAR0,#326             ; [CPU_ALU] |2435| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVL      ACC,XAR7              ; [CPU_ALU] |473| 
@@ -1959,14 +1959,14 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         LSL       ACC,1                 ; [CPU_ALU] |473| 
         ADD       ACC,#127 << 8         ; [CPU_ALU] |473| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2436,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2436,column 9,is_stmt,isa 0
         MOVB      *+XAR2[AR1],#4,UNC    ; [CPU_ALU] |2436| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2435,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2435,column 9,is_stmt,isa 0
         MOV       *+XAR2[AR0],#0        ; [CPU_ALU] |2435| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV       AL,AR6                ; [CPU_ALU] |473| 
         MOVL      *+XAR4[2],XAR7        ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2442,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2442,column 5,is_stmt,isa 0
         B         ||$C$L9||,EQ          ; [CPU_ALU] |2442| 
         ; branchcc occurs ; [] |2442| 
         MOVL      XAR0,#328             ; [CPU_ALU] |2442| 
@@ -1974,19 +1974,19 @@ $C$DW$112	.dwtag  DW_TAG_TI_branch
         CMPB      AL,#1                 ; [CPU_ALU] |2442| 
         B         ||$C$L10||,NEQ        ; [CPU_ALU] |2442| 
         ; branchcc occurs ; [] |2442| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2444,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2444,column 9,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |2444| 
         ADD       ACC,#323 << 0         ; [CPU_ALU] |2444| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |2444| 
         INC       *+XAR4[0]             ; [CPU_ALU] |2444| 
 ||$C$L9||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2448,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2448,column 5,is_stmt,isa 0
         MOVL      XAR0,#328             ; [CPU_ALU] |2448| 
         MOV       AL,*+XAR2[AR0]        ; [CPU_ALU] |2448| 
         CMPB      AL,#1                 ; [CPU_ALU] |2448| 
         B         ||$C$L10||,NEQ        ; [CPU_ALU] |2448| 
         ; branchcc occurs ; [] |2448| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2451,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2451,column 9,is_stmt,isa 0
         MOVB      ACC,#38               ; [CPU_ALU] |2451| 
 $C$DW$113	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$113, DW_AT_low_pc(0x00)
@@ -2077,34 +2077,34 @@ $C$DW$113	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[3],#0x0200     ; [CPU_ALU] |809| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 811,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |811| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2476,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2476,column 9,is_stmt,isa 0
         MOVL      XAR0,#324             ; [CPU_ALU] |2476| 
         MOV       *+XAR2[AR0],#0        ; [CPU_ALU] |2476| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2477,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2477,column 9,is_stmt,isa 0
         MOVL      XAR0,#328             ; [CPU_ALU] |2477| 
         MOV       *+XAR2[AR0],#0        ; [CPU_ALU] |2477| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2479,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2479,column 9,is_stmt,isa 0
         MOVL      XAR0,#280             ; [CPU_ALU] |2479| 
         MOVL      XAR4,*+XAR2[AR0]      ; [CPU_ALU] |2479| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2478,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2478,column 9,is_stmt,isa 0
         MOVL      XAR0,#327             ; [CPU_ALU] |2478| 
         MOV       *+XAR2[AR0],#0        ; [CPU_ALU] |2478| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2479,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2479,column 9,is_stmt,isa 0
         MOV       *+XAR4[0],#0          ; [CPU_ALU] |2479| 
 ||$C$L10||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2482,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2482,column 5,is_stmt,isa 0
         MOVL      XAR0,#327             ; [CPU_ALU] |2482| 
         MOV       AL,*+XAR2[AR0]        ; [CPU_ALU] |2482| 
         CMPB      AL,#1                 ; [CPU_ALU] |2482| 
         B         ||$C$L11||,EQ         ; [CPU_ALU] |2482| 
         ; branchcc occurs ; [] |2482| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2494,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2494,column 9,is_stmt,isa 0
         MOVL      XAR0,#326             ; [CPU_ALU] |2494| 
         MOV       AL,*+XAR2[AR0]        ; [CPU_ALU] |2494| 
         CMPB      AL,#1                 ; [CPU_ALU] |2494| 
         B         ||$C$L12||,NEQ        ; [CPU_ALU] |2494| 
         ; branchcc occurs ; [] |2494| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2496,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2496,column 13,is_stmt,isa 0
         MOV       *+XAR2[AR0],#0        ; [CPU_ALU] |2496| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVL      XAR0,#320             ; [CPU_ALU] |473| 
@@ -2125,16 +2125,16 @@ $C$DW$113	.dwtag  DW_TAG_TI_branch
         ADD       ACC,#127 << 8         ; [CPU_ALU] |473| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |473| 
         MOVL      *+XAR4[2],XAR6        ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2499,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2499,column 13,is_stmt,isa 0
         B         ||$C$L12||,UNC        ; [CPU_ALU] |2499| 
         ; branch occurs ; [] |2499| 
 ||$C$L11||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2484,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2484,column 9,is_stmt,isa 0
         MOVL      XAR0,#326             ; [CPU_ALU] |2484| 
         MOV       AL,*+XAR2[AR0]        ; [CPU_ALU] |2484| 
         B         ||$C$L12||,NEQ        ; [CPU_ALU] |2484| 
         ; branchcc occurs ; [] |2484| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2486,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2486,column 13,is_stmt,isa 0
         MOVB      *+XAR2[AR0],#1,UNC    ; [CPU_ALU] |2486| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 469,column 9,is_stmt,isa 0
         MOVL      XAR0,#320             ; [CPU_ALU] |469| 
@@ -2173,7 +2173,7 @@ $C$DW$114	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$95, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$95, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$95, DW_AT_TI_end_line(0x9c8)
 	.dwattr $C$DW$95, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2190,11 +2190,11 @@ $C$DW$115	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$115, DW_AT_linkage_name("ramper")
 	.dwattr $C$DW$115, DW_AT_external
 	.dwattr $C$DW$115, DW_AT_type(*$C$DW$T$19)
-	.dwattr $C$DW$115, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$115, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$115, DW_AT_decl_line(0x920)
 	.dwattr $C$DW$115, DW_AT_decl_column(0x0b)
 	.dwattr $C$DW$115, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2337,column 1,is_stmt,address ||ramper||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2337,column 1,is_stmt,address ||ramper||,isa 0
 
 	.dwfde $C$DW$CIE, ||ramper||
 $C$DW$116	.dwtag  DW_TAG_formal_parameter
@@ -2249,10 +2249,10 @@ $C$DW$121	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -4
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2342,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2342,column 5,is_stmt,isa 0
         SUBF32    R4H,R0H,R1H           ; [CPU_FPU] |2342| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2344,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2344,column 9,is_stmt,isa 0
         CMPF32    R4H,R2H               ; [CPU_FPU] |2344| 
         MOVST0    ZF, NF                ; [CPU_FPU] |2344| 
         B         ||$C$L13||,LEQ        ; [CPU_ALU] |2344| 
@@ -2281,7 +2281,7 @@ $C$DW$122	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$115, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$115, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$115, DW_AT_TI_end_line(0x932)
 	.dwattr $C$DW$115, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2298,11 +2298,11 @@ $C$DW$123	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$123, DW_AT_linkage_name("refPosGen")
 	.dwattr $C$DW$123, DW_AT_external
 	.dwattr $C$DW$123, DW_AT_type(*$C$DW$T$19)
-	.dwattr $C$DW$123, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$123, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$123, DW_AT_decl_line(0x937)
 	.dwattr $C$DW$123, DW_AT_decl_column(0x0b)
 	.dwattr $C$DW$123, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2360,column 1,is_stmt,address ||refPosGen||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2360,column 1,is_stmt,address ||refPosGen||,isa 0
 
 	.dwfde $C$DW$CIE, ||refPosGen||
 $C$DW$124	.dwtag  DW_TAG_formal_parameter
@@ -2352,18 +2352,18 @@ $C$DW$128	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -4
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2361,column 18,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2361,column 18,is_stmt,isa 0
         MOVL      XAR0,#317             ; [CPU_ALU] |2361| 
         CLRC      SXM                   ; [CPU_ALU] 
         MOVL      XAR5,#||posArray||    ; [CPU_ARAU] |2361| 
         MOV       ACC,*+XAR4[AR0] << 1  ; [CPU_ALU] |2361| 
         ADDL      XAR5,ACC              ; [CPU_ALU] |2361| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2363,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2363,column 5,is_stmt,isa 0
         MOV32     R2H,*+XAR4[4]         ; [CPU_FPU] |2363| 
         MOV32     R1H,R0H               ; [CPU_FPU] |2363| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2361,column 18,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2361,column 18,is_stmt,isa 0
         MOV32     R4H,*+XAR5[0]         ; [CPU_FPU] |2361| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2363,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2363,column 5,is_stmt,isa 0
         MOV32     R0H,R4H               ; [CPU_FPU] |2363| 
 $C$DW$129	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$129, DW_AT_low_pc(0x00)
@@ -2372,41 +2372,41 @@ $C$DW$129	.dwtag  DW_TAG_TI_branch
 
         LCR       #||ramper||           ; [CPU_ALU] |2363| 
         ; call occurs [#||ramper||] ; [] |2363| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2365,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2365,column 5,is_stmt,isa 0
         CMPF32    R4H,R0H               ; [CPU_FPU] |2365| 
         MOVST0    ZF, NF                ; [CPU_FPU] |2365| 
         B         ||$C$L15||,NEQ        ; [CPU_ALU] |2365| 
         ; branchcc occurs ; [] |2365| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2367,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2367,column 9,is_stmt,isa 0
         MOVB      ACC,#1                ; [CPU_ALU] |2367| 
         ADDL      *+XAR4[0],ACC         ; [CPU_ALU] |2367| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2369,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2369,column 9,is_stmt,isa 0
         MOVL      ACC,*+XAR4[2]         ; [CPU_ALU] |2369| 
         CMPL      ACC,*+XAR4[0]         ; [CPU_ALU] |2369| 
         B         ||$C$L15||,HIS        ; [CPU_ALU] |2369| 
         ; branchcc occurs ; [] |2369| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2373,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2373,column 13,is_stmt,isa 0
         MOVL      ACC,XAR4              ; [CPU_ALU] |2373| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2375,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2375,column 13,is_stmt,isa 0
         MOVL      XAR0,#316             ; [CPU_ALU] |2375| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2371,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2371,column 13,is_stmt,isa 0
         MOVB      XAR6,#0               ; [CPU_ALU] |2371| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2373,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2373,column 13,is_stmt,isa 0
         ADD       ACC,#317 << 0         ; [CPU_ALU] |2373| 
         MOVL      XAR5,ACC              ; [CPU_ALU] |2373| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2375,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2375,column 13,is_stmt,isa 0
         MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |2375| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2371,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2371,column 13,is_stmt,isa 0
         MOVL      *+XAR4[0],XAR6        ; [CPU_ALU] |2371| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2375,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2375,column 13,is_stmt,isa 0
         MOVL      XAR0,#317             ; [CPU_ALU] |2375| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2373,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2373,column 13,is_stmt,isa 0
         INC       *+XAR5[0]             ; [CPU_ALU] |2373| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2375,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2375,column 13,is_stmt,isa 0
         CMP       AL,*+XAR4[AR0]        ; [CPU_ALU] |2375| 
         B         ||$C$L15||,HI         ; [CPU_ALU] |2375| 
         ; branchcc occurs ; [] |2375| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2377,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2377,column 17,is_stmt,isa 0
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |2377| 
 ||$C$L15||:    
         SUBB      SP,#2                 ; [CPU_ARAU] 
@@ -2420,7 +2420,7 @@ $C$DW$130	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$123, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$123, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$123, DW_AT_TI_end_line(0x94f)
 	.dwattr $C$DW$123, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -2438,12 +2438,12 @@ $C$DW$131	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$131, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$131, DW_AT_linkage_name("motor2ControlISR")
 	.dwattr $C$DW$131, DW_AT_external
-	.dwattr $C$DW$131, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$131, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$131, DW_AT_decl_line(0x8fe)
 	.dwattr $C$DW$131, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$131, DW_AT_TI_interrupt
 	.dwattr $C$DW$131, DW_AT_TI_max_frame_size(-34)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2303,column 1,is_stmt,address ||motor2ControlISR||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2303,column 1,is_stmt,address ||motor2ControlISR||,isa 0
 
 	.dwfde $C$DW$CIE, ||motor2ControlISR||
 
@@ -2555,7 +2555,7 @@ $C$DW$133	.dwtag  DW_TAG_variable
         SPM       0                     ; [CPU_ALU] 
         CLRC      PAGE0,OVM             ; [CPU_ALU] 
         CLRC      AMODE                 ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1586,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1586,column 5,is_stmt,isa 0
         MOVL      XAR2,#||motorVars||+332 ; [CPU_ARAU] |1586| 
         MOVL      XAR4,XAR2             ; [CPU_ALU] |1586| 
 $C$DW$134	.dwtag  DW_TAG_TI_branch
@@ -2622,7 +2622,7 @@ $C$DW$134	.dwtag  DW_TAG_TI_branch
         MOV32     R2H,*+XAR4[AR1]       ; [CPU_FPU] |223| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 208,column 5,is_stmt,isa 0
         MOVL      XAR0,#643             ; [CPU_ALU] |208| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1602,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1602,column 5,is_stmt,isa 0
         MOVL      XAR3,#||motorVars||   ; [CPU_ARAU] |1602| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 208,column 5,is_stmt,isa 0
         UI16TOF32 R3H,*+XAR4[AR0]       ; [CPU_FPU] |208| 
@@ -2630,7 +2630,7 @@ $C$DW$134	.dwtag  DW_TAG_TI_branch
         MOVXI     R0H,#55050            ; [CPU_FPU] |208| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 223,column 5,is_stmt,isa 0
         UI16TOF32 R1H,*+XAR5[0]         ; [CPU_FPU] |223| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1602,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1602,column 5,is_stmt,isa 0
         MOVL      XAR0,#606             ; [CPU_ALU] |1602| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 208,column 5,is_stmt,isa 0
         MPYF32    R0H,R0H,R3H           ; [CPU_FPU] |208| 
@@ -2640,11 +2640,11 @@ $C$DW$134	.dwtag  DW_TAG_TI_branch
         MOV32     *+XAR4[AR1],R0H       ; [CPU_FPU] |208| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 227,column 9,is_stmt,isa 0
         MAXF32    R1H,#16256            ; [CPU_FPU] |227| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1608,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1608,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR2             ; [CPU_ALU] |1608| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1602,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1602,column 5,is_stmt,isa 0
         MOV32     *+XAR3[AR0],R1H       ; [CPU_FPU] |1602| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1608,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1608,column 5,is_stmt,isa 0
 $C$DW$135	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$135, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$135, DW_AT_name("FCL_runPICtrlWrap_M2")
@@ -2652,80 +2652,80 @@ $C$DW$135	.dwtag  DW_TAG_TI_branch
 
         LCR       #||FCL_runPICtrlWrap_M2|| ; [CPU_ALU] |1608| 
         ; call occurs [#||FCL_runPICtrlWrap_M2||] ; [] |1608| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1620,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1620,column 5,is_stmt,isa 0
         MOVL      XAR0,#658             ; [CPU_ALU] |1620| 
         MOV       AL,*+XAR3[AR0]        ; [CPU_ALU] |1620| 
         CMPB      AL,#1                 ; [CPU_ALU] |1620| 
         B         ||$C$L26||,NEQ        ; [CPU_ALU] |1620| 
         ; branchcc occurs ; [] |1620| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1622,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1622,column 9,is_stmt,isa 0
         MOVL      XAR0,#612             ; [CPU_ALU] |1622| 
         MOVL      XAR4,*+XAR3[AR0]      ; [CPU_ALU] |1622| 
         MOV       AL,*+XAR4[0]          ; [CPU_ALU] |1622| 
         CMPB      AL,#2                 ; [CPU_ALU] |1622| 
         B         ||$C$L25||,EQ         ; [CPU_ALU] |1622| 
         ; branchcc occurs ; [] |1622| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1627,column 14,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1627,column 14,is_stmt,isa 0
         CMPB      AL,#1                 ; [CPU_ALU] |1627| 
         B         ||$C$L19||,EQ         ; [CPU_ALU] |1627| 
         ; branchcc occurs ; [] |1627| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1639,column 14,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1639,column 14,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |1639| 
         B         ||$C$L27||,NEQ        ; [CPU_ALU] |1639| 
         ; branchcc occurs ; [] |1639| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1641,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1641,column 13,is_stmt,isa 0
         MOVL      XAR0,#422             ; [CPU_ALU] |1641| 
         ZERO      R0H                   ; [CPU_FPU] |1641| 
         MOV32     *+XAR3[AR0],R0H       ; [CPU_FPU] |1641| 
         MOVW      DP,#||motorVars||+356 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1642,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1642,column 13,is_stmt,isa 0
         ZERO      R2H                   ; [CPU_FPU] |1642| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1645,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1645,column 13,is_stmt,isa 0
         MOVL      XAR0,#352             ; [CPU_ALU] |1645| 
         MOVL      ACC,*+XAR3[AR0]       ; [CPU_ALU] |1645| 
         MOVL      XAR0,#356             ; [CPU_ALU] |1645| 
         MOVL      *+XAR3[AR0],ACC       ; [CPU_ALU] |1645| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1648,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1648,column 13,is_stmt,isa 0
         MOVL      XAR0,#350             ; [CPU_ALU] |1648| 
         MOV32     R1H,*+XAR3[AR0]       ; [CPU_FPU] |1648| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1642,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1642,column 13,is_stmt,isa 0
         MOVL      XAR0,#432             ; [CPU_ALU] |1642| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1648,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1648,column 13,is_stmt,isa 0
         MOV32     R0H,@||motorVars||+356 ; [CPU_FPU] |1648| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1642,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1642,column 13,is_stmt,isa 0
         MOV32     *+XAR3[AR0],R2H       ; [CPU_FPU] |1642| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1648,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1648,column 13,is_stmt,isa 0
         CMPF32    R1H,R0H               ; [CPU_FPU] |1648| 
         MOVST0    ZF, NF                ; [CPU_FPU] |1648| 
         B         ||$C$L27||,LT         ; [CPU_ALU] |1648| 
         ; branchcc occurs ; [] |1648| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1650,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1650,column 17,is_stmt,isa 0
         MOVL      ACC,XAR3              ; [CPU_ALU] |1650| 
         ADD       ACC,#323 << 1         ; [CPU_ALU] |1650| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |1650| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1652,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1652,column 17,is_stmt,isa 0
         MOVL      XAR0,#647             ; [CPU_ALU] |1652| 
         MOVW      DP,#||motorVars||+646 ; [CPU_ARAU] 
         MOV       AL,*+XAR3[AR0]        ; [CPU_ALU] |1652| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1650,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1650,column 17,is_stmt,isa 0
         INC       *+XAR4[0]             ; [CPU_ALU] |1650| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1652,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1652,column 17,is_stmt,isa 0
         CMP       AL,@||motorVars||+646 ; [CPU_ALU] |1652| 
         B         ||$C$L27||,HI         ; [CPU_ALU] |1652| 
         ; branchcc occurs ; [] |1652| 
         MOVW      DP,#||motorVars||+612 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1657,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1657,column 21,is_stmt,isa 0
         MOVL      XAR4,@||motorVars||+612 ; [CPU_ALU] |1657| 
         MOVW      DP,#||motorVars||+646 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1654,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1654,column 21,is_stmt,isa 0
         MOV       @||motorVars||+646,#0 ; [CPU_ALU] |1654| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1657,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1657,column 21,is_stmt,isa 0
         MOVB      *+XAR4[0],#1,UNC      ; [CPU_ALU] |1657| 
         B         ||$C$L27||,UNC        ; [CPU_ALU] |1657| 
         ; branch occurs ; [] |1657| 
 ||$C$L19||:    
         MOVW      DP,#||motorVars||+360 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1629,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1629,column 13,is_stmt,isa 0
         MOV32     R0H,@||motorVars||+360 ; [CPU_FPU] |1629| 
         CMPF32    R0H,#0                ; [CPU_FPU] |1629| 
         MOVST0    ZF, NF                ; [CPU_FPU] |1629| 
@@ -2740,13 +2740,13 @@ $C$DW$135	.dwtag  DW_TAG_TI_branch
         MOVL      XAR0,#364             ; [CPU_ALU] |1629| 
         MOVL      XAR5,#||motorVars||   ; [CPU_ARAU] |1629| 
         MOV32     R1H,*+XAR5[AR0]       ; [CPU_FPU] |1629| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1635,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1635,column 17,is_stmt,isa 0
         MOVB      ACC,#20               ; [CPU_ALU] |1635| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1629,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1629,column 13,is_stmt,isa 0
         MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |1629| 
         MOVL      XAR0,#422             ; [CPU_ALU] |1629| 
         MOV32     *+XAR5[AR0],R0H       ; [CPU_FPU] |1629| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1635,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1635,column 17,is_stmt,isa 0
         MOVL      XAR0,#432             ; [CPU_ALU] |1635| 
         MOVL      XAR6,*+XAR5[AR0]      ; [CPU_ALU] |1635| 
         MOVL      XAR0,#612             ; [CPU_ALU] |1635| 
@@ -2755,7 +2755,7 @@ $C$DW$135	.dwtag  DW_TAG_TI_branch
         MOVW      DP,#||motorVars||+612 ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rampgen.h",line 66,column 1,is_stmt,isa 0
         MOVB      ACC,#20               ; [CPU_ALU] |66| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1635,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1635,column 17,is_stmt,isa 0
         MOVL      *+XAR4[0],XAR6        ; [CPU_ALU] |1635| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rampgen.h",line 66,column 1,is_stmt,isa 0
         ADDL      ACC,@||motorVars||+612 ; [CPU_ALU] |66| 
@@ -2798,42 +2798,42 @@ $C$DW$135	.dwtag  DW_TAG_TI_branch
         B         ||$C$L27||,UNC        ; [CPU_ALU] 
         ; branch occurs ; [] 
 ||$C$L25||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
         MOVL      XAR4,#||motorVars||   ; [CPU_ARAU] |1624| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1625,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1625,column 13,is_stmt,isa 0
         MOVL      XAR0,#360             ; [CPU_ALU] |1625| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
         MOVL      XAR1,#354             ; [CPU_ALU] |1624| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1625,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1625,column 13,is_stmt,isa 0
         MOVL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |1625| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
         MOVL      XAR6,*+XAR4[AR1]      ; [CPU_ALU] |1624| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1625,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1625,column 13,is_stmt,isa 0
         MOVL      XAR0,#422             ; [CPU_ALU] |1625| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
         MOVL      XAR1,#356             ; [CPU_ALU] |1624| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1625,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1625,column 13,is_stmt,isa 0
         MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |1625| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1624,column 13,is_stmt,isa 0
         MOVL      *+XAR4[AR1],XAR6      ; [CPU_ALU] |1624| 
         B         ||$C$L27||,UNC        ; [CPU_ALU] 
         ; branch occurs ; [] 
 ||$C$L26||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1664,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1664,column 9,is_stmt,isa 0
         MOVL      XAR0,#356             ; [CPU_ALU] |1664| 
         MOVL      XAR4,#||motorVars||   ; [CPU_ARAU] |1664| 
         ZERO      R0H                   ; [CPU_FPU] |1664| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1665,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1665,column 9,is_stmt,isa 0
         MOVL      XAR1,#350             ; [CPU_ALU] |1665| 
         ZERO      R1H                   ; [CPU_FPU] |1665| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1664,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1664,column 9,is_stmt,isa 0
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1664| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1665,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1665,column 9,is_stmt,isa 0
         MOV32     *+XAR4[AR1],R1H       ; [CPU_FPU] |1665| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1667,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1667,column 9,is_stmt,isa 0
         MOVL      XAR0,#422             ; [CPU_ALU] |1667| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1667| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1669,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1669,column 9,is_stmt,isa 0
         MOVL      XAR4,XAR2             ; [CPU_ALU] |1669| 
 $C$DW$136	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$136, DW_AT_low_pc(0x00)
@@ -2933,7 +2933,7 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
         MOVL      XAR0,#428             ; [CPU_ALU] |109| 
         MOVL      XAR5,#||motorVars||   ; [CPU_ARAU] |109| 
         MOV32     R2H,*+XAR5[AR0]       ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1680,column 5,is_stmt,isa 0
         MOVB      ACC,#54               ; [CPU_ALU] |1680| 
         MOVW      DP,#||motorVars||+432 ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
@@ -2942,48 +2942,48 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
         MOVL      XAR0,#426             ; [CPU_ALU] |109| 
         MOV32     R1H,*+XAR5[AR0]       ; [CPU_FPU] |109| 
         MINF32    R0H,R2H               ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1680,column 5,is_stmt,isa 0
         MOVL      XAR0,#612             ; [CPU_ALU] |1680| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
         MAXF32    R0H,R1H               ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1680,column 5,is_stmt,isa 0
         ADDL      ACC,*+XAR5[AR0]       ; [CPU_ALU] |1680| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |1680| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
         MOV32     @||motorVars||+432,R0H ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1680,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1680,column 5,is_stmt,isa 0
         MOVL      XAR0,#388             ; [CPU_ALU] |1680| 
         MOVW      DP,#||motorVars||+612 ; [CPU_ARAU] 
         MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |1680| 
         MOVL      *+XAR5[AR0],ACC       ; [CPU_ALU] |1680| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 76,column 2,is_stmt,isa 0
         MOVL      XAR0,#480             ; [CPU_ALU] |76| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
         MOVB      ACC,#56               ; [CPU_ALU] |1681| 
         ADDL      ACC,@||motorVars||+612 ; [CPU_ALU] |1681| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 76,column 2,is_stmt,isa 0
         MOV32     R0H,*+XAR5[AR0]       ; [CPU_FPU] |76| 
         MOVW      DP,#||motorVars||+388 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
         MOVL      XAR4,ACC              ; [CPU_ALU] |1681| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1682,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1682,column 5,is_stmt,isa 0
         MOVL      XAR1,#476             ; [CPU_ALU] |1682| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 76,column 2,is_stmt,isa 0
         MOVL      XAR0,#494             ; [CPU_ALU] |76| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1682,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1682,column 5,is_stmt,isa 0
         MOVL      ACC,@||motorVars||+388 ; [CPU_ALU] |1682| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
         MOVL      XAR6,*+XAR4[0]        ; [CPU_ALU] |1681| 
         MOVW      DP,#||motorVars||+476 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1682,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1682,column 5,is_stmt,isa 0
         MOVL      *+XAR5[AR1],ACC       ; [CPU_ALU] |1682| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
         MOVL      XAR1,#390             ; [CPU_ALU] |1681| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 76,column 2,is_stmt,isa 0
         MOV32     R1H,@||motorVars||+476 ; [CPU_FPU] |76| 
         MOVW      DP,#||motorVars||+494 ; [CPU_ARAU] 
         SUBF32    R0H,R1H,R0H           ; [CPU_FPU] |76| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1681,column 5,is_stmt,isa 0
         MOVL      *+XAR5[AR1],XAR6      ; [CPU_ALU] |1681| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 76,column 2,is_stmt,isa 0
         MOV32     *+XAR5[AR0],R0H       ; [CPU_FPU] |76| 
@@ -3017,17 +3017,17 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
         MOVL      XAR1,#476             ; [CPU_ALU] |104| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
         MOVL      XAR0,#486             ; [CPU_ALU] |87| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1704,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1704,column 5,is_stmt,isa 0
         MOVL      ACC,XAR4              ; [CPU_ALU] |1704| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
         MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |87| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1704,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1704,column 5,is_stmt,isa 0
         ADD       ACC,#645 << 0         ; [CPU_ALU] |1704| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
         MOVL      XAR0,#482             ; [CPU_ALU] |87| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 104,column 2,is_stmt,isa 0
         MOVL      XAR6,*+XAR4[AR1]      ; [CPU_FPU] |104| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1704,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1704,column 5,is_stmt,isa 0
         MOVL      XAR5,ACC              ; [CPU_ALU] |1704| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
         MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |87| 
@@ -3037,18 +3037,18 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
 ||      MPYF32    R3H,R4H,R3H           ; [CPU_FPU] |87| 
 
         MOVL      XAR0,#490             ; [CPU_ALU] |87| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1704,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1704,column 5,is_stmt,isa 0
         INC       *+XAR5[0]             ; [CPU_ALU] |1704| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
 
         MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |87| 
 ||      MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |87| 
 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1706,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1706,column 5,is_stmt,isa 0
         MOVL      XAR0,#644             ; [CPU_ALU] |1706| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
         MPYF32    R1H,R3H,R2H           ; [CPU_FPU] |87| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1706,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1706,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |1706| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
         ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |87| 
@@ -3064,11 +3064,11 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
         MINF32    R0H,#16256            ; [CPU_FPU] |94| 
         MOV32     @||motorVars||+482,R0H ; [CPU_FPU] |94| 
         MOVW      DP,#||motorVars||+645 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1706,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1706,column 5,is_stmt,isa 0
         CMP       AL,@||motorVars||+645 ; [CPU_ALU] |1706| 
         B         ||$C$L37||,HI         ; [CPU_ALU] |1706| 
         ; branchcc occurs ; [] |1706| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1714,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1714,column 9,is_stmt,isa 0
         MOVL      XAR0,#432             ; [CPU_ALU] |1714| 
         MOVL      XAR1,#542             ; [CPU_ALU] |1714| 
         MOVL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |1714| 
@@ -3076,9 +3076,9 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 116,column 2,is_stmt,isa 0
         MOVL      XAR0,#552             ; [CPU_ALU] |116| 
         MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |116| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1714,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1714,column 9,is_stmt,isa 0
         MOVL      *+XAR4[AR1],ACC       ; [CPU_ALU] |1714| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1718,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1718,column 9,is_stmt,isa 0
         MOVL      XAR0,#544             ; [CPU_ALU] |1718| 
         MOVL      ACC,@||motorVars||+482 ; [CPU_ALU] |1718| 
         MOVW      DP,#||motorVars||+542 ; [CPU_ARAU] 
@@ -3225,14 +3225,14 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
         MOVIZ     R0H,#16256            ; [CPU_FPU] |140| 
 ||$C$L36||:    
         MOVL      XAR1,#580             ; [CPU_ALU] |140| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1721,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1721,column 9,is_stmt,isa 0
         MOVL      XAR0,#645             ; [CPU_ALU] |1721| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 140,column 2,is_stmt,isa 0
         MOV32     *+XAR4[AR1],R0H       ; [CPU_FPU] |140| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1721,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1721,column 9,is_stmt,isa 0
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |1721| 
 ||$C$L37||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1724,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1724,column 5,is_stmt,isa 0
         MOVL      XAR0,#612             ; [CPU_ALU] |1724| 
         MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |1724| 
         MOV       AL,*+XAR5[0]          ; [CPU_ALU] |1724| 
@@ -3244,32 +3244,32 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
         B         ||$C$L39||,NEQ        ; [CPU_ALU] |1724| 
         ; branchcc occurs ; [] |1724| 
 ||$C$L38||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1727,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1727,column 9,is_stmt,isa 0
         MOVL      XAR0,#576             ; [CPU_ALU] |1727| 
         ZERO      R0H                   ; [CPU_FPU] |1727| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1727| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1731,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1731,column 9,is_stmt,isa 0
         MOVL      XAR1,#568             ; [CPU_ALU] |1731| 
         ZERO      R1H                   ; [CPU_FPU] |1731| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1728,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1728,column 9,is_stmt,isa 0
         MOVL      XAR0,#578             ; [CPU_ALU] |1728| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1728| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1729,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1729,column 9,is_stmt,isa 0
         MOVL      XAR0,#574             ; [CPU_ALU] |1729| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1729| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1730,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1730,column 9,is_stmt,isa 0
         MOVL      XAR0,#570             ; [CPU_ALU] |1730| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1730| 
         MOVL      XAR0,#612             ; [CPU_ALU] 
         MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1731,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1731,column 9,is_stmt,isa 0
         MOV32     *+XAR4[AR1],R1H       ; [CPU_FPU] |1731| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1732,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1732,column 9,is_stmt,isa 0
         MOVL      XAR0,#566             ; [CPU_ALU] |1732| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1732| 
         MOV       AL,*+XAR5[0]          ; [CPU_ALU] 
 ||$C$L39||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1753,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1753,column 5,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |1753| 
         B         ||$C$L41||,EQ         ; [CPU_ALU] |1753| 
         ; branchcc occurs ; [] |1753| 
@@ -3291,18 +3291,18 @@ $C$DW$136	.dwtag  DW_TAG_TI_branch
         MOVB      ACC,#32               ; [CPU_ALU] |1753| 
         MOVL      XAR5,#||motorVars||   ; [CPU_ARAU] |1753| 
         MOVL      XAR0,#612             ; [CPU_ALU] |1753| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1759,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1759,column 5,is_stmt,isa 0
         MOVIZ     R2H,#14119            ; [CPU_FPU] |1759| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1753,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1753,column 5,is_stmt,isa 0
         ADDL      ACC,*+XAR5[AR0]       ; [CPU_ALU] |1753| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |1753| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1759,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1759,column 5,is_stmt,isa 0
         MOVXI     R2H,#50604            ; [CPU_FPU] |1759| 
         MOVL      XAR1,#356             ; [CPU_ALU] |1759| 
         MOVL      XAR0,#350             ; [CPU_ALU] |1759| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1753,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1753,column 5,is_stmt,isa 0
         MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |1753| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1759,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1759,column 5,is_stmt,isa 0
         MOV32     R1H,*+XAR5[AR0]       ; [CPU_FPU] |1759| 
         MOV32     R0H,*+XAR5[AR1]       ; [CPU_FPU] |1759| 
 $C$DW$137	.dwtag  DW_TAG_TI_branch
@@ -3324,26 +3324,26 @@ $C$DW$137	.dwtag  DW_TAG_TI_branch
         MOVL      XAR4,ACC              ; [CPU_ALU] |4872| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 379,column 5,is_stmt,isa 0
         MOVL      XAR7,#1028            ; [CPU_ALU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1759,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1759,column 5,is_stmt,isa 0
         MOV32     @||motorVars||+350,R0H ; [CPU_FPU] |1759| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2328,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2328,column 5,is_stmt,isa 0
         MOVL      ACC,XAR5              ; [CPU_ALU] |2328| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4872,column 5,is_stmt,isa 0
         OR        *+XAR4[0],#0x0001     ; [CPU_ALU] |4872| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2328,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2328,column 5,is_stmt,isa 0
         ADD       ACC,#319 << 1         ; [CPU_ALU] |2328| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 819,column 5,is_stmt,isa 0
         MOV       *(0:0x7404),AR6       ; [CPU_ALU] |819| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2328,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2328,column 5,is_stmt,isa 0
         MOVL      XAR4,ACC              ; [CPU_ALU] |2328| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1761,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1761,column 5,is_stmt,isa 0
         MOVL      XAR0,#496             ; [CPU_ALU] |1761| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 379,column 5,is_stmt,isa 0
         MOV       *(0:0x0ce1),AR7       ; [CPU_ALU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2328,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2328,column 5,is_stmt,isa 0
         MOVB      ACC,#1                ; [CPU_ALU] |2328| 
         ADDL      *+XAR4[0],ACC         ; [CPU_ALU] |2328| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1761,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1761,column 5,is_stmt,isa 0
         MOVL      ACC,@||motorVars||+350 ; [CPU_ALU] |1761| 
         MOVL      *+XAR5[AR0],ACC       ; [CPU_ALU] |1761| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
@@ -3403,7 +3403,7 @@ $C$DW$138	.dwtag  DW_TAG_TI_branch
 
         IRET      ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$131, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$131, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$131, DW_AT_TI_end_line(0x919)
 	.dwattr $C$DW$131, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -3421,12 +3421,12 @@ $C$DW$139	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$139, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$139, DW_AT_linkage_name("motor1ControlISR")
 	.dwattr $C$DW$139, DW_AT_external
-	.dwattr $C$DW$139, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$139, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$139, DW_AT_decl_line(0x86b)
 	.dwattr $C$DW$139, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$139, DW_AT_TI_interrupt
 	.dwattr $C$DW$139, DW_AT_TI_max_frame_size(-34)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2156,column 1,is_stmt,address ||motor1ControlISR||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2156,column 1,is_stmt,address ||motor1ControlISR||,isa 0
 
 	.dwfde $C$DW$CIE, ||motor1ControlISR||
 
@@ -3557,7 +3557,7 @@ $C$DW$141	.dwtag  DW_TAG_variable
         SPM       0                     ; [CPU_ALU] 
         CLRC      PAGE0,OVM             ; [CPU_ALU] 
         CLRC      AMODE                 ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1397,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1397,column 5,is_stmt,isa 0
         MOVL      XAR4,#||motorVars||   ; [CPU_ARAU] |1397| 
 $C$DW$142	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$142, DW_AT_low_pc(0x00)
@@ -3617,7 +3617,7 @@ $C$DW$142	.dwtag  DW_TAG_TI_branch
         MOVW      DP,#||motorVars||+72  ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 223,column 5,is_stmt,isa 0
         MOVL      XAR4,@||motorVars||+72 ; [CPU_ALU] |223| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1413,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1413,column 5,is_stmt,isa 0
         MOVL      XAR2,#||motorVars||   ; [CPU_ARAU] |1413| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 208,column 5,is_stmt,isa 0
         MOVXI     R0H,#55050            ; [CPU_FPU] |208| 
@@ -3630,17 +3630,17 @@ $C$DW$142	.dwtag  DW_TAG_TI_branch
         MOV32     @||motorVars||+308,R0H ; [CPU_FPU] |208| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 223,column 5,is_stmt,isa 0
         UI16TOF32 R0H,*+XAR4[0]         ; [CPU_FPU] |223| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1413,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1413,column 5,is_stmt,isa 0
         MOVL      XAR0,#274             ; [CPU_ALU] |1413| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 223,column 5,is_stmt,isa 0
         MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |223| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1419,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1419,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR2             ; [CPU_ALU] |1419| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/include/dual_axis_servo_drive.h",line 227,column 9,is_stmt,isa 0
         MAXF32    R0H,#16256            ; [CPU_FPU] |227| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1413,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1413,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1413| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1419,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1419,column 5,is_stmt,isa 0
 $C$DW$143	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$143, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$143, DW_AT_name("FCL_runPICtrlWrap_M1")
@@ -3648,85 +3648,85 @@ $C$DW$143	.dwtag  DW_TAG_TI_branch
 
         LCR       #||FCL_runPICtrlWrap_M1|| ; [CPU_ALU] |1419| 
         ; call occurs [#||FCL_runPICtrlWrap_M1||] ; [] |1419| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1431,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1431,column 5,is_stmt,isa 0
         MOVL      XAR0,#326             ; [CPU_ALU] |1431| 
         MOV       AL,*+XAR2[AR0]        ; [CPU_ALU] |1431| 
         CMPB      AL,#1                 ; [CPU_ALU] |1431| 
         B         ||$C$L53||,NEQ        ; [CPU_ALU] |1431| 
         ; branchcc occurs ; [] |1431| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1433,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1433,column 9,is_stmt,isa 0
         MOVL      XAR0,#280             ; [CPU_ALU] |1433| 
         MOVL      XAR4,*+XAR2[AR0]      ; [CPU_ALU] |1433| 
         MOV       AL,*+XAR4[0]          ; [CPU_ALU] |1433| 
         CMPB      AL,#2                 ; [CPU_ALU] |1433| 
         B         ||$C$L52||,EQ         ; [CPU_ALU] |1433| 
         ; branchcc occurs ; [] |1433| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1438,column 14,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1438,column 14,is_stmt,isa 0
         CMPB      AL,#1                 ; [CPU_ALU] |1438| 
         B         ||$C$L46||,EQ         ; [CPU_ALU] |1438| 
         ; branchcc occurs ; [] |1438| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1450,column 14,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1450,column 14,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |1450| 
         B         ||$C$L54||,NEQ        ; [CPU_ALU] |1450| 
         ; branchcc occurs ; [] |1450| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1459,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1459,column 13,is_stmt,isa 0
         MOVB      XAR0,#18              ; [CPU_ALU] |1459| 
         MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |1459| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1456,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1456,column 13,is_stmt,isa 0
         MOVB      XAR1,#24              ; [CPU_ALU] |1456| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1452,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1452,column 13,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |1452| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1456,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1456,column 13,is_stmt,isa 0
         MOVB      XAR0,#20              ; [CPU_ALU] |1456| 
         MOVL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |1456| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1453,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1453,column 13,is_stmt,isa 0
         ZERO      R2H                   ; [CPU_FPU] |1453| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1452,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1452,column 13,is_stmt,isa 0
         MOVB      XAR0,#90              ; [CPU_ALU] |1452| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1456,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1456,column 13,is_stmt,isa 0
         MOVL      *+XAR2[AR1],ACC       ; [CPU_ALU] |1456| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1452,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1452,column 13,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1452| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1459,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1459,column 13,is_stmt,isa 0
         MOVB      XAR0,#24              ; [CPU_ALU] |1459| 
         MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |1459| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1453,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1453,column 13,is_stmt,isa 0
         MOVB      XAR0,#100             ; [CPU_ALU] |1453| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1459,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1459,column 13,is_stmt,isa 0
         CMPF32    R1H,R0H               ; [CPU_FPU] |1459| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1453,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1453,column 13,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |1453| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1459,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1459,column 13,is_stmt,isa 0
         MOVST0    ZF, NF                ; [CPU_FPU] |1459| 
         B         ||$C$L54||,LT         ; [CPU_ALU] |1459| 
         ; branchcc occurs ; [] |1459| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1461,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1461,column 17,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |1461| 
         ADD       ACC,#157 << 1         ; [CPU_ALU] |1461| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |1461| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1463,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1463,column 17,is_stmt,isa 0
         MOVL      XAR0,#315             ; [CPU_ALU] |1463| 
         MOV       AL,*+XAR2[AR0]        ; [CPU_ALU] |1463| 
         MOVL      XAR0,#314             ; [CPU_ALU] |1463| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1461,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1461,column 17,is_stmt,isa 0
         INC       *+XAR4[0]             ; [CPU_ALU] |1461| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1463,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1463,column 17,is_stmt,isa 0
         CMP       AL,*+XAR2[AR0]        ; [CPU_ALU] |1463| 
         B         ||$C$L54||,HI         ; [CPU_ALU] |1463| 
         ; branchcc occurs ; [] |1463| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1468,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1468,column 21,is_stmt,isa 0
         MOVL      XAR0,#280             ; [CPU_ALU] |1468| 
         MOVL      XAR4,*+XAR2[AR0]      ; [CPU_ALU] |1468| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1465,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1465,column 21,is_stmt,isa 0
         MOVL      XAR0,#314             ; [CPU_ALU] |1465| 
         MOV       *+XAR2[AR0],#0        ; [CPU_ALU] |1465| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1468,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1468,column 21,is_stmt,isa 0
         MOVB      *+XAR4[0],#1,UNC      ; [CPU_ALU] |1468| 
         B         ||$C$L54||,UNC        ; [CPU_ALU] |1468| 
         ; branch occurs ; [] |1468| 
 ||$C$L46||:    
         MOVW      DP,#||motorVars||+28  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
         MOV32     R0H,@||motorVars||+28 ; [CPU_FPU] |1440| 
         CMPF32    R0H,#0                ; [CPU_FPU] |1440| 
         MOVST0    ZF, NF                ; [CPU_FPU] |1440| 
@@ -3738,30 +3738,30 @@ $C$DW$143	.dwtag  DW_TAG_TI_branch
 ||$C$L47||:    
         MOVIZ     R0H,#16256            ; [CPU_FPU] |1440| 
 ||$C$L48||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1446,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1446,column 17,is_stmt,isa 0
         MOVB      ACC,#20               ; [CPU_ALU] |1446| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
         MOVL      XAR4,#||motorVars||   ; [CPU_ARAU] |1440| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rampgen.h",line 66,column 1,is_stmt,isa 0
         MOVL      XAR1,#280             ; [CPU_ALU] |66| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1446,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1446,column 17,is_stmt,isa 0
         ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |1446| 
         MOVB      XAR0,#100             ; [CPU_ALU] |1446| 
         MOVL      XAR5,ACC              ; [CPU_ALU] |1446| 
         MOVL      XAR6,*+XAR4[AR0]      ; [CPU_ALU] |1446| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
         MOVB      XAR0,#32              ; [CPU_ALU] |1440| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rampgen.h",line 66,column 1,is_stmt,isa 0
         MOVB      ACC,#20               ; [CPU_ALU] |66| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
         MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |1440| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rampgen.h",line 66,column 1,is_stmt,isa 0
         ADDL      ACC,*+XAR4[AR1]       ; [CPU_ALU] |66| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1446,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1446,column 17,is_stmt,isa 0
         MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |1446| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rampgen.h",line 66,column 1,is_stmt,isa 0
         MOVL      XAR5,ACC              ; [CPU_ALU] |66| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1440,column 13,is_stmt,isa 0
         MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |1440| 
         MOVB      XAR0,#90              ; [CPU_ALU] |1440| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1440| 
@@ -3804,38 +3804,38 @@ $C$DW$143	.dwtag  DW_TAG_TI_branch
         ; branch occurs ; [] 
 ||$C$L52||:    
         MOVW      DP,#||motorVars||+22  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1435,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1435,column 13,is_stmt,isa 0
         MOVL      XAR6,@||motorVars||+22 ; [CPU_ALU] |1435| 
         MOVW      DP,#||motorVars||+28  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1436,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1436,column 13,is_stmt,isa 0
         MOVL      ACC,@||motorVars||+28 ; [CPU_ALU] |1436| 
         MOVW      DP,#||motorVars||+24  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1435,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1435,column 13,is_stmt,isa 0
         MOVL      @||motorVars||+24,XAR6 ; [CPU_ALU] |1435| 
         MOVW      DP,#||motorVars||+90  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1436,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1436,column 13,is_stmt,isa 0
         MOVL      @||motorVars||+90,ACC ; [CPU_ALU] |1436| 
         B         ||$C$L54||,UNC        ; [CPU_ALU] 
         ; branch occurs ; [] 
 ||$C$L53||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1475,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1475,column 9,is_stmt,isa 0
         MOVB      XAR0,#24              ; [CPU_ALU] |1475| 
         MOVL      XAR4,#||motorVars||   ; [CPU_ARAU] |1475| 
         ZERO      R0H                   ; [CPU_FPU] |1475| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1476,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1476,column 9,is_stmt,isa 0
         MOVB      XAR1,#18              ; [CPU_ALU] |1476| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1475,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1475,column 9,is_stmt,isa 0
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1475| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1476,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1476,column 9,is_stmt,isa 0
         MOVB      XAR0,#24              ; [CPU_ALU] |1476| 
         MOVL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |1476| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1478,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1478,column 9,is_stmt,isa 0
         MOVB      XAR0,#90              ; [CPU_ALU] |1478| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1476,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1476,column 9,is_stmt,isa 0
         MOVL      *+XAR4[AR1],ACC       ; [CPU_ALU] |1476| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1478,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1478,column 9,is_stmt,isa 0
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1478| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1480,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1480,column 9,is_stmt,isa 0
 $C$DW$144	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$144, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$144, DW_AT_name("FCL_resetController")
@@ -3934,46 +3934,46 @@ $C$DW$144	.dwtag  DW_TAG_TI_branch
         MOVB      XAR0,#96              ; [CPU_ALU] |109| 
         MOV32     R2H,*+XAR5[AR0]       ; [CPU_FPU] |109| 
         MOVB      XAR0,#100             ; [CPU_ALU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
         MOVB      ACC,#54               ; [CPU_ALU] |1491| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
         MOV32     R0H,*+XAR5[AR0]       ; [CPU_FPU] |109| 
         MOVB      XAR1,#100             ; [CPU_ALU] |109| 
         MOVB      XAR0,#94              ; [CPU_ALU] |109| 
         MOV32     R1H,*+XAR5[AR0]       ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
         MOVL      XAR0,#280             ; [CPU_ALU] |1491| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
         MINF32    R0H,R2H               ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
         ADDL      ACC,*+XAR5[AR0]       ; [CPU_ALU] |1491| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
         MAXF32    R0H,R1H               ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
         MOVL      XAR4,ACC              ; [CPU_ALU] |1491| 
         MOVB      XAR0,#56              ; [CPU_ALU] |1491| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h",line 109,column 5,is_stmt,isa 0
         MOV32     *+XAR5[AR1],R0H       ; [CPU_FPU] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1493,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1493,column 5,is_stmt,isa 0
         MOVB      XAR1,#144             ; [CPU_ALU] |1493| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1491,column 5,is_stmt,isa 0
         MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |1491| 
         MOVL      *+XAR5[AR0],ACC       ; [CPU_ALU] |1491| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1492,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1492,column 5,is_stmt,isa 0
         MOVL      XAR0,#280             ; [CPU_ALU] |1492| 
         MOVB      ACC,#56               ; [CPU_ALU] |1492| 
         ADDL      ACC,*+XAR5[AR0]       ; [CPU_ALU] |1492| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1493,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1493,column 5,is_stmt,isa 0
         MOVB      XAR0,#56              ; [CPU_ALU] |1493| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1492,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1492,column 5,is_stmt,isa 0
         MOVL      XAR4,ACC              ; [CPU_ALU] |1492| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1493,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1493,column 5,is_stmt,isa 0
         MOVL      ACC,*+XAR5[AR0]       ; [CPU_ALU] |1493| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 76,column 2,is_stmt,isa 0
         MOVB      XAR0,#148             ; [CPU_ALU] |76| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1493,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1493,column 5,is_stmt,isa 0
         MOVL      *+XAR5[AR1],ACC       ; [CPU_ALU] |1493| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1492,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1492,column 5,is_stmt,isa 0
         MOVL      XAR6,*+XAR4[0]        ; [CPU_ALU] |1492| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 76,column 2,is_stmt,isa 0
         MOVB      XAR1,#144             ; [CPU_ALU] |76| 
@@ -3983,7 +3983,7 @@ $C$DW$144	.dwtag  DW_TAG_TI_branch
         ADDB      ACC,#162              ; [CPU_ALU] |76| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |76| 
         SUBF32    R0H,R1H,R0H           ; [CPU_FPU] |76| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1492,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1492,column 5,is_stmt,isa 0
         MOVB      XAR0,#58              ; [CPU_ALU] |1492| 
         MOVL      *+XAR5[AR0],XAR6      ; [CPU_ALU] |1492| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 76,column 2,is_stmt,isa 0
@@ -4014,13 +4014,13 @@ $C$DW$144	.dwtag  DW_TAG_TI_branch
 ||$C$L60||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
         MOVL      XAR4,#||motorVars||   ; [CPU_ARAU] |87| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1518,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1518,column 5,is_stmt,isa 0
         MOVL      XAR0,#312             ; [CPU_ALU] |1518| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1516,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1516,column 5,is_stmt,isa 0
         MOVL      ACC,XAR4              ; [CPU_ALU] |1516| 
         ADD       ACC,#313 << 0         ; [CPU_ALU] |1516| 
         MOVL      XAR5,ACC              ; [CPU_ALU] |1516| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1518,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1518,column 5,is_stmt,isa 0
         MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |1518| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 87,column 2,is_stmt,isa 0
         MOVB      XAR0,#162             ; [CPU_ALU] |87| 
@@ -4052,31 +4052,31 @@ $C$DW$144	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 104,column 2,is_stmt,isa 0
         MOVB      XAR0,#144             ; [CPU_ALU] |104| 
         MOVL      XAR6,*+XAR4[AR0]      ; [CPU_ALU] |104| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1516,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1516,column 5,is_stmt,isa 0
         INC       *+XAR5[0]             ; [CPU_ALU] |1516| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/speed_fr.h",line 104,column 2,is_stmt,isa 0
         MOVB      XAR0,#148             ; [CPU_ALU] |104| 
         MOVL      *+XAR4[AR0],XAR6      ; [CPU_ALU] |104| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1518,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1518,column 5,is_stmt,isa 0
         MOVL      XAR0,#313             ; [CPU_ALU] |1518| 
         CMP       AL,*+XAR4[AR0]        ; [CPU_ALU] |1518| 
         B         ||$C$L63||,HI         ; [CPU_ALU] |1518| 
         ; branchcc occurs ; [] |1518| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1526,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1526,column 9,is_stmt,isa 0
         MOVB      XAR0,#100             ; [CPU_ALU] |1526| 
         MOVB      XAR1,#210             ; [CPU_ALU] |1526| 
         MOVL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |1526| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1530,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1530,column 9,is_stmt,isa 0
         MOVB      XAR0,#150             ; [CPU_ALU] |1530| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1526,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1526,column 9,is_stmt,isa 0
         MOVL      *+XAR4[AR1],ACC       ; [CPU_ALU] |1526| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1530,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1530,column 9,is_stmt,isa 0
         MOVB      XAR1,#212             ; [CPU_ALU] |1530| 
         MOVL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |1530| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 123,column 2,is_stmt,isa 0
         MOVB      XAR0,#228             ; [CPU_ALU] |123| 
         MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |123| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1530,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1530,column 9,is_stmt,isa 0
         MOVL      *+XAR4[AR1],ACC       ; [CPU_ALU] |1530| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 116,column 2,is_stmt,isa 0
         MOVB      XAR0,#210             ; [CPU_ALU] |116| 
@@ -4186,16 +4186,16 @@ $C$DW$144	.dwtag  DW_TAG_TI_branch
 ||$C$L61||:    
         ZERO      R0H                   ; [CPU_FPU] |140| 
 ||$C$L62||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1533,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1533,column 9,is_stmt,isa 0
         MOVL      XAR1,#313             ; [CPU_ALU] |1533| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 140,column 2,is_stmt,isa 0
         MOVB      XAR0,#248             ; [CPU_ALU] |140| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1533,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1533,column 9,is_stmt,isa 0
         MOV       *+XAR4[AR1],#0        ; [CPU_ALU] |1533| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/pid_grando.h",line 140,column 2,is_stmt,isa 0
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |140| 
 ||$C$L63||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1536,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1536,column 5,is_stmt,isa 0
         MOVL      XAR0,#280             ; [CPU_ALU] |1536| 
         MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |1536| 
         MOV       AL,*+XAR5[0]          ; [CPU_ALU] |1536| 
@@ -4208,29 +4208,29 @@ $C$DW$144	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |1536| 
 ||$C$L64||:    
         MOVL      XAR0,#280             ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1539,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1539,column 9,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |1539| 
         MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] 
         MOVB      XAR0,#244             ; [CPU_ALU] |1539| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1539| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1540,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1540,column 9,is_stmt,isa 0
         MOVB      XAR0,#246             ; [CPU_ALU] |1540| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1540| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1541,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1541,column 9,is_stmt,isa 0
         MOVB      XAR0,#242             ; [CPU_ALU] |1541| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1541| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1542,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1542,column 9,is_stmt,isa 0
         MOVB      XAR0,#238             ; [CPU_ALU] |1542| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1542| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1544,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1544,column 9,is_stmt,isa 0
         MOVB      XAR0,#234             ; [CPU_ALU] |1544| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1544| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1543,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1543,column 9,is_stmt,isa 0
         MOVB      XAR0,#236             ; [CPU_ALU] |1543| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |1543| 
         MOV       AL,*+XAR5[0]          ; [CPU_ALU] 
 ||$C$L65||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1565,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1565,column 5,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |1565| 
         B         ||$C$L67||,EQ         ; [CPU_ALU] |1565| 
         ; branchcc occurs ; [] |1565| 
@@ -4250,11 +4250,11 @@ $C$DW$144	.dwtag  DW_TAG_TI_branch
         ZERO      R0H                   ; [CPU_FPU] |1565| 
 ||$C$L68||:    
         MOVB      XAR0,#32              ; [CPU_ALU] |1565| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1571,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1571,column 5,is_stmt,isa 0
         MOVL      XAR1,#||motorVars||   ; [CPU_ARAU] |1571| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1565,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1565,column 5,is_stmt,isa 0
         MOV32     *+XAR5[AR0],R0H       ; [CPU_FPU] |1565| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1571,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1571,column 5,is_stmt,isa 0
         MOVIZ     R2H,#14119            ; [CPU_FPU] |1571| 
         MOVB      XAR0,#24              ; [CPU_ALU] |1571| 
         MOV32     R0H,*+XAR1[AR0]       ; [CPU_FPU] |1571| 
@@ -4269,38 +4269,38 @@ $C$DW$145	.dwtag  DW_TAG_TI_branch
         LCR       #||ramper||           ; [CPU_ALU] |1571| 
         ; call occurs [#||ramper||] ; [] |1571| 
         MOVW      DP,#||dlogCh3||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2229,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2229,column 5,is_stmt,isa 0
         MOVL      XAR0,#388             ; [CPU_ALU] |2229| 
         MOVL      XAR6,*+XAR1[AR0]      ; [CPU_ALU] |2229| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2230,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2230,column 5,is_stmt,isa 0
         MOVL      XAR0,#482             ; [CPU_ALU] |2230| 
         MOVL      ACC,*+XAR1[AR0]       ; [CPU_ALU] |2230| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1571,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1571,column 5,is_stmt,isa 0
         MOVB      XAR0,#18              ; [CPU_ALU] |1571| 
         MOV32     *+XAR1[AR0],R0H       ; [CPU_FPU] |1571| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1573,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1573,column 5,is_stmt,isa 0
         MOVB      XAR0,#18              ; [CPU_ALU] |1573| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2229,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2229,column 5,is_stmt,isa 0
         MOVL      @||dlogCh3||,XAR6     ; [CPU_ALU] |2229| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1573,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1573,column 5,is_stmt,isa 0
         MOVL      XAR4,*+XAR1[AR0]      ; [CPU_ALU] |1573| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2227,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2227,column 5,is_stmt,isa 0
         MOVB      XAR0,#56              ; [CPU_ALU] |2227| 
         MOVL      P,*+XAR1[AR0]         ; [CPU_ALU] |2227| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2228,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2228,column 5,is_stmt,isa 0
         MOVB      XAR0,#150             ; [CPU_ALU] |2228| 
         MOVL      XAR7,*+XAR1[AR0]      ; [CPU_ALU] |2228| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2230,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2230,column 5,is_stmt,isa 0
         MOVL      @||dlogCh4||,ACC      ; [CPU_ALU] |2230| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1573,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1573,column 5,is_stmt,isa 0
         MOVB      XAR0,#164             ; [CPU_ALU] |1573| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2227,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2227,column 5,is_stmt,isa 0
         MOVL      @||dlogCh1||,P        ; [CPU_ALU] |2227| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2228,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2228,column 5,is_stmt,isa 0
         MOVL      @||dlogCh2||,XAR7     ; [CPU_ALU] |2228| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 1573,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1573,column 5,is_stmt,isa 0
         MOVL      *+XAR1[AR0],XAR4      ; [CPU_ALU] |1573| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2290,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2290,column 5,is_stmt,isa 0
         MOVL      XAR4,#||dlog_4ch1||   ; [CPU_ARAU] |2290| 
 $C$DW$146	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$146, DW_AT_low_pc(0x00)
@@ -4319,18 +4319,18 @@ $C$DW$146	.dwtag  DW_TAG_TI_branch
         MOVB      XAR6,#1               ; [CPU_ALU] |819| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 379,column 5,is_stmt,isa 0
         MOVL      XAR7,#1028            ; [CPU_ALU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2295,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2295,column 5,is_stmt,isa 0
         MOVL      ACC,XAR1              ; [CPU_ALU] |2295| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4872,column 5,is_stmt,isa 0
         OR        *+XAR4[0],#0x0001     ; [CPU_ALU] |4872| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2295,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2295,column 5,is_stmt,isa 0
         ADD       ACC,#153 << 1         ; [CPU_ALU] |2295| 
         MOVL      XAR1,ACC              ; [CPU_ALU] |2295| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 819,column 5,is_stmt,isa 0
         MOV       *(0:0x7404),AR6       ; [CPU_ALU] |819| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 379,column 5,is_stmt,isa 0
         MOV       *(0:0x0ce1),AR7       ; [CPU_ALU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 2295,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2295,column 5,is_stmt,isa 0
         MOVB      ACC,#1                ; [CPU_ALU] |2295| 
         ADDL      *+XAR1[0],ACC         ; [CPU_ALU] |2295| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
@@ -4390,7 +4390,7 @@ $C$DW$147	.dwtag  DW_TAG_TI_branch
 
         IRET      ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$139, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$139, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$139, DW_AT_TI_end_line(0x8f9)
 	.dwattr $C$DW$139, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4406,11 +4406,11 @@ $C$DW$148	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$148, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$148, DW_AT_linkage_name("C3")
 	.dwattr $C$DW$148, DW_AT_external
-	.dwattr $C$DW$148, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$148, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$148, DW_AT_decl_line(0x289)
 	.dwattr $C$DW$148, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$148, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 651,column 1,is_stmt,address ||C3||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 651,column 1,is_stmt,address ||C3||,isa 0
 
 	.dwfde $C$DW$CIE, ||C3||
 
@@ -4426,7 +4426,7 @@ $C$DW$148	.dwtag  DW_TAG_subprogram
 ||C3||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 655,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 655,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C1||          ; [CPU_ARAU] |655| 
         MOVW      DP,#||C_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||C_Task_Ptr||,XAR4  ; [CPU_ALU] |655| 
@@ -4436,7 +4436,7 @@ $C$DW$149	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$148, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$148, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$148, DW_AT_TI_end_line(0x291)
 	.dwattr $C$DW$148, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4452,11 +4452,11 @@ $C$DW$150	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$150, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$150, DW_AT_linkage_name("C2")
 	.dwattr $C$DW$150, DW_AT_external
-	.dwattr $C$DW$150, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$150, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$150, DW_AT_decl_line(0x27e)
 	.dwattr $C$DW$150, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$150, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 640,column 1,is_stmt,address ||C2||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 640,column 1,is_stmt,address ||C2||,isa 0
 
 	.dwfde $C$DW$CIE, ||C2||
 
@@ -4472,7 +4472,7 @@ $C$DW$150	.dwtag  DW_TAG_subprogram
 ||C2||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 644,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 644,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C3||          ; [CPU_ARAU] |644| 
         MOVW      DP,#||C_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||C_Task_Ptr||,XAR4  ; [CPU_ALU] |644| 
@@ -4482,7 +4482,7 @@ $C$DW$151	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$150, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$150, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$150, DW_AT_TI_end_line(0x286)
 	.dwattr $C$DW$150, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4498,11 +4498,11 @@ $C$DW$152	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$152, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$152, DW_AT_linkage_name("B3")
 	.dwattr $C$DW$152, DW_AT_external
-	.dwattr $C$DW$152, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$152, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$152, DW_AT_decl_line(0x258)
 	.dwattr $C$DW$152, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$152, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 602,column 1,is_stmt,address ||B3||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 602,column 1,is_stmt,address ||B3||,isa 0
 
 	.dwfde $C$DW$CIE, ||B3||
 
@@ -4518,7 +4518,7 @@ $C$DW$152	.dwtag  DW_TAG_subprogram
 ||B3||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 606,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 606,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B1||          ; [CPU_ARAU] |606| 
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||B_Task_Ptr||,XAR4  ; [CPU_ALU] |606| 
@@ -4528,7 +4528,7 @@ $C$DW$153	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$152, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$152, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$152, DW_AT_TI_end_line(0x260)
 	.dwattr $C$DW$152, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4544,11 +4544,11 @@ $C$DW$154	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$154, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$154, DW_AT_linkage_name("B2")
 	.dwattr $C$DW$154, DW_AT_external
-	.dwattr $C$DW$154, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$154, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$154, DW_AT_decl_line(0x24d)
 	.dwattr $C$DW$154, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$154, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 591,column 1,is_stmt,address ||B2||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 591,column 1,is_stmt,address ||B2||,isa 0
 
 	.dwfde $C$DW$CIE, ||B2||
 
@@ -4564,7 +4564,7 @@ $C$DW$154	.dwtag  DW_TAG_subprogram
 ||B2||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 595,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 595,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B3||          ; [CPU_ARAU] |595| 
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||B_Task_Ptr||,XAR4  ; [CPU_ALU] |595| 
@@ -4574,7 +4574,7 @@ $C$DW$155	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$154, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$154, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$154, DW_AT_TI_end_line(0x255)
 	.dwattr $C$DW$154, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4590,11 +4590,11 @@ $C$DW$156	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$156, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$156, DW_AT_linkage_name("A3")
 	.dwattr $C$DW$156, DW_AT_external
-	.dwattr $C$DW$156, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$156, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$156, DW_AT_decl_line(0x220)
 	.dwattr $C$DW$156, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$156, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 546,column 1,is_stmt,address ||A3||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 546,column 1,is_stmt,address ||A3||,isa 0
 
 	.dwfde $C$DW$CIE, ||A3||
 
@@ -4611,19 +4611,19 @@ $C$DW$156	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||led1Cnt||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 547,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 547,column 5,is_stmt,isa 0
         INC       @||led1Cnt||          ; [CPU_ALU] |547| 
         CMP       @||led1Cnt||,#800     ; [CPU_ALU] |547| 
         B         ||$C$L69||,LO         ; [CPU_ALU] |547| 
         ; branchcc occurs ; [] |547| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 505,column 5,is_stmt,isa 0
         MOVB      ACC,#4                ; [CPU_ALU] |505| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 551,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 551,column 9,is_stmt,isa 0
         MOV       @||led1Cnt||,#0       ; [CPU_ALU] |551| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 505,column 5,is_stmt,isa 0
         MOV32     *(0:0x7f0e),ACC       ; [CPU_FPU] |505| 
 ||$C$L69||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 559,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 559,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A1||          ; [CPU_ARAU] |559| 
         MOVW      DP,#||A_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||A_Task_Ptr||,XAR4  ; [CPU_ALU] |559| 
@@ -4633,7 +4633,7 @@ $C$DW$157	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$156, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$156, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$156, DW_AT_TI_end_line(0x231)
 	.dwattr $C$DW$156, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4649,11 +4649,11 @@ $C$DW$158	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$158, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$158, DW_AT_linkage_name("A2")
 	.dwattr $C$DW$158, DW_AT_external
-	.dwattr $C$DW$158, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$158, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$158, DW_AT_decl_line(0x213)
 	.dwattr $C$DW$158, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$158, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 533,column 1,is_stmt,address ||A2||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 533,column 1,is_stmt,address ||A2||,isa 0
 
 	.dwfde $C$DW$CIE, ||A2||
 
@@ -4670,7 +4670,7 @@ $C$DW$158	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||halMtrHandle||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 535,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 535,column 5,is_stmt,isa 0
         MOVL      XAR4,#||motorVars||+332 ; [CPU_ARAU] |535| 
         MOVL      XAR5,@||halMtrHandle||+2 ; [CPU_ALU] |535| 
 $C$DW$159	.dwtag  DW_TAG_TI_branch
@@ -4681,7 +4681,7 @@ $C$DW$159	.dwtag  DW_TAG_TI_branch
         LCR       #||runMotorControl||  ; [CPU_ALU] |535| 
         ; call occurs [#||runMotorControl||] ; [] |535| 
         MOVW      DP,#||A_Task_Ptr||    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 539,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 539,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A3||          ; [CPU_ARAU] |539| 
         MOVL      @||A_Task_Ptr||,XAR4  ; [CPU_ALU] |539| 
 $C$DW$160	.dwtag  DW_TAG_TI_branch
@@ -4690,7 +4690,7 @@ $C$DW$160	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$158, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$158, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$158, DW_AT_TI_end_line(0x21d)
 	.dwattr $C$DW$158, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4706,11 +4706,11 @@ $C$DW$161	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$161, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$161, DW_AT_linkage_name("C1")
 	.dwattr $C$DW$161, DW_AT_external
-	.dwattr $C$DW$161, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$161, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$161, DW_AT_decl_line(0x269)
 	.dwattr $C$DW$161, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$161, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 619,column 1,is_stmt,address ||C1||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 619,column 1,is_stmt,address ||C1||,isa 0
 
 	.dwfde $C$DW$CIE, ||C1||
 
@@ -4727,7 +4727,7 @@ $C$DW$161	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||led2Cnt||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 620,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 620,column 5,is_stmt,isa 0
         INC       @||led2Cnt||          ; [CPU_ALU] |620| 
         CMP       @||led2Cnt||,#400     ; [CPU_ALU] |620| 
         B         ||$C$L70||,LO         ; [CPU_ALU] |620| 
@@ -4735,12 +4735,12 @@ $C$DW$161	.dwtag  DW_TAG_subprogram
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 505,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |505| 
         MOV       AH,#32768             ; [CPU_ALU] |505| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 624,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 624,column 9,is_stmt,isa 0
         MOV       @||led2Cnt||,#0       ; [CPU_ALU] |624| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 505,column 5,is_stmt,isa 0
         MOV32     *(0:0x7f06),ACC       ; [CPU_FPU] |505| 
 ||$C$L70||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 631,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 631,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C2||          ; [CPU_ARAU] |631| 
         MOVW      DP,#||C_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||C_Task_Ptr||,XAR4  ; [CPU_ALU] |631| 
@@ -4750,7 +4750,7 @@ $C$DW$162	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$161, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$161, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$161, DW_AT_TI_end_line(0x27b)
 	.dwattr $C$DW$161, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4766,11 +4766,11 @@ $C$DW$163	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$163, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$163, DW_AT_linkage_name("B1")
 	.dwattr $C$DW$163, DW_AT_external
-	.dwattr $C$DW$163, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$163, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$163, DW_AT_decl_line(0x23a)
 	.dwattr $C$DW$163, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$163, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 572,column 1,is_stmt,address ||B1||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 572,column 1,is_stmt,address ||B1||,isa 0
 
 	.dwfde $C$DW$CIE, ||B1||
 
@@ -4786,7 +4786,7 @@ $C$DW$163	.dwtag  DW_TAG_subprogram
 ||B1||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 584,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 584,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B2||          ; [CPU_ARAU] |584| 
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
         MOVL      @||B_Task_Ptr||,XAR4  ; [CPU_ALU] |584| 
@@ -4796,7 +4796,7 @@ $C$DW$164	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$163, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$163, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$163, DW_AT_TI_end_line(0x24a)
 	.dwattr $C$DW$163, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4812,11 +4812,11 @@ $C$DW$165	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$165, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$165, DW_AT_linkage_name("A1")
 	.dwattr $C$DW$165, DW_AT_external
-	.dwattr $C$DW$165, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$165, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$165, DW_AT_decl_line(0x206)
 	.dwattr $C$DW$165, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$165, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 520,column 1,is_stmt,address ||A1||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 520,column 1,is_stmt,address ||A1||,isa 0
 
 	.dwfde $C$DW$CIE, ||A1||
 
@@ -4833,7 +4833,7 @@ $C$DW$165	.dwtag  DW_TAG_subprogram
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         MOVW      DP,#||halMtrHandle||  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 522,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 522,column 5,is_stmt,isa 0
         MOVL      XAR4,#||motorVars||   ; [CPU_ARAU] |522| 
         MOVL      XAR5,@||halMtrHandle|| ; [CPU_ALU] |522| 
 $C$DW$166	.dwtag  DW_TAG_TI_branch
@@ -4844,7 +4844,7 @@ $C$DW$166	.dwtag  DW_TAG_TI_branch
         LCR       #||runMotorControl||  ; [CPU_ALU] |522| 
         ; call occurs [#||runMotorControl||] ; [] |522| 
         MOVW      DP,#||A_Task_Ptr||    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 526,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 526,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A2||          ; [CPU_ARAU] |526| 
         MOVL      @||A_Task_Ptr||,XAR4  ; [CPU_ALU] |526| 
 $C$DW$167	.dwtag  DW_TAG_TI_branch
@@ -4853,7 +4853,7 @@ $C$DW$167	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$165, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$165, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$165, DW_AT_TI_end_line(0x210)
 	.dwattr $C$DW$165, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4869,11 +4869,11 @@ $C$DW$168	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$168, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$168, DW_AT_linkage_name("A0")
 	.dwattr $C$DW$168, DW_AT_external
-	.dwattr $C$DW$168, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$168, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$168, DW_AT_decl_line(0x1ce)
 	.dwattr $C$DW$168, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$168, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 463,column 1,is_stmt,address ||A0||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 463,column 1,is_stmt,address ||A0||,isa 0
 
 	.dwfde $C$DW$CIE, ||A0||
 
@@ -4897,12 +4897,12 @@ $C$DW$168	.dwtag  DW_TAG_subprogram
         MOVW      DP,#||A_Task_Ptr||    ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0c04)        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 470,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 470,column 9,is_stmt,isa 0
         MOVL      XAR7,@||A_Task_Ptr||  ; [CPU_ALU] |470| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         OR        AL,#0x8000            ; [CPU_ALU] |169| 
         MOV       *(0:0x0c04),AL        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 470,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 470,column 9,is_stmt,isa 0
 $C$DW$169	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$169, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$169, DW_AT_TI_call
@@ -4911,13 +4911,13 @@ $C$DW$169	.dwtag  DW_TAG_TI_branch
         LCR       *XAR7                 ; [CPU_ALU] |470| 
         ; call occurs [XAR7] ; [] |470| 
         MOVW      DP,#||vTimer0||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 473,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 473,column 9,is_stmt,isa 0
         INC       @||vTimer0||          ; [CPU_ALU] |473| 
         MOVW      DP,#||serialCommsTimer|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 474,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 474,column 9,is_stmt,isa 0
         INC       @||serialCommsTimer|| ; [CPU_ALU] |474| 
 ||$C$L71||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 477,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 477,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B0||          ; [CPU_ARAU] |477| 
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
         MOVL      @||Alpha_State_Ptr||,XAR4 ; [CPU_ALU] |477| 
@@ -4927,7 +4927,7 @@ $C$DW$170	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$168, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$168, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$168, DW_AT_TI_end_line(0x1de)
 	.dwattr $C$DW$168, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -4943,11 +4943,11 @@ $C$DW$171	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$171, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$171, DW_AT_linkage_name("B0")
 	.dwattr $C$DW$171, DW_AT_external
-	.dwattr $C$DW$171, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$171, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$171, DW_AT_decl_line(0x1e0)
 	.dwattr $C$DW$171, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$171, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 481,column 1,is_stmt,address ||B0||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 481,column 1,is_stmt,address ||B0||,isa 0
 
 	.dwfde $C$DW$CIE, ||B0||
 
@@ -4971,12 +4971,12 @@ $C$DW$171	.dwtag  DW_TAG_subprogram
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0c0c)        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 488,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 488,column 9,is_stmt,isa 0
         MOVL      XAR7,@||B_Task_Ptr||  ; [CPU_ALU] |488| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         OR        AL,#0x8000            ; [CPU_ALU] |169| 
         MOV       *(0:0x0c0c),AL        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 488,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 488,column 9,is_stmt,isa 0
 $C$DW$172	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$172, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$172, DW_AT_TI_call
@@ -4985,10 +4985,10 @@ $C$DW$172	.dwtag  DW_TAG_TI_branch
         LCR       *XAR7                 ; [CPU_ALU] |488| 
         ; call occurs [XAR7] ; [] |488| 
         MOVW      DP,#||vTimer1||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 490,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 490,column 9,is_stmt,isa 0
         INC       @||vTimer1||          ; [CPU_ALU] |490| 
 ||$C$L72||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 493,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 493,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C0||          ; [CPU_ARAU] |493| 
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
         MOVL      @||Alpha_State_Ptr||,XAR4 ; [CPU_ALU] |493| 
@@ -4998,7 +4998,7 @@ $C$DW$173	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$171, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$171, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$171, DW_AT_TI_end_line(0x1ee)
 	.dwattr $C$DW$171, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5014,11 +5014,11 @@ $C$DW$174	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$174, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$174, DW_AT_linkage_name("C0")
 	.dwattr $C$DW$174, DW_AT_external
-	.dwattr $C$DW$174, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$174, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$174, DW_AT_decl_line(0x1f0)
 	.dwattr $C$DW$174, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$174, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 497,column 1,is_stmt,address ||C0||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 497,column 1,is_stmt,address ||C0||,isa 0
 
 	.dwfde $C$DW$CIE, ||C0||
 
@@ -5042,12 +5042,12 @@ $C$DW$174	.dwtag  DW_TAG_subprogram
         MOVW      DP,#||C_Task_Ptr||    ; [CPU_ARAU] 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x0c14)        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 504,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 504,column 9,is_stmt,isa 0
         MOVL      XAR7,@||C_Task_Ptr||  ; [CPU_ALU] |504| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 169,column 5,is_stmt,isa 0
         OR        AL,#0x8000            ; [CPU_ALU] |169| 
         MOV       *(0:0x0c14),AL        ; [CPU_ALU] |169| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 504,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 504,column 9,is_stmt,isa 0
 $C$DW$175	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$175, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$175, DW_AT_TI_call
@@ -5056,10 +5056,10 @@ $C$DW$175	.dwtag  DW_TAG_TI_branch
         LCR       *XAR7                 ; [CPU_ALU] |504| 
         ; call occurs [XAR7] ; [] |504| 
         MOVW      DP,#||vTimer2||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 507,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 507,column 9,is_stmt,isa 0
         INC       @||vTimer2||          ; [CPU_ALU] |507| 
 ||$C$L73||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 510,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 510,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A0||          ; [CPU_ARAU] |510| 
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
         MOVL      @||Alpha_State_Ptr||,XAR4 ; [CPU_ALU] |510| 
@@ -5069,7 +5069,7 @@ $C$DW$176	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$174, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$174, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$174, DW_AT_TI_end_line(0x1ff)
 	.dwattr $C$DW$174, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -5085,11 +5085,11 @@ $C$DW$177	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$177, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$177, DW_AT_linkage_name("main")
 	.dwattr $C$DW$177, DW_AT_external
-	.dwattr $C$DW$177, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$177, DW_AT_decl_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$177, DW_AT_decl_line(0xe7)
 	.dwattr $C$DW$177, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$177, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 232,column 1,is_stmt,address ||main||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 232,column 1,is_stmt,address ||main||,isa 0
 
 	.dwfde $C$DW$CIE, ||main||
 
@@ -5243,7 +5243,7 @@ $C$DW$197	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -8
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -10
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 234,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 234,column 5,is_stmt,isa 0
 $C$DW$198	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$198, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$198, DW_AT_name("Device_init")
@@ -5251,7 +5251,7 @@ $C$DW$198	.dwtag  DW_TAG_TI_branch
 
         LCR       #||Device_init||      ; [CPU_ALU] |234| 
         ; call occurs [#||Device_init||] ; [] |234| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 237,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 237,column 5,is_stmt,isa 0
         MOVB      ACC,#34               ; [CPU_ALU] |237| 
         MOVL      XAR4,#||hal||         ; [CPU_ARAU] |237| 
 $C$DW$199	.dwtag  DW_TAG_TI_branch
@@ -5261,13 +5261,13 @@ $C$DW$199	.dwtag  DW_TAG_TI_branch
 
         LCR       #||HAL_init||         ; [CPU_ALU] |237| 
         ; call occurs [#||HAL_init||] ; [] |237| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 240,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 240,column 5,is_stmt,isa 0
         MOVL      XAR1,#||halMtr||      ; [CPU_ARAU] |240| 
         MOVW      DP,#||halHandle||     ; [CPU_ARAU] 
         MOVB      ACC,#18               ; [CPU_ALU] |240| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 237,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 237,column 5,is_stmt,isa 0
         MOVL      @||halHandle||,XAR4   ; [CPU_ALU] |237| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 240,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 240,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR1             ; [CPU_ALU] |240| 
 $C$DW$200	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$200, DW_AT_low_pc(0x00)
@@ -5277,12 +5277,12 @@ $C$DW$200	.dwtag  DW_TAG_TI_branch
         LCR       #||HAL_MTR_init||     ; [CPU_ALU] |240| 
         ; call occurs [#||HAL_MTR_init||] ; [] |240| 
         MOVL      XAR2,#||halMtrHandle|| ; [CPU_ARAU] |240| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 244,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 244,column 5,is_stmt,isa 0
         ADDB      XAR1,#18              ; [CPU_ALU] |244| 
         MOVB      ACC,#18               ; [CPU_ALU] |244| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 240,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 240,column 5,is_stmt,isa 0
         MOVL      *+XAR2[0],XAR4        ; [CPU_FPU] |240| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 244,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 244,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR1             ; [CPU_ALU] |244| 
 $C$DW$201	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$201, DW_AT_low_pc(0x00)
@@ -5302,7 +5302,7 @@ $C$DW$201	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 1031,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |1031| 
         MOVW      DP,#||halHandle||     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 253,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 253,column 5,is_stmt,isa 0
         MOVL      XAR4,@||halHandle||   ; [CPU_ALU] |253| 
 $C$DW$202	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$202, DW_AT_low_pc(0x00)
@@ -5312,7 +5312,7 @@ $C$DW$202	.dwtag  DW_TAG_TI_branch
         LCR       #||HAL_setParams||    ; [CPU_ALU] |253| 
         ; call occurs [#||HAL_setParams||] ; [] |253| 
         MOVW      DP,#||halMtrHandle||  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 256,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 256,column 5,is_stmt,isa 0
         MOVL      XAR4,@||halMtrHandle|| ; [CPU_ALU] |256| 
 $C$DW$203	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$203, DW_AT_low_pc(0x00)
@@ -5322,7 +5322,7 @@ $C$DW$203	.dwtag  DW_TAG_TI_branch
         LCR       #||HAL_setMotorParams|| ; [CPU_ALU] |256| 
         ; call occurs [#||HAL_setMotorParams||] ; [] |256| 
         MOVW      DP,#||halMtrHandle||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 259,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 259,column 5,is_stmt,isa 0
         MOVL      XAR4,@||halMtrHandle||+2 ; [CPU_ALU] |259| 
 $C$DW$204	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$204, DW_AT_low_pc(0x00)
@@ -5341,7 +5341,7 @@ $C$DW$204	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 996,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |996| 
         MOVW      DP,#||halMtrHandle||  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 265,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 265,column 5,is_stmt,isa 0
         MOVL      XAR2,#||motorVars||   ; [CPU_ARAU] |265| 
         MOVL      XAR5,@||halMtrHandle|| ; [CPU_ALU] |265| 
         MOVL      XAR4,XAR2             ; [CPU_ALU] |265| 
@@ -5353,7 +5353,7 @@ $C$DW$205	.dwtag  DW_TAG_TI_branch
         LCR       #||initMotorParameters|| ; [CPU_ALU] |265| 
         ; call occurs [#||initMotorParameters||] ; [] |265| 
         MOVW      DP,#||halMtrHandle||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 268,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 268,column 5,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |268| 
         MOVL      XAR5,@||halMtrHandle||+2 ; [CPU_ALU] |268| 
         ADD       ACC,#83 << 2          ; [CPU_ALU] |268| 
@@ -5365,7 +5365,7 @@ $C$DW$206	.dwtag  DW_TAG_TI_branch
 
         LCR       #||initMotorParameters|| ; [CPU_ALU] |268| 
         ; call occurs [#||initMotorParameters||] ; [] |268| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 271,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 271,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR2             ; [CPU_ALU] |271| 
 $C$DW$207	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$207, DW_AT_low_pc(0x00)
@@ -5374,7 +5374,7 @@ $C$DW$207	.dwtag  DW_TAG_TI_branch
 
         LCR       #||initControlVars||  ; [CPU_ALU] |271| 
         ; call occurs [#||initControlVars||] ; [] |271| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 274,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 274,column 5,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |274| 
         ADD       ACC,#83 << 2          ; [CPU_ALU] |274| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |274| 
@@ -5385,22 +5385,22 @@ $C$DW$208	.dwtag  DW_TAG_TI_branch
 
         LCR       #||initControlVars||  ; [CPU_ALU] |274| 
         ; call occurs [#||initControlVars||] ; [] |274| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 277,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 277,column 5,is_stmt,isa 0
         MOVL      XAR1,#348             ; [CPU_ALU] |277| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 276,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 276,column 5,is_stmt,isa 0
         MOVB      XAR0,#16              ; [CPU_ALU] |276| 
         MOVIZ     R0H,#16656            ; [CPU_FPU] |276| 
         MOVW      DP,#||halMtrHandle||  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 277,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 277,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16656            ; [CPU_FPU] |277| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 276,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 276,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |276| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 281,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 281,column 5,is_stmt,isa 0
         MOVB      XAR0,#16              ; [CPU_ALU] |281| 
         MOVL      XAR4,@||halMtrHandle|| ; [CPU_ALU] |281| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 277,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 277,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR1],R1H       ; [CPU_FPU] |277| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 281,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 281,column 5,is_stmt,isa 0
         MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |281| 
 $C$DW$209	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$209, DW_AT_low_pc(0x00)
@@ -5410,7 +5410,7 @@ $C$DW$209	.dwtag  DW_TAG_TI_branch
         LCR       #||HAL_setupMotorFaultProtection|| ; [CPU_ALU] |281| 
         ; call occurs [#||HAL_setupMotorFaultProtection||] ; [] |281| 
         MOVW      DP,#||halMtrHandle||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 285,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 285,column 5,is_stmt,isa 0
         MOVL      XAR0,#348             ; [CPU_ALU] |285| 
         MOVL      XAR4,@||halMtrHandle||+2 ; [CPU_ALU] |285| 
         MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |285| 
@@ -5421,7 +5421,7 @@ $C$DW$210	.dwtag  DW_TAG_TI_branch
 
         LCR       #||HAL_setupMotorFaultProtection|| ; [CPU_ALU] |285| 
         ; call occurs [#||HAL_setupMotorFaultProtection||] ; [] |285| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 299,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 299,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR2             ; [CPU_ALU] |299| 
 $C$DW$211	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$211, DW_AT_low_pc(0x00)
@@ -5430,7 +5430,7 @@ $C$DW$211	.dwtag  DW_TAG_TI_branch
 
         LCR       #||resetControlVars|| ; [CPU_ALU] |299| 
         ; call occurs [#||resetControlVars||] ; [] |299| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 302,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 302,column 5,is_stmt,isa 0
         MOVL      ACC,XAR2              ; [CPU_ALU] |302| 
         ADD       ACC,#83 << 2          ; [CPU_ALU] |302| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |302| 
@@ -5622,140 +5622,140 @@ $C$DW$212	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[3],#0x0200     ; [CPU_ALU] |809| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 811,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |811| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 362,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 362,column 5,is_stmt,isa 0
         MOVIZ     R0H,#15948            ; [CPU_FPU] |362| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 363,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 363,column 5,is_stmt,isa 0
         MOVIZ     R3H,#15820            ; [CPU_FPU] |363| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 364,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 364,column 5,is_stmt,isa 0
         MOVIZ     R2H,#15820            ; [CPU_FPU] |364| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 365,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 365,column 5,is_stmt,isa 0
         MOVIZ     R1H,#15523            ; [CPU_FPU] |365| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 369,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 369,column 5,is_stmt,isa 0
         MOVL      XAR0,#334             ; [CPU_ALU] |369| 
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
         MOVL      XAR4,#5000            ; [CPU_ARAU] |369| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 362,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 362,column 5,is_stmt,isa 0
         MOVXI     R0H,#52429            ; [CPU_FPU] |362| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 363,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 363,column 5,is_stmt,isa 0
         MOVXI     R3H,#52429            ; [CPU_FPU] |363| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 364,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 364,column 5,is_stmt,isa 0
         MOVXI     R2H,#52429            ; [CPU_FPU] |364| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 365,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 365,column 5,is_stmt,isa 0
         MOVXI     R1H,#55050            ; [CPU_FPU] |365| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 369,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 369,column 5,is_stmt,isa 0
         MOVL      *+XAR2[AR0],XAR4      ; [CPU_ALU] |369| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 362,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 362,column 5,is_stmt,isa 0
         MOVL      XAR0,#352             ; [CPU_ALU] |362| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 345,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 345,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A0||          ; [CPU_ARAU] |345| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 362,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 362,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |362| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 345,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 345,column 5,is_stmt,isa 0
         MOVL      @||Alpha_State_Ptr||,XAR4 ; [CPU_ALU] |345| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 363,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 363,column 5,is_stmt,isa 0
         MOVL      XAR0,#358             ; [CPU_ALU] |363| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 346,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 346,column 5,is_stmt,isa 0
         MOVL      XAR4,#||A1||          ; [CPU_ARAU] |346| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 363,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 363,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |363| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 364,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 364,column 5,is_stmt,isa 0
         MOVL      XAR0,#360             ; [CPU_ALU] |364| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 346,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 346,column 5,is_stmt,isa 0
         MOVL      @||A_Task_Ptr||,XAR4  ; [CPU_ALU] |346| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 370,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 370,column 5,is_stmt,isa 0
         MOVIZ     R3H,#14979            ; [CPU_FPU] |370| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 364,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 364,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |364| 
         MOVW      DP,#||led1Cnt||       ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 365,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 365,column 5,is_stmt,isa 0
         MOVL      XAR0,#364             ; [CPU_ALU] |365| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 370,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 370,column 5,is_stmt,isa 0
         MOVXI     R3H,#4719             ; [CPU_FPU] |370| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 347,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 347,column 5,is_stmt,isa 0
         MOVL      XAR4,#||B1||          ; [CPU_ARAU] |347| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 351,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 351,column 5,is_stmt,isa 0
         MOVIZ     R2H,#15948            ; [CPU_FPU] |351| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 365,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 365,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |365| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 370,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 370,column 5,is_stmt,isa 0
         MOVL      XAR0,#336             ; [CPU_ALU] |370| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 352,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 352,column 5,is_stmt,isa 0
         MOVIZ     R1H,#15820            ; [CPU_FPU] |352| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 351,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 351,column 5,is_stmt,isa 0
         MOVXI     R2H,#52429            ; [CPU_FPU] |351| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 370,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 370,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |370| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 311,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 311,column 5,is_stmt,isa 0
         MOV       @||led1Cnt||,#0       ; [CPU_ALU] |311| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 312,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 312,column 5,is_stmt,isa 0
         MOV       @||led2Cnt||,#0       ; [CPU_ALU] |312| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 353,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 353,column 5,is_stmt,isa 0
         MOVIZ     R3H,#15820            ; [CPU_FPU] |353| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 351,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 351,column 5,is_stmt,isa 0
         MOVB      XAR0,#20              ; [CPU_ALU] |351| 
         MOVW      DP,#||B_Task_Ptr||    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 352,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 352,column 5,is_stmt,isa 0
         MOVXI     R1H,#52429            ; [CPU_FPU] |352| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 347,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 347,column 5,is_stmt,isa 0
         MOVL      @||B_Task_Ptr||,XAR4  ; [CPU_ALU] |347| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 348,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 348,column 5,is_stmt,isa 0
         MOVL      XAR4,#||C1||          ; [CPU_ARAU] |348| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 353,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 353,column 5,is_stmt,isa 0
         MOVXI     R3H,#52429            ; [CPU_FPU] |353| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 348,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 348,column 5,is_stmt,isa 0
         MOVL      @||C_Task_Ptr||,XAR4  ; [CPU_ALU] |348| 
         MOVW      DP,#||posPtrMax||     ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 351,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 351,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |351| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 357,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 357,column 5,is_stmt,isa 0
         MOV32     R2H,@||posPtrMax||    ; [CPU_FPU] |357| 
         F32TOUI16 R0H,R2H               ; [CPU_FPU] |357| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 358,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 358,column 5,is_stmt,isa 0
         MOVL      XAR4,#5000            ; [CPU_ARAU] |358| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 352,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 352,column 5,is_stmt,isa 0
         MOVB      XAR0,#26              ; [CPU_ALU] |352| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 357,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 357,column 5,is_stmt,isa 0
         MOV32     ACC,R0H               ; [CPU_FPU] |357| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 358,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 358,column 5,is_stmt,isa 0
         MOVL      *+XAR2[2],XAR4        ; [CPU_ALU] |358| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 359,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 359,column 5,is_stmt,isa 0
         MOVIZ     R0H,#14979            ; [CPU_FPU] |359| 
         MOVXI     R0H,#4719             ; [CPU_FPU] |359| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 352,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 352,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |352| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 376,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 376,column 5,is_stmt,isa 0
         MOVL      XAR4,#||dlog_4ch1||   ; [CPU_ARAU] |376| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 353,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 353,column 5,is_stmt,isa 0
         MOVB      XAR0,#28              ; [CPU_ALU] |353| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 354,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 354,column 5,is_stmt,isa 0
         MOVIZ     R1H,#15523            ; [CPU_FPU] |354| 
         MOVXI     R1H,#55050            ; [CPU_FPU] |354| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 359,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 359,column 5,is_stmt,isa 0
         MOV32     *+XAR2[4],R0H         ; [CPU_FPU] |359| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 353,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 353,column 5,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |353| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 368,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 368,column 5,is_stmt,isa 0
         MOVL      XAR0,#648             ; [CPU_ALU] |368| 
         MOV       *+XAR2[AR0],AL        ; [CPU_ALU] |368| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 367,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 367,column 5,is_stmt,isa 0
         MOVL      XAR0,#649             ; [CPU_ALU] |367| 
         MOV       *+XAR2[AR0],#0        ; [CPU_ALU] |367| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 371,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 371,column 5,is_stmt,isa 0
         MOVL      XAR0,#642             ; [CPU_ALU] |371| 
         MOVB      *+XAR2[AR0],#1,UNC    ; [CPU_ALU] |371| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 356,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 356,column 5,is_stmt,isa 0
         MOVL      XAR0,#317             ; [CPU_ALU] |356| 
         MOV       *+XAR2[AR0],#0        ; [CPU_ALU] |356| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 360,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 360,column 5,is_stmt,isa 0
         MOVL      XAR0,#310             ; [CPU_ALU] |360| 
         MOVB      *+XAR2[AR0],#1,UNC    ; [CPU_ALU] |360| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 354,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 354,column 5,is_stmt,isa 0
         MOVB      XAR0,#32              ; [CPU_ALU] |354| 
         MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |354| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 357,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 357,column 5,is_stmt,isa 0
         MOVL      XAR0,#316             ; [CPU_ALU] |357| 
         MOV       *+XAR2[AR0],AL        ; [CPU_ALU] |357| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 376,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 376,column 5,is_stmt,isa 0
 $C$DW$213	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$213, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$213, DW_AT_name("DLOG_4CH_F_init")
@@ -5763,67 +5763,67 @@ $C$DW$213	.dwtag  DW_TAG_TI_branch
 
         LCR       #||DLOG_4CH_F_init||  ; [CPU_ALU] |376| 
         ; call occurs [#||DLOG_4CH_F_init||] ; [] |376| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 378,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 378,column 5,is_stmt,isa 0
         MOVL      XAR3,#||dlogCh2||     ; [CPU_ARAU] |378| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 379,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 379,column 5,is_stmt,isa 0
         MOVL      XAR1,#||dlogCh3||     ; [CPU_ARAU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 387,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 387,column 5,is_stmt,isa 0
         MOVIZ     R0H,#15395            ; [CPU_FPU] |387| 
         MOVW      DP,#||enableFlag||    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 377,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 377,column 5,is_stmt,isa 0
         MOVL      XAR4,#||dlogCh1||     ; [CPU_ARAU] |377| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 380,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 380,column 5,is_stmt,isa 0
         MOVL      XAR0,#||dlogCh4||     ; [CPU_ARAU] |380| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 381,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 381,column 5,is_stmt,isa 0
         MOVL      XAR7,#||DBUFF_4CH1||  ; [CPU_ARAU] |381| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 382,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 382,column 5,is_stmt,isa 0
         MOVL      XAR6,#||DBUFF_4CH2||  ; [CPU_ARAU] |382| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 383,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 383,column 5,is_stmt,isa 0
         MOVL      XAR5,#||DBUFF_4CH3||  ; [CPU_ARAU] |383| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 387,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 387,column 5,is_stmt,isa 0
         MOVXI     R0H,#55050            ; [CPU_FPU] |387| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 398,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 398,column 11,is_stmt,isa 0
         MOV       AL,@||enableFlag||    ; [CPU_ALU] |398| 
         MOVW      DP,#||dlog_4ch1||+23  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 377,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 377,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||),XAR4 ; [CPU_ALU] |377| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 385,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 385,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||dlog_4ch1||)+23,#200,UNC ; [CPU_ALU] |385| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 386,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 386,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||dlog_4ch1||)+21,#5,UNC ; [CPU_ALU] |386| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 388,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 388,column 5,is_stmt,isa 0
         MOVB      @$BLOCKED(||dlog_4ch1||)+20,#2,UNC ; [CPU_ALU] |388| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 378,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 378,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+2,XAR3 ; [CPU_ALU] |378| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 379,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 379,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+4,XAR1 ; [CPU_ALU] |379| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 380,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 380,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+6,XAR0 ; [CPU_ALU] |380| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 381,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 381,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+8,XAR7 ; [CPU_ALU] |381| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 382,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 382,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+10,XAR6 ; [CPU_ALU] |382| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 383,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 383,column 5,is_stmt,isa 0
         MOVL      @$BLOCKED(||dlog_4ch1||)+12,XAR5 ; [CPU_ALU] |383| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 387,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 387,column 5,is_stmt,isa 0
         MOV32     @$BLOCKED(||dlog_4ch1||)+18,R0H ; [CPU_FPU] |387| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 384,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 384,column 5,is_stmt,isa 0
         MOVL      XAR4,#||DBUFF_4CH4||  ; [CPU_ARAU] |384| 
         MOVL      @$BLOCKED(||dlog_4ch1||)+14,XAR4 ; [CPU_ALU] |384| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 398,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 398,column 11,is_stmt,isa 0
         B         ||$C$L75||,NEQ        ; [CPU_ALU] |398| 
         ; branchcc occurs ; [] |398| 
 ||$C$L74||:    
         MOVW      DP,#||enableFlag||    ; [CPU_ARAU] 
         MOV       AL,@||enableFlag||    ; [CPU_ALU] |398| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 400,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 400,column 9,is_stmt,isa 0
         INC       @||backTicker||       ; [CPU_ALU] |400| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 398,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 398,column 11,is_stmt,isa 0
         CMPB      AL,#0                 ; [CPU_ALU] |398| 
         B         ||$C$L74||,EQ         ; [CPU_ALU] |398| 
         ; branchcc occurs ; [] |398| 
 ||$C$L75||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 404,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 404,column 11,is_stmt,isa 0
 $C$DW$214	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$214, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$214, DW_AT_name("FCL_getSwVersion")
@@ -5838,9 +5838,9 @@ $C$DW$214	.dwtag  DW_TAG_TI_branch
         ; branchcc occurs ; [] |404| 
 ||$C$L76||:    
         MOVW      DP,#||backTicker||    ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 406,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 406,column 9,is_stmt,isa 0
         INC       @||backTicker||       ; [CPU_ALU] |406| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 404,column 11,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 404,column 11,is_stmt,isa 0
 $C$DW$215	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$215, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$215, DW_AT_name("FCL_getSwVersion")
@@ -5854,7 +5854,7 @@ $C$DW$215	.dwtag  DW_TAG_TI_branch
         B         ||$C$L76||,NEQ        ; [CPU_ALU] |404| 
         ; branchcc occurs ; [] |404| 
 ||$C$L77||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 410,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 410,column 5,is_stmt,isa 0
         MOVL      XAR1,#||halMtrHandle|| ; [CPU_ARAU] |410| 
         MOVL      XAR4,*+XAR1[0]        ; [CPU_ALU] |410| 
 $C$DW$216	.dwtag  DW_TAG_TI_branch
@@ -5864,7 +5864,7 @@ $C$DW$216	.dwtag  DW_TAG_TI_branch
 
         LCR       #||HAL_setupInterrupts|| ; [CPU_ALU] |410| 
         ; call occurs [#||HAL_setupInterrupts||] ; [] |410| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 413,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 413,column 5,is_stmt,isa 0
         MOVL      XAR4,*+XAR1[2]        ; [CPU_ALU] |413| 
 $C$DW$217	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$217, DW_AT_low_pc(0x00)
@@ -5873,7 +5873,7 @@ $C$DW$217	.dwtag  DW_TAG_TI_branch
 
         LCR       #||HAL_setupInterrupts|| ; [CPU_ALU] |413| 
         ; call occurs [#||HAL_setupInterrupts||] ; [] |413| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 416,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 416,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR2             ; [CPU_ALU] |416| 
 $C$DW$218	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$218, DW_AT_low_pc(0x00)
@@ -5883,7 +5883,7 @@ $C$DW$218	.dwtag  DW_TAG_TI_branch
         LCR       #||runOffsetsCalculation|| ; [CPU_ALU] |416| 
         ; call occurs [#||runOffsetsCalculation||] ; [] |416| 
         MOVL      XAR4,*-SP[2]          ; [CPU_ALU] |416| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 419,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 419,column 5,is_stmt,isa 0
 $C$DW$219	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$219, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$219, DW_AT_name("runOffsetsCalculation")
@@ -5892,7 +5892,7 @@ $C$DW$219	.dwtag  DW_TAG_TI_branch
         LCR       #||runOffsetsCalculation|| ; [CPU_ALU] |419| 
         ; call occurs [#||runOffsetsCalculation||] ; [] |419| 
         MOVW      DP,#||halMtrHandle||  ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 422,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 422,column 5,is_stmt,isa 0
         MOVL      XAR4,@||halMtrHandle|| ; [CPU_ALU] |422| 
 $C$DW$220	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$220, DW_AT_low_pc(0x00)
@@ -5902,7 +5902,7 @@ $C$DW$220	.dwtag  DW_TAG_TI_branch
         LCR       #||HAL_enableInterrupts|| ; [CPU_ALU] |422| 
         ; call occurs [#||HAL_enableInterrupts||] ; [] |422| 
         MOVW      DP,#||halMtrHandle||+2 ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 425,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 425,column 5,is_stmt,isa 0
         MOVL      XAR4,@||halMtrHandle||+2 ; [CPU_ALU] |425| 
 $C$DW$221	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$221, DW_AT_low_pc(0x00)
@@ -5913,7 +5913,7 @@ $C$DW$221	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||HAL_enableInterrupts||] ; [] |425| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVL      XAR0,#320             ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 428,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 428,column 5,is_stmt,isa 0
         MOVL      XAR5,#||motorVars||   ; [CPU_ARAU] |428| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVZ      AR7,*+XAR5[AR0]       ; [CPU_ALU] |473| 
@@ -5941,7 +5941,7 @@ $C$DW$221	.dwtag  DW_TAG_TI_branch
         MOVZ      AR4,*+XAR5[AR0]       ; [CPU_ALU] |473| 
         LSLL      ACC,T                 ; [CPU_ALU] |473| 
         MOVL      XAR6,ACC              ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 429,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 429,column 5,is_stmt,isa 0
         MOVL      XAR0,#660             ; [CPU_ALU] |429| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVL      ACC,XAR4              ; [CPU_ALU] |473| 
@@ -5950,9 +5950,9 @@ $C$DW$221	.dwtag  DW_TAG_TI_branch
         LSL       ACC,1                 ; [CPU_ALU] |473| 
         ADD       ACC,#127 << 8         ; [CPU_ALU] |473| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |473| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 429,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 429,column 5,is_stmt,isa 0
         MOVB      *+XAR5[AR0],#1,UNC    ; [CPU_ALU] |429| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 428,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 428,column 5,is_stmt,isa 0
         MOVL      XAR0,#328             ; [CPU_ALU] |428| 
         MOVB      *+XAR5[AR0],#1,UNC    ; [CPU_ALU] |428| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
@@ -5961,7 +5961,7 @@ $C$DW$221	.dwtag  DW_TAG_TI_branch
  clrc DBGM
 ||$C$L78||:    
         MOVW      DP,#||Alpha_State_Ptr|| ; [CPU_ARAU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 450,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 450,column 9,is_stmt,isa 0
         MOVL      XAR7,@||Alpha_State_Ptr|| ; [CPU_ALU] |450| 
         SPM       #0                    ; [CPU_ALU] 
 $C$DW$222	.dwtag  DW_TAG_TI_branch
@@ -5971,7 +5971,7 @@ $C$DW$222	.dwtag  DW_TAG_TI_branch
 
         LCR       *XAR7                 ; [CPU_ALU] |450| 
         ; call occurs [XAR7] ; [] |450| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 453,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 453,column 9,is_stmt,isa 0
 $C$DW$223	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$223, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$223, DW_AT_name("runSyncControl")
@@ -5979,10 +5979,10 @@ $C$DW$223	.dwtag  DW_TAG_TI_branch
 
         LCR       #||runSyncControl||   ; [CPU_ALU] |453| 
         ; call occurs [#||runSyncControl||] ; [] |453| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c",line 454,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 454,column 5,is_stmt,isa 0
         B         ||$C$L78||,UNC        ; [CPU_ALU] |454| 
         ; branch occurs ; [] |454| 
-	.dwattr $C$DW$177, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c")
+	.dwattr $C$DW$177, DW_AT_TI_end_file("../sources/dual_axis_servo_drive.c")
 	.dwattr $C$DW$177, DW_AT_TI_end_line(0x1c7)
 	.dwattr $C$DW$177, DW_AT_TI_end_column(0x01)
 	.dwendentry

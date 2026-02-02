@@ -1,6 +1,6 @@
 # FIXED
 
-sources/fcl_cla_code_dm.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cla_code_dm.cla
+sources/fcl_cla_code_dm.obj: ../sources/fcl_cla_code_dm.cla
 sources/fcl_cla_code_dm.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/include/cpu_cla_shared_dm.h
 sources/fcl_cla_code_dm.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/F28x_Project.h
 sources/fcl_cla_code_dm.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/F2837xD_Cla_typedefs.h
@@ -73,7 +73,7 @@ sources/fcl_cla_code_dm.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/librari
 sources/fcl_cla_code_dm.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/CLA_v1.0/RAMP_GEN_CLA.h
 sources/fcl_cla_code_dm.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/dual_axis_servo_drive_user.h
 
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cla_code_dm.cla:
+../sources/fcl_cla_code_dm.cla:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/include/cpu_cla_shared_dm.h:
 

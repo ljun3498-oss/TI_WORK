@@ -1,16 +1,16 @@
-TMS320C2000 Assembler PC v22.6.2 Mon Feb  2 20:54:34 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Feb  2 21:10:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dual_axis_servo_drive_cla_tasks.asm                                  PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320x280xx Control Law Accelerator G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Mon Feb  2 20:54:34 2026                 *
+       3              ;* Date/Time created: Mon Feb  2 21:10:01 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6              
        7              $C$DW$CU        .dwtag  DW_TAG_compile_unit
-       8                      .dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_f
+       8                      .dwattr $C$DW$CU, DW_AT_name("../sources/dual_axis_servo_drive_cla_tasks.cla")
        9                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320x280xx Control Law Accelerator G3 C/C++ Codegen PC v22.6.2
       10                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
       11                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f28
@@ -58,7 +58,7 @@ dual_axis_servo_drive_cla_tasks.asm                                  PAGE    1
       53                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
       54                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
       55              
-TMS320C2000 Assembler PC v22.6.2 Mon Feb  2 20:54:34 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Feb  2 21:10:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dual_axis_servo_drive_cla_tasks.asm                                  PAGE    2
@@ -118,7 +118,7 @@ dual_axis_servo_drive_cla_tasks.asm                                  PAGE    2
      108              
      109              $C$DW$TU$12     .dwtag  DW_TAG_type_unit
      110                      .dwmtype  $C$DW$T$12
-TMS320C2000 Assembler PC v22.6.2 Mon Feb  2 20:54:34 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Feb  2 21:10:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dual_axis_servo_drive_cla_tasks.asm                                  PAGE    3
@@ -178,7 +178,7 @@ dual_axis_servo_drive_cla_tasks.asm                                  PAGE    3
      163                      .dwattr $C$DW$T$17, DW_AT_name("double")
      164                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x04)
      165              
-TMS320C2000 Assembler PC v22.6.2 Mon Feb  2 20:54:34 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Feb  2 21:10:01 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 dual_axis_servo_drive_cla_tasks.asm                                  PAGE    4

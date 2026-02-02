@@ -1,12 +1,12 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Mon Feb  2 20:54:35 2026                 *
+;* Date/Time created: Mon Feb  2 21:10:02 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$CU, DW_AT_name("../sources/sfra_gui.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f2837x\F2837x_RAM")
@@ -166,7 +166,7 @@ $C$DW$37	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$37, DW_AT_location[DW_OP_addr ||sfra1||]
 	.dwattr $C$DW$37, DW_AT_type(*$C$DW$T$24)
 	.dwattr $C$DW$37, DW_AT_external
-	.dwattr $C$DW$37, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$37, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$37, DW_AT_decl_line(0x30)
 	.dwattr $C$DW$37, DW_AT_decl_column(0x0a)
 
@@ -178,7 +178,7 @@ $C$DW$38	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$38, DW_AT_location[DW_OP_addr ||plantMagVect||]
 	.dwattr $C$DW$38, DW_AT_type(*$C$DW$T$51)
 	.dwattr $C$DW$38, DW_AT_external
-	.dwattr $C$DW$38, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$38, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$38, DW_AT_decl_line(0x33)
 	.dwattr $C$DW$38, DW_AT_decl_column(0x0b)
 
@@ -190,7 +190,7 @@ $C$DW$39	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$39, DW_AT_location[DW_OP_addr ||plantPhaseVect||]
 	.dwattr $C$DW$39, DW_AT_type(*$C$DW$T$51)
 	.dwattr $C$DW$39, DW_AT_external
-	.dwattr $C$DW$39, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$39, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$39, DW_AT_decl_line(0x34)
 	.dwattr $C$DW$39, DW_AT_decl_column(0x0b)
 
@@ -202,7 +202,7 @@ $C$DW$40	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$40, DW_AT_location[DW_OP_addr ||olMagVect||]
 	.dwattr $C$DW$40, DW_AT_type(*$C$DW$T$51)
 	.dwattr $C$DW$40, DW_AT_external
-	.dwattr $C$DW$40, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$40, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$40, DW_AT_decl_line(0x35)
 	.dwattr $C$DW$40, DW_AT_decl_column(0x0b)
 
@@ -214,7 +214,7 @@ $C$DW$41	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$41, DW_AT_location[DW_OP_addr ||olPhaseVect||]
 	.dwattr $C$DW$41, DW_AT_type(*$C$DW$T$51)
 	.dwattr $C$DW$41, DW_AT_external
-	.dwattr $C$DW$41, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$41, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$41, DW_AT_decl_line(0x36)
 	.dwattr $C$DW$41, DW_AT_decl_column(0x0b)
 
@@ -226,7 +226,7 @@ $C$DW$42	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$42, DW_AT_location[DW_OP_addr ||clMagVect||]
 	.dwattr $C$DW$42, DW_AT_type(*$C$DW$T$51)
 	.dwattr $C$DW$42, DW_AT_external
-	.dwattr $C$DW$42, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$42, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$42, DW_AT_decl_line(0x37)
 	.dwattr $C$DW$42, DW_AT_decl_column(0x0b)
 
@@ -238,7 +238,7 @@ $C$DW$43	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$43, DW_AT_location[DW_OP_addr ||clPhaseVect||]
 	.dwattr $C$DW$43, DW_AT_type(*$C$DW$T$51)
 	.dwattr $C$DW$43, DW_AT_external
-	.dwattr $C$DW$43, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$43, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$43, DW_AT_decl_line(0x38)
 	.dwattr $C$DW$43, DW_AT_decl_column(0x0b)
 
@@ -250,13 +250,13 @@ $C$DW$44	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$44, DW_AT_location[DW_OP_addr ||freqVect||]
 	.dwattr $C$DW$44, DW_AT_type(*$C$DW$T$51)
 	.dwattr $C$DW$44, DW_AT_external
-	.dwattr $C$DW$44, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$44, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$44, DW_AT_decl_line(0x39)
 	.dwattr $C$DW$44, DW_AT_decl_column(0x0b)
 
 	.sblock	"sfra_data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{F7DEB9CA-DD24-4803-AF99-7624C4121072} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{88B0BC6A-DBB9-4102-A5B5-3C13DB1417A0} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{EBC3E68C-6ED3-4EB3-9710-C3FF7B936752} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{984CFDCB-BBBD-451B-8502-8210D86210DB} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{F90FE212-DA44-48EE-AD13-ECDF548CC1B9} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{11F842F3-6477-4922-B34C-B7252FC3BF8D} 
 	.sect	".text:configureSFRA"
 	.clink
 	.global	||configureSFRA||
@@ -267,11 +267,11 @@ $C$DW$45	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$45, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$45, DW_AT_linkage_name("configureSFRA")
 	.dwattr $C$DW$45, DW_AT_external
-	.dwattr $C$DW$45, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$45, DW_AT_decl_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$45, DW_AT_decl_line(0x46)
 	.dwattr $C$DW$45, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$45, DW_AT_TI_max_frame_size(-24)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c",line 71,column 1,is_stmt,address ||configureSFRA||,isa 0
+	.dwpsn	file "../sources/sfra_gui.c",line 71,column 1,is_stmt,address ||configureSFRA||,isa 0
 
 	.dwfde $C$DW$CIE, ||configureSFRA||
 $C$DW$46	.dwtag  DW_TAG_formal_parameter
@@ -321,12 +321,12 @@ $C$DW$49	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -8
         ADDB      SP,#16                ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -24
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c",line 75,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui.c",line 75,column 5,is_stmt,isa 0
         MOVL      XAR2,#||sfra1||       ; [CPU_ARAU] |75| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c",line 71,column 1,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui.c",line 71,column 1,is_stmt,isa 0
         MOVZ      AR1,AL                ; [CPU_ALU] |71| 
         MOV32     R4H,R0H               ; [CPU_FPU] |71| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c",line 75,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui.c",line 75,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR2             ; [CPU_ALU] |75| 
 $C$DW$50	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$50, DW_AT_low_pc(0x00)
@@ -335,7 +335,7 @@ $C$DW$50	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SFRA_F32_reset||   ; [CPU_ALU] |75| 
         ; call occurs [#||SFRA_F32_reset||] ; [] |75| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c",line 80,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui.c",line 80,column 5,is_stmt,isa 0
         MOVL      XAR5,#||plantPhaseVect|| ; [CPU_ARAU] |80| 
         MOVIZ     R1H,#15267            ; [CPU_FPU] |80| 
         MOVIZ     R3H,#16289            ; [CPU_FPU] |80| 
@@ -365,7 +365,7 @@ $C$DW$51	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SFRA_F32_config||  ; [CPU_ALU] |80| 
         ; call occurs [#||SFRA_F32_config||] ; [] |80| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c",line 98,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui.c",line 98,column 5,is_stmt,isa 0
         MOVL      XAR4,XAR2             ; [CPU_ALU] |98| 
 $C$DW$52	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$52, DW_AT_low_pc(0x00)
@@ -374,7 +374,7 @@ $C$DW$52	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SFRA_F32_resetFreqRespArray|| ; [CPU_ALU] |98| 
         ; call occurs [#||SFRA_F32_resetFreqRespArray||] ; [] |98| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c",line 109,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui.c",line 109,column 5,is_stmt,isa 0
         MOVIZ     R1H,#16289            ; [CPU_FPU] |109| 
         MOVIZ     R0H,#16800            ; [CPU_FPU] |109| 
         MOVL      XAR4,XAR2             ; [CPU_ALU] |109| 
@@ -386,7 +386,7 @@ $C$DW$53	.dwtag  DW_TAG_TI_branch
 
         LCR       #||SFRA_F32_initFreqArrayWithLogSteps|| ; [CPU_ALU] |109| 
         ; call occurs [#||SFRA_F32_initFreqArrayWithLogSteps||] ; [] |109| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c",line 119,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/sfra_gui.c",line 119,column 5,is_stmt,isa 0
         MOV       AL,#61568             ; [CPU_ALU] |119| 
         MOV       AH,#762               ; [CPU_ALU] |119| 
         MOVL      XAR4,#57600           ; [CPU_ARAU] |119| 
@@ -431,7 +431,7 @@ $C$DW$55	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$45, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c")
+	.dwattr $C$DW$45, DW_AT_TI_end_file("../sources/sfra_gui.c")
 	.dwattr $C$DW$45, DW_AT_TI_end_line(0x83)
 	.dwattr $C$DW$45, DW_AT_TI_end_column(0x01)
 	.dwendentry

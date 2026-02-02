@@ -1,6 +1,6 @@
 # FIXED
 
-sources/sfra_gui_scicomms_driverlib.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c
+sources/sfra_gui_scicomms_driverlib.obj: ../sources/sfra_gui_scicomms_driverlib.c
 sources/sfra_gui_scicomms_driverlib.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h
 sources/sfra_gui_scicomms_driverlib.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h
 sources/sfra_gui_scicomms_driverlib.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/linkage.h
@@ -96,7 +96,7 @@ sources/sfra_gui_scicomms_driverlib.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c20
 sources/sfra_gui_scicomms_driverlib.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h
 sources/sfra_gui_scicomms_driverlib.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h
 
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c:
+../sources/sfra_gui_scicomms_driverlib.c:
 
 D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stdint.h:
 

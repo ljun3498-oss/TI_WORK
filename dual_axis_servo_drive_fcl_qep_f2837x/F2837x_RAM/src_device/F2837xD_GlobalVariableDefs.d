@@ -1,6 +1,6 @@
 # FIXED
 
-src_device/F2837xD_GlobalVariableDefs.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c
+src_device/F2837xD_GlobalVariableDefs.obj: ../src_device/F2837xD_GlobalVariableDefs.c
 src_device/F2837xD_GlobalVariableDefs.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/include/F2837xD_device.h
 src_device/F2837xD_GlobalVariableDefs.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/assert.h
 src_device/F2837xD_GlobalVariableDefs.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h
@@ -52,7 +52,7 @@ src_device/F2837xD_GlobalVariableDefs.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04
 src_device/F2837xD_GlobalVariableDefs.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/include/F2837xD_xint.h
 src_device/F2837xD_GlobalVariableDefs.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/include/F2837xD_can.h
 
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c:
+../src_device/F2837xD_GlobalVariableDefs.c:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/include/F2837xD_device.h:
 

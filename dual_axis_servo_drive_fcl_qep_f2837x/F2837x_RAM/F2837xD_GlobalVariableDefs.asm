@@ -1,12 +1,12 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Mon Feb  2 20:54:36 2026                 *
+;* Date/Time created: Mon Feb  2 21:10:03 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$CU, DW_AT_name("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f2837x\F2837x_RAM")
@@ -18,7 +18,7 @@ $C$DW$1	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$1, DW_AT_location[DW_OP_addr ||FlashPumpSemaphoreRegs||]
 	.dwattr $C$DW$1, DW_AT_type(*$C$DW$T$1843)
 	.dwattr $C$DW$1, DW_AT_external
-	.dwattr $C$DW$1, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$1, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$1, DW_AT_decl_line(0x2a7)
 	.dwattr $C$DW$1, DW_AT_decl_column(0x2b)
 
@@ -30,7 +30,7 @@ $C$DW$2	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$2, DW_AT_location[DW_OP_addr ||RomPrefetchRegs||]
 	.dwattr $C$DW$2, DW_AT_type(*$C$DW$T$1856)
 	.dwattr $C$DW$2, DW_AT_external
-	.dwattr $C$DW$2, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$2, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$2, DW_AT_decl_line(0x331)
 	.dwattr $C$DW$2, DW_AT_decl_column(0x23)
 
@@ -42,7 +42,7 @@ $C$DW$3	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$3, DW_AT_location[DW_OP_addr ||RomWaitStateRegs||]
 	.dwattr $C$DW$3, DW_AT_type(*$C$DW$T$1857)
 	.dwattr $C$DW$3, DW_AT_external
-	.dwattr $C$DW$3, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$3, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$3, DW_AT_decl_line(0x33a)
 	.dwattr $C$DW$3, DW_AT_decl_column(0x25)
 
@@ -54,7 +54,7 @@ $C$DW$4	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$4, DW_AT_location[DW_OP_addr ||DcsmCommonRegs||]
 	.dwattr $C$DW$4, DW_AT_type(*$C$DW$T$1828)
 	.dwattr $C$DW$4, DW_AT_external
-	.dwattr $C$DW$4, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$4, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$4, DW_AT_decl_line(0x18f)
 	.dwattr $C$DW$4, DW_AT_decl_column(0x22)
 
@@ -66,7 +66,7 @@ $C$DW$5	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$5, DW_AT_location[DW_OP_addr ||SyncSocRegs||]
 	.dwattr $C$DW$5, DW_AT_type(*$C$DW$T$1861)
 	.dwattr $C$DW$5, DW_AT_external
-	.dwattr $C$DW$5, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$5, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$5, DW_AT_decl_line(0x38c)
 	.dwattr $C$DW$5, DW_AT_decl_column(0x1f)
 
@@ -78,7 +78,7 @@ $C$DW$6	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$6, DW_AT_location[DW_OP_addr ||DacaRegs||]
 	.dwattr $C$DW$6, DW_AT_type(*$C$DW$T$1827)
 	.dwattr $C$DW$6, DW_AT_external
-	.dwattr $C$DW$6, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$6, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$6, DW_AT_decl_line(0x177)
 	.dwattr $C$DW$6, DW_AT_decl_column(0x1a)
 
@@ -90,7 +90,7 @@ $C$DW$7	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$7, DW_AT_location[DW_OP_addr ||DacbRegs||]
 	.dwattr $C$DW$7, DW_AT_type(*$C$DW$T$1827)
 	.dwattr $C$DW$7, DW_AT_external
-	.dwattr $C$DW$7, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$7, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$7, DW_AT_decl_line(0x17f)
 	.dwattr $C$DW$7, DW_AT_decl_column(0x1a)
 
@@ -102,7 +102,7 @@ $C$DW$8	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$8, DW_AT_location[DW_OP_addr ||DaccRegs||]
 	.dwattr $C$DW$8, DW_AT_type(*$C$DW$T$1827)
 	.dwattr $C$DW$8, DW_AT_external
-	.dwattr $C$DW$8, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$8, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$8, DW_AT_decl_line(0x187)
 	.dwattr $C$DW$8, DW_AT_decl_column(0x1a)
 
@@ -114,7 +114,7 @@ $C$DW$9	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$9, DW_AT_location[DW_OP_addr ||NmiIntruptRegs||]
 	.dwattr $C$DW$9, DW_AT_type(*$C$DW$T$1852)
 	.dwattr $C$DW$9, DW_AT_external
-	.dwattr $C$DW$9, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$9, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$9, DW_AT_decl_line(0x30f)
 	.dwattr $C$DW$9, DW_AT_decl_column(0x22)
 
@@ -126,7 +126,7 @@ $C$DW$10	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$10, DW_AT_location[DW_OP_addr ||CpuTimer0Regs||]
 	.dwattr $C$DW$10, DW_AT_type(*$C$DW$T$1825)
 	.dwattr $C$DW$10, DW_AT_external
-	.dwattr $C$DW$10, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$10, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$10, DW_AT_decl_line(0x157)
 	.dwattr $C$DW$10, DW_AT_decl_column(0x1f)
 
@@ -138,7 +138,7 @@ $C$DW$11	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$11, DW_AT_location[DW_OP_addr ||CpuTimer1Regs||]
 	.dwattr $C$DW$11, DW_AT_type(*$C$DW$T$1825)
 	.dwattr $C$DW$11, DW_AT_external
-	.dwattr $C$DW$11, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$11, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$11, DW_AT_decl_line(0x15f)
 	.dwattr $C$DW$11, DW_AT_decl_column(0x1f)
 
@@ -150,7 +150,7 @@ $C$DW$12	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$12, DW_AT_location[DW_OP_addr ||CpuTimer2Regs||]
 	.dwattr $C$DW$12, DW_AT_type(*$C$DW$T$1825)
 	.dwattr $C$DW$12, DW_AT_external
-	.dwattr $C$DW$12, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$12, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$12, DW_AT_decl_line(0x167)
 	.dwattr $C$DW$12, DW_AT_decl_column(0x1f)
 
@@ -162,7 +162,7 @@ $C$DW$13	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$13, DW_AT_location[DW_OP_addr ||Emif1ConfigRegs||]
 	.dwattr $C$DW$13, DW_AT_type(*$C$DW$T$1835)
 	.dwattr $C$DW$13, DW_AT_external
-	.dwattr $C$DW$13, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$13, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$13, DW_AT_decl_line(0x1f1)
 	.dwattr $C$DW$13, DW_AT_decl_column(0x23)
 
@@ -174,7 +174,7 @@ $C$DW$14	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$14, DW_AT_location[DW_OP_addr ||Emif2ConfigRegs||]
 	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$1836)
 	.dwattr $C$DW$14, DW_AT_external
-	.dwattr $C$DW$14, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$14, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$14, DW_AT_decl_line(0x1fa)
 	.dwattr $C$DW$14, DW_AT_decl_column(0x23)
 
@@ -186,7 +186,7 @@ $C$DW$15	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$15, DW_AT_location[DW_OP_addr ||XintRegs||]
 	.dwattr $C$DW$15, DW_AT_type(*$C$DW$T$1866)
 	.dwattr $C$DW$15, DW_AT_external
-	.dwattr $C$DW$15, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$15, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$15, DW_AT_decl_line(0x3b9)
 	.dwattr $C$DW$15, DW_AT_decl_column(0x1b)
 
@@ -198,7 +198,7 @@ $C$DW$16	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$16, DW_AT_location[DW_OP_addr ||XbarRegs||]
 	.dwattr $C$DW$16, DW_AT_type(*$C$DW$T$1865)
 	.dwattr $C$DW$16, DW_AT_external
-	.dwattr $C$DW$16, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$16, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$16, DW_AT_decl_line(0x3b0)
 	.dwattr $C$DW$16, DW_AT_decl_column(0x1b)
 
@@ -210,7 +210,7 @@ $C$DW$17	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$17, DW_AT_location[DW_OP_addr ||SciaRegs||]
 	.dwattr $C$DW$17, DW_AT_type(*$C$DW$T$1858)
 	.dwattr $C$DW$17, DW_AT_external
-	.dwattr $C$DW$17, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$17, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$17, DW_AT_decl_line(0x343)
 	.dwattr $C$DW$17, DW_AT_decl_column(0x1a)
 
@@ -222,7 +222,7 @@ $C$DW$18	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$18, DW_AT_location[DW_OP_addr ||ScibRegs||]
 	.dwattr $C$DW$18, DW_AT_type(*$C$DW$T$1858)
 	.dwattr $C$DW$18, DW_AT_external
-	.dwattr $C$DW$18, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$18, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$18, DW_AT_decl_line(0x34b)
 	.dwattr $C$DW$18, DW_AT_decl_column(0x1a)
 
@@ -234,7 +234,7 @@ $C$DW$19	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$19, DW_AT_location[DW_OP_addr ||ScicRegs||]
 	.dwattr $C$DW$19, DW_AT_type(*$C$DW$T$1858)
 	.dwattr $C$DW$19, DW_AT_external
-	.dwattr $C$DW$19, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$19, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$19, DW_AT_decl_line(0x353)
 	.dwattr $C$DW$19, DW_AT_decl_column(0x1a)
 
@@ -246,7 +246,7 @@ $C$DW$20	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$20, DW_AT_location[DW_OP_addr ||ScidRegs||]
 	.dwattr $C$DW$20, DW_AT_type(*$C$DW$T$1858)
 	.dwattr $C$DW$20, DW_AT_external
-	.dwattr $C$DW$20, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$20, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$20, DW_AT_decl_line(0x35b)
 	.dwattr $C$DW$20, DW_AT_decl_column(0x1a)
 
@@ -258,7 +258,7 @@ $C$DW$21	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$21, DW_AT_location[DW_OP_addr ||SpiaRegs||]
 	.dwattr $C$DW$21, DW_AT_type(*$C$DW$T$1860)
 	.dwattr $C$DW$21, DW_AT_external
-	.dwattr $C$DW$21, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$21, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$21, DW_AT_decl_line(0x373)
 	.dwattr $C$DW$21, DW_AT_decl_column(0x1a)
 
@@ -270,7 +270,7 @@ $C$DW$22	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$22, DW_AT_location[DW_OP_addr ||SpibRegs||]
 	.dwattr $C$DW$22, DW_AT_type(*$C$DW$T$1860)
 	.dwattr $C$DW$22, DW_AT_external
-	.dwattr $C$DW$22, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$22, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$22, DW_AT_decl_line(0x37b)
 	.dwattr $C$DW$22, DW_AT_decl_column(0x1a)
 
@@ -282,7 +282,7 @@ $C$DW$23	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$23, DW_AT_location[DW_OP_addr ||SpicRegs||]
 	.dwattr $C$DW$23, DW_AT_type(*$C$DW$T$1860)
 	.dwattr $C$DW$23, DW_AT_external
-	.dwattr $C$DW$23, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$23, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$23, DW_AT_decl_line(0x383)
 	.dwattr $C$DW$23, DW_AT_decl_column(0x1a)
 
@@ -294,7 +294,7 @@ $C$DW$24	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$24, DW_AT_location[DW_OP_addr ||UidRegs||]
 	.dwattr $C$DW$24, DW_AT_type(*$C$DW$T$1862)
 	.dwattr $C$DW$24, DW_AT_external
-	.dwattr $C$DW$24, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$24, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$24, DW_AT_decl_line(0x395)
 	.dwattr $C$DW$24, DW_AT_decl_column(0x1a)
 
@@ -306,7 +306,7 @@ $C$DW$25	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$25, DW_AT_location[DW_OP_addr ||AdcaResultRegs||]
 	.dwattr $C$DW$25, DW_AT_type(*$C$DW$T$1815)
 	.dwattr $C$DW$25, DW_AT_external
-	.dwattr $C$DW$25, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$25, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$25, DW_AT_decl_line(0x5f)
 	.dwattr $C$DW$25, DW_AT_decl_column(0x21)
 
@@ -318,7 +318,7 @@ $C$DW$26	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$26, DW_AT_location[DW_OP_addr ||AdcbResultRegs||]
 	.dwattr $C$DW$26, DW_AT_type(*$C$DW$T$1815)
 	.dwattr $C$DW$26, DW_AT_external
-	.dwattr $C$DW$26, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$26, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$26, DW_AT_decl_line(0x67)
 	.dwattr $C$DW$26, DW_AT_decl_column(0x21)
 
@@ -330,7 +330,7 @@ $C$DW$27	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$27, DW_AT_location[DW_OP_addr ||AdccResultRegs||]
 	.dwattr $C$DW$27, DW_AT_type(*$C$DW$T$1815)
 	.dwattr $C$DW$27, DW_AT_external
-	.dwattr $C$DW$27, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$27, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$27, DW_AT_decl_line(0x6f)
 	.dwattr $C$DW$27, DW_AT_decl_column(0x21)
 
@@ -342,7 +342,7 @@ $C$DW$28	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$28, DW_AT_location[DW_OP_addr ||AdcdResultRegs||]
 	.dwattr $C$DW$28, DW_AT_type(*$C$DW$T$1815)
 	.dwattr $C$DW$28, DW_AT_external
-	.dwattr $C$DW$28, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$28, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$28, DW_AT_decl_line(0x77)
 	.dwattr $C$DW$28, DW_AT_decl_column(0x21)
 
@@ -354,7 +354,7 @@ $C$DW$29	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$29, DW_AT_location[DW_OP_addr ||DmaClaSrcSelRegs||]
 	.dwattr $C$DW$29, DW_AT_type(*$C$DW$T$1832)
 	.dwattr $C$DW$29, DW_AT_external
-	.dwattr $C$DW$29, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$29, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$29, DW_AT_decl_line(0x1b1)
 	.dwattr $C$DW$29, DW_AT_decl_column(0x26)
 
@@ -366,7 +366,7 @@ $C$DW$30	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$30, DW_AT_location[DW_OP_addr ||ECap1Regs||]
 	.dwattr $C$DW$30, DW_AT_type(*$C$DW$T$1834)
 	.dwattr $C$DW$30, DW_AT_external
-	.dwattr $C$DW$30, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$30, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$30, DW_AT_decl_line(0x1c1)
 	.dwattr $C$DW$30, DW_AT_decl_column(0x1b)
 
@@ -378,7 +378,7 @@ $C$DW$31	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$31, DW_AT_location[DW_OP_addr ||ECap2Regs||]
 	.dwattr $C$DW$31, DW_AT_type(*$C$DW$T$1834)
 	.dwattr $C$DW$31, DW_AT_external
-	.dwattr $C$DW$31, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$31, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$31, DW_AT_decl_line(0x1c9)
 	.dwattr $C$DW$31, DW_AT_decl_column(0x1b)
 
@@ -390,7 +390,7 @@ $C$DW$32	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$32, DW_AT_location[DW_OP_addr ||ECap3Regs||]
 	.dwattr $C$DW$32, DW_AT_type(*$C$DW$T$1834)
 	.dwattr $C$DW$32, DW_AT_external
-	.dwattr $C$DW$32, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$32, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$32, DW_AT_decl_line(0x1d1)
 	.dwattr $C$DW$32, DW_AT_decl_column(0x1b)
 
@@ -402,7 +402,7 @@ $C$DW$33	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$33, DW_AT_location[DW_OP_addr ||ECap4Regs||]
 	.dwattr $C$DW$33, DW_AT_type(*$C$DW$T$1834)
 	.dwattr $C$DW$33, DW_AT_external
-	.dwattr $C$DW$33, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$33, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$33, DW_AT_decl_line(0x1d9)
 	.dwattr $C$DW$33, DW_AT_decl_column(0x1b)
 
@@ -414,7 +414,7 @@ $C$DW$34	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$34, DW_AT_location[DW_OP_addr ||ECap5Regs||]
 	.dwattr $C$DW$34, DW_AT_type(*$C$DW$T$1834)
 	.dwattr $C$DW$34, DW_AT_external
-	.dwattr $C$DW$34, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$34, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$34, DW_AT_decl_line(0x1e1)
 	.dwattr $C$DW$34, DW_AT_decl_column(0x1b)
 
@@ -426,7 +426,7 @@ $C$DW$35	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$35, DW_AT_location[DW_OP_addr ||ECap6Regs||]
 	.dwattr $C$DW$35, DW_AT_type(*$C$DW$T$1834)
 	.dwattr $C$DW$35, DW_AT_external
-	.dwattr $C$DW$35, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$35, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$35, DW_AT_decl_line(0x1e9)
 	.dwattr $C$DW$35, DW_AT_decl_column(0x1b)
 
@@ -438,7 +438,7 @@ $C$DW$36	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$36, DW_AT_location[DW_OP_addr ||PieCtrlRegs||]
 	.dwattr $C$DW$36, DW_AT_type(*$C$DW$T$1854)
 	.dwattr $C$DW$36, DW_AT_external
-	.dwattr $C$DW$36, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$36, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$36, DW_AT_decl_line(0x321)
 	.dwattr $C$DW$36, DW_AT_decl_column(0x1f)
 
@@ -450,7 +450,7 @@ $C$DW$37	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$37, DW_AT_location[DW_OP_addr ||Cmpss1Regs||]
 	.dwattr $C$DW$37, DW_AT_type(*$C$DW$T$1824)
 	.dwattr $C$DW$37, DW_AT_external
-	.dwattr $C$DW$37, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$37, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$37, DW_AT_decl_line(0x117)
 	.dwattr $C$DW$37, DW_AT_decl_column(0x1c)
 
@@ -462,7 +462,7 @@ $C$DW$38	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$38, DW_AT_location[DW_OP_addr ||Cmpss2Regs||]
 	.dwattr $C$DW$38, DW_AT_type(*$C$DW$T$1824)
 	.dwattr $C$DW$38, DW_AT_external
-	.dwattr $C$DW$38, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$38, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$38, DW_AT_decl_line(0x11f)
 	.dwattr $C$DW$38, DW_AT_decl_column(0x1c)
 
@@ -474,7 +474,7 @@ $C$DW$39	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$39, DW_AT_location[DW_OP_addr ||Cmpss3Regs||]
 	.dwattr $C$DW$39, DW_AT_type(*$C$DW$T$1824)
 	.dwattr $C$DW$39, DW_AT_external
-	.dwattr $C$DW$39, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$39, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$39, DW_AT_decl_line(0x127)
 	.dwattr $C$DW$39, DW_AT_decl_column(0x1c)
 
@@ -486,7 +486,7 @@ $C$DW$40	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$40, DW_AT_location[DW_OP_addr ||Cmpss4Regs||]
 	.dwattr $C$DW$40, DW_AT_type(*$C$DW$T$1824)
 	.dwattr $C$DW$40, DW_AT_external
-	.dwattr $C$DW$40, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$40, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$40, DW_AT_decl_line(0x12f)
 	.dwattr $C$DW$40, DW_AT_decl_column(0x1c)
 
@@ -498,7 +498,7 @@ $C$DW$41	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$41, DW_AT_location[DW_OP_addr ||Cmpss5Regs||]
 	.dwattr $C$DW$41, DW_AT_type(*$C$DW$T$1824)
 	.dwattr $C$DW$41, DW_AT_external
-	.dwattr $C$DW$41, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$41, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$41, DW_AT_decl_line(0x137)
 	.dwattr $C$DW$41, DW_AT_decl_column(0x1c)
 
@@ -510,7 +510,7 @@ $C$DW$42	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$42, DW_AT_location[DW_OP_addr ||Cmpss6Regs||]
 	.dwattr $C$DW$42, DW_AT_type(*$C$DW$T$1824)
 	.dwattr $C$DW$42, DW_AT_external
-	.dwattr $C$DW$42, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$42, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$42, DW_AT_decl_line(0x13f)
 	.dwattr $C$DW$42, DW_AT_decl_column(0x1c)
 
@@ -522,7 +522,7 @@ $C$DW$43	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$43, DW_AT_location[DW_OP_addr ||Cmpss7Regs||]
 	.dwattr $C$DW$43, DW_AT_type(*$C$DW$T$1824)
 	.dwattr $C$DW$43, DW_AT_external
-	.dwattr $C$DW$43, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$43, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$43, DW_AT_decl_line(0x147)
 	.dwattr $C$DW$43, DW_AT_decl_column(0x1c)
 
@@ -534,7 +534,7 @@ $C$DW$44	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$44, DW_AT_location[DW_OP_addr ||Cmpss8Regs||]
 	.dwattr $C$DW$44, DW_AT_type(*$C$DW$T$1824)
 	.dwattr $C$DW$44, DW_AT_external
-	.dwattr $C$DW$44, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$44, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$44, DW_AT_decl_line(0x14f)
 	.dwattr $C$DW$44, DW_AT_decl_column(0x1c)
 
@@ -546,7 +546,7 @@ $C$DW$45	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$45, DW_AT_location[DW_OP_addr ||InputXbarRegs||]
 	.dwattr $C$DW$45, DW_AT_type(*$C$DW$T$1847)
 	.dwattr $C$DW$45, DW_AT_external
-	.dwattr $C$DW$45, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$45, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$45, DW_AT_decl_line(0x2d2)
 	.dwattr $C$DW$45, DW_AT_decl_column(0x21)
 
@@ -558,7 +558,7 @@ $C$DW$46	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$46, DW_AT_location[DW_OP_addr ||DcsmZ1Regs||]
 	.dwattr $C$DW$46, DW_AT_type(*$C$DW$T$1829)
 	.dwattr $C$DW$46, DW_AT_external
-	.dwattr $C$DW$46, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$46, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$46, DW_AT_decl_line(0x197)
 	.dwattr $C$DW$46, DW_AT_decl_column(0x1e)
 
@@ -570,7 +570,7 @@ $C$DW$47	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$47, DW_AT_location[DW_OP_addr ||DcsmZ2Regs||]
 	.dwattr $C$DW$47, DW_AT_type(*$C$DW$T$1830)
 	.dwattr $C$DW$47, DW_AT_external
-	.dwattr $C$DW$47, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$47, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$47, DW_AT_decl_line(0x19f)
 	.dwattr $C$DW$47, DW_AT_decl_column(0x1e)
 
@@ -582,7 +582,7 @@ $C$DW$48	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$48, DW_AT_location[DW_OP_addr ||EQep1Regs||]
 	.dwattr $C$DW$48, DW_AT_type(*$C$DW$T$1840)
 	.dwattr $C$DW$48, DW_AT_external
-	.dwattr $C$DW$48, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$48, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$48, DW_AT_decl_line(0x27f)
 	.dwattr $C$DW$48, DW_AT_decl_column(0x1b)
 
@@ -594,7 +594,7 @@ $C$DW$49	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$49, DW_AT_location[DW_OP_addr ||EQep2Regs||]
 	.dwattr $C$DW$49, DW_AT_type(*$C$DW$T$1840)
 	.dwattr $C$DW$49, DW_AT_external
-	.dwattr $C$DW$49, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$49, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$49, DW_AT_decl_line(0x287)
 	.dwattr $C$DW$49, DW_AT_decl_column(0x1b)
 
@@ -606,7 +606,7 @@ $C$DW$50	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$50, DW_AT_location[DW_OP_addr ||EQep3Regs||]
 	.dwattr $C$DW$50, DW_AT_type(*$C$DW$T$1840)
 	.dwattr $C$DW$50, DW_AT_external
-	.dwattr $C$DW$50, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$50, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$50, DW_AT_decl_line(0x28f)
 	.dwattr $C$DW$50, DW_AT_decl_column(0x1b)
 
@@ -618,7 +618,7 @@ $C$DW$51	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$51, DW_AT_location[DW_OP_addr ||I2caRegs||]
 	.dwattr $C$DW$51, DW_AT_type(*$C$DW$T$1846)
 	.dwattr $C$DW$51, DW_AT_external
-	.dwattr $C$DW$51, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$51, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$51, DW_AT_decl_line(0x2c1)
 	.dwattr $C$DW$51, DW_AT_decl_column(0x1a)
 
@@ -630,7 +630,7 @@ $C$DW$52	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$52, DW_AT_location[DW_OP_addr ||I2cbRegs||]
 	.dwattr $C$DW$52, DW_AT_type(*$C$DW$T$1846)
 	.dwattr $C$DW$52, DW_AT_external
-	.dwattr $C$DW$52, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$52, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$52, DW_AT_decl_line(0x2c9)
 	.dwattr $C$DW$52, DW_AT_decl_column(0x1a)
 
@@ -642,7 +642,7 @@ $C$DW$53	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$53, DW_AT_location[DW_OP_addr ||IpcRegs||]
 	.dwattr $C$DW$53, DW_AT_type(*$C$DW$T$1848)
 	.dwattr $C$DW$53, DW_AT_external
-	.dwattr $C$DW$53, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$53, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$53, DW_AT_decl_line(0x2dc)
 	.dwattr $C$DW$53, DW_AT_decl_column(0x1f)
 
@@ -654,7 +654,7 @@ $C$DW$54	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$54, DW_AT_location[DW_OP_addr ||McbspaRegs||]
 	.dwattr $C$DW$54, DW_AT_type(*$C$DW$T$1851)
 	.dwattr $C$DW$54, DW_AT_external
-	.dwattr $C$DW$54, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$54, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$54, DW_AT_decl_line(0x2ff)
 	.dwattr $C$DW$54, DW_AT_decl_column(0x1c)
 
@@ -666,7 +666,7 @@ $C$DW$55	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$55, DW_AT_location[DW_OP_addr ||McbspbRegs||]
 	.dwattr $C$DW$55, DW_AT_type(*$C$DW$T$1851)
 	.dwattr $C$DW$55, DW_AT_external
-	.dwattr $C$DW$55, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$55, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$55, DW_AT_decl_line(0x307)
 	.dwattr $C$DW$55, DW_AT_decl_column(0x1c)
 
@@ -678,7 +678,7 @@ $C$DW$56	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$56, DW_AT_location[DW_OP_addr ||Emif1Regs||]
 	.dwattr $C$DW$56, DW_AT_type(*$C$DW$T$1837)
 	.dwattr $C$DW$56, DW_AT_external
-	.dwattr $C$DW$56, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$56, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$56, DW_AT_decl_line(0x203)
 	.dwattr $C$DW$56, DW_AT_decl_column(0x1b)
 
@@ -690,7 +690,7 @@ $C$DW$57	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$57, DW_AT_location[DW_OP_addr ||Emif2Regs||]
 	.dwattr $C$DW$57, DW_AT_type(*$C$DW$T$1837)
 	.dwattr $C$DW$57, DW_AT_external
-	.dwattr $C$DW$57, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$57, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$57, DW_AT_decl_line(0x20c)
 	.dwattr $C$DW$57, DW_AT_decl_column(0x1b)
 
@@ -702,7 +702,7 @@ $C$DW$58	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$58, DW_AT_location[DW_OP_addr ||Flash0EccRegs||]
 	.dwattr $C$DW$58, DW_AT_type(*$C$DW$T$1842)
 	.dwattr $C$DW$58, DW_AT_external
-	.dwattr $C$DW$58, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$58, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$58, DW_AT_decl_line(0x29f)
 	.dwattr $C$DW$58, DW_AT_decl_column(0x20)
 
@@ -714,7 +714,7 @@ $C$DW$59	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$59, DW_AT_location[DW_OP_addr ||WdRegs||]
 	.dwattr $C$DW$59, DW_AT_type(*$C$DW$T$1864)
 	.dwattr $C$DW$59, DW_AT_external
-	.dwattr $C$DW$59, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$59, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$59, DW_AT_decl_line(0x3a7)
 	.dwattr $C$DW$59, DW_AT_decl_column(0x19)
 
@@ -726,7 +726,7 @@ $C$DW$60	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$60, DW_AT_location[DW_OP_addr ||AccessProtectionRegs||]
 	.dwattr $C$DW$60, DW_AT_type(*$C$DW$T$1813)
 	.dwattr $C$DW$60, DW_AT_external
-	.dwattr $C$DW$60, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$60, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$60, DW_AT_decl_line(0x37)
 	.dwattr $C$DW$60, DW_AT_decl_column(0x28)
 
@@ -738,7 +738,7 @@ $C$DW$61	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$61, DW_AT_location[DW_OP_addr ||GpioDataRegs||]
 	.dwattr $C$DW$61, DW_AT_type(*$C$DW$T$1845)
 	.dwattr $C$DW$61, DW_AT_external
-	.dwattr $C$DW$61, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$61, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$61, DW_AT_decl_line(0x2b9)
 	.dwattr $C$DW$61, DW_AT_decl_column(0x20)
 
@@ -750,7 +750,7 @@ $C$DW$62	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$62, DW_AT_location[DW_OP_addr ||ClkCfgRegs||]
 	.dwattr $C$DW$62, DW_AT_type(*$C$DW$T$1823)
 	.dwattr $C$DW$62, DW_AT_external
-	.dwattr $C$DW$62, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$62, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$62, DW_AT_decl_line(0x10f)
 	.dwattr $C$DW$62, DW_AT_decl_column(0x1e)
 
@@ -762,7 +762,7 @@ $C$DW$63	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$63, DW_AT_location[DW_OP_addr ||MemoryErrorRegs||]
 	.dwattr $C$DW$63, DW_AT_type(*$C$DW$T$1849)
 	.dwattr $C$DW$63, DW_AT_external
-	.dwattr $C$DW$63, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$63, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$63, DW_AT_decl_line(0x2ef)
 	.dwattr $C$DW$63, DW_AT_decl_column(0x23)
 
@@ -774,7 +774,7 @@ $C$DW$64	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$64, DW_AT_location[DW_OP_addr ||AnalogSubsysRegs||]
 	.dwattr $C$DW$64, DW_AT_type(*$C$DW$T$1816)
 	.dwattr $C$DW$64, DW_AT_external
-	.dwattr $C$DW$64, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$64, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$64, DW_AT_decl_line(0x80)
 	.dwattr $C$DW$64, DW_AT_decl_column(0x24)
 
@@ -786,7 +786,7 @@ $C$DW$65	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$65, DW_AT_location[DW_OP_addr ||Cla1Regs||]
 	.dwattr $C$DW$65, DW_AT_type(*$C$DW$T$1818)
 	.dwattr $C$DW$65, DW_AT_external
-	.dwattr $C$DW$65, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$65, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$65, DW_AT_decl_line(0x9d)
 	.dwattr $C$DW$65, DW_AT_decl_column(0x1a)
 
@@ -798,7 +798,7 @@ $C$DW$66	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$66, DW_AT_location[DW_OP_addr ||Clb1LogicCfgRegs||]
 	.dwattr $C$DW$66, DW_AT_type(*$C$DW$T$1820)
 	.dwattr $C$DW$66, DW_AT_external
-	.dwattr $C$DW$66, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$66, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$66, DW_AT_decl_line(0xc5)
 	.dwattr $C$DW$66, DW_AT_decl_column(0x27)
 
@@ -810,7 +810,7 @@ $C$DW$67	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$67, DW_AT_location[DW_OP_addr ||Clb2LogicCfgRegs||]
 	.dwattr $C$DW$67, DW_AT_type(*$C$DW$T$1820)
 	.dwattr $C$DW$67, DW_AT_external
-	.dwattr $C$DW$67, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$67, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$67, DW_AT_decl_line(0xcd)
 	.dwattr $C$DW$67, DW_AT_decl_column(0x27)
 
@@ -822,7 +822,7 @@ $C$DW$68	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$68, DW_AT_location[DW_OP_addr ||Clb3LogicCfgRegs||]
 	.dwattr $C$DW$68, DW_AT_type(*$C$DW$T$1820)
 	.dwattr $C$DW$68, DW_AT_external
-	.dwattr $C$DW$68, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$68, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$68, DW_AT_decl_line(0xd5)
 	.dwattr $C$DW$68, DW_AT_decl_column(0x27)
 
@@ -834,7 +834,7 @@ $C$DW$69	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$69, DW_AT_location[DW_OP_addr ||Clb4LogicCfgRegs||]
 	.dwattr $C$DW$69, DW_AT_type(*$C$DW$T$1820)
 	.dwattr $C$DW$69, DW_AT_external
-	.dwattr $C$DW$69, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$69, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$69, DW_AT_decl_line(0xdd)
 	.dwattr $C$DW$69, DW_AT_decl_column(0x27)
 
@@ -846,7 +846,7 @@ $C$DW$70	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$70, DW_AT_location[DW_OP_addr ||Clb1LogicCtrlRegs||]
 	.dwattr $C$DW$70, DW_AT_type(*$C$DW$T$1821)
 	.dwattr $C$DW$70, DW_AT_external
-	.dwattr $C$DW$70, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$70, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$70, DW_AT_decl_line(0xe5)
 	.dwattr $C$DW$70, DW_AT_decl_column(0x28)
 
@@ -858,7 +858,7 @@ $C$DW$71	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$71, DW_AT_location[DW_OP_addr ||Clb2LogicCtrlRegs||]
 	.dwattr $C$DW$71, DW_AT_type(*$C$DW$T$1821)
 	.dwattr $C$DW$71, DW_AT_external
-	.dwattr $C$DW$71, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$71, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$71, DW_AT_decl_line(0xed)
 	.dwattr $C$DW$71, DW_AT_decl_column(0x28)
 
@@ -870,7 +870,7 @@ $C$DW$72	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$72, DW_AT_location[DW_OP_addr ||Clb3LogicCtrlRegs||]
 	.dwattr $C$DW$72, DW_AT_type(*$C$DW$T$1821)
 	.dwattr $C$DW$72, DW_AT_external
-	.dwattr $C$DW$72, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$72, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$72, DW_AT_decl_line(0xf5)
 	.dwattr $C$DW$72, DW_AT_decl_column(0x28)
 
@@ -882,7 +882,7 @@ $C$DW$73	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$73, DW_AT_location[DW_OP_addr ||Clb4LogicCtrlRegs||]
 	.dwattr $C$DW$73, DW_AT_type(*$C$DW$T$1821)
 	.dwattr $C$DW$73, DW_AT_external
-	.dwattr $C$DW$73, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$73, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$73, DW_AT_decl_line(0xfd)
 	.dwattr $C$DW$73, DW_AT_decl_column(0x28)
 
@@ -894,7 +894,7 @@ $C$DW$74	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$74, DW_AT_location[DW_OP_addr ||ClbXbarRegs||]
 	.dwattr $C$DW$74, DW_AT_type(*$C$DW$T$1822)
 	.dwattr $C$DW$74, DW_AT_external
-	.dwattr $C$DW$74, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$74, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$74, DW_AT_decl_line(0x106)
 	.dwattr $C$DW$74, DW_AT_decl_column(0x1f)
 
@@ -906,7 +906,7 @@ $C$DW$75	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$75, DW_AT_location[DW_OP_addr ||EPwmXbarRegs||]
 	.dwattr $C$DW$75, DW_AT_type(*$C$DW$T$1839)
 	.dwattr $C$DW$75, DW_AT_external
-	.dwattr $C$DW$75, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$75, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$75, DW_AT_decl_line(0x276)
 	.dwattr $C$DW$75, DW_AT_decl_column(0x20)
 
@@ -918,7 +918,7 @@ $C$DW$76	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$76, DW_AT_location[DW_OP_addr ||OutputXbarRegs||]
 	.dwattr $C$DW$76, DW_AT_type(*$C$DW$T$1853)
 	.dwattr $C$DW$76, DW_AT_external
-	.dwattr $C$DW$76, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$76, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$76, DW_AT_decl_line(0x318)
 	.dwattr $C$DW$76, DW_AT_decl_column(0x22)
 
@@ -930,7 +930,7 @@ $C$DW$77	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$77, DW_AT_location[DW_OP_addr ||Sdfm1Regs||]
 	.dwattr $C$DW$77, DW_AT_type(*$C$DW$T$1859)
 	.dwattr $C$DW$77, DW_AT_external
-	.dwattr $C$DW$77, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$77, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$77, DW_AT_decl_line(0x363)
 	.dwattr $C$DW$77, DW_AT_decl_column(0x1b)
 
@@ -942,7 +942,7 @@ $C$DW$78	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$78, DW_AT_location[DW_OP_addr ||Sdfm2Regs||]
 	.dwattr $C$DW$78, DW_AT_type(*$C$DW$T$1859)
 	.dwattr $C$DW$78, DW_AT_external
-	.dwattr $C$DW$78, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$78, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$78, DW_AT_decl_line(0x36b)
 	.dwattr $C$DW$78, DW_AT_decl_column(0x1b)
 
@@ -954,7 +954,7 @@ $C$DW$79	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$79, DW_AT_location[DW_OP_addr ||UppRegs||]
 	.dwattr $C$DW$79, DW_AT_type(*$C$DW$T$1863)
 	.dwattr $C$DW$79, DW_AT_external
-	.dwattr $C$DW$79, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$79, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$79, DW_AT_decl_line(0x39e)
 	.dwattr $C$DW$79, DW_AT_decl_column(0x1a)
 
@@ -966,7 +966,7 @@ $C$DW$80	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$80, DW_AT_location[DW_OP_addr ||MemCfgRegs||]
 	.dwattr $C$DW$80, DW_AT_type(*$C$DW$T$1850)
 	.dwattr $C$DW$80, DW_AT_external
-	.dwattr $C$DW$80, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$80, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$80, DW_AT_decl_line(0x2f7)
 	.dwattr $C$DW$80, DW_AT_decl_column(0x1e)
 
@@ -978,7 +978,7 @@ $C$DW$81	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$81, DW_AT_location[DW_OP_addr ||AdcaRegs||]
 	.dwattr $C$DW$81, DW_AT_type(*$C$DW$T$1814)
 	.dwattr $C$DW$81, DW_AT_external
-	.dwattr $C$DW$81, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$81, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$81, DW_AT_decl_line(0x3f)
 	.dwattr $C$DW$81, DW_AT_decl_column(0x1a)
 
@@ -990,7 +990,7 @@ $C$DW$82	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$82, DW_AT_location[DW_OP_addr ||AdcbRegs||]
 	.dwattr $C$DW$82, DW_AT_type(*$C$DW$T$1814)
 	.dwattr $C$DW$82, DW_AT_external
-	.dwattr $C$DW$82, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$82, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$82, DW_AT_decl_line(0x47)
 	.dwattr $C$DW$82, DW_AT_decl_column(0x1a)
 
@@ -1002,7 +1002,7 @@ $C$DW$83	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$83, DW_AT_location[DW_OP_addr ||AdccRegs||]
 	.dwattr $C$DW$83, DW_AT_type(*$C$DW$T$1814)
 	.dwattr $C$DW$83, DW_AT_external
-	.dwattr $C$DW$83, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$83, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$83, DW_AT_decl_line(0x4f)
 	.dwattr $C$DW$83, DW_AT_decl_column(0x1a)
 
@@ -1014,7 +1014,7 @@ $C$DW$84	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$84, DW_AT_location[DW_OP_addr ||AdcdRegs||]
 	.dwattr $C$DW$84, DW_AT_type(*$C$DW$T$1814)
 	.dwattr $C$DW$84, DW_AT_external
-	.dwattr $C$DW$84, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$84, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$84, DW_AT_decl_line(0x57)
 	.dwattr $C$DW$84, DW_AT_decl_column(0x1a)
 
@@ -1026,7 +1026,7 @@ $C$DW$85	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$85, DW_AT_location[DW_OP_addr ||CpuSysRegs||]
 	.dwattr $C$DW$85, DW_AT_type(*$C$DW$T$1826)
 	.dwattr $C$DW$85, DW_AT_external
-	.dwattr $C$DW$85, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$85, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$85, DW_AT_decl_line(0x16f)
 	.dwattr $C$DW$85, DW_AT_decl_column(0x1e)
 
@@ -1038,7 +1038,7 @@ $C$DW$86	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$86, DW_AT_location[DW_OP_addr ||DmaRegs||]
 	.dwattr $C$DW$86, DW_AT_type(*$C$DW$T$1833)
 	.dwattr $C$DW$86, DW_AT_external
-	.dwattr $C$DW$86, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$86, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$86, DW_AT_decl_line(0x1b9)
 	.dwattr $C$DW$86, DW_AT_decl_column(0x1a)
 
@@ -1050,7 +1050,7 @@ $C$DW$87	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$87, DW_AT_location[DW_OP_addr ||EPwm1Regs||]
 	.dwattr $C$DW$87, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$87, DW_AT_external
-	.dwattr $C$DW$87, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$87, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$87, DW_AT_decl_line(0x215)
 	.dwattr $C$DW$87, DW_AT_decl_column(0x1b)
 
@@ -1062,7 +1062,7 @@ $C$DW$88	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$88, DW_AT_location[DW_OP_addr ||EPwm2Regs||]
 	.dwattr $C$DW$88, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$88, DW_AT_external
-	.dwattr $C$DW$88, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$88, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$88, DW_AT_decl_line(0x21d)
 	.dwattr $C$DW$88, DW_AT_decl_column(0x1b)
 
@@ -1074,7 +1074,7 @@ $C$DW$89	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$89, DW_AT_location[DW_OP_addr ||EPwm3Regs||]
 	.dwattr $C$DW$89, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$89, DW_AT_external
-	.dwattr $C$DW$89, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$89, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$89, DW_AT_decl_line(0x225)
 	.dwattr $C$DW$89, DW_AT_decl_column(0x1b)
 
@@ -1086,7 +1086,7 @@ $C$DW$90	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$90, DW_AT_location[DW_OP_addr ||EPwm4Regs||]
 	.dwattr $C$DW$90, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$90, DW_AT_external
-	.dwattr $C$DW$90, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$90, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$90, DW_AT_decl_line(0x22d)
 	.dwattr $C$DW$90, DW_AT_decl_column(0x1b)
 
@@ -1098,7 +1098,7 @@ $C$DW$91	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$91, DW_AT_location[DW_OP_addr ||EPwm5Regs||]
 	.dwattr $C$DW$91, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$91, DW_AT_external
-	.dwattr $C$DW$91, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$91, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$91, DW_AT_decl_line(0x235)
 	.dwattr $C$DW$91, DW_AT_decl_column(0x1b)
 
@@ -1110,7 +1110,7 @@ $C$DW$92	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$92, DW_AT_location[DW_OP_addr ||EPwm6Regs||]
 	.dwattr $C$DW$92, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$92, DW_AT_external
-	.dwattr $C$DW$92, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$92, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$92, DW_AT_decl_line(0x23d)
 	.dwattr $C$DW$92, DW_AT_decl_column(0x1b)
 
@@ -1122,7 +1122,7 @@ $C$DW$93	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$93, DW_AT_location[DW_OP_addr ||EPwm7Regs||]
 	.dwattr $C$DW$93, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$93, DW_AT_external
-	.dwattr $C$DW$93, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$93, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$93, DW_AT_decl_line(0x245)
 	.dwattr $C$DW$93, DW_AT_decl_column(0x1b)
 
@@ -1134,7 +1134,7 @@ $C$DW$94	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$94, DW_AT_location[DW_OP_addr ||EPwm8Regs||]
 	.dwattr $C$DW$94, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$94, DW_AT_external
-	.dwattr $C$DW$94, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$94, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$94, DW_AT_decl_line(0x24d)
 	.dwattr $C$DW$94, DW_AT_decl_column(0x1b)
 
@@ -1146,7 +1146,7 @@ $C$DW$95	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$95, DW_AT_location[DW_OP_addr ||EPwm9Regs||]
 	.dwattr $C$DW$95, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$95, DW_AT_external
-	.dwattr $C$DW$95, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$95, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$95, DW_AT_decl_line(0x255)
 	.dwattr $C$DW$95, DW_AT_decl_column(0x1b)
 
@@ -1158,7 +1158,7 @@ $C$DW$96	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$96, DW_AT_location[DW_OP_addr ||EPwm10Regs||]
 	.dwattr $C$DW$96, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$96, DW_AT_external
-	.dwattr $C$DW$96, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$96, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$96, DW_AT_decl_line(0x25d)
 	.dwattr $C$DW$96, DW_AT_decl_column(0x1b)
 
@@ -1170,7 +1170,7 @@ $C$DW$97	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$97, DW_AT_location[DW_OP_addr ||EPwm11Regs||]
 	.dwattr $C$DW$97, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$97, DW_AT_external
-	.dwattr $C$DW$97, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$97, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$97, DW_AT_decl_line(0x265)
 	.dwattr $C$DW$97, DW_AT_decl_column(0x1b)
 
@@ -1182,7 +1182,7 @@ $C$DW$98	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$98, DW_AT_location[DW_OP_addr ||EPwm12Regs||]
 	.dwattr $C$DW$98, DW_AT_type(*$C$DW$T$1838)
 	.dwattr $C$DW$98, DW_AT_external
-	.dwattr $C$DW$98, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$98, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$98, DW_AT_decl_line(0x26d)
 	.dwattr $C$DW$98, DW_AT_decl_column(0x1b)
 
@@ -1194,7 +1194,7 @@ $C$DW$99	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$99, DW_AT_location[DW_OP_addr ||Clb1DataExchRegs||]
 	.dwattr $C$DW$99, DW_AT_type(*$C$DW$T$1819)
 	.dwattr $C$DW$99, DW_AT_external
-	.dwattr $C$DW$99, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$99, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$99, DW_AT_decl_line(0xa5)
 	.dwattr $C$DW$99, DW_AT_decl_column(0x28)
 
@@ -1206,7 +1206,7 @@ $C$DW$100	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$100, DW_AT_location[DW_OP_addr ||Clb2DataExchRegs||]
 	.dwattr $C$DW$100, DW_AT_type(*$C$DW$T$1819)
 	.dwattr $C$DW$100, DW_AT_external
-	.dwattr $C$DW$100, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$100, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$100, DW_AT_decl_line(0xad)
 	.dwattr $C$DW$100, DW_AT_decl_column(0x28)
 
@@ -1218,7 +1218,7 @@ $C$DW$101	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$101, DW_AT_location[DW_OP_addr ||Clb3DataExchRegs||]
 	.dwattr $C$DW$101, DW_AT_type(*$C$DW$T$1819)
 	.dwattr $C$DW$101, DW_AT_external
-	.dwattr $C$DW$101, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$101, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$101, DW_AT_decl_line(0xb5)
 	.dwattr $C$DW$101, DW_AT_decl_column(0x28)
 
@@ -1230,7 +1230,7 @@ $C$DW$102	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$102, DW_AT_location[DW_OP_addr ||Clb4DataExchRegs||]
 	.dwattr $C$DW$102, DW_AT_type(*$C$DW$T$1819)
 	.dwattr $C$DW$102, DW_AT_external
-	.dwattr $C$DW$102, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$102, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$102, DW_AT_decl_line(0xbd)
 	.dwattr $C$DW$102, DW_AT_decl_column(0x28)
 
@@ -1242,7 +1242,7 @@ $C$DW$103	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$103, DW_AT_location[DW_OP_addr ||DevCfgRegs||]
 	.dwattr $C$DW$103, DW_AT_type(*$C$DW$T$1831)
 	.dwattr $C$DW$103, DW_AT_external
-	.dwattr $C$DW$103, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$103, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$103, DW_AT_decl_line(0x1a8)
 	.dwattr $C$DW$103, DW_AT_decl_column(0x1e)
 
@@ -1254,7 +1254,7 @@ $C$DW$104	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$104, DW_AT_location[DW_OP_addr ||CanaRegs||]
 	.dwattr $C$DW$104, DW_AT_type(*$C$DW$T$1817)
 	.dwattr $C$DW$104, DW_AT_external
-	.dwattr $C$DW$104, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$104, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$104, DW_AT_decl_line(0x8a)
 	.dwattr $C$DW$104, DW_AT_decl_column(0x1a)
 
@@ -1266,7 +1266,7 @@ $C$DW$105	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$105, DW_AT_location[DW_OP_addr ||CanbRegs||]
 	.dwattr $C$DW$105, DW_AT_type(*$C$DW$T$1817)
 	.dwattr $C$DW$105, DW_AT_external
-	.dwattr $C$DW$105, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$105, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$105, DW_AT_decl_line(0x94)
 	.dwattr $C$DW$105, DW_AT_decl_column(0x1a)
 
@@ -1278,7 +1278,7 @@ $C$DW$106	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$106, DW_AT_location[DW_OP_addr ||GpioCtrlRegs||]
 	.dwattr $C$DW$106, DW_AT_type(*$C$DW$T$1844)
 	.dwattr $C$DW$106, DW_AT_external
-	.dwattr $C$DW$106, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$106, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$106, DW_AT_decl_line(0x2b0)
 	.dwattr $C$DW$106, DW_AT_decl_column(0x20)
 
@@ -1290,7 +1290,7 @@ $C$DW$107	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$107, DW_AT_location[DW_OP_addr ||Flash0CtrlRegs||]
 	.dwattr $C$DW$107, DW_AT_type(*$C$DW$T$1841)
 	.dwattr $C$DW$107, DW_AT_external
-	.dwattr $C$DW$107, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$107, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$107, DW_AT_decl_line(0x297)
 	.dwattr $C$DW$107, DW_AT_decl_column(0x21)
 
@@ -1302,7 +1302,7 @@ $C$DW$108	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$108, DW_AT_location[DW_OP_addr ||PieVectTable||]
 	.dwattr $C$DW$108, DW_AT_type(*$C$DW$T$1855)
 	.dwattr $C$DW$108, DW_AT_external
-	.dwattr $C$DW$108, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/headers/source/F2837xD_GlobalVariableDefs.c")
+	.dwattr $C$DW$108, DW_AT_decl_file("../src_device/F2837xD_GlobalVariableDefs.c")
 	.dwattr $C$DW$108, DW_AT_decl_line(0x329)
 	.dwattr $C$DW$108, DW_AT_decl_column(0x20)
 
@@ -1414,8 +1414,8 @@ $C$DW$108	.dwtag  DW_TAG_variable
 	.sblock	"WdRegsFile"
 	.sblock	"XbarRegsFile"
 	.sblock	"XintRegsFile"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{90F53C7A-BFE0-45A8-8390-32258987007E} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{D1F3C88F-D86C-489D-8CD1-100303D6A110} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{F1449708-9160-4DC7-A291-EDFFFD54C674} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{A13B2FBF-4DAB-4AA7-830B-80F3F71A9706} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{6337A8F4-6A42-436F-8467-4F8552498B94} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{D3BA6878-1D06-4ACD-A9AF-DB15F01E2F7F} 
 
 ;***************************************************************
 ;* BUILD ATTRIBUTES                                            *

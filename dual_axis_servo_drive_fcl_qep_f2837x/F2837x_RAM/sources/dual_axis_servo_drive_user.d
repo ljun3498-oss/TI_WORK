@@ -1,6 +1,6 @@
 # FIXED
 
-sources/dual_axis_servo_drive_user.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive_user.c
+sources/dual_axis_servo_drive_user.obj: ../sources/dual_axis_servo_drive_user.c
 sources/dual_axis_servo_drive_user.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/dual_axis_servo_drive_settings.h
 sources/dual_axis_servo_drive_user.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h
 sources/dual_axis_servo_drive_user.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h
@@ -184,7 +184,7 @@ sources/dual_axis_servo_drive_user.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00
 sources/dual_axis_servo_drive_user.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/include/sfra_gui_scicomms_driverlib.h
 sources/dual_axis_servo_drive_user.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/device.h
 
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive_user.c:
+../sources/dual_axis_servo_drive_user.c:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/dual_axis_servo_drive_settings.h:
 

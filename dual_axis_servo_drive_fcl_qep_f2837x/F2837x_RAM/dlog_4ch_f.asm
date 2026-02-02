@@ -1,17 +1,17 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Mon Feb  2 20:54:34 2026                 *
+;* Date/Time created: Mon Feb  2 21:10:01 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c")
+	.dwattr $C$DW$CU, DW_AT_name("../sources/dlog_4ch_f.c")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f2837x\F2837x_RAM")
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{690CC894-87E8-44EE-9F3B-55252878A1D8} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{CADC15A7-5D21-443C-B387-3F7136C979A0} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{8840DCAD-61E0-4E20-9E0C-F5277C6AF337} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{BD61EF3E-984F-4218-8767-E87F86F43F2A} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{7A6B0135-691B-46C3-A62B-FDEC9F2BC763} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{2141042F-12F9-4F91-9CF0-C96B5368061F} 
 	.sect	".text:DLOG_4CH_F_init"
 	.clink
 	.global	||DLOG_4CH_F_init||
@@ -22,11 +22,11 @@ $C$DW$1	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$1, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$1, DW_AT_linkage_name("DLOG_4CH_F_init")
 	.dwattr $C$DW$1, DW_AT_external
-	.dwattr $C$DW$1, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c")
+	.dwattr $C$DW$1, DW_AT_decl_file("../sources/dlog_4ch_f.c")
 	.dwattr $C$DW$1, DW_AT_decl_line(0x34)
 	.dwattr $C$DW$1, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$1, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 53,column 1,is_stmt,address ||DLOG_4CH_F_init||,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 53,column 1,is_stmt,address ||DLOG_4CH_F_init||,isa 0
 
 	.dwfde $C$DW$CIE, ||DLOG_4CH_F_init||
 $C$DW$2	.dwtag  DW_TAG_formal_parameter
@@ -53,49 +53,49 @@ $C$DW$3	.dwtag  DW_TAG_variable
 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 58,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 58,column 2,is_stmt,isa 0
         MOVB      XAR0,#8               ; [CPU_ALU] |58| 
         MOVB      ACC,#0                ; [CPU_ALU] |58| 
         MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |58| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 59,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 59,column 2,is_stmt,isa 0
         MOVB      XAR0,#10              ; [CPU_ALU] |59| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 62,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 62,column 2,is_stmt,isa 0
         ZERO      R0H                   ; [CPU_FPU] |62| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 59,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 59,column 2,is_stmt,isa 0
         MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |59| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 60,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 60,column 2,is_stmt,isa 0
         MOVB      XAR0,#12              ; [CPU_ALU] |60| 
         MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |60| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 54,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 54,column 2,is_stmt,isa 0
         MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |54| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 55,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 55,column 2,is_stmt,isa 0
         MOVL      *+XAR4[2],ACC         ; [CPU_ALU] |55| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 56,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 56,column 2,is_stmt,isa 0
         MOVL      *+XAR4[4],ACC         ; [CPU_ALU] |56| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 57,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 57,column 2,is_stmt,isa 0
         MOVL      *+XAR4[6],ACC         ; [CPU_ALU] |57| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 61,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 61,column 2,is_stmt,isa 0
         MOVB      XAR0,#14              ; [CPU_ALU] |61| 
         MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |61| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 62,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 62,column 2,is_stmt,isa 0
         MOVB      XAR0,#16              ; [CPU_ALU] |62| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |62| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 63,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 63,column 2,is_stmt,isa 0
         MOVB      XAR0,#18              ; [CPU_ALU] |63| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |63| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 64,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 64,column 2,is_stmt,isa 0
         MOVB      XAR0,#20              ; [CPU_ALU] |64| 
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |64| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 65,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 65,column 2,is_stmt,isa 0
         MOVB      XAR0,#21              ; [CPU_ALU] |65| 
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |65| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 66,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 66,column 2,is_stmt,isa 0
         MOVB      XAR0,#22              ; [CPU_ALU] |66| 
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |66| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 67,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 67,column 2,is_stmt,isa 0
         MOVB      XAR0,#23              ; [CPU_ALU] |67| 
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |67| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 68,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 68,column 2,is_stmt,isa 0
         MOVB      XAR0,#24              ; [CPU_ALU] |68| 
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |68| 
 $C$DW$4	.dwtag  DW_TAG_TI_branch
@@ -104,7 +104,7 @@ $C$DW$4	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$1, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c")
+	.dwattr $C$DW$1, DW_AT_TI_end_file("../sources/dlog_4ch_f.c")
 	.dwattr $C$DW$1, DW_AT_TI_end_line(0x45)
 	.dwattr $C$DW$1, DW_AT_TI_end_column(0x01)
 	.dwendentry
@@ -120,11 +120,11 @@ $C$DW$5	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$5, DW_AT_high_pc(0x00)
 	.dwattr $C$DW$5, DW_AT_linkage_name("DLOG_4CH_F_FUNC")
 	.dwattr $C$DW$5, DW_AT_external
-	.dwattr $C$DW$5, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c")
+	.dwattr $C$DW$5, DW_AT_decl_file("../sources/dlog_4ch_f.c")
 	.dwattr $C$DW$5, DW_AT_decl_line(0x48)
 	.dwattr $C$DW$5, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$5, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 73,column 1,is_stmt,address ||DLOG_4CH_F_FUNC||,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 73,column 1,is_stmt,address ||DLOG_4CH_F_FUNC||,isa 0
 
 	.dwfde $C$DW$CIE, ||DLOG_4CH_F_FUNC||
 $C$DW$6	.dwtag  DW_TAG_formal_parameter
@@ -159,7 +159,7 @@ $C$DW$7	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -4
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 74,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 74,column 2,is_stmt,isa 0
         MOVB      XAR0,#20              ; [CPU_ALU] |74| 
         MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |74| 
         CMPB      AL,#1                 ; [CPU_ALU] |74| 
@@ -168,25 +168,25 @@ $C$DW$7	.dwtag  DW_TAG_variable
         CMPB      AL,#2                 ; [CPU_ALU] |74| 
         B         ||$C$L3||,NEQ         ; [CPU_ALU] |74| 
         ; branchcc occurs ; [] |74| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 86,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 86,column 13,is_stmt,isa 0
         MOVB      XAR0,#22              ; [CPU_ALU] |86| 
         MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |86| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 88,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 88,column 13,is_stmt,isa 0
         MOVB      XAR0,#21              ; [CPU_ALU] |88| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 86,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 86,column 13,is_stmt,isa 0
         ADDB      AL,#1                 ; [CPU_ALU] |86| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 88,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 88,column 13,is_stmt,isa 0
         CMP       AL,*+XAR4[AR0]        ; [CPU_ALU] |88| 
         B         ||$C$L1||,NEQ         ; [CPU_ALU] |88| 
         ; branchcc occurs ; [] |88| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 90,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 90,column 17,is_stmt,isa 0
         MOVB      XAR0,#22              ; [CPU_ALU] |90| 
         SETC      SXM                   ; [CPU_ALU] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 91,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 91,column 17,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[0]        ; [CPU_ALU] |91| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 90,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 90,column 17,is_stmt,isa 0
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |90| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 91,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 91,column 17,is_stmt,isa 0
         MOVB      XAR0,#24              ; [CPU_ALU] |91| 
         MOV       ACC,*+XAR4[AR0] << 1  ; [CPU_ALU] |91| 
         MOVL      XAR6,*+XAR5[0]        ; [CPU_ALU] |91| 
@@ -194,7 +194,7 @@ $C$DW$7	.dwtag  DW_TAG_variable
         ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |91| 
         MOVL      XAR5,ACC              ; [CPU_ALU] |91| 
         MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |91| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 92,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 92,column 17,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[2]        ; [CPU_ALU] |92| 
         MOVB      XAR0,#24              ; [CPU_ALU] |92| 
         MOV       ACC,*+XAR4[AR0] << 1  ; [CPU_ALU] |92| 
@@ -203,7 +203,7 @@ $C$DW$7	.dwtag  DW_TAG_variable
         ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |92| 
         MOVL      XAR5,ACC              ; [CPU_ALU] |92| 
         MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |92| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 93,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 93,column 17,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[4]        ; [CPU_ALU] |93| 
         MOVB      XAR0,#24              ; [CPU_ALU] |93| 
         MOV       ACC,*+XAR4[AR0] << 1  ; [CPU_ALU] |93| 
@@ -212,7 +212,7 @@ $C$DW$7	.dwtag  DW_TAG_variable
         ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |93| 
         MOVL      XAR5,ACC              ; [CPU_ALU] |93| 
         MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |93| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 94,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 94,column 17,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[6]        ; [CPU_ALU] |94| 
         MOVB      XAR0,#24              ; [CPU_ALU] |94| 
         MOV       ACC,*+XAR4[AR0] << 1  ; [CPU_ALU] |94| 
@@ -220,11 +220,11 @@ $C$DW$7	.dwtag  DW_TAG_variable
         MOVL      XAR6,*+XAR5[0]        ; [CPU_ALU] |94| 
         ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |94| 
         MOVL      XAR5,ACC              ; [CPU_ALU] |94| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 97,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 97,column 17,is_stmt,isa 0
         MOVB      XAR0,#24              ; [CPU_ALU] |97| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 94,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 94,column 17,is_stmt,isa 0
         MOVL      *+XAR5[0],XAR6        ; [CPU_ALU] |94| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 97,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 97,column 17,is_stmt,isa 0
         MOV       AL,*+XAR4[AR0]        ; [CPU_ALU] |97| 
         MOVB      XAR0,#23              ; [CPU_ALU] |97| 
         ADDB      AL,#1                 ; [CPU_ALU] |97| 
@@ -233,13 +233,13 @@ $C$DW$7	.dwtag  DW_TAG_variable
         MOV       *+XAR4[AR0],AL,NEQ    ; [CPU_ALU] 
         B         ||$C$L3||,NEQ         ; [CPU_ALU] 
         ; branchcc occurs ; [] 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 99,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 99,column 21,is_stmt,isa 0
         MOVB      XAR1,#24              ; [CPU_ALU] |99| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 100,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 100,column 21,is_stmt,isa 0
         MOVB      XAR0,#20              ; [CPU_ALU] |100| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 99,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 99,column 21,is_stmt,isa 0
         MOV       *+XAR4[AR1],#0        ; [CPU_ALU] |99| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 100,column 21,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 100,column 21,is_stmt,isa 0
         MOVB      *+XAR4[AR0],#1,UNC    ; [CPU_ALU] |100| 
         B         ||$C$L3||,UNC         ; [CPU_ALU] |100| 
         ; branch occurs ; [] |100| 
@@ -249,7 +249,7 @@ $C$DW$7	.dwtag  DW_TAG_variable
         B         ||$C$L3||,UNC         ; [CPU_ALU] 
         ; branch occurs ; [] 
 ||$C$L2||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 77,column 13,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 77,column 13,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[0]        ; [CPU_ALU] |77| 
         MOVB      XAR0,#18              ; [CPU_ALU] |77| 
         MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |77| 
@@ -262,11 +262,11 @@ $C$DW$7	.dwtag  DW_TAG_variable
         MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |77| 
         CMPF32    R1H,R0H               ; [CPU_FPU] |77| 
         MOVST0    ZF, NF                ; [CPU_FPU] |77| 
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 81,column 17,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 81,column 17,is_stmt,isa 0
         MOVB      XAR0,#20,LT           ; [CPU_ALU] |81| 
         MOVB      *+XAR4[AR0],#2,LT     ; [CPU_ALU] |81| 
 ||$C$L3||:    
-	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c",line 106,column 2,is_stmt,isa 0
+	.dwpsn	file "../sources/dlog_4ch_f.c",line 106,column 2,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[0]        ; [CPU_ALU] |106| 
         MOVB      XAR0,#16              ; [CPU_ALU] |106| 
         MOVL      ACC,*+XAR5[0]         ; [CPU_ALU] |106| 
@@ -282,7 +282,7 @@ $C$DW$8	.dwtag  DW_TAG_TI_branch
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$5, DW_AT_TI_end_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c")
+	.dwattr $C$DW$5, DW_AT_TI_end_file("../sources/dlog_4ch_f.c")
 	.dwattr $C$DW$5, DW_AT_TI_end_line(0x6b)
 	.dwattr $C$DW$5, DW_AT_TI_end_column(0x01)
 	.dwendentry

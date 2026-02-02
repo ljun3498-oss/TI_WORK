@@ -1,6 +1,6 @@
 # FIXED
 
-sources/sfra_gui.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c
+sources/sfra_gui.obj: ../sources/sfra_gui.c
 sources/sfra_gui.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/sfra_settings.h
 sources/sfra_gui.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/dual_axis_servo_drive_settings.h
 sources/sfra_gui.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h
@@ -116,7 +116,7 @@ sources/sfra_gui.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/inclu
 sources/sfra_gui.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/include/sfra_gui_scicomms_driverlib.h
 sources/sfra_gui.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/device.h
 
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c:
+../sources/sfra_gui.c:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/sfra_settings.h:
 

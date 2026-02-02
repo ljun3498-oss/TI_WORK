@@ -24,8 +24,8 @@ ORDERED_OBJS += \
 "./src_device/device.obj" \
 "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/ccs/Release/driverlib.lib" \
 "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/lib/sfra.lib" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/cmd/F2837xD_Headers_nonBIOS_cpu1_eabi.cmd" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/cmd/dual_axis_f2837x_ram_lnk_cpu1.cmd" \
+"../src_device/F2837xD_Headers_nonBIOS_cpu1_eabi.cmd" \
+"../src_device/dual_axis_f2837x_ram_lnk_cpu1.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
 

@@ -1,6 +1,6 @@
 # FIXED
 
-sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/source/dual_axis_servo_drive_hal.c
+sources/dual_axis_servo_drive_hal.obj: ../sources/dual_axis_servo_drive_hal.c
 sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/dual_axis_servo_drive_settings.h
 sources/dual_axis_servo_drive_hal.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h
 sources/dual_axis_servo_drive_hal.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_ti_config.h
@@ -180,7 +180,7 @@ sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_
 sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/CLA_v1.0/RAMP_GEN_CLA.h
 sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h
 
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/source/dual_axis_servo_drive_hal.c:
+../sources/dual_axis_servo_drive_hal.c:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/dual_axis_servo_drive_settings.h:
 

@@ -1,16 +1,16 @@
 ;***************************************************************
 ;* TMS320x280xx Control Law Accelerator G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Mon Feb  2 20:54:34 2026                 *
+;* Date/Time created: Mon Feb  2 21:10:01 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 
 $C$DW$CU	.dwtag  DW_TAG_compile_unit
-	.dwattr $C$DW$CU, DW_AT_name("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive_cla_tasks.cla")
+	.dwattr $C$DW$CU, DW_AT_name("../sources/dual_axis_servo_drive_cla_tasks.cla")
 	.dwattr $C$DW$CU, DW_AT_producer("TI TMS320x280xx Control Law Accelerator G3 C/C++ Codegen PC v22.6.2.LTS Copyright (c) 1996-2018 Texas Instruments Incorporated")
 	.dwattr $C$DW$CU, DW_AT_TI_version(0x01)
 	.dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f2837x\F2837x_RAM")
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\optcla.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{BF75BAD2-23AA-48BC-8861-B8FB01AC2590} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{4E78A598-9B71-4B0F-9FF9-F953FD9C031B} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\aciacla.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{F800E690-3E7E-4F5A-A648-1DC9F61F8DE0} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\optcla.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{B2CACB01-0EB9-4F72-8DE0-974179A9D3CB} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{72E7C76E-DB3B-47D9-9D04-A7B4560905E9} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\aciacla.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{CB7F9497-A65A-46DF-8EE2-0B65EB11C91A} 
 	.dwendtag $C$DW$CU
 
 

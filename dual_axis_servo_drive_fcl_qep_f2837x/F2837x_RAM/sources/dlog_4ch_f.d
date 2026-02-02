@@ -1,6 +1,6 @@
 # FIXED
 
-sources/dlog_4ch_f.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c
+sources/dlog_4ch_f.obj: ../sources/dlog_4ch_f.c
 sources/dlog_4ch_f.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/include/dlog_4ch_f.h
 sources/dlog_4ch_f.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/device.h
 sources/dlog_4ch_f.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/driverlib.h
@@ -90,7 +90,7 @@ sources/dlog_4ch_f.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/dr
 sources/dlog_4ch_f.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/version.h
 sources/dlog_4ch_f.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
 
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c:
+../sources/dlog_4ch_f.c:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/include/dlog_4ch_f.h:
 

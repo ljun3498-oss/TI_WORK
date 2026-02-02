@@ -1,6 +1,6 @@
 # FIXED
 
-src_device/device.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/source/device.c
+src_device/device.obj: ../src_device/device.c
 src_device/device.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/device.h
 src_device/device.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/driverlib.h
 src_device/device.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/inc/hw_memmap.h
@@ -89,7 +89,7 @@ src_device/device.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/dri
 src_device/device.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/version.h
 src_device/device.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
 
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/source/device.c:
+../src_device/device.c:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/device_support/f2837xd/common/include/device.h:
 

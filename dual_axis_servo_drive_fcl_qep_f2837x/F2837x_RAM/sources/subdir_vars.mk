@@ -6,17 +6,17 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CLA_SRCS += \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive_cla_tasks.cla \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cla_code_dm.cla 
+../sources/dual_axis_servo_drive_cla_tasks.cla \
+../sources/fcl_cla_code_dm.cla 
 
 C_SRCS += \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/source/dual_axis_servo_drive_hal.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive_user.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code_dm.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c \
-C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c 
+../sources/dlog_4ch_f.c \
+../sources/dual_axis_servo_drive.c \
+../sources/dual_axis_servo_drive_hal.c \
+../sources/dual_axis_servo_drive_user.c \
+../sources/fcl_cpu_code_dm.c \
+../sources/sfra_gui.c \
+../sources/sfra_gui_scicomms_driverlib.c 
 
 CLA_DEPS += \
 ./sources/dual_axis_servo_drive_cla_tasks.d \
@@ -67,12 +67,12 @@ CLA_DEPS__QUOTED += \
 "sources\fcl_cla_code_dm.d" 
 
 C_SRCS__QUOTED += \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/datalog/source/dlog_4ch_f.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/source/dual_axis_servo_drive_hal.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/dual_axis_servo_drive_user.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/source/fcl_cpu_code_dm.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/common/sensored_foc/source/sfra_gui.c" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/source/sfra_gui_scicomms_driverlib.c" 
+"../sources/dlog_4ch_f.c" \
+"../sources/dual_axis_servo_drive.c" \
+"../sources/dual_axis_servo_drive_hal.c" \
+"../sources/dual_axis_servo_drive_user.c" \
+"../sources/fcl_cpu_code_dm.c" \
+"../sources/sfra_gui.c" \
+"../sources/sfra_gui_scicomms_driverlib.c" 
 
 

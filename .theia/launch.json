@@ -41,44 +41,6 @@
                     "C28xx_CPU1"
                 ]
             }
-        },
-        {
-            "name": "fcl_f2837x_tmdxiddk",
-            "type": "ccs-debug",
-            "request": "launch",
-            "projectInfo": {
-                "name": "fcl_f2837x_tmdxiddk",
-                "resourceId": "/fcl_f2837x_tmdxiddk"
-            },
-            "launchSettings": {
-                "coresToLoadForProjectLaunch": [
-                    "C28xx_CPU1"
-                ]
-            },
-            "connections": [
-                {
-                    "name": "Texas Instruments XDS100v2 USB Debug Probe_0",
-                    "cores": [
-                        {
-                            "name": "C28xx_CPU1",
-                            "debuggerSettings": {
-                                "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "Texas Instruments XDS100v3 USB Debug Probe",
-                    "cores": [
-                        {
-                            "name": "C28xx_CPU1",
-                            "debuggerSettings": {
-                                "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
-                            }
-                        }
-                    ]
-                }
-            ]
         }
     ]
 }
