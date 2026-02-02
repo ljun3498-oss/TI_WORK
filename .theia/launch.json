@@ -66,6 +66,17 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "Texas Instruments XDS100v3 USB Debug Probe",
+                    "cores": [
+                        {
+                            "name": "C28xx_CPU1",
+                            "debuggerSettings": {
+                                "data": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n<PropertyValues/>\n"
+                            }
+                        }
+                    ]
                 }
             ]
         }

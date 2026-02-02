@@ -2,6 +2,9 @@
   "folders": [
     {
       "path": ""
+    },
+    {
+      "path": "vacuum-valve-control-system"
     }
   ],
   "settings": {
