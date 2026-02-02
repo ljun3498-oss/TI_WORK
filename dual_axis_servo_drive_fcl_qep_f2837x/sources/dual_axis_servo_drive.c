@@ -1107,52 +1107,50 @@ static inline void buildLevel2_M2(void)
 
 //
 //****************************************************************************
-// INCRBUILD 3
+// 构建等级 3
 //****************************************************************************
 //
 #if(BUILDLEVEL == FCL_LEVEL3)
 // =============================== FCL_LEVEL 3 ================================
-//  Level 3 verifies the dq-axis current regulation performed by PID and speed
-//  measurement modules
-//  lsw = ENC_ALIGNMENT      : lock the rotor of the motor
-//  lsw = ENC_WAIT_FOR_INDEX : close the current loop
-//  NOTE:-
-//      1. Iq loop is closed using actual QEP angle.
-//         Therefore, motor speed races to high speed with lighter load. It is
-//         better to ensure the motor is loaded during this test. Otherwise,
-//         the motor will run at higher speeds where it can saturate.
-//         It may be typically around the rated speed of the motor or higher.
-//      2. clarke1.As and clarke1.Bs are not brought out from the FCL library
-//         as of library release version 0x02
+//  等级3验证由PID和速度测量模块执行的dq轴电流调节
+//  lsw = ENC_ALIGNMENT      : 锁定电机转子
+//  lsw = ENC_WAIT_FOR_INDEX : 关闭电流环
+//  注意:-
+//      1. Iq环使用实际QEP角度关闭。因此，轻负载时电机速度会急剧上升。
+//         测试期间最好确保电机有负载。否则，电机将以可能饱和的更高速度运行。
+//         通常可能在电机额定速度或更高速度附近。
+//      2. 截至库版本0x02，clarke1.As和clarke1.Bs未从FCL库中引出
 // ============================================================================
 
-// build level 3 subroutine for motor_1
+// 电机1的构建等级3子程序
 #pragma FUNC_ALWAYS_INLINE(buildLevel3_M1)
 
 static inline void buildLevel3_M1(void)
 {
 
 #if(FCL_CNTLR ==  PI_CNTLR)
+    // 执行PI控制器的电机控制算法
     FCL_runPICtrl_M1(&motorVars[0]);
 #endif
 
 #if(FCL_CNTLR ==  CMPLX_CNTLR)
+    // 执行复杂控制器的电机控制算法
     FCL_runComplexCtrl_M1(&motorVars[0]);
 #endif
 
 // ----------------------------------------------------------------------------
-// FCL_cycleCount calculations for debug
-// customer can remove the below code in final implementation
+// FCL周期计数计算（用于调试）
+// 客户可以在最终实现中删除以下代码
 // ----------------------------------------------------------------------------
     getFCLTime(MTR_1);
 
 // ----------------------------------------------------------------------------
-// Measure DC Bus voltage using SDFM Filter3
+// 使用SDFM滤波器3测量直流母线电压
 // ----------------------------------------------------------------------------
     motorVars[0].FCL_params.Vdcbus = getVdc(&motorVars[0]);
 
 // ----------------------------------------------------------------------------
-// Fast current loop controller wrapper
+// 快速电流环控制器包装器
 // ----------------------------------------------------------------------------
 #if(FCL_CNTLR ==  PI_CNTLR)
     FCL_runPICtrlWrap_M1(&motorVars[0]);
@@ -1163,12 +1161,12 @@ static inline void buildLevel3_M1(void)
 #endif
 
 // ----------------------------------------------------------------------------
-// Alignment Routine: this routine aligns the motor to zero electrical angle
-// and in case of QEP also finds the index location and initializes the angle
-// w.r.t. the index location
+// 对齐例程：此例程将电机对齐到零电角度
+// 对于QEP，还会找到索引位置并初始化相对于索引位置的角度
 // ----------------------------------------------------------------------------
     if(motorVars[0].runMotor == MOTOR_STOP)
     {
+        // 电机停止时，设置为编码器对齐状态
         motorVars[0].ptrFCL->lsw = ENC_ALIGNMENT;
         motorVars[0].pi_id.ref = 0;
         motorVars[0].IdRef = 0;
@@ -1176,10 +1174,10 @@ static inline void buildLevel3_M1(void)
     }
     else if(motorVars[0].ptrFCL->lsw == ENC_ALIGNMENT)
     {
-        // alignment current
-        motorVars[0].IdRef = motorVars[0].IdRef_start;  //0.1;
+        // 设置对齐电流
+        motorVars[0].IdRef = motorVars[0].IdRef_start;  // 通常为0.1
 
-        // set up an alignment and hold time for shaft to settle down
+        // 设置对齐和保持时间，使轴稳定
         if(motorVars[0].pi_id.ref >= motorVars[0].IdRef)
         {
             motorVars[0].alignCntr++;
@@ -1188,7 +1186,7 @@ static inline void buildLevel3_M1(void)
             {
                 motorVars[0].alignCntr  = 0;
 
-                // for QEP, spin the motor to find the index pulse
+                // 对于QEP，旋转电机以找到索引脉冲
                 motorVars[0].ptrFCL->lsw = ENC_WAIT_FOR_INDEX;
             }
         }
@@ -1196,43 +1194,49 @@ static inline void buildLevel3_M1(void)
     } // end else if(lsw == ENC_ALIGNMENT)
     else if(motorVars[0].ptrFCL->lsw == ENC_CALIBRATION_DONE)
     {
+        // 校准完成后，设置运行时的Id参考值
         motorVars[0].IdRef = motorVars[0].IdRef_run;
     }
 
 // ----------------------------------------------------------------------------
-// Connect inputs of the RMP module and call the ramp control module
+// 连接RMP模块的输入并调用斜坡控制模块
 // ----------------------------------------------------------------------------
     if(motorVars[0].ptrFCL->lsw == ENC_ALIGNMENT)
     {
+        // 对齐状态下，速度目标值为0
         motorVars[0].rc.TargetValue = 0;
         motorVars[0].rc.SetpointValue = 0;
     }
     else
     {
+        // 非对齐状态下，速度目标值为参考速度
         motorVars[0].rc.TargetValue = motorVars[0].speedRef;
     }
 
+    // 执行斜坡控制
     fclRampControl(&motorVars[0].rc);
 
 // ----------------------------------------------------------------------------
-// Connect inputs of the RAMP GEN module and call the ramp generator module
+// 连接RAMP GEN模块的输入并调用斜坡生成器模块
 // ----------------------------------------------------------------------------
     motorVars[0].ptrFCL->rg.Freq = motorVars[0].rc.SetpointValue;
     fclRampGen((RAMPGEN *)&motorVars[0].ptrFCL->rg);
 
+    // 更新电机电角度
     motorVars[0].posElecTheta = motorVars[0].ptrFCL->qep.ElecTheta;
     motorVars[0].speed.ElecTheta = motorVars[0].posElecTheta;
 
+    // 运行速度计算
     runSpeedFR(&motorVars[0].speed);
 
 // ----------------------------------------------------------------------------
-// setup iqref for FCL
+// 为FCL设置iqref
 // ----------------------------------------------------------------------------
     motorVars[0].ptrFCL->pi_iq.ref =
            (motorVars[0].ptrFCL->lsw == ENC_ALIGNMENT) ? 0 : motorVars[0].IqRef;
 
 // ----------------------------------------------------------------------------
-// setup idref for FCL
+// 为FCL设置idref
 // ----------------------------------------------------------------------------
     motorVars[0].pi_id.ref =
            ramper(motorVars[0].IdRef, motorVars[0].pi_id.ref, 0.00001);
@@ -1240,33 +1244,35 @@ static inline void buildLevel3_M1(void)
     return;
 }
 
-// build level 3 subroutine for motor_1
+// 电机2的构建等级3子程序
 #pragma FUNC_ALWAYS_INLINE(buildLevel3_M2)
 
 static inline void buildLevel3_M2(void)
 {
 
 #if(FCL_CNTLR ==  PI_CNTLR)
+    // 执行PI控制器的电机控制算法
     FCL_runPICtrl_M2(&motorVars[1]);
 #endif
 
 #if(FCL_CNTLR ==  CMPLX_CNTLR)
+    // 执行复杂控制器的电机控制算法
     FCL_runComplexCtrl_M2(&motorVars[1]);
 #endif
 
 // ----------------------------------------------------------------------------
-// FCL_cycleCount calculations for debug
-// customer can remove the below code in final implementation
+// FCL周期计数计算（用于调试）
+// 客户可以在最终实现中删除以下代码
 // ----------------------------------------------------------------------------
     getFCLTime(MTR_2);
 
 // ----------------------------------------------------------------------------
-// Measure DC Bus voltage using SDFM Filter3
+// 使用SDFM滤波器3测量直流母线电压
 // ----------------------------------------------------------------------------
     motorVars[1].FCL_params.Vdcbus = getVdc(&motorVars[0]);
 
 // ----------------------------------------------------------------------------
-// Fast current loop controller wrapper
+// 快速电流环控制器包装器
 // ----------------------------------------------------------------------------
 #if(FCL_CNTLR ==  PI_CNTLR)
     FCL_runPICtrlWrap_M2(&motorVars[1]);
@@ -1277,87 +1283,81 @@ static inline void buildLevel3_M2(void)
 #endif
 
 // ----------------------------------------------------------------------------
-// Alignment Routine: this routine aligns the motor to zero electrical angle
-// and in case of QEP also finds the index location and initializes the angle
-// w.r.t. the index location
+// 对齐例程：此例程将电机对齐到零电角度
+// 对于QEP，还会找到索引位置并初始化相对于索引位置的角度
 // ----------------------------------------------------------------------------
     if(motorVars[1].runMotor == MOTOR_STOP)
     {
+        // 电机停止时，设置为编码器对齐状态
         motorVars[1].ptrFCL->lsw = ENC_ALIGNMENT;
         motorVars[1].pi_id.ref = 0;
         motorVars[1].IdRef = 0;
         FCL_resetController(&motorVars[1]);
-
-        motorVars[1].state |= 0x8000;
     }
     else if(motorVars[1].ptrFCL->lsw == ENC_ALIGNMENT)
     {
-        // alignment current
-        motorVars[1].IdRef = motorVars[1].IdRef_start;  //0.1;
+        // 设置对齐电流
+        motorVars[1].IdRef = motorVars[1].IdRef_start;  // 通常为0.1;
 
-        motorVars[1].state |= 0x0001;
-
-        // set up an alignment and hold time for shaft to settle down
+        // 设置对齐和保持时间，使轴稳定
         if(motorVars[1].pi_id.ref >= motorVars[1].IdRef)
         {
-            motorVars[1].state |= 0x0002;
-
             motorVars[1].alignCntr++;
 
             if(motorVars[1].alignCntr >= motorVars[1].alignCnt)
             {
                 motorVars[1].alignCntr  = 0;
 
-                // for QEP, spin the motor to find the index pulse
+                // 对于QEP，旋转电机以找到索引脉冲
                 motorVars[1].ptrFCL->lsw = ENC_WAIT_FOR_INDEX;
-
-                motorVars[1].state |= 0x0004;
             }
         }
     } // end else if(lsw == ENC_ALIGNMENT)
     else if(motorVars[1].ptrFCL->lsw == ENC_CALIBRATION_DONE)
     {
+        // 校准完成后，设置运行时的Id参考值
         motorVars[1].IdRef = motorVars[1].IdRef_run;
-
-        motorVars[1].state |= 0x0010;
     }
 
 // ----------------------------------------------------------------------------
-// Connect inputs of the RMP module and call the ramp control module
+// 连接RMP模块的输入并调用斜坡控制模块
 // ----------------------------------------------------------------------------
     if(motorVars[1].ptrFCL->lsw == ENC_ALIGNMENT)
     {
+        // 对齐状态下，速度目标值为0
         motorVars[1].rc.TargetValue = 0;
         motorVars[1].rc.SetpointValue = 0;
     }
     else
     {
+        // 非对齐状态下，速度目标值为参考速度
         motorVars[1].rc.TargetValue = motorVars[1].speedRef;
-
-        motorVars[1].state |= 0x0020;
     }
 
+    // 执行斜坡控制
     fclRampControl(&motorVars[1].rc);
 
 // ----------------------------------------------------------------------------
-// Connect inputs of the RAMP GEN module and call the ramp generator module
+// 连接RAMP GEN模块的输入并调用斜坡生成器模块
 // ----------------------------------------------------------------------------
     motorVars[1].ptrFCL->rg.Freq = motorVars[1].rc.SetpointValue;
     fclRampGen((RAMPGEN *)&motorVars[1].ptrFCL->rg);
 
+    // 更新电机电角度
     motorVars[1].posElecTheta = motorVars[1].ptrFCL->qep.ElecTheta;
     motorVars[1].speed.ElecTheta = motorVars[1].posElecTheta;
 
+    // 运行速度计算
     runSpeedFR(&motorVars[1].speed);
 
 // ----------------------------------------------------------------------------
-// setup iqref for FCL
+// 为FCL设置iqref
 // ----------------------------------------------------------------------------
     motorVars[1].ptrFCL->pi_iq.ref =
            (motorVars[1].ptrFCL->lsw == ENC_ALIGNMENT) ? 0 : motorVars[1].IqRef;
 
 // ----------------------------------------------------------------------------
-// setup idref for FCL
+// 为FCL设置idref
 // ----------------------------------------------------------------------------
     motorVars[1].pi_id.ref =
            ramper(motorVars[1].IdRef, motorVars[1].pi_id.ref, 0.00001);
@@ -2552,6 +2552,7 @@ void runSyncControl(void)
 
     return;
 }
+
 
 //*****************************************************************************
 //*****************************************************************************

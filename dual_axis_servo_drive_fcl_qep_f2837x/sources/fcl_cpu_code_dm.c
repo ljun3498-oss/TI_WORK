@@ -79,25 +79,36 @@ FCL_Vars_t fclVars[2];
               FCL_params.adcScale))) * ONEbySQRT3);
 
 //
-// FCL MACRO implementing CLARKE transform on currents using pointers to
-// registers used in both PI CONTROL and COMPLEX CONTROL
+// FCL宏：使用寄存器指针实现电流的CLARKE变换
+// 适用于PI控制和复杂控制模式
 //
 #define FCL_CLARKE_STYLE_1()                                                   \
+    /* 计算α轴电流：直接使用A相电流值 */                                         \
+    /* 1. 读取A相电流的ADC结果（HWREGH宏访问硬件寄存器） */                     \
+    /* 2. 转换为int16_t类型（ADC采样结果通常为12-16位） */                      \
+    /* 3. 转换为float32_t类型进行浮点运算 */                                    \
+    /* 4. 乘以adcScale进行归一化，得到pu（标幺值） */                           \
     clarke1Alpha = (float32_t)((int16_t)HWREGH(pMotor->curA_PPBRESULT) *       \
                          pMotor->FCL_params.adcScale);                         \
+    /* 计算β轴电流：使用A相和B相电流值 */                                       \
+    /* 公式：β = (A + 2*B) * (1/√3) */                                         \
+    /* 注：由于三相电流之和为零（A+B+C=0），因此可以通过A和B相计算出β轴电流 */  \
     clarke1Beta  = ((clarke1Alpha +                                            \
                (2.0 * ((float32_t)((int16_t)HWREGH(pMotor->curB_PPBRESULT)) *  \
                pMotor->FCL_params.adcScale))) * ONEbySQRT3);
 
 //
-// FCL MACRO implementing CLARKE transform on currents using bit field type
-// register access used in both PI CONTROL and COMPLEX CONTROL
+// FCL宏：使用位域类型寄存器访问实现电流的CLARKE变换
+// 适用于PI控制和复杂控制模式
 //
 #define FCL_CURRENT3_A  (IFB_LEMV_PPB * FCL_params.adcScale)
 #define FCL_CURRENT3_B  (IFB_LEMW_PPB * FCL_params.adcScale)
 
 #define FCL_CLARKE_STYLE_3()                                                   \
+        /* 计算α轴电流：直接使用A相电流值 */                                         \
         clarke1Alpha = (FCL_CURRENT3_A);                                       \
+        /* 计算β轴电流：使用A相和B相电流值 */                                       \
+        /* 公式：β = (A + 2*B) * (1/√3) */                                         \
         clarke1Beta  = ((clarke1Alpha + (2.0 * FCL_CURRENT3_B)) * ONEbySQRT3);
 
 //
@@ -109,30 +120,30 @@ FCL_Vars_t fclVars[2];
 #define M1_FCL_POSITION_CURRENT_CLARKE_MACRO()                                 \
 /*                                                                             \
  *-----------------------------------------------------------------------------\
- *  Wait for QEP sense to complete (Position encoder suite module)             \
+ *  等待QEP感应完成（位置编码器套件模块）                                     \
  * ----------------------------------------------------------------------------\
  */                                                                            \
     /* SETGPIO18_HIGH;      */                                                 \
-    /* check CLA1_1 status   */                                                \
-    /* below line took 2 additional cycles vs bitfield style*/                 \
+    /* 检查CLA1_1状态         */                                                \
+    /* 下面一行比位域风格多花2个周期 */                                        \
     /*while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX1) == false);*/\
     while(PieCtrlRegs.PIEIFR11.bit.INTx1 == 0);                                \
     /* SETGPIO18_LOW;      */                                                  \
 /*                                                                             \
  *  ---------------------------------------------------------------------------\
- *  Connect inputs of the PARK module and call the park trans. macro           \
+ *  连接PARK模块输入并调用park变换宏                                           \
  *  ---------------------------------------------------------------------------\
  */                                                                            \
     park1Sine   = __sinpuf32(fclVars[0].pangle);                               \
     park1Cosine = __cospuf32(fclVars[0].pangle);                               \
 /*                                                                             \
  * ----------------------------------------------------------------------------\
- * Measure phase currents, and normalize to (-1,+1).                           \
- * Connect inputs of the CLARKE module and call the clarke xform macro         \
+ * 测量相电流，并归一化到(-1,+1)。                                             \
+ * 连接CLARKE模块输入并调用clarke变换宏                                        \
  * ----------------------------------------------------------------------------\
  */                                                                            \
     /*  SETGPIO18_HIGH; */                                                     \
-    /* below line took 2 additional cycles vs bitfield style*/                 \
+    /* 下面一行比位域风格多花2个周期 */                                        \
     /*while((HWREGH(adcBasePhaseW) & ADC_INTFLG_ADCINT1) == false);*/          \
     while(pMotor->AdcIntFlag->bit.ADCINT1 == 0);                               \
     /* asm(" NOP");   */                                                       \
@@ -145,30 +156,30 @@ FCL_Vars_t fclVars[2];
 #define M2_FCL_POSITION_CURRENT_CLARKE_MACRO()                                 \
 /*                                                                             \
  *-----------------------------------------------------------------------------\
- *  Wait for QEP sense to complete (Position encoder suite module)             \
+ *  等待QEP感应完成（位置编码器套件模块）                                     \
  * ----------------------------------------------------------------------------\
  */                                                                            \
     /* SETGPIO18_HIGH; */                                                      \
-    /* check CLA1_5 status   */                                                \
-    /* below line took 2 additional cycles vs bitfield style*/                 \
+    /* 检查CLA1_5状态         */                                                \
+    /* 下面一行比位域风格多花2个周期 */                                        \
     /*while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX5) == false);*/\
     while(PieCtrlRegs.PIEIFR11.bit.INTx5 == 0);                                \
     /* SETGPIO18_LOW; */                                                       \
 /*                                                                             \
  *  ---------------------------------------------------------------------------\
- *  Connect inputs of the PARK module and call the park trans. macro           \
+ *  连接PARK模块输入并调用park变换宏                                           \
  *  ---------------------------------------------------------------------------\
  */                                                                            \
     park1Sine   = __sinpuf32(fclVars[1].pangle);                          \
     park1Cosine = __cospuf32(fclVars[1].pangle);                          \
 /*                                                                             \
  * ----------------------------------------------------------------------------\
- * Measure phase currents, and normalize to (-1,+1).                           \
- * Connect inputs of the CLARKE module and call the clarke xform macro         \
+ * 测量相电流，并归一化到(-1,+1)。                                             \
+ * 连接CLARKE模块输入并调用clarke变换宏                                        \
  * ----------------------------------------------------------------------------\
  */                                                                            \
     /* SETGPIO18_HIGH; */                                                      \
-    /* below line took 2 additional cycles vs bitfield style*/                 \
+    /* 下面一行比位域风格多花2个周期 */                                        \
     /*while((HWREGH(adcBasePhaseW) & ADC_INTFLG_ADCINT2) == false);*/          \
     while(pMotor->AdcIntFlag->bit.ADCINT2 == 0);                               \
     /* asm(" NOP");   */                                                       \
@@ -415,17 +426,16 @@ void FCL_runPICtrl_M1(MOTOR_Vars_t *pMotor)
     SVGEN2_t            svgen2;
 
     //
-    //  MACRO to :-
-    //      1. read QEP position
-    //      2. get current feed back
-    //      3. do the Clarke
+    //  宏功能：
+    //      1. 读取QEP位置
+    //      2. 获取电流反馈
+    //      3. 执行Clarke变换
     //
     M1_FCL_POSITION_CURRENT_CLARKE_MACRO();
 
     //
-    //  PARK Transformation
-    //  Connect inputs of the PI module and
-    //  call the PI IQ controller macro in CLA
+    //  PARK变换
+    //  连接PI模块输入并在CLA中调用PI IQ控制器宏
     //
     fclVars[0].pi_iq.err = fclVars[0].pi_iq.ref -
                 ((clarke1Beta * park1Cosine) - (clarke1Alpha * park1Sine));
@@ -434,12 +444,12 @@ void FCL_runPICtrl_M1(MOTOR_Vars_t *pMotor)
                 ((clarke1Alpha * park1Cosine) + (clarke1Beta * park1Sine));
 
     //
-    // Connect inputs of the PI module and call the PI ID controller macro
+    // 连接PI模块输入并调用PI ID控制器宏
     // CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_2);
     //
     Cla1ForceTask2();
 
-    FCL_PI_MACRO(pMotor->pi_id)             // Id loop - PI controller - CPU
+    FCL_PI_MACRO(pMotor->pi_id)             // Id回路 - PI控制器 - CPU
 
     register float32_t  piidc, piids;
 
@@ -447,14 +457,14 @@ void FCL_runPICtrl_M1(MOTOR_Vars_t *pMotor)
     piids = pMotor->pi_id.out * park1Sine;
 
     //
-    //  Wait for PI IQ calc in CLA (CLA1_2) to complete
+    //  等待CLA中的PI IQ计算完成 (CLA1_2)
     //
-    // SETGPIO18_HIGH; // only for debug
+    // SETGPIO18_HIGH; // 仅用于调试
     while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX2) == false);
-    // SETGPIO18_LOW;  // only for debug
+    // SETGPIO18_LOW;  // 仅用于调试
 
     //
-    //  Perform the inverse park and connect inputs of the SVGEN_DQ module
+    //  执行逆Park变换并连接SVGEN_DQ模块输入
     //
     svgen2.Ualpha = ( piidc - (fclVars[0].pi_iq.out * park1Sine)) *
             pMotor->FCL_params.carrierMid;
@@ -463,9 +473,9 @@ void FCL_runPICtrl_M1(MOTOR_Vars_t *pMotor)
             pMotor->FCL_params.cmidsqrt3;
 
     //
-    //  MACRO to :-
-    //      1. do SVGEN
-    //      2. do PWMupdates
+    //  宏功能：
+    //      1. 执行SVGEN (空间矢量生成)
+    //      2. 执行PWM更新
     //
     FCL_SVGEN_PWM_PDATE_MACRO();
 
