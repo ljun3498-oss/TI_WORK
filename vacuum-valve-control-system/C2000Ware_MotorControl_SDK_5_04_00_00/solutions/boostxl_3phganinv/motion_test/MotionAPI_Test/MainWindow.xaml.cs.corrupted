@@ -1,0 +1,554 @@
+using System;
+using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Threading;
+using OxyPlot;
+using OxyPlot.Series;
+using OxyPlot.Axes;
+
+namespace MotionAPI_Test
+{
+    public partial class MainWindow : Window
+    {
+        // 运动轴实例（改用指针方式，解决P/Invoke结构体同步问题）
+        private IntPtr axisPtr = IntPtr.Zero;
+        
+        // 仿真定时�?
+        private DispatcherTimer simTimer;
+        private DispatcherTimer plotTimer;
+        
+        // 时间和数据记�?
+        private double simTime = 0.0;
+        private double lastVelocity = 0.0;
+        private int profileUpdateCounter = 0;  // 添加轨迹更新计数�?
+        private const int PROFILE_UPDATE_DIVIDER = 10;  // �?10 次位置环更新一次轨�?
+        private List<DataPoint> positionData = new List<DataPoint>();
+        private List<DataPoint> velocityData = new List<DataPoint>();
+        private List<DataPoint> accelerationData = new List<DataPoint>();
+        private List<DataPoint> cmdPosData = new List<DataPoint>();
+        
+        // OxyPlot 图表模型
+        public PlotModel PositionPlotModel { get; private set; }
+        public PlotModel VelocityPlotModel { get; private set; }
+        public PlotModel AccelerationPlotModel { get; private set; }
+        
+        // 性能监控
+        private DateTime lastUpdateTime;
+        private int updateCounter = 0;
+        
+        public MainWindow()
+        {
+            InitializeComponent();
+            DataContext = this;
+            
+            InitializePlots();
+            InitializeAxis();
+            InitializeTimers();
+        }
+
+        private void InitializePlots()
+        {
+            // 位置图表
+            PositionPlotModel = new PlotModel { Title = "位置跟踪" };
+            PositionPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "时间 (s)" });
+            PositionPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "位置 (counts)" });
+            
+            var cmdPosSeries = new LineSeries
+            {
+                Title = "命令位置",
+                Color = OxyColors.Blue,
+                StrokeThickness = 2
+            };
+            var actPosSeries = new LineSeries
+            {
+                Title = "实际位置",
+                Color = OxyColors.Red,
+                StrokeThickness = 1.5
+            };
+            PositionPlotModel.Series.Add(cmdPosSeries);
+            PositionPlotModel.Series.Add(actPosSeries);
+            
+            // 速度图表
+            VelocityPlotModel = new PlotModel { Title = "速度曲线" };
+            VelocityPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "时间 (s)" });
+            VelocityPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "速度 (counts/s)" });
+            
+            var velSeries = new LineSeries
+            {
+                Title = "速度",
+                Color = OxyColors.Green,
+                StrokeThickness = 2
+            };
+            VelocityPlotModel.Series.Add(velSeries);
+            
+            // 加速度图表
+            AccelerationPlotModel = new PlotModel { Title = "加速度曲线" };
+            AccelerationPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Bottom, Title = "时间 (s)" });
+            AccelerationPlotModel.Axes.Add(new LinearAxis { Position = AxisPosition.Left, Title = "加速度 (counts/s²)" });
+            
+            var accelSeries = new LineSeries
+            {
+                Title = "加速度",
+                Color = OxyColors.Orange,
+                StrokeThickness = 2
+            };
+            AccelerationPlotModel.Series.Add(accelSeries);
+        }
+
+        private void InitializeAxis()
+        {
+            try
+            {
+                // 创建运动轴（指针方式�?
+                axisPtr = MotionAPI.MotionAxis_create(1, MotionAPI.AxisType.Real);
+                
+                if (axisPtr == IntPtr.Zero)
+                {
+                    throw new Exception("MotionAxis_create 失败");
+                }
+                
+                // 修复 profileUpdateTs（P/Invoke同步问题�?
+                MotionAPI.MotionAxis_setProfileUpdateTs(axisPtr, 0.010f);
+                
+                // 添加电机（模拟电机ID=1，齿轮比=1.0�?
+                MotionAPI.MotionAxis_addMotor(axisPtr, 1, 1.0f);
+                
+                // 重要：使用函数调用获取实际�?
+                ushort actualMotorCount = MotionAPI.MotionAxis_getMotorCount(axisPtr);
+                MotionAPI.AxisType actualAxisType = MotionAPI.MotionAxis_getAxisType(axisPtr);
+                
+                LogMessage("运动轴初始化成功");
+                LogMessage($"轴ID: 1, 类型: {actualAxisType}, 电机数量: {actualMotorCount}");
+                
+                // 设置默认运动参数
+                MotionAPI.MotionAxis_setMotionParams(axisPtr, 500.0f, 2000.0f, 2000.0f);
+                
+                // 设置默认PID参数
+                MotionAPI.MotionAxis_setPIDGains(axisPtr, 0, 10.0f, 0.5f, 0.1f);
+                
+                // 设置跟随误差限�?
+                MotionAPI.MotionAxis_setFollowingErrorLimit(axisPtr, 0, 100.0f, 500.0f);
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"错误: 初始化失�?- {ex.Message}");
+                MessageBox.Show($"初始化失败！\n\n{ex.Message}\n\n请确�?motion_control.dll 在程序目录下�?, 
+                    "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void InitializeTimers()
+        {
+            // 仿真定时器（高频�? 模拟实时控制
+            simTimer = new DispatcherTimer();
+            simTimer.Interval = TimeSpan.FromMilliseconds(1); // 1ms = 1000Hz
+            simTimer.Tick += SimTimer_Tick;
+            
+            // 图表更新定时器（低频�? 减少UI负担
+            plotTimer = new DispatcherTimer();
+            plotTimer.Interval = TimeSpan.FromMilliseconds(50); // 20Hz
+            plotTimer.Tick += PlotTimer_Tick;
+            plotTimer.Start();
+            
+            lastUpdateTime = DateTime.Now;
+        }
+
+        private void SimTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                // 获取实际电机数量和位置数据（解决 P/Invoke 同步问题�?
+                ushort actualMotorCount = MotionAPI.MotionAxis_getMotorCount(axisPtr);
+                float actualCmdPos = MotionAPI.MotionAxis_getCmdPosition(axisPtr);
+                float actualActPos = MotionAPI.MotionAxis_getActPosition(axisPtr);
+                float actualActVel = MotionAPI.MotionAxis_getActVelocity(axisPtr);
+                
+                // 1. 更新轨迹规划（使用计数器，每 10 次位置环更新一次）
+                profileUpdateCounter++;
+                if (profileUpdateCounter >= PROFILE_UPDATE_DIVIDER)
+                {
+                    profileUpdateCounter = 0;
+                    
+                    // 调试：记录当前状�?
+                    var axisState = MotionAPI.MotionAxis_getAxisState(axisPtr);
+                    ushort bufferBefore = MotionAPI.MotionAxis_getBufferCount(axisPtr);
+                    var profileState = MotionAPI.MotionAxis_getProfileState(axisPtr);
+                    float totalTime = MotionAPI.MotionAxis_getTotalTime(axisPtr);
+                    float elapsedTime = MotionAPI.MotionAxis_getElapsedTime(axisPtr);
+                    float profileUpdateTs = MotionAPI.MotionAxis_getProfileUpdateTs(axisPtr);
+                    ushort freeSpace = MotionAPI.MotionAxis_getBufferFreeSpace(axisPtr);
+                    
+                    if (axisState == MotionAPI.AxisState.Moving || 
+                        axisState == MotionAPI.AxisState.Stopping)
+                    {
+                        // HACK: 强制设置 profileUpdateTs，避�?P/Invoke 结构体同步问�?
+                        MotionAPI.MotionAxis_setProfileUpdateTs(axisPtr, 0.010f);
+                        
+                        MotionAPI.MotionAxis_updateProfile(axisPtr);
+                        
+                        // 调试：记录调用后的缓冲区状�?
+                        ushort bufferAfter = MotionAPI.MotionAxis_getBufferCount(axisPtr);
+                        float elapsedTimeAfter = MotionAPI.MotionAxis_getElapsedTime(axisPtr);
+                        
+                        if (bufferAfter > bufferBefore)
+                        {
+                            LogMessage($"�?轨迹更新成功: 缓冲�?{bufferBefore} �?{bufferAfter}, " +
+                                      $"时间={elapsedTimeAfter:F3}s/{totalTime:F3}s, 状�?{profileState}");
+                        }
+                        else
+                        {
+                            LogMessage($"�?轨迹更新但缓冲区未变�? 缓冲={bufferBefore}, freeSpace={freeSpace}, " +
+                                      $"时间(�?={elapsedTime:F3}s, 时间(�?={elapsedTimeAfter:F3}s, " +
+                                      $"总时�?{totalTime:F3}s, dt={profileUpdateTs:F3}s, 状�?{profileState}");
+                        }
+                    }
+                    else
+                    {
+                        LogMessage($"�?轴状态不�?Moving/Stopping: {axisState}, 跳过轨迹更新");
+                    }
+                }
+                
+                // 2. 更新位置环控制（1ms周期�?
+                MotionAPI.MotionAxis_updateControl(axisPtr);
+                
+                // 3. 模拟电机反馈（简单的一阶惯性）
+                // 实际应用中，这部分数据来自CPU2的IPC反馈
+                if (actualMotorCount > 0)
+                {
+                    // 使用 getter 函数读取电机状态（避免结构体同步问题）
+                    float motorActPos = MotionAPI.MotorDrive_getActPosition(axisPtr, 0);
+                    float motorActVel = MotionAPI.MotorDrive_getActVelocity(axisPtr, 0);
+                    float motorKp = MotionAPI.MotorDrive_getPIDKp(axisPtr, 0);
+                    bool motorPIDEnabled = MotionAPI.MotorDrive_isPIDEnabled(axisPtr, 0);
+                    
+                    float cmdVel = motorPIDEnabled ? 
+                        (actualCmdPos - motorActPos) * motorKp : 0.0f;
+                    
+                    // 简单积分模拟（一阶惯性）
+                    float dt = 0.001f; // 1ms
+                    float K = 0.1f;    // 响应系数
+                    float newVel = motorActVel + (cmdVel - motorActVel) * K;
+                    float newPos = motorActPos + newVel * dt;
+                    
+                    // 更新电机反馈�?C �?
+                    MotionAPI.MotionAxis_updateFeedback(axisPtr, 0, newPos, newVel);
+                }
+                
+                // 4. 记录数据（使�?getter 函数获取电机数据�?
+                double motorPos = 0.0;
+                double motorVel = 0.0;
+                
+                if (actualMotorCount > 0)
+                {
+                    motorPos = MotionAPI.MotorDrive_getActPosition(axisPtr, 0);
+                    motorVel = MotionAPI.MotorDrive_getActVelocity(axisPtr, 0);
+                }
+                
+                double accel = (motorVel - lastVelocity) / 0.001; // 加速度 = Δv / Δt
+                lastVelocity = motorVel;
+                
+                positionData.Add(new DataPoint(simTime, motorPos));
+                cmdPosData.Add(new DataPoint(simTime, actualCmdPos));
+                velocityData.Add(new DataPoint(simTime, motorVel));
+                accelerationData.Add(new DataPoint(simTime, accel));
+                
+                // 限制数据点数量（保留最�?0秒）
+                int maxPoints = 10000;
+                if (positionData.Count > maxPoints)
+                {
+                    positionData.RemoveAt(0);
+                    cmdPosData.RemoveAt(0);
+                    velocityData.RemoveAt(0);
+                    accelerationData.RemoveAt(0);
+                }
+                
+                // 5. 更新时间
+                simTime += 0.001;
+                updateCounter++;
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"仿真错误: {ex.Message}");
+            }
+        }
+
+        private void PlotTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                // 更新图表数据
+                var cmdPosSeries = PositionPlotModel.Series[0] as LineSeries;
+                var actPosSeries = PositionPlotModel.Series[1] as LineSeries;
+                var velSeries = VelocityPlotModel.Series[0] as LineSeries;
+                var accelSeries = AccelerationPlotModel.Series[0] as LineSeries;
+                
+                cmdPosSeries.Points.Clear();
+                actPosSeries.Points.Clear();
+                velSeries.Points.Clear();
+                accelSeries.Points.Clear();
+                
+                cmdPosSeries.Points.AddRange(cmdPosData);
+                actPosSeries.Points.AddRange(positionData);
+                velSeries.Points.AddRange(velocityData);
+                accelSeries.Points.AddRange(accelerationData);
+                
+                PositionPlotModel.InvalidatePlot(true);
+                VelocityPlotModel.InvalidatePlot(true);
+                AccelerationPlotModel.InvalidatePlot(true);
+                
+                // 更新状态显�?
+                UpdateStatusDisplay();
+                
+                // 计算更新�?
+                var now = DateTime.Now;
+                double elapsed = (now - lastUpdateTime).TotalSeconds;
+                if (elapsed > 0)
+                {
+                    int rate = (int)(updateCounter / elapsed);
+                    txtUpdateRate.Text = $"更新�? {rate} Hz";
+                    lastUpdateTime = now;
+                    updateCounter = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"显示更新错误: {ex.Message}");
+            }
+        }
+
+        private void UpdateStatusDisplay()
+        {
+            // 使用函数调用获取所有值（彻底解决 P/Invoke 结构体同步问题）
+            ushort actualMotorCount = MotionAPI.MotionAxis_getMotorCount(axisPtr);
+            MotionAPI.AxisType actualAxisType = MotionAPI.MotionAxis_getAxisType(axisPtr);
+            MotionAPI.AxisState actualAxisState = MotionAPI.MotionAxis_getAxisState(axisPtr);
+            float actualCmdPos = MotionAPI.MotionAxis_getCmdPosition(axisPtr);
+            float actualActPos = MotionAPI.MotionAxis_getActPosition(axisPtr);
+            float actualCmdVel = MotionAPI.MotionAxis_getCmdVelocity(axisPtr);
+            float actualActVel = MotionAPI.MotionAxis_getActVelocity(axisPtr);
+            ushort actualBufferCount = MotionAPI.MotionAxis_getBufferCount(axisPtr);
+            MotionAPI.ProfileState actualProfileState = MotionAPI.MotionAxis_getProfileState(axisPtr);
+            
+            // 轴基本信�?
+            txtAxisState.Text = $"轴状�? {actualAxisState}";
+            txtAxisType.Text = $"轴类�? {actualAxisType}";
+            txtMotorCount.Text = $"电机数量: {actualMotorCount}";
+            
+            // 轴位置数�?
+            txtAxisCmdPos.Text = $"命令: {actualCmdPos:F3}";
+            txtAxisActPos.Text = $"实际: {actualActPos:F3}";
+            float axisPosErr = actualCmdPos - actualActPos;
+            txtAxisPosErr.Text = $"误差: {axisPosErr:F3}";
+            
+            // 轴速度数据
+            txtAxisCmdVel.Text = $"命令: {actualCmdVel:F2}";
+            txtAxisActVel.Text = $"实际: {actualActVel:F2}";
+            
+            // 轴加速度（从速度数据计算�?
+            double accel = velocityData.Count > 1 ? 
+                (velocityData[velocityData.Count - 1].Y - velocityData[velocityData.Count - 2].Y) / 0.001 : 0.0;
+            txtAxisAccel.Text = $"加速度: {accel:F1}";
+            
+            // 电机#1数据（使�?getter 函数获取�?
+            if (actualMotorCount > 0)
+            {
+                bool motorEnabled = MotionAPI.MotorDrive_isEnabled(axisPtr, 0);
+                float motorPos = MotionAPI.MotorDrive_getActPosition(axisPtr, 0);
+                float motorVel = MotionAPI.MotorDrive_getActVelocity(axisPtr, 0);
+                uint motorErrorCount = MotionAPI.MotorDrive_getErrorCounter(axisPtr, 0);
+                
+                txtMotor1Enable.Text = $"使能: {(motorEnabled ? "�? : "�?)}";
+                txtMotor1Pos.Text = $"位置: {motorPos:F3}";
+                txtMotor1Vel.Text = $"速度: {motorVel:F2}";
+                txtMotor1Error.Text = $"错误计数: {motorErrorCount}";
+            }
+            else
+            {
+                txtMotor1Enable.Text = "使能: N/A";
+                txtMotor1Pos.Text = "位置: N/A";
+                txtMotor1Vel.Text = "速度: N/A";
+                txtMotor1Error.Text = "错误计数: N/A";
+            }
+            
+            // 缓冲区监�?
+            txtBufferCount.Text = $"缓冲数量: {actualBufferCount} / 128";
+            progressBuffer.Value = actualBufferCount;
+            txtBufferOverflow.Text = $"溢出次数: {axis.posBuffer.overflowCount}";
+            txtBufferUnderflow.Text = $"欠载次数: {axis.posBuffer.underflowCount}";
+            txtProfileState.Text = $"轨迹状�? {actualProfileState}";
+            
+            // 仿真时间
+            txtSimTime.Text = $"仿真时间: {simTime:F3} s";
+        }
+
+        private void LogMessage(string message)
+        {
+            string timestamp = DateTime.Now.ToString("HH:mm:ss.fff");
+            txtLog.AppendText($"[{timestamp}] {message}\n");
+            txtLog.ScrollToEnd();
+        }
+
+        // 事件处理函数
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LogMessage("=== 运动控制API测试工具已启�?===");
+            LogMessage("请先使能轴，然后设置运动参数，最后发送运动命�?);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            simTimer?.Stop();
+            plotTimer?.Stop();
+            LogMessage("=== 程序退�?===");
+        }
+
+        private void BtnEnable_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MotionAPI.MotionAxis_enable(axisPtr);
+                LogMessage("轴已使能");
+                txtStatusBar.Text = "轴已使能，可以开始运�?;
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"使能失败: {ex.Message}");
+            }
+        }
+
+        private void BtnDisable_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MotionAPI.MotionAxis_disable(axisPtr);
+                simTimer.Stop();
+                LogMessage("轴已禁用");
+                txtStatusBar.Text = "轴已禁用";
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"禁用失败: {ex.Message}");
+            }
+        }
+
+        private void BtnSetParams_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                float maxVel = float.Parse(txtMaxVel.Text);
+                float maxAccel = float.Parse(txtMaxAccel.Text);
+                float maxDecel = float.Parse(txtMaxDecel.Text);
+                
+                MotionAPI.MotionAxis_setMotionParams(axisPtr, maxVel, maxAccel, maxDecel);
+                LogMessage($"运动参数已设�? V={maxVel}, A={maxAccel}, D={maxDecel}");
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"参数设置失败: {ex.Message}");
+            }
+        }
+
+        private void BtnSetPID_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                float kp = float.Parse(txtKp.Text);
+                float ki = float.Parse(txtKi.Text);
+                float kd = float.Parse(txtKd.Text);
+                
+                MotionAPI.MotionAxis_setPIDGains(axisPtr, 0, kp, ki, kd);
+                LogMessage($"PID参数已设�? Kp={kp}, Ki={ki}, Kd={kd}");
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"PID设置失败: {ex.Message}");
+            }
+        }
+
+        private void BtnMoveAbs_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                float targetPos = float.Parse(txtTargetPos.Text);
+                MotionAPI.MotionAxis_moveAbsolute(axisPtr, targetPos);
+                
+                if (!simTimer.IsEnabled)
+                    simTimer.Start();
+                
+                LogMessage($"绝对运动命令: 目标位置 = {targetPos}");
+                txtStatusBar.Text = $"运动中，目标位置 = {targetPos}";
+                
+                // 更新仿真频率
+                UpdateSimFrequency();
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"运动命令失败: {ex.Message}");
+            }
+        }
+
+        private void BtnMoveRel_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                float distance = float.Parse(txtTargetPos.Text);
+                MotionAPI.MotionAxis_moveRelative(axisPtr, distance);
+                
+                if (!simTimer.IsEnabled)
+                    simTimer.Start();
+                
+                LogMessage($"相对运动命令: 距离 = {distance}");
+                txtStatusBar.Text = $"运动中，相对距离 = {distance}";
+                
+                UpdateSimFrequency();
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"运动命令失败: {ex.Message}");
+            }
+        }
+
+        private void BtnStop_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MotionAPI.MotionAxis_stop(axisPtr);
+                LogMessage("正常停止命令已发�?);
+                txtStatusBar.Text = "减速停止中...";
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"停止命令失败: {ex.Message}");
+            }
+        }
+
+        private void BtnEStop_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MotionAPI.MotionAxis_emergencyStop(axisPtr);
+                LogMessage("急停命令已发送！");
+                txtStatusBar.Text = "紧急停止中�?;
+            }
+            catch (Exception ex)
+            {
+                LogMessage($"急停命令失败: {ex.Message}");
+            }
+        }
+
+        private void UpdateSimFrequency()
+        {
+            int freq = cmbSimFreq.SelectedIndex switch
+            {
+                0 => 100,   // 100 Hz = 10ms
+                1 => 500,   // 500 Hz = 2ms
+                2 => 1000,  // 1000 Hz = 1ms
+                3 => 2000,  // 2000 Hz = 0.5ms
+                _ => 1000
+            };
+            
+            simTimer.Interval = TimeSpan.FromMilliseconds(1000.0 / freq);
+        }
+    }
+}
+
