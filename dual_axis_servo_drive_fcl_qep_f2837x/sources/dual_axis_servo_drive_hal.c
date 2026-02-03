@@ -54,687 +54,708 @@
 
 
 //
-// SD Trip Level - scope for additional work
+// SD Trip Level - 范围用于额外工作
 //
-uint16_t hlt = 0x7FFF;
-uint16_t llt = 0x0;
+uint16_t hlt = 0x7FFF;    // 高电平阈值
+uint16_t llt = 0x0;        // 低电平阈值
 
 //
-// These are defined by the linker file
+// 这些由链接器文件定义
 //
-extern uint32_t Cla1funcsRunStart;
-extern uint32_t Cla1funcsLoadStart;
-extern uint32_t Cla1funcsLoadSize;
+extern uint32_t Cla1funcsRunStart;    // CLA1函数运行起始地址
+extern uint32_t Cla1funcsLoadStart;    // CLA1函数加载起始地址
+extern uint32_t Cla1funcsLoadSize;     // CLA1函数加载大小
 
-extern uint32_t Cla1ConstRunStart;
-extern uint32_t Cla1ConstLoadStart;
-extern uint32_t Cla1ConstLoadSize;
-
-//
-// interrupt routines for CPU
-//
-extern __interrupt void motor1ControlISR(void);
-extern __interrupt void motor2ControlISR(void);
+extern uint32_t Cla1ConstRunStart;     // CLA1常量运行起始地址
+extern uint32_t Cla1ConstLoadStart;    // CLA1常量加载起始地址
+extern uint32_t Cla1ConstLoadSize;     // CLA1常量加载大小
 
 //
-// tasks 1-4 are owned by the FCL for motor 1
+// CPU中断例程
 //
-extern __interrupt void Cla1Task1(void);
-extern __interrupt void Cla1Task2(void);
-extern __interrupt void Cla1Task3(void);
-extern __interrupt void Cla1Task4(void);
+extern __interrupt void motor1ControlISR(void);    // 电机1控制中断服务函数
+extern __interrupt void motor2ControlISR(void);    // 电机2控制中断服务函数
 
 //
-// tasks 5-8 are owned by the FCL for motor 2
+// 任务1-4由电机1的FCL拥有
 //
-extern __interrupt void Cla1Task5(void);
-extern __interrupt void Cla1Task6(void);
-extern __interrupt void Cla1Task7(void);
-extern __interrupt void Cla1Task8(void);
+extern __interrupt void Cla1Task1(void);    // CLA1任务1（电机1）
+extern __interrupt void Cla1Task2(void);    // CLA1任务2（电机1）
+extern __interrupt void Cla1Task3(void);    // CLA1任务3（电机1）
+extern __interrupt void Cla1Task4(void);    // CLA1任务4（电机1）
 
 //
-// Enables interrupts
+// 任务5-8由电机2的FCL拥有
 //
+extern __interrupt void Cla1Task5(void);    // CLA1任务5（电机2）
+extern __interrupt void Cla1Task6(void);    // CLA1任务6（电机2）
+extern __interrupt void Cla1Task7(void);    // CLA1任务7（电机2）
+extern __interrupt void Cla1Task8(void);    // CLA1任务8（电机2）
+
+/**
+ * @brief 启用中断
+ * @details 根据电机句柄启用相应的PWM中断和CPU中断组
+ * @param handle HAL电机句柄，指定要启用中断的电机
+ * @return 无
+ */
 void HAL_enableInterrupts(HAL_MTR_Handle handle)
 {
-    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;
+    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
     //
-    // clear pending INT event
+    // 清除待处理的中断事件
     //
-    EPWM_clearEventTriggerInterruptFlag(obj->pwmHandle[0]);
+    EPWM_clearEventTriggerInterruptFlag(obj->pwmHandle[0]);    // 清除PWM事件触发中断标志
 
+    // 根据电机索引启用相应的PWM中断
     if(handle == &halMtr[MTR_1])
     {
         //
-        // Enable PWM1INT in PIE group 3
+        // 在PIE组3中启用PWM1INT
         //
-        Interrupt_enable(M1_INT_PWM);
+        Interrupt_enable(M1_INT_PWM);    // 启用电机1的PWM中断
     }
     else if(handle == &halMtr[MTR_2])
     {
         //
-        // Enable PWM4INT in PIE group 3
+        // 在PIE组3中启用PWM4INT
         //
-        Interrupt_enable(M2_INT_PWM);        // Enable PWM1INT in PIE group 3
+        Interrupt_enable(M2_INT_PWM);    // 启用电机2的PWM中断
     }
 
     //
-    // Enable group 3 interrupts - EPWM1 is here
+    // 启用组3中断 - EPWM1位于此组
     //
-    Interrupt_enableInCPU(INTERRUPT_CPU_INT3);
+    Interrupt_enableInCPU(INTERRUPT_CPU_INT3);    // 在CPU中启用组3中断
 
     return;
 }
 
-//
-// HAL_init()
-//
+/**
+ * @brief 初始化HAL对象
+ * @details 分配HAL句柄，禁用看门狗，初始化各种硬件模块的句柄
+ * @param pMemory 指向内存的指针，用于存储HAL对象
+ * @param numBytes 可用内存大小
+ * @return 成功时返回HAL句柄，失败时返回NULL
+ */
 HAL_Handle HAL_init(void *pMemory, const size_t numBytes)
 {
-    HAL_Handle handle;
-    HAL_Obj *obj;
+    HAL_Handle handle;    // HAL句柄
+    HAL_Obj *obj;         // HAL对象指针
 
+    // 检查内存大小是否足够容纳HAL对象
     if(numBytes < sizeof(HAL_Obj))
     {
-        return((HAL_Handle)NULL);
+        return((HAL_Handle)NULL);    // 内存不足，返回NULL
     }
 
     //
-    // assign the handle
+    // 分配句柄
     //
-    handle = (HAL_Handle)pMemory;
+    handle = (HAL_Handle)pMemory;    // 将内存指针转换为HAL句柄
 
     //
-    // assign the object
+    // 分配对象
     //
-    obj = (HAL_Obj *)handle;
+    obj = (HAL_Obj *)handle;    // 将HAL句柄转换为具体对象指针
 
     //
-    // disable watchdog
+    // 禁用看门狗
     //
-    SysCtl_disableWatchdog();
+    SysCtl_disableWatchdog();    // 禁用系统看门狗定时器
 
     //
-    // initialize the DAC handles
+    // 初始化DAC句柄
     //
-    obj->dacHandle[0] = DACA_BASE;
-    obj->dacHandle[1] = DACB_BASE;
-    obj->dacHandle[2] = DACC_BASE;
+    obj->dacHandle[0] = DACA_BASE;    // DAC A基地址
+    obj->dacHandle[1] = DACB_BASE;    // DAC B基地址
+    obj->dacHandle[2] = DACC_BASE;    // DAC C基地址
 
     //
-    // initialize CLA handle
+    // 初始化CLA句柄
     //
-    obj->claHandle = CLA1_BASE;
+    obj->claHandle = CLA1_BASE;    // CLA1基地址
 
     //
-    // initialize SCI handle
+    // 初始化SCI句柄
     //
-    obj->sciHandle[0] = SCIA_BASE;
-    obj->sciHandle[1] = SCIB_BASE;
+    obj->sciHandle[0] = SCIA_BASE;    // SCI A基地址
+    obj->sciHandle[1] = SCIB_BASE;    // SCI B基地址
 
     //
-    // initialize timer handles
+    // 初始化定时器句柄
     //
-    obj->timerHandle[0] = CPUTIMER0_BASE;
-    obj->timerHandle[1] = CPUTIMER1_BASE;
-    obj->timerHandle[2] = CPUTIMER2_BASE;
+    obj->timerHandle[0] = CPUTIMER0_BASE;    // CPU定时器0基地址
+    obj->timerHandle[1] = CPUTIMER1_BASE;    // CPU定时器1基地址
+    obj->timerHandle[2] = CPUTIMER2_BASE;    // CPU定时器2基地址
 
     //
-    // initialize ADC handle
+    // 初始化ADC句柄
     //
-    obj->adcHandle[0] = ADCA_BASE;
-    obj->adcHandle[1] = ADCB_BASE;
-    obj->adcHandle[2] = ADCC_BASE;
-    obj->adcHandle[3] = ADCD_BASE;
+    obj->adcHandle[0] = ADCA_BASE;    // ADC A基地址
+    obj->adcHandle[1] = ADCB_BASE;    // ADC B基地址
+    obj->adcHandle[2] = ADCC_BASE;    // ADC C基地址
+    obj->adcHandle[3] = ADCD_BASE;    // ADC D基地址
 
     //
-    // initialize the ADC results
+    // 初始化ADC结果基地址
     //
-    obj->adcResult[0] = ADCARESULT_BASE;
-    obj->adcResult[1] = ADCBRESULT_BASE;
-    obj->adcResult[2] = ADCCRESULT_BASE;
-    obj->adcResult[3] = ADCDRESULT_BASE;
+    obj->adcResult[0] = ADCARESULT_BASE;    // ADC A结果基地址
+    obj->adcResult[1] = ADCBRESULT_BASE;    // ADC B结果基地址
+    obj->adcResult[2] = ADCCRESULT_BASE;    // ADC C结果基地址
+    obj->adcResult[3] = ADCDRESULT_BASE;    // ADC D结果基地址
 
-    return(handle);
+    return(handle);    // 返回初始化后的HAL句柄
 } // end of HAL_init() function
 
-//
-// Initializes the hardware abstraction layer (HAL) object for motors
-//
+/**
+ * @brief 初始化电机的硬件抽象层(HAL)对象
+ * @details 分配HAL电机句柄，根据电机索引初始化相应的SPI、PWM、CMPSS和QEP句柄
+ * @param pMemory 指向内存的指针，用于存储HAL电机对象
+ * @param numBytes 可用内存大小
+ * @return 成功时返回HAL电机句柄，失败时返回NULL
+ */
 HAL_MTR_Handle HAL_MTR_init(void *pMemory, const size_t numBytes)
 {
-    HAL_MTR_Handle handle;
-    HAL_MTR_Obj *obj;
+    HAL_MTR_Handle handle;    // HAL电机句柄
+    HAL_MTR_Obj *obj;         // HAL电机对象指针
 
+    // 检查内存大小是否足够容纳HAL电机对象
     if(numBytes < sizeof(HAL_MTR_Obj))
     {
-        return((HAL_MTR_Handle)NULL);
+        return((HAL_MTR_Handle)NULL);    // 内存不足，返回NULL
     }
 
     //
-    // assign the handle
+    // 分配句柄
     //
-    handle = (HAL_MTR_Handle)pMemory;
+    handle = (HAL_MTR_Handle)pMemory;    // 将内存指针转换为HAL电机句柄
 
     //
-    // assign the object
+    // 分配对象
     //
-    obj = (HAL_MTR_Obj *)handle;
+    obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
+    // 根据电机索引初始化相应的硬件句柄
     if(handle == &halMtr[MTR_1])
     {
         //
-        // initialize SPI handle
+        // 初始化SPI句柄
         //
-        obj->spiHandle = M1_SPI_BASE;
+        obj->spiHandle = M1_SPI_BASE;    // 电机1的SPI基地址
 
         //
-        // initialize PWM handles for motor_1
+        // 初始化电机1的PWM句柄
         //
-        obj->pwmHandle[0] = M1_U_PWM_BASE;
-        obj->pwmHandle[1] = M1_V_PWM_BASE;
-        obj->pwmHandle[2] = M1_W_PWM_BASE;
+        obj->pwmHandle[0] = M1_U_PWM_BASE;    // 电机1的U相PWM基地址
+        obj->pwmHandle[1] = M1_V_PWM_BASE;    // 电机1的V相PWM基地址
+        obj->pwmHandle[2] = M1_W_PWM_BASE;    // 电机1的W相PWM基地址
 
         //
-        // initialize CMPSS handle
+        // 初始化CMPSS句柄
         //
-        obj->cmpssHandle[0] = M1_U_CMPSS_BASE;
-        obj->cmpssHandle[1] = M1_V_CMPSS_BASE;
-        obj->cmpssHandle[2] = M1_W_CMPSS_BASE;
+        obj->cmpssHandle[0] = M1_U_CMPSS_BASE;    // 电机1的U相CMPSS基地址
+        obj->cmpssHandle[1] = M1_V_CMPSS_BASE;    // 电机1的V相CMPSS基地址
+        obj->cmpssHandle[2] = M1_W_CMPSS_BASE;    // 电机1的W相CMPSS基地址
 
         //
-        // initialize QEP driver
+        // 初始化QEP驱动
         //
-        obj->qepHandle = M1_QEP_BASE;
+        obj->qepHandle = M1_QEP_BASE;    // 电机1的QEP基地址
     }
     else if(handle == &halMtr[MTR_2])
     {
         //
-        // initialize SPI handle
+        // 初始化SPI句柄
         //
-        obj->spiHandle = M2_SPI_BASE;
+        obj->spiHandle = M2_SPI_BASE;    // 电机2的SPI基地址
 
         //
-        // initialize PWM handles for motor_2
+        // 初始化电机2的PWM句柄
         //
-        obj->pwmHandle[0] = M2_U_PWM_BASE;
-        obj->pwmHandle[1] = M2_V_PWM_BASE;
-        obj->pwmHandle[2] = M2_W_PWM_BASE;
+        obj->pwmHandle[0] = M2_U_PWM_BASE;    // 电机2的U相PWM基地址
+        obj->pwmHandle[1] = M2_V_PWM_BASE;    // 电机2的V相PWM基地址
+        obj->pwmHandle[2] = M2_W_PWM_BASE;    // 电机2的W相PWM基地址
 
         //
-        // initialize CMPSS handle for motor_2
+        // 初始化电机2的CMPSS句柄
         //
-        obj->cmpssHandle[0] = M2_U_CMPSS_BASE;
-        obj->cmpssHandle[1] = M2_V_CMPSS_BASE;
-        obj->cmpssHandle[2] = M2_W_CMPSS_BASE;
+        obj->cmpssHandle[0] = M2_U_CMPSS_BASE;    // 电机2的U相CMPSS基地址
+        obj->cmpssHandle[1] = M2_V_CMPSS_BASE;    // 电机2的V相CMPSS基地址
+        obj->cmpssHandle[2] = M2_W_CMPSS_BASE;    // 电机2的W相CMPSS基地址
 
         //
-        // initialize QEP driver
+        // 初始化QEP驱动
         //
-        obj->qepHandle = M2_QEP_BASE;
+        obj->qepHandle = M2_QEP_BASE;    // 电机2的QEP基地址
     }
 
-     return(handle);
+     return(handle);    // 返回初始化后的HAL电机句柄
 } // end of HAL_MTR_init() function
 
-//
-// sets the HAL parameters for motor
-//
+/**
+ * @brief 设置电机的HAL参数
+ * @details 调用相关函数设置电机的PWM、CMPSS和QEP参数
+ * @param handle HAL电机句柄，指定要设置参数的电机
+ * @return 无
+ */
 void HAL_setMotorParams(HAL_MTR_Handle handle)
 {
     //
-    // setup the PWMs
+    // 设置PWM
     //
-    HAL_setupMotorPWMs(handle);
+    HAL_setupMotorPWMs(handle);    // 调用函数设置电机的PWM参数
 
     //
-    // setup the CMPSS
+    // 设置CMPSS
     //
-    HAL_setupCMPSS(handle);
+    HAL_setupCMPSS(handle);    // 调用函数设置电机的CMPSS参数
 
     //
-    // setup the eqep
+    // 设置QEP
     //
-    HAL_setupQEP(handle);
+    HAL_setupQEP(handle);    // 调用函数设置电机的QEP参数
 
     return;
 }
 
-//
-// sets the HAL parameters
-//
+/**
+ * @brief 设置HAL参数
+ * @details 配置系统时钟、GPIO、CLA、中断、定时器、ADC等硬件模块
+ * @param handle HAL句柄，指定要设置参数的HAL对象
+ * @return 无
+ */
 void HAL_setParams(HAL_Handle handle)
 {
-
-    HAL_Obj *obj = (HAL_Obj *)handle;
-
-    //
-    // Make sure the LSPCLK divider is set to divide by 4
-    //
-    SysCtl_setLowSpeedClock(SYSCTL_LSPCLK_PRESCALE_4); // 50MHz for SFRA
+    HAL_Obj *obj = (HAL_Obj *)handle;    // 将HAL句柄转换为具体对象指针
 
     //
-    // Disable pin locks and enable internal pullups.
+    // 确保LSPCLK分频器设置为4分频
     //
-    Device_initGPIO();
+    SysCtl_setLowSpeedClock(SYSCTL_LSPCLK_PRESCALE_4); // 为SFRA设置50MHz低速时钟
 
     //
-    // Sets up the CLA
+    // 禁用引脚锁定并启用内部上拉电阻
     //
-    HAL_setupCLA(handle);
+    Device_initGPIO();    // 初始化GPIO设备
 
     //
-    // Initialize the PIE control registers to their default state.
-    // The default state is all PIE interrupts disabled and flags
-    // are cleared.
+    // 设置CLA
     //
-    Interrupt_initModule();
+    HAL_setupCLA(handle);    // 调用函数设置CLA（控制律加速器）
 
     //
-    // Clear all interrupts and initialize PIE vector table:
-    // Initialize the PIE vector table with pointers to the shell Interrupt
-    // Service Routines (ISR).
-    // This will populate the entire table, even if the interrupt
-    // is not used in this example.  This is useful for debug purposes.
+    // 初始化PIE控制寄存器到默认状态
+    // 默认状态是所有PIE中断禁用，标志清除
     //
-    Interrupt_initVectorTable();
+    Interrupt_initModule();    // 初始化中断模块
 
     //
-    // Timing sync for background loops
+    // 清除所有中断并初始化PIE向量表
+    // 用指向shell中断服务例程(ISR)的指针初始化PIE向量表
+    // 这将填充整个表，即使本示例中未使用该中断
+    // 这对调试很有用
     //
-    HAL_setupCpuTimer(obj->timerHandle[0], MICROSEC_50);    // A tasks
-    HAL_setupCpuTimer(obj->timerHandle[1], MICROSEC_100);   // B tasks
-    HAL_setupCpuTimer(obj->timerHandle[2], MICROSEC_150);   // C tasks
+    Interrupt_initVectorTable();    // 初始化中断向量表
 
     //
-    // Sets up the GPIO (General Purpose I/O) pins
+    // 后台循环的定时同步
     //
-    HAL_setupGPIOs(handle);
+    HAL_setupCpuTimer(obj->timerHandle[0], MICROSEC_50);    // 设置CPU定时器0为50微秒（A任务）
+    HAL_setupCpuTimer(obj->timerHandle[1], MICROSEC_100);   // 设置CPU定时器1为100微秒（B任务）
+    HAL_setupCpuTimer(obj->timerHandle[2], MICROSEC_150);   // 设置CPU定时器2为150微秒（C任务）
+
+    //
+    // 设置GPIO（通用输入/输出）引脚
+    //
+    HAL_setupGPIOs(handle);    // 调用函数设置GPIO引脚
 
 #ifdef DACOUT_EN
     //
-    // Sets up the DAC
+    // 设置DAC
     //
-    HAL_setupDACs(handle);
+    HAL_setupDACs(handle);    // 调用函数设置DAC（数模转换器）
 #endif  //DACOUT_EN
 
     //
-    // Sets up the ADC
+    // 设置ADC
     //
-    HAL_setupADCs(handle);
-
-
+    HAL_setupADCs(handle);    // 调用函数设置ADC（模数转换器）
 
     return;
 }
 
 
-//
-// Configure ADC
-//
+/**
+ * @brief 配置ADC
+ * @details 初始化ADC模块，配置SOC和PPB，设置电机电流和电压采样
+ * @param handle HAL句柄，指定要配置的HAL对象
+ * @return 无
+ */
 void HAL_setupADCs(HAL_Handle handle)
 {
-    HAL_Obj *obj = (HAL_Obj *)handle;
+    HAL_Obj *obj = (HAL_Obj *)handle;    // 将HAL句柄转换为具体对象指针
 
-    uint16_t cnt;
+    uint16_t cnt;    // 循环计数器
 
     //
-    // setup ADC modules A, B, C, D
+    // 配置ADC模块A, B, C, D
     //
     for(cnt = 0; cnt < 4; cnt++)
     {
         //
-        // Set 12-bit single ended conversion mode
+        // 设置12位单端转换模式
         //
         ADC_setMode(obj->adcHandle[cnt],
                     ADC_RESOLUTION_12BIT, ADC_MODE_SINGLE_ENDED);
 
-        // Set main clock scaling factor (100MHz max clock for the ADC module)
-        // Set the ADC clock to 50MHz
+        // 设置主时钟缩放因子（ADC模块最大时钟为100MHz）
+        // 将ADC时钟设置为50MHz
         ADC_setPrescaler(obj->adcHandle[cnt], ADC_CLK_DIV_4_0);
 
-        // set the ADC interrupt pulse generation to end of conversion
+        // 将ADC中断脉冲生成设置为转换结束
         ADC_setInterruptPulseMode(obj->adcHandle[cnt], ADC_PULSE_END_OF_CONV);
 
-        // enable the ADC
+        // 启用ADC
         ADC_enableConverter(obj->adcHandle[cnt]);
 
-        // set priority of SOCs
+        // 设置SOC的优先级
         ADC_setSOCPriority(obj->adcHandle[cnt], ADC_PRI_ALL_HIPRI);
     }
 
-    // delay to allow ADCs to power up
+    // 延迟以允许ADC上电
     DEVICE_DELAY_US(1500U);
 
     //-------------------------------------------------------------------------
-    // For motor 1
+    // 电机1配置
     //-------------------------------------------------------------------------
-    // Shunt Motor Currents (M1-Iu) @ C2
-    // SOC0 will convert pin C2, sample window in SYSCLK cycles
-    // trigger on ePWM1 SOCA/C
+    // 分流电机电流 (M1-Iu) @ C2
+    // SOC0将转换引脚C2，采样窗口为SYSCLK周期
+    // 由ePWM1 SOCA/C触发
     ADC_setupSOC(M1_IU_ADC_BASE, M1_IU_ADC_SOC_NUM,
                  M1_ADC_TRIGGER_SOC, M1_IU_ADC_CH_NUM, 14);
 
-    // Configure PPB to eliminate subtraction related calculation
-    // PPB is associated with SOC0
+    // 配置PPB以消除减法相关计算
+    // PPB与SOC0关联
     ADC_setupPPB(M1_IU_ADC_BASE, M1_IU_ADC_PPB_NUM, M1_IU_ADC_SOC_NUM);
 
-    // Write zero to this for now till offset ISR is run
+    // 暂时写入零，直到运行偏移ISR
     ADC_setPPBCalibrationOffset(M1_IU_ADC_BASE, M1_IU_ADC_PPB_NUM, 0);
 
-    // Shunt Motor Currents (M1-Iv) @ B2
-    // SOC0 will convert pin B2, sample window in SYSCLK cycles
-    // trigger on ePWM1 SOCA/C
+    // 分流电机电流 (M1-Iv) @ B2
+    // SOC0将转换引脚B2，采样窗口为SYSCLK周期
+    // 由ePWM1 SOCA/C触发
     ADC_setupSOC(M1_IV_ADC_BASE, M1_IV_ADC_SOC_NUM,
                  M1_ADC_TRIGGER_SOC, M1_IV_ADC_CH_NUM, 14);
 
-    // Configure PPB to eliminate subtraction related calculation
-    // PPB is associated with SOC0
+    // 配置PPB以消除减法相关计算
+    // PPB与SOC0关联
     ADC_setupPPB(M1_IV_ADC_BASE, M1_IV_ADC_PPB_NUM, M1_IV_ADC_SOC_NUM);
 
-    // Write zero to this for now till offset ISR is run
+    // 暂时写入零，直到运行偏移ISR
     ADC_setPPBCalibrationOffset(M1_IV_ADC_BASE, M1_IV_ADC_PPB_NUM, 0);
 
-    // Shunt Motor Currents (M1-Iw) @ A2
-    // SOC0 will convert pin A2, sample window in SYSCLK cycles
-    // trigger on ePWM1 SOCA/C
+    // 分流电机电流 (M1-Iw) @ A2
+    // SOC0将转换引脚A2，采样窗口为SYSCLK周期
+    // 由ePWM1 SOCA/C触发
     ADC_setupSOC(M1_IW_ADC_BASE, M1_IW_ADC_SOC_NUM,
                  M1_ADC_TRIGGER_SOC, M1_IW_ADC_CH_NUM, 14);
 
-    // Configure PPB to eliminate subtraction related calculation
-    // PPB is associated with SOC0
+    // 配置PPB以消除减法相关计算
+    // PPB与SOC0关联
     ADC_setupPPB(M1_IW_ADC_BASE, M1_IW_ADC_PPB_NUM, M1_IW_ADC_SOC_NUM);
 
-    // Write zero to this for now till offset ISR is run
+    // 暂时写入零，直到运行偏移ISR
     ADC_setPPBCalibrationOffset(M1_IW_ADC_BASE, M1_IW_ADC_PPB_NUM, 0);
 
-    // Phase Voltage (M1-Vfb-dc) @ D14
-    // SOC1 will convert pin D14, sample window in SYSCLK cycles
-    // trigger on ePWM1 SOCA/C
+    // 相电压 (M1-Vfb-dc) @ D14
+    // SOC1将转换引脚D14，采样窗口为SYSCLK周期
+    // 由ePWM1 SOCA/C触发
     ADC_setupSOC(M1_VDC_ADC_BASE, M1_VDC_ADC_SOC_NUM,
                  M1_ADC_TRIGGER_SOC, M1_VDC_ADC_CH_NUM, 14);
 
-    // Configure PPB to eliminate subtraction related calculation
-    // PPB is associated with SOC0
+    // 配置PPB以消除减法相关计算
+    // PPB与SOC0关联
     ADC_setupPPB(M1_VDC_ADC_BASE, M1_VDC_ADC_PPB_NUM, M1_VDC_ADC_SOC_NUM);
 
-    // Write zero to this for now till offset ISR is run
+    // 暂时写入零，直到运行偏移ISR
     ADC_setPPBCalibrationOffset(M1_VDC_ADC_BASE, M1_VDC_ADC_PPB_NUM, 0);
 
     //-------------------------------------------------------------------------
-    // For motor 2
+    // 电机2配置
     //-------------------------------------------------------------------------
-    // Shunt Motor Currents (M2-Iu) @ C4
-    // SOC2 will convert pin C2, sample window in SYSCLK cycles
-    // trigger on ePWM4 SOCA/C
+    // 分流电机电流 (M2-Iu) @ C4
+    // SOC2将转换引脚C2，采样窗口为SYSCLK周期
+    // 由ePWM4 SOCA/C触发
     ADC_setupSOC(M2_IU_ADC_BASE, M2_IU_ADC_SOC_NUM,
                  M2_ADC_TRIGGER_SOC, M2_IU_ADC_CH_NUM, 14);
 
-    // Configure PPB to eliminate subtraction related calculation
-    // PPB is associated with SOC2
+    // 配置PPB以消除减法相关计算
+    // PPB与SOC2关联
     ADC_setupPPB(M2_IU_ADC_BASE, M2_IU_ADC_PPB_NUM, M2_IU_ADC_SOC_NUM);
 
-    // Write zero to this for now till offset ISR is run
+    // 暂时写入零，直到运行偏移ISR
     ADC_setPPBCalibrationOffset(M2_IU_ADC_BASE, M2_IU_ADC_PPB_NUM, 0);
 
-    // Shunt Motor Currents (M2-Iv) @ B4
-    // SOC2 will convert pin B2, sample window in SYSCLK cycles
-    // trigger on ePWM4 SOCA/C
+    // 分流电机电流 (M2-Iv) @ B4
+    // SOC2将转换引脚B2，采样窗口为SYSCLK周期
+    // 由ePWM4 SOCA/C触发
     ADC_setupSOC(M2_IV_ADC_BASE, M2_IV_ADC_SOC_NUM,
                  M2_ADC_TRIGGER_SOC, M2_IV_ADC_CH_NUM, 14);
 
-    // Configure PPB to eliminate subtraction related calculation
-    // PPB is associated with SOC2
+    // 配置PPB以消除减法相关计算
+    // PPB与SOC2关联
     ADC_setupPPB(M2_IV_ADC_BASE, M2_IV_ADC_PPB_NUM, M2_IV_ADC_SOC_NUM);
 
-    // Write zero to this for now till offset ISR is run
+    // 暂时写入零，直到运行偏移ISR
     ADC_setPPBCalibrationOffset(M2_IV_ADC_BASE, M2_IV_ADC_PPB_NUM, 0);
 
-    // Shunt Motor Currents (M2-Iw) @ A4
-    // SOC2 will convert pin A2, sample window in SYSCLK cycles
-    // trigger on ePWM4 SOCA/C
+    // 分流电机电流 (M2-Iw) @ A4
+    // SOC2将转换引脚A2，采样窗口为SYSCLK周期
+    // 由ePWM4 SOCA/C触发
     ADC_setupSOC(M2_IW_ADC_BASE, M2_IW_ADC_SOC_NUM,
                  M2_ADC_TRIGGER_SOC, M2_IW_ADC_CH_NUM, 14);
 
-    // Configure PPB to eliminate subtraction related calculation
-    // PPB is associated with SOC2
+    // 配置PPB以消除减法相关计算
+    // PPB与SOC2关联
     ADC_setupPPB(M2_IW_ADC_BASE, M2_IW_ADC_PPB_NUM, M2_IW_ADC_SOC_NUM);
 
-    // Write zero to this for now till offset ISR is run
+    // 暂时写入零，直到运行偏移ISR
     ADC_setPPBCalibrationOffset(M2_IW_ADC_BASE, M2_IW_ADC_PPB_NUM, 0);
 
-    // Phase Voltage (M2-Vfb-dc) @ D15
-    // SOC3 will convert pin D15, sample window in SYSCLK cycles
-    // trigger on ePWM4 SOCA/C
+    // 相电压 (M2-Vfb-dc) @ D15
+    // SOC3将转换引脚D15，采样窗口为SYSCLK周期
+    // 由ePWM4 SOCA/C触发
     ADC_setupSOC(M2_VDC_ADC_BASE, M2_VDC_ADC_SOC_NUM,
                  M2_ADC_TRIGGER_SOC, M2_VDC_ADC_CH_NUM, 14);
 
-    // Configure PPB to eliminate subtraction related calculation
-    // PPB is associated with SOC3
+    // 配置PPB以消除减法相关计算
+    // PPB与SOC3关联
     ADC_setupPPB(M2_VDC_ADC_BASE, M2_VDC_ADC_PPB_NUM, M2_VDC_ADC_SOC_NUM);
 
-    // Write zero to this for now till offset ISR is run
+    // 暂时写入零，直到运行偏移ISR
     ADC_setPPBCalibrationOffset(M2_VDC_ADC_BASE, M2_VDC_ADC_PPB_NUM, 0);
 
     return;
 }
 
-//
-// setup CLA
-//
+/**
+ * @brief 设置CLA
+ * @details 配置CLA（控制律加速器），包括代码复制、内存配置、任务映射和触发源设置
+ * @param handle HAL句柄，指定要配置的HAL对象
+ * @return 无
+ */
 void HAL_setupCLA(HAL_Handle handle)
 {
+    HAL_Obj *obj = (HAL_Obj *)handle;    // 将HAL句柄转换为具体对象指针
 
-    HAL_Obj *obj = (HAL_Obj *)handle;
-
-    EALLOW;
+    EALLOW;    // 允许修改受保护的寄存器
 
 #ifdef _FLASH
     //
-    // Copy CLA code from its load address (FLASH) to CLA program RAM
+    // 从加载地址（FLASH）复制CLA代码到CLA程序RAM
     //
-    // Note: during debug the load and run addresses can be
-    // the same as Code Composer Studio can load the CLA program
-    // RAM directly.
+    // 注意：在调试期间，加载和运行地址可以相同，因为Code Composer Studio可以直接加载CLA程序RAM
     //
-    // The ClafuncsLoadStart, ClafuncsLoadEnd, and ClafuncsRunStart
-    // symbols are created by the linker.
+    // ClafuncsLoadStart、ClafuncsLoadEnd和ClafuncsRunStart符号由链接器创建
     //
     memcpy((uint32_t *)&Cla1funcsRunStart, (uint32_t *)&Cla1funcsLoadStart,
-            (uint32_t)&Cla1funcsLoadSize);
+            (uint32_t)&Cla1funcsLoadSize);    // 复制CLA函数代码
 
     memcpy((uint32_t *)&Cla1ConstRunStart, (uint32_t *)&Cla1ConstLoadStart,
-            (uint32_t)&Cla1ConstLoadSize);
+            (uint32_t)&Cla1ConstLoadSize);    // 复制CLA常量数据
 #endif //_FLASH
 
-    // make sure QEP access is given to CLA as Secondary master
+    // 确保QEP访问权限被授予作为次要主设备的CLA
     SysCtl_selectSecMaster(SYSCTL_SEC_MASTER_CLA, SYSCTL_SEC_MASTER_CLA);
 
-    // Initialize and wait for CLA1ToCPUMsgRAM
-    MemCfg_initSections(MEMCFG_SECT_MSGCLA1TOCPU);
-    while(MemCfg_getInitStatus(MEMCFG_SECT_MSGCLA1TOCPU) != 1);
+    // 初始化并等待CLA1ToCPUMsgRAM
+    MemCfg_initSections(MEMCFG_SECT_MSGCLA1TOCPU);    // 初始化CLA到CPU的消息RAM
+    while(MemCfg_getInitStatus(MEMCFG_SECT_MSGCLA1TOCPU) != 1);    // 等待初始化完成
 
-    // Initialize and wait for CPUToCLA1MsgRAM
+    // 初始化并等待CPUToCLA1MsgRAM
+    MemCfg_initSections(MEMCFG_SECT_MSGCPUTOCLA1);    // 初始化CPU到CLA的消息RAM
+    while(MemCfg_getInitStatus(MEMCFG_SECT_MSGCPUTOCLA1) != 1);    // 等待初始化完成
 
-    MemCfg_initSections(MEMCFG_SECT_MSGCPUTOCLA1);
-    while(MemCfg_getInitStatus(MEMCFG_SECT_MSGCPUTOCLA1) != 1);
+    // 选择LS5RAM作为CLA的编程空间
+    // 首先配置CLA作为LS5的主设备，然后将空间设置为程序块
+    MemCfg_setLSRAMMasterSel(MEMCFG_SECT_LS4, MEMCFG_LSRAMMASTER_CPU_CLA1);    // 设置LS4RAM的主设备为CPU和CLA1
+    MemCfg_setCLAMemType(MEMCFG_SECT_LS4, MEMCFG_CLA_MEM_PROGRAM);    // 将LS4RAM设置为CLA程序内存
 
-    // Select LS5RAM to be the programming space for the CLA
-    // First configure the CLA to be the master for LS5 and then
-    // set the space to be a program block
+    MemCfg_setLSRAMMasterSel(MEMCFG_SECT_LS5, MEMCFG_LSRAMMASTER_CPU_CLA1);    // 设置LS5RAM的主设备为CPU和CLA1
+    MemCfg_setCLAMemType(MEMCFG_SECT_LS5, MEMCFG_CLA_MEM_PROGRAM);    // 将LS5RAM设置为CLA程序内存
 
-    MemCfg_setLSRAMMasterSel(MEMCFG_SECT_LS4, MEMCFG_LSRAMMASTER_CPU_CLA1);
-    MemCfg_setCLAMemType(MEMCFG_SECT_LS4, MEMCFG_CLA_MEM_PROGRAM);
+    // 接下来配置LS2RAM和LS3RAM作为CLA的数据空间
+    // 首先配置CLA作为主设备，然后将空间设置为代码块
+    MemCfg_setLSRAMMasterSel(MEMCFG_SECT_LS2, MEMCFG_LSRAMMASTER_CPU_CLA1);    // 设置LS2RAM的主设备为CPU和CLA1
+    MemCfg_setCLAMemType(MEMCFG_SECT_LS2, MEMCFG_CLA_MEM_DATA);    // 将LS2RAM设置为CLA数据内存
 
-    MemCfg_setLSRAMMasterSel(MEMCFG_SECT_LS5, MEMCFG_LSRAMMASTER_CPU_CLA1);
-    MemCfg_setCLAMemType(MEMCFG_SECT_LS5, MEMCFG_CLA_MEM_PROGRAM);
+    MemCfg_setLSRAMMasterSel(MEMCFG_SECT_LS3, MEMCFG_LSRAMMASTER_CPU_CLA1);    // 设置LS3RAM的主设备为CPU和CLA1
+    MemCfg_setCLAMemType(MEMCFG_SECT_LS3, MEMCFG_CLA_MEM_DATA);    // 将LS3RAM设置为CLA数据内存
 
-    // Next configure LS2RAM and LS3RAM as data spaces for the CLA
-    // First configure the CLA to be the master and then
-    // set the spaces to be code blocks
-    MemCfg_setLSRAMMasterSel(MEMCFG_SECT_LS2, MEMCFG_LSRAMMASTER_CPU_CLA1);
-    MemCfg_setCLAMemType(MEMCFG_SECT_LS2, MEMCFG_CLA_MEM_DATA);
-
-    MemCfg_setLSRAMMasterSel(MEMCFG_SECT_LS3, MEMCFG_LSRAMMASTER_CPU_CLA1);
-    MemCfg_setCLAMemType(MEMCFG_SECT_LS3, MEMCFG_CLA_MEM_DATA);
-
-    // Compute all CLA task vectors
-    // On Type-1 CLAs the MVECT registers accept full 16-bit task addresses as
-    // opposed to offsets used on older Type-0 CLAs
+    // 计算所有CLA任务向量
+    // 在Type-1 CLA上，MVECT寄存器接受完整的16位任务地址，而不是旧版Type-0 CLA使用的偏移量
 #pragma diag_suppress = 770
-    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_1, (uint16_t)(&Cla1Task1));
-    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_2, (uint16_t)(&Cla1Task2));
-    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_3, (uint16_t)(&Cla1Task3));
-    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_4, (uint16_t)(&Cla1Task4));
-    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_5, (uint16_t)(&Cla1Task5));
-    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_6, (uint16_t)(&Cla1Task6));
-    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_7, (uint16_t)(&Cla1Task7));
-    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_8, (uint16_t)(&Cla1Task8));
+    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_1, (uint16_t)(&Cla1Task1));    // 映射CLA任务1向量
+    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_2, (uint16_t)(&Cla1Task2));    // 映射CLA任务2向量
+    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_3, (uint16_t)(&Cla1Task3));    // 映射CLA任务3向量
+    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_4, (uint16_t)(&Cla1Task4));    // 映射CLA任务4向量
+    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_5, (uint16_t)(&Cla1Task5));    // 映射CLA任务5向量
+    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_6, (uint16_t)(&Cla1Task6));    // 映射CLA任务6向量
+    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_7, (uint16_t)(&Cla1Task7));    // 映射CLA任务7向量
+    CLA_mapTaskVector(obj->claHandle, CLA_MVECT_8, (uint16_t)(&Cla1Task8));    // 映射CLA任务8向量
 #pragma diag_suppress = 770
 
-    // Enable the IACK instruction to start a task on CLA in software
-    // for all  8 CLA tasks. Also, globally enable all 8 tasks (or a
-    // subset of tasks) by writing to their respective bits in the
-    // MIER register
-    CLA_enableIACK(obj->claHandle);
-    CLA_enableTasks(obj->claHandle, CLA_TASKFLAG_ALL);
+    // 启用IACK指令以在软件中启动CLA上的任务
+    // 对于所有8个CLA任务，还通过写入MIER寄存器中各自的位来全局启用所有8个任务（或任务子集）
+    CLA_enableIACK(obj->claHandle);    // 启用CLA的IACK指令
+    CLA_enableTasks(obj->claHandle, CLA_TASKFLAG_ALL);    // 启用所有CLA任务
 
-    // Enable EPWM1 INT trigger for CLA TASK1
-    CLA_setTriggerSource(CLA_TASK_1, CLA_TRIGGER_EPWM1INT);
+    // 为CLA TASK1启用EPWM1 INT触发
+    CLA_setTriggerSource(CLA_TASK_1, CLA_TRIGGER_EPWM1INT);    // 设置CLA任务1的触发源为EPWM1中断
 
-    // Enable EPWM4 INT trigger for CLA TASK5
-    CLA_setTriggerSource(CLA_TASK_5, CLA_TRIGGER_EPWM4INT);
+    // 为CLA TASK5启用EPWM4 INT触发
+    CLA_setTriggerSource(CLA_TASK_5, CLA_TRIGGER_EPWM4INT);    // 设置CLA任务5的触发源为EPWM4中断
 
     return;
 }
 
-//
-// setup CMPSS
-//
+/**
+ * @brief 配置CMPSS
+ * @details 初始化比较器子系统，设置高/低比较器、输出配置、迟滞和DAC
+ * @param handle HAL电机句柄，指定要配置的电机HAL对象
+ * @return 无
+ */
 void HAL_setupCMPSS(HAL_MTR_Handle handle)
 {
-    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;
+    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
-    uint16_t cnt;
+    uint16_t cnt;    // 循环计数器
 
     for(cnt = 0; cnt < 3; cnt++)
     {
-        // Set up COMPCTL register
-        // NEG signal from DAC for COMP-H
+        // 设置COMPCTL寄存器
+        // COMP-H的NEG信号来自DAC
         CMPSS_configHighComparator(obj->cmpssHandle[cnt], CMPSS_INSRC_DAC);
 
-        // NEG signal from DAC for COMP-L, COMP-L output is inverted
+        // COMP-L的NEG信号来自DAC，COMP-L输出反转
         CMPSS_configLowComparator(obj->cmpssHandle[cnt],
                                   (CMPSS_INSRC_DAC | CMPSS_INV_INVERTED)) ;
 
-        // Dig filter output ==> CTRIPH, Dig filter output ==> CTRIPOUTH
+        // 数字滤波器输出 ==> CTRIPH，数字滤波器输出 ==> CTRIPOUTH
         CMPSS_configOutputsHigh(obj->cmpssHandle[cnt],
                                 (CMPSS_TRIP_FILTER | CMPSS_TRIPOUT_FILTER));
 
-        // Dig filter output ==> CTRIPL, Dig filter output ==> CTRIPOUTL
+        // 数字滤波器输出 ==> CTRIPL，数字滤波器输出 ==> CTRIPOUTL
         CMPSS_configOutputsLow(obj->cmpssHandle[cnt],
                                (CMPSS_TRIP_FILTER | CMPSS_TRIPOUT_FILTER));
 
-        // Set up COMPHYSCTL register
-        // COMP hysteresis set to 2x typical value
+        // 设置COMPHYSCTL寄存器
+        // COMP迟滞设置为典型值的2倍
         CMPSS_setHysteresis(obj->cmpssHandle[cnt], 2);
 
-        // set up COMPDACCTL register
-        // VDDA is REF for CMPSS DACs, DAC updated on sysclock, Ramp bypassed
+        // 设置COMPDACCTL寄存器
+        // VDDA作为CMPSS DAC的参考，DAC在系统时钟上更新，绕过斜坡
         CMPSS_configDAC(obj->cmpssHandle[cnt],
                 (CMPSS_DACREF_VDDA | CMPSS_DACVAL_SYSCLK | CMPSS_DACSRC_SHDW));
 
-        // Load DACs - High and Low
-        // Set DAC-H to allowed MAX +ve current
+        // 加载DAC - 高和低
+        // 将DAC-H设置为允许的最大正向电流
         CMPSS_setDACValueHigh(obj->cmpssHandle[cnt], 1024);
 
-        // Set DAC-L to allowed MAX -ve current
+        // 将DAC-L设置为允许的最大负向电流
         CMPSS_setDACValueLow(obj->cmpssHandle[cnt], 1024);
 
-        // digital filter settings - HIGH side
-        // set time between samples, max : 1023, # of samples in window,
-        // max : 31, recommended : thresh > sampWin/2
-        // Init samples to filter input value
+        // 数字滤波器设置 - 高侧
+        // 设置采样之间的时间，最大值：1023，窗口中的采样数，
+        // 最大值：31，推荐值：阈值 > 采样窗口/2
+        // 初始化采样为滤波器输入值
         CMPSS_configFilterHigh(obj->cmpssHandle[cnt], 20, 30, 18);
         CMPSS_initFilterHigh(obj->cmpssHandle[cnt]);
 
-        // digital filter settings - LOW side
-        // set time between samples, max : 1023, # of samples in window,
-        // max : 31, recommended : thresh > sampWin/2
-        // Init samples to filter input value
+        // 数字滤波器设置 - 低侧
+        // 设置采样之间的时间，最大值：1023，窗口中的采样数，
+        // 最大值：31，推荐值：阈值 > 采样窗口/2
+        // 初始化采样为滤波器输入值
         CMPSS_configFilterLow(obj->cmpssHandle[cnt], 20, 30, 18);
         CMPSS_initFilterLow(obj->cmpssHandle[cnt]);
 
-        // Clear the status register for latched comparator events
+        // 清除锁存比较器事件的状态寄存器
         CMPSS_clearFilterLatchHigh(obj->cmpssHandle[cnt]);
         CMPSS_clearFilterLatchLow(obj->cmpssHandle[cnt]);
 
-        // Enable CMPSS
+        // 启用CMPSS
         CMPSS_enableModule(obj->cmpssHandle[cnt]);
     }
 
-    DEVICE_DELAY_US(500);
+    DEVICE_DELAY_US(500);    // 延迟以允许CMPSS稳定
 
     return;
 }
 
-//
-// Setup OCP limits and digital filter parameters of CMPSS
-//
+/**
+ * @brief 设置CMPSS的OCP限制和数字滤波器参数
+ * @details 配置CMPSS的DAC值，设置过流保护限制
+ * @param handle HAL电机句柄，指定要配置的电机HAL对象
+ * @param curHi 高侧电流限制值
+ * @param curLo 低侧电流限制值
+ * @return 无
+ */
 void HAL_setupCMPSS_DACValue(HAL_MTR_Handle handle,
                              uint16_t curHi, uint16_t curLo)
 {
-    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;
+    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
-    uint16_t cnt;
+    uint16_t cnt;    // 循环计数器
 
     for(cnt = 0; cnt < 3; cnt++)
     {
-        // comparator references
-        // Set DAC-H to allowed MAX +ve current
+        // 比较器参考
+        // 将DAC-H设置为允许的最大正向电流
         CMPSS_setDACValueHigh(obj->cmpssHandle[cnt], curHi);
 
-        // Set DAC-L to allowed MAX -ve current
+        // 将DAC-L设置为允许的最大负向电流
         CMPSS_setDACValueLow(obj->cmpssHandle[cnt], curLo);
     }
 
     return;
 }
 
-//
-// Setup interrupts
-//
+/**
+ * @brief 配置中断
+ * @details 设置EPWM中断源、注册中断处理函数、配置ADC中断
+ * @param handle HAL电机句柄，指定要配置的电机HAL对象
+ * @return 无
+ */
 void HAL_setupInterrupts(HAL_MTR_Handle handle)
 {
-    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;
+    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
-
-    // Enable EPWM1 INT to generate MotorControlISR
+    // 启用EPWM1 INT以生成MotorControlISR
     #if(SAMPLING_METHOD == SINGLE_SAMPLING)
-    // Select INT @ ctr = 0
+    // 选择在计数器为0时触发中断
     EPWM_setInterruptSource(obj->pwmHandle[0],
                             EPWM_INT_TBCTR_ZERO);
     #elif(SAMPLING_METHOD == DOUBLE_SAMPLING)
-    // Select INT @ ctr = 0 or ctr = prd
+    // 选择在计数器为0或周期时触发中断
     EPWM_setInterruptSource(obj->pwmHandle[0],
                             EPWM_INT_TBCTR_ZERO_OR_PERIOD);
     #endif
 
-    // Enable Interrupt Generation from the PWM module
+    // 启用来自PWM模块的中断生成
     EPWM_enableInterrupt(obj->pwmHandle[0]);
 
-    // This needs to be 1 for the INTFRC to work
+    // 这需要设置为1以使INTFRC工作
     EPWM_setInterruptEventCount(obj->pwmHandle[0], 1);
 
-    // Clear ePWM Interrupt flag
+    // 清除ePWM中断标志
     EPWM_clearEventTriggerInterruptFlag(obj->pwmHandle[0]);
 
     if(handle == &halMtr[MTR_1])
     {
-        Interrupt_register(M1_INT_PWM, &motor1ControlISR);
+        Interrupt_register(M1_INT_PWM, &motor1ControlISR);    // 注册电机1的PWM中断处理函数
 
-        // Enable AdcA-ADCINT1- to help verify EoC before result data read
+        // 启用AdcA-ADCINT1-以帮助在读取结果数据之前验证转换完成
         ADC_setInterruptSource(M1_IW_ADC_BASE,
                                ADC_INT_NUMBER1, M1_IW_ADC_SOC_NUM);
         ADC_enableContinuousMode(M1_IW_ADC_BASE, ADC_INT_NUMBER1);
@@ -742,9 +763,9 @@ void HAL_setupInterrupts(HAL_MTR_Handle handle)
     }
     else if(handle == &halMtr[MTR_2])
     {
-        Interrupt_register(M2_INT_PWM, &motor2ControlISR);
+        Interrupt_register(M2_INT_PWM, &motor2ControlISR);    // 注册电机2的PWM中断处理函数
 
-        // Enable AdcA-ADCINT1- to help verify EoC before result data read
+        // 启用AdcA-ADCINT1-以帮助在读取结果数据之前验证转换完成
         ADC_setInterruptSource(M2_IW_ADC_BASE,
                                ADC_INT_NUMBER2, M2_IW_ADC_SOC_NUM);
         ADC_enableContinuousMode(M2_IW_ADC_BASE, ADC_INT_NUMBER2);
@@ -754,461 +775,501 @@ void HAL_setupInterrupts(HAL_MTR_Handle handle)
     return;
 }
 
-//
-// setup CPU Timer
-//
+/**
+ * @brief 配置CPU定时器
+ * @details 设置CPU定时器的预分频器、周期、仿真模式等
+ * @param base 定时器基地址
+ * @param periodCount 定时器周期计数
+ * @return 无
+ */
 void HAL_setupCpuTimer(uint32_t base, uint32_t periodCount)
 {
-    CPUTimer_setPreScaler(CPUTIMER0_BASE, 0);  // divide by 1 (SYSCLKOUT)
-    CPUTimer_setPeriod(base, periodCount);
-    CPUTimer_stopTimer(base);                // Stop timer / reload / restart
+    CPUTimer_setPreScaler(CPUTIMER0_BASE, 0);  // 分频比为1（SYSCLKOUT）
+    CPUTimer_setPeriod(base, periodCount);    // 设置定时器周期
+    CPUTimer_stopTimer(base);                // 停止定时器/重载/重启
     CPUTimer_setEmulationMode(base,
-                              CPUTIMER_EMULATIONMODE_STOPAFTERNEXTDECREMENT);
-    CPUTimer_reloadTimerCounter(base);       // Reload counter with period value
-    CPUTimer_resumeTimer(base);
+                              CPUTIMER_EMULATIONMODE_STOPAFTERNEXTDECREMENT);    // 设置仿真模式
+    CPUTimer_reloadTimerCounter(base);       // 用周期值重载计数器
+    CPUTimer_resumeTimer(base);              // 恢复定时器运行
 
     return;
 }
 
 #ifdef DACOUT_EN
-//
-// setup DAC
-//
+/**
+ * @brief 配置DAC
+ * @details 初始化DAC模块，设置参考电压、阴影值和输出模式
+ * @param handle HAL句柄，指定要配置的HAL对象
+ * @return 无
+ */
 void HAL_setupDACs(HAL_Handle handle)
 {
-
-    HAL_Obj *obj = (HAL_Obj *)handle;
+    HAL_Obj *obj = (HAL_Obj *)handle;    // 将HAL句柄转换为具体对象指针
 
     //
-    // DAC-A  ---> Resolver carrier excitation
-    // DAC-B  ---> General purpose display
-    // DAC-C  ---> General purpose display
+    // DAC-A  ---> 旋转变压器载波激励
+    // DAC-B  ---> 通用显示
+    // DAC-C  ---> 通用显示
     //
 
-    uint16_t cnt;
+    uint16_t cnt;    // 循环计数器
 
     for(cnt = 0; cnt < 3; cnt++)
     {
-        // Set DAC voltage reference to VRefHi
+        // 设置DAC电压参考为VRefHi
         DAC_setReferenceVoltage(obj->dacHandle[cnt], DAC_REF_ADC_VREFHI);
 
-        // Set DAC shadow value register
+        // 设置DAC阴影值寄存器
         DAC_setShadowValue(obj->dacHandle[cnt], 1024);
 
-        //Enable DAC output
+        //启用DAC输出
         DAC_enableOutput(obj->dacHandle[cnt]);
     }
 
-    DAC_enableOutput(obj->dacHandle[0]);   // disable DACA
-    DAC_enableOutput(obj->dacHandle[1]);   // disable DACB
+    DAC_enableOutput(obj->dacHandle[0]);   // 启用DACA
+    DAC_enableOutput(obj->dacHandle[1]);   // 启用DACB
 
     //
-    // Resolver carrier excitation signal additional initialization
+    // 旋转变压器载波激励信号附加初始化
     //
 
-    // enable value change only on sync signal
+    // 仅在同步信号上启用值更改
     DAC_setLoadMode(obj->dacHandle[0], DAC_LOAD_PWMSYNC);
 
-    // sync sel 5 means sync from pwm 6
+    // sync sel 5表示来自pwm 6的同步
     DAC_setPWMSyncSignal(obj->dacHandle[0], 5);
 
     return;
 }
 #endif // DACOUT_EN
 
-//
-// Sets up the GPIO (General Purpose I/O) pins
-//
+/**
+ * @brief 配置GPIO（通用输入/输出）引脚
+ * @details 设置所有GPIO引脚的功能、方向、模式和属性，包括PWM、QEP、CAN、SPI、SCI等功能引脚
+ * @param handle HAL句柄，指定要配置的HAL对象
+ * @return 无
+ */
 void HAL_setupGPIOs(HAL_Handle handle)
 {
-    // GPIO0->EPWM1A->UH_M1
-    GPIO_setMasterCore(0, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_0_EPWM1A);
-    GPIO_setPadConfig(0, GPIO_PIN_TYPE_STD);
+    // 电机1的PWM引脚配置
+    // GPIO0->EPWM1A->UH_M1（电机1的U相上桥臂）
+    GPIO_setMasterCore(0, GPIO_CORE_CPU1);    // 设置GPIO0的主核为CPU1
+    GPIO_setPinConfig(GPIO_0_EPWM1A);    // 配置GPIO0为EPWM1A功能
+    GPIO_setPadConfig(0, GPIO_PIN_TYPE_STD);    // 设置GPIO0的引脚类型为标准类型
 
-    // GPIO1->EPWM1B->UL_M1
-    GPIO_setMasterCore(1, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_1_EPWM1B);
-    GPIO_setPadConfig(1, GPIO_PIN_TYPE_STD);
+    // GPIO1->EPWM1B->UL_M1（电机1的U相下桥臂）
+    GPIO_setMasterCore(1, GPIO_CORE_CPU1);    // 设置GPIO1的主核为CPU1
+    GPIO_setPinConfig(GPIO_1_EPWM1B);    // 配置GPIO1为EPWM1B功能
+    GPIO_setPadConfig(1, GPIO_PIN_TYPE_STD);    // 设置GPIO1的引脚类型为标准类型
 
-    // GPIO2->EPWM2A->VH_M1
-    GPIO_setMasterCore(2, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_2_EPWM2A);
-    GPIO_setPadConfig(2, GPIO_PIN_TYPE_STD);
+    // GPIO2->EPWM2A->VH_M1（电机1的V相上桥臂）
+    GPIO_setMasterCore(2, GPIO_CORE_CPU1);    // 设置GPIO2的主核为CPU1
+    GPIO_setPinConfig(GPIO_2_EPWM2A);    // 配置GPIO2为EPWM2A功能
+    GPIO_setPadConfig(2, GPIO_PIN_TYPE_STD);    // 设置GPIO2的引脚类型为标准类型
 
-    // GPIO3->EPWM2B->VL_M1
-    GPIO_setMasterCore(3, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_3_EPWM2B);
-    GPIO_setPadConfig(3, GPIO_PIN_TYPE_STD);
+    // GPIO3->EPWM2B->VL_M1（电机1的V相下桥臂）
+    GPIO_setMasterCore(3, GPIO_CORE_CPU1);    // 设置GPIO3的主核为CPU1
+    GPIO_setPinConfig(GPIO_3_EPWM2B);    // 配置GPIO3为EPWM2B功能
+    GPIO_setPadConfig(3, GPIO_PIN_TYPE_STD);    // 设置GPIO3的引脚类型为标准类型
 
-    // GPIO4->EPWM3A->WH_M1
-    GPIO_setMasterCore(4, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_4_EPWM3A);
-    GPIO_setPadConfig(4, GPIO_PIN_TYPE_STD);
+    // GPIO4->EPWM3A->WH_M1（电机1的W相上桥臂）
+    GPIO_setMasterCore(4, GPIO_CORE_CPU1);    // 设置GPIO4的主核为CPU1
+    GPIO_setPinConfig(GPIO_4_EPWM3A);    // 配置GPIO4为EPWM3A功能
+    GPIO_setPadConfig(4, GPIO_PIN_TYPE_STD);    // 设置GPIO4的引脚类型为标准类型
 
-    // GPIO5->EPWM3B->WL_M1
-    GPIO_setMasterCore(5, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_5_EPWM3B);
-    GPIO_setPadConfig(5, GPIO_PIN_TYPE_STD);
+    // GPIO5->EPWM3B->WL_M1（电机1的W相下桥臂）
+    GPIO_setMasterCore(5, GPIO_CORE_CPU1);    // 设置GPIO5的主核为CPU1
+    GPIO_setPinConfig(GPIO_5_EPWM3B);    // 配置GPIO5为EPWM3B功能
+    GPIO_setPadConfig(5, GPIO_PIN_TYPE_STD);    // 设置GPIO5的引脚类型为标准类型
 
-    // GPIO6->EPWM4A->UH_M2
-    GPIO_setMasterCore(6, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_6_EPWM4A);
-    GPIO_setPadConfig(6, GPIO_PIN_TYPE_STD);
+    // 电机2的PWM引脚配置
+    // GPIO6->EPWM4A->UH_M2（电机2的U相上桥臂）
+    GPIO_setMasterCore(6, GPIO_CORE_CPU1);    // 设置GPIO6的主核为CPU1
+    GPIO_setPinConfig(GPIO_6_EPWM4A);    // 配置GPIO6为EPWM4A功能
+    GPIO_setPadConfig(6, GPIO_PIN_TYPE_STD);    // 设置GPIO6的引脚类型为标准类型
 
-    // GPIO7->EPWM4B->UL_M2
-    GPIO_setMasterCore(7, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_7_EPWM4B);
-    GPIO_setPadConfig(7, GPIO_PIN_TYPE_STD);
+    // GPIO7->EPWM4B->UL_M2（电机2的U相下桥臂）
+    GPIO_setMasterCore(7, GPIO_CORE_CPU1);    // 设置GPIO7的主核为CPU1
+    GPIO_setPinConfig(GPIO_7_EPWM4B);    // 配置GPIO7为EPWM4B功能
+    GPIO_setPadConfig(7, GPIO_PIN_TYPE_STD);    // 设置GPIO7的引脚类型为标准类型
 
-    // GPIO8->EPWM5A->VH_M2
-    GPIO_setMasterCore(8, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_8_EPWM5A);
-    GPIO_setPadConfig(8, GPIO_PIN_TYPE_STD);
+    // GPIO8->EPWM5A->VH_M2（电机2的V相上桥臂）
+    GPIO_setMasterCore(8, GPIO_CORE_CPU1);    // 设置GPIO8的主核为CPU1
+    GPIO_setPinConfig(GPIO_8_EPWM5A);    // 配置GPIO8为EPWM5A功能
+    GPIO_setPadConfig(8, GPIO_PIN_TYPE_STD);    // 设置GPIO8的引脚类型为标准类型
 
-    // GPIO9->EPWM5B->VL_M2
-    GPIO_setMasterCore(9, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_9_EPWM5B);
-    GPIO_setPadConfig(9, GPIO_PIN_TYPE_STD);
+    // GPIO9->EPWM5B->VL_M2（电机2的V相下桥臂）
+    GPIO_setMasterCore(9, GPIO_CORE_CPU1);    // 设置GPIO9的主核为CPU1
+    GPIO_setPinConfig(GPIO_9_EPWM5B);    // 配置GPIO9为EPWM5B功能
+    GPIO_setPadConfig(9, GPIO_PIN_TYPE_STD);    // 设置GPIO9的引脚类型为标准类型
 
-    // GPIO10->EPWM6A->WH_M2
-    GPIO_setMasterCore(10, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_10_EPWM6A);
-    GPIO_setPadConfig(10, GPIO_PIN_TYPE_STD);
+    // GPIO10->EPWM6A->WH_M2（电机2的W相上桥臂）
+    GPIO_setMasterCore(10, GPIO_CORE_CPU1);    // 设置GPIO10的主核为CPU1
+    GPIO_setPinConfig(GPIO_10_EPWM6A);    // 配置GPIO10为EPWM6A功能
+    GPIO_setPadConfig(10, GPIO_PIN_TYPE_STD);    // 设置GPIO10的引脚类型为标准类型
 
-    // GPIO11->EPWM6B->WL_M2
-    GPIO_setMasterCore(11, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_11_EPWM6B);
-    GPIO_setPadConfig(11, GPIO_PIN_TYPE_STD);
+    // GPIO11->EPWM6B->WL_M2（电机2的W相下桥臂）
+    GPIO_setMasterCore(11, GPIO_CORE_CPU1);    // 设置GPIO11的主核为CPU1
+    GPIO_setPinConfig(GPIO_11_EPWM6B);    // 配置GPIO11为EPWM6B功能
+    GPIO_setPadConfig(11, GPIO_PIN_TYPE_STD);    // 设置GPIO11的引脚类型为标准类型
 
-    // GPIO12 - CANTXB
-    GPIO_setMasterCore(12, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_12_CANTXB);
-    GPIO_setDirectionMode(12, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(12, GPIO_PIN_TYPE_STD);
+    // CAN总线引脚配置
+    // GPIO12 - CANTXB（CAN总线发送引脚）
+    GPIO_setMasterCore(12, GPIO_CORE_CPU1);    // 设置GPIO12的主核为CPU1
+    GPIO_setPinConfig(GPIO_12_CANTXB);    // 配置GPIO12为CANTXB功能
+    GPIO_setDirectionMode(12, GPIO_DIR_MODE_IN);    // 设置GPIO12为输入模式
+    GPIO_setPadConfig(12, GPIO_PIN_TYPE_STD);    // 设置GPIO12的引脚类型为标准类型
 
-    // GPIO14 - OT_M2
-    GPIO_setMasterCore(14, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_14_GPIO14);
-    GPIO_setDirectionMode(14, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(14, GPIO_PIN_TYPE_INVERT);
+    // 故障检测引脚配置
+    // GPIO14 - OT_M2（电机2的过热检测引脚）
+    GPIO_setMasterCore(14, GPIO_CORE_CPU1);    // 设置GPIO14的主核为CPU1
+    GPIO_setPinConfig(GPIO_14_GPIO14);    // 配置GPIO14为GPIO功能
+    GPIO_setDirectionMode(14, GPIO_DIR_MODE_IN);    // 设置GPIO14为输入模式
+    GPIO_setPadConfig(14, GPIO_PIN_TYPE_INVERT);    // 设置GPIO14的引脚类型为反相输入
 
-    // GPIO15 - Reserve for debug
-    GPIO_setMasterCore(15, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_15_GPIO15);
-    GPIO_setDirectionMode(15, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(15, GPIO_PIN_TYPE_STD);
+    // 调试预留引脚
+    // GPIO15 - Reserve for debug（预留用于调试）
+    GPIO_setMasterCore(15, GPIO_CORE_CPU1);    // 设置GPIO15的主核为CPU1
+    GPIO_setPinConfig(GPIO_15_GPIO15);    // 配置GPIO15为GPIO功能
+    GPIO_setDirectionMode(15, GPIO_DIR_MODE_IN);    // 设置GPIO15为输入模式
+    GPIO_setPadConfig(15, GPIO_PIN_TYPE_STD);    // 设置GPIO15的引脚类型为标准类型
 
-    // GPIO16 - Reserve for debug
-    GPIO_setMasterCore(16, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_16_GPIO16);
-    GPIO_setDirectionMode(16, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(16, GPIO_PIN_TYPE_STD);
+    // GPIO16 - Reserve for debug（预留用于调试）
+    GPIO_setMasterCore(16, GPIO_CORE_CPU1);    // 设置GPIO16的主核为CPU1
+    GPIO_setPinConfig(GPIO_16_GPIO16);    // 配置GPIO16为GPIO功能
+    GPIO_setDirectionMode(16, GPIO_DIR_MODE_IN);    // 设置GPIO16为输入模式
+    GPIO_setPadConfig(16, GPIO_PIN_TYPE_STD);    // 设置GPIO16的引脚类型为标准类型
 
-    // GPIO17 - CANRXB
-    GPIO_setMasterCore(17, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_17_CANRXB);
-    GPIO_setDirectionMode(17, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(17, GPIO_PIN_TYPE_STD);
+    // CAN总线引脚配置
+    // GPIO17 - CANRXB（CAN总线接收引脚）
+    GPIO_setMasterCore(17, GPIO_CORE_CPU1);    // 设置GPIO17的主核为CPU1
+    GPIO_setPinConfig(GPIO_17_CANRXB);    // 配置GPIO17为CANRXB功能
+    GPIO_setDirectionMode(17, GPIO_DIR_MODE_IN);    // 设置GPIO17为输入模式
+    GPIO_setPadConfig(17, GPIO_PIN_TYPE_STD);    // 设置GPIO17的引脚类型为标准类型
 
-    // GPIO18 reserve for debug
-    GPIO_setMasterCore(18, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_18_GPIO18);
-    GPIO_setPadConfig(18, GPIO_PIN_TYPE_STD);
-    GPIO_setDirectionMode(18, GPIO_DIR_MODE_OUT);
+    // 调试预留引脚
+    // GPIO18 reserve for debug（预留用于调试）
+    GPIO_setMasterCore(18, GPIO_CORE_CPU1);    // 设置GPIO18的主核为CPU1
+    GPIO_setPinConfig(GPIO_18_GPIO18);    // 配置GPIO18为GPIO功能
+    GPIO_setPadConfig(18, GPIO_PIN_TYPE_STD);    // 设置GPIO18的引脚类型为标准类型
+    GPIO_setDirectionMode(18, GPIO_DIR_MODE_OUT);    // 设置GPIO18为输出模式
 
-    // GPIO19 - Input->nFault_M1
-    GPIO_setMasterCore(19, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_19_GPIO19);
-    GPIO_setDirectionMode(19, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(19, GPIO_PIN_TYPE_STD);
+    // 故障检测引脚配置
+    // GPIO19 - Input->nFault_M1（电机1的故障输入引脚）
+    GPIO_setMasterCore(19, GPIO_CORE_CPU1);    // 设置GPIO19的主核为CPU1
+    GPIO_setPinConfig(GPIO_19_GPIO19);    // 配置GPIO19为GPIO功能
+    GPIO_setDirectionMode(19, GPIO_DIR_MODE_IN);    // 设置GPIO19为输入模式
+    GPIO_setPadConfig(19, GPIO_PIN_TYPE_STD);    // 设置GPIO19的引脚类型为标准类型
 
-    // Setup GPIO for QEP operation
-    // GPIO20->QEP1A_M1
-    GPIO_setMasterCore(20, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_20_EQEP1A);
-    GPIO_setDirectionMode(20, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(20, GPIO_PIN_TYPE_STD);
-    GPIO_setQualificationMode(20, GPIO_QUAL_3SAMPLE);
+    // QEP（正交编码器）引脚配置
+    // GPIO20->QEP1A_M1（电机1的编码器A相）
+    GPIO_setMasterCore(20, GPIO_CORE_CPU1);    // 设置GPIO20的主核为CPU1
+    GPIO_setPinConfig(GPIO_20_EQEP1A);    // 配置GPIO20为EQEP1A功能
+    GPIO_setDirectionMode(20, GPIO_DIR_MODE_IN);    // 设置GPIO20为输入模式
+    GPIO_setPadConfig(20, GPIO_PIN_TYPE_STD);    // 设置GPIO20的引脚类型为标准类型
+    GPIO_setQualificationMode(20, GPIO_QUAL_3SAMPLE);    // 设置GPIO20的资格模式为3采样
 
-    // GPIO21->QEP1B_M1
-    GPIO_setMasterCore(21, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_21_EQEP1B);
-    GPIO_setDirectionMode(21, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(21, GPIO_PIN_TYPE_STD);
-    GPIO_setQualificationMode(21, GPIO_QUAL_3SAMPLE);
+    // GPIO21->QEP1B_M1（电机1的编码器B相）
+    GPIO_setMasterCore(21, GPIO_CORE_CPU1);    // 设置GPIO21的主核为CPU1
+    GPIO_setPinConfig(GPIO_21_EQEP1B);    // 配置GPIO21为EQEP1B功能
+    GPIO_setDirectionMode(21, GPIO_DIR_MODE_IN);    // 设置GPIO21为输入模式
+    GPIO_setPadConfig(21, GPIO_PIN_TYPE_STD);    // 设置GPIO21的引脚类型为标准类型
+    GPIO_setQualificationMode(21, GPIO_QUAL_3SAMPLE);    // 设置GPIO21的资格模式为3采样
 
-    // GPIO24 - OT_M1
-    GPIO_setMasterCore(24, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_24_GPIO24);
-    GPIO_setDirectionMode(24, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(24, GPIO_PIN_TYPE_INVERT);
+    // 故障检测引脚配置
+    // GPIO24 - OT_M1（电机1的过热检测引脚）
+    GPIO_setMasterCore(24, GPIO_CORE_CPU1);    // 设置GPIO24的主核为CPU1
+    GPIO_setPinConfig(GPIO_24_GPIO24);    // 配置GPIO24为GPIO功能
+    GPIO_setDirectionMode(24, GPIO_DIR_MODE_IN);    // 设置GPIO24为输入模式
+    GPIO_setPadConfig(24, GPIO_PIN_TYPE_INVERT);    // 设置GPIO24的引脚类型为反相输入
 
-    // GPIO25 - Reserve for debug
-    GPIO_setMasterCore(25, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_25_GPIO25);
-    GPIO_setDirectionMode(25, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(25, GPIO_PIN_TYPE_STD);
+    // 调试预留引脚
+    // GPIO25 - Reserve for debug（预留用于调试）
+    GPIO_setMasterCore(25, GPIO_CORE_CPU1);    // 设置GPIO25的主核为CPU1
+    GPIO_setPinConfig(GPIO_25_GPIO25);    // 配置GPIO25为GPIO功能
+    GPIO_setDirectionMode(25, GPIO_DIR_MODE_IN);    // 设置GPIO25为输入模式
+    GPIO_setPadConfig(25, GPIO_PIN_TYPE_STD);    // 设置GPIO25的引脚类型为标准类型
 
-    // GPIO26 - EN_GATE_M2
-    GPIO_setMasterCore(26, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_26_GPIO26);
-    GPIO_writePin(26, 1);
-    GPIO_setDirectionMode(26, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(26, GPIO_PIN_TYPE_PULLUP);
+    // 电机控制引脚配置
+    // GPIO26 - EN_GATE_M2（电机2的栅极使能引脚）
+    GPIO_setMasterCore(26, GPIO_CORE_CPU1);    // 设置GPIO26的主核为CPU1
+    GPIO_setPinConfig(GPIO_26_GPIO26);    // 配置GPIO26为GPIO功能
+    GPIO_writePin(26, 1);    // 设置GPIO26的输出为高电平（启用栅极）
+    GPIO_setDirectionMode(26, GPIO_DIR_MODE_OUT);    // 设置GPIO26为输出模式
+    GPIO_setPadConfig(26, GPIO_PIN_TYPE_PULLUP);    // 设置GPIO26的引脚类型为上拉类型
 
-    // GPIO27 - WAKE_M2
-    GPIO_setMasterCore(27, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_27_GPIO27);
-    GPIO_setDirectionMode(27, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(27, GPIO_PIN_TYPE_STD);
+    // GPIO27 - WAKE_M2（电机2的唤醒引脚）
+    GPIO_setMasterCore(27, GPIO_CORE_CPU1);    // 设置GPIO27的主核为CPU1
+    GPIO_setPinConfig(GPIO_27_GPIO27);    // 配置GPIO27为GPIO功能
+    GPIO_setDirectionMode(27, GPIO_DIR_MODE_IN);    // 设置GPIO27为输入模式
+    GPIO_setPadConfig(27, GPIO_PIN_TYPE_STD);    // 设置GPIO27的引脚类型为标准类型
 
-    // GPIO31->LED
-    GPIO_setMasterCore(31, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_31_GPIO31);
-    GPIO_writePin(31, 1);
-    GPIO_setDirectionMode(31, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(31, GPIO_PIN_TYPE_STD);
+    // LED指示灯引脚配置
+    // GPIO31->LED（LED指示灯）
+    GPIO_setMasterCore(31, GPIO_CORE_CPU1);    // 设置GPIO31的主核为CPU1
+    GPIO_setPinConfig(GPIO_31_GPIO31);    // 配置GPIO31为GPIO功能
+    GPIO_writePin(31, 1);    // 设置GPIO31的输出为高电平（关闭LED）
+    GPIO_setDirectionMode(31, GPIO_DIR_MODE_OUT);    // 设置GPIO31为输出模式
+    GPIO_setPadConfig(31, GPIO_PIN_TYPE_STD);    // 设置GPIO31的引脚类型为标准类型
 
-    // GPIO34->LED
-    GPIO_setMasterCore(34, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_34_GPIO34);
-    GPIO_writePin(34, 1);
-    GPIO_setDirectionMode(34, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(34, GPIO_PIN_TYPE_STD);
+    // GPIO34->LED（LED指示灯）
+    GPIO_setMasterCore(34, GPIO_CORE_CPU1);    // 设置GPIO34的主核为CPU1
+    GPIO_setPinConfig(GPIO_34_GPIO34);    // 配置GPIO34为GPIO功能
+    GPIO_writePin(34, 1);    // 设置GPIO34的输出为高电平（关闭LED）
+    GPIO_setDirectionMode(34, GPIO_DIR_MODE_OUT);    // 设置GPIO34为输出模式
+    GPIO_setPadConfig(34, GPIO_PIN_TYPE_STD);    // 设置GPIO34的引脚类型为标准类型
 
-    // GPIO40->SDAB
-    GPIO_setMasterCore(40, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_40_SDAB);
-    GPIO_setDirectionMode(40, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(40, GPIO_PIN_TYPE_STD);
+    // I2C总线引脚配置
+    // GPIO40->SDAB（I2C总线数据引脚）
+    GPIO_setMasterCore(40, GPIO_CORE_CPU1);    // 设置GPIO40的主核为CPU1
+    GPIO_setPinConfig(GPIO_40_SDAB);    // 配置GPIO40为SDAB功能
+    GPIO_setDirectionMode(40, GPIO_DIR_MODE_IN);    // 设置GPIO40为输入模式
+    GPIO_setPadConfig(40, GPIO_PIN_TYPE_STD);    // 设置GPIO40的引脚类型为标准类型
 
-    // GPIO41->SCLB
-    GPIO_setMasterCore(41, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_41_SCLB);
-    GPIO_setDirectionMode(41, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(41, GPIO_PIN_TYPE_STD);
+    // GPIO41->SCLB（I2C总线时钟引脚）
+    GPIO_setMasterCore(41, GPIO_CORE_CPU1);    // 设置GPIO41的主核为CPU1
+    GPIO_setPinConfig(GPIO_41_SCLB);    // 配置GPIO41为SCLB功能
+    GPIO_setDirectionMode(41, GPIO_DIR_MODE_IN);    // 设置GPIO41为输入模式
+    GPIO_setPadConfig(41, GPIO_PIN_TYPE_STD);    // 设置GPIO41的引脚类型为标准类型
 
-    // GPIO42->SCITXDA
-    GPIO_setMasterCore(42, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_42_SCITXDA);
-    GPIO_setDirectionMode(42, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(42, GPIO_PIN_TYPE_STD);
+    // SCI（串口）引脚配置
+    // GPIO42->SCITXDA（SCI A发送引脚）
+    GPIO_setMasterCore(42, GPIO_CORE_CPU1);    // 设置GPIO42的主核为CPU1
+    GPIO_setPinConfig(GPIO_42_SCITXDA);    // 配置GPIO42为SCITXDA功能
+    GPIO_setDirectionMode(42, GPIO_DIR_MODE_IN);    // 设置GPIO42为输入模式
+    GPIO_setPadConfig(42, GPIO_PIN_TYPE_STD);    // 设置GPIO42的引脚类型为标准类型
 
-    // GPIO43->SCIRXDA
-    GPIO_setMasterCore(43, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_43_SCIRXDA);
-    GPIO_setDirectionMode(43, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(43, GPIO_PIN_TYPE_STD);
+    // GPIO43->SCIRXDA（SCI A接收引脚）
+    GPIO_setMasterCore(43, GPIO_CORE_CPU1);    // 设置GPIO43的主核为CPU1
+    GPIO_setPinConfig(GPIO_43_SCIRXDA);    // 配置GPIO43为SCIRXDA功能
+    GPIO_setDirectionMode(43, GPIO_DIR_MODE_IN);    // 设置GPIO43为输入模式
+    GPIO_setPadConfig(43, GPIO_PIN_TYPE_STD);    // 设置GPIO43的引脚类型为标准类型
 
-    // GPIO54->EQEP2A_M2
-    GPIO_setMasterCore(54, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_54_EQEP2A);
-    GPIO_setDirectionMode(54, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(54, GPIO_PIN_TYPE_STD);
-    GPIO_setQualificationMode(54, GPIO_QUAL_3SAMPLE);
+    // 电机2的QEP（正交编码器）引脚配置
+    // GPIO54->EQEP2A_M2（电机2的编码器A相）
+    GPIO_setMasterCore(54, GPIO_CORE_CPU1);    // 设置GPIO54的主核为CPU1
+    GPIO_setPinConfig(GPIO_54_EQEP2A);    // 配置GPIO54为EQEP2A功能
+    GPIO_setDirectionMode(54, GPIO_DIR_MODE_IN);    // 设置GPIO54为输入模式
+    GPIO_setPadConfig(54, GPIO_PIN_TYPE_STD);    // 设置GPIO54的引脚类型为标准类型
+    GPIO_setQualificationMode(54, GPIO_QUAL_3SAMPLE);    // 设置GPIO54的资格模式为3采样
 
-    // GPIO55->EQEP2B_M2
-    GPIO_setMasterCore(55, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_55_EQEP2B);
-    GPIO_setDirectionMode(55, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(55, GPIO_PIN_TYPE_STD);
-    GPIO_setQualificationMode(55, GPIO_QUAL_3SAMPLE);
+    // GPIO55->EQEP2B_M2（电机2的编码器B相）
+    GPIO_setMasterCore(55, GPIO_CORE_CPU1);    // 设置GPIO55的主核为CPU1
+    GPIO_setPinConfig(GPIO_55_EQEP2B);    // 配置GPIO55为EQEP2B功能
+    GPIO_setDirectionMode(55, GPIO_DIR_MODE_IN);    // 设置GPIO55为输入模式
+    GPIO_setPadConfig(55, GPIO_PIN_TYPE_STD);    // 设置GPIO55的引脚类型为标准类型
+    GPIO_setQualificationMode(55, GPIO_QUAL_3SAMPLE);    // 设置GPIO55的资格模式为3采样
 
-    // GPIO56->SCITXDC
-    GPIO_setMasterCore(56, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_56_SCITXDC);
-    GPIO_setDirectionMode(56, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(56, GPIO_PIN_TYPE_STD);
+    // SCI（串口）引脚配置
+    // GPIO56->SCITXDC（SCI C发送引脚）
+    GPIO_setMasterCore(56, GPIO_CORE_CPU1);    // 设置GPIO56的主核为CPU1
+    GPIO_setPinConfig(GPIO_56_SCITXDC);    // 配置GPIO56为SCITXDC功能
+    GPIO_setDirectionMode(56, GPIO_DIR_MODE_OUT);    // 设置GPIO56为输出模式
+    GPIO_setPadConfig(56, GPIO_PIN_TYPE_STD);    // 设置GPIO56的引脚类型为标准类型
 
-    // GPIO57->EQEP2I_M2
-    GPIO_setMasterCore(57, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_57_EQEP2I);
-    GPIO_setDirectionMode(57, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(57, GPIO_PIN_TYPE_STD);
-    GPIO_setQualificationMode(57, GPIO_QUAL_3SAMPLE);
+    // 电机2的QEP（正交编码器）索引引脚配置
+    // GPIO57->EQEP2I_M2（电机2的编码器索引相）
+    GPIO_setMasterCore(57, GPIO_CORE_CPU1);    // 设置GPIO57的主核为CPU1
+    GPIO_setPinConfig(GPIO_57_EQEP2I);    // 配置GPIO57为EQEP2I功能
+    GPIO_setDirectionMode(57, GPIO_DIR_MODE_IN);    // 设置GPIO57为输入模式
+    GPIO_setPadConfig(57, GPIO_PIN_TYPE_STD);    // 设置GPIO57的引脚类型为标准类型
+    GPIO_setQualificationMode(57, GPIO_QUAL_3SAMPLE);    // 设置GPIO57的资格模式为3采样
 
-    // GPIO58->SPISIMOA_M1
-    GPIO_setMasterCore(58, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_58_SPISIMOA);
-    GPIO_setDirectionMode(58, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(58, GPIO_PIN_TYPE_STD);
+    // 电机1的SPI引脚配置
+    // GPIO58->SPISIMOA_M1（电机1的SPI发送引脚）
+    GPIO_setMasterCore(58, GPIO_CORE_CPU1);    // 设置GPIO58的主核为CPU1
+    GPIO_setPinConfig(GPIO_58_SPISIMOA);    // 配置GPIO58为SPISIMOA功能
+    GPIO_setDirectionMode(58, GPIO_DIR_MODE_OUT);    // 设置GPIO58为输出模式
+    GPIO_setPadConfig(58, GPIO_PIN_TYPE_STD);    // 设置GPIO58的引脚类型为标准类型
 
-    // GPIO59->SPISOMIA_M1
-    GPIO_setMasterCore(59, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_59_SPISOMIA);
-    GPIO_setDirectionMode(59, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(59, GPIO_PIN_TYPE_STD);
+    // GPIO59->SPISOMIA_M1（电机1的SPI接收引脚）
+    GPIO_setMasterCore(59, GPIO_CORE_CPU1);    // 设置GPIO59的主核为CPU1
+    GPIO_setPinConfig(GPIO_59_SPISOMIA);    // 配置GPIO59为SPISOMIA功能
+    GPIO_setDirectionMode(59, GPIO_DIR_MODE_IN);    // 设置GPIO59为输入模式
+    GPIO_setPadConfig(59, GPIO_PIN_TYPE_STD);    // 设置GPIO59的引脚类型为标准类型
 
-    // GPIO60->SPICLKA_M1
-    GPIO_setMasterCore(60, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_60_SPICLKA);
-    GPIO_setDirectionMode(60, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(60, GPIO_PIN_TYPE_STD);
+    // GPIO60->SPICLKA_M1（电机1的SPI时钟引脚）
+    GPIO_setMasterCore(60, GPIO_CORE_CPU1);    // 设置GPIO60的主核为CPU1
+    GPIO_setPinConfig(GPIO_60_SPICLKA);    // 配置GPIO60为SPICLKA功能
+    GPIO_setDirectionMode(60, GPIO_DIR_MODE_OUT);    // 设置GPIO60为输出模式
+    GPIO_setPadConfig(60, GPIO_PIN_TYPE_STD);    // 设置GPIO60的引脚类型为标准类型
 
-    // GPIO61->SPISTEA_M1
-    GPIO_setMasterCore(61, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_61_SPISTEA);
-    GPIO_setDirectionMode(61, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(61, GPIO_PIN_TYPE_STD);
+    // GPIO61->SPISTEA_M1（电机1的SPI片选引脚）
+    GPIO_setMasterCore(61, GPIO_CORE_CPU1);    // 设置GPIO61的主核为CPU1
+    GPIO_setPinConfig(GPIO_61_SPISTEA);    // 配置GPIO61为SPISTEA功能
+    GPIO_setDirectionMode(61, GPIO_DIR_MODE_OUT);    // 设置GPIO61为输出模式
+    GPIO_setPadConfig(61, GPIO_PIN_TYPE_STD);    // 设置GPIO61的引脚类型为标准类型
 
-    // GPIO63->SPISIMOB_M2
-    GPIO_setMasterCore(63, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_63_SPISIMOB);
-    GPIO_setDirectionMode(63, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(63, GPIO_PIN_TYPE_STD);
+    // 电机2的SPI引脚配置
+    // GPIO63->SPISIMOB_M2（电机2的SPI发送引脚）
+    GPIO_setMasterCore(63, GPIO_CORE_CPU1);    // 设置GPIO63的主核为CPU1
+    GPIO_setPinConfig(GPIO_63_SPISIMOB);    // 配置GPIO63为SPISIMOB功能
+    GPIO_setDirectionMode(63, GPIO_DIR_MODE_OUT);    // 设置GPIO63为输出模式
+    GPIO_setPadConfig(63, GPIO_PIN_TYPE_STD);    // 设置GPIO63的引脚类型为标准类型
 
-    // GPIO64->SPISOMIB_M2
-    GPIO_setMasterCore(64, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_64_SPISOMIB);
-    GPIO_setDirectionMode(64, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(64, GPIO_PIN_TYPE_STD);
+    // GPIO64->SPISOMIB_M2（电机2的SPI接收引脚）
+    GPIO_setMasterCore(64, GPIO_CORE_CPU1);    // 设置GPIO64的主核为CPU1
+    GPIO_setPinConfig(GPIO_64_SPISOMIB);    // 配置GPIO64为SPISOMIB功能
+    GPIO_setDirectionMode(64, GPIO_DIR_MODE_IN);    // 设置GPIO64为输入模式
+    GPIO_setPadConfig(64, GPIO_PIN_TYPE_STD);    // 设置GPIO64的引脚类型为标准类型
 
-    // GPIO65->SPICLKB_M2
-    GPIO_setMasterCore(65, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_65_SPICLKB);
-    GPIO_setDirectionMode(65, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(65, GPIO_PIN_TYPE_STD);
+    // GPIO65->SPICLKB_M2（电机2的SPI时钟引脚）
+    GPIO_setMasterCore(65, GPIO_CORE_CPU1);    // 设置GPIO65的主核为CPU1
+    GPIO_setPinConfig(GPIO_65_SPICLKB);    // 配置GPIO65为SPICLKB功能
+    GPIO_setDirectionMode(65, GPIO_DIR_MODE_OUT);    // 设置GPIO65为输出模式
+    GPIO_setPadConfig(65, GPIO_PIN_TYPE_STD);    // 设置GPIO65的引脚类型为标准类型
 
-    // GPIO66->SPISTEB
-    GPIO_setMasterCore(66, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_66_SPISTEB);
-    GPIO_setDirectionMode(66, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(66, GPIO_PIN_TYPE_STD);
+    // GPIO66->SPISTEB（SPI片选引脚）
+    GPIO_setMasterCore(66, GPIO_CORE_CPU1);    // 设置GPIO66的主核为CPU1
+    GPIO_setPinConfig(GPIO_66_SPISTEB);    // 配置GPIO66为SPISTEB功能
+    GPIO_setDirectionMode(66, GPIO_DIR_MODE_OUT);    // 设置GPIO66为输出模式
+    GPIO_setPadConfig(66, GPIO_PIN_TYPE_STD);    // 设置GPIO66的引脚类型为标准类型
 
-    // GPIO94->Vref
-    GPIO_setMasterCore(94, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_94_GPIO94);
-    GPIO_setDirectionMode(94, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(94, GPIO_PIN_TYPE_STD);
+    // 参考电压引脚配置
+    // GPIO94->Vref（参考电压输入）
+    GPIO_setMasterCore(94, GPIO_CORE_CPU1);    // 设置GPIO94的主核为CPU1
+    GPIO_setPinConfig(GPIO_94_GPIO94);    // 配置GPIO94为GPIO功能
+    GPIO_setDirectionMode(94, GPIO_DIR_MODE_IN);    // 设置GPIO94为输入模式
+    GPIO_setPadConfig(94, GPIO_PIN_TYPE_STD);    // 设置GPIO94的引脚类型为标准类型
 
-    // GPIO99->QEP1I
-    GPIO_setMasterCore(99, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_99_EQEP1I);
-    GPIO_setDirectionMode(99, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(99, GPIO_PIN_TYPE_STD);
-    GPIO_setQualificationMode(99, GPIO_QUAL_3SAMPLE);
+    // 电机1的QEP（正交编码器）索引引脚配置
+    // GPIO99->QEP1I（电机1的编码器索引相）
+    GPIO_setMasterCore(99, GPIO_CORE_CPU1);    // 设置GPIO99的主核为CPU1
+    GPIO_setPinConfig(GPIO_99_EQEP1I);    // 配置GPIO99为EQEP1I功能
+    GPIO_setDirectionMode(99, GPIO_DIR_MODE_IN);    // 设置GPIO99为输入模式
+    GPIO_setPadConfig(99, GPIO_PIN_TYPE_STD);    // 设置GPIO99的引脚类型为标准类型
+    GPIO_setQualificationMode(99, GPIO_QUAL_3SAMPLE);    // 设置GPIO99的资格模式为3采样
 
-    // GPIO111->Vref
-    GPIO_setMasterCore(111, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_111_GPIO111);
-    GPIO_setDirectionMode(111, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(111, GPIO_PIN_TYPE_STD);
+    // 参考电压引脚配置
+    // GPIO111->Vref（参考电压输入）
+    GPIO_setMasterCore(111, GPIO_CORE_CPU1);    // 设置GPIO111的主核为CPU1
+    GPIO_setPinConfig(GPIO_111_GPIO111);    // 配置GPIO111为GPIO功能
+    GPIO_setDirectionMode(111, GPIO_DIR_MODE_IN);    // 设置GPIO111为输入模式
+    GPIO_setPadConfig(111, GPIO_PIN_TYPE_STD);    // 设置GPIO111的引脚类型为标准类型
 
-    // GPIO124->EN_GATE_M1
-    GPIO_setMasterCore(124, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_124_GPIO124);
-    GPIO_writePin(124, 1);
-    GPIO_setDirectionMode(124, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(124, GPIO_PIN_TYPE_PULLUP);
+    // 电机1的控制引脚配置
+    // GPIO124->EN_GATE_M1（电机1的栅极使能引脚）
+    GPIO_setMasterCore(124, GPIO_CORE_CPU1);    // 设置GPIO124的主核为CPU1
+    GPIO_setPinConfig(GPIO_124_GPIO124);    // 配置GPIO124为GPIO功能
+    GPIO_writePin(124, 1);    // 设置GPIO124的输出为高电平（启用栅极）
+    GPIO_setDirectionMode(124, GPIO_DIR_MODE_OUT);    // 设置GPIO124为输出模式
+    GPIO_setPadConfig(124, GPIO_PIN_TYPE_PULLUP);    // 设置GPIO124的引脚类型为上拉类型
 
-    // GPIO125->WAKE_M1
-    GPIO_setMasterCore(125, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_125_GPIO125);
-    GPIO_setDirectionMode(125, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(125, GPIO_PIN_TYPE_STD);
+    // GPIO125->WAKE_M1（电机1的唤醒引脚）
+    GPIO_setMasterCore(125, GPIO_CORE_CPU1);    // 设置GPIO125的主核为CPU1
+    GPIO_setPinConfig(GPIO_125_GPIO125);    // 配置GPIO125为GPIO功能
+    GPIO_setDirectionMode(125, GPIO_DIR_MODE_IN);    // 设置GPIO125为输入模式
+    GPIO_setPadConfig(125, GPIO_PIN_TYPE_STD);    // 设置GPIO125的引脚类型为标准类型
 
-    // GPIO139->nFault_M2
-    GPIO_setMasterCore(139, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_139_GPIO139);
-    GPIO_setDirectionMode(139, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(139, GPIO_PIN_TYPE_STD);
+    // 故障检测引脚配置
+    // GPIO139->nFault_M2（电机2的故障输入引脚）
+    GPIO_setMasterCore(139, GPIO_CORE_CPU1);    // 设置GPIO139的主核为CPU1
+    GPIO_setPinConfig(GPIO_139_GPIO139);    // 配置GPIO139为GPIO功能
+    GPIO_setDirectionMode(139, GPIO_DIR_MODE_IN);    // 设置GPIO139为输入模式
+    GPIO_setPadConfig(139, GPIO_PIN_TYPE_STD);    // 设置GPIO139的引脚类型为标准类型
 
-    // GPIO153->GPIO
-    GPIO_setMasterCore(153, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_153_GPIO153);
-    GPIO_setDirectionMode(153, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(153, GPIO_PIN_TYPE_STD);
+    // 通用GPIO引脚配置
+    // GPIO153->GPIO（通用GPIO输入）
+    GPIO_setMasterCore(153, GPIO_CORE_CPU1);    // 设置GPIO153的主核为CPU1
+    GPIO_setPinConfig(GPIO_153_GPIO153);    // 配置GPIO153为GPIO功能
+    GPIO_setDirectionMode(153, GPIO_DIR_MODE_IN);    // 设置GPIO153为输入模式
+    GPIO_setPadConfig(153, GPIO_PIN_TYPE_STD);    // 设置GPIO153的引脚类型为标准类型
 
-    // GPIO154->GPIO
-    GPIO_setMasterCore(154, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_154_GPIO154);
-    GPIO_setDirectionMode(154, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(154, GPIO_PIN_TYPE_STD);
+    // GPIO154->GPIO（通用GPIO输入）
+    GPIO_setMasterCore(154, GPIO_CORE_CPU1);    // 设置GPIO154的主核为CPU1
+    GPIO_setPinConfig(GPIO_154_GPIO154);    // 配置GPIO154为GPIO功能
+    GPIO_setDirectionMode(154, GPIO_DIR_MODE_IN);    // 设置GPIO154为输入模式
+    GPIO_setPadConfig(154, GPIO_PIN_TYPE_STD);    // 设置GPIO154的引脚类型为标准类型
 
-    // GPIO155->GPIO
-    GPIO_setMasterCore(155, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_155_GPIO155);
-    GPIO_setDirectionMode(155, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(155, GPIO_PIN_TYPE_STD);
+    // GPIO155->GPIO（通用GPIO输入）
+    GPIO_setMasterCore(155, GPIO_CORE_CPU1);    // 设置GPIO155的主核为CPU1
+    GPIO_setPinConfig(GPIO_155_GPIO155);    // 配置GPIO155为GPIO功能
+    GPIO_setDirectionMode(155, GPIO_DIR_MODE_IN);    // 设置GPIO155为输入模式
+    GPIO_setPadConfig(155, GPIO_PIN_TYPE_STD);    // 设置GPIO155的引脚类型为标准类型
 
-    // GPIO156->GPIO
-    GPIO_setMasterCore(139, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_139_GPIO139);
-    GPIO_setDirectionMode(139, GPIO_DIR_MODE_IN);
-    GPIO_setPadConfig(139, GPIO_PIN_TYPE_STD);
+    // GPIO156->GPIO（通用GPIO输入）
+    GPIO_setMasterCore(156, GPIO_CORE_CPU1);    // 设置GPIO156的主核为CPU1
+    GPIO_setPinConfig(GPIO_156_GPIO156);    // 配置GPIO156为GPIO功能
+    GPIO_setDirectionMode(156, GPIO_DIR_MODE_IN);    // 设置GPIO156为输入模式
+    GPIO_setPadConfig(156, GPIO_PIN_TYPE_STD);    // 设置GPIO156的引脚类型为标准类型
 
-    // GPIO157->EPWM7A-DAC1
-    GPIO_setMasterCore(157, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_157_EPWM7A);
-    GPIO_setDirectionMode(157, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(157, GPIO_PIN_TYPE_STD);
+    // DAC相关的PWM引脚配置
+    // GPIO157->EPWM7A-DAC1（DAC1的EPWM7A功能）
+    GPIO_setMasterCore(157, GPIO_CORE_CPU1);    // 设置GPIO157的主核为CPU1
+    GPIO_setPinConfig(GPIO_157_EPWM7A);    // 配置GPIO157为EPWM7A功能
+    GPIO_setDirectionMode(157, GPIO_DIR_MODE_OUT);    // 设置GPIO157为输出模式
+    GPIO_setPadConfig(157, GPIO_PIN_TYPE_STD);    // 设置GPIO157的引脚类型为标准类型
 
-    // GPIO158->EPWM7B-DAC2
-    GPIO_setMasterCore(158, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_158_EPWM7B);
-    GPIO_setDirectionMode(158, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(158, GPIO_PIN_TYPE_STD);
+    // GPIO158->EPWM7B-DAC2（DAC2的EPWM7B功能）
+    GPIO_setMasterCore(158, GPIO_CORE_CPU1);    // 设置GPIO158的主核为CPU1
+    GPIO_setPinConfig(GPIO_158_EPWM7B);    // 配置GPIO158为EPWM7B功能
+    GPIO_setDirectionMode(158, GPIO_DIR_MODE_OUT);    // 设置GPIO158为输出模式
+    GPIO_setPadConfig(158, GPIO_PIN_TYPE_STD);    // 设置GPIO158的引脚类型为标准类型
 
-    // GPIO159->EPWM8A-DAC3
-    GPIO_setMasterCore(159, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_159_EPWM8A);
-    GPIO_setDirectionMode(159, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(159, GPIO_PIN_TYPE_STD);
+    // GPIO159->EPWM8A-DAC3（DAC3的EPWM8A功能）
+    GPIO_setMasterCore(159, GPIO_CORE_CPU1);    // 设置GPIO159的主核为CPU1
+    GPIO_setPinConfig(GPIO_159_EPWM8A);    // 配置GPIO159为EPWM8A功能
+    GPIO_setDirectionMode(159, GPIO_DIR_MODE_OUT);    // 设置GPIO159为输出模式
+    GPIO_setPadConfig(159, GPIO_PIN_TYPE_STD);    // 设置GPIO159的引脚类型为标准类型
 
-    // GPIO160->EPWM8B-DAC4
-    GPIO_setMasterCore(160, GPIO_CORE_CPU1);
-    GPIO_setPinConfig(GPIO_160_EPWM8B);
-    GPIO_setDirectionMode(160, GPIO_DIR_MODE_OUT);
-    GPIO_setPadConfig(160, GPIO_PIN_TYPE_STD);
+    // GPIO160->EPWM8B-DAC4（DAC4的EPWM8B功能）
+    GPIO_setMasterCore(160, GPIO_CORE_CPU1);    // 设置GPIO160的主核为CPU1
+    GPIO_setPinConfig(GPIO_160_EPWM8B);    // 配置GPIO160为EPWM8B功能
+    GPIO_setDirectionMode(160, GPIO_DIR_MODE_OUT);    // 设置GPIO160为输出模式
+    GPIO_setPadConfig(160, GPIO_PIN_TYPE_STD);    // 设置GPIO160的引脚类型为标准类型
 
     return;
 }
 
 
 
-// Sets up the PWMs (Pulse Width Modulators) for motor
+/**
+ * @brief 配置电机的PWM（脉宽调制器）
+ * @details 设置PWM时基、计数器比较、动作限定器、死区等参数
+ * @param handle HAL电机句柄，指定要配置的电机HAL对象
+ * @return 无
+ */
 void HAL_setupMotorPWMs(HAL_MTR_Handle handle)
 {
-    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;
+    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
-    uint16_t  cnt;
-    uint16_t  halfPeriod = 0;
+    uint16_t  cnt;    // 循环计数器
+    uint16_t  halfPeriod = 0;    // 半周期计数
 
-    SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_TBCLKSYNC);
+    SysCtl_disablePeripheral(SYSCTL_PERIPH_CLK_TBCLKSYNC);    // 禁用TBCLKSYNC外设时钟
 
     // *****************************************
-    // Inverter PWM configuration - PWM 1, 2, 3
+    // 逆变器PWM配置 - PWM 1, 2, 3
     // *****************************************
     for(cnt = 0; cnt < 3; cnt++)
     {
-        // Time Base SubModule Registers
-        // set Immediate load
+        // 时基子模块寄存器
+        // 设置立即加载
         EPWM_setPeriodLoadMode(obj->pwmHandle[cnt], EPWM_PERIOD_DIRECT_LOAD);
         EPWM_setTimeBasePeriod(obj->pwmHandle[cnt], 0);
         EPWM_setPhaseShift(obj->pwmHandle[cnt], 0);
         EPWM_setTimeBaseCounter(obj->pwmHandle[cnt], 0);
         EPWM_setTimeBaseCounterMode(obj->pwmHandle[cnt],
-                                    EPWM_COUNTER_MODE_UP_DOWN);
+                                    EPWM_COUNTER_MODE_UP_DOWN);    // 设置为上下计数模式
 
         EPWM_setClockPrescaler(obj->pwmHandle[cnt], EPWM_CLOCK_DIVIDER_1,
-                               EPWM_HSCLOCK_DIVIDER_1);
+                               EPWM_HSCLOCK_DIVIDER_1);    // 设置时钟预分频器
 
-        // Counter Compare Submodule Registers
-        // set duty 0% initially
+        // 计数器比较子模块寄存器
+        // 初始占空比设为0%
         EPWM_setCounterCompareValue(obj->pwmHandle[cnt],
                                     EPWM_COUNTER_COMPARE_A, 0);
         EPWM_setCounterCompareShadowLoadMode(obj->pwmHandle[cnt],
                                              EPWM_COUNTER_COMPARE_A,
-                                             EPWM_COMP_LOAD_ON_CNTR_ZERO);
+                                             EPWM_COMP_LOAD_ON_CNTR_ZERO);    // 在计数器为零时加载
 
-        // Action Qualifier SubModule Registers
+        // 动作限定器子模块寄存器
         EPWM_setActionQualifierActionComplete(obj->pwmHandle[cnt],
                                               EPWM_AQ_OUTPUT_A,
                 (EPWM_ActionQualifierEventAction)(EPWM_AQ_OUTPUT_LOW_UP_CMPA |
-                                                EPWM_AQ_OUTPUT_HIGH_DOWN_CMPA));
+                                                EPWM_AQ_OUTPUT_HIGH_DOWN_CMPA));    // 设置动作限定器动作
 
-        // Active high complementary PWMs - Set up the deadband
+        // 高电平互补PWM - 设置死区
         EPWM_setRisingEdgeDeadBandDelayInput(obj->pwmHandle[cnt],
                                              EPWM_DB_INPUT_EPWMA);
         EPWM_setFallingEdgeDeadBandDelayInput(obj->pwmHandle[cnt],
@@ -1227,15 +1288,15 @@ void HAL_setupMotorPWMs(HAL_MTR_Handle handle)
         EPWM_enablePhaseShiftLoad(obj->pwmHandle[cnt]);
 
         EPWM_setCountModeAfterSync(obj->pwmHandle[cnt],
-                                   EPWM_COUNT_MODE_UP_AFTER_SYNC);
-        // configure sync
+                                   EPWM_COUNT_MODE_UP_AFTER_SYNC);    // 同步后的计数模式
+        // 配置同步
         EPWM_setSyncOutPulseMode(obj->pwmHandle[cnt],
                                  EPWM_SYNC_OUT_PULSE_ON_EPWMxSYNCIN);
     }
 
     //EPWM1->EWPM4
     SysCtl_setSyncInputConfig(SYSCTL_SYNC_IN_EPWM4,
-                              SYSCTL_SYNC_IN_SRC_EPWM1SYNCOUT);
+                              SYSCTL_SYNC_IN_SRC_EPWM1SYNCOUT);    // 设置EPWM4的同步输入源为EPWM1的同步输出
 
     if(handle == &halMtr[MTR_1])
     {
@@ -1243,7 +1304,7 @@ void HAL_setupMotorPWMs(HAL_MTR_Handle handle)
 
         EPWM_disablePhaseShiftLoad(obj->pwmHandle[0]);
 
-        // sync "down-stream"
+        // 同步"下游"
         EPWM_setSyncOutPulseMode(obj->pwmHandle[0],
                                       EPWM_SYNC_OUT_PULSE_ON_COUNTER_ZERO);
 
@@ -1268,41 +1329,45 @@ void HAL_setupMotorPWMs(HAL_MTR_Handle handle)
         EPWM_setTimeBasePeriod(obj->pwmHandle[2], halfPeriod);
     }
 
-    // Setting up link from EPWM to ADC
-    // EPWM1/EPWM4 - Inverter currents at sampling frequency
-    //               (@ PRD or @ (PRD&ZRO) )
+    // 设置EPWM到ADC的链接
+    // EPWM1/EPWM4 - 逆变器电流以采样频率
+    //               (@ PRD 或 @ (PRD&ZRO) )
 #if(SAMPLING_METHOD == SINGLE_SAMPLING)
-    // Select SOC from counter at ctr = prd
+    // 选择在计数器为prd时触发SOC
     EPWM_setADCTriggerSource(obj->pwmHandle[0],
                              EPWM_SOC_A, EPWM_SOC_TBCTR_ZERO);
 #elif(SAMPLING_METHOD == DOUBLE_SAMPLING)
-    // Select SOC from counter at ctr = 0 or ctr = prd
+    // 选择在计数器为0或prd时触发SOC
     EPWM_setADCTriggerSource(obj->pwmHandle[0], EPWM_SOC_A,
                              EPWM_SOC_TBCTR_ZERO_OR_PERIOD);
 #endif
 
-    // Generate pulse on 1st event
+    // 在第一个事件时生成脉冲
     EPWM_setADCTriggerEventPrescale(obj->pwmHandle[0], EPWM_SOC_A, 1);
 
-    // Enable SOC on A group
+    // 启用A组的SOC
     EPWM_enableADCTrigger(obj->pwmHandle[0], EPWM_SOC_A);
 
     return;
 }
 
-//
-// Configure Motor Fault Protection Against Over Current
-//
+/**
+ * @brief 配置电机过流保护
+ * @details 设置电流限制、配置比较器、设置故障保护逻辑
+ * @param handle HAL电机句柄，指定要配置的电机HAL对象
+ * @param currentLimit 电流限制值
+ * @return 无
+ */
 void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
                                    const float32_t currentLimit)
 {
-    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;
+    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
-    uint16_t  cnt;
+    uint16_t  cnt;    // 循环计数器
 
     EPWM_DigitalCompareTripInput tripInSet = EPWM_DC_TRIP_TRIPIN4;
 
-    // High and Low Compare event trips
+    // 高和低比较事件触发
     uint16_t curHi = 0;
     uint16_t curLo = 0;
 
@@ -1313,33 +1378,32 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
         curHi = 2048 + M1_CURRENT_SCALE(currentLimit);
         curLo = 2048 - M1_CURRENT_SCALE(currentLimit);
 
-        //Select GPIO24 as INPUTXBAR1
+        //选择GPIO24作为INPUTXBAR1
         XBAR_setInputPin(M1_XBAR_INPUT_NUM, M1_XBAR_INPUT_GPIO);
 
-        // Configure TRIP 4 to OR the High and Low trips from both
-        // comparator 1 & 3, clear everything first
+        // 配置TRIP 4以OR来自比较器1和3的高和低触发，先清除所有内容
         EALLOW;
         HWREG(XBAR_EPWM_CFG_REG_BASE + XBAR_O_TRIP4MUX0TO15CFG) = 0;
         HWREG(XBAR_EPWM_CFG_REG_BASE + XBAR_O_TRIP4MUX16TO31CFG) = 0;
         EDIS;
 
-        // Enable Muxes for ored input of CMPSS1H and 1L, mux for Mux0x
-        //cmpss1 - tripH or tripL
+        // 启用Muxes用于CMPSS1H和1L的或输入，Mux0x的mux
+        //cmpss1 - tripH或tripL
         XBAR_setEPWMMuxConfig(XBAR_TRIP4, XBAR_EPWM_MUX00_CMPSS1_CTRIPH_OR_L);
 
-        //cmpss3 - tripH or tripL
+        //cmpss3 - tripH或tripL
         XBAR_setEPWMMuxConfig(XBAR_TRIP4, XBAR_EPWM_MUX04_CMPSS3_CTRIPH_OR_L);
 
-        //cmpss6 - tripH or tripL
+        //cmpss6 - tripH或tripL
         XBAR_setEPWMMuxConfig(XBAR_TRIP4, XBAR_EPWM_MUX10_CMPSS6_CTRIPH_OR_L);
 
-        //inputxbar2 trip
+        //inputxbar2触发
         XBAR_setEPWMMuxConfig(XBAR_TRIP4, XBAR_EPWM_MUX01_INPUTXBAR1);
 
-        // Disable all the muxes first
+        // 首先禁用所有muxes
         XBAR_disableEPWMMux(XBAR_TRIP4, 0xFFFF);
 
-        // Enable Mux 0  OR Mux 4 to generate TRIP4
+        // 启用Mux 0 或 Mux 4以生成TRIP4
         XBAR_enableEPWMMux(XBAR_TRIP4, XBAR_MUX00 | XBAR_MUX04 | XBAR_MUX10 |
                                        XBAR_MUX01);
     }
@@ -1353,48 +1417,46 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
         //Select GPIO14 as INPUTXBAR3
         XBAR_setInputPin(M2_XBAR_INPUT_NUM, M2_XBAR_INPUT_GPIO);
 
-        // Configure TRIP 5 to OR the High and Low trips from both
-        // comparator 5, 5, and 2, clear everything first
+        // 配置TRIP 5以OR来自比较器5、5和2的高和低触发，先清除所有内容
         EALLOW;
         HWREG(XBAR_EPWM_CFG_REG_BASE + XBAR_O_TRIP5MUX0TO15CFG) = 0;
         HWREG(XBAR_EPWM_CFG_REG_BASE + XBAR_O_TRIP5MUX16TO31CFG) = 0;
         EDIS;
 
-        // Enable Muxes for ored input of CMPSS1H and 1L, mux for Mux0x
-        //cmpss5 - tripH or tripL
+        // 启用Muxes用于CMPSS1H和1L的或输入，Mux0x的mux
+        //cmpss5 - tripH或tripL
         XBAR_setEPWMMuxConfig(XBAR_TRIP5, XBAR_EPWM_MUX08_CMPSS5_CTRIPH_OR_L);
 
-        //cmpss5 - tripH or tripL
+        //cmpss5 - tripH或tripL
         XBAR_setEPWMMuxConfig(XBAR_TRIP5, XBAR_EPWM_MUX08_CMPSS5_CTRIPH_OR_L);
 
-        //cmpss2 - tripH or tripL
+        //cmpss2 - tripH或tripL
         XBAR_setEPWMMuxConfig(XBAR_TRIP5, XBAR_EPWM_MUX02_CMPSS2_CTRIPH_OR_L);
 
-        //inputxbar2 trip
+        //inputxbar2触发
         XBAR_setEPWMMuxConfig(XBAR_TRIP5, XBAR_EPWM_MUX03_INPUTXBAR2);
 
-        // Disable all the muxes first
+        // 首先禁用所有muxes
         XBAR_disableEPWMMux(XBAR_TRIP5, 0xFFFF);
 
-        // Enable Mux 0  OR Mux 4 to generate TRIP5
+        // 启用Mux 0 或 Mux 4以生成TRIP5
         XBAR_enableEPWMMux(XBAR_TRIP5, XBAR_MUX08 | XBAR_MUX08 | XBAR_MUX02 |
                                        XBAR_MUX03);
     }
 
-
     //
-    // Configure TRIP for motor inverter phases
+    // 配置电机逆变器相的TRIP
     //
     for(cnt = 0; cnt < 3; cnt++)
     {
-        // comparator references
-        // Set DAC-H to allowed MAX +ve current
+        // 比较器参考
+        // 将DAC-H设置为允许的最大正向电流
         CMPSS_setDACValueHigh(obj->cmpssHandle[cnt], curHi);
 
-        // Set DAC-L to allowed MAX -ve current
+        // 将DAC-L设置为允许的最大负向电流
         CMPSS_setDACValueLow(obj->cmpssHandle[cnt], curLo);
 
-        //Trip 4 is the input to the DCAHCOMPSEL
+        //Trip 4是DCAHCOMPSEL的输入
         EPWM_selectDigitalCompareTripInput(obj->pwmHandle[cnt],
                                            tripInSet,
                                            EPWM_DC_TYPE_DCAH);
@@ -1414,15 +1476,15 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
 
         EPWM_enableTripZoneSignals(obj->pwmHandle[cnt], EPWM_TZ_SIGNAL_DCAEVT1);
 
-        // Emulator Stop
+        // 仿真器停止
         EPWM_enableTripZoneSignals(obj->pwmHandle[cnt], EPWM_TZ_SIGNAL_CBC6);
 
-        // What do we want the OST/CBC events to do?
-        // TZA events can force EPWMxA
-        // TZB events can force EPWMxB
+        // 我们希望OST/CBC事件做什么？
+        // TZA事件可以强制EPWMxA
+        // TZB事件可以强制EPWMxB
 
-        // EPWMxA will go low
-        // EPWMxB will go low
+        // EPWMxA将变为低电平
+        // EPWMxB将变为低电平
         EPWM_setTripZoneAction(obj->pwmHandle[cnt],
                                EPWM_TZ_ACTION_EVENT_TZA,
                                EPWM_TZ_ACTION_LOW);
@@ -1432,20 +1494,20 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
                                EPWM_TZ_ACTION_LOW);
     }
 
-    // clear EPWM trip flags
+    // 清除EPWM触发标志
     DEVICE_DELAY_US(1L);
 
     for(cnt = 0; cnt < 3; cnt++)
     {
-        // clear any spurious  OST & DCAEVT1 flags
+        // 清除任何虚假的OST和DCAEVT1标志
         EPWM_clearTripZoneFlag(obj->pwmHandle[cnt], (EPWM_TZ_FLAG_OST |
                                                      EPWM_TZ_FLAG_DCAEVT1 |
                                                      EPWM_TZ_FLAG_CBC ));
 
-        // clear any spurious  HLATCH - (not in TRIP gen path)
+        // 清除任何虚假的HLATCH - (不在TRIP生成路径中)
         CMPSS_clearFilterLatchHigh(obj->cmpssHandle[cnt]);
 
-        // clear any spurious  LLATCH - (not in TRIP gen path)
+        // 清除任何虚假的LLATCH - (不在TRIP生成路径中)
         CMPSS_clearFilterLatchLow(obj->cmpssHandle[cnt]);
     }
 
@@ -1454,31 +1516,35 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
     return;
 }
 
+/**
+ * @brief 配置QEP（正交编码器接口）
+ * @details 设置编码器解码器、位置计数器、单位定时器等
+ * @param handle HAL电机句柄，指定要配置的电机HAL对象
+ * @return 无
+ */
 void HAL_setupQEP(HAL_MTR_Handle handle)
 {
-    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;
+    HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
-    // Configure the decoder for quadrature count mode, counting both
-    // rising and falling edges (that is, 2x resolution)
+    // 配置解码器为正交计数模式，计数上升和下降沿（即2倍分辨率）
     EQEP_setDecoderConfig(obj->qepHandle, (EQEP_CONFIG_2X_RESOLUTION |
                                            EQEP_CONFIG_QUADRATURE |
                                            EQEP_CONFIG_NO_SWAP) );
 
-    EQEP_setEmulationMode(obj->qepHandle, EQEP_EMULATIONMODE_RUNFREE);
+    EQEP_setEmulationMode(obj->qepHandle, EQEP_EMULATIONMODE_RUNFREE);    // 设置仿真模式为自由运行
 
-    // Configure the position counter to be latched on a unit time out
-    // and latch on rising edge of index pulse
+    // 配置位置计数器在单位超时和索引脉冲上升沿时锁存
     EQEP_setLatchMode(obj->qepHandle, (EQEP_LATCH_RISING_INDEX |
                                        EQEP_LATCH_UNIT_TIME_OUT) );
 
-    // Configure the position counter to reset on a maximum position
+    // 配置位置计数器在最大位置时重置
     if(handle == &halMtr[MTR_1])
     {
         EQEP_setPositionCounterConfig(obj->qepHandle,
                                       EQEP_POSITION_RESET_MAX_POS,
                                       ((4 * M1_ENCODER_LINES) - 1) );
 
-        // Enable the unit timer, setting the frequency to 10KHz
+        // 启用单位定时器，设置频率为10KHz
         EQEP_enableUnitTimer(obj->qepHandle, M1_QEP_UNIT_TIMER_TICKS - 1);
     }
     else if(handle == &halMtr[MTR_2])
@@ -1487,25 +1553,24 @@ void HAL_setupQEP(HAL_MTR_Handle handle)
                                       EQEP_POSITION_RESET_MAX_POS,
                                       ((4 * M2_ENCODER_LINES) - 1) );
 
-        // Enable the unit timer, setting the frequency to 10KHz
+        // 启用单位定时器，设置频率为10KHz
         EQEP_enableUnitTimer(obj->qepHandle, M2_QEP_UNIT_TIMER_TICKS - 1);
     }
 
-    // Disables the eQEP module position-compare unit
+    // 禁用eQEP模块位置比较单元
     EQEP_disableCompare(obj->qepHandle);
 
-    // Configure and enable the edge-capture unit. The capture clock divider is
-    // SYSCLKOUT/128. The unit-position event divider is QCLK/32.
+    // 配置并启用边缘捕获单元。捕获时钟分频器为SYSCLKOUT/128。单位位置事件分频器为QCLK/32。
     EQEP_setCaptureConfig(obj->qepHandle, EQEP_CAPTURE_CLK_DIV_128,
                                           EQEP_UNIT_POS_EVNT_DIV_32);
 
-    // Enable QEP edge-capture unit
+    // 启用QEP边缘捕获单元
     EQEP_enableCapture(obj->qepHandle);
 
-    // Enable UTO on QEP
+    // 在QEP上启用UTO
     EQEP_enableInterrupt(obj->qepHandle, EQEP_INT_UNIT_TIME_OUT);
 
-    // Enable the eQEP module
+    // 启用eQEP模块
     EQEP_enableModule(obj->qepHandle);
 
     return;

@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Mon Feb  2 22:26:52 2026                 *
+;* Date/Time created: Tue Feb  3 16:04:35 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -17,7 +17,7 @@ $C$DW$1	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$1, DW_AT_declaration
 	.dwattr $C$DW$1, DW_AT_external
 	.dwattr $C$DW$1, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$1, DW_AT_decl_line(0xfd)
+	.dwattr $C$DW$1, DW_AT_decl_line(0x13b)
 	.dwattr $C$DW$1, DW_AT_decl_column(0x1a)
 
 
@@ -54,11 +54,11 @@ $C$DW$5	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$5, DW_AT_type(*$C$DW$T$165)
 	.dwattr $C$DW$5, DW_AT_external
 	.dwattr $C$DW$5, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$5, DW_AT_decl_line(0x3e)
+	.dwattr $C$DW$5, DW_AT_decl_line(0x45)
 	.dwattr $C$DW$5, DW_AT_decl_column(0x0c)
 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{2FB16BD6-3476-4139-BE2C-54BE747A4E7E} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{1F9BFDA7-08BA-47B6-8B3A-5E9B8AC9AF88} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{BED080EF-073E-4032-85A0-C616D168A954} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{1795C40C-3FDB-4971-AE0B-438866387649} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{439D35EB-0914-451E-9972-04CFBE09C0B0} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{07813B82-D95D-45D1-865C-60657971E25C} 
 	.sect	".text:complexCtrl_M2"
 	.clink
 	.global	||complexCtrl_M2||
@@ -70,10 +70,10 @@ $C$DW$6	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$6, DW_AT_linkage_name("complexCtrl_M2")
 	.dwattr $C$DW$6, DW_AT_external
 	.dwattr $C$DW$6, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$6, DW_AT_decl_line(0x18f)
+	.dwattr $C$DW$6, DW_AT_decl_line(0x1ca)
 	.dwattr $C$DW$6, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$6, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 400,column 1,is_stmt,address ||complexCtrl_M2||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 459,column 1,is_stmt,address ||complexCtrl_M2||,isa 0
 
 	.dwfde $C$DW$CIE, ||complexCtrl_M2||
 $C$DW$7	.dwtag  DW_TAG_formal_parameter
@@ -104,54 +104,54 @@ $C$DW$8	.dwtag  DW_TAG_variable
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 403,column 5,is_stmt,isa 0
-        MOVB      XAR0,#78              ; [CPU_ALU] |403| 
-        MOVB      XAR1,#76              ; [CPU_ALU] |403| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |403| 
-        MOVL      XAR5,#||fclVars||     ; [CPU_ARAU] |403| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |403| 
-        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |403| 
-        MOVB      XAR0,#92              ; [CPU_ALU] |403| 
-        ADDB      ACC,#170              ; [CPU_ALU] |403| 
-        MOV32     R2H,*+XAR5[AR0]       ; [CPU_FPU] |403| 
-        MOVB      XAR1,#88              ; [CPU_ALU] |403| 
-        MOVB      XAR0,#94              ; [CPU_FPU] |403| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 462,column 5,is_stmt,isa 0
+        MOVB      XAR0,#78              ; [CPU_ALU] |462| 
+        MOVB      XAR1,#76              ; [CPU_ALU] |462| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |462| 
+        MOVL      XAR5,#||fclVars||     ; [CPU_ARAU] |462| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |462| 
+        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |462| 
+        MOVB      XAR0,#92              ; [CPU_ALU] |462| 
+        ADDB      ACC,#170              ; [CPU_ALU] |462| 
+        MOV32     R2H,*+XAR5[AR0]       ; [CPU_FPU] |462| 
+        MOVB      XAR1,#88              ; [CPU_ALU] |462| 
+        MOVB      XAR0,#94              ; [CPU_FPU] |462| 
 
-        MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |403| 
-||      MOV32     R0H,*+XAR5[AR0]       ; [CPU_FPU] |403| 
+        MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |462| 
+||      MOV32     R0H,*+XAR5[AR0]       ; [CPU_FPU] |462| 
 
-        MOVB      XAR0,#82              ; [CPU_FPU] |403| 
-        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |403| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |403| 
+        MOVB      XAR0,#82              ; [CPU_FPU] |462| 
+        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |462| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |462| 
 
-        SUBF32    R0H,R2H,R0H           ; [CPU_FPU] |403| 
-||      MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |403| 
+        SUBF32    R0H,R2H,R0H           ; [CPU_FPU] |462| 
+||      MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |462| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 408,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_ALU] |408| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 403,column 5,is_stmt,isa 0
-        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |403| 
-        MOV32     R1H,*+XAR4[AR1]       ; [CPU_FPU] |403| 
-        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |403| 
-        MOV32     R0H,*+XAR5[0]         ; [CPU_FPU] |403| 
-        ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |403| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 408,column 5,is_stmt,isa 0
-        MOVB      XAR1,#170             ; [CPU_ALU] |408| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 403,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |403| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 408,column 5,is_stmt,isa 0
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |408| 
-        MOVB      XAR0,#182             ; [CPU_ALU] |408| 
-        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |408| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |408| 
-        MINF32    R0H,R1H               ; [CPU_FPU] |408| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |408| 
-        MOVB      XAR0,#184             ; [CPU_ALU] |408| 
-        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |408| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |408| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |408| 
-        MAXF32    R0H,R1H               ; [CPU_FPU] |408| 
-        MOV32     *+XAR4[AR1],R0H       ; [CPU_FPU] |408| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 467,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_ALU] |467| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 462,column 5,is_stmt,isa 0
+        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |462| 
+        MOV32     R1H,*+XAR4[AR1]       ; [CPU_FPU] |462| 
+        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |462| 
+        MOV32     R0H,*+XAR5[0]         ; [CPU_FPU] |462| 
+        ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |462| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 467,column 5,is_stmt,isa 0
+        MOVB      XAR1,#170             ; [CPU_ALU] |467| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 462,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |462| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 467,column 5,is_stmt,isa 0
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |467| 
+        MOVB      XAR0,#182             ; [CPU_ALU] |467| 
+        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |467| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |467| 
+        MINF32    R0H,R1H               ; [CPU_FPU] |467| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |467| 
+        MOVB      XAR0,#184             ; [CPU_ALU] |467| 
+        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |467| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |467| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |467| 
+        MAXF32    R0H,R1H               ; [CPU_FPU] |467| 
+        MOV32     *+XAR4[AR1],R0H       ; [CPU_FPU] |467| 
         MOVL      XAR1,*--SP            ; [CPU_ALU] 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	restore_reg, 7
@@ -162,7 +162,7 @@ $C$DW$9	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$6, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$6, DW_AT_TI_end_line(0x19d)
+	.dwattr $C$DW$6, DW_AT_TI_end_line(0x1d8)
 	.dwattr $C$DW$6, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$6
@@ -178,10 +178,10 @@ $C$DW$10	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$10, DW_AT_linkage_name("complexCtrl_M1")
 	.dwattr $C$DW$10, DW_AT_external
 	.dwattr $C$DW$10, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$10, DW_AT_decl_line(0x17f)
+	.dwattr $C$DW$10, DW_AT_decl_line(0x1ba)
 	.dwattr $C$DW$10, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$10, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 384,column 1,is_stmt,address ||complexCtrl_M1||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 443,column 1,is_stmt,address ||complexCtrl_M1||,isa 0
 
 	.dwfde $C$DW$CIE, ||complexCtrl_M1||
 $C$DW$11	.dwtag  DW_TAG_formal_parameter
@@ -212,52 +212,52 @@ $C$DW$12	.dwtag  DW_TAG_variable
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
         MOVW      DP,#||fclVars||+12    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 387,column 5,is_stmt,isa 0
-        MOVB      XAR0,#78              ; [CPU_ALU] |387| 
-        MOVB      XAR1,#76              ; [CPU_ALU] |387| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |387| 
-        MOV32     R0H,@||fclVars||+12   ; [CPU_FPU] |387| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |387| 
-        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |387| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 446,column 5,is_stmt,isa 0
+        MOVB      XAR0,#78              ; [CPU_ALU] |446| 
+        MOVB      XAR1,#76              ; [CPU_ALU] |446| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |446| 
+        MOV32     R0H,@||fclVars||+12   ; [CPU_FPU] |446| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |446| 
+        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |446| 
         MOVW      DP,#||fclVars||+10    ; [CPU_ARAU] 
-        MOVB      XAR0,#82              ; [CPU_ALU] |387| 
-        ADDB      ACC,#170              ; [CPU_ALU] |387| 
-        MOVB      XAR1,#88              ; [CPU_ALU] |387| 
+        MOVB      XAR0,#82              ; [CPU_ALU] |446| 
+        ADDB      ACC,#170              ; [CPU_ALU] |446| 
+        MOVB      XAR1,#88              ; [CPU_ALU] |446| 
 
-        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |387| 
-||      MOV32     R2H,@||fclVars||+10   ; [CPU_FPU] |387| 
+        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |446| 
+||      MOV32     R2H,@||fclVars||+10   ; [CPU_FPU] |446| 
 
-        MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |387| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |387| 
+        MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |446| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |446| 
 
-        SUBF32    R0H,R2H,R0H           ; [CPU_FPU] |387| 
-||      MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |387| 
+        SUBF32    R0H,R2H,R0H           ; [CPU_FPU] |446| 
+||      MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |446| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 392,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_ALU] |392| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 387,column 5,is_stmt,isa 0
-        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |387| 
-        MOV32     R1H,*+XAR4[AR1]       ; [CPU_FPU] |387| 
-        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |387| 
-        MOV32     R0H,*+XAR5[0]         ; [CPU_FPU] |387| 
-        ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |387| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 392,column 5,is_stmt,isa 0
-        MOVB      XAR1,#170             ; [CPU_ALU] |392| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 387,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |387| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 392,column 5,is_stmt,isa 0
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |392| 
-        MOVB      XAR0,#182             ; [CPU_ALU] |392| 
-        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |392| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |392| 
-        MINF32    R0H,R1H               ; [CPU_FPU] |392| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |392| 
-        MOVB      XAR0,#184             ; [CPU_ALU] |392| 
-        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |392| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |392| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |392| 
-        MAXF32    R0H,R1H               ; [CPU_FPU] |392| 
-        MOV32     *+XAR4[AR1],R0H       ; [CPU_FPU] |392| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 451,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_ALU] |451| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 446,column 5,is_stmt,isa 0
+        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |446| 
+        MOV32     R1H,*+XAR4[AR1]       ; [CPU_FPU] |446| 
+        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |446| 
+        MOV32     R0H,*+XAR5[0]         ; [CPU_FPU] |446| 
+        ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |446| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 451,column 5,is_stmt,isa 0
+        MOVB      XAR1,#170             ; [CPU_ALU] |451| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 446,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |446| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 451,column 5,is_stmt,isa 0
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |451| 
+        MOVB      XAR0,#182             ; [CPU_ALU] |451| 
+        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |451| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |451| 
+        MINF32    R0H,R1H               ; [CPU_FPU] |451| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |451| 
+        MOVB      XAR0,#184             ; [CPU_ALU] |451| 
+        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |451| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |451| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |451| 
+        MAXF32    R0H,R1H               ; [CPU_FPU] |451| 
+        MOV32     *+XAR4[AR1],R0H       ; [CPU_FPU] |451| 
         MOVL      XAR1,*--SP            ; [CPU_ALU] 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	restore_reg, 7
@@ -268,7 +268,7 @@ $C$DW$13	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$10, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$10, DW_AT_TI_end_line(0x18d)
+	.dwattr $C$DW$10, DW_AT_TI_end_line(0x1c8)
 	.dwattr $C$DW$10, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$10
@@ -2462,10 +2462,10 @@ $C$DW$144	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$144, DW_AT_linkage_name("FCL_runPICtrl_M2")
 	.dwattr $C$DW$144, DW_AT_external
 	.dwattr $C$DW$144, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$144, DW_AT_decl_line(0x2e5)
+	.dwattr $C$DW$144, DW_AT_decl_line(0x323)
 	.dwattr $C$DW$144, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$144, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 742,column 1,is_stmt,address ||FCL_runPICtrl_M2||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 804,column 1,is_stmt,address ||FCL_runPICtrl_M2||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runPICtrl_M2||
 $C$DW$145	.dwtag  DW_TAG_formal_parameter
@@ -2550,170 +2550,170 @@ $C$DW$152	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -8
 ||$C$L24||:    
         MOVW      DP,#||PieCtrlRegs||+23 ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 753,column 5,is_stmt,isa 0
-        TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#4 ; [CPU_ALU] |753| 
-        B         ||$C$L24||,NTC        ; [CPU_ALU] |753| 
-        ; branchcc occurs ; [] |753| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 815,column 5,is_stmt,isa 0
+        TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#4 ; [CPU_ALU] |815| 
+        B         ||$C$L24||,NTC        ; [CPU_ALU] |815| 
+        ; branchcc occurs ; [] |815| 
         MOVW      DP,#||fclVars||+100   ; [CPU_ARAU] 
         MOVB      XAR0,#74              ; [CPU_ALU] 
-        MOV32     R0H,@||fclVars||+100  ; [CPU_FPU] |753| 
+        MOV32     R0H,@||fclVars||+100  ; [CPU_FPU] |815| 
         MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] 
-        MOV32     R1H,@||fclVars||+100  ; [CPU_FPU] |753| 
-        SINPUF32  R2H,R1H               ; [CPU_FPU] |753| 
-        COSPUF32  R0H,R0H               ; [CPU_FPU] |753| 
+        MOV32     R1H,@||fclVars||+100  ; [CPU_FPU] |815| 
+        SINPUF32  R2H,R1H               ; [CPU_FPU] |815| 
+        COSPUF32  R0H,R0H               ; [CPU_FPU] |815| 
 ||$C$L25||:    
-        TBIT      *+XAR5[0],#1          ; [CPU_ALU] |753| 
-        B         ||$C$L25||,NTC        ; [CPU_ALU] |753| 
-        ; branchcc occurs ; [] |753| 
-        MOVB      XAR0,#66              ; [CPU_ALU] |753| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |753| 
-        MOVB      XAR0,#68              ; [CPU_ALU] |753| 
-        I16TOF32  R4H,*+XAR5[0]         ; [CPU_FPU] |753| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |753| 
-        MOVIZ     R5H,#16147            ; [CPU_FPU] |753| 
-        MOVB      XAR0,#252             ; [CPU_ALU] |753| 
-        I16TOF32  R3H,*+XAR5[0]         ; [CPU_FPU] |753| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |753| 
-        MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |753| 
-        MPYF32    R1H,R1H,R4H           ; [CPU_FPU] |753| 
-        MPYF32    R4H,R3H,#16384        ; [CPU_FPU] |753| 
-        MOVXI     R5H,#52538            ; [CPU_FPU] |753| 
-        ADDF32    R4H,R4H,R1H           ; [CPU_FPU] |753| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 763,column 5,is_stmt,isa 0
-        MOVB      XAR0,#164             ; [CPU_ALU] |763| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 753,column 5,is_stmt,isa 0
-        MPYF32    R3H,R5H,R4H           ; [CPU_FPU] |753| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 760,column 5,is_stmt,isa 0
-        MOVL      XAR5,#||fclVars||     ; [CPU_ARAU] |760| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 763,column 5,is_stmt,isa 0
-        MPYF32    R5H,R2H,R3H           ; [CPU_FPU] |763| 
-        MPYF32    R4H,R0H,R1H           ; [CPU_FPU] |763| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 760,column 5,is_stmt,isa 0
-        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |760| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 763,column 5,is_stmt,isa 0
-        ADDF32    R4H,R4H,R5H           ; [CPU_FPU] |763| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 760,column 5,is_stmt,isa 0
+        TBIT      *+XAR5[0],#1          ; [CPU_ALU] |815| 
+        B         ||$C$L25||,NTC        ; [CPU_ALU] |815| 
+        ; branchcc occurs ; [] |815| 
+        MOVB      XAR0,#66              ; [CPU_ALU] |815| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |815| 
+        MOVB      XAR0,#68              ; [CPU_ALU] |815| 
+        I16TOF32  R4H,*+XAR5[0]         ; [CPU_FPU] |815| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |815| 
+        MOVIZ     R5H,#16147            ; [CPU_FPU] |815| 
+        MOVB      XAR0,#252             ; [CPU_ALU] |815| 
+        I16TOF32  R3H,*+XAR5[0]         ; [CPU_FPU] |815| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |815| 
+        MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |815| 
+        MPYF32    R1H,R1H,R4H           ; [CPU_FPU] |815| 
+        MPYF32    R4H,R3H,#16384        ; [CPU_FPU] |815| 
+        MOVXI     R5H,#52538            ; [CPU_FPU] |815| 
+        ADDF32    R4H,R4H,R1H           ; [CPU_FPU] |815| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 823,column 5,is_stmt,isa 0
+        MOVB      XAR0,#164             ; [CPU_ALU] |823| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 815,column 5,is_stmt,isa 0
+        MPYF32    R3H,R5H,R4H           ; [CPU_FPU] |815| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 820,column 5,is_stmt,isa 0
+        MOVL      XAR5,#||fclVars||     ; [CPU_ARAU] |820| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 823,column 5,is_stmt,isa 0
+        MPYF32    R5H,R2H,R3H           ; [CPU_FPU] |823| 
+        MPYF32    R4H,R0H,R1H           ; [CPU_FPU] |823| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 820,column 5,is_stmt,isa 0
+        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |820| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 823,column 5,is_stmt,isa 0
+        ADDF32    R4H,R4H,R5H           ; [CPU_FPU] |823| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 820,column 5,is_stmt,isa 0
 
-        MOV32     R5H,*+XAR4[AR0]       ; [CPU_FPU] |763| 
-||      MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |760| 
+        MOV32     R5H,*+XAR4[AR0]       ; [CPU_FPU] |823| 
+||      MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |820| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 763,column 5,is_stmt,isa 0
-        SUBF32    R4H,R5H,R4H           ; [CPU_FPU] |763| 
-        MOVB      XAR0,#168             ; [CPU_ALU] |763| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 760,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 823,column 5,is_stmt,isa 0
+        SUBF32    R4H,R5H,R4H           ; [CPU_FPU] |823| 
+        MOVB      XAR0,#168             ; [CPU_ALU] |823| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 820,column 5,is_stmt,isa 0
 
-        MOV32     *+XAR4[AR0],R4H       ; [CPU_FPU] |763| 
-||      SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |760| 
+        MOV32     *+XAR4[AR0],R4H       ; [CPU_FPU] |823| 
+||      SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |820| 
 
-        MOVB      XAR0,#114             ; [CPU_ALU] |760| 
-        MOV32     R4H,*+XAR5[AR0]       ; [CPU_FPU] |760| 
-        SUBF32    R1H,R4H,R1H           ; [CPU_FPU] |760| 
-        MOVB      XAR0,#118             ; [CPU_ALU] |760| 
-        MOV32     *+XAR5[AR0],R1H       ; [CPU_FPU] |760| 
+        MOVB      XAR0,#114             ; [CPU_ALU] |820| 
+        MOV32     R4H,*+XAR5[AR0]       ; [CPU_FPU] |820| 
+        SUBF32    R1H,R4H,R1H           ; [CPU_FPU] |820| 
+        MOVB      XAR0,#118             ; [CPU_ALU] |820| 
+        MOV32     *+XAR5[AR0],R1H       ; [CPU_FPU] |820| 
   IACK  #0x0020
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 772,column 5,is_stmt,isa 0
-        MOVB      XAR1,#178             ; [CPU_ALU] |772| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |772| 
-        MOVB      XAR0,#168             ; [CPU_ALU] |772| 
-        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |772| 
-        ADDB      ACC,#170              ; [CPU_ALU] |772| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |772| 
-        MOVB      XAR1,#182             ; [CPU_FPU] |772| 
-        MOVB      XAR0,#172             ; [CPU_FPU] |772| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |772| 
-        MOV32     R5H,*+XAR4[AR1]       ; [CPU_FPU] |772| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 832,column 5,is_stmt,isa 0
+        MOVB      XAR1,#178             ; [CPU_ALU] |832| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |832| 
+        MOVB      XAR0,#168             ; [CPU_ALU] |832| 
+        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |832| 
+        ADDB      ACC,#170              ; [CPU_ALU] |832| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |832| 
+        MOVB      XAR1,#182             ; [CPU_FPU] |832| 
+        MOVB      XAR0,#172             ; [CPU_FPU] |832| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |832| 
+        MOV32     R5H,*+XAR4[AR1]       ; [CPU_FPU] |832| 
 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |772| 
-||      MPYF32    R1H,R3H,R1H           ; [CPU_FPU] |772| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |832| 
+||      MPYF32    R1H,R3H,R1H           ; [CPU_FPU] |832| 
 
-        MOVB      XAR1,#170             ; [CPU_ALU] |772| 
-        ADDF32    R3H,R3H,R1H           ; [CPU_FPU] |772| 
-        MOV32     R1H,*+XAR5[0]         ; [CPU_FPU] |772| 
-        ADDF32    R3H,R3H,R1H           ; [CPU_FPU] |772| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |772| 
-        MOV32     *+XAR5[0],R3H         ; [CPU_FPU] |772| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |772| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |772| 
-        MINF32    R5H,R3H               ; [CPU_FPU] |772| 
-        MOV32     *+XAR4[AR0],R5H       ; [CPU_FPU] |772| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |772| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |772| 
-        MOVB      XAR0,#184             ; [CPU_ALU] |772| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |772| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 776,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_ALU] |776| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 772,column 5,is_stmt,isa 0
-        MAXF32    R1H,R3H               ; [CPU_FPU] |772| 
-        MOV32     *+XAR4[AR1],R1H       ; [CPU_FPU] |772| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 776,column 5,is_stmt,isa 0
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |776| 
-        MPYF32    R5H,R0H,R1H           ; [CPU_FPU] |776| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 777,column 5,is_stmt,isa 0
-        MPYF32    R3H,R2H,R1H           ; [CPU_FPU] |777| 
+        MOVB      XAR1,#170             ; [CPU_ALU] |832| 
+        ADDF32    R3H,R3H,R1H           ; [CPU_FPU] |832| 
+        MOV32     R1H,*+XAR5[0]         ; [CPU_FPU] |832| 
+        ADDF32    R3H,R3H,R1H           ; [CPU_FPU] |832| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |832| 
+        MOV32     *+XAR5[0],R3H         ; [CPU_FPU] |832| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |832| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |832| 
+        MINF32    R5H,R3H               ; [CPU_FPU] |832| 
+        MOV32     *+XAR4[AR0],R5H       ; [CPU_FPU] |832| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |832| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |832| 
+        MOVB      XAR0,#184             ; [CPU_ALU] |832| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |832| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 836,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_ALU] |836| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 832,column 5,is_stmt,isa 0
+        MAXF32    R1H,R3H               ; [CPU_FPU] |832| 
+        MOV32     *+XAR4[AR1],R1H       ; [CPU_FPU] |832| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 836,column 5,is_stmt,isa 0
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |836| 
+        MPYF32    R5H,R0H,R1H           ; [CPU_FPU] |836| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 837,column 5,is_stmt,isa 0
+        MPYF32    R3H,R2H,R1H           ; [CPU_FPU] |837| 
 ||$C$L26||:    
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 783,column 11,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |783| 
-        TBIT      AL,#5                 ; [CPU_ALU] |783| 
-        B         ||$C$L26||,NTC        ; [CPU_ALU] |783| 
-        ; branchcc occurs ; [] |783| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 843,column 11,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |843| 
+        TBIT      AL,#5                 ; [CPU_ALU] |843| 
+        B         ||$C$L26||,NTC        ; [CPU_ALU] |843| 
+        ; branchcc occurs ; [] |843| 
         MOVW      DP,#||fclVars||+120   ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 800,column 5,is_stmt,isa 0
-        MOV32     R1H,@||fclVars||+120  ; [CPU_FPU] |800| 
-        MOVB      XAR0,#254             ; [CPU_ALU] |800| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 789,column 5,is_stmt,isa 0
-        MOVB      XAR1,#250             ; [CPU_ALU] |789| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 860,column 5,is_stmt,isa 0
+        MOV32     R1H,@||fclVars||+120  ; [CPU_FPU] |860| 
+        MOVB      XAR0,#254             ; [CPU_ALU] |860| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 849,column 5,is_stmt,isa 0
+        MOVB      XAR1,#250             ; [CPU_ALU] |849| 
 
-        MPYF32    R1H,R0H,R1H           ; [CPU_FPU] |800| 
-||      MOV32     R4H,@||fclVars||+120  ; [CPU_FPU] |789| 
+        MPYF32    R1H,R0H,R1H           ; [CPU_FPU] |860| 
+||      MOV32     R4H,@||fclVars||+120  ; [CPU_FPU] |849| 
 
-        MPYF32    R2H,R2H,R4H           ; [CPU_FPU] |789| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 800,column 5,is_stmt,isa 0
-        ADDF32    R1H,R1H,R3H           ; [CPU_FPU] |800| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 789,column 5,is_stmt,isa 0
+        MPYF32    R2H,R2H,R4H           ; [CPU_FPU] |849| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 860,column 5,is_stmt,isa 0
+        ADDF32    R1H,R1H,R3H           ; [CPU_FPU] |860| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 849,column 5,is_stmt,isa 0
 
-        SUBF32    R2H,R5H,R2H           ; [CPU_FPU] |789| 
-||      MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |800| 
+        SUBF32    R2H,R5H,R2H           ; [CPU_FPU] |849| 
+||      MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |860| 
 
-        MPYF32    R3H,R0H,R1H           ; [CPU_FPU] |800| 
-||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |789| 
+        MPYF32    R3H,R0H,R1H           ; [CPU_FPU] |860| 
+||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |849| 
 
-        MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |789| 
+        MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |849| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 800,column 5,is_stmt,isa 0
-        SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |800| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 860,column 5,is_stmt,isa 0
+        SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |860| 
         NOP       ; [CPU_ALU] 
-        MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |800| 
-        MOV32     R5H,R2H               ; [CPU_FPU] |800| 
-        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |800| 
-        MOV32     R0H,R2H               ; [CPU_FPU] |800| 
-        MAXF32    R0H,R3H               ; [CPU_FPU] |800| 
-        MINF32    R5H,R3H               ; [CPU_FPU] |800| 
-        MAXF32    R0H,R1H               ; [CPU_FPU] |800| 
-        MINF32    R5H,R1H               ; [CPU_FPU] |800| 
-        ADDF32    R0H,R0H,R5H           ; [CPU_FPU] |800| 
+        MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |860| 
+        MOV32     R5H,R2H               ; [CPU_FPU] |860| 
+        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |860| 
+        MOV32     R0H,R2H               ; [CPU_FPU] |860| 
+        MAXF32    R0H,R3H               ; [CPU_FPU] |860| 
+        MINF32    R5H,R3H               ; [CPU_FPU] |860| 
+        MAXF32    R0H,R1H               ; [CPU_FPU] |860| 
+        MINF32    R5H,R1H               ; [CPU_FPU] |860| 
+        ADDF32    R0H,R0H,R5H           ; [CPU_FPU] |860| 
         NOP       ; [CPU_ALU] 
-        NEGF32    R0H,R0H               ; [CPU_FPU] |800| 
-        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |800| 
-        MOVB      XAR0,#60              ; [CPU_ALU] |800| 
-        ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |800| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |800| 
-        ADDF32    R3H,R3H,R0H           ; [CPU_FPU] |800| 
-        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |800| 
-        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |800| 
-        F32TOUI32 R2H,R3H               ; [CPU_FPU] |800| 
-        MOVB      XAR0,#62              ; [CPU_ALU] |800| 
-        MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |800| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |800| 
-        F32TOUI32 R0H,R0H               ; [CPU_FPU] |800| 
-        MOVB      XAR0,#64              ; [CPU_ALU] |800| 
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |800| 
-        MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |800| 
-        F32TOUI32 R1H,R1H               ; [CPU_FPU] |800| 
+        NEGF32    R0H,R0H               ; [CPU_FPU] |860| 
+        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |860| 
+        MOVB      XAR0,#60              ; [CPU_ALU] |860| 
+        ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |860| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |860| 
+        ADDF32    R3H,R3H,R0H           ; [CPU_FPU] |860| 
+        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |860| 
+        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |860| 
+        F32TOUI32 R2H,R3H               ; [CPU_FPU] |860| 
+        MOVB      XAR0,#62              ; [CPU_ALU] |860| 
+        MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |860| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |860| 
+        F32TOUI32 R0H,R0H               ; [CPU_FPU] |860| 
+        MOVB      XAR0,#64              ; [CPU_ALU] |860| 
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |860| 
+        MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |860| 
+        F32TOUI32 R1H,R1H               ; [CPU_FPU] |860| 
         MOVW      DP,#||FCL_cycleCount||+1 ; [CPU_ARAU] 
         SPM       #0                    ; [CPU_ALU] 
-        MOV32     *+XAR4[0],R1H         ; [CPU_FPU] |800| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 802,column 5,is_stmt,isa 0
-        MOV       @||FCL_cycleCount||+1,*(0:0x4304) ; [CPU_ALU] |802| 
+        MOV32     *+XAR4[0],R1H         ; [CPU_FPU] |860| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 862,column 5,is_stmt,isa 0
+        MOV       @||FCL_cycleCount||+1,*(0:0x4304) ; [CPU_ALU] |862| 
         MOV32     R5H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -6
 	.dwcfi	restore_reg, 63
@@ -2730,7 +2730,7 @@ $C$DW$153	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$144, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$144, DW_AT_TI_end_line(0x325)
+	.dwattr $C$DW$144, DW_AT_TI_end_line(0x361)
 	.dwattr $C$DW$144, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$144
@@ -2747,10 +2747,10 @@ $C$DW$154	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$154, DW_AT_linkage_name("FCL_runPICtrl_M1")
 	.dwattr $C$DW$154, DW_AT_external
 	.dwattr $C$DW$154, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$154, DW_AT_decl_line(0x1a6)
+	.dwattr $C$DW$154, DW_AT_decl_line(0x1e1)
 	.dwattr $C$DW$154, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$154, DW_AT_TI_max_frame_size(-12)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 423,column 1,is_stmt,address ||FCL_runPICtrl_M1||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 482,column 1,is_stmt,address ||FCL_runPICtrl_M1||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runPICtrl_M1||
 $C$DW$155	.dwtag  DW_TAG_formal_parameter
@@ -2842,172 +2842,172 @@ $C$DW$162	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -12
 ||$C$L27||:    
         MOVW      DP,#||PieCtrlRegs||+23 ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 434,column 5,is_stmt,isa 0
-        TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#0 ; [CPU_ALU] |434| 
-        B         ||$C$L27||,NTC        ; [CPU_ALU] |434| 
-        ; branchcc occurs ; [] |434| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 493,column 5,is_stmt,isa 0
+        TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#0 ; [CPU_ALU] |493| 
+        B         ||$C$L27||,NTC        ; [CPU_ALU] |493| 
+        ; branchcc occurs ; [] |493| 
         MOVB      XAR0,#74              ; [CPU_ALU] 
         MOVW      DP,#||fclVars||+18    ; [CPU_ARAU] 
         MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] 
-        MOV32     R0H,@||fclVars||+18   ; [CPU_FPU] |434| 
-        SINPUF32  R1H,R0H               ; [CPU_FPU] |434| 
-        COSPUF32  R0H,R0H               ; [CPU_FPU] |434| 
+        MOV32     R0H,@||fclVars||+18   ; [CPU_FPU] |493| 
+        SINPUF32  R1H,R0H               ; [CPU_FPU] |493| 
+        COSPUF32  R0H,R0H               ; [CPU_FPU] |493| 
 ||$C$L28||:    
-        TBIT      *+XAR5[0],#0          ; [CPU_ALU] |434| 
-        B         ||$C$L28||,NTC        ; [CPU_ALU] |434| 
-        ; branchcc occurs ; [] |434| 
-        MOVB      XAR0,#66              ; [CPU_ALU] |434| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |434| 
-        MOVIZ     R6H,#16147            ; [CPU_FPU] |434| 
-        MOVB      XAR0,#68              ; [CPU_ALU] |434| 
-        I16TOF32  R4H,*+XAR5[0]         ; [CPU_FPU] |434| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |434| 
-        MOVXI     R6H,#52538            ; [CPU_FPU] |434| 
+        TBIT      *+XAR5[0],#0          ; [CPU_ALU] |493| 
+        B         ||$C$L28||,NTC        ; [CPU_ALU] |493| 
+        ; branchcc occurs ; [] |493| 
+        MOVB      XAR0,#66              ; [CPU_ALU] |493| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |493| 
+        MOVIZ     R6H,#16147            ; [CPU_FPU] |493| 
+        MOVB      XAR0,#68              ; [CPU_ALU] |493| 
+        I16TOF32  R4H,*+XAR5[0]         ; [CPU_FPU] |493| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |493| 
+        MOVXI     R6H,#52538            ; [CPU_FPU] |493| 
         MOVW      DP,#||fclVars||+32    ; [CPU_ARAU] 
-        MOVB      XAR0,#252             ; [CPU_ALU] |434| 
-        I16TOF32  R3H,*+XAR5[0]         ; [CPU_FPU] |434| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |434| 
-        MPYF32    R3H,R2H,R3H           ; [CPU_FPU] |434| 
-        MPYF32    R7H,R2H,R4H           ; [CPU_FPU] |434| 
-        MPYF32    R4H,R3H,#16384        ; [CPU_FPU] |434| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 443,column 5,is_stmt,isa 0
-        MOVB      XAR1,#168             ; [CPU_ALU] |443| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 434,column 5,is_stmt,isa 0
-        ADDF32    R4H,R4H,R7H           ; [CPU_FPU] |434| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 443,column 5,is_stmt,isa 0
-        MOVB      XAR0,#164             ; [CPU_ALU] |443| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 434,column 5,is_stmt,isa 0
-        MPYF32    R3H,R6H,R4H           ; [CPU_FPU] |434| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 440,column 5,is_stmt,isa 0
-        MPYF32    R5H,R1H,R7H           ; [CPU_FPU] |440| 
-        MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |440| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 443,column 5,is_stmt,isa 0
-        MPYF32    R4H,R0H,R7H           ; [CPU_FPU] |443| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 440,column 5,is_stmt,isa 0
+        MOVB      XAR0,#252             ; [CPU_ALU] |493| 
+        I16TOF32  R3H,*+XAR5[0]         ; [CPU_FPU] |493| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |493| 
+        MPYF32    R3H,R2H,R3H           ; [CPU_FPU] |493| 
+        MPYF32    R7H,R2H,R4H           ; [CPU_FPU] |493| 
+        MPYF32    R4H,R3H,#16384        ; [CPU_FPU] |493| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 502,column 5,is_stmt,isa 0
+        MOVB      XAR1,#168             ; [CPU_ALU] |502| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 493,column 5,is_stmt,isa 0
+        ADDF32    R4H,R4H,R7H           ; [CPU_FPU] |493| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 502,column 5,is_stmt,isa 0
+        MOVB      XAR0,#164             ; [CPU_ALU] |502| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 493,column 5,is_stmt,isa 0
+        MPYF32    R3H,R6H,R4H           ; [CPU_FPU] |493| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 499,column 5,is_stmt,isa 0
+        MPYF32    R5H,R1H,R7H           ; [CPU_FPU] |499| 
+        MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |499| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 502,column 5,is_stmt,isa 0
+        MPYF32    R4H,R0H,R7H           ; [CPU_FPU] |502| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 499,column 5,is_stmt,isa 0
 
-        MOV32     R7H,@||fclVars||+32   ; [CPU_FPU] |440| 
-||      MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |443| 
+        MOV32     R7H,@||fclVars||+32   ; [CPU_FPU] |499| 
+||      MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |502| 
 
         MOVW      DP,#||fclVars||+36    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 443,column 5,is_stmt,isa 0
-        ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |443| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 440,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 502,column 5,is_stmt,isa 0
+        ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |502| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 499,column 5,is_stmt,isa 0
 
-        MOV32     R6H,*+XAR4[AR0]       ; [CPU_FPU] |443| 
-||      SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |440| 
+        MOV32     R6H,*+XAR4[AR0]       ; [CPU_FPU] |502| 
+||      SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |499| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 443,column 5,is_stmt,isa 0
-        SUBF32    R2H,R6H,R2H           ; [CPU_FPU] |443| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 440,column 5,is_stmt,isa 0
-        SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |440| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 443,column 5,is_stmt,isa 0
-        MOV32     *+XAR4[AR1],R2H       ; [CPU_FPU] |443| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 440,column 5,is_stmt,isa 0
-        MOV32     @||fclVars||+36,R3H   ; [CPU_FPU] |440| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 502,column 5,is_stmt,isa 0
+        SUBF32    R2H,R6H,R2H           ; [CPU_FPU] |502| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 499,column 5,is_stmt,isa 0
+        SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |499| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 502,column 5,is_stmt,isa 0
+        MOV32     *+XAR4[AR1],R2H       ; [CPU_FPU] |502| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 499,column 5,is_stmt,isa 0
+        MOV32     @||fclVars||+36,R3H   ; [CPU_FPU] |499| 
   IACK  #0x0002
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 452,column 5,is_stmt,isa 0
-        MOVL      ACC,XAR4              ; [CPU_ALU] |452| 
-        MOVB      XAR1,#178             ; [CPU_ALU] |452| 
-        MOVB      XAR0,#168             ; [CPU_ALU] |452| 
-        ADDB      ACC,#170              ; [CPU_ALU] |452| 
-        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |452| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |452| 
-        MOVB      XAR0,#172             ; [CPU_FPU] |452| 
-        MOVB      XAR1,#182             ; [CPU_FPU] |452| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |452| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 511,column 5,is_stmt,isa 0
+        MOVL      ACC,XAR4              ; [CPU_ALU] |511| 
+        MOVB      XAR1,#178             ; [CPU_ALU] |511| 
+        MOVB      XAR0,#168             ; [CPU_ALU] |511| 
+        ADDB      ACC,#170              ; [CPU_ALU] |511| 
+        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |511| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |511| 
+        MOVB      XAR0,#172             ; [CPU_FPU] |511| 
+        MOVB      XAR1,#182             ; [CPU_FPU] |511| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |511| 
 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |452| 
-||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |452| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |511| 
+||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |511| 
 
-        MOVB      XAR0,#170             ; [CPU_ALU] |452| 
-        ADDF32    R3H,R3H,R2H           ; [CPU_FPU] |452| 
-        MOV32     R2H,*+XAR5[0]         ; [CPU_FPU] |452| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |511| 
+        ADDF32    R3H,R3H,R2H           ; [CPU_FPU] |511| 
+        MOV32     R2H,*+XAR5[0]         ; [CPU_FPU] |511| 
 
-        ADDF32    R3H,R3H,R2H           ; [CPU_FPU] |452| 
-||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |452| 
+        ADDF32    R3H,R3H,R2H           ; [CPU_FPU] |511| 
+||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |511| 
 
-        MOVB      XAR1,#170             ; [CPU_ALU] |452| 
-        MOV32     *+XAR5[0],R3H         ; [CPU_FPU] |452| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |452| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |452| 
-        MINF32    R4H,R3H               ; [CPU_FPU] |452| 
-        MOV32     *+XAR4[AR0],R4H       ; [CPU_FPU] |452| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |452| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |452| 
-        MOVB      XAR0,#184             ; [CPU_ALU] |452| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |452| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 456,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_ALU] |456| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 452,column 5,is_stmt,isa 0
-        MAXF32    R2H,R3H               ; [CPU_FPU] |452| 
-        MOV32     *+XAR4[AR1],R2H       ; [CPU_FPU] |452| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 456,column 5,is_stmt,isa 0
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |456| 
-        MPYF32    R3H,R0H,R2H           ; [CPU_FPU] |456| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 457,column 5,is_stmt,isa 0
-        MPYF32    R2H,R1H,R2H           ; [CPU_FPU] |457| 
+        MOVB      XAR1,#170             ; [CPU_ALU] |511| 
+        MOV32     *+XAR5[0],R3H         ; [CPU_FPU] |511| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |511| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |511| 
+        MINF32    R4H,R3H               ; [CPU_FPU] |511| 
+        MOV32     *+XAR4[AR0],R4H       ; [CPU_FPU] |511| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |511| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |511| 
+        MOVB      XAR0,#184             ; [CPU_ALU] |511| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |511| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 515,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_ALU] |515| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 511,column 5,is_stmt,isa 0
+        MAXF32    R2H,R3H               ; [CPU_FPU] |511| 
+        MOV32     *+XAR4[AR1],R2H       ; [CPU_FPU] |511| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 515,column 5,is_stmt,isa 0
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |515| 
+        MPYF32    R3H,R0H,R2H           ; [CPU_FPU] |515| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 516,column 5,is_stmt,isa 0
+        MPYF32    R2H,R1H,R2H           ; [CPU_FPU] |516| 
 ||$C$L29||:    
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 463,column 11,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |463| 
-        TBIT      AL,#1                 ; [CPU_ALU] |463| 
-        B         ||$C$L29||,NTC        ; [CPU_ALU] |463| 
-        ; branchcc occurs ; [] |463| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 522,column 11,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |522| 
+        TBIT      AL,#1                 ; [CPU_ALU] |522| 
+        B         ||$C$L29||,NTC        ; [CPU_ALU] |522| 
+        ; branchcc occurs ; [] |522| 
         MOVW      DP,#||fclVars||+38    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 469,column 5,is_stmt,isa 0
-        MOV32     R4H,@||fclVars||+38   ; [CPU_FPU] |469| 
-        MOVB      XAR1,#250             ; [CPU_ALU] |469| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 480,column 5,is_stmt,isa 0
-        MOVB      XAR0,#254             ; [CPU_ALU] |480| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 469,column 5,is_stmt,isa 0
-        MPYF32    R1H,R1H,R4H           ; [CPU_FPU] |469| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 480,column 5,is_stmt,isa 0
-        MPYF32    R5H,R0H,R4H           ; [CPU_FPU] |480| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 469,column 5,is_stmt,isa 0
-        SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |469| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
+        MOV32     R4H,@||fclVars||+38   ; [CPU_FPU] |528| 
+        MOVB      XAR1,#250             ; [CPU_ALU] |528| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
+        MOVB      XAR0,#254             ; [CPU_ALU] |539| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
+        MPYF32    R1H,R1H,R4H           ; [CPU_FPU] |528| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
+        MPYF32    R5H,R0H,R4H           ; [CPU_FPU] |539| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
+        SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |528| 
 
-        ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |480| 
-||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |469| 
+        ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |539| 
+||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |528| 
 
-        MPYF32    R2H,R4H,R1H           ; [CPU_FPU] |469| 
-||      MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |480| 
+        MPYF32    R2H,R4H,R1H           ; [CPU_FPU] |528| 
+||      MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |539| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 480,column 5,is_stmt,isa 0
-        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |480| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
+        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |539| 
         NOP       ; [CPU_ALU] 
-        SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |480| 
+        SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |539| 
         NOP       ; [CPU_ALU] 
-        MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |480| 
-        MOV32     R7H,R2H               ; [CPU_FPU] |480| 
-        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |480| 
-        MOV32     R5H,R2H               ; [CPU_FPU] |480| 
-        MAXF32    R7H,R3H               ; [CPU_FPU] |480| 
-        MINF32    R5H,R3H               ; [CPU_FPU] |480| 
-        MAXF32    R7H,R1H               ; [CPU_FPU] |480| 
-        MINF32    R5H,R1H               ; [CPU_FPU] |480| 
-        ADDF32    R0H,R5H,R7H           ; [CPU_FPU] |480| 
+        MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |539| 
+        MOV32     R7H,R2H               ; [CPU_FPU] |539| 
+        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |539| 
+        MOV32     R5H,R2H               ; [CPU_FPU] |539| 
+        MAXF32    R7H,R3H               ; [CPU_FPU] |539| 
+        MINF32    R5H,R3H               ; [CPU_FPU] |539| 
+        MAXF32    R7H,R1H               ; [CPU_FPU] |539| 
+        MINF32    R5H,R1H               ; [CPU_FPU] |539| 
+        ADDF32    R0H,R5H,R7H           ; [CPU_FPU] |539| 
         NOP       ; [CPU_ALU] 
-        NEGF32    R0H,R0H               ; [CPU_FPU] |480| 
-        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |480| 
-        MOVB      XAR0,#60              ; [CPU_ALU] |480| 
-        ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |480| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |480| 
-        ADDF32    R3H,R3H,R0H           ; [CPU_FPU] |480| 
-        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |480| 
-        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |480| 
-        F32TOUI32 R2H,R3H               ; [CPU_FPU] |480| 
-        MOVB      XAR0,#62              ; [CPU_ALU] |480| 
-        MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |480| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |480| 
-        F32TOUI32 R0H,R0H               ; [CPU_FPU] |480| 
-        MOVB      XAR0,#64              ; [CPU_ALU] |480| 
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |480| 
-        MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |480| 
-        F32TOUI32 R1H,R1H               ; [CPU_FPU] |480| 
+        NEGF32    R0H,R0H               ; [CPU_FPU] |539| 
+        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |539| 
+        MOVB      XAR0,#60              ; [CPU_ALU] |539| 
+        ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |539| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |539| 
+        ADDF32    R3H,R3H,R0H           ; [CPU_FPU] |539| 
+        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |539| 
+        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |539| 
+        F32TOUI32 R2H,R3H               ; [CPU_FPU] |539| 
+        MOVB      XAR0,#62              ; [CPU_ALU] |539| 
+        MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |539| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |539| 
+        F32TOUI32 R0H,R0H               ; [CPU_FPU] |539| 
+        MOVB      XAR0,#64              ; [CPU_ALU] |539| 
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |539| 
+        MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |539| 
+        F32TOUI32 R1H,R1H               ; [CPU_FPU] |539| 
         MOVW      DP,#||FCL_cycleCount|| ; [CPU_ARAU] 
         SPM       #0                    ; [CPU_ALU] 
-        MOV32     *+XAR4[0],R1H         ; [CPU_FPU] |480| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 482,column 5,is_stmt,isa 0
-        MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |482| 
+        MOV32     *+XAR4[0],R1H         ; [CPU_FPU] |539| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 541,column 5,is_stmt,isa 0
+        MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |541| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -10
 	.dwcfi	restore_reg, 71
@@ -3030,7 +3030,7 @@ $C$DW$163	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$154, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$154, DW_AT_TI_end_line(0x1e5)
+	.dwattr $C$DW$154, DW_AT_TI_end_line(0x220)
 	.dwattr $C$DW$154, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$154
@@ -3047,10 +3047,10 @@ $C$DW$164	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$164, DW_AT_linkage_name("FCL_runPICtrlWrap_M2")
 	.dwattr $C$DW$164, DW_AT_external
 	.dwattr $C$DW$164, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$164, DW_AT_decl_line(0x335)
+	.dwattr $C$DW$164, DW_AT_decl_line(0x373)
 	.dwattr $C$DW$164, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$164, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 822,column 1,is_stmt,address ||FCL_runPICtrlWrap_M2||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 884,column 1,is_stmt,address ||FCL_runPICtrlWrap_M2||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runPICtrlWrap_M2||
 $C$DW$165	.dwtag  DW_TAG_formal_parameter
@@ -3090,178 +3090,178 @@ $C$DW$167	.dwtag  DW_TAG_variable
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 824,column 24,is_stmt,isa 0
-        MOVIZ     R0H,#16275            ; [CPU_FPU] |824| 
-        MOVL      XAR0,#274             ; [CPU_ALU] |824| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 886,column 24,is_stmt,isa 0
+        MOVIZ     R0H,#16275            ; [CPU_FPU] |886| 
+        MOVL      XAR0,#274             ; [CPU_ALU] |886| 
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 4
 	.dwcfi	cfa_offset, -6
-        MOVXI     R0H,#13107            ; [CPU_FPU] |824| 
+        MOVXI     R0H,#13107            ; [CPU_FPU] |886| 
         MOV32     *SP++,R5H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 63, 6
 	.dwcfi	cfa_offset, -8
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |824| 
-        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |824| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |886| 
+        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |886| 
         NOP       ; [CPU_ALU] 
-        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |824| 
-        MOVL      XAR0,#268             ; [CPU_ALU] |824| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |824| 
-        DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |824| 
+        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |886| 
+        MOVL      XAR0,#268             ; [CPU_ALU] |886| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |886| 
+        DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |886| 
   IACK  #0x0080
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 854,column 5,is_stmt,isa 0
-        MOVL      XAR0,#264             ; [CPU_ALU] |854| 
-        MOVL      XAR1,#272             ; [CPU_ALU] |854| 
-        MOVL      XAR5,#||fclVars||     ; [CPU_ARAU] |854| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 916,column 5,is_stmt,isa 0
+        MOVL      XAR0,#264             ; [CPU_ALU] |916| 
+        MOVL      XAR1,#272             ; [CPU_ALU] |916| 
+        MOVL      XAR5,#||fclVars||     ; [CPU_ARAU] |916| 
         MOVW      DP,#||fclVars||+126   ; [CPU_ARAU] 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |854| 
-        MPYF32    R2H,R0H,R1H           ; [CPU_FPU] |854| 
-        MOV32     R1H,*+XAR4[AR1]       ; [CPU_FPU] |854| 
-        MPYF32    R2H,R1H,R2H           ; [CPU_FPU] |854| 
-        MOVB      XAR0,#124             ; [CPU_ALU] |854| 
-        MOV32     *+XAR5[AR0],R2H       ; [CPU_FPU] |854| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 856,column 5,is_stmt,isa 0
-        MOVL      XAR0,#260             ; [CPU_ALU] |856| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |856| 
-        MPYF32    R2H,R0H,R2H           ; [CPU_FPU] |856| 
-        MOVL      XAR0,#256             ; [CPU_ALU] |856| 
-        MPYF32    R1H,R1H,R2H           ; [CPU_FPU] |856| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |856| 
-        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |856| 
-        MOVB      XAR0,#126             ; [CPU_ALU] |856| 
-        MOV32     *+XAR5[AR0],R1H       ; [CPU_FPU] |856| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 862,column 5,is_stmt,isa 0
-        MOVB      XAR0,#130             ; [CPU_ALU] |862| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 859,column 5,is_stmt,isa 0
-        MOV32     R1H,@||fclVars||+126  ; [CPU_FPU] |859| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |916| 
+        MPYF32    R2H,R0H,R1H           ; [CPU_FPU] |916| 
+        MOV32     R1H,*+XAR4[AR1]       ; [CPU_FPU] |916| 
+        MPYF32    R2H,R1H,R2H           ; [CPU_FPU] |916| 
+        MOVB      XAR0,#124             ; [CPU_ALU] |916| 
+        MOV32     *+XAR5[AR0],R2H       ; [CPU_FPU] |916| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 918,column 5,is_stmt,isa 0
+        MOVL      XAR0,#260             ; [CPU_ALU] |918| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |918| 
+        MPYF32    R2H,R0H,R2H           ; [CPU_FPU] |918| 
+        MOVL      XAR0,#256             ; [CPU_ALU] |918| 
+        MPYF32    R1H,R1H,R2H           ; [CPU_FPU] |918| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |918| 
+        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |918| 
+        MOVB      XAR0,#126             ; [CPU_ALU] |918| 
+        MOV32     *+XAR5[AR0],R1H       ; [CPU_FPU] |918| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 924,column 5,is_stmt,isa 0
+        MOVB      XAR0,#130             ; [CPU_ALU] |924| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 921,column 5,is_stmt,isa 0
+        MOV32     R1H,@||fclVars||+126  ; [CPU_FPU] |921| 
         MOVW      DP,#||fclVars||+124   ; [CPU_ARAU] 
-        MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |859| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 862,column 5,is_stmt,isa 0
-        MOV32     R2H,@||fclVars||+124  ; [CPU_FPU] |862| 
-        SUBF32    R2H,R1H,R2H           ; [CPU_FPU] |862| 
+        MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |921| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 924,column 5,is_stmt,isa 0
+        MOV32     R2H,@||fclVars||+124  ; [CPU_FPU] |924| 
+        SUBF32    R2H,R1H,R2H           ; [CPU_FPU] |924| 
         MOVW      DP,#||fclVars||+130   ; [CPU_ARAU] 
-        MOV32     *+XAR5[AR0],R2H       ; [CPU_FPU] |862| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 865,column 5,is_stmt,isa 0
-        MOVB      XAR0,#118             ; [CPU_ALU] |865| 
-        MOV32     R3H,@||fclVars||+130  ; [CPU_FPU] |865| 
-        MOV32     R2H,*+XAR5[AR0]       ; [CPU_FPU] |865| 
-        MOVL      XAR0,#276             ; [CPU_ALU] |865| 
-        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |865| 
-        MOVB      XAR0,#98              ; [CPU_ALU] |865| 
-        MOV32     R5H,*+XAR5[AR0]       ; [CPU_FPU] |865| 
-        MOVB      XAR0,#150             ; [CPU_ALU] |865| 
+        MOV32     *+XAR5[AR0],R2H       ; [CPU_FPU] |924| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 927,column 5,is_stmt,isa 0
+        MOVB      XAR0,#118             ; [CPU_ALU] |927| 
+        MOV32     R3H,@||fclVars||+130  ; [CPU_FPU] |927| 
+        MOV32     R2H,*+XAR5[AR0]       ; [CPU_FPU] |927| 
+        MOVL      XAR0,#276             ; [CPU_ALU] |927| 
+        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |927| 
+        MOVB      XAR0,#98              ; [CPU_ALU] |927| 
+        MOV32     R5H,*+XAR5[AR0]       ; [CPU_FPU] |927| 
+        MOVB      XAR0,#150             ; [CPU_ALU] |927| 
 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |865| 
-||      MPYF32    R3H,R3H,R2H           ; [CPU_FPU] |865| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |927| 
+||      MPYF32    R3H,R3H,R2H           ; [CPU_FPU] |927| 
 
-        SUBF32    R5H,R2H,R5H           ; [CPU_FPU] |865| 
+        SUBF32    R5H,R2H,R5H           ; [CPU_FPU] |927| 
         NOP       ; [CPU_ALU] 
-        MPYF32    R4H,R5H,R4H           ; [CPU_FPU] |865| 
+        MPYF32    R4H,R5H,R4H           ; [CPU_FPU] |927| 
         MOVW      DP,#||fclVars||+124   ; [CPU_ARAU] 
-        ADDF32    R3H,R3H,R4H           ; [CPU_FPU] |865| 
-        MOVB      XAR0,#122             ; [CPU_ALU] |865| 
-        MOV32     *+XAR5[AR0],R3H       ; [CPU_FPU] |865| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 841,column 5,is_stmt,isa 0
-        MOVL      XAR0,#262             ; [CPU_ALU] |841| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 859,column 5,is_stmt,isa 0
-        MOV32     R3H,@||fclVars||+124  ; [CPU_FPU] |859| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 841,column 5,is_stmt,isa 0
+        ADDF32    R3H,R3H,R4H           ; [CPU_FPU] |927| 
+        MOVB      XAR0,#122             ; [CPU_ALU] |927| 
+        MOV32     *+XAR5[AR0],R3H       ; [CPU_FPU] |927| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 903,column 5,is_stmt,isa 0
+        MOVL      XAR0,#262             ; [CPU_ALU] |903| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 921,column 5,is_stmt,isa 0
+        MOV32     R3H,@||fclVars||+124  ; [CPU_FPU] |921| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 903,column 5,is_stmt,isa 0
 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |841| 
-||      ADDF32    R1H,R1H,R3H           ; [CPU_FPU] |859| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |903| 
+||      ADDF32    R1H,R1H,R3H           ; [CPU_FPU] |921| 
 
-        MOVL      XAR0,#270             ; [CPU_ALU] |841| 
+        MOVL      XAR0,#270             ; [CPU_ALU] |903| 
         MOVW      DP,#||fclVars||+118   ; [CPU_ARAU] 
-        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |841| 
-        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |841| 
-        MPYF32    R3H,R4H,R3H           ; [CPU_FPU] |841| 
-        MOVB      XAR0,#174             ; [CPU_ALU] |841| 
-        MOV32     *+XAR4[AR0],R3H       ; [CPU_FPU] |841| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 844,column 5,is_stmt,isa 0
-        MOVL      XAR0,#258             ; [CPU_ALU] |844| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |844| 
-        MOVL      XAR0,#270             ; [CPU_ALU] |844| 
+        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |903| 
+        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |903| 
+        MPYF32    R3H,R4H,R3H           ; [CPU_FPU] |903| 
+        MOVB      XAR0,#174             ; [CPU_ALU] |903| 
+        MOV32     *+XAR4[AR0],R3H       ; [CPU_FPU] |903| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 906,column 5,is_stmt,isa 0
+        MOVL      XAR0,#258             ; [CPU_ALU] |906| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |906| 
+        MOVL      XAR0,#270             ; [CPU_ALU] |906| 
 
-        MPYF32    R0H,R0H,R3H           ; [CPU_FPU] |844| 
-||      MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |844| 
+        MPYF32    R0H,R0H,R3H           ; [CPU_FPU] |906| 
+||      MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |906| 
 
-        MOVL      XAR0,#256             ; [CPU_ALU] |844| 
-        MPYF32    R0H,R4H,R0H           ; [CPU_FPU] |844| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |844| 
-        MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |844| 
-        MOVB      XAR0,#176             ; [CPU_ALU] |844| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |844| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 847,column 5,is_stmt,isa 0
-        MOVB      XAR0,#176             ; [CPU_ALU] |847| 
-        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |847| 
-        MOVB      XAR0,#174             ; [CPU_ALU] |847| 
-        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |847| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |847| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 848,column 5,is_stmt,isa 0
-        MOVB      XAR0,#176             ; [CPU_ALU] |848| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 847,column 5,is_stmt,isa 0
+        MOVL      XAR0,#256             ; [CPU_ALU] |906| 
+        MPYF32    R0H,R4H,R0H           ; [CPU_FPU] |906| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |906| 
+        MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |906| 
+        MOVB      XAR0,#176             ; [CPU_ALU] |906| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |906| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 909,column 5,is_stmt,isa 0
+        MOVB      XAR0,#176             ; [CPU_ALU] |909| 
+        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |909| 
+        MOVB      XAR0,#174             ; [CPU_ALU] |909| 
+        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |909| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |909| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 910,column 5,is_stmt,isa 0
+        MOVB      XAR0,#176             ; [CPU_ALU] |910| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 909,column 5,is_stmt,isa 0
 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |848| 
-||      ADDF32    R4H,R3H,R0H           ; [CPU_FPU] |847| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |910| 
+||      ADDF32    R4H,R3H,R0H           ; [CPU_FPU] |909| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 848,column 5,is_stmt,isa 0
-        MOVB      XAR0,#174             ; [CPU_ALU] |848| 
-        MPYF32    R3H,R3H,#16128        ; [CPU_FPU] |848| 
-        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |848| 
-        SUBF32    R0H,R3H,R0H           ; [CPU_FPU] |848| 
-        MOVB      XAR0,#180             ; [CPU_ALU] |848| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |848| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 859,column 5,is_stmt,isa 0
-        MOVB      XAR0,#128             ; [CPU_ALU] |859| 
-        MOV32     *+XAR5[AR0],R1H       ; [CPU_FPU] |859| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 847,column 5,is_stmt,isa 0
-        MOVB      XAR0,#178             ; [CPU_ALU] |847| 
-        MOV32     *+XAR4[AR0],R4H       ; [CPU_FPU] |847| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 849,column 5,is_stmt,isa 0
-        MOVB      XAR0,#180             ; [CPU_ALU] |849| 
-        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |849| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 876,column 5,is_stmt,isa 0
-        MOVB      XAR0,#168             ; [CPU_ALU] |876| 
-        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |876| 
-        MOVB      XAR0,#164             ; [CPU_ALU] |876| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |876| 
-        SUBF32    R0H,R1H,R0H           ; [CPU_FPU] |876| 
-        MOVB      XAR0,#166             ; [CPU_ALU] |876| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |876| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 849,column 5,is_stmt,isa 0
-        MOVB      XAR0,#168             ; [CPU_ALU] |849| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 878,column 5,is_stmt,isa 0
-        MOV32     R0H,@||fclVars||+118  ; [CPU_FPU] |878| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 910,column 5,is_stmt,isa 0
+        MOVB      XAR0,#174             ; [CPU_ALU] |910| 
+        MPYF32    R3H,R3H,#16128        ; [CPU_FPU] |910| 
+        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |910| 
+        SUBF32    R0H,R3H,R0H           ; [CPU_FPU] |910| 
+        MOVB      XAR0,#180             ; [CPU_ALU] |910| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |910| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 921,column 5,is_stmt,isa 0
+        MOVB      XAR0,#128             ; [CPU_ALU] |921| 
+        MOV32     *+XAR5[AR0],R1H       ; [CPU_FPU] |921| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 909,column 5,is_stmt,isa 0
+        MOVB      XAR0,#178             ; [CPU_ALU] |909| 
+        MOV32     *+XAR4[AR0],R4H       ; [CPU_FPU] |909| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 911,column 5,is_stmt,isa 0
+        MOVB      XAR0,#180             ; [CPU_ALU] |911| 
+        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |911| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 938,column 5,is_stmt,isa 0
+        MOVB      XAR0,#168             ; [CPU_ALU] |938| 
+        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |938| 
+        MOVB      XAR0,#164             ; [CPU_ALU] |938| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |938| 
+        SUBF32    R0H,R1H,R0H           ; [CPU_FPU] |938| 
+        MOVB      XAR0,#166             ; [CPU_ALU] |938| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |938| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 911,column 5,is_stmt,isa 0
+        MOVB      XAR0,#168             ; [CPU_ALU] |911| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 940,column 5,is_stmt,isa 0
+        MOV32     R0H,@||fclVars||+118  ; [CPU_FPU] |940| 
         MOVW      DP,#||fclVars||+98    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 849,column 5,is_stmt,isa 0
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |849| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 878,column 5,is_stmt,isa 0
-        MOVB      XAR0,#114             ; [CPU_ALU] |878| 
-        MOV32     R1H,*+XAR5[AR0]       ; [CPU_FPU] |878| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 870,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 911,column 5,is_stmt,isa 0
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |911| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 940,column 5,is_stmt,isa 0
+        MOVB      XAR0,#114             ; [CPU_ALU] |940| 
+        MOV32     R1H,*+XAR5[AR0]       ; [CPU_FPU] |940| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 932,column 5,is_stmt,isa 0
 
-        SUBF32    R0H,R1H,R0H           ; [CPU_FPU] |878| 
-||      MOV32     @||fclVars||+98,R2H   ; [CPU_FPU] |870| 
+        SUBF32    R0H,R1H,R0H           ; [CPU_FPU] |940| 
+||      MOV32     @||fclVars||+98,R2H   ; [CPU_FPU] |932| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 878,column 5,is_stmt,isa 0
-        MOVB      XAR0,#116             ; [CPU_ALU] |878| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 849,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 940,column 5,is_stmt,isa 0
+        MOVB      XAR0,#116             ; [CPU_ALU] |940| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 911,column 5,is_stmt,isa 0
 
-        MPYF32    R0H,R4H,R3H           ; [CPU_FPU] |849| 
-||      MOV32     *+XAR5[AR0],R0H       ; [CPU_FPU] |878| 
+        MPYF32    R0H,R4H,R3H           ; [CPU_FPU] |911| 
+||      MOV32     *+XAR5[AR0],R0H       ; [CPU_FPU] |940| 
 
-        MOVB      XAR0,#172             ; [CPU_ALU] |849| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |849| 
+        MOVB      XAR0,#172             ; [CPU_ALU] |911| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |911| 
 ||$C$L30||:    
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 884,column 11,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |884| 
-        TBIT      AL,#7                 ; [CPU_ALU] |884| 
-        B         ||$C$L30||,NTC        ; [CPU_ALU] |884| 
-        ; branchcc occurs ; [] |884| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 889,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |889| 
-        AND       AL,#0xff4f            ; [CPU_ALU] |889| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 946,column 11,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |946| 
+        TBIT      AL,#7                 ; [CPU_ALU] |946| 
+        B         ||$C$L30||,NTC        ; [CPU_ALU] |946| 
+        ; branchcc occurs ; [] |946| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 951,column 5,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |951| 
+        AND       AL,#0xff4f            ; [CPU_ALU] |951| 
         SPM       #0                    ; [CPU_FPU] 
-        MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |889| 
+        MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |951| 
         MOV32     R5H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -6
 	.dwcfi	restore_reg, 63
@@ -3278,7 +3278,7 @@ $C$DW$168	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$164, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$164, DW_AT_TI_end_line(0x37d)
+	.dwattr $C$DW$164, DW_AT_TI_end_line(0x3bb)
 	.dwattr $C$DW$164, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$164
@@ -3295,10 +3295,10 @@ $C$DW$169	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$169, DW_AT_linkage_name("FCL_runPICtrlWrap_M1")
 	.dwattr $C$DW$169, DW_AT_external
 	.dwattr $C$DW$169, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$169, DW_AT_decl_line(0x1ef)
+	.dwattr $C$DW$169, DW_AT_decl_line(0x229)
 	.dwattr $C$DW$169, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$169, DW_AT_TI_max_frame_size(-18)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 496,column 1,is_stmt,address ||FCL_runPICtrlWrap_M1||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 554,column 1,is_stmt,address ||FCL_runPICtrlWrap_M1||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runPICtrlWrap_M1||
 $C$DW$170	.dwtag  DW_TAG_formal_parameter
@@ -3350,204 +3350,204 @@ $C$DW$172	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -12
         ADDB      SP,#6                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -18
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 498,column 24,is_stmt,isa 0
-        MOVIZ     R0H,#16275            ; [CPU_FPU] |498| 
-        MOVL      XAR0,#274             ; [CPU_ALU] |498| 
-        MOVXI     R0H,#13107            ; [CPU_FPU] |498| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |498| 
-        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |498| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 556,column 24,is_stmt,isa 0
+        MOVIZ     R0H,#16275            ; [CPU_FPU] |556| 
+        MOVL      XAR0,#274             ; [CPU_ALU] |556| 
+        MOVXI     R0H,#13107            ; [CPU_FPU] |556| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |556| 
+        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |556| 
         NOP       ; [CPU_ALU] 
-        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |498| 
-        MOVL      XAR0,#268             ; [CPU_ALU] |498| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |498| 
-        DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |498| 
+        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |556| 
+        MOVL      XAR0,#268             ; [CPU_ALU] |556| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |556| 
+        DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |556| 
         NOP       ; [CPU_ALU] 
   IACK  #0x0008
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 518,column 5,is_stmt,isa 0
-        MOVL      XAR1,#270             ; [CPU_ALU] |518| 
-        MOVL      XAR0,#258             ; [CPU_ALU] |518| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |518| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 576,column 5,is_stmt,isa 0
+        MOVL      XAR1,#270             ; [CPU_ALU] |576| 
+        MOVL      XAR0,#258             ; [CPU_ALU] |576| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |576| 
 
-        MPYF32    R1H,R0H,R1H           ; [CPU_FPU] |518| 
-||      MOV32     R2H,*+XAR4[AR1]       ; [CPU_FPU] |518| 
+        MPYF32    R1H,R0H,R1H           ; [CPU_FPU] |576| 
+||      MOV32     R2H,*+XAR4[AR1]       ; [CPU_FPU] |576| 
 
-        MOVL      XAR0,#256             ; [CPU_ALU] |518| 
-        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |518| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |518| 
-        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |518| 
-        MOVB      XAR0,#176             ; [CPU_ALU] |518| 
-        MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |518| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 515,column 5,is_stmt,isa 0
-        MOVL      XAR0,#262             ; [CPU_ALU] |515| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |515| 
-        MOVL      XAR0,#270             ; [CPU_ALU] |515| 
-        MPYF32    R1H,R0H,R1H           ; [CPU_FPU] |515| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |515| 
-        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |515| 
-        MOVB      XAR0,#174             ; [CPU_ALU] |515| 
-        MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |515| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 522,column 5,is_stmt,isa 0
-        MOVB      XAR0,#174             ; [CPU_ALU] |522| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |522| 
-        MOVB      XAR0,#176             ; [CPU_ALU] |522| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |522| 
-        MPYF32    R2H,R2H,#16128        ; [CPU_FPU] |522| 
+        MOVL      XAR0,#256             ; [CPU_ALU] |576| 
+        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |576| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |576| 
+        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |576| 
+        MOVB      XAR0,#176             ; [CPU_ALU] |576| 
+        MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |576| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 573,column 5,is_stmt,isa 0
+        MOVL      XAR0,#262             ; [CPU_ALU] |573| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |573| 
+        MOVL      XAR0,#270             ; [CPU_ALU] |573| 
+        MPYF32    R1H,R0H,R1H           ; [CPU_FPU] |573| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |573| 
+        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |573| 
+        MOVB      XAR0,#174             ; [CPU_ALU] |573| 
+        MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |573| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 580,column 5,is_stmt,isa 0
+        MOVB      XAR0,#174             ; [CPU_ALU] |580| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |580| 
+        MOVB      XAR0,#176             ; [CPU_ALU] |580| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |580| 
+        MPYF32    R2H,R2H,#16128        ; [CPU_FPU] |580| 
         MOVW      DP,#||fclVars||+36    ; [CPU_ARAU] 
-        SUBF32    R1H,R2H,R1H           ; [CPU_FPU] |522| 
-        MOVB      XAR0,#180             ; [CPU_ALU] |522| 
-        MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |522| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 521,column 5,is_stmt,isa 0
-        MOVB      XAR0,#176             ; [CPU_ALU] |521| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |521| 
-        MOVB      XAR0,#174             ; [CPU_ALU] |521| 
-        MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |521| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |521| 
-        ADDF32    R1H,R1H,R2H           ; [CPU_FPU] |521| 
-        MOVB      XAR0,#178             ; [CPU_ALU] |521| 
-        MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |521| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 523,column 5,is_stmt,isa 0
-        MOVB      XAR0,#180             ; [CPU_ALU] |523| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |523| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 550,column 5,is_stmt,isa 0
-        MOVB      XAR0,#164             ; [CPU_ALU] |550| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 523,column 5,is_stmt,isa 0
-        MOV32     *-SP[2],R1H           ; [CPU_FPU] |523| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 550,column 5,is_stmt,isa 0
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |550| 
-        MOVB      XAR0,#168             ; [CPU_ALU] |550| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |550| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
-        MOVL      XAR0,#264             ; [CPU_ALU] |528| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 550,column 5,is_stmt,isa 0
+        SUBF32    R1H,R2H,R1H           ; [CPU_FPU] |580| 
+        MOVB      XAR0,#180             ; [CPU_ALU] |580| 
+        MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |580| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 579,column 5,is_stmt,isa 0
+        MOVB      XAR0,#176             ; [CPU_ALU] |579| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |579| 
+        MOVB      XAR0,#174             ; [CPU_ALU] |579| 
+        MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |579| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |579| 
+        ADDF32    R1H,R1H,R2H           ; [CPU_FPU] |579| 
+        MOVB      XAR0,#178             ; [CPU_ALU] |579| 
+        MOV32     *+XAR4[AR0],R1H       ; [CPU_FPU] |579| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 581,column 5,is_stmt,isa 0
+        MOVB      XAR0,#180             ; [CPU_ALU] |581| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |581| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 608,column 5,is_stmt,isa 0
+        MOVB      XAR0,#164             ; [CPU_ALU] |608| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 581,column 5,is_stmt,isa 0
+        MOV32     *-SP[2],R1H           ; [CPU_FPU] |581| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 608,column 5,is_stmt,isa 0
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |608| 
+        MOVB      XAR0,#168             ; [CPU_ALU] |608| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |608| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 586,column 5,is_stmt,isa 0
+        MOVL      XAR0,#264             ; [CPU_ALU] |586| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 608,column 5,is_stmt,isa 0
 
-        MOV32     R1H,@||fclVars||+36   ; [CPU_FPU] |552| 
-||      SUBF32    R3H,R2H,R1H           ; [CPU_FPU] |550| 
+        MOV32     R1H,@||fclVars||+36   ; [CPU_FPU] |610| 
+||      SUBF32    R3H,R2H,R1H           ; [CPU_FPU] |608| 
 
         MOVW      DP,#||fclVars||+32    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 552,column 5,is_stmt,isa 0
-        MOV32     R2H,@||fclVars||+32   ; [CPU_FPU] |552| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 610,column 5,is_stmt,isa 0
+        MOV32     R2H,@||fclVars||+32   ; [CPU_FPU] |610| 
         MOVW      DP,#||fclVars||+16    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
-        MOV32     R5H,@||fclVars||+16   ; [CPU_FPU] |539| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 597,column 5,is_stmt,isa 0
+        MOV32     R5H,@||fclVars||+16   ; [CPU_FPU] |597| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 586,column 5,is_stmt,isa 0
 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |528| 
-||      SUBF32    R2H,R2H,R1H           ; [CPU_FPU] |552| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |586| 
+||      SUBF32    R2H,R2H,R1H           ; [CPU_FPU] |610| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
-        MOVL      XAR0,#276             ; [CPU_ALU] |539| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
-        MOV32     *-SP[6],R1H           ; [CPU_FPU] |528| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
-        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |539| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 523,column 5,is_stmt,isa 0
-        MOVB      XAR0,#168             ; [CPU_ALU] |523| 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |523| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
-        MOVB      XAR0,#150             ; [CPU_ALU] |539| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 523,column 5,is_stmt,isa 0
-        MOV32     *-SP[4],R1H           ; [CPU_FPU] |523| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |539| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 530,column 5,is_stmt,isa 0
-        MOVL      XAR0,#260             ; [CPU_ALU] |530| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 544,column 5,is_stmt,isa 0
-        MOV32     @||fclVars||+16,R1H   ; [CPU_FPU] |544| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 597,column 5,is_stmt,isa 0
+        MOVL      XAR0,#276             ; [CPU_ALU] |597| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 586,column 5,is_stmt,isa 0
+        MOV32     *-SP[6],R1H           ; [CPU_FPU] |586| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 597,column 5,is_stmt,isa 0
+        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |597| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 581,column 5,is_stmt,isa 0
+        MOVB      XAR0,#168             ; [CPU_ALU] |581| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |581| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 597,column 5,is_stmt,isa 0
+        MOVB      XAR0,#150             ; [CPU_ALU] |597| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 581,column 5,is_stmt,isa 0
+        MOV32     *-SP[4],R1H           ; [CPU_FPU] |581| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 597,column 5,is_stmt,isa 0
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |597| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 588,column 5,is_stmt,isa 0
+        MOVL      XAR0,#260             ; [CPU_ALU] |588| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 602,column 5,is_stmt,isa 0
+        MOV32     @||fclVars||+16,R1H   ; [CPU_FPU] |602| 
         MOVW      DP,#||fclVars||+44    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 530,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 588,column 5,is_stmt,isa 0
 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |530| 
-||      SUBF32    R5H,R1H,R5H           ; [CPU_FPU] |539| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |588| 
+||      SUBF32    R5H,R1H,R5H           ; [CPU_FPU] |597| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
-        MOVL      XAR0,#272             ; [CPU_ALU] |528| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 586,column 5,is_stmt,isa 0
+        MOVL      XAR0,#272             ; [CPU_ALU] |586| 
 
-        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |528| 
-||      MPYF32    R6H,R0H,R1H           ; [CPU_FPU] |530| 
+        MOV32     R1H,*+XAR4[AR0]       ; [CPU_FPU] |586| 
+||      MPYF32    R6H,R0H,R1H           ; [CPU_FPU] |588| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 530,column 5,is_stmt,isa 0
-        MOVL      XAR0,#256             ; [CPU_ALU] |530| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 588,column 5,is_stmt,isa 0
+        MOVL      XAR0,#256             ; [CPU_ALU] |588| 
 
-        MOV32     R7H,*+XAR4[AR0]       ; [CPU_FPU] |530| 
-||      MPYF32    R6H,R1H,R6H           ; [CPU_FPU] |530| 
+        MOV32     R7H,*+XAR4[AR0]       ; [CPU_FPU] |588| 
+||      MPYF32    R6H,R1H,R6H           ; [CPU_FPU] |588| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 550,column 5,is_stmt,isa 0
-        MOVB      XAR0,#166             ; [CPU_ALU] |550| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 530,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 608,column 5,is_stmt,isa 0
+        MOVB      XAR0,#166             ; [CPU_ALU] |608| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 588,column 5,is_stmt,isa 0
 
-        MOV32     *+XAR4[AR0],R3H       ; [CPU_FPU] |550| 
-||      MPYF32    R6H,R7H,R6H           ; [CPU_FPU] |530| 
+        MOV32     *+XAR4[AR0],R3H       ; [CPU_FPU] |608| 
+||      MPYF32    R6H,R7H,R6H           ; [CPU_FPU] |588| 
 
-        MOV32     R7H,*-SP[6]           ; [CPU_FPU] |530| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
+        MOV32     R7H,*-SP[6]           ; [CPU_FPU] |588| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 586,column 5,is_stmt,isa 0
 
-        MPYF32    R0H,R0H,R7H           ; [CPU_FPU] |528| 
-||      MOV32     @||fclVars||+44,R6H   ; [CPU_FPU] |530| 
+        MPYF32    R0H,R0H,R7H           ; [CPU_FPU] |586| 
+||      MOV32     @||fclVars||+44,R6H   ; [CPU_FPU] |588| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 523,column 5,is_stmt,isa 0
-        MOVB      XAR0,#172             ; [CPU_ALU] |523| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 581,column 5,is_stmt,isa 0
+        MOVB      XAR0,#172             ; [CPU_ALU] |581| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 586,column 5,is_stmt,isa 0
 
-        MOV32     R1H,@||fclVars||+44   ; [CPU_FPU] |536| 
-||      MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |528| 
+        MOV32     R1H,@||fclVars||+44   ; [CPU_FPU] |594| 
+||      MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |586| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 536,column 5,is_stmt,isa 0
-        MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |536| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 594,column 5,is_stmt,isa 0
+        MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |594| 
         MOVW      DP,#||fclVars||+42    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 528,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 586,column 5,is_stmt,isa 0
 
-        SUBF32    R0H,R1H,R0H           ; [CPU_FPU] |536| 
-||      MOV32     @||fclVars||+42,R0H   ; [CPU_FPU] |528| 
+        SUBF32    R0H,R1H,R0H           ; [CPU_FPU] |594| 
+||      MOV32     @||fclVars||+42,R0H   ; [CPU_FPU] |586| 
 
         MOVW      DP,#||fclVars||+48    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 536,column 5,is_stmt,isa 0
-        MOV32     @||fclVars||+48,R0H   ; [CPU_FPU] |536| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
-        MOV32     R1H,@||fclVars||+48   ; [CPU_FPU] |539| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 594,column 5,is_stmt,isa 0
+        MOV32     @||fclVars||+48,R0H   ; [CPU_FPU] |594| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 597,column 5,is_stmt,isa 0
+        MOV32     R1H,@||fclVars||+48   ; [CPU_FPU] |597| 
         MOVW      DP,#||fclVars||+36    ; [CPU_ARAU] 
-        MOV32     R0H,@||fclVars||+36   ; [CPU_FPU] |539| 
+        MOV32     R0H,@||fclVars||+36   ; [CPU_FPU] |597| 
         MOVW      DP,#||fclVars||+44    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 533,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 591,column 5,is_stmt,isa 0
 
-        MOV32     R1H,@||fclVars||+44   ; [CPU_FPU] |533| 
-||      MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |539| 
+        MOV32     R1H,@||fclVars||+44   ; [CPU_FPU] |591| 
+||      MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |597| 
 
         MOVW      DP,#||fclVars||+42    ; [CPU_ARAU] 
-        MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |533| 
+        MPYF32    R1H,R1H,#16128        ; [CPU_FPU] |591| 
 
-        MOV32     R6H,@||fclVars||+42   ; [CPU_FPU] |533| 
-||      MPYF32    R4H,R5H,R4H           ; [CPU_FPU] |539| 
+        MOV32     R6H,@||fclVars||+42   ; [CPU_FPU] |591| 
+||      MPYF32    R4H,R5H,R4H           ; [CPU_FPU] |597| 
 
-        ADDF32    R1H,R1H,R6H           ; [CPU_FPU] |533| 
+        ADDF32    R1H,R1H,R6H           ; [CPU_FPU] |591| 
         MOVW      DP,#||fclVars||+46    ; [CPU_ARAU] 
 
-        MOV32     @||fclVars||+46,R1H   ; [CPU_FPU] |533| 
-||      ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |539| 
+        MOV32     @||fclVars||+46,R1H   ; [CPU_FPU] |591| 
+||      ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |597| 
 
         MOVW      DP,#||fclVars||+40    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 539,column 5,is_stmt,isa 0
-        MOV32     @||fclVars||+40,R0H   ; [CPU_FPU] |539| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 597,column 5,is_stmt,isa 0
+        MOV32     @||fclVars||+40,R0H   ; [CPU_FPU] |597| 
         MOVW      DP,#||fclVars||+34    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 552,column 5,is_stmt,isa 0
-        MOV32     R1H,*-SP[4]           ; [CPU_FPU] |552| 
-        MOV32     R0H,*-SP[2]           ; [CPU_FPU] |552| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 523,column 5,is_stmt,isa 0
-        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |523| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 552,column 5,is_stmt,isa 0
-        MOV32     @||fclVars||+34,R2H   ; [CPU_FPU] |552| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 523,column 5,is_stmt,isa 0
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |523| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 610,column 5,is_stmt,isa 0
+        MOV32     R1H,*-SP[4]           ; [CPU_FPU] |610| 
+        MOV32     R0H,*-SP[2]           ; [CPU_FPU] |610| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 581,column 5,is_stmt,isa 0
+        MPYF32    R0H,R0H,R1H           ; [CPU_FPU] |581| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 610,column 5,is_stmt,isa 0
+        MOV32     @||fclVars||+34,R2H   ; [CPU_FPU] |610| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 581,column 5,is_stmt,isa 0
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |581| 
 ||$C$L31||:    
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 558,column 11,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |558| 
-        TBIT      AL,#3                 ; [CPU_ALU] |558| 
-        B         ||$C$L31||,NTC        ; [CPU_ALU] |558| 
-        ; branchcc occurs ; [] |558| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 563,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |563| 
-        AND       AL,#0xfff4            ; [CPU_ALU] |563| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 616,column 11,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |616| 
+        TBIT      AL,#3                 ; [CPU_ALU] |616| 
+        B         ||$C$L31||,NTC        ; [CPU_ALU] |616| 
+        ; branchcc occurs ; [] |616| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 621,column 5,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |621| 
+        AND       AL,#0xfff4            ; [CPU_ALU] |621| 
         SPM       #0                    ; [CPU_FPU] 
-        MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |563| 
+        MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |621| 
         SUBB      SP,#6                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -12
         MOV32     R7H,*--SP             ; [CPU_FPU] 
@@ -3572,7 +3572,7 @@ $C$DW$173	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$169, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$169, DW_AT_TI_end_line(0x237)
+	.dwattr $C$DW$169, DW_AT_TI_end_line(0x271)
 	.dwattr $C$DW$169, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$169
@@ -3589,10 +3589,10 @@ $C$DW$174	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$174, DW_AT_linkage_name("FCL_runComplexCtrl_M2")
 	.dwattr $C$DW$174, DW_AT_external
 	.dwattr $C$DW$174, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$174, DW_AT_decl_line(0x387)
+	.dwattr $C$DW$174, DW_AT_decl_line(0x3c7)
 	.dwattr $C$DW$174, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$174, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 904,column 1,is_stmt,address ||FCL_runComplexCtrl_M2||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 968,column 1,is_stmt,address ||FCL_runComplexCtrl_M2||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runComplexCtrl_M2||
 $C$DW$175	.dwtag  DW_TAG_formal_parameter
@@ -3680,191 +3680,191 @@ $C$DW$182	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -10
 ||$C$L32||:    
         MOVW      DP,#||PieCtrlRegs||+23 ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 916,column 5,is_stmt,isa 0
-        TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#4 ; [CPU_ALU] |916| 
-        B         ||$C$L32||,NTC        ; [CPU_ALU] |916| 
-        ; branchcc occurs ; [] |916| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 980,column 5,is_stmt,isa 0
+        TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#4 ; [CPU_ALU] |980| 
+        B         ||$C$L32||,NTC        ; [CPU_ALU] |980| 
+        ; branchcc occurs ; [] |980| 
         MOVW      DP,#||fclVars||+100   ; [CPU_ARAU] 
         MOVB      XAR0,#74              ; [CPU_ALU] 
-        MOV32     R0H,@||fclVars||+100  ; [CPU_FPU] |916| 
+        MOV32     R0H,@||fclVars||+100  ; [CPU_FPU] |980| 
         MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] 
-        MOV32     R1H,@||fclVars||+100  ; [CPU_FPU] |916| 
-        SINPUF32  R1H,R1H               ; [CPU_FPU] |916| 
-        COSPUF32  R0H,R0H               ; [CPU_FPU] |916| 
+        MOV32     R1H,@||fclVars||+100  ; [CPU_FPU] |980| 
+        SINPUF32  R1H,R1H               ; [CPU_FPU] |980| 
+        COSPUF32  R0H,R0H               ; [CPU_FPU] |980| 
 ||$C$L33||:    
-        TBIT      *+XAR5[0],#1          ; [CPU_ALU] |916| 
-        B         ||$C$L33||,NTC        ; [CPU_ALU] |916| 
-        ; branchcc occurs ; [] |916| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 922,column 5,is_stmt,isa 0
-        MOVB      XAR0,#114             ; [CPU_ALU] |922| 
-        MOVL      XAR5,#||fclVars||     ; [CPU_ARAU] |922| 
-        MOV32     R6H,*+XAR5[AR0]       ; [CPU_FPU] |922| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 916,column 5,is_stmt,isa 0
-        MOVB      XAR0,#66              ; [CPU_ALU] |916| 
-        MOVL      XAR6,*+XAR4[AR0]      ; [CPU_ALU] |916| 
-        MOVB      XAR0,#68              ; [CPU_ALU] |916| 
-        I16TOF32  R4H,*+XAR6[0]         ; [CPU_FPU] |916| 
-        MOVL      XAR6,*+XAR4[AR0]      ; [CPU_ALU] |916| 
-        MOVB      XAR0,#252             ; [CPU_ALU] |916| 
-        I16TOF32  R3H,*+XAR6[0]         ; [CPU_FPU] |916| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |916| 
-        MPYF32    R3H,R2H,R3H           ; [CPU_FPU] |916| 
+        TBIT      *+XAR5[0],#1          ; [CPU_ALU] |980| 
+        B         ||$C$L33||,NTC        ; [CPU_ALU] |980| 
+        ; branchcc occurs ; [] |980| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 986,column 5,is_stmt,isa 0
+        MOVB      XAR0,#114             ; [CPU_ALU] |986| 
+        MOVL      XAR5,#||fclVars||     ; [CPU_ARAU] |986| 
+        MOV32     R6H,*+XAR5[AR0]       ; [CPU_FPU] |986| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 980,column 5,is_stmt,isa 0
+        MOVB      XAR0,#66              ; [CPU_ALU] |980| 
+        MOVL      XAR6,*+XAR4[AR0]      ; [CPU_ALU] |980| 
+        MOVB      XAR0,#68              ; [CPU_ALU] |980| 
+        I16TOF32  R4H,*+XAR6[0]         ; [CPU_FPU] |980| 
+        MOVL      XAR6,*+XAR4[AR0]      ; [CPU_ALU] |980| 
+        MOVB      XAR0,#252             ; [CPU_ALU] |980| 
+        I16TOF32  R3H,*+XAR6[0]         ; [CPU_FPU] |980| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |980| 
+        MPYF32    R3H,R2H,R3H           ; [CPU_FPU] |980| 
         NOP       ; [CPU_ALU] 
-        MPYF32    R3H,R3H,#16384        ; [CPU_FPU] |916| 
-        MPYF32    R2H,R2H,R4H           ; [CPU_FPU] |916| 
-        MOVIZ     R5H,#16147            ; [CPU_FPU] |916| 
-        ADDF32    R4H,R3H,R2H           ; [CPU_FPU] |916| 
-        MOVXI     R5H,#52538            ; [CPU_FPU] |916| 
-        MPYF32    R3H,R5H,R4H           ; [CPU_FPU] |916| 
+        MPYF32    R3H,R3H,#16384        ; [CPU_FPU] |980| 
+        MPYF32    R2H,R2H,R4H           ; [CPU_FPU] |980| 
+        MOVIZ     R5H,#16147            ; [CPU_FPU] |980| 
+        ADDF32    R4H,R3H,R2H           ; [CPU_FPU] |980| 
+        MOVXI     R5H,#52538            ; [CPU_FPU] |980| 
+        MPYF32    R3H,R5H,R4H           ; [CPU_FPU] |980| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 922,column 5,is_stmt,isa 0
-        MPYF32    R5H,R0H,R3H           ; [CPU_FPU] |922| 
-        MPYF32    R4H,R1H,R2H           ; [CPU_FPU] |922| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 986,column 5,is_stmt,isa 0
+        MPYF32    R5H,R0H,R3H           ; [CPU_FPU] |986| 
+        MPYF32    R4H,R1H,R2H           ; [CPU_FPU] |986| 
         NOP       ; [CPU_ALU] 
-        SUBF32    R4H,R5H,R4H           ; [CPU_FPU] |922| 
-        MOVB      XAR0,#94              ; [CPU_ALU] |922| 
-        SUBF32    R4H,R6H,R4H           ; [CPU_FPU] |922| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 924,column 5,is_stmt,isa 0
-        MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |924| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 922,column 5,is_stmt,isa 0
+        SUBF32    R4H,R5H,R4H           ; [CPU_FPU] |986| 
+        MOVB      XAR0,#94              ; [CPU_ALU] |986| 
+        SUBF32    R4H,R6H,R4H           ; [CPU_FPU] |986| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 988,column 5,is_stmt,isa 0
+        MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |988| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 986,column 5,is_stmt,isa 0
 
-        MOV32     *+XAR5[AR0],R4H       ; [CPU_FPU] |922| 
-||      MPYF32    R5H,R0H,R2H           ; [CPU_FPU] |924| 
+        MOV32     *+XAR5[AR0],R4H       ; [CPU_FPU] |986| 
+||      MPYF32    R5H,R0H,R2H           ; [CPU_FPU] |988| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 924,column 5,is_stmt,isa 0
-        MOVB      XAR0,#164             ; [CPU_ALU] |924| 
-        ADDF32    R2H,R3H,R5H           ; [CPU_FPU] |924| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |924| 
-        SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |924| 
-        MOVB      XAR0,#92              ; [CPU_ALU] |924| 
-        MOV32     *+XAR5[AR0],R2H       ; [CPU_FPU] |924| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 988,column 5,is_stmt,isa 0
+        MOVB      XAR0,#164             ; [CPU_ALU] |988| 
+        ADDF32    R2H,R3H,R5H           ; [CPU_FPU] |988| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |988| 
+        SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |988| 
+        MOVB      XAR0,#92              ; [CPU_ALU] |988| 
+        MOV32     *+XAR5[AR0],R2H       ; [CPU_FPU] |988| 
   IACK  #0x0040
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 938,column 5,is_stmt,isa 0
-        MOVB      XAR1,#78              ; [CPU_ALU] |938| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1002,column 5,is_stmt,isa 0
+        MOVB      XAR1,#78              ; [CPU_ALU] |1002| 
         MOVW      DP,#||fclVars||+94    ; [CPU_ARAU] 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |938| 
-        MOVB      XAR0,#76              ; [CPU_ALU] |938| 
-        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |938| 
-        MOV32     R2H,@||fclVars||+94   ; [CPU_FPU] |938| 
-        ADDB      ACC,#170              ; [CPU_ALU] |938| 
-        MOV32     R5H,*+XAR4[AR0]       ; [CPU_FPU] |938| 
-        MOVB      XAR1,#82              ; [CPU_ALU] |938| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |1002| 
+        MOVB      XAR0,#76              ; [CPU_ALU] |1002| 
+        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |1002| 
+        MOV32     R2H,@||fclVars||+94   ; [CPU_FPU] |1002| 
+        ADDB      ACC,#170              ; [CPU_ALU] |1002| 
+        MOV32     R5H,*+XAR4[AR0]       ; [CPU_FPU] |1002| 
+        MOVB      XAR1,#82              ; [CPU_ALU] |1002| 
         MOVW      DP,#||fclVars||+92    ; [CPU_ARAU] 
-        MOVB      XAR0,#88              ; [CPU_FPU] |938| 
+        MOVB      XAR0,#88              ; [CPU_FPU] |1002| 
 
-        MOV32     R4H,@||fclVars||+92   ; [CPU_FPU] |938| 
-||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |938| 
+        MOV32     R4H,@||fclVars||+92   ; [CPU_FPU] |1002| 
+||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |1002| 
 
-        MPYF32    R3H,R5H,R4H           ; [CPU_FPU] |938| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |938| 
+        MPYF32    R3H,R5H,R4H           ; [CPU_FPU] |1002| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |1002| 
 
-        SUBF32    R3H,R3H,R2H           ; [CPU_FPU] |938| 
-||      MOV32     R6H,*+XAR4[AR1]       ; [CPU_FPU] |938| 
+        SUBF32    R3H,R3H,R2H           ; [CPU_FPU] |1002| 
+||      MOV32     R6H,*+XAR4[AR1]       ; [CPU_FPU] |1002| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 943,column 5,is_stmt,isa 0
-        MOVB      XAR1,#182             ; [CPU_ALU] |943| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 938,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
+        MOVB      XAR1,#182             ; [CPU_ALU] |1007| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1002,column 5,is_stmt,isa 0
 
-        MPYF32    R2H,R3H,R6H           ; [CPU_FPU] |938| 
-||      MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |938| 
+        MPYF32    R2H,R3H,R6H           ; [CPU_FPU] |1002| 
+||      MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |1002| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 943,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_ALU] |943| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 938,column 5,is_stmt,isa 0
-        ADDF32    R3H,R4H,R2H           ; [CPU_FPU] |938| 
-        MOV32     R5H,*+XAR5[0]         ; [CPU_FPU] |938| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_ALU] |1007| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1002,column 5,is_stmt,isa 0
+        ADDF32    R3H,R4H,R2H           ; [CPU_FPU] |1002| 
+        MOV32     R5H,*+XAR5[0]         ; [CPU_FPU] |1002| 
 
-        ADDF32    R3H,R3H,R5H           ; [CPU_FPU] |938| 
-||      MOV32     R6H,*+XAR4[AR1]       ; [CPU_FPU] |943| 
+        ADDF32    R3H,R3H,R5H           ; [CPU_FPU] |1002| 
+||      MOV32     R6H,*+XAR4[AR1]       ; [CPU_FPU] |1007| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 943,column 5,is_stmt,isa 0
-        MOVB      XAR1,#170             ; [CPU_ALU] |943| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 938,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R3H         ; [CPU_FPU] |938| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 943,column 5,is_stmt,isa 0
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |943| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |943| 
-        MINF32    R6H,R3H               ; [CPU_FPU] |943| 
-        MOV32     *+XAR4[AR0],R6H       ; [CPU_FPU] |943| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |943| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |943| 
-        MOVB      XAR0,#184             ; [CPU_ALU] |943| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |943| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 945,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_ALU] |945| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 943,column 5,is_stmt,isa 0
-        MAXF32    R2H,R3H               ; [CPU_FPU] |943| 
-        MOV32     *+XAR4[AR1],R2H       ; [CPU_FPU] |943| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 945,column 5,is_stmt,isa 0
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |945| 
-        MPYF32    R3H,R0H,R2H           ; [CPU_FPU] |945| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 946,column 5,is_stmt,isa 0
-        MPYF32    R2H,R1H,R2H           ; [CPU_FPU] |946| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
+        MOVB      XAR1,#170             ; [CPU_ALU] |1007| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1002,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R3H         ; [CPU_FPU] |1002| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |1007| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |1007| 
+        MINF32    R6H,R3H               ; [CPU_FPU] |1007| 
+        MOV32     *+XAR4[AR0],R6H       ; [CPU_FPU] |1007| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |1007| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |1007| 
+        MOVB      XAR0,#184             ; [CPU_ALU] |1007| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |1007| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1009,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_ALU] |1009| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
+        MAXF32    R2H,R3H               ; [CPU_FPU] |1007| 
+        MOV32     *+XAR4[AR1],R2H       ; [CPU_FPU] |1007| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1009,column 5,is_stmt,isa 0
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |1009| 
+        MPYF32    R3H,R0H,R2H           ; [CPU_FPU] |1009| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1010,column 5,is_stmt,isa 0
+        MPYF32    R2H,R1H,R2H           ; [CPU_FPU] |1010| 
 ||$C$L34||:    
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 952,column 11,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |952| 
-        TBIT      AL,#6                 ; [CPU_ALU] |952| 
-        B         ||$C$L34||,NTC        ; [CPU_ALU] |952| 
-        ; branchcc occurs ; [] |952| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1016,column 11,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1016| 
+        TBIT      AL,#6                 ; [CPU_ALU] |1016| 
+        B         ||$C$L34||,NTC        ; [CPU_ALU] |1016| 
+        ; branchcc occurs ; [] |1016| 
         MOVW      DP,#||fclVars||+120   ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 958,column 5,is_stmt,isa 0
-        MOV32     R5H,@||fclVars||+120  ; [CPU_FPU] |958| 
-        MOVB      XAR1,#250             ; [CPU_ALU] |958| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 969,column 5,is_stmt,isa 0
-        MOVB      XAR0,#254             ; [CPU_ALU] |969| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 958,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1022,column 5,is_stmt,isa 0
+        MOV32     R5H,@||fclVars||+120  ; [CPU_FPU] |1022| 
+        MOVB      XAR1,#250             ; [CPU_ALU] |1022| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1033,column 5,is_stmt,isa 0
+        MOVB      XAR0,#254             ; [CPU_ALU] |1033| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1022,column 5,is_stmt,isa 0
 
-        MPYF32    R1H,R1H,R5H           ; [CPU_FPU] |958| 
-||      MOV32     R4H,@||fclVars||+120  ; [CPU_FPU] |969| 
+        MPYF32    R1H,R1H,R5H           ; [CPU_FPU] |1022| 
+||      MOV32     R4H,@||fclVars||+120  ; [CPU_FPU] |1033| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 969,column 5,is_stmt,isa 0
-        MPYF32    R5H,R0H,R4H           ; [CPU_FPU] |969| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 958,column 5,is_stmt,isa 0
-        SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |958| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1033,column 5,is_stmt,isa 0
+        MPYF32    R5H,R0H,R4H           ; [CPU_FPU] |1033| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1022,column 5,is_stmt,isa 0
+        SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |1022| 
 
-        ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |969| 
-||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |958| 
+        ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |1033| 
+||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |1022| 
 
-        MPYF32    R2H,R4H,R1H           ; [CPU_FPU] |958| 
-||      MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |969| 
+        MPYF32    R2H,R4H,R1H           ; [CPU_FPU] |1022| 
+||      MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |1033| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 969,column 5,is_stmt,isa 0
-        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |969| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1033,column 5,is_stmt,isa 0
+        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |1033| 
         NOP       ; [CPU_ALU] 
-        SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |969| 
+        SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |1033| 
         NOP       ; [CPU_ALU] 
-        MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |969| 
-        MOV32     R6H,R2H               ; [CPU_FPU] |969| 
-        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |969| 
-        MOV32     R5H,R2H               ; [CPU_FPU] |969| 
-        MAXF32    R6H,R3H               ; [CPU_FPU] |969| 
-        MINF32    R5H,R3H               ; [CPU_FPU] |969| 
-        MAXF32    R6H,R1H               ; [CPU_FPU] |969| 
-        MINF32    R5H,R1H               ; [CPU_FPU] |969| 
-        ADDF32    R0H,R5H,R6H           ; [CPU_FPU] |969| 
+        MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |1033| 
+        MOV32     R6H,R2H               ; [CPU_FPU] |1033| 
+        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |1033| 
+        MOV32     R5H,R2H               ; [CPU_FPU] |1033| 
+        MAXF32    R6H,R3H               ; [CPU_FPU] |1033| 
+        MINF32    R5H,R3H               ; [CPU_FPU] |1033| 
+        MAXF32    R6H,R1H               ; [CPU_FPU] |1033| 
+        MINF32    R5H,R1H               ; [CPU_FPU] |1033| 
+        ADDF32    R0H,R5H,R6H           ; [CPU_FPU] |1033| 
         NOP       ; [CPU_ALU] 
-        NEGF32    R0H,R0H               ; [CPU_FPU] |969| 
-        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |969| 
-        MOVB      XAR0,#60              ; [CPU_ALU] |969| 
-        ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |969| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |969| 
-        ADDF32    R3H,R3H,R0H           ; [CPU_FPU] |969| 
-        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |969| 
-        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |969| 
-        F32TOUI32 R2H,R3H               ; [CPU_FPU] |969| 
-        MOVB      XAR0,#62              ; [CPU_ALU] |969| 
-        MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |969| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |969| 
-        F32TOUI32 R0H,R0H               ; [CPU_FPU] |969| 
-        MOVB      XAR0,#64              ; [CPU_ALU] |969| 
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |969| 
-        MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |969| 
-        F32TOUI32 R1H,R1H               ; [CPU_FPU] |969| 
+        NEGF32    R0H,R0H               ; [CPU_FPU] |1033| 
+        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |1033| 
+        MOVB      XAR0,#60              ; [CPU_ALU] |1033| 
+        ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |1033| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |1033| 
+        ADDF32    R3H,R3H,R0H           ; [CPU_FPU] |1033| 
+        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |1033| 
+        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |1033| 
+        F32TOUI32 R2H,R3H               ; [CPU_FPU] |1033| 
+        MOVB      XAR0,#62              ; [CPU_ALU] |1033| 
+        MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |1033| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |1033| 
+        F32TOUI32 R0H,R0H               ; [CPU_FPU] |1033| 
+        MOVB      XAR0,#64              ; [CPU_ALU] |1033| 
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |1033| 
+        MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |1033| 
+        F32TOUI32 R1H,R1H               ; [CPU_FPU] |1033| 
         MOVW      DP,#||FCL_cycleCount||+1 ; [CPU_ARAU] 
         SPM       #0                    ; [CPU_ALU] 
-        MOV32     *+XAR4[0],R1H         ; [CPU_FPU] |969| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 971,column 5,is_stmt,isa 0
-        MOV       @||FCL_cycleCount||+1,*(0:0x4304) ; [CPU_ALU] |971| 
+        MOV32     *+XAR4[0],R1H         ; [CPU_FPU] |1033| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1035,column 5,is_stmt,isa 0
+        MOV       @||FCL_cycleCount||+1,*(0:0x4304) ; [CPU_ALU] |1035| 
         MOV32     R6H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -8
 	.dwcfi	restore_reg, 67
@@ -3884,7 +3884,7 @@ $C$DW$183	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$174, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$174, DW_AT_TI_end_line(0x3ce)
+	.dwattr $C$DW$174, DW_AT_TI_end_line(0x40e)
 	.dwattr $C$DW$174, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$174
@@ -3901,10 +3901,10 @@ $C$DW$184	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$184, DW_AT_linkage_name("FCL_runComplexCtrl_M1")
 	.dwattr $C$DW$184, DW_AT_external
 	.dwattr $C$DW$184, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$184, DW_AT_decl_line(0x244)
+	.dwattr $C$DW$184, DW_AT_decl_line(0x27e)
 	.dwattr $C$DW$184, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$184, DW_AT_TI_max_frame_size(-12)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 581,column 1,is_stmt,address ||FCL_runComplexCtrl_M1||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 639,column 1,is_stmt,address ||FCL_runComplexCtrl_M1||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runComplexCtrl_M1||
 $C$DW$185	.dwtag  DW_TAG_formal_parameter
@@ -3996,185 +3996,185 @@ $C$DW$192	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -12
 ||$C$L35||:    
         MOVW      DP,#||PieCtrlRegs||+23 ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 593,column 5,is_stmt,isa 0
-        TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#0 ; [CPU_ALU] |593| 
-        B         ||$C$L35||,NTC        ; [CPU_ALU] |593| 
-        ; branchcc occurs ; [] |593| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 651,column 5,is_stmt,isa 0
+        TBIT      @$BLOCKED(||PieCtrlRegs||)+23,#0 ; [CPU_ALU] |651| 
+        B         ||$C$L35||,NTC        ; [CPU_ALU] |651| 
+        ; branchcc occurs ; [] |651| 
         MOVB      XAR0,#74              ; [CPU_ALU] 
         MOVW      DP,#||fclVars||+18    ; [CPU_ARAU] 
         MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] 
-        MOV32     R0H,@||fclVars||+18   ; [CPU_FPU] |593| 
-        SINPUF32  R1H,R0H               ; [CPU_FPU] |593| 
-        COSPUF32  R0H,R0H               ; [CPU_FPU] |593| 
+        MOV32     R0H,@||fclVars||+18   ; [CPU_FPU] |651| 
+        SINPUF32  R1H,R0H               ; [CPU_FPU] |651| 
+        COSPUF32  R0H,R0H               ; [CPU_FPU] |651| 
 ||$C$L36||:    
-        TBIT      *+XAR5[0],#0          ; [CPU_ALU] |593| 
-        B         ||$C$L36||,NTC        ; [CPU_ALU] |593| 
-        ; branchcc occurs ; [] |593| 
-        MOVB      XAR0,#66              ; [CPU_ALU] |593| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |593| 
-        MOVB      XAR0,#68              ; [CPU_ALU] |593| 
-        I16TOF32  R5H,*+XAR5[0]         ; [CPU_FPU] |593| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |593| 
-        MOVB      XAR1,#252             ; [CPU_ALU] |593| 
-        MOV32     R2H,*+XAR4[AR1]       ; [CPU_FPU] |593| 
-        I16TOF32  R4H,*+XAR5[0]         ; [CPU_FPU] |593| 
-        MOVIZ     R3H,#16147            ; [CPU_FPU] |593| 
-        MPYF32    R4H,R2H,R4H           ; [CPU_FPU] |593| 
-        MPYF32    R7H,R2H,R5H           ; [CPU_FPU] |593| 
-        MPYF32    R4H,R4H,#16384        ; [CPU_FPU] |593| 
-        MOVXI     R3H,#52538            ; [CPU_FPU] |593| 
-        ADDF32    R4H,R4H,R7H           ; [CPU_FPU] |593| 
+        TBIT      *+XAR5[0],#0          ; [CPU_ALU] |651| 
+        B         ||$C$L36||,NTC        ; [CPU_ALU] |651| 
+        ; branchcc occurs ; [] |651| 
+        MOVB      XAR0,#66              ; [CPU_ALU] |651| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |651| 
+        MOVB      XAR0,#68              ; [CPU_ALU] |651| 
+        I16TOF32  R5H,*+XAR5[0]         ; [CPU_FPU] |651| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |651| 
+        MOVB      XAR1,#252             ; [CPU_ALU] |651| 
+        MOV32     R2H,*+XAR4[AR1]       ; [CPU_FPU] |651| 
+        I16TOF32  R4H,*+XAR5[0]         ; [CPU_FPU] |651| 
+        MOVIZ     R3H,#16147            ; [CPU_FPU] |651| 
+        MPYF32    R4H,R2H,R4H           ; [CPU_FPU] |651| 
+        MPYF32    R7H,R2H,R5H           ; [CPU_FPU] |651| 
+        MPYF32    R4H,R4H,#16384        ; [CPU_FPU] |651| 
+        MOVXI     R3H,#52538            ; [CPU_FPU] |651| 
+        ADDF32    R4H,R4H,R7H           ; [CPU_FPU] |651| 
         MOVW      DP,#||fclVars||+32    ; [CPU_ARAU] 
-        MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |593| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 601,column 5,is_stmt,isa 0
-        MOVB      XAR0,#164             ; [CPU_ALU] |601| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 599,column 5,is_stmt,isa 0
-        MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |599| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 601,column 5,is_stmt,isa 0
-        MPYF32    R4H,R0H,R7H           ; [CPU_FPU] |601| 
-        MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |601| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 599,column 5,is_stmt,isa 0
-        MPYF32    R5H,R1H,R7H           ; [CPU_FPU] |599| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 601,column 5,is_stmt,isa 0
-        ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |601| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 599,column 5,is_stmt,isa 0
+        MPYF32    R3H,R3H,R4H           ; [CPU_FPU] |651| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 659,column 5,is_stmt,isa 0
+        MOVB      XAR0,#164             ; [CPU_ALU] |659| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 657,column 5,is_stmt,isa 0
+        MPYF32    R6H,R0H,R3H           ; [CPU_FPU] |657| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 659,column 5,is_stmt,isa 0
+        MPYF32    R4H,R0H,R7H           ; [CPU_FPU] |659| 
+        MPYF32    R3H,R1H,R3H           ; [CPU_FPU] |659| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 657,column 5,is_stmt,isa 0
+        MPYF32    R5H,R1H,R7H           ; [CPU_FPU] |657| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 659,column 5,is_stmt,isa 0
+        ADDF32    R2H,R3H,R4H           ; [CPU_FPU] |659| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 657,column 5,is_stmt,isa 0
 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |601| 
-||      SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |599| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |659| 
+||      SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |657| 
 
-        SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |601| 
-||      MOV32     R7H,@||fclVars||+32   ; [CPU_FPU] |599| 
+        SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |659| 
+||      MOV32     R7H,@||fclVars||+32   ; [CPU_FPU] |657| 
 
         MOVW      DP,#||fclVars||+10    ; [CPU_ARAU] 
 
-        SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |599| 
-||      MOV32     @||fclVars||+10,R2H   ; [CPU_FPU] |601| 
+        SUBF32    R3H,R7H,R5H           ; [CPU_FPU] |657| 
+||      MOV32     @||fclVars||+10,R2H   ; [CPU_FPU] |659| 
 
         MOVW      DP,#||fclVars||+12    ; [CPU_ARAU] 
-        MOV32     @||fclVars||+12,R3H   ; [CPU_FPU] |599| 
+        MOV32     @||fclVars||+12,R3H   ; [CPU_FPU] |657| 
   IACK  #0x0004
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 612,column 5,is_stmt,isa 0
-        MOVL      ACC,XAR4              ; [CPU_ALU] |612| 
-        MOVB      XAR1,#78              ; [CPU_ALU] |612| 
-        MOVB      XAR0,#76              ; [CPU_ALU] |612| 
-        MOV32     R2H,@||fclVars||+12   ; [CPU_FPU] |612| 
-        ADDB      ACC,#170              ; [CPU_ALU] |612| 
-        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |612| 
-        MOV32     R5H,*+XAR4[AR0]       ; [CPU_FPU] |612| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 670,column 5,is_stmt,isa 0
+        MOVL      ACC,XAR4              ; [CPU_ALU] |670| 
+        MOVB      XAR1,#78              ; [CPU_ALU] |670| 
+        MOVB      XAR0,#76              ; [CPU_ALU] |670| 
+        MOV32     R2H,@||fclVars||+12   ; [CPU_FPU] |670| 
+        ADDB      ACC,#170              ; [CPU_ALU] |670| 
+        MOV32     R3H,*+XAR4[AR1]       ; [CPU_FPU] |670| 
+        MOV32     R5H,*+XAR4[AR0]       ; [CPU_FPU] |670| 
         MOVW      DP,#||fclVars||+10    ; [CPU_ARAU] 
-        MOVB      XAR1,#82              ; [CPU_FPU] |612| 
-        MOVB      XAR0,#88              ; [CPU_FPU] |612| 
+        MOVB      XAR1,#82              ; [CPU_FPU] |670| 
+        MOVB      XAR0,#88              ; [CPU_FPU] |670| 
 
-        MOV32     R4H,@||fclVars||+10   ; [CPU_FPU] |612| 
-||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |612| 
+        MOV32     R4H,@||fclVars||+10   ; [CPU_FPU] |670| 
+||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |670| 
 
-        MPYF32    R3H,R5H,R4H           ; [CPU_FPU] |612| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |612| 
+        MPYF32    R3H,R5H,R4H           ; [CPU_FPU] |670| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |670| 
 
-        SUBF32    R3H,R3H,R2H           ; [CPU_FPU] |612| 
-||      MOV32     R6H,*+XAR4[AR1]       ; [CPU_FPU] |612| 
+        SUBF32    R3H,R3H,R2H           ; [CPU_FPU] |670| 
+||      MOV32     R6H,*+XAR4[AR1]       ; [CPU_FPU] |670| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 617,column 5,is_stmt,isa 0
-        MOVB      XAR1,#182             ; [CPU_ALU] |617| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 612,column 5,is_stmt,isa 0
-        MPYF32    R2H,R3H,R6H           ; [CPU_FPU] |612| 
-        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |612| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 675,column 5,is_stmt,isa 0
+        MOVB      XAR1,#182             ; [CPU_ALU] |675| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 670,column 5,is_stmt,isa 0
+        MPYF32    R2H,R3H,R6H           ; [CPU_FPU] |670| 
+        MOV32     R4H,*+XAR4[AR0]       ; [CPU_FPU] |670| 
 
-        ADDF32    R3H,R4H,R2H           ; [CPU_FPU] |612| 
-||      MOV32     R7H,*+XAR5[0]         ; [CPU_FPU] |612| 
+        ADDF32    R3H,R4H,R2H           ; [CPU_FPU] |670| 
+||      MOV32     R7H,*+XAR5[0]         ; [CPU_FPU] |670| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 617,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_ALU] |617| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 612,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 675,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_ALU] |675| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 670,column 5,is_stmt,isa 0
 
-        ADDF32    R3H,R3H,R7H           ; [CPU_FPU] |612| 
-||      MOV32     R5H,*+XAR4[AR1]       ; [CPU_FPU] |617| 
+        ADDF32    R3H,R3H,R7H           ; [CPU_FPU] |670| 
+||      MOV32     R5H,*+XAR4[AR1]       ; [CPU_FPU] |675| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 617,column 5,is_stmt,isa 0
-        MOVB      XAR1,#170             ; [CPU_ALU] |617| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 612,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R3H         ; [CPU_FPU] |612| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 617,column 5,is_stmt,isa 0
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |617| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |617| 
-        MINF32    R5H,R3H               ; [CPU_FPU] |617| 
-        MOV32     *+XAR4[AR0],R5H       ; [CPU_FPU] |617| 
-        MOVB      XAR0,#170             ; [CPU_ALU] |617| 
-        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |617| 
-        MOVB      XAR0,#184             ; [CPU_ALU] |617| 
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |617| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 619,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_ALU] |619| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 617,column 5,is_stmt,isa 0
-        MAXF32    R2H,R3H               ; [CPU_FPU] |617| 
-        MOV32     *+XAR4[AR1],R2H       ; [CPU_FPU] |617| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 619,column 5,is_stmt,isa 0
-        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |619| 
-        MPYF32    R3H,R0H,R2H           ; [CPU_FPU] |619| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 620,column 5,is_stmt,isa 0
-        MPYF32    R2H,R1H,R2H           ; [CPU_FPU] |620| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 675,column 5,is_stmt,isa 0
+        MOVB      XAR1,#170             ; [CPU_ALU] |675| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 670,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R3H         ; [CPU_FPU] |670| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 675,column 5,is_stmt,isa 0
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |675| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |675| 
+        MINF32    R5H,R3H               ; [CPU_FPU] |675| 
+        MOV32     *+XAR4[AR0],R5H       ; [CPU_FPU] |675| 
+        MOVB      XAR0,#170             ; [CPU_ALU] |675| 
+        MOV32     R3H,*+XAR4[AR0]       ; [CPU_FPU] |675| 
+        MOVB      XAR0,#184             ; [CPU_ALU] |675| 
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |675| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 677,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_ALU] |677| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 675,column 5,is_stmt,isa 0
+        MAXF32    R2H,R3H               ; [CPU_FPU] |675| 
+        MOV32     *+XAR4[AR1],R2H       ; [CPU_FPU] |675| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 677,column 5,is_stmt,isa 0
+        MOV32     R2H,*+XAR4[AR0]       ; [CPU_FPU] |677| 
+        MPYF32    R3H,R0H,R2H           ; [CPU_FPU] |677| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 678,column 5,is_stmt,isa 0
+        MPYF32    R2H,R1H,R2H           ; [CPU_FPU] |678| 
 ||$C$L37||:    
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 626,column 11,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |626| 
-        TBIT      AL,#2                 ; [CPU_ALU] |626| 
-        B         ||$C$L37||,NTC        ; [CPU_ALU] |626| 
-        ; branchcc occurs ; [] |626| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 684,column 11,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |684| 
+        TBIT      AL,#2                 ; [CPU_ALU] |684| 
+        B         ||$C$L37||,NTC        ; [CPU_ALU] |684| 
+        ; branchcc occurs ; [] |684| 
         MOVW      DP,#||fclVars||+38    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 632,column 5,is_stmt,isa 0
-        MOV32     R4H,@||fclVars||+38   ; [CPU_FPU] |632| 
-        MOVB      XAR1,#250             ; [CPU_ALU] |632| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 643,column 5,is_stmt,isa 0
-        MOVB      XAR0,#254             ; [CPU_ALU] |643| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 632,column 5,is_stmt,isa 0
-        MPYF32    R1H,R1H,R4H           ; [CPU_FPU] |632| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 643,column 5,is_stmt,isa 0
-        MPYF32    R5H,R0H,R4H           ; [CPU_FPU] |643| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 632,column 5,is_stmt,isa 0
-        SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |632| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 690,column 5,is_stmt,isa 0
+        MOV32     R4H,@||fclVars||+38   ; [CPU_FPU] |690| 
+        MOVB      XAR1,#250             ; [CPU_ALU] |690| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 701,column 5,is_stmt,isa 0
+        MOVB      XAR0,#254             ; [CPU_ALU] |701| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 690,column 5,is_stmt,isa 0
+        MPYF32    R1H,R1H,R4H           ; [CPU_FPU] |690| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 701,column 5,is_stmt,isa 0
+        MPYF32    R5H,R0H,R4H           ; [CPU_FPU] |701| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 690,column 5,is_stmt,isa 0
+        SUBF32    R1H,R3H,R1H           ; [CPU_FPU] |690| 
 
-        ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |643| 
-||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |632| 
+        ADDF32    R3H,R2H,R5H           ; [CPU_FPU] |701| 
+||      MOV32     R4H,*+XAR4[AR1]       ; [CPU_FPU] |690| 
 
-        MPYF32    R2H,R4H,R1H           ; [CPU_FPU] |632| 
-||      MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |643| 
+        MPYF32    R2H,R4H,R1H           ; [CPU_FPU] |690| 
+||      MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |701| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 643,column 5,is_stmt,isa 0
-        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |643| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 701,column 5,is_stmt,isa 0
+        MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |701| 
         NOP       ; [CPU_ALU] 
-        SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |643| 
+        SUBF32    R0H,R3H,R2H           ; [CPU_FPU] |701| 
         NOP       ; [CPU_ALU] 
-        MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |643| 
-        MOV32     R7H,R2H               ; [CPU_FPU] |643| 
-        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |643| 
-        MOV32     R5H,R2H               ; [CPU_FPU] |643| 
-        MAXF32    R7H,R3H               ; [CPU_FPU] |643| 
-        MINF32    R5H,R3H               ; [CPU_FPU] |643| 
-        MAXF32    R7H,R1H               ; [CPU_FPU] |643| 
-        MINF32    R5H,R1H               ; [CPU_FPU] |643| 
-        ADDF32    R0H,R5H,R7H           ; [CPU_FPU] |643| 
+        MPYF32    R1H,R0H,#16128        ; [CPU_FPU] |701| 
+        MOV32     R7H,R2H               ; [CPU_FPU] |701| 
+        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |701| 
+        MOV32     R5H,R2H               ; [CPU_FPU] |701| 
+        MAXF32    R7H,R3H               ; [CPU_FPU] |701| 
+        MINF32    R5H,R3H               ; [CPU_FPU] |701| 
+        MAXF32    R7H,R1H               ; [CPU_FPU] |701| 
+        MINF32    R5H,R1H               ; [CPU_FPU] |701| 
+        ADDF32    R0H,R5H,R7H           ; [CPU_FPU] |701| 
         NOP       ; [CPU_ALU] 
-        NEGF32    R0H,R0H               ; [CPU_FPU] |643| 
-        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |643| 
-        MOVB      XAR0,#60              ; [CPU_ALU] |643| 
-        ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |643| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |643| 
-        ADDF32    R3H,R3H,R0H           ; [CPU_FPU] |643| 
-        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |643| 
-        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |643| 
-        F32TOUI32 R2H,R3H               ; [CPU_FPU] |643| 
-        MOVB      XAR0,#62              ; [CPU_ALU] |643| 
-        MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |643| 
-        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |643| 
-        F32TOUI32 R0H,R0H               ; [CPU_FPU] |643| 
-        MOVB      XAR0,#64              ; [CPU_ALU] |643| 
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |643| 
-        MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |643| 
-        F32TOUI32 R1H,R1H               ; [CPU_FPU] |643| 
+        NEGF32    R0H,R0H               ; [CPU_FPU] |701| 
+        MPYF32    R0H,R0H,#16128        ; [CPU_FPU] |701| 
+        MOVB      XAR0,#60              ; [CPU_ALU] |701| 
+        ADDF32    R0H,R0H,R4H           ; [CPU_FPU] |701| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |701| 
+        ADDF32    R3H,R3H,R0H           ; [CPU_FPU] |701| 
+        ADDF32    R1H,R1H,R0H           ; [CPU_FPU] |701| 
+        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |701| 
+        F32TOUI32 R2H,R3H               ; [CPU_FPU] |701| 
+        MOVB      XAR0,#62              ; [CPU_ALU] |701| 
+        MOV32     *+XAR5[0],R2H         ; [CPU_FPU] |701| 
+        MOVL      XAR5,*+XAR4[AR0]      ; [CPU_ALU] |701| 
+        F32TOUI32 R0H,R0H               ; [CPU_FPU] |701| 
+        MOVB      XAR0,#64              ; [CPU_ALU] |701| 
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |701| 
+        MOVL      XAR4,*+XAR4[AR0]      ; [CPU_ALU] |701| 
+        F32TOUI32 R1H,R1H               ; [CPU_FPU] |701| 
         MOVW      DP,#||FCL_cycleCount|| ; [CPU_ARAU] 
         SPM       #0                    ; [CPU_ALU] 
-        MOV32     *+XAR4[0],R1H         ; [CPU_FPU] |643| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 645,column 5,is_stmt,isa 0
-        MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |645| 
+        MOV32     *+XAR4[0],R1H         ; [CPU_FPU] |701| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 703,column 5,is_stmt,isa 0
+        MOV       @||FCL_cycleCount||,*(0:0x4004) ; [CPU_ALU] |703| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -10
 	.dwcfi	restore_reg, 71
@@ -4197,7 +4197,7 @@ $C$DW$193	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$184, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$184, DW_AT_TI_end_line(0x288)
+	.dwattr $C$DW$184, DW_AT_TI_end_line(0x2c2)
 	.dwattr $C$DW$184, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$184
@@ -4214,10 +4214,10 @@ $C$DW$194	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$194, DW_AT_linkage_name("FCL_runComplexCtrlWrap_M2")
 	.dwattr $C$DW$194, DW_AT_external
 	.dwattr $C$DW$194, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$194, DW_AT_decl_line(0x3d8)
+	.dwattr $C$DW$194, DW_AT_decl_line(0x41a)
 	.dwattr $C$DW$194, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$194, DW_AT_TI_max_frame_size(-14)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 985,column 1,is_stmt,address ||FCL_runComplexCtrlWrap_M2||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1051,column 1,is_stmt,address ||FCL_runComplexCtrlWrap_M2||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runComplexCtrlWrap_M2||
 $C$DW$195	.dwtag  DW_TAG_formal_parameter
@@ -4263,20 +4263,20 @@ $C$DW$198	.dwtag  DW_TAG_variable
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 987,column 24,is_stmt,isa 0
-        MOVIZ     R0H,#16275            ; [CPU_FPU] |987| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1053,column 24,is_stmt,isa 0
+        MOVIZ     R0H,#16275            ; [CPU_FPU] |1053| 
         MOVL      *SP++,XAR2            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 9, 4
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 989,column 24,is_stmt,isa 0
-        MOVL      XAR0,#278             ; [CPU_ALU] |989| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 985,column 1,is_stmt,isa 0
-        MOVL      XAR2,XAR4             ; [CPU_ALU] |985| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1055,column 24,is_stmt,isa 0
+        MOVL      XAR0,#278             ; [CPU_ALU] |1055| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1051,column 1,is_stmt,isa 0
+        MOVL      XAR2,XAR4             ; [CPU_ALU] |1051| 
         MOVL      *SP++,XAR3            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 11, 6
 	.dwcfi	cfa_offset, -8
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 987,column 24,is_stmt,isa 0
-        MOVXI     R0H,#13107            ; [CPU_FPU] |987| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1053,column 24,is_stmt,isa 0
+        MOVXI     R0H,#13107            ; [CPU_FPU] |1053| 
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 8
 	.dwcfi	cfa_offset, -10
@@ -4286,256 +4286,256 @@ $C$DW$198	.dwtag  DW_TAG_variable
         MOV32     *SP++,R6H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 67, 12
 	.dwcfi	cfa_offset, -14
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 989,column 24,is_stmt,isa 0
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |989| 
-        MOVL      XAR0,#256             ; [CPU_ALU] |989| 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |989| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 987,column 24,is_stmt,isa 0
-        MOVL      XAR0,#274             ; [CPU_ALU] |987| 
-        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |987| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 989,column 24,is_stmt,isa 0
-        MOVB      XAR0,#150             ; [CPU_ALU] |989| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 987,column 24,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1055,column 24,is_stmt,isa 0
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |1055| 
+        MOVL      XAR0,#256             ; [CPU_ALU] |1055| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1055| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1053,column 24,is_stmt,isa 0
+        MOVL      XAR0,#274             ; [CPU_ALU] |1053| 
+        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |1053| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1055,column 24,is_stmt,isa 0
+        MOVB      XAR0,#150             ; [CPU_ALU] |1055| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1053,column 24,is_stmt,isa 0
 
-        MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |989| 
-||      MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |987| 
+        MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |1055| 
+||      MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |1053| 
 
-        MOVL      XAR0,#268             ; [CPU_ALU] |987| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 989,column 24,is_stmt,isa 0
-        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |989| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 987,column 24,is_stmt,isa 0
-        MPYF32    R1H,R3H,#16128        ; [CPU_FPU] |987| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 989,column 24,is_stmt,isa 0
-        MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |989| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 987,column 24,is_stmt,isa 0
-        MOV32     R4H,*+XAR2[AR0]       ; [CPU_FPU] |987| 
-        DIVF32    R4H,R4H,R1H           ; [CPU_FPU] |987| 
+        MOVL      XAR0,#268             ; [CPU_ALU] |1053| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1055,column 24,is_stmt,isa 0
+        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |1055| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1053,column 24,is_stmt,isa 0
+        MPYF32    R1H,R3H,#16128        ; [CPU_FPU] |1053| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1055,column 24,is_stmt,isa 0
+        MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |1055| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1053,column 24,is_stmt,isa 0
+        MOV32     R4H,*+XAR2[AR0]       ; [CPU_FPU] |1053| 
+        DIVF32    R4H,R4H,R1H           ; [CPU_FPU] |1053| 
   IACK  #0x0080
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 997,column 5,is_stmt,isa 0
-        DIV2PIF32 R1H,R0H               ; [CPU_FPU] |997| 
-        MOVB      XAR0,#76              ; [CPU_ALU] |997| 
-        COSPUF32  R1H,R1H               ; [CPU_FPU] |997| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1000,column 5,is_stmt,isa 0
-        DIV2PIF32 R0H,R0H               ; [CPU_FPU] |1000| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 998,column 5,is_stmt,isa 0
-        MOVL      XAR3,#||fclVars||     ; [CPU_ARAU] |998| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1000,column 5,is_stmt,isa 0
-        SINPUF32  R0H,R0H               ; [CPU_FPU] |1000| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 997,column 5,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |997| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 998,column 5,is_stmt,isa 0
-        MOVB      XAR0,#76              ; [CPU_ALU] |998| 
-        MOVL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |998| 
-        MOVB      XAR0,#84              ; [CPU_ALU] |998| 
-        MOVL      *+XAR3[AR0],ACC       ; [CPU_ALU] |998| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1000,column 5,is_stmt,isa 0
-        MOVB      XAR0,#78              ; [CPU_ALU] |1000| 
-        MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1000| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1003,column 5,is_stmt,isa 0
-        MOVL      XAR0,#256             ; [CPU_ALU] |1003| 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1003| 
-        MOVL      XAR0,#262             ; [CPU_ALU] |1003| 
-        MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |1003| 
-        MOVL      XAR0,#258             ; [CPU_ALU] |1003| 
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |1003| 
-        DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |1003| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1063,column 5,is_stmt,isa 0
+        DIV2PIF32 R1H,R0H               ; [CPU_FPU] |1063| 
+        MOVB      XAR0,#76              ; [CPU_ALU] |1063| 
+        COSPUF32  R1H,R1H               ; [CPU_FPU] |1063| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1066,column 5,is_stmt,isa 0
+        DIV2PIF32 R0H,R0H               ; [CPU_FPU] |1066| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1064,column 5,is_stmt,isa 0
+        MOVL      XAR3,#||fclVars||     ; [CPU_ARAU] |1064| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1066,column 5,is_stmt,isa 0
+        SINPUF32  R0H,R0H               ; [CPU_FPU] |1066| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1063,column 5,is_stmt,isa 0
+        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |1063| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1064,column 5,is_stmt,isa 0
+        MOVB      XAR0,#76              ; [CPU_ALU] |1064| 
+        MOVL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |1064| 
+        MOVB      XAR0,#84              ; [CPU_ALU] |1064| 
+        MOVL      *+XAR3[AR0],ACC       ; [CPU_ALU] |1064| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1066,column 5,is_stmt,isa 0
+        MOVB      XAR0,#78              ; [CPU_ALU] |1066| 
+        MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1066| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1069,column 5,is_stmt,isa 0
+        MOVL      XAR0,#256             ; [CPU_ALU] |1069| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1069| 
+        MOVL      XAR0,#262             ; [CPU_ALU] |1069| 
+        MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |1069| 
+        MOVL      XAR0,#258             ; [CPU_ALU] |1069| 
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |1069| 
+        DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |1069| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1001,column 5,is_stmt,isa 0
-        MOVB      XAR0,#78              ; [CPU_ALU] |1001| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1003,column 5,is_stmt,isa 0
-        NEGF32    R0H,R0H               ; [CPU_FPU] |1003| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1001,column 5,is_stmt,isa 0
-        MOVL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |1001| 
-        MOVB      XAR0,#86              ; [CPU_ALU] |1001| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1003,column 5,is_stmt,isa 0
-        MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |1003| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1001,column 5,is_stmt,isa 0
-        MOVL      *+XAR3[AR0],ACC       ; [CPU_ALU] |1001| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1003,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1067,column 5,is_stmt,isa 0
+        MOVB      XAR0,#78              ; [CPU_ALU] |1067| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1069,column 5,is_stmt,isa 0
+        NEGF32    R0H,R0H               ; [CPU_FPU] |1069| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1067,column 5,is_stmt,isa 0
+        MOVL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |1067| 
+        MOVB      XAR0,#86              ; [CPU_ALU] |1067| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1069,column 5,is_stmt,isa 0
+        MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |1069| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1067,column 5,is_stmt,isa 0
+        MOVL      *+XAR3[AR0],ACC       ; [CPU_ALU] |1067| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1069,column 5,is_stmt,isa 0
 $C$DW$199	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$199, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$199, DW_AT_name("expf")
 	.dwattr $C$DW$199, DW_AT_TI_call
 
-        LCR       #||expf||             ; [CPU_ALU] |1003| 
-        ; call occurs [#||expf||] ; [] |1003| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
-        MOVL      XAR1,#260             ; [CPU_ALU] |1007| 
-        MOVL      XAR0,#264             ; [CPU_ALU] |1007| 
-        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |1007| 
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |1007| 
-        DIVF32    R1H,R2H,R1H           ; [CPU_FPU] |1007| 
+        LCR       #||expf||             ; [CPU_ALU] |1069| 
+        ; call occurs [#||expf||] ; [] |1069| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1073,column 5,is_stmt,isa 0
+        MOVL      XAR1,#260             ; [CPU_ALU] |1073| 
+        MOVL      XAR0,#264             ; [CPU_ALU] |1073| 
+        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |1073| 
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |1073| 
+        DIVF32    R1H,R2H,R1H           ; [CPU_FPU] |1073| 
         NOP       ; [CPU_ALU] 
-        MOVL      XAR1,#256             ; [CPU_ALU] |1007| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1003,column 5,is_stmt,isa 0
-        MOVB      XAR0,#80              ; [CPU_ALU] |1003| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
-        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |1007| 
-        NEGF32    R1H,R1H               ; [CPU_FPU] |1007| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1003,column 5,is_stmt,isa 0
+        MOVL      XAR1,#256             ; [CPU_ALU] |1073| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1069,column 5,is_stmt,isa 0
+        MOVB      XAR0,#80              ; [CPU_ALU] |1069| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1073,column 5,is_stmt,isa 0
+        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |1073| 
+        NEGF32    R1H,R1H               ; [CPU_FPU] |1073| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1069,column 5,is_stmt,isa 0
 
-        MPYF32    R0H,R2H,R1H           ; [CPU_FPU] |1007| 
-||      MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1003| 
+        MPYF32    R0H,R2H,R1H           ; [CPU_FPU] |1073| 
+||      MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1069| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1073,column 5,is_stmt,isa 0
 $C$DW$200	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$200, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$200, DW_AT_name("expf")
 	.dwattr $C$DW$200, DW_AT_TI_call
 
-        LCR       #||expf||             ; [CPU_ALU] |1007| 
-        ; call occurs [#||expf||] ; [] |1007| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1030,column 5,is_stmt,isa 0
-        MOVB      XAR0,#150             ; [CPU_ALU] |1030| 
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |1030| 
-        MOVL      XAR0,#276             ; [CPU_ALU] |1030| 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1030| 
-        MOVB      XAR0,#98              ; [CPU_ALU] |1030| 
-        MOV32     R3H,*+XAR3[AR0]       ; [CPU_FPU] |1030| 
-        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |1030| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1016,column 5,is_stmt,isa 0
-        MOVL      XAR0,#260             ; [CPU_ALU] |1016| 
+        LCR       #||expf||             ; [CPU_ALU] |1073| 
+        ; call occurs [#||expf||] ; [] |1073| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1096,column 5,is_stmt,isa 0
+        MOVB      XAR0,#150             ; [CPU_ALU] |1096| 
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |1096| 
+        MOVL      XAR0,#276             ; [CPU_ALU] |1096| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1096| 
+        MOVB      XAR0,#98              ; [CPU_ALU] |1096| 
+        MOV32     R3H,*+XAR3[AR0]       ; [CPU_FPU] |1096| 
+        SUBF32    R3H,R1H,R3H           ; [CPU_FPU] |1096| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1082,column 5,is_stmt,isa 0
+        MOVL      XAR0,#260             ; [CPU_ALU] |1082| 
 
-        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |1016| 
-||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |1030| 
+        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |1082| 
+||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |1096| 
 
-        MOVL      XAR0,#256             ; [CPU_ALU] |1016| 
-        MOV32     R6H,*+XAR2[AR0]       ; [CPU_FPU] |1016| 
-        MOVL      XAR0,#272             ; [CPU_ALU] |1016| 
-        MOV32     R5H,*+XAR2[AR0]       ; [CPU_FPU] |1016| 
-        MPYF32    R5H,R6H,R5H           ; [CPU_FPU] |1016| 
+        MOVL      XAR0,#256             ; [CPU_ALU] |1082| 
+        MOV32     R6H,*+XAR2[AR0]       ; [CPU_FPU] |1082| 
+        MOVL      XAR0,#272             ; [CPU_ALU] |1082| 
+        MOV32     R5H,*+XAR2[AR0]       ; [CPU_FPU] |1082| 
+        MPYF32    R5H,R6H,R5H           ; [CPU_FPU] |1082| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        DIV2PIF32 R5H,R5H               ; [CPU_FPU] |1016| 
+        DIV2PIF32 R5H,R5H               ; [CPU_FPU] |1082| 
         NOP       ; [CPU_ALU] 
-        COSPUF32  R5H,R5H               ; [CPU_FPU] |1016| 
+        COSPUF32  R5H,R5H               ; [CPU_FPU] |1082| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        ADDF32    R5H,R5H,R5H           ; [CPU_FPU] |1016| 
+        ADDF32    R5H,R5H,R5H           ; [CPU_FPU] |1082| 
         NOP       ; [CPU_ALU] 
-        SUBF32    R5H,#16384,R5H        ; [CPU_FPU] |1016| 
+        SUBF32    R5H,#16384,R5H        ; [CPU_FPU] |1082| 
         NOP       ; [CPU_ALU] 
         MOVW      DP,#||fclVars||+88    ; [CPU_ARAU] 
-        SQRTF32   R5H,R5H               ; [CPU_FPU] |1016| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1007,column 5,is_stmt,isa 0
-        MOVB      XAR0,#88              ; [CPU_ALU] |1007| 
-        MOV32     *+XAR3[AR0],R0H       ; [CPU_FPU] |1007| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1016,column 5,is_stmt,isa 0
+        SQRTF32   R5H,R5H               ; [CPU_FPU] |1082| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1073,column 5,is_stmt,isa 0
+        MOVB      XAR0,#88              ; [CPU_ALU] |1073| 
+        MOV32     *+XAR3[AR0],R0H       ; [CPU_FPU] |1073| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1082,column 5,is_stmt,isa 0
 
-        MOV32     R0H,@||fclVars||+88   ; [CPU_FPU] |1016| 
-||      MPYF32    R3H,R4H,R3H           ; [CPU_FPU] |1016| 
+        MOV32     R0H,@||fclVars||+88   ; [CPU_FPU] |1082| 
+||      MPYF32    R3H,R4H,R3H           ; [CPU_FPU] |1082| 
 
-        SUBF32    R0H,#16256,R0H        ; [CPU_FPU] |1016| 
-        MPYF32    R3H,R5H,R3H           ; [CPU_FPU] |1016| 
+        SUBF32    R0H,#16256,R0H        ; [CPU_FPU] |1082| 
+        MPYF32    R3H,R5H,R3H           ; [CPU_FPU] |1082| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        DIVF32    R0H,R3H,R0H           ; [CPU_FPU] |1016| 
+        DIVF32    R0H,R3H,R0H           ; [CPU_FPU] |1082| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        MOVB      XAR0,#90              ; [CPU_ALU] |1016| 
+        MOVB      XAR0,#90              ; [CPU_ALU] |1082| 
         MOVW      DP,#||fclVars||+90    ; [CPU_ARAU] 
-        MOV32     *+XAR3[AR0],R0H       ; [CPU_FPU] |1016| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1030,column 5,is_stmt,isa 0
-        MOVB      XAR0,#94              ; [CPU_ALU] |1030| 
-        MOV32     R0H,@||fclVars||+90   ; [CPU_FPU] |1030| 
-        MOV32     R3H,*+XAR3[AR0]       ; [CPU_FPU] |1030| 
+        MOV32     *+XAR3[AR0],R0H       ; [CPU_FPU] |1082| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1096,column 5,is_stmt,isa 0
+        MOVB      XAR0,#94              ; [CPU_ALU] |1096| 
+        MOV32     R0H,@||fclVars||+90   ; [CPU_FPU] |1096| 
+        MOV32     R3H,*+XAR3[AR0]       ; [CPU_FPU] |1096| 
         MOVW      DP,#||fclVars||+88    ; [CPU_ARAU] 
-        MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |1030| 
-        MOV32     R3H,@||fclVars||+88   ; [CPU_FPU] |1030| 
-        MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |1030| 
-        MOVB      XAR0,#96              ; [CPU_ALU] |1030| 
-        NEGF32    R0H,R0H               ; [CPU_FPU] |1030| 
-        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |1030| 
+        MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |1096| 
+        MOV32     R3H,@||fclVars||+88   ; [CPU_FPU] |1096| 
+        MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |1096| 
+        MOVB      XAR0,#96              ; [CPU_ALU] |1096| 
+        NEGF32    R0H,R0H               ; [CPU_FPU] |1096| 
+        ADDF32    R0H,R0H,R2H           ; [CPU_FPU] |1096| 
         MOVW      DP,#||fclVars||+92    ; [CPU_ARAU] 
-        MOV32     *+XAR3[AR0],R0H       ; [CPU_FPU] |1030| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1041,column 5,is_stmt,isa 0
-        MOVB      XAR0,#164             ; [CPU_ALU] |1041| 
-        MOV32     R0H,@||fclVars||+92   ; [CPU_FPU] |1041| 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1041| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1011,column 5,is_stmt,isa 0
-        MOVL      XAR0,#270             ; [CPU_ALU] |1011| 
+        MOV32     *+XAR3[AR0],R0H       ; [CPU_FPU] |1096| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1107,column 5,is_stmt,isa 0
+        MOVB      XAR0,#164             ; [CPU_ALU] |1107| 
+        MOV32     R0H,@||fclVars||+92   ; [CPU_FPU] |1107| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1107| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1077,column 5,is_stmt,isa 0
+        MOVL      XAR0,#270             ; [CPU_ALU] |1077| 
 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1011| 
-||      SUBF32    R0H,R2H,R0H           ; [CPU_FPU] |1041| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1077| 
+||      SUBF32    R0H,R2H,R0H           ; [CPU_FPU] |1107| 
 
-        MOVL      XAR0,#256             ; [CPU_ALU] |1011| 
-        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |1011| 
-        MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |1011| 
+        MOVL      XAR0,#256             ; [CPU_ALU] |1077| 
+        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |1077| 
+        MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |1077| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        DIV2PIF32 R2H,R2H               ; [CPU_FPU] |1011| 
+        DIV2PIF32 R2H,R2H               ; [CPU_FPU] |1077| 
         NOP       ; [CPU_ALU] 
-        COSPUF32  R2H,R2H               ; [CPU_FPU] |1011| 
-        NOP       ; [CPU_ALU] 
-        NOP       ; [CPU_ALU] 
-        NOP       ; [CPU_ALU] 
-        ADDF32    R2H,R2H,R2H           ; [CPU_FPU] |1011| 
-        NOP       ; [CPU_ALU] 
-        SUBF32    R2H,#16384,R2H        ; [CPU_FPU] |1011| 
+        COSPUF32  R2H,R2H               ; [CPU_FPU] |1077| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        SQRTF32   R3H,R2H               ; [CPU_FPU] |1011| 
-        MOVL      XAR0,#258             ; [CPU_ALU] |1011| 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1011| 
-        MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |1011| 
-        MOVB      XAR0,#80              ; [CPU_ALU] |1011| 
+        NOP       ; [CPU_ALU] 
+        ADDF32    R2H,R2H,R2H           ; [CPU_FPU] |1077| 
+        NOP       ; [CPU_ALU] 
+        SUBF32    R2H,#16384,R2H        ; [CPU_FPU] |1077| 
+        NOP       ; [CPU_ALU] 
+        NOP       ; [CPU_ALU] 
+        SQRTF32   R3H,R2H               ; [CPU_FPU] |1077| 
+        MOVL      XAR0,#258             ; [CPU_ALU] |1077| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1077| 
+        MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |1077| 
+        MOVB      XAR0,#80              ; [CPU_ALU] |1077| 
 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1011| 
-||      MPYF32    R3H,R3H,R2H           ; [CPU_FPU] |1011| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1077| 
+||      MPYF32    R3H,R3H,R2H           ; [CPU_FPU] |1077| 
 
-        SUBF32    R2H,#16256,R2H        ; [CPU_FPU] |1011| 
+        SUBF32    R2H,#16256,R2H        ; [CPU_FPU] |1077| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        DIVF32    R2H,R3H,R2H           ; [CPU_FPU] |1011| 
+        DIVF32    R2H,R3H,R2H           ; [CPU_FPU] |1077| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
         MOVW      DP,#||fclVars||+94    ; [CPU_ARAU] 
-        MOVB      XAR0,#82              ; [CPU_ALU] |1011| 
-        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |1011| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1043,column 5,is_stmt,isa 0
-        MOVB      XAR0,#114             ; [CPU_ALU] |1043| 
-        MOV32     R2H,@||fclVars||+94   ; [CPU_FPU] |1043| 
-        MOV32     R3H,*+XAR3[AR0]       ; [CPU_FPU] |1043| 
-        MOVB      XAR0,#116             ; [CPU_ALU] |1043| 
-        SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |1043| 
+        MOVB      XAR0,#82              ; [CPU_ALU] |1077| 
+        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |1077| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1109,column 5,is_stmt,isa 0
+        MOVB      XAR0,#114             ; [CPU_ALU] |1109| 
+        MOV32     R2H,@||fclVars||+94   ; [CPU_FPU] |1109| 
+        MOV32     R3H,*+XAR3[AR0]       ; [CPU_FPU] |1109| 
+        MOVB      XAR0,#116             ; [CPU_ALU] |1109| 
+        SUBF32    R2H,R3H,R2H           ; [CPU_FPU] |1109| 
         MOVW      DP,#||fclVars||+98    ; [CPU_ARAU] 
-        MOV32     *+XAR3[AR0],R2H       ; [CPU_FPU] |1043| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1027,column 5,is_stmt,isa 0
-        MOVB      XAR0,#82              ; [CPU_ALU] |1027| 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1027| 
-        MOVB      XAR0,#92              ; [CPU_ALU] |1027| 
-        MOV32     R3H,*+XAR3[AR0]       ; [CPU_FPU] |1027| 
-        MOVB      XAR0,#80              ; [CPU_ALU] |1027| 
+        MOV32     *+XAR3[AR0],R2H       ; [CPU_FPU] |1109| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1093,column 5,is_stmt,isa 0
+        MOVB      XAR0,#82              ; [CPU_ALU] |1093| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |1093| 
+        MOVB      XAR0,#92              ; [CPU_ALU] |1093| 
+        MOV32     R3H,*+XAR3[AR0]       ; [CPU_FPU] |1093| 
+        MOVB      XAR0,#80              ; [CPU_ALU] |1093| 
 
-        MOV32     R4H,*+XAR2[AR0]       ; [CPU_FPU] |1027| 
-||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |1027| 
+        MOV32     R4H,*+XAR2[AR0]       ; [CPU_FPU] |1093| 
+||      MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |1093| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1041,column 5,is_stmt,isa 0
-        MOVB      XAR0,#166             ; [CPU_ALU] |1041| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1027,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1107,column 5,is_stmt,isa 0
+        MOVB      XAR0,#166             ; [CPU_ALU] |1107| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1093,column 5,is_stmt,isa 0
 
-        MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |1027| 
-||      MOV32     @||fclVars||+98,R1H   ; [CPU_FPU] |1035| 
+        MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |1093| 
+||      MOV32     @||fclVars||+98,R1H   ; [CPU_FPU] |1101| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1041,column 5,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1041| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1027,column 5,is_stmt,isa 0
-        NEGF32    R2H,R2H               ; [CPU_FPU] |1027| 
-        MOVB      XAR0,#88              ; [CPU_ALU] |1027| 
-        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |1027| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1107,column 5,is_stmt,isa 0
+        MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1107| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1093,column 5,is_stmt,isa 0
+        NEGF32    R2H,R2H               ; [CPU_FPU] |1093| 
+        MOVB      XAR0,#88              ; [CPU_ALU] |1093| 
+        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |1093| 
 ||$C$L38||:    
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1049,column 11,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1049| 
-        TBIT      AL,#7                 ; [CPU_ALU] |1049| 
-        B         ||$C$L38||,NTC        ; [CPU_ALU] |1049| 
-        ; branchcc occurs ; [] |1049| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1054,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1054| 
-        AND       AL,#0xff2f            ; [CPU_ALU] |1054| 
-        MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |1054| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1115,column 11,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1115| 
+        TBIT      AL,#7                 ; [CPU_ALU] |1115| 
+        B         ||$C$L38||,NTC        ; [CPU_ALU] |1115| 
+        ; branchcc occurs ; [] |1115| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 1120,column 5,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |1120| 
+        AND       AL,#0xff2f            ; [CPU_ALU] |1120| 
+        MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |1120| 
         MOV32     R6H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -12
 	.dwcfi	restore_reg, 67
@@ -4561,7 +4561,7 @@ $C$DW$201	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$194, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$194, DW_AT_TI_end_line(0x422)
+	.dwattr $C$DW$194, DW_AT_TI_end_line(0x464)
 	.dwattr $C$DW$194, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$194
@@ -4578,10 +4578,10 @@ $C$DW$202	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$202, DW_AT_linkage_name("FCL_runComplexCtrlWrap_M1")
 	.dwattr $C$DW$202, DW_AT_external
 	.dwattr $C$DW$202, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$202, DW_AT_decl_line(0x292)
+	.dwattr $C$DW$202, DW_AT_decl_line(0x2cb)
 	.dwattr $C$DW$202, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$202, DW_AT_TI_max_frame_size(-14)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 659,column 1,is_stmt,address ||FCL_runComplexCtrlWrap_M1||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 716,column 1,is_stmt,address ||FCL_runComplexCtrlWrap_M1||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_runComplexCtrlWrap_M1||
 $C$DW$203	.dwtag  DW_TAG_formal_parameter
@@ -4626,20 +4626,20 @@ $C$DW$206	.dwtag  DW_TAG_variable
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 661,column 24,is_stmt,isa 0
-        MOVIZ     R0H,#16275            ; [CPU_FPU] |661| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 718,column 24,is_stmt,isa 0
+        MOVIZ     R0H,#16275            ; [CPU_FPU] |718| 
         MOVL      *SP++,XAR2            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 9, 4
 	.dwcfi	cfa_offset, -6
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 663,column 24,is_stmt,isa 0
-        MOVL      XAR0,#278             ; [CPU_ALU] |663| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 659,column 1,is_stmt,isa 0
-        MOVL      XAR2,XAR4             ; [CPU_ALU] |659| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 720,column 24,is_stmt,isa 0
+        MOVL      XAR0,#278             ; [CPU_ALU] |720| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 716,column 1,is_stmt,isa 0
+        MOVL      XAR2,XAR4             ; [CPU_ALU] |716| 
         MOV32     *SP++,R4H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 59, 6
 	.dwcfi	cfa_offset, -8
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 661,column 24,is_stmt,isa 0
-        MOVXI     R0H,#13107            ; [CPU_FPU] |661| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 718,column 24,is_stmt,isa 0
+        MOVXI     R0H,#13107            ; [CPU_FPU] |718| 
         MOV32     *SP++,R5H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 63, 8
 	.dwcfi	cfa_offset, -10
@@ -4649,262 +4649,262 @@ $C$DW$206	.dwtag  DW_TAG_variable
         MOV32     *SP++,R7H             ; [CPU_FPU] 
 	.dwcfi	save_reg_to_mem, 71, 12
 	.dwcfi	cfa_offset, -14
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 663,column 24,is_stmt,isa 0
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |663| 
-        MOVL      XAR0,#256             ; [CPU_ALU] |663| 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |663| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 661,column 24,is_stmt,isa 0
-        MOVL      XAR0,#274             ; [CPU_ALU] |661| 
-        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |661| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 663,column 24,is_stmt,isa 0
-        MOVB      XAR0,#150             ; [CPU_ALU] |663| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 661,column 24,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 720,column 24,is_stmt,isa 0
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |720| 
+        MOVL      XAR0,#256             ; [CPU_ALU] |720| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |720| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 718,column 24,is_stmt,isa 0
+        MOVL      XAR0,#274             ; [CPU_ALU] |718| 
+        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |718| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 720,column 24,is_stmt,isa 0
+        MOVB      XAR0,#150             ; [CPU_ALU] |720| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 718,column 24,is_stmt,isa 0
 
-        MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |663| 
-||      MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |661| 
+        MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |720| 
+||      MPYF32    R3H,R0H,R3H           ; [CPU_FPU] |718| 
 
-        MOVL      XAR0,#268             ; [CPU_ALU] |661| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 663,column 24,is_stmt,isa 0
-        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |663| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 661,column 24,is_stmt,isa 0
-        MPYF32    R1H,R3H,#16128        ; [CPU_FPU] |661| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 663,column 24,is_stmt,isa 0
-        MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |663| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 661,column 24,is_stmt,isa 0
-        MOV32     R4H,*+XAR2[AR0]       ; [CPU_FPU] |661| 
-        DIVF32    R4H,R4H,R1H           ; [CPU_FPU] |661| 
+        MOVL      XAR0,#268             ; [CPU_ALU] |718| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 720,column 24,is_stmt,isa 0
+        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |720| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 718,column 24,is_stmt,isa 0
+        MPYF32    R1H,R3H,#16128        ; [CPU_FPU] |718| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 720,column 24,is_stmt,isa 0
+        MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |720| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 718,column 24,is_stmt,isa 0
+        MOV32     R4H,*+XAR2[AR0]       ; [CPU_FPU] |718| 
+        DIVF32    R4H,R4H,R1H           ; [CPU_FPU] |718| 
   IACK  #0x0008
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 671,column 5,is_stmt,isa 0
-        DIV2PIF32 R1H,R0H               ; [CPU_FPU] |671| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 728,column 5,is_stmt,isa 0
+        DIV2PIF32 R1H,R0H               ; [CPU_FPU] |728| 
         NOP       ; [CPU_ALU] 
-        COSPUF32  R1H,R1H               ; [CPU_FPU] |671| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 674,column 5,is_stmt,isa 0
-        DIV2PIF32 R0H,R0H               ; [CPU_FPU] |674| 
+        COSPUF32  R1H,R1H               ; [CPU_FPU] |728| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 731,column 5,is_stmt,isa 0
+        DIV2PIF32 R0H,R0H               ; [CPU_FPU] |731| 
         NOP       ; [CPU_ALU] 
-        SINPUF32  R0H,R0H               ; [CPU_FPU] |674| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 671,column 5,is_stmt,isa 0
-        MOVB      XAR0,#76              ; [CPU_ALU] |671| 
-        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |671| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 674,column 5,is_stmt,isa 0
-        MOVB      XAR0,#78              ; [CPU_ALU] |674| 
-        MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |674| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 677,column 5,is_stmt,isa 0
-        MOVL      XAR0,#256             ; [CPU_ALU] |677| 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |677| 
-        MOVL      XAR0,#262             ; [CPU_ALU] |677| 
-        MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |677| 
-        MOVL      XAR0,#258             ; [CPU_ALU] |677| 
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |677| 
-        DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |677| 
+        SINPUF32  R0H,R0H               ; [CPU_FPU] |731| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 728,column 5,is_stmt,isa 0
+        MOVB      XAR0,#76              ; [CPU_ALU] |728| 
+        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |728| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 731,column 5,is_stmt,isa 0
+        MOVB      XAR0,#78              ; [CPU_ALU] |731| 
+        MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |731| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 734,column 5,is_stmt,isa 0
+        MOVL      XAR0,#256             ; [CPU_ALU] |734| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |734| 
+        MOVL      XAR0,#262             ; [CPU_ALU] |734| 
+        MOV32     R0H,*+XAR2[AR0]       ; [CPU_FPU] |734| 
+        MOVL      XAR0,#258             ; [CPU_ALU] |734| 
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |734| 
+        DIVF32    R0H,R1H,R0H           ; [CPU_FPU] |734| 
         NOP       ; [CPU_ALU] 
         MOVW      DP,#||fclVars||+2     ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 672,column 5,is_stmt,isa 0
-        MOVB      XAR0,#76              ; [CPU_ALU] |672| 
-        MOVL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |672| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 677,column 5,is_stmt,isa 0
-        NEGF32    R0H,R0H               ; [CPU_FPU] |677| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 675,column 5,is_stmt,isa 0
-        MOVB      XAR0,#78              ; [CPU_ALU] |675| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 677,column 5,is_stmt,isa 0
-        MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |677| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 675,column 5,is_stmt,isa 0
-        MOVL      XAR6,*+XAR2[AR0]      ; [CPU_ALU] |675| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 672,column 5,is_stmt,isa 0
-        MOVL      @||fclVars||+2,ACC    ; [CPU_ALU] |672| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 729,column 5,is_stmt,isa 0
+        MOVB      XAR0,#76              ; [CPU_ALU] |729| 
+        MOVL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |729| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 734,column 5,is_stmt,isa 0
+        NEGF32    R0H,R0H               ; [CPU_FPU] |734| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 732,column 5,is_stmt,isa 0
+        MOVB      XAR0,#78              ; [CPU_ALU] |732| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 734,column 5,is_stmt,isa 0
+        MPYF32    R0H,R2H,R0H           ; [CPU_FPU] |734| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 732,column 5,is_stmt,isa 0
+        MOVL      XAR6,*+XAR2[AR0]      ; [CPU_ALU] |732| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 729,column 5,is_stmt,isa 0
+        MOVL      @||fclVars||+2,ACC    ; [CPU_ALU] |729| 
         MOVW      DP,#||fclVars||+4     ; [CPU_ARAU] 
         SPM       #0                    ; [CPU_ALU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 675,column 5,is_stmt,isa 0
-        MOVL      @||fclVars||+4,XAR6   ; [CPU_ALU] |675| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 677,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 732,column 5,is_stmt,isa 0
+        MOVL      @||fclVars||+4,XAR6   ; [CPU_ALU] |732| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 734,column 5,is_stmt,isa 0
 $C$DW$207	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$207, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$207, DW_AT_name("expf")
 	.dwattr $C$DW$207, DW_AT_TI_call
 
-        LCR       #||expf||             ; [CPU_ALU] |677| 
-        ; call occurs [#||expf||] ; [] |677| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 681,column 5,is_stmt,isa 0
-        MOVL      XAR1,#260             ; [CPU_ALU] |681| 
-        MOVL      XAR0,#264             ; [CPU_ALU] |681| 
-        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |681| 
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |681| 
-        DIVF32    R1H,R2H,R1H           ; [CPU_FPU] |681| 
+        LCR       #||expf||             ; [CPU_ALU] |734| 
+        ; call occurs [#||expf||] ; [] |734| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 738,column 5,is_stmt,isa 0
+        MOVL      XAR1,#260             ; [CPU_ALU] |738| 
+        MOVL      XAR0,#264             ; [CPU_ALU] |738| 
+        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |738| 
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |738| 
+        DIVF32    R1H,R2H,R1H           ; [CPU_FPU] |738| 
         NOP       ; [CPU_ALU] 
-        MOVL      XAR1,#256             ; [CPU_ALU] |681| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 677,column 5,is_stmt,isa 0
-        MOVB      XAR0,#80              ; [CPU_ALU] |677| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 681,column 5,is_stmt,isa 0
-        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |681| 
-        NEGF32    R1H,R1H               ; [CPU_FPU] |681| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 677,column 5,is_stmt,isa 0
+        MOVL      XAR1,#256             ; [CPU_ALU] |738| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 734,column 5,is_stmt,isa 0
+        MOVB      XAR0,#80              ; [CPU_ALU] |734| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 738,column 5,is_stmt,isa 0
+        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |738| 
+        NEGF32    R1H,R1H               ; [CPU_FPU] |738| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 734,column 5,is_stmt,isa 0
 
-        MPYF32    R0H,R2H,R1H           ; [CPU_FPU] |681| 
-||      MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |677| 
+        MPYF32    R0H,R2H,R1H           ; [CPU_FPU] |738| 
+||      MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |734| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 681,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 738,column 5,is_stmt,isa 0
 $C$DW$208	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$208, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$208, DW_AT_name("expf")
 	.dwattr $C$DW$208, DW_AT_TI_call
 
-        LCR       #||expf||             ; [CPU_ALU] |681| 
-        ; call occurs [#||expf||] ; [] |681| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 685,column 5,is_stmt,isa 0
-        MOVL      XAR0,#270             ; [CPU_ALU] |685| 
-        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |685| 
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |685| 
-        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |685| 
+        LCR       #||expf||             ; [CPU_ALU] |738| 
+        ; call occurs [#||expf||] ; [] |738| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 742,column 5,is_stmt,isa 0
+        MOVL      XAR0,#270             ; [CPU_ALU] |742| 
+        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |742| 
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |742| 
+        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |742| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        DIV2PIF32 R1H,R1H               ; [CPU_FPU] |685| 
+        DIV2PIF32 R1H,R1H               ; [CPU_FPU] |742| 
         NOP       ; [CPU_ALU] 
-        COSPUF32  R1H,R1H               ; [CPU_FPU] |685| 
-        NOP       ; [CPU_ALU] 
-        NOP       ; [CPU_ALU] 
-        NOP       ; [CPU_ALU] 
-        ADDF32    R1H,R1H,R1H           ; [CPU_FPU] |685| 
-        NOP       ; [CPU_ALU] 
-        SUBF32    R1H,#16384,R1H        ; [CPU_FPU] |685| 
+        COSPUF32  R1H,R1H               ; [CPU_FPU] |742| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        SQRTF32   R3H,R1H               ; [CPU_FPU] |685| 
-        MOVL      XAR1,#258             ; [CPU_ALU] |685| 
-        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |685| 
-        MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |685| 
-        MOVB      XAR0,#80              ; [CPU_ALU] |685| 
+        NOP       ; [CPU_ALU] 
+        ADDF32    R1H,R1H,R1H           ; [CPU_FPU] |742| 
+        NOP       ; [CPU_ALU] 
+        SUBF32    R1H,#16384,R1H        ; [CPU_FPU] |742| 
+        NOP       ; [CPU_ALU] 
+        NOP       ; [CPU_ALU] 
+        SQRTF32   R3H,R1H               ; [CPU_FPU] |742| 
+        MOVL      XAR1,#258             ; [CPU_ALU] |742| 
+        MOV32     R2H,*+XAR2[AR1]       ; [CPU_FPU] |742| 
+        MPYF32    R2H,R4H,R2H           ; [CPU_FPU] |742| 
+        MOVB      XAR0,#80              ; [CPU_ALU] |742| 
 
-        MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |685| 
-||      MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |685| 
+        MPYF32    R2H,R3H,R2H           ; [CPU_FPU] |742| 
+||      MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |742| 
 
-        SUBF32    R1H,#16256,R1H        ; [CPU_FPU] |685| 
+        SUBF32    R1H,#16256,R1H        ; [CPU_FPU] |742| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        DIVF32    R1H,R2H,R1H           ; [CPU_FPU] |685| 
+        DIVF32    R1H,R2H,R1H           ; [CPU_FPU] |742| 
         MOVW      DP,#||fclVars||+10    ; [CPU_ARAU] 
-        MOVB      XAR1,#82              ; [CPU_ALU] |685| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 701,column 5,is_stmt,isa 0
-        MOVB      XAR0,#82              ; [CPU_ALU] |701| 
-        MOV32     R2H,@||fclVars||+10   ; [CPU_FPU] |701| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 685,column 5,is_stmt,isa 0
-        MOV32     *+XAR2[AR1],R1H       ; [CPU_FPU] |685| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 701,column 5,is_stmt,isa 0
-        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |701| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 704,column 5,is_stmt,isa 0
-        MOVL      XAR0,#276             ; [CPU_ALU] |704| 
-        MOV32     R5H,*+XAR2[AR0]       ; [CPU_FPU] |704| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 701,column 5,is_stmt,isa 0
-        MOVB      XAR0,#80              ; [CPU_ALU] |701| 
+        MOVB      XAR1,#82              ; [CPU_ALU] |742| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 758,column 5,is_stmt,isa 0
+        MOVB      XAR0,#82              ; [CPU_ALU] |758| 
+        MOV32     R2H,@||fclVars||+10   ; [CPU_FPU] |758| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 742,column 5,is_stmt,isa 0
+        MOV32     *+XAR2[AR1],R1H       ; [CPU_FPU] |742| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 758,column 5,is_stmt,isa 0
+        MOV32     R1H,*+XAR2[AR0]       ; [CPU_FPU] |758| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 761,column 5,is_stmt,isa 0
+        MOVL      XAR0,#276             ; [CPU_ALU] |761| 
+        MOV32     R5H,*+XAR2[AR0]       ; [CPU_FPU] |761| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 758,column 5,is_stmt,isa 0
+        MOVB      XAR0,#80              ; [CPU_ALU] |758| 
 
-        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |701| 
-||      MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |701| 
+        MOV32     R2H,*+XAR2[AR0]       ; [CPU_FPU] |758| 
+||      MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |758| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 690,column 5,is_stmt,isa 0
-        MOVL      XAR0,#272             ; [CPU_ALU] |690| 
-        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |690| 
-        MOVL      XAR0,#256             ; [CPU_ALU] |690| 
-        MOV32     R6H,*+XAR2[AR0]       ; [CPU_FPU] |690| 
-        MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |690| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 747,column 5,is_stmt,isa 0
+        MOVL      XAR0,#272             ; [CPU_ALU] |747| 
+        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |747| 
+        MOVL      XAR0,#256             ; [CPU_ALU] |747| 
+        MOV32     R6H,*+XAR2[AR0]       ; [CPU_FPU] |747| 
+        MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |747| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        DIV2PIF32 R3H,R3H               ; [CPU_FPU] |690| 
+        DIV2PIF32 R3H,R3H               ; [CPU_FPU] |747| 
         NOP       ; [CPU_ALU] 
-        COSPUF32  R3H,R3H               ; [CPU_FPU] |690| 
+        COSPUF32  R3H,R3H               ; [CPU_FPU] |747| 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
-        ADDF32    R3H,R3H,R3H           ; [CPU_FPU] |690| 
+        ADDF32    R3H,R3H,R3H           ; [CPU_FPU] |747| 
         NOP       ; [CPU_ALU] 
-        SUBF32    R3H,#16384,R3H        ; [CPU_FPU] |690| 
+        SUBF32    R3H,#16384,R3H        ; [CPU_FPU] |747| 
         NOP       ; [CPU_ALU] 
         MOVW      DP,#||fclVars||+6     ; [CPU_ARAU] 
-        SQRTF32   R6H,R3H               ; [CPU_FPU] |690| 
-        MOVL      XAR0,#260             ; [CPU_ALU] |690| 
-        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |690| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 681,column 5,is_stmt,isa 0
+        SQRTF32   R6H,R3H               ; [CPU_FPU] |747| 
+        MOVL      XAR0,#260             ; [CPU_ALU] |747| 
+        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |747| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 738,column 5,is_stmt,isa 0
 
-        MPYF32    R3H,R4H,R3H           ; [CPU_FPU] |690| 
-||      MOV32     @||fclVars||+6,R0H    ; [CPU_FPU] |681| 
+        MPYF32    R3H,R4H,R3H           ; [CPU_FPU] |747| 
+||      MOV32     @||fclVars||+6,R0H    ; [CPU_FPU] |738| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 690,column 5,is_stmt,isa 0
-        SUBF32    R0H,#16256,R0H        ; [CPU_FPU] |690| 
-        MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |690| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 747,column 5,is_stmt,isa 0
+        SUBF32    R0H,#16256,R0H        ; [CPU_FPU] |747| 
+        MPYF32    R3H,R6H,R3H           ; [CPU_FPU] |747| 
         NOP       ; [CPU_ALU] 
         MOVW      DP,#||fclVars||+8     ; [CPU_ARAU] 
-        DIVF32    R0H,R3H,R0H           ; [CPU_FPU] |690| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 701,column 5,is_stmt,isa 0
-        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |701| 
-        MOVB      XAR1,#88              ; [CPU_ALU] |701| 
-        NEGF32    R1H,R1H               ; [CPU_FPU] |701| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 704,column 5,is_stmt,isa 0
-        MOVB      XAR0,#150             ; [CPU_ALU] |704| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 690,column 5,is_stmt,isa 0
-        MOV32     @||fclVars||+8,R0H    ; [CPU_FPU] |690| 
+        DIVF32    R0H,R3H,R0H           ; [CPU_FPU] |747| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 758,column 5,is_stmt,isa 0
+        MPYF32    R1H,R2H,R1H           ; [CPU_FPU] |758| 
+        MOVB      XAR1,#88              ; [CPU_ALU] |758| 
+        NEGF32    R1H,R1H               ; [CPU_FPU] |758| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 761,column 5,is_stmt,isa 0
+        MOVB      XAR0,#150             ; [CPU_ALU] |761| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 747,column 5,is_stmt,isa 0
+        MOV32     @||fclVars||+8,R0H    ; [CPU_FPU] |747| 
         MOVW      DP,#||fclVars||+12    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 704,column 5,is_stmt,isa 0
-        MOV32     R3H,@||fclVars||+12   ; [CPU_FPU] |704| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 761,column 5,is_stmt,isa 0
+        MOV32     R3H,@||fclVars||+12   ; [CPU_FPU] |761| 
         MOVW      DP,#||fclVars||+6     ; [CPU_ARAU] 
 
-        MOV32     R3H,@||fclVars||+6    ; [CPU_FPU] |704| 
-||      MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |704| 
+        MOV32     R3H,@||fclVars||+6    ; [CPU_FPU] |761| 
+||      MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |761| 
 
         MOVW      DP,#||fclVars||+16    ; [CPU_ARAU] 
 
-        MOV32     R4H,@||fclVars||+16   ; [CPU_FPU] |704| 
-||      MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |704| 
+        MOV32     R4H,@||fclVars||+16   ; [CPU_FPU] |761| 
+||      MPYF32    R0H,R3H,R0H           ; [CPU_FPU] |761| 
 
         MOVW      DP,#||fclVars||+12    ; [CPU_ARAU] 
-        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |704| 
-        NEGF32    R0H,R0H               ; [CPU_FPU] |704| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 715,column 5,is_stmt,isa 0
-        MOVB      XAR0,#164             ; [CPU_ALU] |715| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 701,column 5,is_stmt,isa 0
+        MOV32     R3H,*+XAR2[AR0]       ; [CPU_FPU] |761| 
+        NEGF32    R0H,R0H               ; [CPU_FPU] |761| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 772,column 5,is_stmt,isa 0
+        MOVB      XAR0,#164             ; [CPU_ALU] |772| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 758,column 5,is_stmt,isa 0
 
-        SUBF32    R4H,R3H,R4H           ; [CPU_FPU] |704| 
-||      MOV32     *+XAR2[AR1],R1H       ; [CPU_FPU] |701| 
+        SUBF32    R4H,R3H,R4H           ; [CPU_FPU] |761| 
+||      MOV32     *+XAR2[AR1],R1H       ; [CPU_FPU] |758| 
 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 715,column 5,is_stmt,isa 0
-        MOV32     R6H,*+XAR2[AR0]       ; [CPU_FPU] |715| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 704,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 772,column 5,is_stmt,isa 0
+        MOV32     R6H,*+XAR2[AR0]       ; [CPU_FPU] |772| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 761,column 5,is_stmt,isa 0
 
-        MOV32     R4H,@||fclVars||+12   ; [CPU_FPU] |717| 
-||      MPYF32    R7H,R4H,R5H           ; [CPU_FPU] |704| 
+        MOV32     R4H,@||fclVars||+12   ; [CPU_FPU] |774| 
+||      MPYF32    R7H,R4H,R5H           ; [CPU_FPU] |761| 
 
         MOVW      DP,#||fclVars||+32    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 715,column 5,is_stmt,isa 0
-        MOVB      XAR0,#166             ; [CPU_ALU] |715| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 717,column 5,is_stmt,isa 0
-        MOV32     R5H,@||fclVars||+32   ; [CPU_FPU] |717| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 772,column 5,is_stmt,isa 0
+        MOVB      XAR0,#166             ; [CPU_ALU] |772| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 774,column 5,is_stmt,isa 0
+        MOV32     R5H,@||fclVars||+32   ; [CPU_FPU] |774| 
         MOVW      DP,#||fclVars||+10    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 715,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 772,column 5,is_stmt,isa 0
 
-        MOV32     R5H,@||fclVars||+10   ; [CPU_FPU] |715| 
-||      SUBF32    R4H,R5H,R4H           ; [CPU_FPU] |717| 
+        MOV32     R5H,@||fclVars||+10   ; [CPU_FPU] |772| 
+||      SUBF32    R4H,R5H,R4H           ; [CPU_FPU] |774| 
 
         MOVW      DP,#||fclVars||+34    ; [CPU_ARAU] 
 
-        MOV32     @||fclVars||+34,R4H   ; [CPU_FPU] |717| 
-||      SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |715| 
+        MOV32     @||fclVars||+34,R4H   ; [CPU_FPU] |774| 
+||      SUBF32    R5H,R6H,R5H           ; [CPU_FPU] |772| 
 
         MOVW      DP,#||fclVars||+16    ; [CPU_ARAU] 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 709,column 5,is_stmt,isa 0
-        MOV32     @||fclVars||+16,R3H   ; [CPU_FPU] |709| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 704,column 5,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 766,column 5,is_stmt,isa 0
+        MOV32     @||fclVars||+16,R3H   ; [CPU_FPU] |766| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 761,column 5,is_stmt,isa 0
 
-        MOV32     *+XAR2[AR0],R5H       ; [CPU_FPU] |715| 
-||      ADDF32    R0H,R0H,R7H           ; [CPU_FPU] |704| 
+        MOV32     *+XAR2[AR0],R5H       ; [CPU_FPU] |772| 
+||      ADDF32    R0H,R0H,R7H           ; [CPU_FPU] |761| 
 
         MOVW      DP,#||fclVars||+14    ; [CPU_ARAU] 
-        MOV32     @||fclVars||+14,R0H   ; [CPU_FPU] |704| 
+        MOV32     @||fclVars||+14,R0H   ; [CPU_FPU] |761| 
 ||$C$L39||:    
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 723,column 11,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |723| 
-        TBIT      AL,#3                 ; [CPU_ALU] |723| 
-        B         ||$C$L39||,NTC        ; [CPU_ALU] |723| 
-        ; branchcc occurs ; [] |723| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 728,column 5,is_stmt,isa 0
-        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |728| 
-        AND       AL,#0xfff2            ; [CPU_ALU] |728| 
-        MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |728| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 780,column 11,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |780| 
+        TBIT      AL,#3                 ; [CPU_ALU] |780| 
+        B         ||$C$L39||,NTC        ; [CPU_ALU] |780| 
+        ; branchcc occurs ; [] |780| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 785,column 5,is_stmt,isa 0
+        MOV       AL,*(0:0x0cf7)        ; [CPU_ALU] |785| 
+        AND       AL,#0xfff2            ; [CPU_ALU] |785| 
+        MOV       *(0:0x0cf7),AL        ; [CPU_ALU] |785| 
         MOV32     R7H,*--SP             ; [CPU_FPU] 
 	.dwcfi	cfa_offset, -12
 	.dwcfi	restore_reg, 71
@@ -4930,7 +4930,7 @@ $C$DW$209	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$202, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$202, DW_AT_TI_end_line(0x2dc)
+	.dwattr $C$DW$202, DW_AT_TI_end_line(0x315)
 	.dwattr $C$DW$202, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$202
@@ -4946,10 +4946,10 @@ $C$DW$210	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$210, DW_AT_linkage_name("FCL_resetController")
 	.dwattr $C$DW$210, DW_AT_external
 	.dwattr $C$DW$210, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$210, DW_AT_decl_line(0x155)
+	.dwattr $C$DW$210, DW_AT_decl_line(0x191)
 	.dwattr $C$DW$210, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$210, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 342,column 1,is_stmt,address ||FCL_resetController||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 402,column 1,is_stmt,address ||FCL_resetController||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_resetController||
 $C$DW$211	.dwtag  DW_TAG_formal_parameter
@@ -4976,66 +4976,66 @@ $C$DW$212	.dwtag  DW_TAG_variable
 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 349,column 5,is_stmt,isa 0
-        MOVB      ACC,#40               ; [CPU_ALU] |349| 
-        MOVL      XAR0,#280             ; [CPU_ALU] |349| 
-        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |349| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |349| 
-        ZERO      R0H                   ; [CPU_FPU] |349| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 350,column 5,is_stmt,isa 0
-        MOVB      ACC,#38               ; [CPU_ALU] |350| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 349,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |349| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 350,column 5,is_stmt,isa 0
-        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |350| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |350| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 351,column 5,is_stmt,isa 0
-        MOVB      ACC,#14               ; [CPU_ALU] |351| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 350,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |350| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 351,column 5,is_stmt,isa 0
-        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |351| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |351| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 352,column 5,is_stmt,isa 0
-        MOVB      ACC,#10               ; [CPU_ALU] |352| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 351,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |351| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 352,column 5,is_stmt,isa 0
-        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |352| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |352| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 353,column 5,is_stmt,isa 0
-        MOVB      ACC,#12               ; [CPU_ALU] |353| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 352,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |352| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 353,column 5,is_stmt,isa 0
-        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |353| 
-        MOVL      XAR5,ACC              ; [CPU_ALU] |353| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 354,column 5,is_stmt,isa 0
-        MOVB      ACC,#16               ; [CPU_ALU] |354| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 353,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |353| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 354,column 5,is_stmt,isa 0
-        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |354| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 344,column 5,is_stmt,isa 0
-        MOVB      XAR0,#170             ; [CPU_FPU] |344| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |344| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 354,column 5,is_stmt,isa 0
-        MOVL      XAR5,ACC              ; [CPU_ALU] |354| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 345,column 5,is_stmt,isa 0
-        MOVB      XAR0,#88              ; [CPU_ALU] |345| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |345| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 346,column 5,is_stmt,isa 0
-        MOVB      XAR0,#84              ; [CPU_ALU] |346| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |346| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 347,column 5,is_stmt,isa 0
-        MOVB      XAR0,#86              ; [CPU_ALU] |347| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 354,column 5,is_stmt,isa 0
-        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |354| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 347,column 5,is_stmt,isa 0
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |347| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 343,column 5,is_stmt,isa 0
-        MOVB      XAR0,#172             ; [CPU_ALU] |343| 
-        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |343| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 409,column 5,is_stmt,isa 0
+        MOVB      ACC,#40               ; [CPU_ALU] |409| 
+        MOVL      XAR0,#280             ; [CPU_ALU] |409| 
+        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |409| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |409| 
+        ZERO      R0H                   ; [CPU_FPU] |409| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 410,column 5,is_stmt,isa 0
+        MOVB      ACC,#38               ; [CPU_ALU] |410| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 409,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |409| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 410,column 5,is_stmt,isa 0
+        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |410| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |410| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 411,column 5,is_stmt,isa 0
+        MOVB      ACC,#14               ; [CPU_ALU] |411| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 410,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |410| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 411,column 5,is_stmt,isa 0
+        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |411| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |411| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 412,column 5,is_stmt,isa 0
+        MOVB      ACC,#10               ; [CPU_ALU] |412| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 411,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |411| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 412,column 5,is_stmt,isa 0
+        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |412| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |412| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 413,column 5,is_stmt,isa 0
+        MOVB      ACC,#12               ; [CPU_ALU] |413| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 412,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |412| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 413,column 5,is_stmt,isa 0
+        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |413| 
+        MOVL      XAR5,ACC              ; [CPU_ALU] |413| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 414,column 5,is_stmt,isa 0
+        MOVB      ACC,#16               ; [CPU_ALU] |414| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 413,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |413| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 414,column 5,is_stmt,isa 0
+        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |414| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 404,column 5,is_stmt,isa 0
+        MOVB      XAR0,#170             ; [CPU_FPU] |404| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |404| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 414,column 5,is_stmt,isa 0
+        MOVL      XAR5,ACC              ; [CPU_ALU] |414| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 405,column 5,is_stmt,isa 0
+        MOVB      XAR0,#88              ; [CPU_ALU] |405| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |405| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 406,column 5,is_stmt,isa 0
+        MOVB      XAR0,#84              ; [CPU_ALU] |406| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |406| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 407,column 5,is_stmt,isa 0
+        MOVB      XAR0,#86              ; [CPU_ALU] |407| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 414,column 5,is_stmt,isa 0
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |414| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 407,column 5,is_stmt,isa 0
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |407| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 403,column 5,is_stmt,isa 0
+        MOVB      XAR0,#172             ; [CPU_ALU] |403| 
+        MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |403| 
 $C$DW$213	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$213, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$213, DW_AT_TI_return
@@ -5043,7 +5043,7 @@ $C$DW$213	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$210, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$210, DW_AT_TI_end_line(0x163)
+	.dwattr $C$DW$210, DW_AT_TI_end_line(0x19f)
 	.dwattr $C$DW$210, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$210
@@ -5059,10 +5059,10 @@ $C$DW$214	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$214, DW_AT_linkage_name("FCL_initQEP")
 	.dwattr $C$DW$214, DW_AT_external
 	.dwattr $C$DW$214, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$214, DW_AT_decl_line(0x14a)
+	.dwattr $C$DW$214, DW_AT_decl_line(0x187)
 	.dwattr $C$DW$214, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$214, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 331,column 1,is_stmt,address ||FCL_initQEP||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 392,column 1,is_stmt,address ||FCL_initQEP||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_initQEP||
 $C$DW$215	.dwtag  DW_TAG_formal_parameter
@@ -5100,15 +5100,15 @@ $C$DW$218	.dwtag  DW_TAG_variable
 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-        MOVL      XAR6,ACC              ; [CPU_ALU] |331| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 332,column 5,is_stmt,isa 0
-        MOVL      XAR0,#280             ; [CPU_ALU] |332| 
-        MOVB      ACC,#72               ; [CPU_ALU] |332| 
-        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |332| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 331,column 1,is_stmt,isa 0
-        MOVL      XAR4,ACC              ; [CPU_ALU] |331| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 332,column 5,is_stmt,isa 0
-        MOVL      *+XAR4[0],XAR6        ; [CPU_ALU] |332| 
+        MOVL      XAR6,ACC              ; [CPU_ALU] |392| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 393,column 5,is_stmt,isa 0
+        MOVL      XAR0,#280             ; [CPU_ALU] |393| 
+        MOVB      ACC,#72               ; [CPU_ALU] |393| 
+        ADDL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |393| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 392,column 1,is_stmt,isa 0
+        MOVL      XAR4,ACC              ; [CPU_ALU] |392| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 393,column 5,is_stmt,isa 0
+        MOVL      *+XAR4[0],XAR6        ; [CPU_ALU] |393| 
 $C$DW$219	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$219, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$219, DW_AT_TI_return
@@ -5116,7 +5116,7 @@ $C$DW$219	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$214, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$214, DW_AT_TI_end_line(0x14f)
+	.dwattr $C$DW$214, DW_AT_TI_end_line(0x18c)
 	.dwattr $C$DW$214, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$214
@@ -5132,10 +5132,10 @@ $C$DW$220	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$220, DW_AT_linkage_name("FCL_initPWM")
 	.dwattr $C$DW$220, DW_AT_external
 	.dwattr $C$DW$220, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$220, DW_AT_decl_line(0x109)
+	.dwattr $C$DW$220, DW_AT_decl_line(0x146)
 	.dwattr $C$DW$220, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$220, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 267,column 1,is_stmt,address ||FCL_initPWM||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 328,column 1,is_stmt,address ||FCL_initPWM||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_initPWM||
 $C$DW$221	.dwtag  DW_TAG_formal_parameter
@@ -5201,43 +5201,43 @@ $C$DW$228	.dwtag  DW_TAG_variable
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-        MOVL      P,*-SP[6]             ; [CPU_ALU] |267| 
+        MOVL      P,*-SP[6]             ; [CPU_ALU] |328| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         MOVL      XAR5,ACC              ; [CPU_ALU] |2398| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 267,column 1,is_stmt,isa 0
-        MOVL      XT,*-SP[8]            ; [CPU_ALU] |267| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 328,column 1,is_stmt,isa 0
+        MOVL      XT,*-SP[8]            ; [CPU_ALU] |328| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         MOVL      XAR6,P                ; [CPU_ALU] |2398| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 277,column 5,is_stmt,isa 0
-        MOVB      XAR0,#60              ; [CPU_ALU] |277| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 338,column 5,is_stmt,isa 0
+        MOVB      XAR0,#60              ; [CPU_ALU] |338| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         MOVL      XAR7,XT               ; [CPU_ALU] |2398| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 277,column 5,is_stmt,isa 0
-        ADDB      ACC,#106              ; [CPU_ALU] |277| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 338,column 5,is_stmt,isa 0
+        ADDB      ACC,#106              ; [CPU_ALU] |338| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         ADDB      XAR5,#8               ; [CPU_ALU] |2398| 
         ADDB      XAR6,#8               ; [CPU_ALU] |2398| 
         ADDB      XAR7,#8               ; [CPU_ALU] |2398| 
         OR        *+XAR5[0],#0x0010     ; [CPU_ALU] |2398| 
         OR        *+XAR6[0],#0x0010     ; [CPU_ALU] |2398| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 279,column 5,is_stmt,isa 0
-        MOVL      XAR6,XT               ; [CPU_ALU] |279| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 278,column 5,is_stmt,isa 0
-        MOVB      XAR1,#62              ; [CPU_ALU] |278| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 340,column 5,is_stmt,isa 0
+        MOVL      XAR6,XT               ; [CPU_ALU] |340| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 339,column 5,is_stmt,isa 0
+        MOVB      XAR1,#62              ; [CPU_ALU] |339| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2398,column 5,is_stmt,isa 0
         OR        *+XAR7[0],#0x0010     ; [CPU_ALU] |2398| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 277,column 5,is_stmt,isa 0
-        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |277| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 279,column 5,is_stmt,isa 0
-        ADDB      XAR6,#106             ; [CPU_ALU] |279| 
-        MOVB      XAR0,#64              ; [CPU_ALU] |279| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 278,column 5,is_stmt,isa 0
-        MOVL      ACC,P                 ; [CPU_ALU] |278| 
-        ADDB      ACC,#106              ; [CPU_ALU] |278| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 279,column 5,is_stmt,isa 0
-        MOVL      *+XAR4[AR0],XAR6      ; [CPU_ALU] |279| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 278,column 5,is_stmt,isa 0
-        MOVL      *+XAR4[AR1],ACC       ; [CPU_ALU] |278| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 338,column 5,is_stmt,isa 0
+        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |338| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 340,column 5,is_stmt,isa 0
+        ADDB      XAR6,#106             ; [CPU_ALU] |340| 
+        MOVB      XAR0,#64              ; [CPU_ALU] |340| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 339,column 5,is_stmt,isa 0
+        MOVL      ACC,P                 ; [CPU_ALU] |339| 
+        ADDB      ACC,#106              ; [CPU_ALU] |339| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 340,column 5,is_stmt,isa 0
+        MOVL      *+XAR4[AR0],XAR6      ; [CPU_ALU] |340| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 339,column 5,is_stmt,isa 0
+        MOVL      *+XAR4[AR1],ACC       ; [CPU_ALU] |339| 
         MOVL      XAR1,*--SP            ; [CPU_ALU] 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	restore_reg, 7
@@ -5248,7 +5248,7 @@ $C$DW$229	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$220, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$220, DW_AT_TI_end_line(0x11a)
+	.dwattr $C$DW$220, DW_AT_TI_end_line(0x157)
 	.dwattr $C$DW$220, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$220
@@ -5264,10 +5264,10 @@ $C$DW$230	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$230, DW_AT_linkage_name("FCL_initADC_3I")
 	.dwattr $C$DW$230, DW_AT_external
 	.dwattr $C$DW$230, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$230, DW_AT_decl_line(0x133)
+	.dwattr $C$DW$230, DW_AT_decl_line(0x170)
 	.dwattr $C$DW$230, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$230, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 311,column 1,is_stmt,address ||FCL_initADC_3I||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 372,column 1,is_stmt,address ||FCL_initADC_3I||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_initADC_3I||
 $C$DW$231	.dwtag  DW_TAG_formal_parameter
@@ -5365,58 +5365,58 @@ $C$DW$245	.dwtag  DW_TAG_variable
 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-        MOVL      XAR6,ACC              ; [CPU_ALU] |311| 
+        MOVL      XAR6,ACC              ; [CPU_ALU] |372| 
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 318,column 5,is_stmt,isa 0
-        MOVB      AL,#8                 ; [CPU_ALU] |318| 
-        ADD       AL,AR5                ; [CPU_ALU] |318| 
-        MOVB      XAR1,#66              ; [CPU_ALU] |318| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 311,column 1,is_stmt,isa 0
-        MOVZ      AR7,*-SP[13]          ; [CPU_ALU] |311| 
-        MOVL      XT,*-SP[8]            ; [CPU_ALU] |311| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 318,column 5,is_stmt,isa 0
-        MOV       ACC,AL << #1          ; [CPU_ALU] |318| 
-        MOV       PL,AL                 ; [CPU_ALU] |318| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 311,column 1,is_stmt,isa 0
-        MOVZ      AR5,*-SP[9]           ; [CPU_ALU] |311| 
-        MOVL      ACC,*-SP[6]           ; [CPU_ALU] |311| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 318,column 5,is_stmt,isa 0
-        ADDU      ACC,PL                ; [CPU_ALU] |318| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 311,column 1,is_stmt,isa 0
-        MOVL      P,*-SP[12]            ; [CPU_ALU] |311| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 318,column 5,is_stmt,isa 0
-        MOVL      *+XAR4[AR1],ACC       ; [CPU_ALU] |318| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 319,column 5,is_stmt,isa 0
-        MOVB      AL,#8                 ; [CPU_ALU] |319| 
-        ADD       AL,AR5                ; [CPU_ALU] |319| 
-        MOV       ACC,AL << #1          ; [CPU_ALU] |319| 
-        MOVZ      AR5,AL                ; [CPU_ALU] |319| 
-        MOVB      XAR0,#68              ; [CPU_ALU] |319| 
-        MOVL      ACC,XT                ; [CPU_ALU] |319| 
-        ADDU      ACC,AR5               ; [CPU_ALU] |319| 
-        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |319| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 311,column 1,is_stmt,isa 0
-        MOVL      XAR5,XAR6             ; [CPU_ALU] |311| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 320,column 5,is_stmt,isa 0
-        MOVB      AL,#8                 ; [CPU_ALU] |320| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 322,column 5,is_stmt,isa 0
-        MOVB      XAR0,#74              ; [CPU_ALU] |322| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 320,column 5,is_stmt,isa 0
-        ADD       AL,AR7                ; [CPU_ALU] |320| 
-        MOV       ACC,AL << #1          ; [CPU_ALU] |320| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 322,column 5,is_stmt,isa 0
-        ADDB      XAR5,#3               ; [CPU_ALU] |322| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 320,column 5,is_stmt,isa 0
-        MOVZ      AR6,AL                ; [CPU_ALU] |320| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 322,column 5,is_stmt,isa 0
-        MOVL      *+XAR4[AR0],XAR5      ; [CPU_ALU] |322| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 320,column 5,is_stmt,isa 0
-        MOVL      ACC,P                 ; [CPU_ALU] |320| 
-        MOVB      XAR0,#70              ; [CPU_ALU] |320| 
-        ADDU      ACC,AR6               ; [CPU_ALU] |320| 
-        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |320| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 379,column 5,is_stmt,isa 0
+        MOVB      AL,#8                 ; [CPU_ALU] |379| 
+        ADD       AL,AR5                ; [CPU_ALU] |379| 
+        MOVB      XAR1,#66              ; [CPU_ALU] |379| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 372,column 1,is_stmt,isa 0
+        MOVZ      AR7,*-SP[13]          ; [CPU_ALU] |372| 
+        MOVL      XT,*-SP[8]            ; [CPU_ALU] |372| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 379,column 5,is_stmt,isa 0
+        MOV       ACC,AL << #1          ; [CPU_ALU] |379| 
+        MOV       PL,AL                 ; [CPU_ALU] |379| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 372,column 1,is_stmt,isa 0
+        MOVZ      AR5,*-SP[9]           ; [CPU_ALU] |372| 
+        MOVL      ACC,*-SP[6]           ; [CPU_ALU] |372| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 379,column 5,is_stmt,isa 0
+        ADDU      ACC,PL                ; [CPU_ALU] |379| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 372,column 1,is_stmt,isa 0
+        MOVL      P,*-SP[12]            ; [CPU_ALU] |372| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 379,column 5,is_stmt,isa 0
+        MOVL      *+XAR4[AR1],ACC       ; [CPU_ALU] |379| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 380,column 5,is_stmt,isa 0
+        MOVB      AL,#8                 ; [CPU_ALU] |380| 
+        ADD       AL,AR5                ; [CPU_ALU] |380| 
+        MOV       ACC,AL << #1          ; [CPU_ALU] |380| 
+        MOVZ      AR5,AL                ; [CPU_ALU] |380| 
+        MOVB      XAR0,#68              ; [CPU_ALU] |380| 
+        MOVL      ACC,XT                ; [CPU_ALU] |380| 
+        ADDU      ACC,AR5               ; [CPU_ALU] |380| 
+        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |380| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 372,column 1,is_stmt,isa 0
+        MOVL      XAR5,XAR6             ; [CPU_ALU] |372| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 381,column 5,is_stmt,isa 0
+        MOVB      AL,#8                 ; [CPU_ALU] |381| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 383,column 5,is_stmt,isa 0
+        MOVB      XAR0,#74              ; [CPU_ALU] |383| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 381,column 5,is_stmt,isa 0
+        ADD       AL,AR7                ; [CPU_ALU] |381| 
+        MOV       ACC,AL << #1          ; [CPU_ALU] |381| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 383,column 5,is_stmt,isa 0
+        ADDB      XAR5,#3               ; [CPU_ALU] |383| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 381,column 5,is_stmt,isa 0
+        MOVZ      AR6,AL                ; [CPU_ALU] |381| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 383,column 5,is_stmt,isa 0
+        MOVL      *+XAR4[AR0],XAR5      ; [CPU_ALU] |383| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 381,column 5,is_stmt,isa 0
+        MOVL      ACC,P                 ; [CPU_ALU] |381| 
+        MOVB      XAR0,#70              ; [CPU_ALU] |381| 
+        ADDU      ACC,AR6               ; [CPU_ALU] |381| 
+        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |381| 
         MOVL      XAR1,*--SP            ; [CPU_ALU] 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	restore_reg, 7
@@ -5427,7 +5427,7 @@ $C$DW$246	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$230, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$230, DW_AT_TI_end_line(0x145)
+	.dwattr $C$DW$230, DW_AT_TI_end_line(0x182)
 	.dwattr $C$DW$230, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$230
@@ -5443,10 +5443,10 @@ $C$DW$247	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$247, DW_AT_linkage_name("FCL_initADC_2I")
 	.dwattr $C$DW$247, DW_AT_external
 	.dwattr $C$DW$247, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$247, DW_AT_decl_line(0x11f)
+	.dwattr $C$DW$247, DW_AT_decl_line(0x15c)
 	.dwattr $C$DW$247, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$247, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 290,column 1,is_stmt,address ||FCL_initADC_2I||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 351,column 1,is_stmt,address ||FCL_initADC_2I||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_initADC_2I||
 $C$DW$248	.dwtag  DW_TAG_formal_parameter
@@ -5522,45 +5522,45 @@ $C$DW$258	.dwtag  DW_TAG_variable
 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-        MOVL      XAR6,ACC              ; [CPU_ALU] |290| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 296,column 5,is_stmt,isa 0
-        MOVB      AL,#8                 ; [CPU_ALU] |296| 
+        MOVL      XAR6,ACC              ; [CPU_ALU] |351| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 357,column 5,is_stmt,isa 0
+        MOVB      AL,#8                 ; [CPU_ALU] |357| 
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-        ADD       AL,AR5                ; [CPU_ALU] |296| 
-        MOVB      XAR0,#66              ; [CPU_ALU] |296| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 290,column 1,is_stmt,isa 0
-        MOVZ      AR7,*-SP[9]           ; [CPU_ALU] |290| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 296,column 5,is_stmt,isa 0
-        MOV       ACC,AL << #1          ; [CPU_ALU] |296| 
-        MOV       PL,AL                 ; [CPU_ALU] |296| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 290,column 1,is_stmt,isa 0
-        MOVL      XAR5,XAR6             ; [CPU_ALU] |290| 
-        MOVL      ACC,*-SP[6]           ; [CPU_ALU] |290| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 296,column 5,is_stmt,isa 0
-        ADDU      ACC,PL                ; [CPU_ALU] |296| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 290,column 1,is_stmt,isa 0
-        MOVL      P,*-SP[8]             ; [CPU_ALU] |290| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 299,column 5,is_stmt,isa 0
-        ADDB      XAR5,#3               ; [CPU_ALU] |299| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 296,column 5,is_stmt,isa 0
-        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |296| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 297,column 5,is_stmt,isa 0
-        MOVB      AL,#8                 ; [CPU_FPU] |297| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 299,column 5,is_stmt,isa 0
-        MOVB      XAR0,#74              ; [CPU_FPU] |299| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 297,column 5,is_stmt,isa 0
-        ADD       AL,AR7                ; [CPU_ALU] |297| 
-        MOV       ACC,AL << #1          ; [CPU_FPU] |297| 
-        MOVZ      AR6,AL                ; [CPU_FPU] |297| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 299,column 5,is_stmt,isa 0
-        MOVL      *+XAR4[AR0],XAR5      ; [CPU_ALU] |299| 
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 297,column 5,is_stmt,isa 0
-        MOVB      XAR0,#68              ; [CPU_ALU] |297| 
-        MOVL      ACC,P                 ; [CPU_ALU] |297| 
-        ADDU      ACC,AR6               ; [CPU_ALU] |297| 
-        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |297| 
+        ADD       AL,AR5                ; [CPU_ALU] |357| 
+        MOVB      XAR0,#66              ; [CPU_ALU] |357| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 351,column 1,is_stmt,isa 0
+        MOVZ      AR7,*-SP[9]           ; [CPU_ALU] |351| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 357,column 5,is_stmt,isa 0
+        MOV       ACC,AL << #1          ; [CPU_ALU] |357| 
+        MOV       PL,AL                 ; [CPU_ALU] |357| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 351,column 1,is_stmt,isa 0
+        MOVL      XAR5,XAR6             ; [CPU_ALU] |351| 
+        MOVL      ACC,*-SP[6]           ; [CPU_ALU] |351| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 357,column 5,is_stmt,isa 0
+        ADDU      ACC,PL                ; [CPU_ALU] |357| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 351,column 1,is_stmt,isa 0
+        MOVL      P,*-SP[8]             ; [CPU_ALU] |351| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 360,column 5,is_stmt,isa 0
+        ADDB      XAR5,#3               ; [CPU_ALU] |360| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 357,column 5,is_stmt,isa 0
+        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |357| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 358,column 5,is_stmt,isa 0
+        MOVB      AL,#8                 ; [CPU_FPU] |358| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 360,column 5,is_stmt,isa 0
+        MOVB      XAR0,#74              ; [CPU_FPU] |360| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 358,column 5,is_stmt,isa 0
+        ADD       AL,AR7                ; [CPU_ALU] |358| 
+        MOV       ACC,AL << #1          ; [CPU_FPU] |358| 
+        MOVZ      AR6,AL                ; [CPU_FPU] |358| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 360,column 5,is_stmt,isa 0
+        MOVL      *+XAR4[AR0],XAR5      ; [CPU_ALU] |360| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 358,column 5,is_stmt,isa 0
+        MOVB      XAR0,#68              ; [CPU_ALU] |358| 
+        MOVL      ACC,P                 ; [CPU_ALU] |358| 
+        ADDU      ACC,AR6               ; [CPU_ALU] |358| 
+        MOVL      *+XAR4[AR0],ACC       ; [CPU_ALU] |358| 
         MOVL      XAR1,*--SP            ; [CPU_ALU] 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	restore_reg, 7
@@ -5571,7 +5571,7 @@ $C$DW$259	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$247, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$247, DW_AT_TI_end_line(0x12e)
+	.dwattr $C$DW$247, DW_AT_TI_end_line(0x16b)
 	.dwattr $C$DW$247, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$247
@@ -5588,10 +5588,10 @@ $C$DW$260	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$260, DW_AT_external
 	.dwattr $C$DW$260, DW_AT_type(*$C$DW$T$21)
 	.dwattr $C$DW$260, DW_AT_decl_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$260, DW_AT_decl_line(0x173)
+	.dwattr $C$DW$260, DW_AT_decl_line(0x1ae)
 	.dwattr $C$DW$260, DW_AT_decl_column(0x0a)
 	.dwattr $C$DW$260, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 372,column 1,is_stmt,address ||FCL_getSwVersion||,isa 0
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 431,column 1,is_stmt,address ||FCL_getSwVersion||,isa 0
 
 	.dwfde $C$DW$CIE, ||FCL_getSwVersion||
 
@@ -5607,8 +5607,8 @@ $C$DW$260	.dwtag  DW_TAG_subprogram
 ||FCL_getSwVersion||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 376,column 5,is_stmt,isa 0
-        MOVB      ACC,#8                ; [CPU_ALU] |376| 
+	.dwpsn	file "../sources/fcl_cpu_code_dm.c",line 435,column 5,is_stmt,isa 0
+        MOVB      ACC,#8                ; [CPU_ALU] |435| 
 $C$DW$261	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$261, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$261, DW_AT_TI_return
@@ -5616,7 +5616,7 @@ $C$DW$261	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$260, DW_AT_TI_end_file("../sources/fcl_cpu_code_dm.c")
-	.dwattr $C$DW$260, DW_AT_TI_end_line(0x179)
+	.dwattr $C$DW$260, DW_AT_TI_end_line(0x1b4)
 	.dwattr $C$DW$260, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$260

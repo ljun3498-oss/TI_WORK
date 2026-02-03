@@ -1,18 +1,18 @@
 //#############################################################################
-// $Copyright:
-// Copyright (C) 2017-2025 Texas Instruments Incorporated
-//     http://www.ti.com/ ALL RIGHTS RESERVED
+// $版权信息:
+// 版权所有 (C) 2017-2025 Texas Instruments Incorporated
+//     http://www.ti.com/ 保留所有权利
 // $
 //#############################################################################
 
 //------------------------------------------------------------------------------
-//  Software:       Motor Control SDK
+//  软件:       电机控制SDK
 //
-// FILE:    fcl_cpu_code_dm.c
+// 文件:    fcl_cpu_code_dm.c
 //
-// TITLE:   FCL motor handler functions from CPU
+// 标题:   FCL电机处理器函数（CPU端）
 //
-// Target Family: F2837x/F28004x/F28P55x/F28P65x
+// 目标系列: F2837x/F28004x/F28P55x/F28P65x
 //
 //-----------------------------------------------------------------------------
 
@@ -25,36 +25,43 @@
 #include "fcl_cpu_cla_dm.h"
 #include "fcl_cla_dm.h"
 
+/**
+ * @brief RAM函数配置
+ * @details 将关键的电机控制函数放置到RAM中执行，以提高实时性能
+ * @note 根据TI编译器版本选择不同的RAM函数段名称
+ */
 #ifndef __cplusplus
     #ifdef __TI_COMPILER_VERSION__
         #if __TI_COMPILER_VERSION__ >= 15009000
-            #pragma CODE_SECTION(FCL_runPICtrl_M1,".TI.ramfunc");
-            #pragma CODE_SECTION(FCL_runComplexCtrl_M1,".TI.ramfunc");
-            #pragma CODE_SECTION(FCL_runPICtrlWrap_M1,".TI.ramfunc");
-            #pragma CODE_SECTION(FCL_runComplexCtrlWrap_M1,".TI.ramfunc");
-            #pragma CODE_SECTION(FCL_runQEPWrap_M1,".TI.ramfunc");
+            // TI编译器15.0.9及以上版本使用.TI.ramfunc段
+            #pragma CODE_SECTION(FCL_runPICtrl_M1,".TI.ramfunc");            // 电机1 PI控制函数
+            #pragma CODE_SECTION(FCL_runComplexCtrl_M1,".TI.ramfunc");        // 电机1复杂控制函数
+            #pragma CODE_SECTION(FCL_runPICtrlWrap_M1,".TI.ramfunc");         // 电机1 PI控制包装函数
+            #pragma CODE_SECTION(FCL_runComplexCtrlWrap_M1,".TI.ramfunc");     // 电机1复杂控制包装函数
+            #pragma CODE_SECTION(FCL_runQEPWrap_M1,".TI.ramfunc");            // 电机1 QEP包装函数
 
-            #pragma CODE_SECTION(FCL_runPICtrl_M2,".TI.ramfunc");
-            #pragma CODE_SECTION(FCL_runComplexCtrl_M2,".TI.ramfunc");
-            #pragma CODE_SECTION(FCL_runPICtrlWrap_M2,".TI.ramfunc");
-            #pragma CODE_SECTION(FCL_runComplexCtrlWrap_M2,".TI.ramfunc");
-            #pragma CODE_SECTION(FCL_runQEPWrap_M2,".TI.ramfunc");
+            #pragma CODE_SECTION(FCL_runPICtrl_M2,".TI.ramfunc");            // 电机2 PI控制函数
+            #pragma CODE_SECTION(FCL_runComplexCtrl_M2,".TI.ramfunc");        // 电机2复杂控制函数
+            #pragma CODE_SECTION(FCL_runPICtrlWrap_M2,".TI.ramfunc");         // 电机2 PI控制包装函数
+            #pragma CODE_SECTION(FCL_runComplexCtrlWrap_M2,".TI.ramfunc");     // 电机2复杂控制包装函数
+            #pragma CODE_SECTION(FCL_runQEPWrap_M2,".TI.ramfunc");            // 电机2 QEP包装函数
 
-            #pragma CODE_SECTION(FCL_resetController,".TI.ramfunc");
+            #pragma CODE_SECTION(FCL_resetController,".TI.ramfunc");          // 控制器重置函数
         #else
-            #pragma CODE_SECTION(FCL_runPICtrl_M1,"ramfuncs");
-            #pragma CODE_SECTION(FCL_runComplexCtrl_M1,"ramfuncs");
-            #pragma CODE_SECTION(FCL_runPICtrlWrap_M1,"ramfuncs");
-            #pragma CODE_SECTION(FCL_runComplexCtrlWrap_M1,"ramfuncs");
-            #pragma CODE_SECTION(FCL_runQEPWrap_M1,"ramfuncs");
+            // 旧版本TI编译器使用ramfuncs段
+            #pragma CODE_SECTION(FCL_runPICtrl_M1,"ramfuncs");                 // 电机1 PI控制函数
+            #pragma CODE_SECTION(FCL_runComplexCtrl_M1,"ramfuncs");             // 电机1复杂控制函数
+            #pragma CODE_SECTION(FCL_runPICtrlWrap_M1,"ramfuncs");              // 电机1 PI控制包装函数
+            #pragma CODE_SECTION(FCL_runComplexCtrlWrap_M1,"ramfuncs");          // 电机1复杂控制包装函数
+            #pragma CODE_SECTION(FCL_runQEPWrap_M1,"ramfuncs");                 // 电机1 QEP包装函数
 
-            #pragma CODE_SECTION(FCL_runPICtrl_M2,"ramfuncs");
-            #pragma CODE_SECTION(FCL_runComplexCtrl_M2,"ramfuncs");
-            #pragma CODE_SECTION(FCL_runPICtrlWrap_M2,"ramfuncs");
-            #pragma CODE_SECTION(FCL_runComplexCtrlWrap_M2,"ramfuncs");
-            #pragma CODE_SECTION(FCL_runQEPWrap_M2,"ramfuncs");
+            #pragma CODE_SECTION(FCL_runPICtrl_M2,"ramfuncs");                 // 电机2 PI控制函数
+            #pragma CODE_SECTION(FCL_runComplexCtrl_M2,"ramfuncs");             // 电机2复杂控制函数
+            #pragma CODE_SECTION(FCL_runPICtrlWrap_M2,"ramfuncs");              // 电机2 PI控制包装函数
+            #pragma CODE_SECTION(FCL_runComplexCtrlWrap_M2,"ramfuncs");          // 电机2复杂控制包装函数
+            #pragma CODE_SECTION(FCL_runQEPWrap_M2,"ramfuncs");                 // 电机2 QEP包装函数
 
-            #pragma CODE_SECTION(FCL_resetController,"ramfuncs");
+            #pragma CODE_SECTION(FCL_resetController,"ramfuncs");               // 控制器重置函数
         #endif
     #endif
 #endif
@@ -67,21 +74,31 @@ FCL_Vars_t fclVars[2];
 #endif
 
 //
-// FCL MACRO implementing CLARKE transform on currents using pointers to
-// registers used in both PI CONTROL and COMPLEX CONTROL
-// -assigned to clarke1 struct for user access (adds 20nS to FCL_CLARKE_STYLE_1)
+// FCL宏：使用寄存器指针实现电流的CLARKE变换
+// 适用于PI控制和复杂控制模式
+// -结果存储在clarke1结构体中供用户访问（比FCL_CLARKE_STYLE_1慢20ns）
 //
+/**
+ * @brief Clarke变换宏（样式11）- 结构体输出版本
+ * @details 实现三相电流到α-β坐标系的变换，并将结果存储到clarke1结构体中
+ * @优点 结果存储在结构体中，方便用户访问和调试
+ * @缺点 比样式1慢约20ns
+ */
 #define FCL_CLARKE_STYLE_11()                                                  \
+    /* 计算α轴分量：直接使用A相电流值 */                                         \
     clarke1.Alpha = (float32_t)((int16_t)(HWREGH(pMotor->curA_PPBRESULT)) *    \
                             FCL_params.adcScale);                              \
+    /* 计算β轴分量：使用A相和B相电流值，通过Clarke变换公式计算 */                 \
     clarke1.Beta  = ((clarke1.Alpha +                                          \
               (2.0 * ((float32_t)((int16_t)(HWREGH(pMotor->curB_PPBRESULT))) * \
               FCL_params.adcScale))) * ONEbySQRT3);
 
-//
-// FCL宏：使用寄存器指针实现电流的CLARKE变换
-// 适用于PI控制和复杂控制模式
-//
+/**
+ * @brief Clarke变换宏（样式1）- 局部变量版
+ * @details 实现三相电流到α-β坐标系的变换，结果存储在局部变量中
+ * @优点 执行速度最快
+ * @缺点 结果存储在局部变量中，用户无法直接访问
+ */
 #define FCL_CLARKE_STYLE_1()                                                   \
     /* 计算α轴电流：直接使用A相电流值 */                                         \
     /* 1. 读取A相电流的ADC结果（HWREGH宏访问硬件寄存器） */                     \
@@ -97,11 +114,15 @@ FCL_Vars_t fclVars[2];
                (2.0 * ((float32_t)((int16_t)HWREGH(pMotor->curB_PPBRESULT)) *  \
                pMotor->FCL_params.adcScale))) * ONEbySQRT3);
 
-//
-// FCL宏：使用位域类型寄存器访问实现电流的CLARKE变换
-// 适用于PI控制和复杂控制模式
-//
+/**
+ * @brief Clarke变换宏（样式3）- 位域访问版
+ * @details 使用位域类型寄存器访问实现电流的CLARKE变换
+ * @优点 使用位域访问，代码更简洁
+ * @缺点 需要特定的位域定义支持
+ */
+// 电流A相值（位域访问）
 #define FCL_CURRENT3_A  (IFB_LEMV_PPB * FCL_params.adcScale)
+// 电流B相值（位域访问）
 #define FCL_CURRENT3_B  (IFB_LEMW_PPB * FCL_params.adcScale)
 
 #define FCL_CLARKE_STYLE_3()                                                   \
@@ -111,11 +132,13 @@ FCL_Vars_t fclVars[2];
         /* 公式：β = (A + 2*B) * (1/√3) */                                         \
         clarke1Beta  = ((clarke1Alpha + (2.0 * FCL_CURRENT3_B)) * ONEbySQRT3);
 
+/**
+ * @brief 位置反馈和电流变换宏
+ * @details 实现位置反馈的Park变换和电流的Clarke变换
+ * @note 适用于PI控制和复杂控制模式
+ */
 //
-// FCL MACRO implementing PARK on position feed back and CLARKE on currents
-// used in both PI CONTROL and COMPLEX CONTROL
-//
-// Motor 1
+// 电机1
 //
 #define M1_FCL_POSITION_CURRENT_CLARKE_MACRO()                                 \
 /*                                                                             \
@@ -151,8 +174,13 @@ FCL_Vars_t fclVars[2];
     FCL_CLARKE_STYLE_1();
 
 //
-// Motor 2
+// 电机2
 //
+/**
+ * @brief 电机2位置和电流变换宏
+ * @details 实现位置反馈的Park变换和电流的Clarke变换
+ * @note 适用于PI控制和复杂控制模式
+ */
 #define M2_FCL_POSITION_CURRENT_CLARKE_MACRO()                                 \
 /*                                                                             \
  *-----------------------------------------------------------------------------\
@@ -187,30 +215,57 @@ FCL_Vars_t fclVars[2];
     FCL_CLARKE_STYLE_1();
 
 //
-// FCL MACRO implementing PWM updates using pointers access to registers
-// used in both PI CONTROL and COMPLEX CONTROL
+// FCL宏：使用指针访问寄存器实现PWM更新
+// 适用于PI控制和复杂控制模式
 //
+/**
+ * @brief PWM更新方式1 - 使用API函数更新
+ * @details 通过调用EPWM模块的API函数来设置比较寄存器值
+ * @优点 代码可读性好，便于维护
+ * @缺点 执行速度相对较慢
+ */
 #define FCL_PWM_UPDATE_STYLE_1()                                               \
+    /* 更新Phase C的比较值 (Tc + 偏移量) */                                      \
     EPWM_setCounterCompareValue(pwmHandle[0], EPWM_COUNTER_COMPARE_A,          \
                                 (uint32_t)(svgen2.Tc + svgen2.tmp1));          \
+    /* 更新Phase A的比较值 (Ualpha + 偏移量) */                                 \
     EPWM_setCounterCompareValue(pwmHandle[1], EPWM_COUNTER_COMPARE_A,          \
                                 (uint32_t)(svgen2.Ualpha + svgen2.tmp1));      \
+    /* 更新Phase B的比较值 (Tb + 偏移量) */                                      \
     EPWM_setCounterCompareValue(pwmHandle[2], EPWM_COUNTER_COMPARE_A,          \
                                 (uint32_t)(svgen2.Tb + svgen2.tmp1));
 
 //
-// FCL MACRO implementing PWM updates using direct address access to registers
-// (or pointers) used in both PI CONTROL and COMPLEX CONTROL
-// This macro saves about 40ns of cycle time
+// FCL宏：使用直接地址访问寄存器实现PWM更新
+// 适用于PI控制和复杂控制模式
+// 此宏比方式1节省约40ns的周期时间
 //
+/**
+ * @brief PWM更新方式2 - 使用直接地址访问更新
+ * @details 通过直接访问寄存器地址来设置比较值
+ * @优点 执行速度最快，比方式1节省约40ns的周期时间
+ * @缺点 代码可移植性差，硬编码寄存器地址
+ */
 #define FCL_PWM_UPDATE_STYLE_2()                                               \
+    /* 直接写入EPWM1的CMPA寄存器 (Phase C) */                                   \
     *(volatile uint32_t *)(0x406A) = (uint32_t)(svgen2.Tc + svgen2.tmp1);      \
+    /* 直接写入EPWM2的CMPA寄存器 (Phase A) */                                   \
     *(volatile uint32_t *)(0x416A) = (uint32_t)(svgen2.Ualpha + svgen2.tmp1);  \
+    /* 直接写入EPWM3的CMPA寄存器 (Phase B) */                                   \
     *(volatile uint32_t *)(0x426A) = (uint32_t)(svgen2.Tb + svgen2.tmp1);
 
+/**
+ * @brief PWM更新方式3 - 使用结构指针访问更新
+ * @details 通过pMotor结构中的指针成员来设置比较值
+ * @优点 代码可读性和可移植性较好，执行速度较快
+ * @缺点 比方式2稍慢，但比方式1快
+ */
 #define FCL_PWM_UPDATE_STYLE_3()                                               \
+    /* 通过指针更新Phase C的比较值 */                                           \
     *(pMotor->pwmCompA) = (uint32_t)(svgen2.Tc + svgen2.tmp1);                 \
+    /* 通过指针更新Phase A的比较值 */                                           \
     *(pMotor->pwmCompB) = (uint32_t)(svgen2.Ualpha + svgen2.tmp1);             \
+    /* 通过指针更新Phase B的比较值 */                                           \
     *(pMotor->pwmCompC) = (uint32_t)(svgen2.Tb + svgen2.tmp1);
 
 // for test
@@ -220,35 +275,42 @@ FCL_Vars_t fclVars[2];
 //    *(pMotor->pwmCompB) = (uint32_t)(svgen2.Tb + svgen2.tmp1);
 
 
-// FCL MACRO implementing SVGEN and PWM updates
-// used in both PI CONTROL and COMPLEX CONTROL
+// FCL宏：实现SVPWM生成和PWM更新
+// 适用于PI控制和复杂控制模式
 //
 #define FCL_SVGEN_PWM_PDATE_MACRO()                                            \
 /*                                                                             \
  * ----------------------------------------------------------------------------\
- * Call the space vector gen. macro                                            \
+ * 空间矢量脉宽调制(SVPWM)计算宏                                              \
  * ----------------------------------------------------------------------------\
+ * 功能：计算三相PWM的占空比并更新到PWM寄存器                                 \
+ * 原理：基于α-β坐标系的电压值计算三个桥臂的导通时间                          \
  */                                                                            \
+    /* 计算三个桥臂的基本导通时间 */                                             \
     svgen2.Tb = (svgen2.Ubeta - svgen2.Ualpha) / 2;                            \
     svgen2.Tc = svgen2.Tb - svgen2.Ubeta;                                      \
+    /* 注：Ta = svgen2.Ualpha (隐式计算) */                                    \
                                                                                \
+    /* 计算中心对齐偏移量，确保所有导通时间为正 */                             \
+    /* 1. 找出最大和最小的导通时间 */                                           \
     svgen2.tmp2 = __fmax(__fmax(svgen2.Ualpha,                                 \
                                        svgen2.Tc), svgen2.Tb);                 \
     svgen2.tmp2 += __fmin(__fmin(svgen2.Ualpha,                                \
                                         svgen2.Tc), svgen2.Tb);                \
-                                                                               \
+    /* 2. 计算偏移量，实现中心对齐PWM */                                       \
     svgen2.tmp1  =  ((-svgen2.tmp2) / 2) +                                     \
                              pMotor->FCL_params.carrierMid;                    \
                                                                                \
 /*                                                                             \
 * -----------------------------------------------------------------------------\
-* Computed Duty and Write to CMPA register                                     \
+* 计算最终占空比并写入PWM比较寄存器                                            \
 * -----------------------------------------------------------------------------\
+* 调用FCL_PWM_UPDATE_STYLE_3()宏将计算结果更新到PWM模块                        \
 */                                                                             \
      FCL_PWM_UPDATE_STYLE_3();
 
 //
-// To do instrumentation from library use below
+// 从库中进行插桩测试请使用以下代码
 //
 extern volatile uint16_t FCL_cycleCount[2];
 
@@ -259,8 +321,7 @@ extern volatile uint16_t FCL_cycleCount[2];
     FCL_cycleCount[1] = HWREGH(M2_U_PWM_BASE + EPWM_O_TBCTR);
 
 //
-//  Function to initialize PWMs for the FCL operation, this will be called by
-//  the user application during the initialization or setup process
+//  函数：初始化FCL操作所需的PWM，将由用户应用程序在初始化或设置过程中调用
 //
 void FCL_initPWM(MOTOR_Vars_t *ptrMotor,
                  uint32_t basePhaseU, uint32_t basePhaseV, uint32_t basePhaseW)
@@ -282,7 +343,7 @@ void FCL_initPWM(MOTOR_Vars_t *ptrMotor,
 }
 
 //
-// initialize ADC for 2 current sensors
+// 函数：初始化2个电流传感器的ADC
 //
 void FCL_initADC_2I(MOTOR_Vars_t *ptrMotor, uint32_t basePhaseW,
                     uint32_t resultBaseV, ADC_PPBNumber baseV_PPB,
@@ -302,7 +363,7 @@ void FCL_initADC_2I(MOTOR_Vars_t *ptrMotor, uint32_t basePhaseW,
 }
 
 //
-// initialize ADC for 3 current sensors
+// 函数：初始化3个电流传感器的ADC
 //
 void FCL_initADC_3I(MOTOR_Vars_t *ptrMotor, uint32_t basePhaseW,
                     uint32_t resultBaseA, ADC_PPBNumber baseA_PPB,
@@ -325,7 +386,7 @@ void FCL_initADC_3I(MOTOR_Vars_t *ptrMotor, uint32_t basePhaseW,
 }
 
 //
-// initialize QEP
+// 函数：初始化QEP（正交编码器）
 //
 void FCL_initQEP(MOTOR_Vars_t *ptrMotor, const uint32_t baseA)
 {
@@ -335,8 +396,7 @@ void FCL_initQEP(MOTOR_Vars_t *ptrMotor, const uint32_t baseA)
 }
 
 //
-// This function is called to reset the FCL variables and is useful when user
-// wants to stop the motor and restart the motor
+// 函数：重置FCL变量，当用户想要停止电机并重新启动电机时非常有用
 //
 void FCL_resetController(MOTOR_Vars_t *ptrMotor)
 {
@@ -355,34 +415,33 @@ void FCL_resetController(MOTOR_Vars_t *ptrMotor)
 }
 
 //
-//  This function returns a 32-bit constant and for this version the value
-//  returned is 0x00000006
-//  Ver   Date       Platform              Description   Location
-//   1   07/2016  IDDK / TMDSCNCDF28379D   Beta MSS      \FCL\v01_00_00_00
-//   2   03/2017  IDDK / TMDSCNCDF28379D   cSUITE GA     \FCL\v02_00_00_00
-//   3   11/2017  F28379DXL/ GaN/ DRV8305  Beta MSS      \FCL\v03_00_00_02
-//   4   03/2018  F28379DXL/ GaN/ DRV8305  cSUITE GA     \FCL_SFRA\v01_00_00_00
-//   5   03/2019  IDDK / TMDSCNCDF28379D   MCSDK_1
-//   6   06/2019  IDDK / TMDSCNCDF28379D   MCSDK_2
-//   7   09/2019  IDDK / F28838x/F2837x/F28004x, MCSDK_V21,
-//                                         support absolute encoder
-//   8   09/2019  LPD-F2837x/F28004x/GaN,   MCSDK_V21, dual motor control
+//  函数：返回32位常量，此版本返回值为0x00000008
+//  版本   日期       平台                   描述           位置
+//   1   2016/07  IDDK / TMDSCNCDF28379D   Beta MSS      \FCL\v01_00_00_00
+//   2   2017/03  IDDK / TMDSCNCDF28379D   cSUITE GA     \FCL\v02_00_00_00
+//   3   2017/11  F28379DXL/ GaN/ DRV8305  Beta MSS      \FCL\v03_00_00_02
+//   4   2018/03  F28379DXL/ GaN/ DRV8305  cSUITE GA     \FCL_SFRA\v01_00_00_00
+//   5   2019/03  IDDK / TMDSCNCDF28379D   MCSDK_1
+//   6   2019/06  IDDK / TMDSCNCDF28379D   MCSDK_2
+//   7   2019/09  IDDK / F28838x/F2837x/F28004x, MCSDK_V21,
+//                                         支持绝对编码器
+//   8   2019/09  LPD-F2837x/F28004x/GaN,   MCSDK_V21, 双电机控制
 //
 uint32_t FCL_getSwVersion(void)
 {
     //
-    // for this version return 0x00000008
+    // 此版本返回0x00000008
     //
     return((uint32_t)(0x00000008));
 }
 
 //
-// FCL internal function called in the complex control API
-// This function implements the complex control algorithm
+// FCL内部函数，在复杂控制API中调用
+// 此函数实现复杂控制算法
 //
 void complexCtrl_M1(MOTOR_Vars_t *pMotor)
 {
-    // SETGPIO18_HIGH; // only for debug
+    // SETGPIO18_HIGH; // 仅用于调试
 
     pMotor->pi_id.out += pMotor->D_cpu.kDirect *
                          (fclVars[0].Q_cla.idErr * pMotor->D_cpu.cosWTs -
@@ -391,14 +450,14 @@ void complexCtrl_M1(MOTOR_Vars_t *pMotor)
 
     CLAMP_MACRO(pMotor->pi_id);
 
-    // SETGPIO18_LOW; // only for debug
+    // SETGPIO18_LOW; // 仅用于调试
 
     return;
 }
 
 void complexCtrl_M2(MOTOR_Vars_t *pMotor)
 {
-    // SETGPIO18_HIGH; // only for debug
+    // SETGPIO18_HIGH; // 仅用于调试
 
     pMotor->pi_id.out += pMotor->D_cpu.kDirect *
                          (fclVars[1].Q_cla.idErr * pMotor->D_cpu.cosWTs -
@@ -407,13 +466,13 @@ void complexCtrl_M2(MOTOR_Vars_t *pMotor)
 
     CLAMP_MACRO(pMotor->pi_id);
 
-    // SETGPIO18_LOW; // only for debug
+    // SETGPIO18_LOW; // 仅用于调试
 
     return;
 }
 
 //
-// Function that performs the PI Control as part of the Fast Current Loop
+// 函数：执行快速电流环的PI控制
 //
 #pragma CODE_ALIGN(FCL_runPICtrl_M1, 2)
 #pragma FUNCTION_OPTIONS(FCL_runPICtrl_M1, "--auto_inline")
@@ -485,8 +544,7 @@ void FCL_runPICtrl_M1(MOTOR_Vars_t *pMotor)
 }
 
 //
-//  Wrap up function to be called by the user application at the completion of
-// Fast Current Loop in PI Control Mode
+//  函数：用户应用程序在PI控制模式下快速电流环完成时调用的包装函数
 //
 #pragma CODE_ALIGN(FCL_runPICtrlWrap_M1, 2)
 #pragma FUNCTION_OPTIONS(FCL_runPICtrlWrap_M1, "--auto_inline")
@@ -498,10 +556,10 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
     float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;
 
     //
-    // To save CPU cycles and speed up calcn, carry over math is done within
-    //   this wrap function and .CarryOver carries it to the next iteration
-    //   Bemf calc is rolled in to the Q calcs as the speed and flux does not
-    //   change much between iterations - equation tweaked to fit here
+    // 为节省CPU周期并加快计算速度，进位数学运算在此包装函数内完成
+    //   .CarryOver将其传递到下一次迭代
+    //   反电动势计算被整合到Q计算中，因为速度和磁通在迭代之间变化不大
+    //   方程经过调整以适应此处
     //
 
     //
@@ -510,7 +568,7 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
     Cla1ForceTask4();
 
     //
-    // Update PI ID parameters
+    // 更新PI ID参数
     //
     pMotor->pi_id.Kp = pMotor->FCL_params.Ld * invZbase *
             pMotor->FCL_params.wccD;
@@ -523,7 +581,7 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
     pMotor->pi_id.carryOver = (pMotor->pi_id.err * pMotor->pi_id.KerrOld);
 
     //
-    // Update PI IQ parameters
+    // 更新PI IQ参数
     //
     fclVars[0].pi_iq.Kp = pMotor->FCL_params.Lq * invZbase *
             pMotor->FCL_params.wccQ;
@@ -544,8 +602,8 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
     fclVars[0].speedWePrev = pMotor->speed.Speed;
 
     //
-    // to pass on the id and iq current feedback back to user,
-    // update them in the wrap function
+    // 为了将id和iq电流反馈传递给用户，
+    // 在包装函数中更新它们
     //
     pMotor->pi_id.fbk = pMotor->pi_id.ref - pMotor->pi_id.err;
 
@@ -553,12 +611,12 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
             fclVars[0].pi_iq.err;
 
     //
-    //give enough time before clearing INTx4 for CLA TASK 4 completion
+    // 在清除INTx4之前给足够的时间让CLA任务4完成
     //
     while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX4) == false);
 
     //
-    // clear CLA task flags 1, 2, and 4
+    // 清除CLA任务标志1、2和4
     //
     HWREGH(PIECTRL_BASE + PIE_O_IFR11) &= ~(PIE_IFR11_INTX1 |
                                             PIE_IFR11_INTX2 |
@@ -571,7 +629,7 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
 //
 
 //
-// Function that performs the Complex control as part of the Fast Current Loop
+// 函数：执行快速电流环的复杂控制
 //
 #pragma CODE_ALIGN(FCL_runComplexCtrl_M1, 2)
 #pragma FUNCTION_OPTIONS(FCL_runComplexCtrl_M1, "--auto_inline")
@@ -585,28 +643,28 @@ void FCL_runComplexCtrl_M1(MOTOR_Vars_t *pMotor)
     SVGEN2_t            svgen2;
 
     //
-    //  MACRO to :-
-    //      1. read QEP position
-    //      2. get current feed back
-    //      3. do the Clarke
+    //  宏功能：
+    //      1. 读取QEP位置
+    //      2. 获取电流反馈
+    //      3. 执行Clarke变换
     //
     M1_FCL_POSITION_CURRENT_CLARKE_MACRO();
 
     //
-    //    PARK Transformation
-    //    Connect inputs of the CMPLX module and call the CMPLX controller
+    //    PARK变换
+    //    连接CMPLX模块输入并调用CMPLX控制器
     //
     fclVars[0].Q_cla.iqErr = fclVars[0].pi_iq.ref -
                   ((clarke1Beta * park1Cosine) - (clarke1Alpha * park1Sine));
     fclVars[0].Q_cla.idErr = pMotor->pi_id.ref -
                   ((clarke1Alpha * park1Cosine) + (clarke1Beta * park1Sine));
 
-    // SETGPIO18_HIGH; // only for debug
-    Cla1ForceTask3();               // Iq loop - complex control - CLA
-    // SETGPIO18_LOW;  //only for debug
+    // SETGPIO18_HIGH; // 仅用于调试
+    Cla1ForceTask3();               // Iq回路 - 复杂控制 - CLA
+    // SETGPIO18_LOW;  // 仅用于调试
 
     //
-    // Id loop - complex control - CPU
+    // Id回路 - 复杂控制 - CPU
     //  complexCtrl(pMotor);
     //
     pMotor->pi_id.out += pMotor->D_cpu.kDirect *
@@ -620,14 +678,14 @@ void FCL_runComplexCtrl_M1(MOTOR_Vars_t *pMotor)
     piids = pMotor->pi_id.out * park1Sine;
 
     //
-    //  Wait for CMPLX IQ calc in CLA to complete
+    //  等待CLA中的CMPLX IQ计算完成
     //
-    // SETGPIO18_HIGH;  // only for debug
+    // SETGPIO18_HIGH;  // 仅用于调试
     while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX3) == false);
-    // SETGPIO18_LOW;   // only for debug
+    // SETGPIO18_LOW;   // 仅用于调试
 
     //
-    //  Perform the inverse park and connect inputs of the SVGEN_DQ module
+    //  执行逆Park变换并连接SVGEN_DQ模块输入
     //
     svgen2.Ualpha = ( piidc - (fclVars[0].pi_iq.out * park1Sine)) *
             pMotor->FCL_params.carrierMid;
@@ -636,9 +694,9 @@ void FCL_runComplexCtrl_M1(MOTOR_Vars_t *pMotor)
             pMotor->FCL_params.cmidsqrt3;
 
     //
-    //  MACRO to :-
-    //      1. do SVGEN
-    //      2. do PWMupdates
+    //  宏功能：
+    //      1. 执行SVGEN（空间矢量生成）
+    //      2. 执行PWM更新
     //
     FCL_SVGEN_PWM_PDATE_MACRO();
 
@@ -648,8 +706,7 @@ void FCL_runComplexCtrl_M1(MOTOR_Vars_t *pMotor)
 }
 
 //
-// Wrap up function to be called by the user application at the completion of
-// Fast Current Loop in Complex Control Mode
+// 函数：用户应用程序在复杂控制模式下快速电流环完成时调用的包装函数
 //
 #pragma CODE_ALIGN(FCL_runComplexCtrlWrap_M1, 2)
 #pragma FUNCTION_OPTIONS(FCL_runComplexCtrlWrap_M1, "--auto_inline")
@@ -693,10 +750,10 @@ void FCL_runComplexCtrlWrap_M1(MOTOR_Vars_t *pMotor)
                                       (1.0F - fclVars[0].Q_cla.expVal);
 
     //
-    // To save CPU cycles and speed up calcn, carry over math is done within
-    //    this wrap function and 'carryOver' carries it to the next iteration
-    // Bemf calc is rolled in to the Q calcs as the speed and flux does not
-    //    change much between iterations - equation tweaked to fit here
+    // 为节省CPU周期并加快计算速度，进位数学运算在此包装函数内完成
+    //    'carryOver'将其传递到下一次迭代
+    // 反电动势计算被整合到Q计算中，因为速度和磁通在迭代之间变化不大
+    //    方程经过调整以适应此处
     //
     pMotor->D_cpu.carryOver = -(pMotor->D_cpu.kDirect *
             fclVars[0].Q_cla.idErr * pMotor->D_cpu.expVal);
@@ -709,8 +766,8 @@ void FCL_runComplexCtrlWrap_M1(MOTOR_Vars_t *pMotor)
     fclVars[0].speedWePrev = pMotor->speed.Speed;
 
     //
-    // to pass on the id and iq current feedback back to user,
-    // update them in the wrap function
+    // 为了将id和iq电流反馈传递给用户，
+    // 在包装函数中更新它们
     //
     pMotor->pi_id.fbk = pMotor->pi_id.ref - fclVars[0].Q_cla.idErr;
 
@@ -718,12 +775,12 @@ void FCL_runComplexCtrlWrap_M1(MOTOR_Vars_t *pMotor)
             fclVars[0].Q_cla.iqErr;
 
     //
-    //give enough time before clearing INTx4 for CLA TASK 4 completion
+    // 在清除INTx4之前给足够的时间让CLA任务4完成
     //
     while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX4) == false);
 
     //
-    // clear CLA task flags 1, 3 and 4
+    // 清除CLA任务标志1、3和4
     //
     HWREGH(PIECTRL_BASE + PIE_O_IFR11) &= ~(PIE_IFR11_INTX1 |
                                             PIE_IFR11_INTX3 |
@@ -732,30 +789,33 @@ void FCL_runComplexCtrlWrap_M1(MOTOR_Vars_t *pMotor)
 }
 
 //
-// Function that performs the PI Control as part of the Fast Current Loop
+// 函数：执行电机2的快速电流环PI控制
 //
 #pragma CODE_ALIGN(FCL_runPICtrl_M2, 2)
 #pragma FUNCTION_OPTIONS(FCL_runPICtrl_M2, "--auto_inline")
 #pragma FUNCTION_OPTIONS(FCL_runPICtrl_M2, "--opt_for_speed")
 
+/**
+ * @brief 执行电机2的快速电流环PI控制
+ * @details 实现电机2的电流环控制，包括位置读取、电流采样、坐标变换、PI控制和PWM生成
+ * @param pMotor 电机变量结构体指针，包含电机控制所需的所有参数和状态
+ */
 void FCL_runPICtrl_M2(MOTOR_Vars_t *pMotor)
 {
-    register float32_t  clarke1Alpha, clarke1Beta;
-    register float32_t  park1Sine, park1Cosine;
-    SVGEN2_t            svgen2;
+    register float32_t  clarke1Alpha, clarke1Beta;    // Clarke变换结果：α和β轴电流
+    register float32_t  park1Sine, park1Cosine;        // Park变换所需的正弦和余弦值
+    SVGEN2_t            svgen2;                       // SVPWM生成结构体
 
     //
-    //  MACRO to :-
-    //      1. read QEP position
-    //      2. get current feed back
-    //      3. do the Clarke
+    //  宏功能：
+    //      1. 读取QEP位置
+    //      2. 获取电流反馈
+    //      3. 执行Clarke变换
     //
     M2_FCL_POSITION_CURRENT_CLARKE_MACRO();
-
     //
-    //  PARK Transformation
-    //  Connect inputs of the PI module and
-    //  call the PI IQ controller macro in CLA
+    //  Park变换
+    //  连接PI模块输入并调用CLA中的PI IQ控制器宏
     //
     fclVars[1].pi_iq.err = fclVars[1].pi_iq.ref -
                 ((clarke1Beta * park1Cosine) - (clarke1Alpha * park1Sine));
@@ -764,7 +824,7 @@ void FCL_runPICtrl_M2(MOTOR_Vars_t *pMotor)
                 ((clarke1Alpha * park1Cosine) + (clarke1Beta * park1Sine));
 
     //
-    //    Connect inputs of the PI module and call the PI ID controller macro
+    //  连接PI模块输入并调用PI ID控制器宏
     //  CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_6);
     //
     Cla1ForceTask6();
@@ -777,14 +837,14 @@ void FCL_runPICtrl_M2(MOTOR_Vars_t *pMotor)
     piids = pMotor->pi_id.out * park1Sine;
 
     //
-    //  Wait for PI IQ calc in CLA (CLA1_6) to complete
+    //  等待CLA中的PI IQ计算完成 (CLA1_6)
     //
-    // SETGPIO18_HIGH; // only for debug
+    // SETGPIO18_HIGH; // 仅用于调试
     while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX6) == false);
-    // SETGPIO18_LOW;  // only for debug
+    // SETGPIO18_LOW;  // 仅用于调试
 
     //
-    //  Perform the inverse park and connect inputs of the SVGEN_DQ module
+    //  执行逆Park变换并连接SVGEN_DQ模块输入
     //
     svgen2.Ualpha = ( piidc - (fclVars[1].pi_iq.out * park1Sine)) *
             pMotor->FCL_params.carrierMid;
@@ -793,9 +853,9 @@ void FCL_runPICtrl_M2(MOTOR_Vars_t *pMotor)
             pMotor->FCL_params.cmidsqrt3;
 
     //
-    //  MACRO to :-
-    //      1. do SVGEN
-    //      2. do PWMupdates
+    //  宏功能：
+    //      1. 执行SVGEN（空间矢量生成）
+    //      2. 执行PWM更新
     //
     FCL_SVGEN_PWM_PDATE_MACRO();
 
@@ -810,24 +870,26 @@ void FCL_runPICtrl_M2(MOTOR_Vars_t *pMotor)
 // task 5, 6, 7, and 8 for motor_2
 //
 
-//
-//  Wrap up function to be called by the user application at the completion of
-// Fast Current Loop in PI Control Mode
-//
+/**
+ * @brief 电机2 PI控制模式下的快速电流环完成包装函数
+ * @details 用户应用程序在PI控制模式下快速电流环完成时调用的包装函数，
+ *          实现参数更新、进位计算和反电动势计算等功能
+ * @param pMotor 电机变量结构体指针，包含电机控制所需的所有参数和状态
+ */
 #pragma CODE_ALIGN(FCL_runPICtrlWrap_M2, 2)
 #pragma FUNCTION_OPTIONS(FCL_runPICtrlWrap_M2, "--auto_inline")
 #pragma FUNCTION_OPTIONS(FCL_runPICtrlWrap_M2, "--opt_for_speed")
 
 void FCL_runPICtrlWrap_M2(MOTOR_Vars_t *pMotor)
 {
-    float32_t Vbase = pMotor->FCL_params.Vdcbus * 1.15 / 2;
-    float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;
+    float32_t Vbase = pMotor->FCL_params.Vdcbus * 1.15 / 2;    // 基极电压计算
+    float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;      // 基极阻抗倒数
 
     //
-    // To save CPU cycles and speed up calcn, carry over math is done within
-    //   this wrap function and .CarryOver carries it to the next iteration
-    // Bemf calc is rolled in to the Q calcs as the speed and flux does not
-    //   change much between iterations - equation tweaked to fit here
+    // 为节省CPU周期并加快计算速度，进位数学运算在此包装函数内完成
+    //   .CarryOver将其传递到下一次迭代
+    // 反电动势计算被整合到Q计算中，因为速度和磁通在迭代之间变化不大
+    //   方程经过调整以适应此处
     //
 
     //
@@ -836,7 +898,7 @@ void FCL_runPICtrlWrap_M2(MOTOR_Vars_t *pMotor)
     Cla1ForceTask8();
 
     //
-    // Update PI ID parameters
+    // 更新PI ID参数
     //
     pMotor->pi_id.Kp = pMotor->FCL_params.Ld * invZbase *
             pMotor->FCL_params.wccD;
@@ -849,7 +911,7 @@ void FCL_runPICtrlWrap_M2(MOTOR_Vars_t *pMotor)
     pMotor->pi_id.carryOver = (pMotor->pi_id.err * pMotor->pi_id.KerrOld);
 
     //
-    // Update PI IQ parameters
+    // 更新PI IQ参数
     //
     fclVars[1].pi_iq.Kp = pMotor->FCL_params.Lq * invZbase *
             pMotor->FCL_params.wccQ;
@@ -870,8 +932,8 @@ void FCL_runPICtrlWrap_M2(MOTOR_Vars_t *pMotor)
     fclVars[1].speedWePrev = pMotor->speed.Speed;
 
     //
-    // to pass on the id and iq current feedback back to user,
-    // update them in the wrap function
+    // 为了将id和iq电流反馈传递给用户，
+    // 在包装函数中更新它们
     //
     pMotor->pi_id.fbk = pMotor->pi_id.ref - pMotor->pi_id.err;
 
@@ -879,12 +941,12 @@ void FCL_runPICtrlWrap_M2(MOTOR_Vars_t *pMotor)
             fclVars[1].pi_iq.err;
 
     //
-    // give enough time before clearing INTx8 for CLA task 8 completion
+    // 在清除INTx8之前给足够的时间让CLA任务8完成
     //
     while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX8) == false);
 
     //
-    // clear CLA task flags 5, 6, and 8
+    // 清除CLA任务标志5、6和8
     //
     HWREGH(PIECTRL_BASE + PIE_O_IFR11) &= ~(PIE_IFR11_INTX5 |
                                             PIE_IFR11_INTX6 |
@@ -893,31 +955,33 @@ void FCL_runPICtrlWrap_M2(MOTOR_Vars_t *pMotor)
 }
 
 
-//
-// Function that performs the Complex control as part of the Fast Current Loop
-//
+/**
+ * @brief 执行电机2的快速电流环复杂控制
+ * @details 实现电机2的复杂控制算法，包括位置读取、电流采样、坐标变换、复杂控制器和PWM生成
+ * @param pMotor 电机变量结构体指针，包含电机控制所需的所有参数和状态
+ */
 #pragma CODE_ALIGN(FCL_runComplexCtrl_M2, 2)
 #pragma FUNCTION_OPTIONS(FCL_runComplexCtrl_M2, "--auto_inline")
 #pragma FUNCTION_OPTIONS(FCL_runComplexCtrl_M2, "--opt_for_speed")
 
 void FCL_runComplexCtrl_M2(MOTOR_Vars_t *pMotor)
 {
-    register float32_t  clarke1Alpha, clarke1Beta;
-    register float32_t  park1Sine, park1Cosine;
-    register float32_t  piidc, piids;
-    SVGEN2_t            svgen2;
+    register float32_t  clarke1Alpha, clarke1Beta;    // Clarke变换结果：α和β轴电流
+    register float32_t  park1Sine, park1Cosine;        // Park变换所需的正弦和余弦值
+    register float32_t  piidc, piids;                  // 逆Park变换中间变量
+    SVGEN2_t            svgen2;                       // SVPWM生成结构体
 
     //
-    //  MACRO to :-
-    //      1. read QEP position
-    //      2. get current feed back
-    //      3. do the Clarke
+    //  宏功能：
+    //      1. 读取QEP位置
+    //      2. 获取电流反馈
+    //      3. 执行Clarke变换
     //
     M2_FCL_POSITION_CURRENT_CLARKE_MACRO();
 
     //
-    //    PARK Transformation
-    //    Connect inputs of the CMPLX module and call the CMPLX controller
+    //    PARK变换
+    //    连接CMPLX模块输入并调用CMPLX控制器
     //
     fclVars[1].Q_cla.iqErr = fclVars[1].pi_iq.ref -
                   ((clarke1Beta * park1Cosine) - (clarke1Alpha * park1Sine));
@@ -925,14 +989,14 @@ void FCL_runComplexCtrl_M2(MOTOR_Vars_t *pMotor)
                   ((clarke1Alpha * park1Cosine) + (clarke1Beta * park1Sine));
 
     //
-    // Connect inputs of the CC module and call the CC controller macro
+    // 连接CC模块输入并调用CC控制器宏
     //
-    // SETGPIO18_HIGH;  // only for debug
-    Cla1ForceTask7();               // Iq loop - complex control - CLA task 7
-    // SETGPIO18_LOW;   // only for debug
+    // SETGPIO18_HIGH;  // 仅用于调试
+    Cla1ForceTask7();               // Iq回路 - 复杂控制 - CLA任务7
+    // SETGPIO18_LOW;   // 仅用于调试
 
     //
-    // Id loop - complex control - CPU
+    // Id回路 - 复杂控制 - CPU
     // complexCtrl(pMotor);
     //
     pMotor->pi_id.out += pMotor->D_cpu.kDirect *
@@ -946,14 +1010,14 @@ void FCL_runComplexCtrl_M2(MOTOR_Vars_t *pMotor)
     piids = pMotor->pi_id.out * park1Sine;
 
     //
-    //  Wait for CMPLX IQ calc in CLA task 7 to complete
+    //  等待CLA任务7中的CMPLX IQ计算完成
     //
-    // SETGPIO18_HIGH;      // only for debug
+    // SETGPIO18_HIGH;      // 仅用于调试
     while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX7) == false);
-    // SETGPIO18_LOW;       // only for debug
+    // SETGPIO18_LOW;       // 仅用于调试
 
     //
-    //  Perform the inverse park and connect inputs of the SVGEN_DQ module
+    //  执行逆Park变换并连接SVGEN_DQ模块输入
     //
     svgen2.Ualpha = ( piidc - (fclVars[1].pi_iq.out * park1Sine)) *
             pMotor->FCL_params.carrierMid;
@@ -962,9 +1026,9 @@ void FCL_runComplexCtrl_M2(MOTOR_Vars_t *pMotor)
             pMotor->FCL_params.cmidsqrt3;
 
     //
-    //  MACRO to :-
-    //      1. do SVGEN
-    //      2. do PWMupdates
+    //  宏功能：
+    //      1. 执行SVGEN（空间矢量生成）
+    //      2. 执行PWM更新
     //
     FCL_SVGEN_PWM_PDATE_MACRO();
 
@@ -973,26 +1037,28 @@ void FCL_runComplexCtrl_M2(MOTOR_Vars_t *pMotor)
     return;
 }
 
-//
-// Wrap up function to be called by the user application at the completion of
-// Fast Current Loop in Complex Control Mode
-//
+/**
+ * @brief 电机2复杂控制模式下的快速电流环完成包装函数
+ * @details 用户应用程序在复杂控制模式下快速电流环完成时调用的包装函数，
+ *          实现参数更新、进位计算、反电动势计算和CLA任务管理等功能
+ * @param pMotor 电机变量结构体指针，包含电机控制所需的所有参数和状态
+ */
 #pragma CODE_ALIGN(FCL_runComplexCtrlWrap_M2, 2)
 #pragma FUNCTION_OPTIONS(FCL_runComplexCtrlWrap_M2, "--auto_inline")
 #pragma FUNCTION_OPTIONS(FCL_runComplexCtrlWrap_M2, "--opt_for_speed")
 
 void FCL_runComplexCtrlWrap_M2(MOTOR_Vars_t *pMotor)
 {
-    float32_t Vbase    = pMotor->FCL_params.Vdcbus * 1.15 / 2;
-    float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;
+    float32_t Vbase    = pMotor->FCL_params.Vdcbus * 1.15 / 2;    // 基极电压计算
+    float32_t invZbase = pMotor->FCL_params.Ibase / Vbase;        // 基极阻抗倒数
 
-    float32_t WTs      = pMotor->speed.Speed *
+    float32_t WTs      = pMotor->speed.Speed *                    // 角度增量计算
             pMotor->FCL_params.Wbase * pMotor->FCL_params.tSamp;
 
     //
     //  CLA_forceTasks(CLA1_BASE, CLA_TASKFLAG_8);
     //
-    Cla1ForceTask8();           // CLA task8
+    Cla1ForceTask8();           // CLA任务8
 
     pMotor->D_cpu.cosWTs  = __cos(WTs);
     fclVars[1].Q_cla.cosWTs = pMotor->D_cpu.cosWTs;
@@ -1019,10 +1085,10 @@ void FCL_runComplexCtrlWrap_M2(MOTOR_Vars_t *pMotor)
                                        (1.0F - fclVars[1].Q_cla.expVal);
 
     //
-    // To save CPU cycles and speed up calcn, carry over math is done within
-    //    this wrap function and 'carryOver' carries it to the next iteration
-    // Bemf calc is rolled in to the Q calcs as the speed and flux does not
-    //    change much between iterations - equation tweaked to fit here
+    // 为节省CPU周期并加快计算速度，进位数学运算在此包装函数内完成
+    //    'carryOver'将其传递到下一次迭代
+    // 反电动势计算被整合到Q计算中，因为速度和磁通在迭代之间变化不大
+    //    方程经过调整以适应此处
     //
     pMotor->D_cpu.carryOver = -(pMotor->D_cpu.kDirect *
             fclVars[1].Q_cla.idErr * pMotor->D_cpu.expVal);
@@ -1035,8 +1101,8 @@ void FCL_runComplexCtrlWrap_M2(MOTOR_Vars_t *pMotor)
     fclVars[1].speedWePrev = pMotor->speed.Speed;
 
     //
-    // to pass on the id and iq current feedback back to user,
-    // update them in the wrap function
+    // 为了将id和iq电流反馈传递给用户，
+    // 在包装函数中更新它们
     //
     pMotor->pi_id.fbk = pMotor->pi_id.ref - fclVars[1].Q_cla.idErr;
 
@@ -1044,12 +1110,12 @@ void FCL_runComplexCtrlWrap_M2(MOTOR_Vars_t *pMotor)
             fclVars[1].Q_cla.iqErr;
 
     //
-    // give enough time before clearing INTx8 for CLA TASK 8 completion
+    // 在清除INTx8之前给足够的时间让CLA任务8完成
     //
     while((HWREGH(PIECTRL_BASE + PIE_O_IFR11) & PIE_IFR11_INTX8) == false);
 
     //
-    // clear CLA task flags 5, 7 and 8
+    // 清除CLA任务标志5、7和8
     //
     HWREGH(PIECTRL_BASE + PIE_O_IFR11) &= ~(PIE_IFR11_INTX5 |
                                             PIE_IFR11_INTX7 |
