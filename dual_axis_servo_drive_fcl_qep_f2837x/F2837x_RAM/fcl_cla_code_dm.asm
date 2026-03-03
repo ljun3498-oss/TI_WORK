@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320x280xx Control Law Accelerator G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Tue Feb  3 16:04:34 2026                 *
+;* Date/Time created: Tue Mar  3 20:15:51 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 
@@ -19,8 +19,8 @@ $C$DW$1	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$1, DW_AT_decl_line(0x8b)
 	.dwattr $C$DW$1, DW_AT_decl_column(0x13)
 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\optcla.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{9D1027F2-022D-4510-B7B4-29D50073070E} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{2F2E604D-53D0-4150-9588-0D66072896C4} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\aciacla.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{BDB3C133-E81B-41A7-BC82-5D51C6990045} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\optcla.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{B07B1AE0-03D4-4F37-95FF-5F3A8100C6DA} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{5CDD6C27-C3C4-42DA-99C8-AFEB8E651402} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\aciacla.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{164A0A2F-F900-4F2E-837D-AAD3A2159B56} 
 	.sect	"Cla1Prog:Cla1Task8"
 	.align	 2
 	.clink
@@ -33,11 +33,11 @@ $C$DW$2	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$2, DW_AT_linkage_name("Cla1Task8")
 	.dwattr $C$DW$2, DW_AT_external
 	.dwattr $C$DW$2, DW_AT_decl_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$2, DW_AT_decl_line(0x1cc)
+	.dwattr $C$DW$2, DW_AT_decl_line(0x226)
 	.dwattr $C$DW$2, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$2, DW_AT_TI_interrupt
 	.dwattr $C$DW$2, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 461,column 1,is_stmt,address Cla1Task8,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 551,column 1,is_stmt,address Cla1Task8,isa 0
 
 	.dwfde $C$DW$CIE, Cla1Task8
 
@@ -52,109 +52,109 @@ $C$DW$2	.dwtag  DW_TAG_subprogram
 
 Cla1Task8:
 ;* MAR0  assigned to $O$U10
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 466,column 5,is_stmt,isa 0
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |466| 
-        MMOV32    MR1,@fclVars+82       ; [CPU_FPU] |466| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |466| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 556,column 5,is_stmt,isa 0
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |556| 
+        MMOV32    MR1,@fclVars+82       ; [CPU_FPU] |556| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |556| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L3,EQ              ; [CPU_FPU] |466| 
+        MBCNDD    $C$L3,EQ              ; [CPU_FPU] |556| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |466| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 471,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |471| 
+        ; branchcc occurs ; [] |556| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 562,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |562| 
         MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |471| 
-        MMOVXI    MR1,#1024             ; [CPU_FPU] |471| 
-        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |471| 
-        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |471| 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |471| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |471| 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L1,EQ              ; [CPU_FPU] |471| 
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |562| 
+        MMOVXI    MR1,#1024             ; [CPU_FPU] |562| 
+        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |562| 
+        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |562| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |562| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |562| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |471| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 473,column 13,is_stmt,isa 0
-        MMOVXI    MR0,#240              ; [CPU_FPU] |473| 
-        MMOV16    @fclVars+152,MR0      ; [CPU_FPU] |473| 
+        MBCNDD    $C$L1,EQ              ; [CPU_FPU] |562| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 474,column 13,is_stmt,isa 0
-        MMOV32    MR0,*MAR0+[#8]        ; [CPU_FPU] |474| 
-        MMOV32    @fclVars+142,MR0      ; [CPU_FPU] |474| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 479,column 13,is_stmt,isa 0
-        MMOVXI    MR0,#1024             ; [CPU_FPU] |479| 
-        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |479| 
+        ; branchcc occurs ; [] |562| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 564,column 13,is_stmt,isa 0
+        MMOVXI    MR0,#240              ; [CPU_FPU] |564| 
+        MMOV16    @fclVars+152,MR0      ; [CPU_FPU] |564| 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 565,column 13,is_stmt,isa 0
+        MMOV32    MR0,*MAR0+[#8]        ; [CPU_FPU] |565| 
+        MMOV32    @fclVars+142,MR0      ; [CPU_FPU] |565| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 571,column 13,is_stmt,isa 0
+        MMOVXI    MR0,#1024             ; [CPU_FPU] |571| 
+        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |571| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
 $C$L1:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 486,column 9,is_stmt,isa 0
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |486| 
-        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |486| 
-        MMOVXI    MR1,#2048             ; [CPU_FPU] |486| 
-        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |486| 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |486| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |486| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 581,column 9,is_stmt,isa 0
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |581| 
+        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |581| 
+        MMOVXI    MR1,#2048             ; [CPU_FPU] |581| 
+        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |581| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |581| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |581| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L3,EQ              ; [CPU_FPU] |486| 
+        MBCNDD    $C$L3,EQ              ; [CPU_FPU] |581| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |486| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 488,column 13,is_stmt,isa 0
-        MMOVXI    MR0,#2048             ; [CPU_FPU] |488| 
-        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |488| 
+        ; branchcc occurs ; [] |581| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 583,column 13,is_stmt,isa 0
+        MMOVXI    MR0,#2048             ; [CPU_FPU] |583| 
+        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |583| 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 493,column 13,is_stmt,isa 0
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |493| 
-        MMOVXI    MR1,#12               ; [CPU_FPU] |493| 
-        MMOVZ16   MR0,*MAR0+[#28]       ; [CPU_FPU] |493| 
-        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |493| 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |493| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |493| 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L2,NEQ             ; [CPU_FPU] |493| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 589,column 13,is_stmt,isa 0
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |589| 
+        MMOVXI    MR1,#12               ; [CPU_FPU] |589| 
+        MMOVZ16   MR0,*MAR0+[#28]       ; [CPU_FPU] |589| 
+        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |589| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |589| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |589| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |493| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 500,column 18,is_stmt,isa 0
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |500| 
-        MMOVZ16   MR1,*MAR0+[#32]       ; [CPU_FPU] |500| 
-        MMOVXI    MR0,#65535            ; [CPU_FPU] |500| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |500| 
+        MBCNDD    $C$L2,NEQ             ; [CPU_FPU] |589| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L3,EQ              ; [CPU_FPU] |500| 
+        ; branchcc occurs ; [] |589| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 597,column 18,is_stmt,isa 0
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |597| 
+        MMOVZ16   MR1,*MAR0+[#32]       ; [CPU_FPU] |597| 
+        MMOVXI    MR0,#65535            ; [CPU_FPU] |597| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |597| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |500| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 505,column 17,is_stmt,isa 0
-        MMOVZ16   MR0,*MAR0+[#32]       ; [CPU_FPU] |505| 
-        MBCNDD    $C$L3,UNC             ; [CPU_FPU] |505| 
-        MMOV16    @fclVars+141,MR0      ; [CPU_FPU] |505| 
+        MBCNDD    $C$L3,EQ              ; [CPU_FPU] |597| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branch occurs ; [] |505| 
+        MNOP      ; [CPU_FPU] 
+        ; branchcc occurs ; [] |597| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 603,column 17,is_stmt,isa 0
+        MMOVZ16   MR0,*MAR0+[#32]       ; [CPU_FPU] |603| 
+        MBCNDD    $C$L3,UNC             ; [CPU_FPU] |603| 
+        MMOV16    @fclVars+141,MR0      ; [CPU_FPU] |603| 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+        ; branch occurs ; [] |603| 
 $C$L2:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 498,column 17,is_stmt,isa 0
-        MMOVXI    MR0,#12               ; [CPU_FPU] |498| 
-        MMOV16    *MAR0+[#28],MR0       ; [CPU_FPU] |498| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 595,column 17,is_stmt,isa 0
+        MMOVXI    MR0,#12               ; [CPU_FPU] |595| 
+        MMOV16    *MAR0+[#28],MR0       ; [CPU_FPU] |595| 
 $C$L3:    
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
@@ -166,7 +166,7 @@ $C$DW$3	.dwtag  DW_TAG_TI_branch
         MSTOP     ; [CPU_FPU] 
         ; ireturn occurs ; [] 
 	.dwattr $C$DW$2, DW_AT_TI_end_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$2, DW_AT_TI_end_line(0x205)
+	.dwattr $C$DW$2, DW_AT_TI_end_line(0x267)
 	.dwattr $C$DW$2, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$2
@@ -183,11 +183,11 @@ $C$DW$4	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$4, DW_AT_linkage_name("Cla1Task7")
 	.dwattr $C$DW$4, DW_AT_external
 	.dwattr $C$DW$4, DW_AT_decl_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$4, DW_AT_decl_line(0x1b3)
+	.dwattr $C$DW$4, DW_AT_decl_line(0x207)
 	.dwattr $C$DW$4, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$4, DW_AT_TI_interrupt
 	.dwattr $C$DW$4, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 436,column 1,is_stmt,address Cla1Task7,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 520,column 1,is_stmt,address Cla1Task7,isa 0
 
 	.dwfde $C$DW$CIE, Cla1Task7
 
@@ -201,32 +201,32 @@ $C$DW$4	.dwtag  DW_TAG_subprogram
 ;***************************************************************
 
 Cla1Task7:
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 441,column 5,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+94       ; [CPU_FPU] |441| 
-        MMOV32    MR1,@fclVars+84       ; [CPU_FPU] |441| 
-        MMOV32    MR2,@fclVars+86       ; [CPU_FPU] |441| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 529,column 5,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+94       ; [CPU_FPU] |529| 
+        MMOV32    MR1,@fclVars+84       ; [CPU_FPU] |529| 
+        MMOV32    MR2,@fclVars+86       ; [CPU_FPU] |529| 
 
-        MMOV32    MR1,@fclVars+92       ; [CPU_FPU] |441| 
-||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |441| 
+        MMOV32    MR1,@fclVars+92       ; [CPU_FPU] |529| 
+||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |529| 
 
-        MMPYF32   MR1,MR2,MR1           ; [CPU_FPU] |441| 
+        MMPYF32   MR1,MR2,MR1           ; [CPU_FPU] |529| 
 
-        MMOV32    MR0,@fclVars+90       ; [CPU_FPU] |441| 
-||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |441| 
+        MMOV32    MR0,@fclVars+90       ; [CPU_FPU] |529| 
+||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |529| 
 
-        MMOV32    MR1,@fclVars+96       ; [CPU_FPU] |441| 
-||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |441| 
+        MMOV32    MR1,@fclVars+96       ; [CPU_FPU] |529| 
+||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |529| 
 
-        MMOV32    MR0,@fclVars+120      ; [CPU_FPU] |441| 
-||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |441| 
+        MMOV32    MR0,@fclVars+120      ; [CPU_FPU] |529| 
+||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |529| 
 
-        MMOV32    MR0,@fclVars+132      ; [CPU_FPU] |441| 
-||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |441| 
+        MMOV32    MR0,@fclVars+132      ; [CPU_FPU] |529| 
+||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |529| 
 
-        MMINF32   MR0,MR1               ; [CPU_FPU] |441| 
-        MMOV32    MR1,@fclVars+134      ; [CPU_FPU] |441| 
-        MMAXF32   MR1,MR0               ; [CPU_FPU] |441| 
-        MMOV32    @fclVars+120,MR1      ; [CPU_FPU] |441| 
+        MMINF32   MR0,MR1               ; [CPU_FPU] |529| 
+        MMOV32    MR1,@fclVars+134      ; [CPU_FPU] |529| 
+        MMAXF32   MR1,MR0               ; [CPU_FPU] |529| 
+        MMOV32    @fclVars+120,MR1      ; [CPU_FPU] |529| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
@@ -237,7 +237,7 @@ $C$DW$5	.dwtag  DW_TAG_TI_branch
         MSTOP     ; [CPU_FPU] 
         ; ireturn occurs ; [] 
 	.dwattr $C$DW$4, DW_AT_TI_end_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$4, DW_AT_TI_end_line(0x1c7)
+	.dwattr $C$DW$4, DW_AT_TI_end_line(0x220)
 	.dwattr $C$DW$4, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$4
@@ -254,11 +254,11 @@ $C$DW$6	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$6, DW_AT_linkage_name("Cla1Task6")
 	.dwattr $C$DW$6, DW_AT_external
 	.dwattr $C$DW$6, DW_AT_decl_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$6, DW_AT_decl_line(0x19e)
+	.dwattr $C$DW$6, DW_AT_decl_line(0x1f0)
 	.dwattr $C$DW$6, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$6, DW_AT_TI_interrupt
 	.dwattr $C$DW$6, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 415,column 1,is_stmt,address Cla1Task6,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 497,column 1,is_stmt,address Cla1Task6,isa 0
 
 	.dwfde $C$DW$CIE, Cla1Task6
 
@@ -272,23 +272,23 @@ $C$DW$6	.dwtag  DW_TAG_subprogram
 ;***************************************************************
 
 Cla1Task6:
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 420,column 5,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+118      ; [CPU_FPU] |420| 
-        MMOV32    MR1,@fclVars+128      ; [CPU_FPU] |420| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 503,column 5,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+118      ; [CPU_FPU] |503| 
+        MMOV32    MR1,@fclVars+128      ; [CPU_FPU] |503| 
 
-        MMOV32    MR1,@fclVars+122      ; [CPU_FPU] |420| 
-||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |420| 
+        MMOV32    MR1,@fclVars+122      ; [CPU_FPU] |503| 
+||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |503| 
 
-        MMOV32    MR0,@fclVars+120      ; [CPU_FPU] |420| 
-||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |420| 
+        MMOV32    MR0,@fclVars+120      ; [CPU_FPU] |503| 
+||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |503| 
 
-        MMOV32    MR0,@fclVars+132      ; [CPU_FPU] |420| 
-||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |420| 
+        MMOV32    MR0,@fclVars+132      ; [CPU_FPU] |503| 
+||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |503| 
 
-        MMINF32   MR0,MR1               ; [CPU_FPU] |420| 
-        MMOV32    MR1,@fclVars+134      ; [CPU_FPU] |420| 
-        MMAXF32   MR1,MR0               ; [CPU_FPU] |420| 
-        MMOV32    @fclVars+120,MR1      ; [CPU_FPU] |420| 
+        MMINF32   MR0,MR1               ; [CPU_FPU] |503| 
+        MMOV32    MR1,@fclVars+134      ; [CPU_FPU] |503| 
+        MMAXF32   MR1,MR0               ; [CPU_FPU] |503| 
+        MMOV32    @fclVars+120,MR1      ; [CPU_FPU] |503| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
@@ -299,7 +299,7 @@ $C$DW$7	.dwtag  DW_TAG_TI_branch
         MSTOP     ; [CPU_FPU] 
         ; ireturn occurs ; [] 
 	.dwattr $C$DW$6, DW_AT_TI_end_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$6, DW_AT_TI_end_line(0x1ad)
+	.dwattr $C$DW$6, DW_AT_TI_end_line(0x200)
 	.dwattr $C$DW$6, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$6
@@ -316,11 +316,11 @@ $C$DW$8	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$8, DW_AT_linkage_name("Cla1Task5")
 	.dwattr $C$DW$8, DW_AT_external
 	.dwattr $C$DW$8, DW_AT_decl_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$8, DW_AT_decl_line(0x128)
+	.dwattr $C$DW$8, DW_AT_decl_line(0x15f)
 	.dwattr $C$DW$8, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$8, DW_AT_TI_interrupt
 	.dwattr $C$DW$8, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 297,column 1,is_stmt,address Cla1Task5,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 352,column 1,is_stmt,address Cla1Task5,isa 0
 
 	.dwfde $C$DW$CIE, Cla1Task5
 
@@ -341,146 +341,146 @@ Cla1Task5:
 ;* MR0   assigned to $O$C7
 ;* MR0   assigned to $O$C8
 ;* MAR0  assigned to $O$U15
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 304,column 5,is_stmt,isa 0
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |304| 
-        MMOV32    MR0,@fclVars+82       ; [CPU_FPU] |304| 
-        MMOVXI    MR1,#2                ; [CPU_FPU] |304| 
-        MCMP32    MR1,MR0               ; [CPU_FPU] |304| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 359,column 5,is_stmt,isa 0
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |359| 
+        MMOV32    MR0,@fclVars+82       ; [CPU_FPU] |359| 
+        MMOVXI    MR1,#2                ; [CPU_FPU] |359| 
+        MCMP32    MR1,MR0               ; [CPU_FPU] |359| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L6,EQ              ; [CPU_FPU] |304| 
+        MBCNDD    $C$L6,EQ              ; [CPU_FPU] |359| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |304| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 322,column 10,is_stmt,isa 0
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |322| 
-        MMOVXI    MR1,#1                ; [CPU_FPU] |322| 
-        MCMP32    MR1,MR0               ; [CPU_FPU] |322| 
+        ; branchcc occurs ; [] |359| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 384,column 10,is_stmt,isa 0
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |384| 
+        MMOVXI    MR1,#1                ; [CPU_FPU] |384| 
+        MCMP32    MR1,MR0               ; [CPU_FPU] |384| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L5,NEQ             ; [CPU_FPU] |322| 
+        MBCNDD    $C$L5,NEQ             ; [CPU_FPU] |384| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |322| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 333,column 9,is_stmt,isa 0
-        MEALLOW   ; [CPU_FPU] |333| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 338,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |338| 
+        ; branchcc occurs ; [] |384| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 402,column 9,is_stmt,isa 0
+        MEALLOW   ; [CPU_FPU] |402| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 408,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |408| 
         MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |338| 
-        MMOVXI    MR1,#1024             ; [CPU_FPU] |338| 
-        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |338| 
-        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |338| 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |338| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |338| 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L4,EQ              ; [CPU_FPU] |338| 
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |408| 
+        MMOVXI    MR1,#1024             ; [CPU_FPU] |408| 
+        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |408| 
+        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |408| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |408| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |408| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |338| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 345,column 13,is_stmt,isa 0
-        MMOV32    MR0,*MAR0+[#8]        ; [CPU_FPU] |345| 
-        MMOV32    *MAR0+[#2],MR0        ; [CPU_FPU] |345| 
+        MBCNDD    $C$L4,EQ              ; [CPU_FPU] |408| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 351,column 13,is_stmt,isa 0
-        MMOVXI    MR1,#512              ; [CPU_FPU] |351| 
-        MMOVZ16   MR0,*MAR0+[#21]       ; [CPU_FPU] |351| 
-        MOR32     MR0,MR1,MR0           ; [CPU_FPU] |351| 
-        MMOV16    *MAR0+[#21],MR0       ; [CPU_FPU] |351| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 356,column 13,is_stmt,isa 0
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |356| 
-        MMOVXI    MR0,#2                ; [CPU_FPU] |356| 
-        MMOV32    @fclVars+82,MR0       ; [CPU_FPU] |356| 
+        MNOP      ; [CPU_FPU] 
+        ; branchcc occurs ; [] |408| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 416,column 13,is_stmt,isa 0
+        MMOV32    MR0,*MAR0+[#8]        ; [CPU_FPU] |416| 
+        MMOV32    *MAR0+[#2],MR0        ; [CPU_FPU] |416| 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 423,column 13,is_stmt,isa 0
+        MMOVXI    MR1,#512              ; [CPU_FPU] |423| 
+        MMOVZ16   MR0,*MAR0+[#21]       ; [CPU_FPU] |423| 
+        MOR32     MR0,MR1,MR0           ; [CPU_FPU] |423| 
+        MMOV16    *MAR0+[#21],MR0       ; [CPU_FPU] |423| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 429,column 13,is_stmt,isa 0
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |429| 
+        MMOVXI    MR0,#2                ; [CPU_FPU] |429| 
+        MMOV32    @fclVars+82,MR0       ; [CPU_FPU] |429| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
 $C$L4:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 366,column 9,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+146      ; [CPU_FPU] |366| 
-        MUI32TOF32 MR1,*MAR0+[#12]      ; [CPU_FPU] |366| 
-        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |366| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 372,column 9,is_stmt,isa 0
-        MUI16TOF32 MR1,@fclVars+149     ; [CPU_FPU] |372| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 366,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 440,column 9,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+146      ; [CPU_FPU] |440| 
+        MUI32TOF32 MR1,*MAR0+[#12]      ; [CPU_FPU] |440| 
+        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |440| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 446,column 9,is_stmt,isa 0
+        MUI16TOF32 MR1,@fclVars+149     ; [CPU_FPU] |446| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 440,column 9,is_stmt,isa 0
 
-        MMPYF32   MR0,MR0,MR1           ; [CPU_FPU] |372| 
-||      MMOV32    @fclVars+138,MR0      ; [CPU_FPU] |366| 
+        MMPYF32   MR0,MR0,MR1           ; [CPU_FPU] |446| 
+||      MMOV32    @fclVars+138,MR0      ; [CPU_FPU] |440| 
 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 372,column 9,is_stmt,isa 0
-        MF32TOI32 MR1,MR0               ; [CPU_FPU] |372| 
-        MI32TOF32 MR1,MR1               ; [CPU_FPU] |372| 
-        MSUBF32   MR0,MR0,MR1           ; [CPU_FPU] |372| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 446,column 9,is_stmt,isa 0
+        MF32TOI32 MR1,MR0               ; [CPU_FPU] |446| 
+        MI32TOF32 MR1,MR1               ; [CPU_FPU] |446| 
+        MSUBF32   MR0,MR0,MR1           ; [CPU_FPU] |446| 
         MBCNDD    $C$L7,UNC             ; [CPU_FPU] 
-        MMOV32    @fclVars+136,MR0      ; [CPU_FPU] |372| 
+        MMOV32    @fclVars+136,MR0      ; [CPU_FPU] |446| 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 375,column 9,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+110      ; [CPU_FPU] |375| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 450,column 9,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+110      ; [CPU_FPU] |450| 
         ; branch occurs ; [] 
 $C$L5:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 385,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |385| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 464,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |464| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |385| 
-        MMOV32    *MAR0,MR0             ; [CPU_FPU] |385| 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 391,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |391| 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MMOVXI    MR0,#1024             ; [CPU_FPU] |391| 
-        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |391| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |464| 
+        MMOV32    *MAR0,MR0             ; [CPU_FPU] |464| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 397,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |397| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 471,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |471| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MMOVXI    MR1,#64767            ; [CPU_FPU] |397| 
-        MMOVZ16   MR0,*MAR0+[#21]       ; [CPU_FPU] |397| 
-        MAND32    MR0,MR1,MR0           ; [CPU_FPU] |397| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 399,column 9,is_stmt,isa 0
-        MBCNDD    $C$L7,UNC             ; [CPU_FPU] |399| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 397,column 9,is_stmt,isa 0
-        MMOV16    *MAR0+[#21],MR0       ; [CPU_FPU] |397| 
+        MMOVXI    MR0,#1024             ; [CPU_FPU] |471| 
+        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |471| 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 399,column 9,is_stmt,isa 0
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |399| 
-        ; branch occurs ; [] |399| 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 478,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |478| 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+        MMOVXI    MR1,#64767            ; [CPU_FPU] |478| 
+        MMOVZ16   MR0,*MAR0+[#21]       ; [CPU_FPU] |478| 
+        MAND32    MR0,MR1,MR0           ; [CPU_FPU] |478| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 480,column 9,is_stmt,isa 0
+        MBCNDD    $C$L7,UNC             ; [CPU_FPU] |480| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 478,column 9,is_stmt,isa 0
+        MMOV16    *MAR0+[#21],MR0       ; [CPU_FPU] |478| 
+        MNOP      ; [CPU_FPU] 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 480,column 9,is_stmt,isa 0
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |480| 
+        ; branch occurs ; [] |480| 
 $C$L6:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 311,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |311| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 370,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+154     ; [CPU_FPU] |370| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MMOV32    MR0,@fclVars+146      ; [CPU_FPU] |311| 
-        MUI32TOF32 MR1,*MAR0+[#12]      ; [CPU_FPU] |311| 
-        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |311| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 317,column 9,is_stmt,isa 0
-        MUI16TOF32 MR1,@fclVars+149     ; [CPU_FPU] |317| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 311,column 9,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+146      ; [CPU_FPU] |370| 
+        MUI32TOF32 MR1,*MAR0+[#12]      ; [CPU_FPU] |370| 
+        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |370| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 378,column 9,is_stmt,isa 0
+        MUI16TOF32 MR1,@fclVars+149     ; [CPU_FPU] |378| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 370,column 9,is_stmt,isa 0
 
-        MMPYF32   MR0,MR0,MR1           ; [CPU_FPU] |317| 
-||      MMOV32    @fclVars+138,MR0      ; [CPU_FPU] |311| 
+        MMPYF32   MR0,MR0,MR1           ; [CPU_FPU] |378| 
+||      MMOV32    @fclVars+138,MR0      ; [CPU_FPU] |370| 
 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 317,column 9,is_stmt,isa 0
-        MF32TOI32 MR1,MR0               ; [CPU_FPU] |317| 
-        MI32TOF32 MR1,MR1               ; [CPU_FPU] |317| 
-        MSUBF32   MR0,MR0,MR1           ; [CPU_FPU] |317| 
-        MMOV32    @fclVars+136,MR0      ; [CPU_FPU] |317| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 378,column 9,is_stmt,isa 0
+        MF32TOI32 MR1,MR0               ; [CPU_FPU] |378| 
+        MI32TOF32 MR1,MR1               ; [CPU_FPU] |378| 
+        MSUBF32   MR0,MR0,MR1           ; [CPU_FPU] |378| 
+        MMOV32    @fclVars+136,MR0      ; [CPU_FPU] |378| 
 $C$L7:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 320,column 9,is_stmt,isa 0
-        MMOV32    @fclVars+100,MR0      ; [CPU_FPU] |320| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 382,column 9,is_stmt,isa 0
+        MMOV32    @fclVars+100,MR0      ; [CPU_FPU] |382| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
@@ -491,7 +491,7 @@ $C$DW$9	.dwtag  DW_TAG_TI_branch
         MSTOP     ; [CPU_FPU] 
         ; ireturn occurs ; [] 
 	.dwattr $C$DW$8, DW_AT_TI_end_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$8, DW_AT_TI_end_line(0x199)
+	.dwattr $C$DW$8, DW_AT_TI_end_line(0x1ea)
 	.dwattr $C$DW$8, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$8
@@ -508,11 +508,11 @@ $C$DW$10	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$10, DW_AT_linkage_name("Cla1Task4")
 	.dwattr $C$DW$10, DW_AT_external
 	.dwattr $C$DW$10, DW_AT_decl_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$10, DW_AT_decl_line(0xe6)
+	.dwattr $C$DW$10, DW_AT_decl_line(0x114)
 	.dwattr $C$DW$10, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$10, DW_AT_TI_interrupt
 	.dwattr $C$DW$10, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 231,column 1,is_stmt,address Cla1Task4,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 277,column 1,is_stmt,address Cla1Task4,isa 0
 
 	.dwfde $C$DW$CIE, Cla1Task4
 
@@ -527,106 +527,106 @@ $C$DW$10	.dwtag  DW_TAG_subprogram
 
 Cla1Task4:
 ;* MAR0  assigned to $O$U7
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 236,column 5,is_stmt,isa 0
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |236| 
-        MMOV32    MR1,@fclVars          ; [CPU_FPU] |236| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |236| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 282,column 5,is_stmt,isa 0
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |282| 
+        MMOV32    MR1,@fclVars          ; [CPU_FPU] |282| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |282| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L10,EQ             ; [CPU_FPU] |236| 
+        MBCNDD    $C$L10,EQ             ; [CPU_FPU] |282| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |236| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 241,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+72      ; [CPU_FPU] |241| 
+        ; branchcc occurs ; [] |282| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 288,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+72      ; [CPU_FPU] |288| 
         MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |241| 
-        MMOVXI    MR1,#1024             ; [CPU_FPU] |241| 
-        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |241| 
-        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |241| 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |241| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |241| 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L8,EQ              ; [CPU_FPU] |241| 
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |288| 
+        MMOVXI    MR1,#1024             ; [CPU_FPU] |288| 
+        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |288| 
+        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |288| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |288| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |288| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |241| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 243,column 13,is_stmt,isa 0
-        MMOVXI    MR0,#240              ; [CPU_FPU] |243| 
-        MMOV16    @fclVars+70,MR0       ; [CPU_FPU] |243| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 244,column 13,is_stmt,isa 0
-        MMOV32    MR0,*MAR0+[#8]        ; [CPU_FPU] |244| 
-        MMOV32    @fclVars+60,MR0       ; [CPU_FPU] |244| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 249,column 13,is_stmt,isa 0
-        MMOVXI    MR0,#1024             ; [CPU_FPU] |249| 
-        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |249| 
+        MBCNDD    $C$L8,EQ              ; [CPU_FPU] |288| 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+        ; branchcc occurs ; [] |288| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 290,column 13,is_stmt,isa 0
+        MMOVXI    MR0,#240              ; [CPU_FPU] |290| 
+        MMOV16    @fclVars+70,MR0       ; [CPU_FPU] |290| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 291,column 13,is_stmt,isa 0
+        MMOV32    MR0,*MAR0+[#8]        ; [CPU_FPU] |291| 
+        MMOV32    @fclVars+60,MR0       ; [CPU_FPU] |291| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 297,column 13,is_stmt,isa 0
+        MMOVXI    MR0,#1024             ; [CPU_FPU] |297| 
+        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |297| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
 $C$L8:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 256,column 9,is_stmt,isa 0
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |256| 
-        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |256| 
-        MMOVXI    MR1,#2048             ; [CPU_FPU] |256| 
-        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |256| 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |256| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |256| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 307,column 9,is_stmt,isa 0
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |307| 
+        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |307| 
+        MMOVXI    MR1,#2048             ; [CPU_FPU] |307| 
+        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |307| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |307| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |307| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L10,EQ             ; [CPU_FPU] |256| 
+        MBCNDD    $C$L10,EQ             ; [CPU_FPU] |307| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |256| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 258,column 13,is_stmt,isa 0
-        MMOVXI    MR0,#2048             ; [CPU_FPU] |258| 
-        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |258| 
+        ; branchcc occurs ; [] |307| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 309,column 13,is_stmt,isa 0
+        MMOVXI    MR0,#2048             ; [CPU_FPU] |309| 
+        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |309| 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 263,column 13,is_stmt,isa 0
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |263| 
-        MMOVXI    MR1,#12               ; [CPU_FPU] |263| 
-        MMOVZ16   MR0,*MAR0+[#28]       ; [CPU_FPU] |263| 
-        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |263| 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |263| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |263| 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L9,NEQ             ; [CPU_FPU] |263| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 315,column 13,is_stmt,isa 0
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |315| 
+        MMOVXI    MR1,#12               ; [CPU_FPU] |315| 
+        MMOVZ16   MR0,*MAR0+[#28]       ; [CPU_FPU] |315| 
+        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |315| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |315| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |315| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |263| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 270,column 18,is_stmt,isa 0
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |270| 
-        MMOVZ16   MR1,*MAR0+[#32]       ; [CPU_FPU] |270| 
-        MMOVXI    MR0,#65535            ; [CPU_FPU] |270| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |270| 
+        MBCNDD    $C$L9,NEQ             ; [CPU_FPU] |315| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L10,EQ             ; [CPU_FPU] |270| 
+        ; branchcc occurs ; [] |315| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 323,column 18,is_stmt,isa 0
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |323| 
+        MMOVZ16   MR1,*MAR0+[#32]       ; [CPU_FPU] |323| 
+        MMOVXI    MR0,#65535            ; [CPU_FPU] |323| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |323| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |270| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 275,column 17,is_stmt,isa 0
-        MMOVZ16   MR0,*MAR0+[#32]       ; [CPU_FPU] |275| 
-        MBCNDD    $C$L10,UNC            ; [CPU_FPU] |275| 
-        MMOV16    @fclVars+59,MR0       ; [CPU_FPU] |275| 
+        MBCNDD    $C$L10,EQ             ; [CPU_FPU] |323| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branch occurs ; [] |275| 
+        MNOP      ; [CPU_FPU] 
+        ; branchcc occurs ; [] |323| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 329,column 17,is_stmt,isa 0
+        MMOVZ16   MR0,*MAR0+[#32]       ; [CPU_FPU] |329| 
+        MBCNDD    $C$L10,UNC            ; [CPU_FPU] |329| 
+        MMOV16    @fclVars+59,MR0       ; [CPU_FPU] |329| 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+        ; branch occurs ; [] |329| 
 $C$L9:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 268,column 17,is_stmt,isa 0
-        MMOVXI    MR0,#12               ; [CPU_FPU] |268| 
-        MMOV16    *MAR0+[#28],MR0       ; [CPU_FPU] |268| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 321,column 17,is_stmt,isa 0
+        MMOVXI    MR0,#12               ; [CPU_FPU] |321| 
+        MMOV16    *MAR0+[#28],MR0       ; [CPU_FPU] |321| 
 $C$L10:    
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
@@ -638,7 +638,7 @@ $C$DW$11	.dwtag  DW_TAG_TI_branch
         MSTOP     ; [CPU_FPU] 
         ; ireturn occurs ; [] 
 	.dwattr $C$DW$10, DW_AT_TI_end_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$10, DW_AT_TI_end_line(0x11f)
+	.dwattr $C$DW$10, DW_AT_TI_end_line(0x155)
 	.dwattr $C$DW$10, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$10
@@ -655,11 +655,11 @@ $C$DW$12	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$12, DW_AT_linkage_name("Cla1Task3")
 	.dwattr $C$DW$12, DW_AT_external
 	.dwattr $C$DW$12, DW_AT_decl_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$12, DW_AT_decl_line(0xca)
+	.dwattr $C$DW$12, DW_AT_decl_line(0xf2)
 	.dwattr $C$DW$12, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$12, DW_AT_TI_interrupt
 	.dwattr $C$DW$12, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 203,column 1,is_stmt,address Cla1Task3,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 243,column 1,is_stmt,address Cla1Task3,isa 0
 
 	.dwfde $C$DW$CIE, Cla1Task3
 
@@ -673,36 +673,36 @@ $C$DW$12	.dwtag  DW_TAG_subprogram
 ;***************************************************************
 
 Cla1Task3:
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 208,column 5,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+12       ; [CPU_FPU] |208| 
-        MMOV32    MR1,@fclVars+2        ; [CPU_FPU] |208| 
-        MMOV32    MR2,@fclVars+4        ; [CPU_FPU] |208| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 252,column 5,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+12       ; [CPU_FPU] |252| 
+        MMOV32    MR1,@fclVars+2        ; [CPU_FPU] |252| 
+        MMOV32    MR2,@fclVars+4        ; [CPU_FPU] |252| 
 
-        MMOV32    MR1,@fclVars+10       ; [CPU_FPU] |208| 
-||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |208| 
+        MMOV32    MR1,@fclVars+10       ; [CPU_FPU] |252| 
+||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |252| 
 
-        MMPYF32   MR1,MR2,MR1           ; [CPU_FPU] |208| 
+        MMPYF32   MR1,MR2,MR1           ; [CPU_FPU] |252| 
 
-        MMOV32    MR0,@fclVars+8        ; [CPU_FPU] |208| 
-||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |208| 
+        MMOV32    MR0,@fclVars+8        ; [CPU_FPU] |252| 
+||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |252| 
 
-        MMOV32    MR1,@fclVars+14       ; [CPU_FPU] |208| 
-||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |208| 
+        MMOV32    MR1,@fclVars+14       ; [CPU_FPU] |252| 
+||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |252| 
 
-        MMOV32    MR0,@fclVars+38       ; [CPU_FPU] |208| 
-||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |208| 
+        MMOV32    MR0,@fclVars+38       ; [CPU_FPU] |252| 
+||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |252| 
 
-        MADDF32   MR0,MR0,MR1           ; [CPU_FPU] |208| 
-        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |208| 
-        MMOV32    MR1,MR0               ; [CPU_FPU] |208| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 216,column 5,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+50       ; [CPU_FPU] |216| 
-        MMINF32   MR0,MR1               ; [CPU_FPU] |216| 
-        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |216| 
-        MMOV32    MR1,MR0               ; [CPU_FPU] |216| 
-        MMOV32    MR0,@fclVars+52       ; [CPU_FPU] |216| 
-        MMAXF32   MR0,MR1               ; [CPU_FPU] |216| 
-        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |216| 
+        MADDF32   MR0,MR0,MR1           ; [CPU_FPU] |252| 
+        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |252| 
+        MMOV32    MR1,MR0               ; [CPU_FPU] |252| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 261,column 5,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+50       ; [CPU_FPU] |261| 
+        MMINF32   MR0,MR1               ; [CPU_FPU] |261| 
+        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |261| 
+        MMOV32    MR1,MR0               ; [CPU_FPU] |261| 
+        MMOV32    MR0,@fclVars+52       ; [CPU_FPU] |261| 
+        MMAXF32   MR0,MR1               ; [CPU_FPU] |261| 
+        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |261| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
@@ -713,7 +713,7 @@ $C$DW$13	.dwtag  DW_TAG_TI_branch
         MSTOP     ; [CPU_FPU] 
         ; ireturn occurs ; [] 
 	.dwattr $C$DW$12, DW_AT_TI_end_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$12, DW_AT_TI_end_line(0xe1)
+	.dwattr $C$DW$12, DW_AT_TI_end_line(0x10e)
 	.dwattr $C$DW$12, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$12
@@ -730,11 +730,11 @@ $C$DW$14	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$14, DW_AT_linkage_name("Cla1Task2")
 	.dwattr $C$DW$14, DW_AT_external
 	.dwattr $C$DW$14, DW_AT_decl_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$14, DW_AT_decl_line(0xb6)
+	.dwattr $C$DW$14, DW_AT_decl_line(0xdc)
 	.dwattr $C$DW$14, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$14, DW_AT_TI_interrupt
 	.dwattr $C$DW$14, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 183,column 1,is_stmt,address Cla1Task2,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 221,column 1,is_stmt,address Cla1Task2,isa 0
 
 	.dwfde $C$DW$CIE, Cla1Task2
 
@@ -748,26 +748,26 @@ $C$DW$14	.dwtag  DW_TAG_subprogram
 ;***************************************************************
 
 Cla1Task2:
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 188,column 5,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+36       ; [CPU_FPU] |188| 
-        MMOV32    MR1,@fclVars+46       ; [CPU_FPU] |188| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 227,column 5,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+36       ; [CPU_FPU] |227| 
+        MMOV32    MR1,@fclVars+46       ; [CPU_FPU] |227| 
 
-        MMOV32    MR1,@fclVars+40       ; [CPU_FPU] |188| 
-||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |188| 
+        MMOV32    MR1,@fclVars+40       ; [CPU_FPU] |227| 
+||      MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |227| 
 
-        MMOV32    MR0,@fclVars+38       ; [CPU_FPU] |188| 
-||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |188| 
+        MMOV32    MR0,@fclVars+38       ; [CPU_FPU] |227| 
+||      MADDF32   MR1,MR1,MR0           ; [CPU_FPU] |227| 
 
-        MADDF32   MR0,MR0,MR1           ; [CPU_FPU] |188| 
-        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |188| 
-        MMOV32    MR1,MR0               ; [CPU_FPU] |188| 
-        MMOV32    MR0,@fclVars+50       ; [CPU_FPU] |188| 
-        MMINF32   MR0,MR1               ; [CPU_FPU] |188| 
-        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |188| 
-        MMOV32    MR1,MR0               ; [CPU_FPU] |188| 
-        MMOV32    MR0,@fclVars+52       ; [CPU_FPU] |188| 
-        MMAXF32   MR0,MR1               ; [CPU_FPU] |188| 
-        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |188| 
+        MADDF32   MR0,MR0,MR1           ; [CPU_FPU] |227| 
+        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |227| 
+        MMOV32    MR1,MR0               ; [CPU_FPU] |227| 
+        MMOV32    MR0,@fclVars+50       ; [CPU_FPU] |227| 
+        MMINF32   MR0,MR1               ; [CPU_FPU] |227| 
+        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |227| 
+        MMOV32    MR1,MR0               ; [CPU_FPU] |227| 
+        MMOV32    MR0,@fclVars+52       ; [CPU_FPU] |227| 
+        MMAXF32   MR0,MR1               ; [CPU_FPU] |227| 
+        MMOV32    @fclVars+38,MR0       ; [CPU_FPU] |227| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
@@ -778,7 +778,7 @@ $C$DW$15	.dwtag  DW_TAG_TI_branch
         MSTOP     ; [CPU_FPU] 
         ; ireturn occurs ; [] 
 	.dwattr $C$DW$14, DW_AT_TI_end_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$14, DW_AT_TI_end_line(0xc5)
+	.dwattr $C$DW$14, DW_AT_TI_end_line(0xec)
 	.dwattr $C$DW$14, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$14
@@ -795,11 +795,11 @@ $C$DW$16	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$16, DW_AT_linkage_name("Cla1Task1")
 	.dwattr $C$DW$16, DW_AT_external
 	.dwattr $C$DW$16, DW_AT_decl_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$16, DW_AT_decl_line(0x40)
+	.dwattr $C$DW$16, DW_AT_decl_line(0x4b)
 	.dwattr $C$DW$16, DW_AT_decl_column(0x12)
 	.dwattr $C$DW$16, DW_AT_TI_interrupt
 	.dwattr $C$DW$16, DW_AT_TI_max_frame_size(0x00)
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 65,column 1,is_stmt,address Cla1Task1,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 76,column 1,is_stmt,address Cla1Task1,isa 0
 
 	.dwfde $C$DW$CIE, Cla1Task1
 
@@ -817,143 +817,143 @@ Cla1Task1:
 ;* MR0   assigned to $O$C2
 ;* MR0   assigned to $O$C3
 ;* MAR0  assigned to $O$U12
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 73,column 5,is_stmt,isa 0
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |73| 
-        MMOV32    MR0,@fclVars          ; [CPU_FPU] |73| 
-        MMOVXI    MR1,#2                ; [CPU_FPU] |73| 
-        MCMP32    MR1,MR0               ; [CPU_FPU] |73| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 84,column 5,is_stmt,isa 0
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |84| 
+        MMOV32    MR0,@fclVars          ; [CPU_FPU] |84| 
+        MMOVXI    MR1,#2                ; [CPU_FPU] |84| 
+        MCMP32    MR1,MR0               ; [CPU_FPU] |84| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L13,EQ             ; [CPU_FPU] |73| 
+        MBCNDD    $C$L13,EQ             ; [CPU_FPU] |84| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |73| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 91,column 10,is_stmt,isa 0
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |91| 
-        MMOVXI    MR1,#1                ; [CPU_FPU] |91| 
-        MCMP32    MR1,MR0               ; [CPU_FPU] |91| 
+        ; branchcc occurs ; [] |84| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 109,column 10,is_stmt,isa 0
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |109| 
+        MMOVXI    MR1,#1                ; [CPU_FPU] |109| 
+        MCMP32    MR1,MR0               ; [CPU_FPU] |109| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L12,NEQ            ; [CPU_FPU] |91| 
+        MBCNDD    $C$L12,NEQ            ; [CPU_FPU] |109| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |91| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 102,column 9,is_stmt,isa 0
-        MEALLOW   ; [CPU_FPU] |102| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 107,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+72      ; [CPU_FPU] |107| 
+        ; branchcc occurs ; [] |109| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 127,column 9,is_stmt,isa 0
+        MEALLOW   ; [CPU_FPU] |127| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 133,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+72      ; [CPU_FPU] |133| 
         MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR1,#0                ; [CPU_FPU] |107| 
-        MMOVXI    MR1,#1024             ; [CPU_FPU] |107| 
-        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |107| 
-        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |107| 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |107| 
-        MCMP32    MR0,MR1               ; [CPU_FPU] |107| 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MBCNDD    $C$L11,EQ             ; [CPU_FPU] |107| 
+        MMOVIZ    MR1,#0                ; [CPU_FPU] |133| 
+        MMOVXI    MR1,#1024             ; [CPU_FPU] |133| 
+        MMOVZ16   MR0,*MAR0+[#25]       ; [CPU_FPU] |133| 
+        MAND32    MR1,MR1,MR0           ; [CPU_FPU] |133| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |133| 
+        MCMP32    MR0,MR1               ; [CPU_FPU] |133| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        ; branchcc occurs ; [] |107| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 114,column 13,is_stmt,isa 0
-        MMOV32    MR0,*MAR0+[#8]        ; [CPU_FPU] |114| 
-        MMOV32    *MAR0+[#2],MR0        ; [CPU_FPU] |114| 
+        MBCNDD    $C$L11,EQ             ; [CPU_FPU] |133| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 120,column 13,is_stmt,isa 0
-        MMOVXI    MR1,#512              ; [CPU_FPU] |120| 
-        MMOVZ16   MR0,*MAR0+[#21]       ; [CPU_FPU] |120| 
-        MOR32     MR0,MR1,MR0           ; [CPU_FPU] |120| 
-        MMOV16    *MAR0+[#21],MR0       ; [CPU_FPU] |120| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 125,column 13,is_stmt,isa 0
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |125| 
-        MMOVXI    MR0,#2                ; [CPU_FPU] |125| 
-        MMOV32    @fclVars,MR0          ; [CPU_FPU] |125| 
+        MNOP      ; [CPU_FPU] 
+        ; branchcc occurs ; [] |133| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 141,column 13,is_stmt,isa 0
+        MMOV32    MR0,*MAR0+[#8]        ; [CPU_FPU] |141| 
+        MMOV32    *MAR0+[#2],MR0        ; [CPU_FPU] |141| 
+        MNOP      ; [CPU_FPU] 
+        MNOP      ; [CPU_FPU] 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 148,column 13,is_stmt,isa 0
+        MMOVXI    MR1,#512              ; [CPU_FPU] |148| 
+        MMOVZ16   MR0,*MAR0+[#21]       ; [CPU_FPU] |148| 
+        MOR32     MR0,MR1,MR0           ; [CPU_FPU] |148| 
+        MMOV16    *MAR0+[#21],MR0       ; [CPU_FPU] |148| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 154,column 13,is_stmt,isa 0
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |154| 
+        MMOVXI    MR0,#2                ; [CPU_FPU] |154| 
+        MMOV32    @fclVars,MR0          ; [CPU_FPU] |154| 
 $C$L11:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 135,column 9,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+64       ; [CPU_FPU] |135| 
-        MUI32TOF32 MR1,*MAR0+[#12]      ; [CPU_FPU] |135| 
-        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |135| 
-        MMOV32    @fclVars+56,MR0       ; [CPU_FPU] |135| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 165,column 9,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+64       ; [CPU_FPU] |165| 
+        MUI32TOF32 MR1,*MAR0+[#12]      ; [CPU_FPU] |165| 
+        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |165| 
+        MMOV32    @fclVars+56,MR0       ; [CPU_FPU] |165| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 138,column 9,is_stmt,isa 0
-        MUI16TOF32 MR0,@fclVars+67      ; [CPU_FPU] |138| 
-        MMOV32    MR1,@fclVars+56       ; [CPU_FPU] |138| 
-        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |138| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 141,column 9,is_stmt,isa 0
-        MF32TOI32 MR1,MR0               ; [CPU_FPU] |141| 
-        MI32TOF32 MR1,MR1               ; [CPU_FPU] |141| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 138,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 168,column 9,is_stmt,isa 0
+        MUI16TOF32 MR0,@fclVars+67      ; [CPU_FPU] |168| 
+        MMOV32    MR1,@fclVars+56       ; [CPU_FPU] |168| 
+        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |168| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 171,column 9,is_stmt,isa 0
+        MF32TOI32 MR1,MR0               ; [CPU_FPU] |171| 
+        MI32TOF32 MR1,MR1               ; [CPU_FPU] |171| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 168,column 9,is_stmt,isa 0
 
-        MSUBF32   MR0,MR0,MR1           ; [CPU_FPU] |141| 
-||      MMOV32    @fclVars+54,MR0       ; [CPU_FPU] |138| 
+        MSUBF32   MR0,MR0,MR1           ; [CPU_FPU] |171| 
+||      MMOV32    @fclVars+54,MR0       ; [CPU_FPU] |168| 
 
         MBCNDD    $C$L14,UNC            ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 141,column 9,is_stmt,isa 0
-        MMOV32    @fclVars+54,MR0       ; [CPU_FPU] |141| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 171,column 9,is_stmt,isa 0
+        MMOV32    @fclVars+54,MR0       ; [CPU_FPU] |171| 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 144,column 9,is_stmt,isa 0
-        MMOV32    MR0,@fclVars+28       ; [CPU_FPU] |144| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 175,column 9,is_stmt,isa 0
+        MMOV32    MR0,@fclVars+28       ; [CPU_FPU] |175| 
         ; branch occurs ; [] 
 $C$L12:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 153,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+72      ; [CPU_FPU] |153| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 188,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+72      ; [CPU_FPU] |188| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |153| 
-        MMOV32    *MAR0,MR0             ; [CPU_FPU] |153| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 159,column 9,is_stmt,isa 0
-        MMOVXI    MR0,#1024             ; [CPU_FPU] |159| 
-        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |159| 
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |188| 
+        MMOV32    *MAR0,MR0             ; [CPU_FPU] |188| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 195,column 9,is_stmt,isa 0
+        MMOVXI    MR0,#1024             ; [CPU_FPU] |195| 
+        MMOV16    *MAR0+[#26],MR0       ; [CPU_FPU] |195| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 165,column 9,is_stmt,isa 0
-        MMOVXI    MR1,#64767            ; [CPU_FPU] |165| 
-        MMOVZ16   MR0,*MAR0+[#21]       ; [CPU_FPU] |165| 
-        MAND32    MR0,MR1,MR0           ; [CPU_FPU] |165| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 167,column 9,is_stmt,isa 0
-        MBCNDD    $C$L14,UNC            ; [CPU_FPU] |167| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 165,column 9,is_stmt,isa 0
-        MMOV16    *MAR0+[#21],MR0       ; [CPU_FPU] |165| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 202,column 9,is_stmt,isa 0
+        MMOVXI    MR1,#64767            ; [CPU_FPU] |202| 
+        MMOVZ16   MR0,*MAR0+[#21]       ; [CPU_FPU] |202| 
+        MAND32    MR0,MR1,MR0           ; [CPU_FPU] |202| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 204,column 9,is_stmt,isa 0
+        MBCNDD    $C$L14,UNC            ; [CPU_FPU] |204| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 202,column 9,is_stmt,isa 0
+        MMOV16    *MAR0+[#21],MR0       ; [CPU_FPU] |202| 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 167,column 9,is_stmt,isa 0
-        MMOVIZ    MR0,#0                ; [CPU_FPU] |167| 
-        ; branch occurs ; [] |167| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 204,column 9,is_stmt,isa 0
+        MMOVIZ    MR0,#0                ; [CPU_FPU] |204| 
+        ; branch occurs ; [] |204| 
 $C$L13:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 80,column 9,is_stmt,isa 0
-        MMOV16    MAR0,@fclVars+72      ; [CPU_FPU] |80| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 95,column 9,is_stmt,isa 0
+        MMOV16    MAR0,@fclVars+72      ; [CPU_FPU] |95| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-        MMOV32    MR0,@fclVars+64       ; [CPU_FPU] |80| 
-        MUI32TOF32 MR1,*MAR0+[#12]      ; [CPU_FPU] |80| 
-        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |80| 
-        MMOV32    @fclVars+56,MR0       ; [CPU_FPU] |80| 
+        MMOV32    MR0,@fclVars+64       ; [CPU_FPU] |95| 
+        MUI32TOF32 MR1,*MAR0+[#12]      ; [CPU_FPU] |95| 
+        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |95| 
+        MMOV32    @fclVars+56,MR0       ; [CPU_FPU] |95| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 83,column 9,is_stmt,isa 0
-        MUI16TOF32 MR0,@fclVars+67      ; [CPU_FPU] |83| 
-        MMOV32    MR1,@fclVars+56       ; [CPU_FPU] |83| 
-        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |83| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 86,column 9,is_stmt,isa 0
-        MF32TOI32 MR1,MR0               ; [CPU_FPU] |86| 
-        MI32TOF32 MR1,MR1               ; [CPU_FPU] |86| 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 83,column 9,is_stmt,isa 0
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 99,column 9,is_stmt,isa 0
+        MUI16TOF32 MR0,@fclVars+67      ; [CPU_FPU] |99| 
+        MMOV32    MR1,@fclVars+56       ; [CPU_FPU] |99| 
+        MMPYF32   MR0,MR1,MR0           ; [CPU_FPU] |99| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 103,column 9,is_stmt,isa 0
+        MF32TOI32 MR1,MR0               ; [CPU_FPU] |103| 
+        MI32TOF32 MR1,MR1               ; [CPU_FPU] |103| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 99,column 9,is_stmt,isa 0
 
-        MSUBF32   MR0,MR0,MR1           ; [CPU_FPU] |86| 
-||      MMOV32    @fclVars+54,MR0       ; [CPU_FPU] |83| 
+        MSUBF32   MR0,MR0,MR1           ; [CPU_FPU] |103| 
+||      MMOV32    @fclVars+54,MR0       ; [CPU_FPU] |99| 
 
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 86,column 9,is_stmt,isa 0
-        MMOV32    @fclVars+54,MR0       ; [CPU_FPU] |86| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 103,column 9,is_stmt,isa 0
+        MMOV32    @fclVars+54,MR0       ; [CPU_FPU] |103| 
 $C$L14:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 89,column 9,is_stmt,isa 0
-        MMOV32    @fclVars+18,MR0       ; [CPU_FPU] |89| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 107,column 9,is_stmt,isa 0
+        MMOV32    @fclVars+18,MR0       ; [CPU_FPU] |107| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 
@@ -964,7 +964,7 @@ $C$DW$17	.dwtag  DW_TAG_TI_branch
         MSTOP     ; [CPU_FPU] 
         ; ireturn occurs ; [] 
 	.dwattr $C$DW$16, DW_AT_TI_end_file("../sources/fcl_cla_code_dm.cla")
-	.dwattr $C$DW$16, DW_AT_TI_end_line(0xb1)
+	.dwattr $C$DW$16, DW_AT_TI_end_line(0xd6)
 	.dwattr $C$DW$16, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$16

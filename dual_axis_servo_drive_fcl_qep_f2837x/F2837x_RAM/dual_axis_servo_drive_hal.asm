@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Tue Feb  3 17:39:04 2026                 *
+;* Date/Time created: Tue Mar  3 20:15:52 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -489,8 +489,8 @@ $C$DW$66	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$66, DW_AT_decl_column(0x17)
 
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{B42A629B-09E8-4C69-BF34-D8D7DF770089} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{E73A07FC-B65D-4DCF-92E4-D0F7CA43EBE5} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{D8E5DCE4-EFF3-44C5-9B5F-934613BE6237} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{6FD63013-0799-405B-9093-6FFE0DDC68FC} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{6159405D-DFE8-441A-B776-FD763F58F286} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{DBC19891-5A76-41C9-B80B-E091C8052E57} 
 	.sect	".text:__signbitl"
 	.clink
 	.global	||__signbitl||
@@ -3293,8 +3293,8 @@ $C$DW$211	.dwtag  DW_TAG_formal_parameter
 ||HAL_setupMotorFaultProtection||:
 ;* R0    assigned to $O$C1
 ;* R0    assigned to $O$C2
-;* AR4   assigned to $O$U56
-;* AR4   assigned to $O$U56
+;* AR4   assigned to $O$U62
+;* AR4   assigned to $O$U62
 ;* AL    assigned to $O$K3
 $C$DW$212	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$212, DW_AT_name("handle")
@@ -3518,9 +3518,9 @@ $C$DW$231	.dwtag  DW_TAG_TI_branch
         ; branch occurs ; [] |1443| 
 ||$C$L31||:    
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1378,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#15767            ; [CPU_FPU] |1378| 
+        MOVIZ     R1H,#15692            ; [CPU_FPU] |1378| 
         MPYF32    R0H,R0H,#17664        ; [CPU_FPU] |1378| 
-        MOVXI     R1H,#46118            ; [CPU_FPU] |1378| 
+        MOVXI     R1H,#52429            ; [CPU_FPU] |1378| 
         MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |1378| 
         NOP       ; [CPU_ALU] 
         ADDF32    R1H,R0H,#17664        ; [CPU_FPU] |1378| 

@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Tue Feb  3 16:04:35 2026                 *
+;* Date/Time created: Tue Mar  3 20:15:52 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -168,8 +168,8 @@ $C$DW$23	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$23, DW_AT_decl_column(0x15)
 
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{641450BE-BBDC-4E4C-948E-9D50656D678B} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{DF2E4C6E-9577-43C2-A897-1BDD9BE4E8C0} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{7646B8EE-8D3B-4463-90AB-5EF926D0C61B} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{55D8B55D-F338-47F1-8BBD-F260DBC03199} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{861D5267-315F-4272-81AC-78903929C627} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{F52872A3-64D1-4844-B886-6222955364F2} 
 	.sect	".text:runOffsetsCalculation"
 	.clink
 	.global	||runOffsetsCalculation||
@@ -1110,7 +1110,7 @@ $C$DW$39	.dwtag  DW_TAG_TI_branch
         MOVXI     R0H,#8192             ; [CPU_FPU] |96| 
         MOVB      XAR0,#250             ; [CPU_ALU] |96| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 116,column 9,is_stmt,isa 0
-        MOVIZ     R2H,#16728            ; [CPU_FPU] |116| 
+        MOVIZ     R2H,#16800            ; [CPU_FPU] |116| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 106,column 9,is_stmt,isa 0
         MOVXI     R3H,#46039            ; [CPU_FPU] |106| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 96,column 9,is_stmt,isa 0
@@ -1122,112 +1122,115 @@ $C$DW$39	.dwtag  DW_TAG_TI_branch
         MOVB      XAR0,#254             ; [CPU_ALU] |106| 
         MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |106| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 89,column 9,is_stmt,isa 0
-        MOVIZ     R3H,#16912            ; [CPU_FPU] |89| 
+        MOVIZ     R3H,#16832            ; [CPU_FPU] |89| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 116,column 9,is_stmt,isa 0
         MOVL      XAR0,#268             ; [CPU_ALU] |116| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 90,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#16544            ; [CPU_FPU] |90| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 104,column 9,is_stmt,isa 0
+        MOVIZ     R1H,#47616            ; [CPU_FPU] |104| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 116,column 9,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |116| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 122,column 9,is_stmt,isa 0
         MOVB      ACC,#66               ; [CPU_ALU] |122| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 89,column 9,is_stmt,isa 0
         MOVB      XAR0,#14              ; [CPU_ALU] |89| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 110,column 9,is_stmt,isa 0
+        MOVIZ     R2H,#14545            ; [CPU_FPU] |110| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 89,column 9,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |89| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 104,column 9,is_stmt,isa 0
-        MOVIZ     R2H,#47616            ; [CPU_FPU] |104| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 90,column 9,is_stmt,isa 0
-        MOVB      XAR0,#16              ; [CPU_ALU] |90| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 110,column 9,is_stmt,isa 0
-        MOVIZ     R3H,#14545            ; [CPU_FPU] |110| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 90,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |90| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 104,column 9,is_stmt,isa 0
         MOVB      XAR0,#252             ; [CPU_ALU] |104| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 111,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#16067            ; [CPU_FPU] |111| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 110,column 9,is_stmt,isa 0
-        MOVXI     R3H,#46871            ; [CPU_FPU] |110| 
+        MOVXI     R2H,#46871            ; [CPU_FPU] |110| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 111,column 9,is_stmt,isa 0
+        MOVIZ     R3H,#16067            ; [CPU_FPU] |111| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 104,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |104| 
+        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |104| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 110,column 9,is_stmt,isa 0
         MOVL      XAR0,#256             ; [CPU_ALU] |110| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 111,column 9,is_stmt,isa 0
-        MOVXI     R1H,#15953            ; [CPU_FPU] |111| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 112,column 9,is_stmt,isa 0
-        MOVIZ     R2H,#16067            ; [CPU_FPU] |112| 
+        MOVIZ     R1H,#16067            ; [CPU_FPU] |112| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 111,column 9,is_stmt,isa 0
+        MOVXI     R3H,#15953            ; [CPU_FPU] |111| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 110,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |110| 
+        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |110| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 111,column 9,is_stmt,isa 0
         MOVL      XAR0,#258             ; [CPU_ALU] |111| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 113,column 9,is_stmt,isa 0
-        MOVIZ     R3H,#14642            ; [CPU_FPU] |113| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 112,column 9,is_stmt,isa 0
-        MOVXI     R2H,#15953            ; [CPU_FPU] |112| 
+        MOVXI     R1H,#15953            ; [CPU_FPU] |112| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 113,column 9,is_stmt,isa 0
+        MOVIZ     R2H,#14642            ; [CPU_FPU] |113| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 111,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |111| 
+        MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |111| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 112,column 9,is_stmt,isa 0
         MOVL      XAR0,#260             ; [CPU_ALU] |112| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 113,column 9,is_stmt,isa 0
-        MOVXI     R3H,#2594             ; [CPU_FPU] |113| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 114,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#14642            ; [CPU_FPU] |114| 
+        MOVIZ     R3H,#14642            ; [CPU_FPU] |114| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 113,column 9,is_stmt,isa 0
+        MOVXI     R2H,#2594             ; [CPU_FPU] |113| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 112,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |112| 
+        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |112| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 113,column 9,is_stmt,isa 0
         MOVL      XAR0,#262             ; [CPU_ALU] |113| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 115,column 9,is_stmt,isa 0
-        MOVIZ     R2H,#16204            ; [CPU_FPU] |115| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 114,column 9,is_stmt,isa 0
-        MOVXI     R1H,#2594             ; [CPU_FPU] |114| 
+        MOVXI     R3H,#2594             ; [CPU_FPU] |114| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 115,column 9,is_stmt,isa 0
+        MOVIZ     R1H,#16204            ; [CPU_FPU] |115| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 113,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |113| 
+        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |113| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 114,column 9,is_stmt,isa 0
         MOVL      XAR0,#264             ; [CPU_ALU] |114| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 115,column 9,is_stmt,isa 0
-        MOVXI     R2H,#52429            ; [CPU_FPU] |115| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 117,column 9,is_stmt,isa 0
-        MOVIZ     R3H,#17604            ; [CPU_FPU] |117| 
+        MOVIZ     R2H,#17604            ; [CPU_FPU] |117| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 115,column 9,is_stmt,isa 0
+        MOVXI     R1H,#52429            ; [CPU_FPU] |115| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 114,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |114| 
+        MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |114| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 115,column 9,is_stmt,isa 0
         MOVL      XAR0,#276             ; [CPU_ALU] |115| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 118,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#17437            ; [CPU_FPU] |118| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 117,column 9,is_stmt,isa 0
-        MOVXI     R3H,#22908            ; [CPU_FPU] |117| 
+        MOVXI     R2H,#22908            ; [CPU_FPU] |117| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 118,column 9,is_stmt,isa 0
+        MOVIZ     R3H,#17437            ; [CPU_FPU] |118| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 115,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |115| 
+        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |115| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 117,column 9,is_stmt,isa 0
         MOVL      XAR0,#278             ; [CPU_ALU] |117| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 118,column 9,is_stmt,isa 0
-        MOVXI     R1H,#5219             ; [CPU_FPU] |118| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 119,column 9,is_stmt,isa 0
-        MOVIZ     R2H,#17437            ; [CPU_FPU] |119| 
+        MOVIZ     R1H,#17437            ; [CPU_FPU] |119| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 118,column 9,is_stmt,isa 0
+        MOVXI     R3H,#5219             ; [CPU_FPU] |118| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 117,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |117| 
+        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |117| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 118,column 9,is_stmt,isa 0
         MOVL      XAR0,#270             ; [CPU_ALU] |118| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 87,column 9,is_stmt,isa 0
-        MOVIZ     R3H,#14545            ; [CPU_FPU] |87| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 119,column 9,is_stmt,isa 0
-        MOVXI     R2H,#5219             ; [CPU_FPU] |119| 
+        MOVXI     R1H,#5219             ; [CPU_FPU] |119| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 87,column 9,is_stmt,isa 0
+        MOVIZ     R2H,#14545            ; [CPU_FPU] |87| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 118,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |118| 
+        MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |118| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 119,column 9,is_stmt,isa 0
         MOVL      XAR0,#272             ; [CPU_ALU] |119| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 90,column 9,is_stmt,isa 0
+        MOVIZ     R3H,#16633            ; [CPU_FPU] |90| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 87,column 9,is_stmt,isa 0
-        MOVXI     R3H,#46871            ; [CPU_FPU] |87| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 94,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#16250            ; [CPU_FPU] |94| 
+        MOVXI     R2H,#46871            ; [CPU_FPU] |87| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 119,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |119| 
+        MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |119| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 87,column 9,is_stmt,isa 0
         MOVB      XAR0,#10              ; [CPU_ALU] |87| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 90,column 9,is_stmt,isa 0
+        MOVXI     R3H,#39322            ; [CPU_FPU] |90| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 94,column 9,is_stmt,isa 0
+        MOVIZ     R1H,#16250            ; [CPU_FPU] |94| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 87,column 9,is_stmt,isa 0
+        MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |87| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 90,column 9,is_stmt,isa 0
+        MOVB      XAR0,#16              ; [CPU_ALU] |90| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 94,column 9,is_stmt,isa 0
         MOVXI     R1H,#57672            ; [CPU_FPU] |94| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 87,column 9,is_stmt,isa 0
-        MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |87| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 90,column 9,is_stmt,isa 0
+        MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |90| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 94,column 9,is_stmt,isa 0
         MOVB      XAR0,#12              ; [CPU_ALU] |94| 
         MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |94| 
@@ -1258,7 +1261,7 @@ $C$DW$39	.dwtag  DW_TAG_TI_branch
         ADDL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |126| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |126| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 147,column 9,is_stmt,isa 0
-        MOVIZ     R2H,#16672            ; [CPU_FPU] |147| 
+        MOVIZ     R2H,#16752            ; [CPU_FPU] |147| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 127,column 9,is_stmt,isa 0
         MOVB      ACC,#68               ; [CPU_ALU] |127| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 126,column 9,is_stmt,isa 0
@@ -1270,9 +1273,9 @@ $C$DW$39	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 127,column 9,is_stmt,isa 0
         MOVL      XAR4,ACC              ; [CPU_ALU] |127| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 146,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#16968            ; [CPU_FPU] |146| 
+        MOVIZ     R1H,#16864            ; [CPU_FPU] |146| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 145,column 9,is_stmt,isa 0
-        MOVIZ     R3H,#16672            ; [CPU_FPU] |145| 
+        MOVIZ     R3H,#16752            ; [CPU_FPU] |145| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 127,column 9,is_stmt,isa 0
         MOVB      XAR6,#0               ; [CPU_ALU] |127| 
         MOVL      *+XAR4[0],XAR6        ; [CPU_ALU] |127| 
@@ -1285,14 +1288,16 @@ $C$DW$39	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 146,column 9,is_stmt,isa 0
         MOVL      XAR0,#302             ; [CPU_ALU] |146| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 138,column 9,is_stmt,isa 0
-        MOVIZ     R3H,#15320            ; [CPU_FPU] |138| 
+        MOVIZ     R3H,#15413            ; [CPU_FPU] |138| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 146,column 9,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R1H       ; [CPU_FPU] |146| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 138,column 9,is_stmt,isa 0
+        MOVXI     R3H,#56518            ; [CPU_FPU] |138| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 147,column 9,is_stmt,isa 0
         MOVL      XAR0,#304             ; [CPU_ALU] |147| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 139,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#15508            ; [CPU_FPU] |139| 
-        MOVXI     R1H,#13107            ; [CPU_FPU] |139| 
+        MOVIZ     R1H,#15492            ; [CPU_FPU] |139| 
+        MOVXI     R1H,#39322            ; [CPU_FPU] |139| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 147,column 9,is_stmt,isa 0
         MOV32     *+XAR2[AR0],R2H       ; [CPU_FPU] |147| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 138,column 9,is_stmt,isa 0
@@ -1341,8 +1346,8 @@ $C$DW$39	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 163,column 9,is_stmt,isa 0
         MOVL      XAR4,#2880            ; [CPU_ARAU] |163| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 141,column 9,is_stmt,isa 0
-        MOVIZ     R3H,#17175            ; [CPU_FPU] |141| 
-        MOVXI     R3H,#46118            ; [CPU_FPU] |141| 
+        MOVIZ     R3H,#17076            ; [CPU_FPU] |141| 
+        MOVXI     R3H,#13107            ; [CPU_FPU] |141| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 133,column 9,is_stmt,isa 0
         MOVB      XAR0,#156             ; [CPU_ALU] |133| 
         MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |133| 
@@ -1355,13 +1360,13 @@ $C$DW$39	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 150,column 9,is_stmt,isa 0
         MOVL      XAR0,#320             ; [CPU_ALU] |150| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 142,column 9,is_stmt,isa 0
-        MOVIZ     R0H,#16989            ; [CPU_FPU] |142| 
+        MOVIZ     R0H,#17015            ; [CPU_FPU] |142| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 150,column 9,is_stmt,isa 0
         MOVB      *+XAR2[AR0],#124,UNC  ; [CPU_ALU] |150| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 151,column 9,is_stmt,isa 0
         MOVL      XAR0,#321             ; [CPU_ALU] |151| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 142,column 9,is_stmt,isa 0
-        MOVXI     R0H,#6987             ; [CPU_FPU] |142| 
+        MOVXI     R0H,#7809             ; [CPU_FPU] |142| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 151,column 9,is_stmt,isa 0
         MOVB      *+XAR2[AR0],#24,UNC   ; [CPU_ALU] |151| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 152,column 9,is_stmt,isa 0
@@ -1369,10 +1374,10 @@ $C$DW$39	.dwtag  DW_TAG_TI_branch
         MOVB      *+XAR2[AR0],#61,UNC   ; [CPU_ALU] |152| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 155,column 9,is_stmt,isa 0
         MOVL      XAR0,#318             ; [CPU_ALU] |155| 
-        MOV       *+XAR2[AR0],#2806     ; [CPU_ALU] |155| 
+        MOV       *+XAR2[AR0],#2750     ; [CPU_ALU] |155| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 158,column 9,is_stmt,isa 0
         MOVL      XAR0,#319             ; [CPU_ALU] |158| 
-        MOV       *+XAR2[AR0],#1290     ; [CPU_ALU] |158| 
+        MOV       *+XAR2[AR0],#1346     ; [CPU_ALU] |158| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 141,column 9,is_stmt,isa 0
         MOVB      XAR0,#52              ; [CPU_ALU] |141| 
         MOV32     *+XAR2[AR0],R3H       ; [CPU_FPU] |141| 

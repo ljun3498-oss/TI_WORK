@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Tue Feb  3 17:39:04 2026                 *
+;* Date/Time created: Tue Mar  3 20:15:52 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -1208,9 +1208,9 @@ $C$DW$91	.dwtag  DW_TAG_variable
 			; motorVars[0].posPtrMax @ 5056
 	.bits		0,16
 			; motorVars[0].posPtr @ 5072
-	.bits		0x4bd,16
+	.bits		0x333,16
 			; motorVars[0].currentThreshHi @ 5088
-	.bits		0x4bd,16
+	.bits		0x333,16
 			; motorVars[0].currentThreshLo @ 5104
 	.bits		0,16
 			; motorVars[0].drvEnableGateGPIO @ 5120
@@ -1462,8 +1462,8 @@ $C$DW$92	.dwtag  DW_TAG_variable
 
 	.sblock	".bss"
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{6AC88CE3-E816-412A-B448-4E9B36196A6A} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{26B21DF2-2BA1-4E32-8A1F-32DC00709B6C} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{01C08985-64CB-4F19-8744-FAF8F2A4DBCD} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{5CD3B72A-0210-4FC7-AE9A-F950A4B25FE2} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{5952BA3C-9FBF-46BF-8557-0866F803A0F0} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{6EBE0C5A-9976-4211-B176-F0B63E9AD49F} 
 	.sect	".text:runSyncControl"
 	.clink
 	.global	||runSyncControl||
@@ -3183,16 +3183,18 @@ $C$DW$139	.dwtag  DW_TAG_subprogram
 ;***************************************************************
 
 ||motor1ControlISR||:
-;* AR4   assigned to $O$C6
-;* AR4   assigned to $O$C7
-;* R0    assigned to $O$C8
-;* R0    assigned to $O$C9
-;* AR4   assigned to $O$C10
-;* AR4   assigned to $O$C11
+;* AR5   assigned to $O$C6
+;* R0    assigned to $O$C7
+;* AR4   assigned to $O$C8
+;* AR4   assigned to $O$C9
+;* R0    assigned to $O$C10
+;* R0    assigned to $O$C11
 ;* AR4   assigned to $O$C12
-;* R1    assigned to $O$C13
-;* AR5   assigned to $O$C14
-;* R2    assigned to $O$C15
+;* AR4   assigned to $O$C13
+;* AR4   assigned to $O$C14
+;* R1    assigned to $O$C15
+;* AR5   assigned to $O$C16
+;* R2    assigned to $O$C17
 ;* AR2   assigned to $O$K1
 ;* AR4   assigned to $O$K1
 ;* AR4   assigned to $O$K1
@@ -3764,33 +3766,81 @@ $C$DW$145	.dwtag  DW_TAG_TI_branch
 
         LCR       #||ramper||           ; [CPU_ALU] |1296| 
         ; call occurs [#||ramper||] ; [] |1296| 
-	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2264,column 5,is_stmt,isa 0
-        MOVL      XAR1,#280             ; [CPU_ALU] |2264| 
-        MOVL      XAR4,*+XAR2[AR1]      ; [CPU_ALU] |2264| 
-        MOVB      XAR0,#28              ; [CPU_ALU] |2264| 
-        MOVW      DP,#||dlogCh1||       ; [CPU_ARAU] 
-        MOVL      XAR6,*+XAR4[AR0]      ; [CPU_ALU] |2264| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2263,column 5,is_stmt,isa 0
         MOVB      XAR0,#56              ; [CPU_ALU] |2263| 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
+        MOVL      XAR5,#||hal||         ; [CPU_ARAU] |330| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2263,column 5,is_stmt,isa 0
         MOVL      XAR7,*+XAR2[AR0]      ; [CPU_ALU] |2263| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 1296,column 5,is_stmt,isa 0
         MOVB      XAR0,#164             ; [CPU_ALU] |1296| 
         MOV32     *+XAR2[AR0],R0H       ; [CPU_FPU] |1296| 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
+        MOVB      XAR0,#12              ; [CPU_ALU] |330| 
+        MOVL      XAR4,*+XAR5[AR0]      ; [CPU_ALU] |330| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2264,column 5,is_stmt,isa 0
+        MOVL      XAR0,#280             ; [CPU_ALU] |2264| 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
+        AND       AL,*+XAR4[3],#0xf000  ; [CPU_ALU] |330| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2264,column 5,is_stmt,isa 0
+        MOVL      XAR4,*+XAR2[AR0]      ; [CPU_ALU] |2264| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2265,column 5,is_stmt,isa 0
         MOVB      XAR0,#32              ; [CPU_ALU] |2265| 
-	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2264,column 5,is_stmt,isa 0
-        MOVL      @||dlogCh2||,XAR6     ; [CPU_ALU] |2264| 
-	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2263,column 5,is_stmt,isa 0
-        MOVL      @||dlogCh1||,XAR7     ; [CPU_ALU] |2263| 
-	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2265,column 5,is_stmt,isa 0
-        MOVL      ACC,*+XAR4[AR0]       ; [CPU_ALU] |2265| 
+        MOV32     R0H,*+XAR4[AR0]       ; [CPU_FPU] |2265| 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
+        ADDF32    R1H,R0H,#16256        ; [CPU_FPU] |330| 
+        NOP       ; [CPU_ALU] 
+        MPYF32    R1H,R1H,#17664        ; [CPU_FPU] |330| 
+        NOP       ; [CPU_ALU] 
+        F32TOUI16 R1H,R1H               ; [CPU_FPU] |330| 
+        NOP       ; [CPU_ALU] 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2266,column 5,is_stmt,isa 0
         MOVB      XAR0,#34              ; [CPU_ALU] |2266| 
-	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2265,column 5,is_stmt,isa 0
-        MOVL      @||dlogCh3||,ACC      ; [CPU_ALU] |2265| 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
+        MOV32     XAR6,R1H              ; [CPU_FPU] |330| 
+        MOVW      DP,#||hal||+12        ; [CPU_ARAU] 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2264,column 5,is_stmt,isa 0
+        MOVB      XAR1,#28              ; [CPU_ALU] |2264| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2266,column 5,is_stmt,isa 0
         MOVL      P,*+XAR4[AR0]         ; [CPU_ALU] |2266| 
-        MOVL      @||dlogCh4||,P        ; [CPU_ALU] |2266| 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
+        MOV       AH,AR6                ; [CPU_ALU] |330| 
+        AND       AH,#0x0fff            ; [CPU_ALU] |330| 
+        MOVL      XAR6,@$BLOCKED(||hal||)+12 ; [CPU_ALU] |330| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2264,column 5,is_stmt,isa 0
+        MOVL      XT,*+XAR4[AR1]        ; [CPU_ALU] |2264| 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
+        MOVL      XAR0,#280             ; [CPU_ALU] |330| 
+        OR        AH,AL                 ; [CPU_ALU] |330| 
+        MOV       *+XAR6[3],AH          ; [CPU_ALU] |330| 
+        MOVB      ACC,#34               ; [CPU_ALU] |330| 
+        ADDL      ACC,*+XAR2[AR0]       ; [CPU_ALU] |330| 
+        MOVL      XAR4,ACC              ; [CPU_ALU] |330| 
+        MOV32     R1H,*+XAR4[0]         ; [CPU_FPU] |330| 
+        ADDF32    R1H,R1H,#16256        ; [CPU_FPU] |330| 
+        NOP       ; [CPU_ALU] 
+        MPYF32    R1H,R1H,#17664        ; [CPU_FPU] |330| 
+        NOP       ; [CPU_ALU] 
+        F32TOUI16 R1H,R1H               ; [CPU_FPU] |330| 
+        MOVB      XAR0,#14              ; [CPU_ALU] |330| 
+        MOVL      XAR4,*+XAR5[AR0]      ; [CPU_ALU] |330| 
+        MOV32     ACC,R1H               ; [CPU_FPU] |330| 
+        MOV       AH,AL                 ; [CPU_ALU] |330| 
+        AND       AH,#0x0fff            ; [CPU_ALU] |330| 
+        AND       AL,*+XAR4[3],#0xf000  ; [CPU_FPU] |330| 
+        MOVL      XAR4,@$BLOCKED(||hal||)+14 ; [CPU_FPU] |330| 
+        OR        AH,AL                 ; [CPU_ALU] |330| 
+        MOVW      DP,#||dlogCh1||       ; [CPU_ARAU] 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2265,column 5,is_stmt,isa 0
+        MOV32     @||dlogCh3||,R0H      ; [CPU_FPU] |2265| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2264,column 5,is_stmt,isa 0
+        MOVL      @||dlogCh2||,XT       ; [CPU_FPU] |2264| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2266,column 5,is_stmt,isa 0
+        MOVL      @||dlogCh4||,P        ; [CPU_FPU] |2266| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2263,column 5,is_stmt,isa 0
+        MOVL      @||dlogCh1||,XAR7     ; [CPU_FPU] |2263| 
+	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/dac.h",line 330,column 5,is_stmt,isa 0
+        MOV       *+XAR4[3],AH          ; [CPU_ALU] |330| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2347,column 5,is_stmt,isa 0
         MOVL      XAR4,#||dlog_4ch1||   ; [CPU_ARAU] |2347| 
 $C$DW$146	.dwtag  DW_TAG_TI_branch

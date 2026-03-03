@@ -67,7 +67,7 @@
 // 在DAC上显示变量A（标幺值）
 //
 #define  DAC_MACRO_PU(A)  ((1.0f + A) * 2048)  // DAC宏定义：将标幺值转换为DAC输出值（范围0-4095）
-
+#define DACOUT_EN 1
 //
 // Functions
 //

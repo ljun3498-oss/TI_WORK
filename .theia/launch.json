@@ -41,6 +41,15 @@
                     "C28xx_CPU1"
                 ]
             }
+        },
+        {
+            "name": "dual_axis_servo_drive_fcl_qep_f2837x",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "dual_axis_servo_drive_fcl_qep_f2837x",
+                "resourceId": "/dual_axis_servo_drive_fcl_qep_f2837x"
+            }
         }
     ]
 }

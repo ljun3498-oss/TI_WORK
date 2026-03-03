@@ -119,7 +119,7 @@
                         </toolChain>
                     </folderInfo>
                     <sourceEntries>
-                        <entry excluding="headers|src_device/dual_axis_f2837x_flash_lnk_cpu1.cmd|src_driver/xbar.c|src_driver/sysctl.c|src_driver/sdfm.c|src_driver/spi.c|src_driver/sci.c|src_driver/memcfg.c|src_driver/interrupt.c|src_driver/gpio.c|src_driver/flash.c|src_driver/eqep.c|src_driver/cputimer.c|src_driver/cmpss.c|src_driver/cla.c|src_driver/adc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="src_device/dual_axis_f2837x_flash_lnk_cpu1.cmd|src_driver/xbar.c|src_driver/sysctl.c|src_driver/sdfm.c|src_driver/spi.c|src_driver/sci.c|src_driver/memcfg.c|src_driver/interrupt.c|src_driver/gpio.c|src_driver/flash.c|src_driver/eqep.c|src_driver/cputimer.c|src_driver/cmpss.c|src_driver/cla.c|src_driver/adc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                     </sourceEntries>
                 </configuration>
             </storageModule>

@@ -3,6 +3,7 @@
 // FILE:    fcl_cla_code_dm.cla
 //
 // TITLE:   FCL motor handler functions from CLA
+//          FCL（快速电流环）电机处理函数 - 从CLA（控制律加速器）执行
 //
 // Group:   C2000
 //
@@ -17,6 +18,7 @@
 
 //
 // includes
+// 包含文件
 //
 #include "cpu_cla_shared_dm.h"
 
@@ -24,29 +26,37 @@
  * Note that the pointer on CLA side is 16bits hence the same pointers from CPU
  * side cannot be used.
  * additionally these pointers must be assigned address on the CLA side so the
- * correct address is pointed to */
+ * correct address is pointed to 
+ * 
+ * 用于在CLA上间接访问外设的指针
+ * 注意：CLA侧的指针是16位的，因此不能使用CPU侧的相同指针
+ * 此外，这些指针必须在CLA侧分配地址，以便指向正确的地址
+ */
 
 //
 // defines
+// 宏定义
 //
-#define CLA_QEP_FLAG_IEL_EVENT      0x0400
-#define CLA_QEP_FLAG_UTO_EVENT      0x0800
+#define CLA_QEP_FLAG_IEL_EVENT      0x0400  // QEP索引事件标志位
+#define CLA_QEP_FLAG_UTO_EVENT      0x0800  // QEP单元超时事件标志位
 
 //
 // globals
+// 全局变量
 //
 
 
 //
 // function definitions
+// 函数定义
 //
-#if 0       // set to 1 for test
-#define SETGPIOTEST1_HIGH       GpioDataRegs.GPADAT.bit.GPIO29 = 1;
-#define SETGPIOTEST1_LOW        GpioDataRegs.GPADAT.bit.GPIO29 = 0;
+#if 0       // set to 1 for test (设置为1用于测试)
+#define SETGPIOTEST1_HIGH       GpioDataRegs.GPADAT.bit.GPIO29 = 1;  // 设置测试GPIO1为高电平
+#define SETGPIOTEST1_LOW        GpioDataRegs.GPADAT.bit.GPIO29 = 0;  // 设置测试GPIO1为低电平
 
-#define SETGPIOTEST2_HIGH       GpioDataRegs.GPADAT.bit.GPIO25 = 1;
-#define SETGPIOTEST2_LOW        GpioDataRegs.GPADAT.bit.GPIO25 = 0;
-#else       // NULL
+#define SETGPIOTEST2_HIGH       GpioDataRegs.GPADAT.bit.GPIO25 = 1;  // 设置测试GPIO2为高电平
+#define SETGPIOTEST2_LOW        GpioDataRegs.GPADAT.bit.GPIO25 = 0;  // 设置测试GPIO2为低电平
+#else       // NULL (空操作)
 #define SETGPIOTEST1_HIGH
 #define SETGPIOTEST1_LOW
 
@@ -56,15 +66,16 @@
 
 //
 // Task 1 : Calculate QEP for motor 1
+// 任务1：计算电机1的QEP（正交编码器脉冲）
 // Description:
 // POSITION ENCODER
-// - Reads QEP
-// - Angles are normalised to the the range 0 to 0.99999 (1.0)
+// - Reads QEP (读取QEP编码器数据)
+// - Angles are normalised to the the range 0 to 0.99999 (1.0) (角度归一化到0-0.99999范围)
 //
 __interrupt void Cla1Task1(void)
 {
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST1_HIGH;      // set HIGH
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST1_HIGH;      // set HIGH (设置测试引脚为高电平)
 #endif
 
 //  __mdebugstop();
@@ -77,15 +88,22 @@ __interrupt void Cla1Task1(void)
         // QEP POSLAT = QEP POSCNT at QEP UTO event that is in sync with ADCSOC
         // Therefore, read mech angle from QEP POSLAT
         //
+        // QEP单元超时事件和ADC采样触发已预先对齐
+        // QEP POSLAT = QEP POSCNT在QEP UTO事件时的值，该事件与ADCSOC同步
+        // 因此，从QEP POSLAT读取机械角度
+        //
         fclVars[0].qep.MechTheta =
                 (fclVars[0].qep.MechScaler * fclVars[0].ptrQEP->QPOSLAT);
 
+        // 计算电角度 = 机械角度 × 极对数
         fclVars[0].qep.ElecTheta =
                 (fclVars[0].qep.PolePairs * fclVars[0].qep.MechTheta);
 
+        // 将电角度归一化到0-1范围
         fclVars[0].qep.ElecTheta -=
                 ((float32_t)((int32)(fclVars[0].qep.ElecTheta)));
 
+        // 保存电角度用于控制
         fclVars[0].pangle  = fclVars[0].qep.ElecTheta;
     }
     else if(fclVars[0].lsw == ENC_WAIT_FOR_INDEX)
@@ -98,29 +116,40 @@ __interrupt void Cla1Task1(void)
         //   Load POSINIT with POSILAT, so that at every future INDEX event,
         //   POSCNT is loaded (reset) with POSINIT
         //
+        // lsw = ENC_WAIT_FOR_INDEX ---> 等待QEP索引信号，同时转子旋转
+        //   检测alpha轴和QEP索引位置之间的偏移角度
+        // 如果找到QEP索引脉冲：
+        //   POSILAT在第一个INDEX脉冲时捕获POSCNT
+        //   用POSILAT加载POSINIT，以便在每次未来的INDEX事件时
+        //   POSCNT被加载（重置）为POSINIT
+        //
 
         __meallow();
 
         //
         // Check the index occurrence, QFLG.bit.IEL
+        // 检查索引事件，QFLG.bit.IEL
         //
         if(fclVars[0].ptrQEP->QFLG.all & CLA_QEP_FLAG_IEL_EVENT)
         {
-            // __mdebugstop(); // only for debug
+            // __mdebugstop(); // only for debug (仅用于调试)
 
             //
             //QPOSILAT updates on Index edge(IEL) - capture it into QPOSINIT
+            // QPOSILAT在索引边沿(IEL)更新 - 将其捕获到QPOSINIT
             //
             fclVars[0].ptrQEP->QPOSINIT = fclVars[0].ptrQEP->QPOSILAT;
 
             //
             // make QPOSCNT = QPOSINIT on future Index edge(s)
+            // 使QPOSCNT在未来的索引边沿等于QPOSINIT
             //ClaQep.ptr->QEPCTL.bit.IEI = IEI_RISING;
             //
             fclVars[0].ptrQEP->QEPCTL.all |= IEI_RISING;
 
             //
             // if QEP index pulse is found, change lsw to 'ENC_CALIBRATION_DONE'
+            // 如果找到QEP索引脉冲，将lsw更改为'ENC_CALIBRATION_DONE'
             //
             fclVars[0].lsw = ENC_CALIBRATION_DONE;
         }
@@ -131,6 +160,7 @@ __interrupt void Cla1Task1(void)
 
         //
         // Compute the mechanical and electrical angles
+        // 计算机械角度和电角度
         //
         fclVars[0].qep.MechTheta =
                 (fclVars[0].qep.MechScaler * fclVars[0].ptrQEP->QPOSLAT) ;
@@ -141,6 +171,7 @@ __interrupt void Cla1Task1(void)
         fclVars[0].qep.ElecTheta -=
                 ((float32_t)((int32)(fclVars[0].qep.ElecTheta)));
 
+        // 使用斜坡发生器的输出作为角度
         fclVars[0].pangle  = fclVars[0].rg.Out;
     }
     else    // if(lsw == ENC_ALIGNMENT)
@@ -150,16 +181,22 @@ __interrupt void Cla1Task1(void)
         // Reset POSCNT to ZERO
         // during alignment, force current shaft position as ZERO degree
         //
-        fclVars[0].ptrQEP->QPOSCNT = 0;   // Reset position cnt for QEP
+        // lsw = ENC_ALIGNMENT ---> 对准程序
+        // 将POSCNT重置为零
+        // 在对准期间，强制当前轴位置为零度
+        //
+        fclVars[0].ptrQEP->QPOSCNT = 0;   // Reset position cnt for QEP (重置QEP位置计数器)
 
         //
         //write to the entire register - it is more efficient
+        // 写入整个寄存器 - 更高效
         //ClaQep.ptr->QCLR.bit.IEL = 1;
         //
         fclVars[0].ptrQEP->QCLR.all = CLA_QEP_FLAG_IEL_EVENT;
 
         //
         // to restart after stop motor - dont disturb other bits
+        // 停止电机后重新启动 - 不干扰其他位
         // ClaQep.ptr->QEPCTL.all &= ~IEI_RISING;
         //
         fclVars[0].ptrQEP->QEPCTL.bit.IEI = 0x0;
@@ -167,10 +204,10 @@ __interrupt void Cla1Task1(void)
         fclVars[0].pangle  = 0;
     }
 
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST1_LOW; // set LOW
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST1_LOW; // set LOW (设置测试引脚为低电平)
 
-    fclVars[0].taskCount[0]++;
+    fclVars[0].taskCount[0]++;  // 任务计数器递增
 #endif
 
     return;
@@ -178,19 +215,21 @@ __interrupt void Cla1Task1(void)
 
 //
 // PI controller - Q loop (Torque loop) for motor 1
+// PI控制器 - 电机1的Q轴回路（转矩回路）
 //
 __interrupt void Cla1Task2(void)
 {
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST1_HIGH; // set HIGH
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST1_HIGH; // set HIGH (设置测试引脚为高电平)
 #endif
 
+    // 执行PI控制宏，计算Q轴电流控制输出
     FCL_PI_MACRO(fclVars[0].pi_iq);
 
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST1_LOW; // set low
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST1_LOW; // set low (设置测试引脚为低电平)
 
-    fclVars[0].taskCount[1]++;
+    fclVars[0].taskCount[1]++;  // 任务计数器递增
 #endif
 
     return;
@@ -198,13 +237,18 @@ __interrupt void Cla1Task2(void)
 
 //
 // COMPLEX controller - Q loop (Torque loop) for motor 1
+// 复杂控制器 - 电机1的Q轴回路（转矩回路）
 //
 __interrupt void Cla1Task3 ( void )
 {
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST1_HIGH; // set HIGH
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST1_HIGH; // set HIGH (设置测试引脚为高电平)
 #endif
 
+    // 执行复杂控制器计算，使用交叉耦合补偿
+    // 公式：输出 += kDirect × (iqErr × cosWTs + idErr × sinWTs) + carryOver
+    // 其中：iqErr是Q轴电流误差，idErr是D轴电流误差
+    // cosWTs和sinWTs是用于交叉耦合补偿的三角函数值
     fclVars[0].pi_iq.out += fclVars[0].Q_cla.kDirect *
                             (fclVars[0].Q_cla.iqErr * fclVars[0].Q_cla.cosWTs +
                             fclVars[0].Q_cla.idErr * fclVars[0].Q_cla.sinWTs) +
@@ -212,13 +256,14 @@ __interrupt void Cla1Task3 ( void )
 
     //
     // __mmaxf32(__mminf32(pi_iq.out, pi_iq.Umax), pi_iq.Umin);
+    // 限制输出在最小值和最大值之间
     //
     CLAMP_MACRO(fclVars[0].pi_iq);
 
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST1_LOW; // set low
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST1_LOW; // set low (设置测试引脚为低电平)
 
-    fclVars[0].taskCount[2]++;
+    fclVars[0].taskCount[2]++;  // 任务计数器递增
 #endif
 
     return;
@@ -226,25 +271,28 @@ __interrupt void Cla1Task3 ( void )
 
 //
 // QEP peripheral - clearing flags after previous read for motor 1
+// QEP外设 - 电机1的读取后清除标志
 //
 __interrupt void Cla1Task4 ( void )
 {
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST1_HIGH; // set LOW
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST1_HIGH; // set LOW (设置测试引脚为高电平)
 #endif
 
     if(fclVars[0].lsw != ENC_ALIGNMENT)
     {
         //
         // Check an index occurrence
+        // 检查索引事件
         //
         if(fclVars[0].ptrQEP->QFLG.all & CLA_QEP_FLAG_IEL_EVENT)
         {
-            fclVars[0].qep.IndexSyncFlag = 0x00F0; // only for debug
+            fclVars[0].qep.IndexSyncFlag = 0x00F0; // only for debug (仅用于调试)
             fclVars[0].qep.QepCountIndex = fclVars[0].ptrQEP->QPOSILAT;
 
             //
             // Clear interrupt flag
+            // 清除中断标志
             //
             fclVars[0].ptrQEP->QCLR.all = CLA_QEP_FLAG_IEL_EVENT;
         }
@@ -253,17 +301,22 @@ __interrupt void Cla1Task4 ( void )
         // Check unit Time out-event for speed calculation:
         // Unit Timer is configured for 100Hz in INIT function
         //
+        // 检查单元超时事件用于速度计算：
+        // 单元定时器在初始化函数中配置为100Hz
+        //
         if(fclVars[0].ptrQEP->QFLG.all & CLA_QEP_FLAG_UTO_EVENT)
         {
             fclVars[0].ptrQEP->QCLR.all = CLA_QEP_FLAG_UTO_EVENT;
 
             //
             // Low Speed Calculation
+            // 低速计算
             //
             if(fclVars[0].ptrQEP->QEPSTS.all & 0x000C)  //QEPSTS.(COEF || CDEF)
             {
                 //
                 // Capture Counter overflowed, hence do no compute speed
+                // 捕获计数器溢出，因此不计算速度
                 //
                 fclVars[0].ptrQEP->QEPSTS.all = 0x000C;
             }
@@ -271,16 +324,17 @@ __interrupt void Cla1Task4 ( void )
             {
                 //
                 // Compute low speed using capture counter value
+                // 使用捕获计数器值计算低速
                 //
                 fclVars[0].qep.QepPeriod = fclVars[0].ptrQEP->QCPRDLAT;
             }
         }
     }
 
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST1_LOW; // set LOW
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST1_LOW; // set LOW (设置测试引脚为低电平)
 
-    fclVars[0].taskCount[3]++;
+    fclVars[0].taskCount[3]++;  // 任务计数器递增
 #endif
 
     return;
@@ -288,15 +342,16 @@ __interrupt void Cla1Task4 ( void )
 
 //
 // Task 5 : Calculate QEP for motor 2
+// 任务5：计算电机2的QEP（正交编码器脉冲）
 // Description:
 // POSITION ENCODER
-// - Reads QEP
-// - Angles are normalised to the the range 0 to 0.99999 (1.0)
+// - Reads QEP (读取QEP编码器数据)
+// - Angles are normalised to the the range 0 to 0.99999 (1.0) (角度归一化到0-0.99999范围)
 //
 __interrupt void Cla1Task5 ( void )
 {
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST2_HIGH; // set HIGH
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST2_HIGH; // set HIGH (设置测试引脚为高电平)
 #endif
 
 //  __mdebugstop();
@@ -308,15 +363,22 @@ __interrupt void Cla1Task5 ( void )
         // QEP POSLAT = QEP POSCNT at QEP UTO event that is in sync with ADCSOC
         // Therefore, read mech angle from QEP POSLAT
         //
+        // QEP单元超时事件和ADC采样触发已预先对齐
+        // QEP POSLAT = QEP POSCNT在QEP UTO事件时的值，该事件与ADCSOC同步
+        // 因此，从QEP POSLAT读取机械角度
+        //
         fclVars[1].qep.MechTheta =
                 (fclVars[1].qep.MechScaler * fclVars[1].ptrQEP->QPOSLAT);
 
+        // 计算电角度 = 机械角度 × 极对数
         fclVars[1].qep.ElecTheta =
                 (fclVars[1].qep.PolePairs * fclVars[1].qep.MechTheta);
 
+        // 将电角度归一化到0-1范围
         fclVars[1].qep.ElecTheta -=
                 (((int32)(fclVars[1].qep.ElecTheta))); /* Q24 = Q0*Q24 */
 
+        // 保存电角度用于控制
         fclVars[1].pangle  = fclVars[1].qep.ElecTheta;
     }
     else if(fclVars[1].lsw == ENC_WAIT_FOR_INDEX)
@@ -329,29 +391,40 @@ __interrupt void Cla1Task5 ( void )
         //   Load POSINIT with POSILAT, so that at every future INDEX event,
         //   POSCNT is loaded (reset) with POSINIT
         //
+        // lsw = ENC_WAIT_FOR_INDEX ---> 等待QEP索引信号，同时转子旋转
+        //   检测alpha轴和QEP索引位置之间的偏移角度
+        // 如果找到QEP索引脉冲：
+        //   POSILAT在第一个INDEX脉冲时捕获POSCNT
+        //   用POSILAT加载POSINIT，以便在每次未来的INDEX事件时
+        //   POSCNT被加载（重置）为POSINIT
+        //
 
         __meallow();
 
         //
         // Check the index occurrence, QFLG.bit.IEL
+        // 检查索引事件，QFLG.bit.IEL
         //
         if(fclVars[1].ptrQEP->QFLG.all & CLA_QEP_FLAG_IEL_EVENT)
         {
-            // __mdebugstop(); // only for debug
+            // __mdebugstop(); // only for debug (仅用于调试)
 
             //
             //QPOSILAT updates on Index edge(IEL) - capture it into QPOSINIT
+            // QPOSILAT在索引边沿(IEL)更新 - 将其捕获到QPOSINIT
             //
             fclVars[1].ptrQEP->QPOSINIT = fclVars[1].ptrQEP->QPOSILAT;
 
             //
             // make QPOSCNT = QPOSINIT on future Index edge(s)
+            // 使QPOSCNT在未来的索引边沿等于QPOSINIT
             // ClaQep.ptr->QEPCTL.bit.IEI = IEI_RISING;
             //
             fclVars[1].ptrQEP->QEPCTL.all |= IEI_RISING;
 
             //
             // if QEP index pulse is found, change lsw to 'ENC_CALIBRATION_DONE'
+            // 如果找到QEP索引脉冲，将lsw更改为'ENC_CALIBRATION_DONE'
             //
             fclVars[1].lsw = ENC_CALIBRATION_DONE;
         }
@@ -362,6 +435,7 @@ __interrupt void Cla1Task5 ( void )
 
         //
         // Compute the mechanical and electrical angles
+        // 计算机械角度和电角度
         //
         fclVars[1].qep.MechTheta =
                 (fclVars[1].qep.MechScaler * fclVars[1].ptrQEP->QPOSLAT) ;
@@ -372,6 +446,7 @@ __interrupt void Cla1Task5 ( void )
         fclVars[1].qep.ElecTheta -=
                 ((float32_t)((int32)(fclVars[1].qep.ElecTheta)));
 
+        // 使用斜坡发生器的输出作为角度
         fclVars[1].pangle  = fclVars[1].rg.Out;
 
     }
@@ -382,16 +457,22 @@ __interrupt void Cla1Task5 ( void )
         // Reset POSCNT to ZERO
         // during alignment, force current shaft position as ZERO degree
         //
-        fclVars[1].ptrQEP->QPOSCNT = 0;   // Reset position cnt for QEP
+        // lsw = ENC_ALIGNMENT ---> 对准程序
+        // 将POSCNT重置为零
+        // 在对准期间，强制当前轴位置为零度
+        //
+        fclVars[1].ptrQEP->QPOSCNT = 0;   // Reset position cnt for QEP (重置QEP位置计数器)
 
         //
         //write to the entire register - it is more efficient
+        // 写入整个寄存器 - 更高效
         //ClaQep.ptr->QCLR.bit.IEL = 1;
         //
         fclVars[1].ptrQEP->QCLR.all = CLA_QEP_FLAG_IEL_EVENT;
 
         //
         // to restart after stop motor - dont disturb other bits
+        // 停止电机后重新启动 - 不干扰其他位
         //ClaQep.ptr->QEPCTL.all &= ~IEI_RISING;
         //
         fclVars[1].ptrQEP->QEPCTL.bit.IEI = 0x0;
@@ -399,10 +480,10 @@ __interrupt void Cla1Task5 ( void )
         fclVars[1].pangle  = 0;
     }
 
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST2_LOW; // set LOW
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST2_LOW; // set LOW (设置测试引脚为低电平)
 
-    fclVars[1].taskCount[0]++;
+    fclVars[1].taskCount[0]++;  // 任务计数器递增
 #endif
 
     return;
@@ -410,19 +491,21 @@ __interrupt void Cla1Task5 ( void )
 
 //
 // PI controller - Q loop (Torque loop) for motor 2
+// PI控制器 - 电机2的Q轴回路（转矩回路）
 //
 __interrupt void Cla1Task6 ( void )
 {
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST2_HIGH; // set HIGH
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST2_HIGH; // set HIGH (设置测试引脚为高电平)
 #endif
 
+    // 执行PI控制宏，计算Q轴电流控制输出
     FCL_PI_MACRO(fclVars[1].pi_iq);
 
-    SETGPIOTEST2_LOW; // set low
+    SETGPIOTEST2_LOW; // set low (设置测试引脚为低电平)
 
-#if CLA_DEBUG   // only for debugging
-    fclVars[1].taskCount[1]++;
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    fclVars[1].taskCount[1]++;  // 任务计数器递增
 #endif
 
     return;
@@ -430,51 +513,60 @@ __interrupt void Cla1Task6 ( void )
 
 
 //
-// PI controller - Q loop (Torque loop) for motor 2
+// COMPLEX controller - Q loop (Torque loop) for motor 2
+// 复杂控制器 - 电机2的Q轴回路（转矩回路）
 //
 __interrupt void Cla1Task7(void)
 {
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST2_HIGH; // set HIGH
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST2_HIGH; // set HIGH (设置测试引脚为高电平)
 #endif
 
+    // 执行复杂控制器计算，使用交叉耦合补偿
+    // 公式：输出 += kDirect × (iqErr × cosWTs + idErr × sinWTs) + carryOver
+    // 其中：iqErr是Q轴电流误差，idErr是D轴电流误差
+    // cosWTs和sinWTs是用于交叉耦合补偿的三角函数值
     fclVars[1].pi_iq.out += fclVars[1].Q_cla.kDirect *
                             (fclVars[1].Q_cla.iqErr * fclVars[1].Q_cla.cosWTs +
                             fclVars[1].Q_cla.idErr * fclVars[1].Q_cla.sinWTs) +
                           fclVars[1].Q_cla.carryOver;
 
+    // 限制输出在最小值和最大值之间
     CLAMP_MACRO(fclVars[1].pi_iq);
 
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST2_LOW; // set low
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST2_LOW; // set low (设置测试引脚为低电平)
 
-    fclVars[1].taskCount[2]++;
+    fclVars[1].taskCount[2]++;  // 任务计数器递增
 #endif
 
     return;
 }
 
 //
-// QEP peripheral - clearing flags after previous read for motor 1
+// QEP peripheral - clearing flags after previous read for motor 2
+// QEP外设 - 电机2的读取后清除标志
 //
 __interrupt void Cla1Task8(void)
 {
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST2_HIGH;      // set LOW
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST2_HIGH;      // set LOW (设置测试引脚为高电平)
 #endif
 
     if(fclVars[1].lsw != ENC_ALIGNMENT)
     {
         //
         // Check an index occurrence
+        // 检查索引事件
         //
         if(fclVars[1].ptrQEP->QFLG.all & CLA_QEP_FLAG_IEL_EVENT)
         {
-            fclVars[1].qep.IndexSyncFlag = 0x00F0; // only for debug
+            fclVars[1].qep.IndexSyncFlag = 0x00F0; // only for debug (仅用于调试)
             fclVars[1].qep.QepCountIndex = fclVars[1].ptrQEP->QPOSILAT;
 
             //
             // Clear interrupt flag
+            // 清除中断标志
             //
             fclVars[1].ptrQEP->QCLR.all = CLA_QEP_FLAG_IEL_EVENT;
         }
@@ -483,17 +575,22 @@ __interrupt void Cla1Task8(void)
         // Check unit Time out-event for speed calculation
         // Unit Timer is configured for 100Hz in INIT function
         //
+        // 检查单元超时事件用于速度计算：
+        // 单元定时器在初始化函数中配置为100Hz
+        //
         if(fclVars[1].ptrQEP->QFLG.all & CLA_QEP_FLAG_UTO_EVENT)
         {
             fclVars[1].ptrQEP->QCLR.all = CLA_QEP_FLAG_UTO_EVENT;
 
             //
             // Low Speed Calculation
+            // 低速计算
             //
             if(fclVars[1].ptrQEP->QEPSTS.all & 0x000C) // QEPSTS.(COEF || CDEF)
             {
                 //
                 // Capture Counter overflowed, hence do no compute speed
+                // 捕获计数器溢出，因此不计算速度
                 //
                 fclVars[1].ptrQEP->QEPSTS.all = 0x000C;
             }
@@ -501,16 +598,17 @@ __interrupt void Cla1Task8(void)
             {
                 //
                 // Compute low speed using capture counter value
+                // 使用捕获计数器值计算低速
                 //
                 fclVars[1].qep.QepPeriod = fclVars[1].ptrQEP->QCPRDLAT;
             }
         }
     }
 
-#if CLA_DEBUG   // only for debugging
-    SETGPIOTEST2_LOW;           // set LOW
+#if CLA_DEBUG   // only for debugging (仅用于调试)
+    SETGPIOTEST2_LOW;           // set LOW (设置测试引脚为低电平)
 
-    fclVars[1].taskCount[3]++;
+    fclVars[1].taskCount[3]++;  // 任务计数器递增
 #endif
 
     return;
