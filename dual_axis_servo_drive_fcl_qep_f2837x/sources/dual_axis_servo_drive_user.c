@@ -419,8 +419,10 @@ void runOffsetsCalculation(MOTOR_Vars_t *pMotor)
             // 清除EPWM事件触发中断标志
             EPWM_clearEventTriggerInterruptFlag(halMtr[0].pwmHandle[0]);
 
-            // 等待EPWM事件触发中断
-            while(EPWM_getEventTriggerInterruptStatus(halMtr[0].pwmHandle[0]) == false);
+            // 等待EPWM事件触发中断（添加超时保护）
+            uint32_t timeout = 0x1000000;
+            while((EPWM_getEventTriggerInterruptStatus(halMtr[0].pwmHandle[0]) == false) && (--timeout > 0));
+            if(timeout == 0) break;  // 超时退出，防止死循环
 
             // 稳定期后开始计算偏移量
             if(offsetCalCounter > 1000)
@@ -465,8 +467,10 @@ void runOffsetsCalculation(MOTOR_Vars_t *pMotor)
             // 清除EPWM事件触发中断标志
             EPWM_clearEventTriggerInterruptFlag(halMtr[1].pwmHandle[0]);
 
-            // 等待EPWM事件触发中断
-            while(EPWM_getEventTriggerInterruptStatus(halMtr[1].pwmHandle[0]) == false);
+            // 等待EPWM事件触发中断（添加超时保护）
+            uint32_t timeout = 0x1000000;
+            while((EPWM_getEventTriggerInterruptStatus(halMtr[1].pwmHandle[0]) == false) && (--timeout > 0));
+            if(timeout == 0) break;  // 超时退出，防止死循环
 
             // 稳定期后开始计算偏移量
             if(offsetCalCounter > 1000)

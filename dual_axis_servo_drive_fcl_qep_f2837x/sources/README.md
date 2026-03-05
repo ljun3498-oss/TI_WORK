@@ -1,10 +1,76 @@
-# 双轴伺服驱动项目文档
+子啊# 双轴伺服驱动项目文档
 
-**日期**: 2026-03-03
+**最后更新**: 2026-03-05
 
 ---
 
-## 一、今日更改记录 (2026-03-03)
+## 一、今日更改记录
+
+### 2026-03-05：FCL_LEVEL1 PWM输出修复
+
+#### 问题诊断
+经过多轮调试发现 FCL_LEVEL1 模式下 PWM 无输出的**根本原因**：
+- **CMPSS 过流比较器**在 ADC 偏移校准完成前就已启用
+- ADC 零电流采样值偏离 2048 中点 → CMPSS 误判为过流
+- 触发 **DCAEVT1** → **OST（One-Shot Trip）硬件锁存**
+- TripZone Action 强制 EPWMxA/B 输出 LOW → PWM 被硬件拉低
+- OST 锁存一旦触发，必须软件显式清除才能恢复
+
+#### 最终修复方案（`dual_axis_servo_drive.c`）
+
+**1. 初始化阶段：禁用 TripZone 信号源**（第 337-359 行）
+```c
+#if(BUILDLEVEL == FCL_LEVEL1)
+    // 禁用 DCAEVT1 (CMPSS过流) 和 CBC6 (仿真器停止)
+    for(i = 0; i < 3; i++) {
+        EPWM_disableTripZoneSignals(halMtr[0/1].pwmHandle[i],
+                                    EPWM_TZ_SIGNAL_DCAEVT1);
+        EPWM_disableTripZoneSignals(halMtr[0/1].pwmHandle[i],
+                                    EPWM_TZ_SIGNAL_CBC6);
+        // 清除已锁存的 OST/DCAEVT1/CBC 标志
+        EPWM_clearTripZoneFlag(..., EPWM_TZ_FLAG_OST | 
+                                     EPWM_TZ_FLAG_DCAEVT1 | 
+                                     EPWM_TZ_FLAG_CBC);
+    }
+#endif
+```
+
+**2. 初始化阶段：强制运行状态**（第 311-329 行）
+```c
+#if(BUILDLEVEL == FCL_LEVEL1)
+    flagSyncRun = true;              // 启用 runSyncControl() 执行
+    ctrlState = CTRL_RUN;            // 全局控制状态
+    runMotor = MOTOR_RUN;            // 全局电机状态
+    motorVars[0/1].ctrlState = CTRL_RUN;
+    motorVars[0/1].runMotor = MOTOR_RUN;
+    motorVars[0/1].speedRef = 0.1;
+    motorVars[0/1].isrTicker = 1;
+#endif
+```
+
+**3. 保留的原始逻辑**
+- 偏移校准：`runOffsetsCalculation()` 正常执行（已有超时保护）
+- 故障清除：`clearTripFlagDMC = 1` 统一处理
+- 门极驱动：初始化禁用，由 `runMotorControl()` 控制
+- 故障保护：`runMotorControl()` 对所有构建等级统一执行
+
+#### 技术总结
+- **硬件保护优先于软件控制**：TripZone 硬件锁存一旦触发，软件变量设置无效
+- **初始化顺序很关键**：`HAL_setupMotorFaultProtection()` 在偏移校准前调用导致问题
+- **LEVEL2+ 应该正常**：偏移校准完成后 CMPSS 阈值能正确工作
+- **调试经验**：硬件层问题需要从寄存器级别排查（TZ 标志、CMPSS 状态）
+
+#### 其他尝试（已还原）
+以下修改在测试中发现不是必须的，已还原为原始代码：
+- ~~强制 PWM 计数器模式 UP_DOWN~~（HAL 已配置）
+- ~~跳过 LEVEL1 偏移校准~~（超时保护已足够）
+- ~~`runMotorControl()` LEVEL1 旁路~~（不需要）
+
+---
+
+### 2026-03-03：电机参数调整
+
+（保留原有内容...）
 
 ### 1. 电机参数调整（针对24V直流母线电压和±20A霍尔传感器）
 

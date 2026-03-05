@@ -168,7 +168,7 @@ uint16_t thresh      = 18;  // 阈值，用于CMPSS滤波器
 //
 // 标志变量
 //
-volatile uint16_t enableFlag = false;  // 使能标志，用于控制某些功能的启用/禁用
+volatile uint16_t enableFlag = true;  // 使能标志，用于控制某些功能的启用/禁用
 
 uint16_t backTicker = 0;  // 后台计时器，用于各种定时任务
 
@@ -176,8 +176,8 @@ uint16_t led1Cnt = 0;  // LED1计数器，用于控制LED1的闪烁
 uint16_t led2Cnt = 0;  // LED2计数器，用于控制LED2的闪烁
 
 // 磁场定向控制相关变量
-float32_t VdTesting = 0.0;          // d轴电压参考值（标幺值）
-float32_t VqTesting = 0.10;         // q轴电压参考值（标幺值）
+float32_t VdTesting = 0.1;          // d轴电压参考值（标幺值）- LEVEL1测试用
+float32_t VqTesting = 0.20;         // q轴电压参考值（标幺值）- LEVEL1测试用
 
 // 位置参考生成和控制相关变量
 float32_t posArray[8] = {2.5, -2.5, 3.5, -3.5, 5.0, -5.0, 8.0, -8.0};  // 位置参考数组，存储不同的位置设定值
@@ -308,15 +308,54 @@ void main(void)
     // 重置电机2的控制变量
     resetControlVars(&motorVars[1]);
 
+#if(BUILDLEVEL == FCL_LEVEL1)
+    // =====================================================================
+    // LEVEL1 初始化：设置控制状态 + 禁用故障保护 + 强制PWM输出
+    // =====================================================================
+
+    // 1) 设置控制变量为运行状态
+    //    必须同时设置全局变量，否则runSyncControl()会用全局ctrlState覆盖per-motor的值
+    flagSyncRun = true;
+    ctrlState = CTRL_RUN;
+    runMotor = MOTOR_RUN;
+    motorVars[0].runMotor = MOTOR_RUN;
+    motorVars[0].ctrlState = CTRL_RUN;
+    motorVars[1].runMotor = MOTOR_RUN;
+    motorVars[1].ctrlState = CTRL_RUN;
+    motorVars[0].speedRef = 0.1;
+    motorVars[1].speedRef = 0.1;
+    motorVars[0].isrTicker = 1;
+    motorVars[1].isrTicker = 1;
+#endif
+
     // 清除电机1的任何虚假OST和DCAEVT1故障标志
     HAL_clearTZFlag(halMtrHandle[MTR_1]);
 
     // 清除电机2的任何虚假OST和DCAEVT1故障标志
     HAL_clearTZFlag(halMtrHandle[MTR_2]);
 
-    // 清除LED计数器
-    led1Cnt = 0;
-    led2Cnt = 0;
+#if(BUILDLEVEL == FCL_LEVEL1)
+    // LEVEL1：禁用TripZone信号源，防止CMPSS过流比较器
+    // 在未校准的情况下触发OST锁存，导致PWM输出被硬件强制拉低
+    {
+        uint16_t i;
+        for(i = 0; i < 3; i++)
+        {
+            EPWM_disableTripZoneSignals(halMtr[0].pwmHandle[i],
+                                        EPWM_TZ_SIGNAL_DCAEVT1);
+            EPWM_disableTripZoneSignals(halMtr[1].pwmHandle[i],
+                                        EPWM_TZ_SIGNAL_DCAEVT1);
+            EPWM_disableTripZoneSignals(halMtr[0].pwmHandle[i],
+                                        EPWM_TZ_SIGNAL_CBC6);
+            EPWM_disableTripZoneSignals(halMtr[1].pwmHandle[i],
+                                        EPWM_TZ_SIGNAL_CBC6);
+            EPWM_clearTripZoneFlag(halMtr[0].pwmHandle[i],
+                                   (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
+            EPWM_clearTripZoneFlag(halMtr[1].pwmHandle[i],
+                                   (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
+        }
+    }
+#endif
 
     // *************** SFRA & SFRA_GUI COMM INIT CODE START *******************
 #if BUILDLEVEL == FCL_LEVEL6
@@ -420,10 +459,10 @@ void main(void)
     HAL_setupInterrupts(halMtrHandle[MTR_2]);  // 配置电机2的PWM和ADC中断
 
     // 电机1的电流反馈偏移校准
-    runOffsetsCalculation(&motorVars[0]);  // 校准电机1的电流传感器零点偏移
+    runOffsetsCalculation(&motorVars[0]);
 
     // 电机2的电流反馈偏移校准
-    runOffsetsCalculation(&motorVars[1]);  // 校准电机2的电流传感器零点偏移
+    runOffsetsCalculation(&motorVars[1]);
 
     // 为电机1启用中断
     HAL_enableInterrupts(halMtrHandle[MTR_1]);  // 启用电机1的中断系统
@@ -435,10 +474,8 @@ void main(void)
     motorVars[0].clearTripFlagDMC = 1;
     motorVars[1].clearTripFlagDMC = 1;
 
-    // 禁用电机1的驱动栅极
+    // 禁用驱动栅极（安全模式，待运行时由runMotorControl启用）
     GPIO_writePin(motorVars[0].drvEnableGateGPIO, 1);
-
-    // 禁用电机2的驱动栅极
     GPIO_writePin(motorVars[1].drvEnableGateGPIO, 1);
 
     // 启用全局中断

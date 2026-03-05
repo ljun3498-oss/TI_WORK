@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Project",
+			"type": "shell",
+			"command": "C:\\ti\\ccs1270\\ccs\\eclipse\\eclipsec.exe",
+			"args": [
+				"-noSplash",
+				"-build",
+				"dual_axis_servo_drive_fcl_qep_f2837x/F2837x_RAM"
+			]
+		}
+	]
+}

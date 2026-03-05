@@ -866,7 +866,8 @@ interrupt void adc_isr(void)
         }
         
         case STATE_OPEN_LOOP: {
-            // 更新编码器数INCREMENT;
+            // 更新开环角度（增加角度增量）
+            open_loop_angle_acc += TARGET_ANGLE_INCREMENT;
             open_loop_angle_mech_rad = fmodf(open_loop_angle_acc, 2.0f * M_PI_F);
             if (open_loop_angle_mech_rad < 0.0f) {
                 open_loop_angle_mech_rad += 2.0f * M_PI_F;

@@ -10,4 +10,7 @@
 	<sourceLookupPath value="${C2000WARE_DLIB_ROOT}"/>
 	<origin value="C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\solutions\boostxl_3phganinv\f2837x\ccs\sensored_foc\dual_axis_servo_drive_fcl_qep_f2837x.projectspec"/>
 	<filesToOpen value=""/>
+	<connection value="common/targetdb/connections/TIXDS100v3_Dot7_Connection.xml"/>
+	<activeTargetConfiguration value="targetConfigs/TMS320F28377D.ccxml"/>
+	<isTargetConfigurationManual value="false"/>
 </projectOptions>

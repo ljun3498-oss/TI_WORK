@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.2                     
 ******************************************************************************
->> Linked Mon Feb  2 17:40:10 2026
+>> Linked Thu Mar  5 16:07:47 2026
 
 OUTPUT FILE NAME:   <empty_driverlib_4.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -16,7 +16,7 @@ PAGE 0:
   RAMM0                 00000123   000002dd  00000044  00000299  RWIX
   RAMLS0                00008000   00000800  00000800  00000000  RWIX
   RAMLS1                00008800   00000800  00000800  00000000  RWIX
-  RAMLS2                00009000   00000800  0000005f  000007a1  RWIX
+  RAMLS2                00009000   00000800  00000068  00000798  RWIX
   RAMLS3                00009800   00000800  00000000  00000800  RWIX
   RAMLS4                0000a000   00000800  00000000  00000800  RWIX
   RAMD0                 0000b000   00000800  00000800  00000000  RWIX
@@ -135,9 +135,9 @@ Cla1funcs
 .text.1    0    00008000    00000800     
                   00008000    0000037d     device.obj (.text)
                   0000837d    00000209     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
-                  00008586    000001e1     FOC_auto_start.obj (.text:retain)
-                  00008767    00000090     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTAL)
-                  000087f7    00000009                        : sysctl.obj (.text:SysCtl_serviceWatchdog)
+                  00008586    000001e9     FOC_auto_start.obj (.text:retain)
+                  0000876f    00000090     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTAL)
+                  000087ff    00000001     rts2800_fpu32_eabi.lib : startup.c.obj (.text)
 
 .text.2    0    00008800    00000800     
                   00008800    000000cf     rts2800_fpu32_eabi.lib : e_fmodf.c.obj (.text)
@@ -161,8 +161,8 @@ Cla1funcs
                   00008de9    0000002b                            : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
                   00008e14    00000029                            : exit.c.obj (.text)
                   00008e3d    00000028     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_selectClockSource)
-                  00008e65    00000001     rts2800_fpu32_eabi.lib : startup.c.obj (.text)
-                  00008e66    00000027                            : e_sqrtf.c.obj (.text)
+                  00008e65    00000001     --HOLE-- [fill = 0]
+                  00008e66    00000027     rts2800_fpu32_eabi.lib : e_sqrtf.c.obj (.text)
                   00008e8d    0000001f     driverlib_eabi.lib : sysctl.obj (.text:CPUTimer_getTimerOverflowStatus)
                   00008eac    0000001e                        : interrupt.obj (.text:Interrupt_initVectorTable)
                   00008eca    0000001d     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
@@ -182,17 +182,18 @@ Cla1funcs
                   00008fec    0000000d                        : interrupt.obj (.text:Interrupt_enableGlobal)
                   00008ff9    00000007                        : sysctl.obj (.text:SysCtl_resetMCD)
 
-.text.3    0    00009000    0000005f     
+.text.3    0    00009000    00000068     
                   00009000    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
                   0000900d    0000000c                            : args_main.c.obj (.text)
                   00009019    0000000c                            : epilog28.asm.obj (.text)
                   00009025    0000000b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_isMCDClockFailureDetected)
                   00009030    0000000a                        : interrupt.obj (.text:Interrupt_illegalOperationHandler)
                   0000903a    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
-                  00009044    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
-                  0000904d    00000008     F2837xD_CodeStartBranch.obj (.text)
-                  00009055    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
-                  0000905d    00000002                            : pre_init.c.obj (.text)
+                  00009044    00000009                        : sysctl.obj (.text:SysCtl_serviceWatchdog)
+                  0000904d    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
+                  00009056    00000008     F2837xD_CodeStartBranch.obj (.text)
+                  0000905e    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  00009066    00000002                            : pre_init.c.obj (.text)
 
 .text.4    0    0000b000    00000800     
                   0000b000    000007e6     FOC_auto_start.obj (.text)
@@ -203,9 +204,9 @@ MODULE SUMMARY
        Module                        code   ro data   rw data
        ------                        ----   -------   -------
     .\
-       FOC_auto_start.obj            2503   62        159    
+       FOC_auto_start.obj            2511   62        159    
     +--+-----------------------------+------+---------+---------+
-       Total:                        2503   62        159    
+       Total:                        2511   62        159    
                                                              
     .\device\
        device.obj                    893    0         6      
@@ -247,7 +248,7 @@ MODULE SUMMARY
        Stack:                        0      0         256    
        Linker Generated:             0      64        0      
     +--+-----------------------------+------+---------+---------+
-       Grand Total:                  6245   605       432    
+       Grand Total:                  6253   605       432    
 
 
 LINKER GENERATED COPY TABLES
@@ -411,7 +412,7 @@ abs   00000000  Cla1funcsLoadSize
 0     000089c6  SysCtl_getDeviceParametric               
 0     00008f02  SysCtl_getLowSpeedClock                  
 0     00008bfa  SysCtl_selectOscSource                   
-0     00008767  SysCtl_selectXTAL                        
+0     0000876f  SysCtl_selectXTAL                        
 0     0000837d  SysCtl_setClock                          
 0     00000160  __TI_CINIT_Base                          
 0     00000168  __TI_CINIT_Limit                         
@@ -423,7 +424,7 @@ abs   00000100  __TI_STACK_SIZE
 0     00008de9  __TI_auto_init_nobinit_nopinit           
 1     0000c2d8  __TI_cleanup_ptr                         
 0     00008dbb  __TI_decompress_lzss                     
-0     00009055  __TI_decompress_none                     
+0     0000905e  __TI_decompress_none                     
 1     0000c2da  __TI_dtors_ptr                           
 1     0000c2d6  __TI_enable_exit_profile_output          
 abs   ffffffff  __TI_pprof_out_hndl                      
@@ -439,14 +440,14 @@ n/a   UNDEFED   __c_args__
 0     00009019  _epilog_c28x_1                           
 0     0000901d  _epilog_c28x_2                           
 1     0000c2e8  _lock                                    
-0     0000904c  _nop                                     
+0     00009055  _nop                                     
 0     00008f1c  _prolog_c28x_1                           
 0     00008f20  _prolog_c28x_2                           
 0     00008f28  _prolog_c28x_3                           
-0     00009048  _register_lock                           
-0     00009044  _register_unlock                         
-0     00008e65  _system_post_cinit                       
-0     0000905d  _system_pre_init                         
+0     00009051  _register_lock                           
+0     0000904d  _register_unlock                         
+0     000087ff  _system_post_cinit                       
+0     00009066  _system_pre_init                         
 1     0000c2ea  _unlock                                  
 0     00008e14  abort                                    
 0     00008586  adc_isr                                  
@@ -532,7 +533,8 @@ page  address   name
 0     00008205  Device_bootCPU2                          
 0     0000837d  SysCtl_setClock                          
 0     00008586  adc_isr                                  
-0     00008767  SysCtl_selectXTAL                        
+0     0000876f  SysCtl_selectXTAL                        
+0     000087ff  _system_post_cinit                       
 0     00008800  fmodf                                    
 0     000088cf  __c28xabi_divf                           
 0     00008957  ADC_setINLTrim                           
@@ -555,7 +557,6 @@ page  address   name
 0     00008e14  C$$EXIT                                  
 0     00008e14  abort                                    
 0     00008e16  exit                                     
-0     00008e65  _system_post_cinit                       
 0     00008e66  sqrtf                                    
 0     00008eac  Interrupt_initVectorTable                
 0     00008eca  memcpy                                   
@@ -571,11 +572,11 @@ page  address   name
 0     0000901d  _epilog_c28x_2                           
 0     00009030  Interrupt_illegalOperationHandler        
 0     0000903a  Interrupt_nmiHandler                     
-0     00009044  _register_unlock                         
-0     00009048  _register_lock                           
-0     0000904c  _nop                                     
-0     00009055  __TI_decompress_none                     
-0     0000905d  _system_pre_init                         
+0     0000904d  _register_unlock                         
+0     00009051  _register_lock                           
+0     00009055  _nop                                     
+0     0000905e  __TI_decompress_none                     
+0     00009066  _system_pre_init                         
 0     0000b000  svpwm_compute                            
 0     0000b08f  clampf_val                               
 0     0000b0a0  pi_iq                                    
