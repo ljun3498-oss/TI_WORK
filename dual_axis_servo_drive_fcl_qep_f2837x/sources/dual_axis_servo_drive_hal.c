@@ -1483,8 +1483,27 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
         // TZA事件可以强制EPWMxA
         // TZB事件可以强制EPWMxB
 
-        // EPWMxA将变为低电平
-        // EPWMxB将变为低电平
+#if((BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2))
+        // LEVEL1/LEVEL2 调试：设置为 DISABLE，TZ事件不影响PWM输出
+        // 因为ADC偏移校准未完成时CMPSS会误触发
+        EPWM_setTripZoneAction(obj->pwmHandle[cnt],
+                               EPWM_TZ_ACTION_EVENT_TZA,
+                               EPWM_TZ_ACTION_DISABLE);
+
+        EPWM_setTripZoneAction(obj->pwmHandle[cnt],
+                               EPWM_TZ_ACTION_EVENT_TZB,
+                               EPWM_TZ_ACTION_DISABLE);
+
+        // DCAEVT1/DCAEVT2 动作也设为 DISABLE
+        EPWM_setTripZoneAction(obj->pwmHandle[cnt],
+                               EPWM_TZ_ACTION_EVENT_DCAEVT1,
+                               EPWM_TZ_ACTION_DISABLE);
+
+        EPWM_setTripZoneAction(obj->pwmHandle[cnt],
+                               EPWM_TZ_ACTION_EVENT_DCAEVT2,
+                               EPWM_TZ_ACTION_DISABLE);
+#else
+        // LEVEL3+ 正常运行：TZ事件强制PWM输出低电平，提供硬件过流保护
         EPWM_setTripZoneAction(obj->pwmHandle[cnt],
                                EPWM_TZ_ACTION_EVENT_TZA,
                                EPWM_TZ_ACTION_LOW);
@@ -1492,6 +1511,7 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
         EPWM_setTripZoneAction(obj->pwmHandle[cnt],
                                EPWM_TZ_ACTION_EVENT_TZB,
                                EPWM_TZ_ACTION_LOW);
+#endif
     }
 
     // 清除EPWM触发标志
