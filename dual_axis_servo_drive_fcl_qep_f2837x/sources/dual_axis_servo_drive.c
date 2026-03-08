@@ -351,6 +351,22 @@ void main(void)
     motorVars[1].speedRef = speedRef;
     motorVars[0].isrTicker = 1;
     motorVars[1].isrTicker = 1;
+#elif(BUILDLEVEL == FCL_LEVEL3)
+    // =====================================================================
+    // LEVEL3 初始化：设置控制状态为运行（电流环+速度环）
+    // =====================================================================
+    flagSyncRun = true;
+    ctrlState = CTRL_RUN;
+    runMotor = MOTOR_RUN;
+    motorVars[0].runMotor = MOTOR_RUN;
+    motorVars[0].ctrlState = CTRL_RUN;
+    motorVars[1].runMotor = MOTOR_RUN;
+    motorVars[1].ctrlState = CTRL_RUN;
+    speedRef = 0.02;
+    motorVars[0].speedRef = speedRef;
+    motorVars[1].speedRef = speedRef;
+    motorVars[0].isrTicker = 1;
+    motorVars[1].isrTicker = 1;
 #endif
 
     // 清除电机1的任何虚假OST和DCAEVT1故障标志
@@ -508,7 +524,10 @@ void main(void)
     enableFlag = true;            // 设置使能标志为真，自动启动系统
 
     flagSyncRun = true;           // 启用双电机同步运行功能
+    // 对于已显式配置自动运行的构建级别，避免这里覆盖为STOP
+#if (BUILDLEVEL != FCL_LEVEL1) && (BUILDLEVEL != FCL_LEVEL2) && (BUILDLEVEL != FCL_LEVEL3)
     ctrlState = CTRL_STOP;        // 初始控制状态设置为停止，避免意外启动
+#endif
 #endif
 
     // 等待使能标志设置
@@ -542,8 +561,11 @@ void main(void)
     HAL_enableInterrupts(halMtrHandle[MTR_2]);  // 启用电机2的中断系统
 
     // 清除闩锁标志
+    // 对于LEVEL1/2/3自动运行调试，避免启动时触发clearTrip流程把ctrlState拉回STOP
+#if (BUILDLEVEL != FCL_LEVEL1) && (BUILDLEVEL != FCL_LEVEL2) && (BUILDLEVEL != FCL_LEVEL3)
     motorVars[0].clearTripFlagDMC = 1;
     motorVars[1].clearTripFlagDMC = 1;
+#endif
 
     // 禁用驱动栅极（安全模式，待运行时由runMotorControl启用）
     GPIO_writePin(motorVars[0].drvEnableGateGPIO, 1);
@@ -2596,8 +2618,8 @@ void runMotorControl(MOTOR_Vars_t *pMotor, HAL_MTR_Handle mtrHandle)
     // 母线电压滤波
     pMotor->Vdcbus = (pMotor->Vdcbus * 0.8) + (pMotor->FCL_params.Vdcbus * 0.2);  // 使用一阶低通滤波器平滑母线电压测量值
 
-#if(BUILDLEVEL != FCL_LEVEL1) && (BUILDLEVEL != FCL_LEVEL2)
-    // 母线电压监控（LEVEL1/LEVEL2调试时跳过）
+#if(BUILDLEVEL != FCL_LEVEL1) && (BUILDLEVEL != FCL_LEVEL2) && (BUILDLEVEL != FCL_LEVEL3)
+    // 母线电压监控（LEVEL1/LEVEL2/LEVEL3调试时跳过）
     if( (pMotor->Vdcbus > pMotor->VdcbusMax) ||
             (pMotor->Vdcbus < pMotor->VdcbusMin) )  // 检查母线电压是否超出允许范围
     {
@@ -2630,8 +2652,8 @@ void runMotorControl(MOTOR_Vars_t *pMotor, HAL_MTR_Handle mtrHandle)
     EPWM_setActionQualifierContSWForceAction(obj->pwmHandle[0],
                                               EPWM_AQ_OUTPUT_A,
                                               EPWM_AQ_SW_DISABLED);
-#elif(BUILDLEVEL == FCL_LEVEL2)
-    // LEVEL2调试：持续清除TripZone锁存，避免单路PWM被硬件锁低
+#elif(BUILDLEVEL == FCL_LEVEL2) || (BUILDLEVEL == FCL_LEVEL3)
+    // LEVEL2/LEVEL3调试：持续清除TripZone锁存，避免单路PWM被硬件锁低
     EPWM_clearTripZoneFlag(obj->pwmHandle[0],
                            (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
     EPWM_clearTripZoneFlag(obj->pwmHandle[1],

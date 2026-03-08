@@ -340,6 +340,11 @@ void HAL_setParams(HAL_Handle handle)
     Device_initGPIO();    // 初始化GPIO设备
 
     //
+    // 启用CLA1时钟
+    //
+    SysCtl_enablePeripheral(SYSCTL_PERIPH_CLK_CLA1);    // 启用CLA1时钟
+
+    //
     // 设置CLA
     //
     HAL_setupCLA(handle);    // 调用函数设置CLA（控制律加速器）
@@ -1133,12 +1138,12 @@ void HAL_setupGPIOs(HAL_Handle handle)
     GPIO_setPadConfig(94, GPIO_PIN_TYPE_STD);    // 设置GPIO94的引脚类型为标准类型
 
     // 电机1的QEP（正交编码器）索引引脚配置
-    // GPIO99->QEP1I（电机1的编码器索引相）
-    GPIO_setMasterCore(99, GPIO_CORE_CPU1);    // 设置GPIO99的主核为CPU1
-    GPIO_setPinConfig(GPIO_99_EQEP1I);    // 配置GPIO99为EQEP1I功能
-    GPIO_setDirectionMode(99, GPIO_DIR_MODE_IN);    // 设置GPIO99为输入模式
-    GPIO_setPadConfig(99, GPIO_PIN_TYPE_STD);    // 设置GPIO99的引脚类型为标准类型
-    GPIO_setQualificationMode(99, GPIO_QUAL_3SAMPLE);    // 设置GPIO99的资格模式为3采样
+    // GPIO23->QEP1I（电机1的编码器索引相）
+    GPIO_setMasterCore(23, GPIO_CORE_CPU1);    // 设置GPIO23的主核为CPU1
+    GPIO_setPinConfig(GPIO_23_EQEP1I);    // 配置GPIO23为EQEP1I功能
+    GPIO_setDirectionMode(23, GPIO_DIR_MODE_IN);    // 设置GPIO23为输入模式
+    GPIO_setPadConfig(23, GPIO_PIN_TYPE_STD);    // 设置GPIO23的引脚类型为标准类型
+    GPIO_setQualificationMode(23, GPIO_QUAL_3SAMPLE);    // 设置GPIO23的资格模式为3采样
 
     // 参考电压引脚配置
     // GPIO111->Vref（参考电压输入）
@@ -1483,8 +1488,8 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
         // TZA事件可以强制EPWMxA
         // TZB事件可以强制EPWMxB
 
-#if((BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2))
-        // LEVEL1/LEVEL2 调试：设置为 DISABLE，TZ事件不影响PWM输出
+#if((BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2) || (BUILDLEVEL == FCL_LEVEL3))
+        // LEVEL1/LEVEL2/LEVEL3 调试：设置为 DISABLE，TZ事件不影响PWM输出
         // 因为ADC偏移校准未完成时CMPSS会误触发
         EPWM_setTripZoneAction(obj->pwmHandle[cnt],
                                EPWM_TZ_ACTION_EVENT_TZA,
@@ -1503,7 +1508,7 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
                                EPWM_TZ_ACTION_EVENT_DCAEVT2,
                                EPWM_TZ_ACTION_DISABLE);
 #else
-        // LEVEL3+ 正常运行：TZ事件强制PWM输出低电平，提供硬件过流保护
+        // LEVEL4+ 正常运行：TZ事件强制PWM输出低电平，提供硬件过流保护
         EPWM_setTripZoneAction(obj->pwmHandle[cnt],
                                EPWM_TZ_ACTION_EVENT_TZA,
                                EPWM_TZ_ACTION_LOW);

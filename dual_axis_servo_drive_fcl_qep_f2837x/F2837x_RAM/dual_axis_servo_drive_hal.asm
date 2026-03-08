@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Thu Mar  5 20:48:12 2026                 *
+;* Date/Time created: Sun Mar  8 20:18:28 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -489,8 +489,8 @@ $C$DW$66	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$66, DW_AT_decl_column(0x17)
 
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{4E893D26-6AC3-4A47-B3EC-DB21883CD239} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{299D1711-7AD9-4427-9190-4CAD3EB3F28B} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{7881544C-7B54-41CC-B15C-86D5D1DE4DCC} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{64CE8F06-AE3B-412A-884E-3B8DCFC99A4D} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{0260D9E7-225A-4DB3-AA57-364957D2D361} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{04D249CF-ADEC-4193-85CF-1DFD7CF5B6CD} 
 	.sect	".text:__signbitl"
 	.clink
 	.global	||__signbitl||
@@ -2679,10 +2679,10 @@ $C$DW$197	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$197, DW_AT_linkage_name("HAL_setupQEP")
 	.dwattr $C$DW$197, DW_AT_external
 	.dwattr $C$DW$197, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$197, DW_AT_decl_line(0x609)
+	.dwattr $C$DW$197, DW_AT_decl_line(0x60e)
 	.dwattr $C$DW$197, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$197, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1546,column 1,is_stmt,address ||HAL_setupQEP||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1551,column 1,is_stmt,address ||HAL_setupQEP||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupQEP||
 $C$DW$198	.dwtag  DW_TAG_formal_parameter
@@ -2754,23 +2754,23 @@ $C$DW$201	.dwtag  DW_TAG_variable
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1434,column 5,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[AR1]      ; [CPU_ALU] |1434| 
         MOVB      XAR0,#21              ; [CPU_ALU] |1434| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1561,column 5,is_stmt,isa 0
-        MOVL      XAR6,#||halMtr||      ; [CPU_ARAU] |1561| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1566,column 5,is_stmt,isa 0
+        MOVL      XAR6,#||halMtr||      ; [CPU_ARAU] |1566| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1434,column 5,is_stmt,isa 0
         AND       AL,*+XAR5[AR0],#0xff9f ; [CPU_ALU] |1434| 
         MOVB      XAR0,#21              ; [CPU_ALU] |1434| 
         ORB       AL,#0x14              ; [CPU_ALU] |1434| 
         MOV       *+XAR5[AR0],AL        ; [CPU_ALU] |1434| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1561,column 5,is_stmt,isa 0
-        MOVL      ACC,XAR6              ; [CPU_ALU] |1561| 
-        CMPL      ACC,XAR4              ; [CPU_ALU] |1561| 
-        B         ||$C$L24||,EQ         ; [CPU_ALU] |1561| 
-        ; branchcc occurs ; [] |1561| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1570,column 10,is_stmt,isa 0
-        ADDB      ACC,#18               ; [CPU_ALU] |1570| 
-        CMPL      ACC,XAR4              ; [CPU_ALU] |1570| 
-        B         ||$C$L26||,NEQ        ; [CPU_ALU] |1570| 
-        ; branchcc occurs ; [] |1570| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1566,column 5,is_stmt,isa 0
+        MOVL      ACC,XAR6              ; [CPU_ALU] |1566| 
+        CMPL      ACC,XAR4              ; [CPU_ALU] |1566| 
+        B         ||$C$L24||,EQ         ; [CPU_ALU] |1566| 
+        ; branchcc occurs ; [] |1566| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1575,column 10,is_stmt,isa 0
+        ADDB      ACC,#18               ; [CPU_ALU] |1575| 
+        CMPL      ACC,XAR4              ; [CPU_ALU] |1575| 
+        B         ||$C$L26||,NEQ        ; [CPU_ALU] |1575| 
+        ; branchcc occurs ; [] |1575| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 454,column 5,is_stmt,isa 0
         MOVB      XAR0,#21              ; [CPU_ALU] |454| 
         AND       AL,*+XAR5[AR0],#0xdfff ; [CPU_ALU] |454| 
@@ -2791,9 +2791,9 @@ $C$DW$201	.dwtag  DW_TAG_variable
         MOVL      *+XAR5[4],XAR2        ; [CPU_ALU] |460| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 1137,column 5,is_stmt,isa 0
         MOVL      *+XAR6[AR0],XAR7      ; [CPU_ALU] |1137| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1577,column 9,is_stmt,isa 0
-        B         ||$C$L25||,UNC        ; [CPU_ALU] |1577| 
-        ; branch occurs ; [] |1577| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1582,column 9,is_stmt,isa 0
+        B         ||$C$L25||,UNC        ; [CPU_ALU] |1582| 
+        ; branch occurs ; [] |1582| 
 ||$C$L24||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/eqep.h",line 454,column 5,is_stmt,isa 0
         MOVB      XAR0,#21              ; [CPU_ALU] |454| 
@@ -2863,7 +2863,7 @@ $C$DW$202	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$197, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$197, DW_AT_TI_end_line(0x63d)
+	.dwattr $C$DW$197, DW_AT_TI_end_line(0x642)
 	.dwattr $C$DW$197, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$197
@@ -2879,10 +2879,10 @@ $C$DW$203	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$203, DW_AT_linkage_name("HAL_setupMotorPWMs")
 	.dwattr $C$DW$203, DW_AT_external
 	.dwattr $C$DW$203, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$203, DW_AT_decl_line(0x4d0)
+	.dwattr $C$DW$203, DW_AT_decl_line(0x4d5)
 	.dwattr $C$DW$203, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$203, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1233,column 1,is_stmt,address ||HAL_setupMotorPWMs||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1238,column 1,is_stmt,address ||HAL_setupMotorPWMs||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupMotorPWMs||
 $C$DW$204	.dwtag  DW_TAG_formal_parameter
@@ -3095,9 +3095,9 @@ $C$DW$207	.dwtag  DW_TAG_variable
         AND       AL,*+XAR5[0],#0xffcf  ; [CPU_ALU] |1706| 
         MOVL      XAR5,*XAR7++          ; [CPU_ALU] |1706| 
         MOV       *+XAR5[0],AL          ; [CPU_ALU] |1706| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1244,column 18,is_stmt,isa 0
-        BANZ      ||$C$L27||,AR6--      ; [CPU_ALU] |1244| 
-        ; branchcc occurs ; [] |1244| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1249,column 18,is_stmt,isa 0
+        BANZ      ||$C$L27||,AR6--      ; [CPU_ALU] |1249| 
+        ; branchcc occurs ; [] |1249| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 2753,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |2753| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 2756,column 5,is_stmt,isa 0
@@ -3106,17 +3106,17 @@ $C$DW$207	.dwtag  DW_TAG_variable
         MOV32     *(0:0x7940),ACC       ; [CPU_FPU] |2756| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 2760,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |2760| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1301,column 5,is_stmt,isa 0
-        MOVL      XAR5,#||halMtr||      ; [CPU_ARAU] |1301| 
-        MOVL      ACC,XAR5              ; [CPU_ALU] |1301| 
-        CMPL      ACC,XAR4              ; [CPU_ALU] |1301| 
-        B         ||$C$L28||,EQ         ; [CPU_ALU] |1301| 
-        ; branchcc occurs ; [] |1301| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1319,column 10,is_stmt,isa 0
-        ADDB      ACC,#18               ; [CPU_ALU] |1319| 
-        CMPL      ACC,XAR4              ; [CPU_ALU] |1319| 
-        B         ||$C$L29||,NEQ        ; [CPU_ALU] |1319| 
-        ; branchcc occurs ; [] |1319| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1306,column 5,is_stmt,isa 0
+        MOVL      XAR5,#||halMtr||      ; [CPU_ARAU] |1306| 
+        MOVL      ACC,XAR5              ; [CPU_ALU] |1306| 
+        CMPL      ACC,XAR4              ; [CPU_ALU] |1306| 
+        B         ||$C$L28||,EQ         ; [CPU_ALU] |1306| 
+        ; branchcc occurs ; [] |1306| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1324,column 10,is_stmt,isa 0
+        ADDB      ACC,#18               ; [CPU_ALU] |1324| 
+        CMPL      ACC,XAR4              ; [CPU_ALU] |1324| 
+        B         ||$C$L29||,NEQ        ; [CPU_ALU] |1324| 
+        ; branchcc occurs ; [] |1324| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 2148,column 5,is_stmt,isa 0
         MOVB      ACC,#96               ; [CPU_ALU] |2148| 
         ADDL      ACC,*+XAR4[0]         ; [CPU_ALU] |2148| 
@@ -3163,9 +3163,9 @@ $C$DW$207	.dwtag  DW_TAG_variable
         ADDL      ACC,*+XAR4[4]         ; [CPU_ALU] |2182| 
         MOVL      XAR5,ACC              ; [CPU_ALU] |2182| 
         MOV       *+XAR5[0],#5000       ; [CPU_ALU] |2182| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1329,column 9,is_stmt,isa 0
-        B         ||$C$L29||,UNC        ; [CPU_ALU] |1329| 
-        ; branch occurs ; [] |1329| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1334,column 9,is_stmt,isa 0
+        B         ||$C$L29||,UNC        ; [CPU_ALU] |1334| 
+        ; branch occurs ; [] |1334| 
 ||$C$L28||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 1818,column 5,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[0]        ; [CPU_ALU] |1818| 
@@ -3266,7 +3266,7 @@ $C$DW$208	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$203, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$203, DW_AT_TI_end_line(0x548)
+	.dwattr $C$DW$203, DW_AT_TI_end_line(0x54d)
 	.dwattr $C$DW$203, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$203
@@ -3282,10 +3282,10 @@ $C$DW$209	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$209, DW_AT_linkage_name("HAL_setupMotorFaultProtection")
 	.dwattr $C$DW$209, DW_AT_external
 	.dwattr $C$DW$209, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$209, DW_AT_decl_line(0x551)
+	.dwattr $C$DW$209, DW_AT_decl_line(0x556)
 	.dwattr $C$DW$209, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$209, DW_AT_TI_max_frame_size(-10)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1363,column 1,is_stmt,address ||HAL_setupMotorFaultProtection||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1368,column 1,is_stmt,address ||HAL_setupMotorFaultProtection||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupMotorFaultProtection||
 $C$DW$210	.dwtag  DW_TAG_formal_parameter
@@ -3434,101 +3434,101 @@ $C$DW$229	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -8
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -10
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1374,column 5,is_stmt,isa 0
-        MOVL      XAR5,#||halMtr||      ; [CPU_ARAU] |1374| 
-        MOVL      ACC,XAR5              ; [CPU_ALU] |1374| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1363,column 1,is_stmt,isa 0
-        MOVL      *-SP[2],XAR4          ; [CPU_ALU] |1363| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1374,column 5,is_stmt,isa 0
-        CMPL      ACC,XAR4              ; [CPU_ALU] |1374| 
-        B         ||$C$L30||,EQ         ; [CPU_ALU] |1374| 
-        ; branchcc occurs ; [] |1374| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1410,column 10,is_stmt,isa 0
-        MOVL      XAR6,*-SP[2]          ; [CPU_ALU] |1410| 
-        ADDB      ACC,#18               ; [CPU_ALU] |1410| 
-        CMPL      ACC,XAR6              ; [CPU_ALU] |1410| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1368,column 44,is_stmt,isa 0
-        MOVB      XAR7,#3,NEQ           ; [CPU_ALU] |1368| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1371,column 20,is_stmt,isa 0
-        MOVB      XAR3,#0,NEQ           ; [CPU_ALU] |1371| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1372,column 20,is_stmt,isa 0
-        MOVB      XAR2,#0,NEQ           ; [CPU_ALU] |1372| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1379,column 5,is_stmt,isa 0
+        MOVL      XAR5,#||halMtr||      ; [CPU_ARAU] |1379| 
+        MOVL      ACC,XAR5              ; [CPU_ALU] |1379| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1368,column 1,is_stmt,isa 0
+        MOVL      *-SP[2],XAR4          ; [CPU_ALU] |1368| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1379,column 5,is_stmt,isa 0
+        CMPL      ACC,XAR4              ; [CPU_ALU] |1379| 
+        B         ||$C$L30||,EQ         ; [CPU_ALU] |1379| 
+        ; branchcc occurs ; [] |1379| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1415,column 10,is_stmt,isa 0
+        MOVL      XAR6,*-SP[2]          ; [CPU_ALU] |1415| 
+        ADDB      ACC,#18               ; [CPU_ALU] |1415| 
+        CMPL      ACC,XAR6              ; [CPU_ALU] |1415| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1373,column 44,is_stmt,isa 0
+        MOVB      XAR7,#3,NEQ           ; [CPU_ALU] |1373| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1376,column 20,is_stmt,isa 0
+        MOVB      XAR3,#0,NEQ           ; [CPU_ALU] |1376| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1377,column 20,is_stmt,isa 0
+        MOVB      XAR2,#0,NEQ           ; [CPU_ALU] |1377| 
         B         ||$C$L31||,NEQ        ; [CPU_ALU] 
         ; branchcc occurs ; [] 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1412,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#15767            ; [CPU_FPU] |1412| 
-        MPYF32    R0H,R0H,#17664        ; [CPU_FPU] |1412| 
-        MOVXI     R1H,#46118            ; [CPU_FPU] |1412| 
-        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |1412| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1417,column 9,is_stmt,isa 0
+        MOVIZ     R1H,#15767            ; [CPU_FPU] |1417| 
+        MPYF32    R0H,R0H,#17664        ; [CPU_FPU] |1417| 
+        MOVXI     R1H,#46118            ; [CPU_FPU] |1417| 
+        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |1417| 
         NOP       ; [CPU_ALU] 
-        ADDF32    R1H,R0H,#17664        ; [CPU_FPU] |1412| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1413,column 9,is_stmt,isa 0
-        SUBF32    R0H,#17664,R0H        ; [CPU_FPU] |1413| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1412,column 9,is_stmt,isa 0
-        F32TOUI16 R1H,R1H               ; [CPU_FPU] |1412| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1413,column 9,is_stmt,isa 0
-        F32TOUI16 R0H,R0H               ; [CPU_FPU] |1413| 
+        ADDF32    R1H,R0H,#17664        ; [CPU_FPU] |1417| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1418,column 9,is_stmt,isa 0
+        SUBF32    R0H,#17664,R0H        ; [CPU_FPU] |1418| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1417,column 9,is_stmt,isa 0
+        F32TOUI16 R1H,R1H               ; [CPU_FPU] |1417| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1418,column 9,is_stmt,isa 0
+        F32TOUI16 R0H,R0H               ; [CPU_FPU] |1418| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1412,column 9,is_stmt,isa 0
-        MOV32     XAR3,R1H              ; [CPU_FPU] |1412| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1413,column 9,is_stmt,isa 0
-        MOV32     XAR2,R0H              ; [CPU_FPU] |1413| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1417,column 9,is_stmt,isa 0
+        MOV32     XAR3,R1H              ; [CPU_FPU] |1417| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1418,column 9,is_stmt,isa 0
+        MOV32     XAR2,R0H              ; [CPU_FPU] |1418| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 969,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |969| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 971,column 5,is_stmt,isa 0
         MOVB      AL,#14                ; [CPU_ALU] |971| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1422,column 9,is_stmt,isa 0
-        MOVB      XAR6,#0               ; [CPU_ALU] |1422| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1427,column 9,is_stmt,isa 0
+        MOVB      XAR6,#0               ; [CPU_ALU] |1427| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 971,column 5,is_stmt,isa 0
         MOV       *(0:0x7901),AL        ; [CPU_ALU] |971| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1423,column 9,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1423| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1422,column 9,is_stmt,isa 0
-        MOV32     *(0:0x7a04),XAR6      ; [CPU_FPU] |1422| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1423,column 9,is_stmt,isa 0
-        MOV32     *(0:0x7a06),ACC       ; [CPU_FPU] |1423| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1424,column 9,is_stmt,isa 0
-        EDIS      ; [CPU_ALU] |1424| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1428,column 9,is_stmt,isa 0
-        MOVB      AL,#2                 ; [CPU_ALU] |1428| 
-        MOV       AH,#4097              ; [CPU_ALU] |1428| 
+        MOVB      ACC,#0                ; [CPU_ALU] |1428| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1427,column 9,is_stmt,isa 0
+        MOV32     *(0:0x7a04),XAR6      ; [CPU_FPU] |1427| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1428,column 9,is_stmt,isa 0
+        MOV32     *(0:0x7a06),ACC       ; [CPU_FPU] |1428| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1429,column 9,is_stmt,isa 0
+        EDIS      ; [CPU_ALU] |1429| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1433,column 9,is_stmt,isa 0
+        MOVB      AL,#2                 ; [CPU_ALU] |1433| 
+        MOV       AH,#4097              ; [CPU_ALU] |1433| 
 $C$DW$230	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$230, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$230, DW_AT_name("XBAR_setEPWMMuxConfig")
 	.dwattr $C$DW$230, DW_AT_TI_call
 
-        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1428| 
-        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1428| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1431,column 9,is_stmt,isa 0
-        MOVB      AL,#2                 ; [CPU_ALU] |1431| 
-        MOV       AH,#4097              ; [CPU_ALU] |1431| 
+        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1433| 
+        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1433| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1436,column 9,is_stmt,isa 0
+        MOVB      AL,#2                 ; [CPU_ALU] |1436| 
+        MOV       AH,#4097              ; [CPU_ALU] |1436| 
 $C$DW$231	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$231, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$231, DW_AT_name("XBAR_setEPWMMuxConfig")
 	.dwattr $C$DW$231, DW_AT_TI_call
 
-        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1431| 
-        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1431| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1434,column 9,is_stmt,isa 0
-        MOVB      AL,#2                 ; [CPU_ALU] |1434| 
-        MOV       AH,#1025              ; [CPU_ALU] |1434| 
+        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1436| 
+        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1436| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1439,column 9,is_stmt,isa 0
+        MOVB      AL,#2                 ; [CPU_ALU] |1439| 
+        MOV       AH,#1025              ; [CPU_ALU] |1439| 
 $C$DW$232	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$232, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$232, DW_AT_name("XBAR_setEPWMMuxConfig")
 	.dwattr $C$DW$232, DW_AT_TI_call
 
-        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1434| 
-        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1434| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1437,column 9,is_stmt,isa 0
-        MOVB      AL,#2                 ; [CPU_ALU] |1437| 
-        MOV       AH,#1537              ; [CPU_ALU] |1437| 
+        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1439| 
+        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1439| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1442,column 9,is_stmt,isa 0
+        MOVB      AL,#2                 ; [CPU_ALU] |1442| 
+        MOV       AH,#1537              ; [CPU_ALU] |1442| 
 $C$DW$233	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$233, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$233, DW_AT_name("XBAR_setEPWMMuxConfig")
 	.dwattr $C$DW$233, DW_AT_TI_call
 
-        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1437| 
-        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1437| 
+        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1442| 
+        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1442| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 896,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |896| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 898,column 5,is_stmt,isa 0
@@ -3541,86 +3541,86 @@ $C$DW$233	.dwtag  DW_TAG_TI_branch
         MOV32     *(0:0x7a22),ACC       ; [CPU_FPU] |867| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 868,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |868| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1415,column 9,is_stmt,isa 0
-        MOVB      XAR7,#4               ; [CPU_ALU] |1415| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1443,column 9,is_stmt,isa 0
-        B         ||$C$L31||,UNC        ; [CPU_ALU] |1443| 
-        ; branch occurs ; [] |1443| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1420,column 9,is_stmt,isa 0
+        MOVB      XAR7,#4               ; [CPU_ALU] |1420| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1448,column 9,is_stmt,isa 0
+        B         ||$C$L31||,UNC        ; [CPU_ALU] |1448| 
+        ; branch occurs ; [] |1448| 
 ||$C$L30||:    
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1378,column 9,is_stmt,isa 0
-        MOVIZ     R1H,#15692            ; [CPU_FPU] |1378| 
-        MPYF32    R0H,R0H,#17664        ; [CPU_FPU] |1378| 
-        MOVXI     R1H,#52429            ; [CPU_FPU] |1378| 
-        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |1378| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1383,column 9,is_stmt,isa 0
+        MOVIZ     R1H,#15692            ; [CPU_FPU] |1383| 
+        MPYF32    R0H,R0H,#17664        ; [CPU_FPU] |1383| 
+        MOVXI     R1H,#52429            ; [CPU_FPU] |1383| 
+        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |1383| 
         NOP       ; [CPU_ALU] 
-        ADDF32    R1H,R0H,#17664        ; [CPU_FPU] |1378| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1379,column 9,is_stmt,isa 0
-        SUBF32    R0H,#17664,R0H        ; [CPU_FPU] |1379| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1378,column 9,is_stmt,isa 0
-        F32TOUI16 R1H,R1H               ; [CPU_FPU] |1378| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1379,column 9,is_stmt,isa 0
-        F32TOUI16 R0H,R0H               ; [CPU_FPU] |1379| 
+        ADDF32    R1H,R0H,#17664        ; [CPU_FPU] |1383| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1384,column 9,is_stmt,isa 0
+        SUBF32    R0H,#17664,R0H        ; [CPU_FPU] |1384| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1383,column 9,is_stmt,isa 0
+        F32TOUI16 R1H,R1H               ; [CPU_FPU] |1383| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1384,column 9,is_stmt,isa 0
+        F32TOUI16 R0H,R0H               ; [CPU_FPU] |1384| 
         NOP       ; [CPU_ALU] 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1378,column 9,is_stmt,isa 0
-        MOV32     XAR3,R1H              ; [CPU_FPU] |1378| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1379,column 9,is_stmt,isa 0
-        MOV32     XAR2,R0H              ; [CPU_FPU] |1379| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1383,column 9,is_stmt,isa 0
+        MOV32     XAR3,R1H              ; [CPU_FPU] |1383| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1384,column 9,is_stmt,isa 0
+        MOV32     XAR2,R0H              ; [CPU_FPU] |1384| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 969,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |969| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 971,column 5,is_stmt,isa 0
         MOVB      AL,#24                ; [CPU_ALU] |971| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1386,column 9,is_stmt,isa 0
-        MOVB      XAR6,#0               ; [CPU_ALU] |1386| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1391,column 9,is_stmt,isa 0
+        MOVB      XAR6,#0               ; [CPU_ALU] |1391| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 971,column 5,is_stmt,isa 0
         MOV       *(0:0x7900),AL        ; [CPU_ALU] |971| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1387,column 9,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1387| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1386,column 9,is_stmt,isa 0
-        MOV32     *(0:0x7a00),XAR6      ; [CPU_FPU] |1386| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1387,column 9,is_stmt,isa 0
-        MOV32     *(0:0x7a02),ACC       ; [CPU_FPU] |1387| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1388,column 9,is_stmt,isa 0
-        EDIS      ; [CPU_ALU] |1388| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1392,column 9,is_stmt,isa 0
-        MOVB      AL,#0                 ; [CPU_ALU] |1392| 
-        MOVB      AH,#1                 ; [CPU_ALU] |1392| 
+        MOVB      ACC,#0                ; [CPU_ALU] |1392| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1391,column 9,is_stmt,isa 0
+        MOV32     *(0:0x7a00),XAR6      ; [CPU_FPU] |1391| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1392,column 9,is_stmt,isa 0
+        MOV32     *(0:0x7a02),ACC       ; [CPU_FPU] |1392| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1393,column 9,is_stmt,isa 0
+        EDIS      ; [CPU_ALU] |1393| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1397,column 9,is_stmt,isa 0
+        MOVB      AL,#0                 ; [CPU_ALU] |1397| 
+        MOVB      AH,#1                 ; [CPU_ALU] |1397| 
 $C$DW$234	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$234, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$234, DW_AT_name("XBAR_setEPWMMuxConfig")
 	.dwattr $C$DW$234, DW_AT_TI_call
 
-        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1392| 
-        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1392| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1395,column 9,is_stmt,isa 0
-        MOVB      AL,#0                 ; [CPU_ALU] |1395| 
-        MOV       AH,#2049              ; [CPU_ALU] |1395| 
+        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1397| 
+        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1397| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1400,column 9,is_stmt,isa 0
+        MOVB      AL,#0                 ; [CPU_ALU] |1400| 
+        MOV       AH,#2049              ; [CPU_ALU] |1400| 
 $C$DW$235	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$235, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$235, DW_AT_name("XBAR_setEPWMMuxConfig")
 	.dwattr $C$DW$235, DW_AT_TI_call
 
-        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1395| 
-        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1395| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1398,column 9,is_stmt,isa 0
-        MOVB      AL,#0                 ; [CPU_ALU] |1398| 
-        MOV       AH,#5121              ; [CPU_ALU] |1398| 
+        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1400| 
+        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1400| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1403,column 9,is_stmt,isa 0
+        MOVB      AL,#0                 ; [CPU_ALU] |1403| 
+        MOV       AH,#5121              ; [CPU_ALU] |1403| 
 $C$DW$236	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$236, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$236, DW_AT_name("XBAR_setEPWMMuxConfig")
 	.dwattr $C$DW$236, DW_AT_TI_call
 
-        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1398| 
-        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1398| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1401,column 9,is_stmt,isa 0
-        MOVB      AL,#0                 ; [CPU_ALU] |1401| 
-        MOV       AH,#513               ; [CPU_ALU] |1401| 
+        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1403| 
+        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1403| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1406,column 9,is_stmt,isa 0
+        MOVB      AL,#0                 ; [CPU_ALU] |1406| 
+        MOV       AH,#513               ; [CPU_ALU] |1406| 
 $C$DW$237	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$237, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$237, DW_AT_name("XBAR_setEPWMMuxConfig")
 	.dwattr $C$DW$237, DW_AT_TI_call
 
-        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1401| 
-        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1401| 
+        LCR       #||XBAR_setEPWMMuxConfig|| ; [CPU_ALU] |1406| 
+        ; call occurs [#||XBAR_setEPWMMuxConfig||] ; [] |1406| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 896,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |896| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 898,column 5,is_stmt,isa 0
@@ -3633,13 +3633,13 @@ $C$DW$237	.dwtag  DW_TAG_TI_branch
         MOV32     *(0:0x7a20),ACC       ; [CPU_FPU] |867| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\xbar.h",line 868,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |868| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1376,column 9,is_stmt,isa 0
-        MOVB      XAR7,#3               ; [CPU_ALU] |1376| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1381,column 9,is_stmt,isa 0
+        MOVB      XAR7,#3               ; [CPU_ALU] |1381| 
 ||$C$L31||:    
         MOVB      XAR6,#2               ; [CPU_ALU] 
         MOVL      XAR4,*-SP[2]          ; [CPU_ALU] 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1450,column 18,is_stmt,isa 0
-        RPTB      ||$C$L33||,AR6        ; [CPU_ALU] |1450| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1455,column 18,is_stmt,isa 0
+        RPTB      ||$C$L33||,AR6        ; [CPU_ALU] |1455| 
         ; repeat block starts ; [] 
 ||$C$L32||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 601,column 5,is_stmt,isa 0
@@ -3769,19 +3769,19 @@ $C$DW$237	.dwtag  DW_TAG_TI_branch
         EDIS      ; [CPU_ALU] |4107| 
         ; repeat block ends ; [] 
 ||$C$L33||:    
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1518,column 5,is_stmt,isa 0
-        MOVB      ACC,#38               ; [CPU_ALU] |1518| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1523,column 5,is_stmt,isa 0
+        MOVB      ACC,#38               ; [CPU_ALU] |1523| 
 $C$DW$238	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$238, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$238, DW_AT_name("SysCtl_delay")
 	.dwattr $C$DW$238, DW_AT_TI_call
 
-        LCR       #||SysCtl_delay||     ; [CPU_ALU] |1518| 
-        ; call occurs [#||SysCtl_delay||] ; [] |1518| 
+        LCR       #||SysCtl_delay||     ; [CPU_ALU] |1523| 
+        ; call occurs [#||SysCtl_delay||] ; [] |1523| 
         MOVB      XAR6,#2               ; [CPU_ALU] 
-        MOVL      XAR4,*-SP[2]          ; [CPU_ALU] |1518| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1520,column 18,is_stmt,isa 0
-        RPTB      ||$C$L35||,AR6        ; [CPU_ALU] |1520| 
+        MOVL      XAR4,*-SP[2]          ; [CPU_ALU] |1523| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1525,column 18,is_stmt,isa 0
+        RPTB      ||$C$L35||,AR6        ; [CPU_ALU] |1525| 
         ; repeat block starts ; [] 
 ||$C$L34||:    
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4529,column 1,is_stmt,isa 0
@@ -3810,19 +3810,19 @@ $C$DW$238	.dwtag  DW_TAG_TI_branch
         OR        *+XAR5[3],#0x0200     ; [CPU_ALU] |809| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 811,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |811| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1520,column 18,is_stmt,isa 0
-        ADDB      XAR4,#2               ; [CPU_ALU] |1520| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1525,column 18,is_stmt,isa 0
+        ADDB      XAR4,#2               ; [CPU_ALU] |1525| 
         ; repeat block ends ; [] 
 ||$C$L35||:    
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1534,column 5,is_stmt,isa 0
-        MOVB      ACC,#38               ; [CPU_ALU] |1534| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1539,column 5,is_stmt,isa 0
+        MOVB      ACC,#38               ; [CPU_ALU] |1539| 
 $C$DW$239	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$239, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$239, DW_AT_name("SysCtl_delay")
 	.dwattr $C$DW$239, DW_AT_TI_call
 
-        LCR       #||SysCtl_delay||     ; [CPU_ALU] |1534| 
-        ; call occurs [#||SysCtl_delay||] ; [] |1534| 
+        LCR       #||SysCtl_delay||     ; [CPU_ALU] |1539| 
+        ; call occurs [#||SysCtl_delay||] ; [] |1539| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -8
         MOVL      XAR3,*--SP            ; [CPU_ALU] 
@@ -3841,7 +3841,7 @@ $C$DW$240	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$209, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$209, DW_AT_TI_end_line(0x601)
+	.dwattr $C$DW$209, DW_AT_TI_end_line(0x606)
 	.dwattr $C$DW$209, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$209
@@ -3857,10 +3857,10 @@ $C$DW$241	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$241, DW_AT_linkage_name("HAL_setupInterrupts")
 	.dwattr $C$DW$241, DW_AT_external
 	.dwattr $C$DW$241, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$241, DW_AT_decl_line(0x2da)
+	.dwattr $C$DW$241, DW_AT_decl_line(0x2df)
 	.dwattr $C$DW$241, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$241, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 731,column 1,is_stmt,address ||HAL_setupInterrupts||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 736,column 1,is_stmt,address ||HAL_setupInterrupts||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupInterrupts||
 $C$DW$242	.dwtag  DW_TAG_formal_parameter
@@ -3931,20 +3931,20 @@ $C$DW$244	.dwtag  DW_TAG_variable
         MOVB      ACC,#170              ; [CPU_ALU] |4872| 
         ADDL      ACC,*+XAR4[0]         ; [CPU_ALU] |4872| 
         MOVL      XAR6,ACC              ; [CPU_ALU] |4872| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 754,column 5,is_stmt,isa 0
-        MOVL      XAR5,#||halMtr||      ; [CPU_ARAU] |754| 
-        MOVL      ACC,XAR5              ; [CPU_ALU] |754| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 759,column 5,is_stmt,isa 0
+        MOVL      XAR5,#||halMtr||      ; [CPU_ARAU] |759| 
+        MOVL      ACC,XAR5              ; [CPU_ALU] |759| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/epwm.h",line 4872,column 5,is_stmt,isa 0
         OR        *+XAR6[0],#0x0001     ; [CPU_ALU] |4872| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 754,column 5,is_stmt,isa 0
-        CMPL      ACC,XAR4              ; [CPU_ALU] |754| 
-        B         ||$C$L36||,EQ         ; [CPU_ALU] |754| 
-        ; branchcc occurs ; [] |754| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 764,column 10,is_stmt,isa 0
-        ADDB      ACC,#18               ; [CPU_ALU] |764| 
-        CMPL      ACC,XAR4              ; [CPU_ALU] |764| 
-        B         ||$C$L38||,NEQ        ; [CPU_ALU] |764| 
-        ; branchcc occurs ; [] |764| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 759,column 5,is_stmt,isa 0
+        CMPL      ACC,XAR4              ; [CPU_ALU] |759| 
+        B         ||$C$L36||,EQ         ; [CPU_ALU] |759| 
+        ; branchcc occurs ; [] |759| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 769,column 10,is_stmt,isa 0
+        ADDB      ACC,#18               ; [CPU_ALU] |769| 
+        CMPL      ACC,XAR4              ; [CPU_ALU] |769| 
+        B         ||$C$L38||,NEQ        ; [CPU_ALU] |769| 
+        ; branchcc occurs ; [] |769| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 258,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |258| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 259,column 5,is_stmt,isa 0
@@ -3962,9 +3962,9 @@ $C$DW$244	.dwtag  DW_TAG_variable
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 1669,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x7407)        ; [CPU_ALU] |1669| 
         OR        AL,#0x2000            ; [CPU_ALU] |1669| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 772,column 9,is_stmt,isa 0
-        B         ||$C$L37||,UNC        ; [CPU_ALU] |772| 
-        ; branch occurs ; [] |772| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 777,column 9,is_stmt,isa 0
+        B         ||$C$L37||,UNC        ; [CPU_ALU] |777| 
+        ; branch occurs ; [] |777| 
 ||$C$L36||:    
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\interrupt.h",line 258,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |258| 
@@ -3994,7 +3994,7 @@ $C$DW$245	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$241, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$241, DW_AT_TI_end_line(0x308)
+	.dwattr $C$DW$241, DW_AT_TI_end_line(0x30d)
 	.dwattr $C$DW$241, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$241
@@ -4010,10 +4010,10 @@ $C$DW$246	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$246, DW_AT_linkage_name("HAL_setupGPIOs")
 	.dwattr $C$DW$246, DW_AT_external
 	.dwattr $C$DW$246, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$246, DW_AT_decl_line(0x354)
+	.dwattr $C$DW$246, DW_AT_decl_line(0x359)
 	.dwattr $C$DW$246, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$246, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 853,column 1,is_stmt,address ||HAL_setupGPIOs||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 858,column 1,is_stmt,address ||HAL_setupGPIOs||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupGPIOs||
 $C$DW$247	.dwtag  DW_TAG_formal_parameter
@@ -4036,2294 +4036,2294 @@ $C$DW$247	.dwtag  DW_TAG_formal_parameter
 	.dwcfi	save_reg_to_mem, 26, 0
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 856,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |856| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |856| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 861,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |861| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |861| 
 $C$DW$248	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$248, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$248, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$248, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |856| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |856| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 857,column 5,is_stmt,isa 0
-        MOVL      XAR4,#393217          ; [CPU_ARAU] |857| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |857| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |861| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |861| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 862,column 5,is_stmt,isa 0
+        MOVL      XAR4,#393217          ; [CPU_ARAU] |862| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |862| 
 $C$DW$249	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$249, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$249, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$249, DW_AT_TI_call
-
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |857| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |857| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 858,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |858| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |858| 
-$C$DW$250	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$250, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$250, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$250, DW_AT_TI_call
-
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |858| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |858| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 861,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |861| 
-        MOVB      ACC,#1                ; [CPU_ALU] |861| 
-$C$DW$251	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$251, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$251, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$251, DW_AT_TI_call
-
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |861| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |861| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 862,column 5,is_stmt,isa 0
-        MOVL      XAR4,#393729          ; [CPU_ARAU] |862| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |862| 
-$C$DW$252	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$252, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$252, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$252, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |862| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |862| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 863,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |863| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |863| 
-        MOVB      ACC,#1                ; [CPU_ALU] |863| 
-$C$DW$253	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$253, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$253, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$253, DW_AT_TI_call
+$C$DW$250	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$250, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$250, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$250, DW_AT_TI_call
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |863| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |863| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 866,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |866| 
-        MOVB      ACC,#2                ; [CPU_ALU] |866| 
-$C$DW$254	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$254, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$254, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$254, DW_AT_TI_call
+        MOVB      ACC,#1                ; [CPU_ALU] |866| 
+$C$DW$251	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$251, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$251, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$251, DW_AT_TI_call
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |866| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |866| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 867,column 5,is_stmt,isa 0
-        MOVL      XAR4,#394241          ; [CPU_ARAU] |867| 
+        MOVL      XAR4,#393729          ; [CPU_ARAU] |867| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |867| 
-$C$DW$255	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$255, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$255, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$255, DW_AT_TI_call
+$C$DW$252	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$252, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$252, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$252, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |867| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |867| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 868,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |868| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |868| 
-        MOVB      ACC,#2                ; [CPU_ALU] |868| 
-$C$DW$256	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$256, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$256, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$256, DW_AT_TI_call
+        MOVB      ACC,#1                ; [CPU_ALU] |868| 
+$C$DW$253	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$253, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$253, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$253, DW_AT_TI_call
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |868| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |868| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 871,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |871| 
-        MOVB      ACC,#3                ; [CPU_ALU] |871| 
-$C$DW$257	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$257, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$257, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$257, DW_AT_TI_call
+        MOVB      ACC,#2                ; [CPU_ALU] |871| 
+$C$DW$254	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$254, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$254, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$254, DW_AT_TI_call
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |871| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |871| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 872,column 5,is_stmt,isa 0
-        MOVL      XAR4,#394753          ; [CPU_ARAU] |872| 
+        MOVL      XAR4,#394241          ; [CPU_ARAU] |872| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |872| 
-$C$DW$258	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$258, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$258, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$258, DW_AT_TI_call
+$C$DW$255	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$255, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$255, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$255, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |872| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |872| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 873,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |873| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |873| 
-        MOVB      ACC,#3                ; [CPU_ALU] |873| 
-$C$DW$259	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$259, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$259, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$259, DW_AT_TI_call
+        MOVB      ACC,#2                ; [CPU_ALU] |873| 
+$C$DW$256	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$256, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$256, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$256, DW_AT_TI_call
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |873| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |873| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 876,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |876| 
-        MOVB      ACC,#4                ; [CPU_ALU] |876| 
-$C$DW$260	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$260, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$260, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$260, DW_AT_TI_call
+        MOVB      ACC,#3                ; [CPU_ALU] |876| 
+$C$DW$257	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$257, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$257, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$257, DW_AT_TI_call
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |876| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |876| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 877,column 5,is_stmt,isa 0
-        MOVL      XAR4,#395265          ; [CPU_ARAU] |877| 
+        MOVL      XAR4,#394753          ; [CPU_ARAU] |877| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |877| 
-$C$DW$261	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$261, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$261, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$261, DW_AT_TI_call
+$C$DW$258	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$258, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$258, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$258, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |877| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |877| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 878,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |878| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |878| 
-        MOVB      ACC,#4                ; [CPU_ALU] |878| 
-$C$DW$262	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$262, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$262, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$262, DW_AT_TI_call
+        MOVB      ACC,#3                ; [CPU_ALU] |878| 
+$C$DW$259	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$259, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$259, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$259, DW_AT_TI_call
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |878| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |878| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 881,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |881| 
-        MOVB      ACC,#5                ; [CPU_ALU] |881| 
-$C$DW$263	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$263, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$263, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$263, DW_AT_TI_call
+        MOVB      ACC,#4                ; [CPU_ALU] |881| 
+$C$DW$260	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$260, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$260, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$260, DW_AT_TI_call
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |881| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |881| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 882,column 5,is_stmt,isa 0
-        MOVL      XAR4,#395777          ; [CPU_ARAU] |882| 
+        MOVL      XAR4,#395265          ; [CPU_ARAU] |882| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |882| 
-$C$DW$264	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$264, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$264, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$264, DW_AT_TI_call
+$C$DW$261	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$261, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$261, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$261, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |882| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |882| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 883,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |883| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |883| 
-        MOVB      ACC,#5                ; [CPU_ALU] |883| 
+        MOVB      ACC,#4                ; [CPU_ALU] |883| 
+$C$DW$262	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$262, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$262, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$262, DW_AT_TI_call
+
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |883| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |883| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 886,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |886| 
+        MOVB      ACC,#5                ; [CPU_ALU] |886| 
+$C$DW$263	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$263, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$263, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$263, DW_AT_TI_call
+
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |886| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |886| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 887,column 5,is_stmt,isa 0
+        MOVL      XAR4,#395777          ; [CPU_ARAU] |887| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |887| 
+$C$DW$264	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$264, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$264, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$264, DW_AT_TI_call
+
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |887| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |887| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 888,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |888| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |888| 
+        MOVB      ACC,#5                ; [CPU_ALU] |888| 
 $C$DW$265	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$265, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$265, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$265, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |883| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |883| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 887,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |887| 
-        MOVB      ACC,#6                ; [CPU_ALU] |887| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |888| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |888| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 892,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |892| 
+        MOVB      ACC,#6                ; [CPU_ALU] |892| 
 $C$DW$266	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$266, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$266, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$266, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |887| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |887| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 888,column 5,is_stmt,isa 0
-        MOVL      XAR4,#396289          ; [CPU_ARAU] |888| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |888| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |892| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |892| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 893,column 5,is_stmt,isa 0
+        MOVL      XAR4,#396289          ; [CPU_ARAU] |893| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |893| 
 $C$DW$267	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$267, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$267, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$267, DW_AT_TI_call
-
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |888| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |888| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 889,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |889| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |889| 
-        MOVB      ACC,#6                ; [CPU_ALU] |889| 
-$C$DW$268	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$268, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$268, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$268, DW_AT_TI_call
-
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |889| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |889| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 892,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |892| 
-        MOVB      ACC,#7                ; [CPU_ALU] |892| 
-$C$DW$269	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$269, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$269, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$269, DW_AT_TI_call
-
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |892| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |892| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 893,column 5,is_stmt,isa 0
-        MOVL      XAR4,#396801          ; [CPU_ARAU] |893| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |893| 
-$C$DW$270	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$270, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$270, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$270, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |893| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |893| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 894,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |894| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |894| 
-        MOVB      ACC,#7                ; [CPU_ALU] |894| 
-$C$DW$271	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$271, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$271, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$271, DW_AT_TI_call
+        MOVB      ACC,#6                ; [CPU_ALU] |894| 
+$C$DW$268	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$268, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$268, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$268, DW_AT_TI_call
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |894| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |894| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 897,column 5,is_stmt,isa 0
-        MOVB      ACC,#8                ; [CPU_ALU] |897| 
         MOVB      XAR4,#0               ; [CPU_ALU] |897| 
-$C$DW$272	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$272, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$272, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$272, DW_AT_TI_call
+        MOVB      ACC,#7                ; [CPU_ALU] |897| 
+$C$DW$269	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$269, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$269, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$269, DW_AT_TI_call
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |897| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |897| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 898,column 5,is_stmt,isa 0
-        MOVL      XAR4,#397313          ; [CPU_ARAU] |898| 
+        MOVL      XAR4,#396801          ; [CPU_ARAU] |898| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |898| 
-$C$DW$273	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$273, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$273, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$273, DW_AT_TI_call
+$C$DW$270	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$270, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$270, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$270, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |898| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |898| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 899,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |899| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |899| 
-        MOVB      ACC,#8                ; [CPU_ALU] |899| 
-$C$DW$274	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$274, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$274, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$274, DW_AT_TI_call
+        MOVB      ACC,#7                ; [CPU_ALU] |899| 
+$C$DW$271	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$271, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$271, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$271, DW_AT_TI_call
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |899| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |899| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 902,column 5,is_stmt,isa 0
+        MOVB      ACC,#8                ; [CPU_ALU] |902| 
         MOVB      XAR4,#0               ; [CPU_ALU] |902| 
-        MOVB      ACC,#9                ; [CPU_ALU] |902| 
-$C$DW$275	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$275, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$275, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$275, DW_AT_TI_call
+$C$DW$272	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$272, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$272, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$272, DW_AT_TI_call
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |902| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |902| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 903,column 5,is_stmt,isa 0
-        MOVL      XAR4,#397825          ; [CPU_ARAU] |903| 
+        MOVL      XAR4,#397313          ; [CPU_ARAU] |903| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |903| 
-$C$DW$276	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$276, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$276, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$276, DW_AT_TI_call
+$C$DW$273	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$273, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$273, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$273, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |903| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |903| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 904,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |904| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |904| 
-        MOVB      ACC,#9                ; [CPU_ALU] |904| 
-$C$DW$277	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$277, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$277, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$277, DW_AT_TI_call
+        MOVB      ACC,#8                ; [CPU_ALU] |904| 
+$C$DW$274	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$274, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$274, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$274, DW_AT_TI_call
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |904| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |904| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 907,column 5,is_stmt,isa 0
         MOVB      XAR4,#0               ; [CPU_ALU] |907| 
-        MOVB      ACC,#10               ; [CPU_ALU] |907| 
-$C$DW$278	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$278, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$278, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$278, DW_AT_TI_call
+        MOVB      ACC,#9                ; [CPU_ALU] |907| 
+$C$DW$275	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$275, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$275, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$275, DW_AT_TI_call
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |907| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |907| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 908,column 5,is_stmt,isa 0
-        MOVL      XAR4,#398337          ; [CPU_ARAU] |908| 
+        MOVL      XAR4,#397825          ; [CPU_ARAU] |908| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |908| 
-$C$DW$279	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$279, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$279, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$279, DW_AT_TI_call
+$C$DW$276	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$276, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$276, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$276, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |908| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |908| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 909,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |909| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |909| 
-        MOVB      ACC,#10               ; [CPU_ALU] |909| 
-$C$DW$280	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$280, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$280, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$280, DW_AT_TI_call
+        MOVB      ACC,#9                ; [CPU_ALU] |909| 
+$C$DW$277	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$277, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$277, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$277, DW_AT_TI_call
 
         LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |909| 
         ; call occurs [#||GPIO_setPadConfig||] ; [] |909| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 912,column 5,is_stmt,isa 0
-        MOVB      ACC,#11               ; [CPU_ALU] |912| 
         MOVB      XAR4,#0               ; [CPU_ALU] |912| 
-$C$DW$281	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$281, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$281, DW_AT_name("GPIO_setControllerCore")
-	.dwattr $C$DW$281, DW_AT_TI_call
+        MOVB      ACC,#10               ; [CPU_ALU] |912| 
+$C$DW$278	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$278, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$278, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$278, DW_AT_TI_call
 
         LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |912| 
         ; call occurs [#||GPIO_setControllerCore||] ; [] |912| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 913,column 5,is_stmt,isa 0
-        MOVL      XAR4,#398849          ; [CPU_ARAU] |913| 
+        MOVL      XAR4,#398337          ; [CPU_ARAU] |913| 
         MOVL      ACC,XAR4              ; [CPU_ALU] |913| 
-$C$DW$282	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$282, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$282, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$282, DW_AT_TI_call
+$C$DW$279	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$279, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$279, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$279, DW_AT_TI_call
 
         LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |913| 
         ; call occurs [#||GPIO_setPinConfig||] ; [] |913| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 914,column 5,is_stmt,isa 0
         MOVB      ACC,#0                ; [CPU_ALU] |914| 
         MOVL      *-SP[2],ACC           ; [CPU_ALU] |914| 
-        MOVB      ACC,#11               ; [CPU_ALU] |914| 
+        MOVB      ACC,#10               ; [CPU_ALU] |914| 
+$C$DW$280	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$280, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$280, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$280, DW_AT_TI_call
+
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |914| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |914| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 917,column 5,is_stmt,isa 0
+        MOVB      ACC,#11               ; [CPU_ALU] |917| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |917| 
+$C$DW$281	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$281, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$281, DW_AT_name("GPIO_setControllerCore")
+	.dwattr $C$DW$281, DW_AT_TI_call
+
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |917| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |917| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 918,column 5,is_stmt,isa 0
+        MOVL      XAR4,#398849          ; [CPU_ARAU] |918| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |918| 
+$C$DW$282	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$282, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$282, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$282, DW_AT_TI_call
+
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |918| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |918| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 919,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |919| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |919| 
+        MOVB      ACC,#11               ; [CPU_ALU] |919| 
 $C$DW$283	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$283, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$283, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$283, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |914| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |914| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 918,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |918| 
-        MOVB      ACC,#12               ; [CPU_ALU] |918| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |919| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |919| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 923,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |923| 
+        MOVB      ACC,#12               ; [CPU_ALU] |923| 
 $C$DW$284	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$284, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$284, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$284, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |918| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |918| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 919,column 5,is_stmt,isa 0
-        MOVL      XAR4,#399362          ; [CPU_ARAU] |919| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |919| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |923| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |923| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 924,column 5,is_stmt,isa 0
+        MOVL      XAR4,#399362          ; [CPU_ARAU] |924| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |924| 
 $C$DW$285	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$285, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$285, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$285, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |919| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |919| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 920,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |920| 
-        MOVB      ACC,#12               ; [CPU_ALU] |920| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |924| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |924| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 925,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |925| 
+        MOVB      ACC,#12               ; [CPU_ALU] |925| 
 $C$DW$286	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$286, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$286, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$286, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |920| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |920| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 921,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |921| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |921| 
-        MOVB      ACC,#12               ; [CPU_ALU] |921| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |925| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |925| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 926,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |926| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |926| 
+        MOVB      ACC,#12               ; [CPU_ALU] |926| 
 $C$DW$287	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$287, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$287, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$287, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |921| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |921| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 925,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |925| 
-        MOVB      ACC,#14               ; [CPU_ALU] |925| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |926| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |926| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 930,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |930| 
+        MOVB      ACC,#14               ; [CPU_ALU] |930| 
 $C$DW$288	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$288, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$288, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$288, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |925| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |925| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 926,column 5,is_stmt,isa 0
-        MOVL      XAR4,#400384          ; [CPU_ARAU] |926| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |926| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |930| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |930| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 931,column 5,is_stmt,isa 0
+        MOVL      XAR4,#400384          ; [CPU_ARAU] |931| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |931| 
 $C$DW$289	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$289, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$289, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$289, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |926| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |926| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 927,column 5,is_stmt,isa 0
-        MOVB      ACC,#14               ; [CPU_ALU] |927| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |927| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |931| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |931| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 932,column 5,is_stmt,isa 0
+        MOVB      ACC,#14               ; [CPU_ALU] |932| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |932| 
 $C$DW$290	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$290, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$290, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$290, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |927| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |927| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 928,column 5,is_stmt,isa 0
-        MOVB      ACC,#2                ; [CPU_ALU] |928| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |928| 
-        MOVB      ACC,#14               ; [CPU_ALU] |928| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |932| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |932| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 933,column 5,is_stmt,isa 0
+        MOVB      ACC,#2                ; [CPU_ALU] |933| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |933| 
+        MOVB      ACC,#14               ; [CPU_ALU] |933| 
 $C$DW$291	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$291, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$291, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$291, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |928| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |928| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 932,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |932| 
-        MOVB      ACC,#15               ; [CPU_ALU] |932| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |933| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |933| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 937,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |937| 
+        MOVB      ACC,#15               ; [CPU_ALU] |937| 
 $C$DW$292	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$292, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$292, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$292, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |932| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |932| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 933,column 5,is_stmt,isa 0
-        MOVL      XAR4,#400896          ; [CPU_ARAU] |933| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |933| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |937| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |937| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 938,column 5,is_stmt,isa 0
+        MOVL      XAR4,#400896          ; [CPU_ARAU] |938| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |938| 
 $C$DW$293	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$293, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$293, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$293, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |933| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |933| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 934,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |934| 
-        MOVB      ACC,#15               ; [CPU_ALU] |934| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |938| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |938| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 939,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |939| 
+        MOVB      ACC,#15               ; [CPU_ALU] |939| 
 $C$DW$294	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$294, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$294, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$294, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |934| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |934| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 935,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |935| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |935| 
-        MOVB      ACC,#15               ; [CPU_ALU] |935| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |939| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |939| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 940,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |940| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |940| 
+        MOVB      ACC,#15               ; [CPU_ALU] |940| 
 $C$DW$295	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$295, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$295, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$295, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |935| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |935| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 938,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |938| 
-        MOVB      ACC,#16               ; [CPU_ALU] |938| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |940| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |940| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 943,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |943| 
+        MOVB      ACC,#16               ; [CPU_ALU] |943| 
 $C$DW$296	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$296, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$296, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$296, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |938| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |938| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 939,column 5,is_stmt,isa 0
-        MOVL      XAR4,#524288          ; [CPU_ARAU] |939| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |939| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |943| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |943| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 944,column 5,is_stmt,isa 0
+        MOVL      XAR4,#524288          ; [CPU_ARAU] |944| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |944| 
 $C$DW$297	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$297, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$297, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$297, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |939| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |939| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 940,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |940| 
-        MOVB      ACC,#16               ; [CPU_ALU] |940| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |944| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |944| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 945,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |945| 
+        MOVB      ACC,#16               ; [CPU_ALU] |945| 
 $C$DW$298	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$298, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$298, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$298, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |940| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |940| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 941,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |941| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |941| 
-        MOVB      ACC,#16               ; [CPU_ALU] |941| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |945| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |945| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 946,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |946| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |946| 
+        MOVB      ACC,#16               ; [CPU_ALU] |946| 
 $C$DW$299	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$299, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$299, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$299, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |941| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |941| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 945,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |945| 
-        MOVB      ACC,#17               ; [CPU_ALU] |945| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |946| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |946| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 950,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |950| 
+        MOVB      ACC,#17               ; [CPU_ALU] |950| 
 $C$DW$300	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$300, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$300, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$300, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |945| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |945| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 946,column 5,is_stmt,isa 0
-        MOVL      XAR4,#524802          ; [CPU_ARAU] |946| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |946| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |950| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |950| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 951,column 5,is_stmt,isa 0
+        MOVL      XAR4,#524802          ; [CPU_ARAU] |951| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |951| 
 $C$DW$301	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$301, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$301, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$301, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |946| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |946| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 947,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |947| 
-        MOVB      ACC,#17               ; [CPU_ALU] |947| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |951| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |951| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 952,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |952| 
+        MOVB      ACC,#17               ; [CPU_ALU] |952| 
 $C$DW$302	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$302, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$302, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$302, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |947| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |947| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 948,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |948| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |948| 
-        MOVB      ACC,#17               ; [CPU_ALU] |948| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |952| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |952| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 953,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |953| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |953| 
+        MOVB      ACC,#17               ; [CPU_ALU] |953| 
 $C$DW$303	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$303, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$303, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$303, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |948| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |948| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 952,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |952| 
-        MOVB      ACC,#18               ; [CPU_ALU] |952| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |953| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |953| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 957,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |957| 
+        MOVB      ACC,#18               ; [CPU_ALU] |957| 
 $C$DW$304	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$304, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$304, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$304, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |952| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |952| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 953,column 5,is_stmt,isa 0
-        MOVL      XAR4,#525312          ; [CPU_ARAU] |953| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |953| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |957| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |957| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 958,column 5,is_stmt,isa 0
+        MOVL      XAR4,#525312          ; [CPU_ARAU] |958| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |958| 
 $C$DW$305	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$305, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$305, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$305, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |953| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |953| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 954,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |954| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |954| 
-        MOVB      ACC,#18               ; [CPU_ALU] |954| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |958| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |958| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 959,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |959| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |959| 
+        MOVB      ACC,#18               ; [CPU_ALU] |959| 
 $C$DW$306	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$306, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$306, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$306, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |954| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |954| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 955,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |955| 
-        MOVB      ACC,#18               ; [CPU_ALU] |955| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |959| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |959| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 960,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |960| 
+        MOVB      ACC,#18               ; [CPU_ALU] |960| 
 $C$DW$307	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$307, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$307, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$307, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |955| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |955| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 959,column 5,is_stmt,isa 0
-        MOVB      ACC,#19               ; [CPU_ALU] |959| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |959| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |960| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |960| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 964,column 5,is_stmt,isa 0
+        MOVB      ACC,#19               ; [CPU_ALU] |964| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |964| 
 $C$DW$308	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$308, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$308, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$308, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |959| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |959| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 960,column 5,is_stmt,isa 0
-        MOVL      XAR4,#525824          ; [CPU_ARAU] |960| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |960| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |964| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |964| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 965,column 5,is_stmt,isa 0
+        MOVL      XAR4,#525824          ; [CPU_ARAU] |965| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |965| 
 $C$DW$309	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$309, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$309, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$309, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |960| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |960| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 961,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |961| 
-        MOVB      ACC,#19               ; [CPU_ALU] |961| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |965| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |965| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 966,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |966| 
+        MOVB      ACC,#19               ; [CPU_ALU] |966| 
 $C$DW$310	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$310, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$310, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$310, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |961| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |961| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 962,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |962| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |962| 
-        MOVB      ACC,#19               ; [CPU_ALU] |962| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |966| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |966| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 967,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |967| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |967| 
+        MOVB      ACC,#19               ; [CPU_ALU] |967| 
 $C$DW$311	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$311, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$311, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$311, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |962| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |962| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 966,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |966| 
-        MOVB      ACC,#20               ; [CPU_ALU] |966| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |967| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |967| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 971,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |971| 
+        MOVB      ACC,#20               ; [CPU_ALU] |971| 
 $C$DW$312	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$312, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$312, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$312, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |966| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |966| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 967,column 5,is_stmt,isa 0
-        MOVL      XAR4,#526337          ; [CPU_ARAU] |967| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |967| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |971| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |971| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 972,column 5,is_stmt,isa 0
+        MOVL      XAR4,#526337          ; [CPU_ARAU] |972| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |972| 
 $C$DW$313	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$313, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$313, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$313, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |967| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |967| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 968,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |968| 
-        MOVB      ACC,#20               ; [CPU_ALU] |968| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |972| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |972| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 973,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |973| 
+        MOVB      ACC,#20               ; [CPU_ALU] |973| 
 $C$DW$314	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$314, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$314, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$314, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |968| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |968| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 969,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |969| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |969| 
-        MOVB      ACC,#20               ; [CPU_ALU] |969| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |973| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |973| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 974,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |974| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |974| 
+        MOVB      ACC,#20               ; [CPU_ALU] |974| 
 $C$DW$315	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$315, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$315, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$315, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |969| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |969| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 970,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |970| 
-        MOVB      ACC,#20               ; [CPU_ALU] |970| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |974| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |974| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 975,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |975| 
+        MOVB      ACC,#20               ; [CPU_ALU] |975| 
 $C$DW$316	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$316, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$316, DW_AT_name("GPIO_setQualificationMode")
 	.dwattr $C$DW$316, DW_AT_TI_call
 
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |970| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |970| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 973,column 5,is_stmt,isa 0
-        MOVB      ACC,#21               ; [CPU_ALU] |973| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |973| 
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |975| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |975| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 978,column 5,is_stmt,isa 0
+        MOVB      ACC,#21               ; [CPU_ALU] |978| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |978| 
 $C$DW$317	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$317, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$317, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$317, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |973| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |973| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 974,column 5,is_stmt,isa 0
-        MOVL      XAR4,#526849          ; [CPU_ARAU] |974| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |974| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |978| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |978| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 979,column 5,is_stmt,isa 0
+        MOVL      XAR4,#526849          ; [CPU_ARAU] |979| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |979| 
 $C$DW$318	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$318, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$318, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$318, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |974| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |974| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 975,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |975| 
-        MOVB      ACC,#21               ; [CPU_ALU] |975| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |979| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |979| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 980,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |980| 
+        MOVB      ACC,#21               ; [CPU_ALU] |980| 
 $C$DW$319	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$319, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$319, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$319, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |975| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |975| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 976,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |976| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |976| 
-        MOVB      ACC,#21               ; [CPU_ALU] |976| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |980| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |980| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 981,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |981| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |981| 
+        MOVB      ACC,#21               ; [CPU_ALU] |981| 
 $C$DW$320	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$320, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$320, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$320, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |976| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |976| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 977,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |977| 
-        MOVB      ACC,#21               ; [CPU_ALU] |977| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |981| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |981| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 982,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |982| 
+        MOVB      ACC,#21               ; [CPU_ALU] |982| 
 $C$DW$321	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$321, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$321, DW_AT_name("GPIO_setQualificationMode")
 	.dwattr $C$DW$321, DW_AT_TI_call
 
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |977| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |977| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 981,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |981| 
-        MOVB      ACC,#24               ; [CPU_ALU] |981| 
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |982| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |982| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 986,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |986| 
+        MOVB      ACC,#24               ; [CPU_ALU] |986| 
 $C$DW$322	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$322, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$322, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$322, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |981| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |981| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 982,column 5,is_stmt,isa 0
-        MOVL      XAR4,#528384          ; [CPU_ARAU] |982| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |982| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |986| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |986| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 987,column 5,is_stmt,isa 0
+        MOVL      XAR4,#528384          ; [CPU_ARAU] |987| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |987| 
 $C$DW$323	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$323, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$323, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$323, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |982| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |982| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 983,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |983| 
-        MOVB      ACC,#24               ; [CPU_ALU] |983| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |987| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |987| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 988,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |988| 
+        MOVB      ACC,#24               ; [CPU_ALU] |988| 
 $C$DW$324	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$324, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$324, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$324, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |983| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |983| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 984,column 5,is_stmt,isa 0
-        MOVB      ACC,#2                ; [CPU_ALU] |984| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |984| 
-        MOVB      ACC,#24               ; [CPU_ALU] |984| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |988| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |988| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 989,column 5,is_stmt,isa 0
+        MOVB      ACC,#2                ; [CPU_ALU] |989| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |989| 
+        MOVB      ACC,#24               ; [CPU_ALU] |989| 
 $C$DW$325	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$325, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$325, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$325, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |984| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |984| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 988,column 5,is_stmt,isa 0
-        MOVB      ACC,#25               ; [CPU_ALU] |988| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |988| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |989| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |989| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 993,column 5,is_stmt,isa 0
+        MOVB      ACC,#25               ; [CPU_ALU] |993| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |993| 
 $C$DW$326	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$326, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$326, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$326, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |988| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |988| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 989,column 5,is_stmt,isa 0
-        MOVL      XAR4,#528896          ; [CPU_ARAU] |989| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |989| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |993| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |993| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 994,column 5,is_stmt,isa 0
+        MOVL      XAR4,#528896          ; [CPU_ARAU] |994| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |994| 
 $C$DW$327	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$327, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$327, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$327, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |989| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |989| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 990,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |990| 
-        MOVB      ACC,#25               ; [CPU_ALU] |990| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |994| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |994| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 995,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |995| 
+        MOVB      ACC,#25               ; [CPU_ALU] |995| 
 $C$DW$328	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$328, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$328, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$328, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |990| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |990| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 991,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |991| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |991| 
-        MOVB      ACC,#25               ; [CPU_ALU] |991| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |995| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |995| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 996,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |996| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |996| 
+        MOVB      ACC,#25               ; [CPU_ALU] |996| 
 $C$DW$329	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$329, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$329, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$329, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |991| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |991| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 995,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |995| 
-        MOVB      ACC,#26               ; [CPU_ALU] |995| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |996| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |996| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1000,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1000| 
+        MOVB      ACC,#26               ; [CPU_ALU] |1000| 
 $C$DW$330	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$330, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$330, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$330, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |995| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |995| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 996,column 5,is_stmt,isa 0
-        MOVL      XAR4,#529408          ; [CPU_ARAU] |996| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |996| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1000| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1000| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1001,column 5,is_stmt,isa 0
+        MOVL      XAR4,#529408          ; [CPU_ARAU] |1001| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |1001| 
 $C$DW$331	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$331, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$331, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$331, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |996| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |996| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1001| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1001| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV       ACC,#2048 << 15       ; [CPU_ALU] |473| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 998,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |998| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1003,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1003| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV32     *(0:0x7f02),ACC       ; [CPU_FPU] |473| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 998,column 5,is_stmt,isa 0
-        MOVB      ACC,#26               ; [CPU_ALU] |998| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1003,column 5,is_stmt,isa 0
+        MOVB      ACC,#26               ; [CPU_ALU] |1003| 
 $C$DW$332	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$332, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$332, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$332, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |998| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |998| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 999,column 5,is_stmt,isa 0
-        MOVB      ACC,#1                ; [CPU_ALU] |999| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |999| 
-        MOVB      ACC,#26               ; [CPU_ALU] |999| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1003| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1003| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1004,column 5,is_stmt,isa 0
+        MOVB      ACC,#1                ; [CPU_ALU] |1004| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1004| 
+        MOVB      ACC,#26               ; [CPU_ALU] |1004| 
 $C$DW$333	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$333, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$333, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$333, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |999| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |999| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1002,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1002| 
-        MOVB      ACC,#27               ; [CPU_ALU] |1002| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1004| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1004| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1007,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1007| 
+        MOVB      ACC,#27               ; [CPU_ALU] |1007| 
 $C$DW$334	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$334, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$334, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$334, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1002| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1002| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1003,column 5,is_stmt,isa 0
-        MOVL      XAR4,#529920          ; [CPU_ARAU] |1003| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |1003| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1007| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1007| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1008,column 5,is_stmt,isa 0
+        MOVL      XAR4,#529920          ; [CPU_ARAU] |1008| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |1008| 
 $C$DW$335	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$335, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$335, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$335, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1003| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1003| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1004,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1004| 
-        MOVB      ACC,#27               ; [CPU_ALU] |1004| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1008| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1008| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1009,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1009| 
+        MOVB      ACC,#27               ; [CPU_ALU] |1009| 
 $C$DW$336	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$336, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$336, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$336, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1004| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1004| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1005,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1005| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1005| 
-        MOVB      ACC,#27               ; [CPU_ALU] |1005| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1009| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1009| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1010,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1010| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1010| 
+        MOVB      ACC,#27               ; [CPU_ALU] |1010| 
 $C$DW$337	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$337, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$337, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$337, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1005| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1005| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1009,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1009| 
-        MOVB      ACC,#31               ; [CPU_ALU] |1009| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1010| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1010| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1014,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1014| 
+        MOVB      ACC,#31               ; [CPU_ALU] |1014| 
 $C$DW$338	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$338, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$338, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$338, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1009| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1009| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1010,column 5,is_stmt,isa 0
-        MOVL      XAR4,#531968          ; [CPU_ARAU] |1010| 
-        MOVL      ACC,XAR4              ; [CPU_ALU] |1010| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1014| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1014| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1015,column 5,is_stmt,isa 0
+        MOVL      XAR4,#531968          ; [CPU_ARAU] |1015| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |1015| 
 $C$DW$339	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$339, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$339, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$339, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1010| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1010| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1015| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1015| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |473| 
         MOV       AH,#32768             ; [CPU_ALU] |473| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1012,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1012| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1017,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1017| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV32     *(0:0x7f02),ACC       ; [CPU_FPU] |473| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1012,column 5,is_stmt,isa 0
-        MOVB      ACC,#31               ; [CPU_ALU] |1012| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1017,column 5,is_stmt,isa 0
+        MOVB      ACC,#31               ; [CPU_ALU] |1017| 
 $C$DW$340	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$340, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$340, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$340, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1012| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1012| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1013,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1013| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1013| 
-        MOVB      ACC,#31               ; [CPU_ALU] |1013| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1017| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1017| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1018,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1018| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1018| 
+        MOVB      ACC,#31               ; [CPU_ALU] |1018| 
 $C$DW$341	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$341, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$341, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$341, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1013| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1013| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1016,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1016| 
-        MOVB      ACC,#34               ; [CPU_ALU] |1016| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1018| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1018| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1021,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1021| 
+        MOVB      ACC,#34               ; [CPU_ALU] |1021| 
 $C$DW$342	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$342, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$342, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$342, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1016| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1016| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1017,column 5,is_stmt,isa 0
-        MOV       ACC,#4481 << 10       ; [CPU_ALU] |1017| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1021| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1021| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1022,column 5,is_stmt,isa 0
+        MOV       ACC,#4481 << 10       ; [CPU_ALU] |1022| 
 $C$DW$343	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$343, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$343, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$343, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1017| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1017| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1022| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1022| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOVB      ACC,#4                ; [CPU_ALU] |473| 
         MOV32     *(0:0x7f0a),ACC       ; [CPU_FPU] |473| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1019,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1019| 
-        MOVB      ACC,#34               ; [CPU_ALU] |1019| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1024,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1024| 
+        MOVB      ACC,#34               ; [CPU_ALU] |1024| 
 $C$DW$344	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$344, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$344, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$344, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1019| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1019| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1020,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1020| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1020| 
-        MOVB      ACC,#34               ; [CPU_ALU] |1020| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1024| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1024| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1025,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1025| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1025| 
+        MOVB      ACC,#34               ; [CPU_ALU] |1025| 
 $C$DW$345	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$345, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$345, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$345, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1020| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1020| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1024,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1024| 
-        MOVB      ACC,#40               ; [CPU_ALU] |1024| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1025| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1025| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1029,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1029| 
+        MOVB      ACC,#40               ; [CPU_ALU] |1029| 
 $C$DW$346	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$346, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$346, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$346, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1024| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1024| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1025,column 5,is_stmt,isa 0
-        MOV       AL,#4102              ; [CPU_ALU] |1025| 
-        MOV       AH,#70                ; [CPU_ALU] |1025| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1029| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1029| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1030,column 5,is_stmt,isa 0
+        MOV       AL,#4102              ; [CPU_ALU] |1030| 
+        MOV       AH,#70                ; [CPU_ALU] |1030| 
 $C$DW$347	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$347, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$347, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$347, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1025| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1025| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1026,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1026| 
-        MOVB      ACC,#40               ; [CPU_ALU] |1026| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1030| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1030| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1031,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1031| 
+        MOVB      ACC,#40               ; [CPU_ALU] |1031| 
 $C$DW$348	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$348, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$348, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$348, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1026| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1026| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1027,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1027| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1027| 
-        MOVB      ACC,#40               ; [CPU_ALU] |1027| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1031| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1031| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1032,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1032| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1032| 
+        MOVB      ACC,#40               ; [CPU_ALU] |1032| 
 $C$DW$349	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$349, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$349, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$349, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1027| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1027| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1030,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1030| 
-        MOVB      ACC,#41               ; [CPU_ALU] |1030| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1032| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1032| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1035,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1035| 
+        MOVB      ACC,#41               ; [CPU_ALU] |1035| 
 $C$DW$350	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$350, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$350, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$350, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1030| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1030| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1031,column 5,is_stmt,isa 0
-        MOV       AL,#4614              ; [CPU_ALU] |1031| 
-        MOV       AH,#70                ; [CPU_ALU] |1031| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1035| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1035| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1036,column 5,is_stmt,isa 0
+        MOV       AL,#4614              ; [CPU_ALU] |1036| 
+        MOV       AH,#70                ; [CPU_ALU] |1036| 
 $C$DW$351	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$351, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$351, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$351, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1031| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1031| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1032,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1032| 
-        MOVB      ACC,#41               ; [CPU_ALU] |1032| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1036| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1036| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1037,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1037| 
+        MOVB      ACC,#41               ; [CPU_ALU] |1037| 
 $C$DW$352	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$352, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$352, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$352, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1032| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1032| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1033,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1033| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1033| 
-        MOVB      ACC,#41               ; [CPU_ALU] |1033| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1037| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1037| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1038,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1038| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1038| 
+        MOVB      ACC,#41               ; [CPU_ALU] |1038| 
 $C$DW$353	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$353, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$353, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$353, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1033| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1033| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1037,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1037| 
-        MOVB      ACC,#42               ; [CPU_ALU] |1037| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1038| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1038| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1042,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1042| 
+        MOVB      ACC,#42               ; [CPU_ALU] |1042| 
 $C$DW$354	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$354, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$354, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$354, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1037| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1037| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1038,column 5,is_stmt,isa 0
-        MOV       AL,#5135              ; [CPU_ALU] |1038| 
-        MOV       AH,#70                ; [CPU_ALU] |1038| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1042| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1042| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1043,column 5,is_stmt,isa 0
+        MOV       AL,#5135              ; [CPU_ALU] |1043| 
+        MOV       AH,#70                ; [CPU_ALU] |1043| 
 $C$DW$355	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$355, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$355, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$355, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1038| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1038| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1039,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1039| 
-        MOVB      ACC,#42               ; [CPU_ALU] |1039| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1043| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1043| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1044,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1044| 
+        MOVB      ACC,#42               ; [CPU_ALU] |1044| 
 $C$DW$356	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$356, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$356, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$356, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1039| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1039| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1040,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1040| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1040| 
-        MOVB      ACC,#42               ; [CPU_ALU] |1040| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1044| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1044| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1045,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1045| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1045| 
+        MOVB      ACC,#42               ; [CPU_ALU] |1045| 
 $C$DW$357	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$357, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$357, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$357, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1040| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1040| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1043,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1043| 
-        MOVB      ACC,#43               ; [CPU_ALU] |1043| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1045| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1045| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1048,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1048| 
+        MOVB      ACC,#43               ; [CPU_ALU] |1048| 
 $C$DW$358	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$358, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$358, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$358, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1043| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1043| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1044,column 5,is_stmt,isa 0
-        MOV       AL,#5647              ; [CPU_ALU] |1044| 
-        MOV       AH,#70                ; [CPU_ALU] |1044| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1048| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1048| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1049,column 5,is_stmt,isa 0
+        MOV       AL,#5647              ; [CPU_ALU] |1049| 
+        MOV       AH,#70                ; [CPU_ALU] |1049| 
 $C$DW$359	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$359, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$359, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$359, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1044| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1044| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1045,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1045| 
-        MOVB      ACC,#43               ; [CPU_ALU] |1045| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1049| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1049| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1050,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1050| 
+        MOVB      ACC,#43               ; [CPU_ALU] |1050| 
 $C$DW$360	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$360, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$360, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$360, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1045| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1045| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1046,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1046| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1046| 
-        MOVB      ACC,#43               ; [CPU_ALU] |1046| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1050| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1050| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1051,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1051| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1051| 
+        MOVB      ACC,#43               ; [CPU_ALU] |1051| 
 $C$DW$361	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$361, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$361, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$361, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1046| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1046| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1050,column 5,is_stmt,isa 0
-        MOVB      ACC,#54               ; [CPU_ALU] |1050| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |1050| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1051| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1051| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1055,column 5,is_stmt,isa 0
+        MOVB      ACC,#54               ; [CPU_ALU] |1055| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |1055| 
 $C$DW$362	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$362, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$362, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$362, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1050| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1050| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1051,column 5,is_stmt,isa 0
-        MOV       AL,#3077              ; [CPU_ALU] |1051| 
-        MOV       AH,#72                ; [CPU_ALU] |1051| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1055| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1055| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1056,column 5,is_stmt,isa 0
+        MOV       AL,#3077              ; [CPU_ALU] |1056| 
+        MOV       AH,#72                ; [CPU_ALU] |1056| 
 $C$DW$363	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$363, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$363, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$363, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1051| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1051| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1052,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1052| 
-        MOVB      ACC,#54               ; [CPU_ALU] |1052| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1056| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1056| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1057,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1057| 
+        MOVB      ACC,#54               ; [CPU_ALU] |1057| 
 $C$DW$364	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$364, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$364, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$364, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1052| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1052| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1053,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1053| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1053| 
-        MOVB      ACC,#54               ; [CPU_ALU] |1053| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1057| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1057| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1058,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1058| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1058| 
+        MOVB      ACC,#54               ; [CPU_ALU] |1058| 
 $C$DW$365	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$365, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$365, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$365, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1053| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1053| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1054,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1054| 
-        MOVB      ACC,#54               ; [CPU_ALU] |1054| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1058| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1058| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1059,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1059| 
+        MOVB      ACC,#54               ; [CPU_ALU] |1059| 
 $C$DW$366	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$366, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$366, DW_AT_name("GPIO_setQualificationMode")
 	.dwattr $C$DW$366, DW_AT_TI_call
 
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |1054| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |1054| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1057,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1057| 
-        MOVB      ACC,#55               ; [CPU_ALU] |1057| 
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |1059| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |1059| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1062,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1062| 
+        MOVB      ACC,#55               ; [CPU_ALU] |1062| 
 $C$DW$367	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$367, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$367, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$367, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1057| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1057| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1058,column 5,is_stmt,isa 0
-        MOV       AL,#3589              ; [CPU_ALU] |1058| 
-        MOV       AH,#72                ; [CPU_ALU] |1058| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1062| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1062| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1063,column 5,is_stmt,isa 0
+        MOV       AL,#3589              ; [CPU_ALU] |1063| 
+        MOV       AH,#72                ; [CPU_ALU] |1063| 
 $C$DW$368	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$368, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$368, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$368, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1058| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1058| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1059,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1059| 
-        MOVB      ACC,#55               ; [CPU_ALU] |1059| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1063| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1063| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1064,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1064| 
+        MOVB      ACC,#55               ; [CPU_ALU] |1064| 
 $C$DW$369	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$369, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$369, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$369, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1059| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1059| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1060,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1060| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1060| 
-        MOVB      ACC,#55               ; [CPU_ALU] |1060| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1064| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1064| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1065,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1065| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1065| 
+        MOVB      ACC,#55               ; [CPU_ALU] |1065| 
 $C$DW$370	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$370, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$370, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$370, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1060| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1060| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1061,column 5,is_stmt,isa 0
-        MOVB      ACC,#55               ; [CPU_ALU] |1061| 
-        MOVB      XAR4,#1               ; [CPU_ALU] |1061| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1065| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1065| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1066,column 5,is_stmt,isa 0
+        MOVB      ACC,#55               ; [CPU_ALU] |1066| 
+        MOVB      XAR4,#1               ; [CPU_ALU] |1066| 
 $C$DW$371	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$371, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$371, DW_AT_name("GPIO_setQualificationMode")
 	.dwattr $C$DW$371, DW_AT_TI_call
 
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |1061| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |1061| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1065,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1065| 
-        MOVB      ACC,#56               ; [CPU_ALU] |1065| 
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |1066| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |1066| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1070,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1070| 
+        MOVB      ACC,#56               ; [CPU_ALU] |1070| 
 $C$DW$372	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$372, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$372, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$372, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1065| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1065| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1066,column 5,is_stmt,isa 0
-        MOV       AL,#4102              ; [CPU_ALU] |1066| 
-        MOV       AH,#72                ; [CPU_ALU] |1066| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1070| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1070| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1071,column 5,is_stmt,isa 0
+        MOV       AL,#4102              ; [CPU_ALU] |1071| 
+        MOV       AH,#72                ; [CPU_ALU] |1071| 
 $C$DW$373	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$373, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$373, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$373, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1066| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1066| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1067,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1067| 
-        MOVB      ACC,#56               ; [CPU_ALU] |1067| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1071| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1071| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1072,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1072| 
+        MOVB      ACC,#56               ; [CPU_ALU] |1072| 
 $C$DW$374	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$374, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$374, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$374, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1067| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1067| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1068,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1068| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1068| 
-        MOVB      ACC,#56               ; [CPU_ALU] |1068| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1072| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1072| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1073,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1073| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1073| 
+        MOVB      ACC,#56               ; [CPU_ALU] |1073| 
 $C$DW$375	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$375, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$375, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$375, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1068| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1068| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1072,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1072| 
-        MOVB      ACC,#57               ; [CPU_ALU] |1072| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1073| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1073| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1077,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1077| 
+        MOVB      ACC,#57               ; [CPU_ALU] |1077| 
 $C$DW$376	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$376, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$376, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$376, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1072| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1072| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1073,column 5,is_stmt,isa 0
-        MOV       AL,#4613              ; [CPU_ALU] |1073| 
-        MOV       AH,#72                ; [CPU_ALU] |1073| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1077| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1077| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1078,column 5,is_stmt,isa 0
+        MOV       AL,#4613              ; [CPU_ALU] |1078| 
+        MOV       AH,#72                ; [CPU_ALU] |1078| 
 $C$DW$377	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$377, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$377, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$377, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1073| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1073| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1074,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1074| 
-        MOVB      ACC,#57               ; [CPU_ALU] |1074| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1078| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1078| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1079,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1079| 
+        MOVB      ACC,#57               ; [CPU_ALU] |1079| 
 $C$DW$378	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$378, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$378, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$378, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1074| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1074| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1075,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1075| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1075| 
-        MOVB      ACC,#57               ; [CPU_ALU] |1075| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1079| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1079| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1080,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1080| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1080| 
+        MOVB      ACC,#57               ; [CPU_ALU] |1080| 
 $C$DW$379	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$379, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$379, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$379, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1075| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1075| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1076,column 5,is_stmt,isa 0
-        MOVB      ACC,#57               ; [CPU_ALU] |1076| 
-        MOVB      XAR4,#1               ; [CPU_ALU] |1076| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1080| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1080| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1081,column 5,is_stmt,isa 0
+        MOVB      ACC,#57               ; [CPU_ALU] |1081| 
+        MOVB      XAR4,#1               ; [CPU_ALU] |1081| 
 $C$DW$380	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$380, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$380, DW_AT_name("GPIO_setQualificationMode")
 	.dwattr $C$DW$380, DW_AT_TI_call
 
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |1076| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |1076| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1080,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1080| 
-        MOVB      ACC,#58               ; [CPU_ALU] |1080| 
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |1081| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |1081| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1085,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1085| 
+        MOVB      ACC,#58               ; [CPU_ALU] |1085| 
 $C$DW$381	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$381, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$381, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$381, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1080| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1080| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1081,column 5,is_stmt,isa 0
-        MOV       AL,#5135              ; [CPU_ALU] |1081| 
-        MOV       AH,#72                ; [CPU_ALU] |1081| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1085| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1085| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1086,column 5,is_stmt,isa 0
+        MOV       AL,#5135              ; [CPU_ALU] |1086| 
+        MOV       AH,#72                ; [CPU_ALU] |1086| 
 $C$DW$382	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$382, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$382, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$382, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1081| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1081| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1082,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1082| 
-        MOVB      ACC,#58               ; [CPU_ALU] |1082| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1086| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1086| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1087,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1087| 
+        MOVB      ACC,#58               ; [CPU_ALU] |1087| 
 $C$DW$383	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$383, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$383, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$383, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1082| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1082| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1083,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1083| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1083| 
-        MOVB      ACC,#58               ; [CPU_ALU] |1083| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1087| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1087| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1088,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1088| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1088| 
+        MOVB      ACC,#58               ; [CPU_ALU] |1088| 
 $C$DW$384	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$384, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$384, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$384, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1083| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1083| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1086,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1086| 
-        MOVB      ACC,#59               ; [CPU_ALU] |1086| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1088| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1088| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1091,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1091| 
+        MOVB      ACC,#59               ; [CPU_ALU] |1091| 
 $C$DW$385	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$385, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$385, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$385, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1086| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1086| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1087,column 5,is_stmt,isa 0
-        MOV       AL,#5647              ; [CPU_ALU] |1087| 
-        MOV       AH,#72                ; [CPU_ALU] |1087| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1091| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1091| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1092,column 5,is_stmt,isa 0
+        MOV       AL,#5647              ; [CPU_ALU] |1092| 
+        MOV       AH,#72                ; [CPU_ALU] |1092| 
 $C$DW$386	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$386, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$386, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$386, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1087| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1087| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1088,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1088| 
-        MOVB      ACC,#59               ; [CPU_ALU] |1088| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1092| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1092| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1093,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1093| 
+        MOVB      ACC,#59               ; [CPU_ALU] |1093| 
 $C$DW$387	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$387, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$387, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$387, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1088| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1088| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1089,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1089| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1089| 
-        MOVB      ACC,#59               ; [CPU_ALU] |1089| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1093| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1093| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1094,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1094| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1094| 
+        MOVB      ACC,#59               ; [CPU_ALU] |1094| 
 $C$DW$388	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$388, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$388, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$388, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1089| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1089| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1092,column 5,is_stmt,isa 0
-        MOVB      ACC,#60               ; [CPU_ALU] |1092| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |1092| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1094| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1094| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1097,column 5,is_stmt,isa 0
+        MOVB      ACC,#60               ; [CPU_ALU] |1097| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |1097| 
 $C$DW$389	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$389, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$389, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$389, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1092| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1092| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1093,column 5,is_stmt,isa 0
-        MOV       AL,#6159              ; [CPU_ALU] |1093| 
-        MOV       AH,#72                ; [CPU_ALU] |1093| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1097| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1097| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1098,column 5,is_stmt,isa 0
+        MOV       AL,#6159              ; [CPU_ALU] |1098| 
+        MOV       AH,#72                ; [CPU_ALU] |1098| 
 $C$DW$390	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$390, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$390, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$390, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1093| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1093| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1094,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1094| 
-        MOVB      ACC,#60               ; [CPU_ALU] |1094| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1098| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1098| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1099,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1099| 
+        MOVB      ACC,#60               ; [CPU_ALU] |1099| 
 $C$DW$391	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$391, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$391, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$391, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1094| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1094| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1095,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1095| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1095| 
-        MOVB      ACC,#60               ; [CPU_ALU] |1095| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1099| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1099| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1100,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1100| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1100| 
+        MOVB      ACC,#60               ; [CPU_ALU] |1100| 
 $C$DW$392	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$392, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$392, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$392, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1095| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1095| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1098,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1098| 
-        MOVB      ACC,#61               ; [CPU_ALU] |1098| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1100| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1100| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1103,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1103| 
+        MOVB      ACC,#61               ; [CPU_ALU] |1103| 
 $C$DW$393	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$393, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$393, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$393, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1098| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1098| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1099,column 5,is_stmt,isa 0
-        MOV       AL,#6671              ; [CPU_ALU] |1099| 
-        MOV       AH,#72                ; [CPU_ALU] |1099| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1103| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1103| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1104,column 5,is_stmt,isa 0
+        MOV       AL,#6671              ; [CPU_ALU] |1104| 
+        MOV       AH,#72                ; [CPU_ALU] |1104| 
 $C$DW$394	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$394, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$394, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$394, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1099| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1099| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1100,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1100| 
-        MOVB      ACC,#61               ; [CPU_ALU] |1100| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1104| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1104| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1105,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1105| 
+        MOVB      ACC,#61               ; [CPU_ALU] |1105| 
 $C$DW$395	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$395, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$395, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$395, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1100| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1100| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1101,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1101| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1101| 
-        MOVB      ACC,#61               ; [CPU_ALU] |1101| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1105| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1105| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1106,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1106| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1106| 
+        MOVB      ACC,#61               ; [CPU_ALU] |1106| 
 $C$DW$396	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$396, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$396, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$396, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1101| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1101| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1105,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1105| 
-        MOVB      ACC,#63               ; [CPU_ALU] |1105| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1106| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1106| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1110,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1110| 
+        MOVB      ACC,#63               ; [CPU_ALU] |1110| 
 $C$DW$397	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$397, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$397, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$397, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1105| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1105| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1106,column 5,is_stmt,isa 0
-        MOV       AL,#7695              ; [CPU_ALU] |1106| 
-        MOV       AH,#72                ; [CPU_ALU] |1106| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1110| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1110| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1111,column 5,is_stmt,isa 0
+        MOV       AL,#7695              ; [CPU_ALU] |1111| 
+        MOV       AH,#72                ; [CPU_ALU] |1111| 
 $C$DW$398	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$398, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$398, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$398, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1106| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1106| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1107,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1107| 
-        MOVB      ACC,#63               ; [CPU_ALU] |1107| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1111| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1111| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1112,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1112| 
+        MOVB      ACC,#63               ; [CPU_ALU] |1112| 
 $C$DW$399	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$399, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$399, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$399, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1107| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1107| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1108,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1108| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1108| 
-        MOVB      ACC,#63               ; [CPU_ALU] |1108| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1112| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1112| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1113,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1113| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1113| 
+        MOVB      ACC,#63               ; [CPU_ALU] |1113| 
 $C$DW$400	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$400, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$400, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$400, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1108| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1108| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1111,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1111| 
-        MOVB      ACC,#64               ; [CPU_ALU] |1111| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1113| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1113| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1116,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1116| 
+        MOVB      ACC,#64               ; [CPU_ALU] |1116| 
 $C$DW$401	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$401, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$401, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$401, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1111| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1111| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1112,column 5,is_stmt,isa 0
-        MOV       AL,#15                ; [CPU_ALU] |1112| 
-        MOV       AH,#134               ; [CPU_ALU] |1112| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1116| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1116| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1117,column 5,is_stmt,isa 0
+        MOV       AL,#15                ; [CPU_ALU] |1117| 
+        MOV       AH,#134               ; [CPU_ALU] |1117| 
 $C$DW$402	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$402, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$402, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$402, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1112| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1112| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1113,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1113| 
-        MOVB      ACC,#64               ; [CPU_ALU] |1113| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1117| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1117| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1118,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1118| 
+        MOVB      ACC,#64               ; [CPU_ALU] |1118| 
 $C$DW$403	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$403, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$403, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$403, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1113| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1113| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1114,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1114| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1114| 
-        MOVB      ACC,#64               ; [CPU_ALU] |1114| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1118| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1118| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1119,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1119| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1119| 
+        MOVB      ACC,#64               ; [CPU_ALU] |1119| 
 $C$DW$404	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$404, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$404, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$404, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1114| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1114| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1117,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1117| 
-        MOVB      ACC,#65               ; [CPU_ALU] |1117| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1119| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1119| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1122,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1122| 
+        MOVB      ACC,#65               ; [CPU_ALU] |1122| 
 $C$DW$405	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$405, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$405, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$405, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1117| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1117| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1118,column 5,is_stmt,isa 0
-        MOV       AL,#527               ; [CPU_ALU] |1118| 
-        MOV       AH,#134               ; [CPU_ALU] |1118| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1122| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1122| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1123,column 5,is_stmt,isa 0
+        MOV       AL,#527               ; [CPU_ALU] |1123| 
+        MOV       AH,#134               ; [CPU_ALU] |1123| 
 $C$DW$406	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$406, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$406, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$406, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1118| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1118| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1119,column 5,is_stmt,isa 0
-        MOVB      ACC,#65               ; [CPU_ALU] |1119| 
-        MOVB      XAR4,#1               ; [CPU_ALU] |1119| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1123| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1123| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1124,column 5,is_stmt,isa 0
+        MOVB      ACC,#65               ; [CPU_ALU] |1124| 
+        MOVB      XAR4,#1               ; [CPU_ALU] |1124| 
 $C$DW$407	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$407, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$407, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$407, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1119| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1119| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1120,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1120| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1120| 
-        MOVB      ACC,#65               ; [CPU_ALU] |1120| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1124| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1124| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1125,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1125| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1125| 
+        MOVB      ACC,#65               ; [CPU_ALU] |1125| 
 $C$DW$408	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$408, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$408, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$408, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1120| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1120| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1123,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1123| 
-        MOVB      ACC,#66               ; [CPU_ALU] |1123| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1125| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1125| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1128,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1128| 
+        MOVB      ACC,#66               ; [CPU_ALU] |1128| 
 $C$DW$409	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$409, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$409, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$409, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1123| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1123| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1124,column 5,is_stmt,isa 0
-        MOV       AL,#1039              ; [CPU_ALU] |1124| 
-        MOV       AH,#134               ; [CPU_ALU] |1124| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1128| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1128| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1129,column 5,is_stmt,isa 0
+        MOV       AL,#1039              ; [CPU_ALU] |1129| 
+        MOV       AH,#134               ; [CPU_ALU] |1129| 
 $C$DW$410	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$410, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$410, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$410, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1124| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1124| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1125,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1125| 
-        MOVB      ACC,#66               ; [CPU_ALU] |1125| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1129| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1129| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1130,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1130| 
+        MOVB      ACC,#66               ; [CPU_ALU] |1130| 
 $C$DW$411	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$411, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$411, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$411, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1125| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1125| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1126,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1126| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1126| 
-        MOVB      ACC,#66               ; [CPU_ALU] |1126| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1130| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1130| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1131,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1131| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1131| 
+        MOVB      ACC,#66               ; [CPU_ALU] |1131| 
 $C$DW$412	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$412, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$412, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$412, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1126| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1126| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1130,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1130| 
-        MOVB      ACC,#94               ; [CPU_ALU] |1130| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1131| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1131| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1135,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1135| 
+        MOVB      ACC,#94               ; [CPU_ALU] |1135| 
 $C$DW$413	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$413, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$413, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$413, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1130| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1130| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1131,column 5,is_stmt,isa 0
-        MOV       ACC,#8711 << 10       ; [CPU_ALU] |1131| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1135| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1135| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1136,column 5,is_stmt,isa 0
+        MOV       ACC,#8711 << 10       ; [CPU_ALU] |1136| 
 $C$DW$414	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$414, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$414, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$414, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1131| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1131| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1132,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1132| 
-        MOVB      ACC,#94               ; [CPU_ALU] |1132| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1136| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1136| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1137,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1137| 
+        MOVB      ACC,#94               ; [CPU_ALU] |1137| 
 $C$DW$415	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$415, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$415, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$415, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1132| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1132| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1133,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1133| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1133| 
-        MOVB      ACC,#94               ; [CPU_ALU] |1133| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1137| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1137| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1138,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1138| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1138| 
+        MOVB      ACC,#94               ; [CPU_ALU] |1138| 
 $C$DW$416	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$416, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$416, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$416, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1133| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1133| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1137,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1137| 
-        MOVB      ACC,#99               ; [CPU_ALU] |1137| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1138| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1138| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1142,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1142| 
+        MOVB      ACC,#23               ; [CPU_ALU] |1142| 
 $C$DW$417	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$417, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$417, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$417, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1137| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1137| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1138,column 5,is_stmt,isa 0
-        MOV       AL,#1541              ; [CPU_ALU] |1138| 
-        MOV       AH,#198               ; [CPU_ALU] |1138| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1142| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1142| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1143,column 5,is_stmt,isa 0
+        MOVL      XAR4,#527873          ; [CPU_ARAU] |1143| 
+        MOVL      ACC,XAR4              ; [CPU_ALU] |1143| 
 $C$DW$418	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$418, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$418, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$418, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1138| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1138| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1139,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1139| 
-        MOVB      ACC,#99               ; [CPU_ALU] |1139| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1143| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1143| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1144,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1144| 
+        MOVB      ACC,#23               ; [CPU_ALU] |1144| 
 $C$DW$419	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$419, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$419, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$419, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1139| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1139| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1140,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1140| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1140| 
-        MOVB      ACC,#99               ; [CPU_ALU] |1140| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1144| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1144| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1145,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1145| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1145| 
+        MOVB      ACC,#23               ; [CPU_ALU] |1145| 
 $C$DW$420	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$420, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$420, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$420, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1140| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1140| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1141,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1141| 
-        MOVB      ACC,#99               ; [CPU_ALU] |1141| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1145| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1145| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1146,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1146| 
+        MOVB      ACC,#23               ; [CPU_ALU] |1146| 
 $C$DW$421	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$421, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$421, DW_AT_name("GPIO_setQualificationMode")
 	.dwattr $C$DW$421, DW_AT_TI_call
 
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |1141| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |1141| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1145,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1145| 
-        MOVB      ACC,#111              ; [CPU_ALU] |1145| 
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |1146| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |1146| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1150,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1150| 
+        MOVB      ACC,#111              ; [CPU_ALU] |1150| 
 $C$DW$422	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$422, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$422, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$422, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1145| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1145| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1146,column 5,is_stmt,isa 0
-        MOV       ACC,#25359 << 9       ; [CPU_ALU] |1146| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1150| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1150| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1151,column 5,is_stmt,isa 0
+        MOV       ACC,#25359 << 9       ; [CPU_ALU] |1151| 
 $C$DW$423	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$423, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$423, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$423, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1146| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1146| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1147,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1147| 
-        MOVB      ACC,#111              ; [CPU_ALU] |1147| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1151| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1151| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1152,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1152| 
+        MOVB      ACC,#111              ; [CPU_ALU] |1152| 
 $C$DW$424	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$424, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$424, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$424, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1147| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1147| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1148,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1148| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1148| 
-        MOVB      ACC,#111              ; [CPU_ALU] |1148| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1152| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1152| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1153,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1153| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1153| 
+        MOVB      ACC,#111              ; [CPU_ALU] |1153| 
 $C$DW$425	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$425, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$425, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$425, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1148| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1148| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1152,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1152| 
-        MOVB      ACC,#124              ; [CPU_ALU] |1152| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1153| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1153| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1157,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1157| 
+        MOVB      ACC,#124              ; [CPU_ALU] |1157| 
 $C$DW$426	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$426, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$426, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$426, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1152| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1152| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1153,column 5,is_stmt,isa 0
-        MOV       ACC,#6403 << 11       ; [CPU_ALU] |1153| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1157| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1157| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1158,column 5,is_stmt,isa 0
+        MOV       ACC,#6403 << 11       ; [CPU_ALU] |1158| 
 $C$DW$427	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$427, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$427, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$427, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1153| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1153| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1158| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1158| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV       ACC,#8192 << 15       ; [CPU_ALU] |473| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1155,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1155| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1160,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1160| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h",line 473,column 9,is_stmt,isa 0
         MOV32     *(0:0x7f1a),ACC       ; [CPU_FPU] |473| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1155,column 5,is_stmt,isa 0
-        MOVB      ACC,#124              ; [CPU_ALU] |1155| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1160,column 5,is_stmt,isa 0
+        MOVB      ACC,#124              ; [CPU_ALU] |1160| 
 $C$DW$428	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$428, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$428, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$428, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1155| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1155| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1156,column 5,is_stmt,isa 0
-        MOVB      ACC,#1                ; [CPU_ALU] |1156| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1156| 
-        MOVB      ACC,#124              ; [CPU_ALU] |1156| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1160| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1160| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1161,column 5,is_stmt,isa 0
+        MOVB      ACC,#1                ; [CPU_ALU] |1161| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1161| 
+        MOVB      ACC,#124              ; [CPU_ALU] |1161| 
 $C$DW$429	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$429, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$429, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$429, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1156| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1156| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1159,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1159| 
-        MOVB      ACC,#125              ; [CPU_ALU] |1159| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1161| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1161| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1164,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1164| 
+        MOVB      ACC,#125              ; [CPU_ALU] |1164| 
 $C$DW$430	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$430, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$430, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$430, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1159| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1159| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1160,column 5,is_stmt,isa 0
-        MOV       ACC,#25613 << 9       ; [CPU_ALU] |1160| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1164| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1164| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1165,column 5,is_stmt,isa 0
+        MOV       ACC,#25613 << 9       ; [CPU_ALU] |1165| 
 $C$DW$431	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$431, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$431, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$431, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1160| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1160| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1161,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1161| 
-        MOVB      ACC,#125              ; [CPU_ALU] |1161| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1165| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1165| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1166,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1166| 
+        MOVB      ACC,#125              ; [CPU_ALU] |1166| 
 $C$DW$432	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$432, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$432, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$432, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1161| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1161| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1162,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1162| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1162| 
-        MOVB      ACC,#125              ; [CPU_ALU] |1162| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1166| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1166| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1167,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1167| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1167| 
+        MOVB      ACC,#125              ; [CPU_ALU] |1167| 
 $C$DW$433	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$433, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$433, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$433, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1162| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1162| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1166,column 5,is_stmt,isa 0
-        MOVB      ACC,#139              ; [CPU_ALU] |1166| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |1166| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1167| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1167| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1171,column 5,is_stmt,isa 0
+        MOVB      ACC,#139              ; [CPU_ALU] |1171| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |1171| 
 $C$DW$434	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$434, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$434, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$434, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1166| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1166| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1167,column 5,is_stmt,isa 0
-        MOV       AL,#5632              ; [CPU_ALU] |1167| 
-        MOV       AH,#262               ; [CPU_ALU] |1167| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1171| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1171| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1172,column 5,is_stmt,isa 0
+        MOV       AL,#5632              ; [CPU_ALU] |1172| 
+        MOV       AH,#262               ; [CPU_ALU] |1172| 
 $C$DW$435	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$435, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$435, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$435, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1167| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1167| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1168,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1168| 
-        MOVB      ACC,#139              ; [CPU_ALU] |1168| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1172| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1172| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1173,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1173| 
+        MOVB      ACC,#139              ; [CPU_ALU] |1173| 
 $C$DW$436	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$436, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$436, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$436, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1168| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1168| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1169,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1169| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1169| 
-        MOVB      ACC,#139              ; [CPU_ALU] |1169| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1173| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1173| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1174,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1174| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1174| 
+        MOVB      ACC,#139              ; [CPU_ALU] |1174| 
 $C$DW$437	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$437, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$437, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$437, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1169| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1169| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1173,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1173| 
-        MOVB      ACC,#153              ; [CPU_ALU] |1173| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1174| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1174| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1178,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1178| 
+        MOVB      ACC,#153              ; [CPU_ALU] |1178| 
 $C$DW$438	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$438, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$438, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$438, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1173| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1173| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1174,column 5,is_stmt,isa 0
-        MOV       AL,#4608              ; [CPU_ALU] |1174| 
-        MOV       AH,#264               ; [CPU_ALU] |1174| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1178| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1178| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1179,column 5,is_stmt,isa 0
+        MOV       AL,#4608              ; [CPU_ALU] |1179| 
+        MOV       AH,#264               ; [CPU_ALU] |1179| 
 $C$DW$439	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$439, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$439, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$439, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1174| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1174| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1175,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1175| 
-        MOVB      ACC,#153              ; [CPU_ALU] |1175| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1179| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1179| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1180,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1180| 
+        MOVB      ACC,#153              ; [CPU_ALU] |1180| 
 $C$DW$440	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$440, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$440, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$440, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1175| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1175| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1176,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1176| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1176| 
-        MOVB      ACC,#153              ; [CPU_ALU] |1176| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1180| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1180| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1181,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1181| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1181| 
+        MOVB      ACC,#153              ; [CPU_ALU] |1181| 
 $C$DW$441	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$441, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$441, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$441, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1176| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1176| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1179,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1179| 
-        MOVB      ACC,#154              ; [CPU_ALU] |1179| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1181| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1181| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1184,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1184| 
+        MOVB      ACC,#154              ; [CPU_ALU] |1184| 
 $C$DW$442	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$442, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$442, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$442, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1179| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1179| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1180,column 5,is_stmt,isa 0
-        MOV       ACC,#16901 << 10      ; [CPU_ALU] |1180| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1184| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1184| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1185,column 5,is_stmt,isa 0
+        MOV       ACC,#16901 << 10      ; [CPU_ALU] |1185| 
 $C$DW$443	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$443, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$443, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$443, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1180| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1180| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1181,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1181| 
-        MOVB      ACC,#154              ; [CPU_ALU] |1181| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1185| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1185| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1186,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1186| 
+        MOVB      ACC,#154              ; [CPU_ALU] |1186| 
 $C$DW$444	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$444, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$444, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$444, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1181| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1181| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1182,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1182| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1182| 
-        MOVB      ACC,#154              ; [CPU_ALU] |1182| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1186| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1186| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1187,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1187| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1187| 
+        MOVB      ACC,#154              ; [CPU_ALU] |1187| 
 $C$DW$445	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$445, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$445, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$445, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1182| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1182| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1185,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1185| 
-        MOVB      ACC,#155              ; [CPU_ALU] |1185| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1187| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1187| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1190,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1190| 
+        MOVB      ACC,#155              ; [CPU_ALU] |1190| 
 $C$DW$446	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$446, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$446, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$446, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1185| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1185| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1186,column 5,is_stmt,isa 0
-        MOV       AL,#5632              ; [CPU_ALU] |1186| 
-        MOV       AH,#264               ; [CPU_ALU] |1186| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1190| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1190| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1191,column 5,is_stmt,isa 0
+        MOV       AL,#5632              ; [CPU_ALU] |1191| 
+        MOV       AH,#264               ; [CPU_ALU] |1191| 
 $C$DW$447	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$447, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$447, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$447, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1186| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1186| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1187,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1187| 
-        MOVB      ACC,#155              ; [CPU_ALU] |1187| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1191| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1191| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1192,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1192| 
+        MOVB      ACC,#155              ; [CPU_ALU] |1192| 
 $C$DW$448	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$448, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$448, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$448, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1187| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1187| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1188,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1188| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1188| 
-        MOVB      ACC,#155              ; [CPU_ALU] |1188| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1192| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1192| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1193,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1193| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1193| 
+        MOVB      ACC,#155              ; [CPU_ALU] |1193| 
 $C$DW$449	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$449, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$449, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$449, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1188| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1188| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1191,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1191| 
-        MOVB      ACC,#156              ; [CPU_ALU] |1191| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1193| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1193| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1196,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1196| 
+        MOVB      ACC,#156              ; [CPU_ALU] |1196| 
 $C$DW$450	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$450, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$450, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$450, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1191| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1191| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1192,column 5,is_stmt,isa 0
-        MOV       ACC,#8451 << 11       ; [CPU_ALU] |1192| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1196| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1196| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1197,column 5,is_stmt,isa 0
+        MOV       ACC,#8451 << 11       ; [CPU_ALU] |1197| 
 $C$DW$451	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$451, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$451, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$451, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1192| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1192| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1193,column 5,is_stmt,isa 0
-        MOVB      ACC,#156              ; [CPU_ALU] |1193| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |1193| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1197| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1197| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1198,column 5,is_stmt,isa 0
+        MOVB      ACC,#156              ; [CPU_ALU] |1198| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |1198| 
 $C$DW$452	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$452, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$452, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$452, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1193| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1193| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1194,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1194| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1194| 
-        MOVB      ACC,#156              ; [CPU_ALU] |1194| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1198| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1198| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1199,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1199| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1199| 
+        MOVB      ACC,#156              ; [CPU_ALU] |1199| 
 $C$DW$453	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$453, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$453, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$453, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1194| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1194| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1198,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1198| 
-        MOVB      ACC,#157              ; [CPU_ALU] |1198| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1199| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1199| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1203,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1203| 
+        MOVB      ACC,#157              ; [CPU_ALU] |1203| 
 $C$DW$454	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$454, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$454, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$454, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1198| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1198| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1199,column 5,is_stmt,isa 0
-        MOV       AL,#6657              ; [CPU_ALU] |1199| 
-        MOV       AH,#264               ; [CPU_ALU] |1199| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1203| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1203| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1204,column 5,is_stmt,isa 0
+        MOV       AL,#6657              ; [CPU_ALU] |1204| 
+        MOV       AH,#264               ; [CPU_ALU] |1204| 
 $C$DW$455	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$455, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$455, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$455, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1199| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1199| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1200,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1200| 
-        MOVB      ACC,#157              ; [CPU_ALU] |1200| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1204| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1204| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1205,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1205| 
+        MOVB      ACC,#157              ; [CPU_ALU] |1205| 
 $C$DW$456	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$456, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$456, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$456, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1200| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1200| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1201,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1201| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1201| 
-        MOVB      ACC,#157              ; [CPU_ALU] |1201| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1205| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1205| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1206,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1206| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1206| 
+        MOVB      ACC,#157              ; [CPU_ALU] |1206| 
 $C$DW$457	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$457, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$457, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$457, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1201| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1201| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1204,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1204| 
-        MOVB      ACC,#158              ; [CPU_ALU] |1204| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1206| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1206| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1209,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1209| 
+        MOVB      ACC,#158              ; [CPU_ALU] |1209| 
 $C$DW$458	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$458, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$458, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$458, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1204| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1204| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1205,column 5,is_stmt,isa 0
-        MOV       AL,#7169              ; [CPU_ALU] |1205| 
-        MOV       AH,#264               ; [CPU_ALU] |1205| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1209| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1209| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1210,column 5,is_stmt,isa 0
+        MOV       AL,#7169              ; [CPU_ALU] |1210| 
+        MOV       AH,#264               ; [CPU_ALU] |1210| 
 $C$DW$459	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$459, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$459, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$459, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1205| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1205| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1206,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1206| 
-        MOVB      ACC,#158              ; [CPU_ALU] |1206| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1210| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1210| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1211,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1211| 
+        MOVB      ACC,#158              ; [CPU_ALU] |1211| 
 $C$DW$460	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$460, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$460, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$460, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1206| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1206| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1207,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1207| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1207| 
-        MOVB      ACC,#158              ; [CPU_ALU] |1207| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1211| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1211| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1212,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1212| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1212| 
+        MOVB      ACC,#158              ; [CPU_ALU] |1212| 
 $C$DW$461	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$461, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$461, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$461, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1207| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1207| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1210,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1210| 
-        MOVB      ACC,#159              ; [CPU_ALU] |1210| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1212| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1212| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1215,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1215| 
+        MOVB      ACC,#159              ; [CPU_ALU] |1215| 
 $C$DW$462	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$462, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$462, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$462, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1210| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1210| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1211,column 5,is_stmt,isa 0
-        MOV       AL,#7681              ; [CPU_ALU] |1211| 
-        MOV       AH,#264               ; [CPU_ALU] |1211| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1215| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1215| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1216,column 5,is_stmt,isa 0
+        MOV       AL,#7681              ; [CPU_ALU] |1216| 
+        MOV       AH,#264               ; [CPU_ALU] |1216| 
 $C$DW$463	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$463, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$463, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$463, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1211| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1211| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1212,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1212| 
-        MOVB      ACC,#159              ; [CPU_ALU] |1212| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1216| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1216| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1217,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1217| 
+        MOVB      ACC,#159              ; [CPU_ALU] |1217| 
 $C$DW$464	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$464, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$464, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$464, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1212| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1212| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1213,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1213| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1213| 
-        MOVB      ACC,#159              ; [CPU_ALU] |1213| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1217| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1217| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1218,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1218| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1218| 
+        MOVB      ACC,#159              ; [CPU_ALU] |1218| 
 $C$DW$465	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$465, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$465, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$465, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1213| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1213| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1216,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |1216| 
-        MOVB      ACC,#160              ; [CPU_ALU] |1216| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1218| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1218| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1221,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |1221| 
+        MOVB      ACC,#160              ; [CPU_ALU] |1221| 
 $C$DW$466	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$466, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$466, DW_AT_name("GPIO_setControllerCore")
 	.dwattr $C$DW$466, DW_AT_TI_call
 
-        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1216| 
-        ; call occurs [#||GPIO_setControllerCore||] ; [] |1216| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1217,column 5,is_stmt,isa 0
-        MOV       AL,#1                 ; [CPU_ALU] |1217| 
-        MOV       AH,#326               ; [CPU_ALU] |1217| 
+        LCR       #||GPIO_setControllerCore|| ; [CPU_ALU] |1221| 
+        ; call occurs [#||GPIO_setControllerCore||] ; [] |1221| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1222,column 5,is_stmt,isa 0
+        MOV       AL,#1                 ; [CPU_ALU] |1222| 
+        MOV       AH,#326               ; [CPU_ALU] |1222| 
 $C$DW$467	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$467, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$467, DW_AT_name("GPIO_setPinConfig")
 	.dwattr $C$DW$467, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1217| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |1217| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1218,column 5,is_stmt,isa 0
-        MOVB      XAR4,#1               ; [CPU_ALU] |1218| 
-        MOVB      ACC,#160              ; [CPU_ALU] |1218| 
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |1222| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |1222| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1223,column 5,is_stmt,isa 0
+        MOVB      XAR4,#1               ; [CPU_ALU] |1223| 
+        MOVB      ACC,#160              ; [CPU_ALU] |1223| 
 $C$DW$468	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$468, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$468, DW_AT_name("GPIO_setDirectionMode")
 	.dwattr $C$DW$468, DW_AT_TI_call
 
-        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1218| 
-        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1218| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1219,column 5,is_stmt,isa 0
-        MOVB      ACC,#0                ; [CPU_ALU] |1219| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1219| 
-        MOVB      ACC,#160              ; [CPU_ALU] |1219| 
+        LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |1223| 
+        ; call occurs [#||GPIO_setDirectionMode||] ; [] |1223| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 1224,column 5,is_stmt,isa 0
+        MOVB      ACC,#0                ; [CPU_ALU] |1224| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |1224| 
+        MOVB      ACC,#160              ; [CPU_ALU] |1224| 
 $C$DW$469	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$469, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$469, DW_AT_name("GPIO_setPadConfig")
 	.dwattr $C$DW$469, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1219| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |1219| 
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |1224| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |1224| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
 $C$DW$470	.dwtag  DW_TAG_TI_branch
@@ -6333,7 +6333,7 @@ $C$DW$470	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$246, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$246, DW_AT_TI_end_line(0x4c6)
+	.dwattr $C$DW$246, DW_AT_TI_end_line(0x4cb)
 	.dwattr $C$DW$246, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$246
@@ -6349,10 +6349,10 @@ $C$DW$471	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$471, DW_AT_linkage_name("HAL_setupCpuTimer")
 	.dwattr $C$DW$471, DW_AT_external
 	.dwattr $C$DW$471, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$471, DW_AT_decl_line(0x311)
+	.dwattr $C$DW$471, DW_AT_decl_line(0x316)
 	.dwattr $C$DW$471, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$471, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 786,column 1,is_stmt,address ||HAL_setupCpuTimer||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 791,column 1,is_stmt,address ||HAL_setupCpuTimer||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupCpuTimer||
 $C$DW$472	.dwtag  DW_TAG_formal_parameter
@@ -6407,17 +6407,17 @@ $C$DW$477	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -4
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 379,column 5,is_stmt,isa 0
         MOVB      XAR6,#0               ; [CPU_ALU] |379| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 786,column 1,is_stmt,isa 0
-        MOVL      XAR1,ACC              ; [CPU_ALU] |786| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 791,column 1,is_stmt,isa 0
+        MOVL      XAR1,ACC              ; [CPU_ALU] |791| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 379,column 5,is_stmt,isa 0
         MOV       *(0:0x0c07),AR6       ; [CPU_ALU] |379| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 786,column 1,is_stmt,isa 0
-        MOVL      XAR7,*-SP[6]          ; [CPU_ALU] |786| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 791,column 1,is_stmt,isa 0
+        MOVL      XAR7,*-SP[6]          ; [CPU_ALU] |791| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 380,column 5,is_stmt,isa 0
         MOVB      AL,#0                 ; [CPU_ALU] |380| 
         MOV       *(0:0x0c06),AL        ; [CPU_ALU] |380| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 790,column 5,is_stmt,isa 0
-        MOVB      XAR4,#0               ; [CPU_ALU] |790| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 795,column 5,is_stmt,isa 0
+        MOVB      XAR4,#0               ; [CPU_ALU] |795| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 335,column 5,is_stmt,isa 0
         MOVL      *+XAR1[2],XAR7        ; [CPU_ALU] |335| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 259,column 5,is_stmt,isa 0
@@ -6425,15 +6425,15 @@ $C$DW$477	.dwtag  DW_TAG_variable
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 260,column 5,is_stmt,isa 0
         ORB       AL,#0x10              ; [CPU_ALU] |260| 
         MOV       *+XAR1[4],AL          ; [CPU_ALU] |260| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 790,column 5,is_stmt,isa 0
-        MOVL      ACC,XAR1              ; [CPU_ALU] |790| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 795,column 5,is_stmt,isa 0
+        MOVL      ACC,XAR1              ; [CPU_ALU] |795| 
 $C$DW$478	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$478, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$478, DW_AT_name("CPUTimer_setEmulationMode")
 	.dwattr $C$DW$478, DW_AT_TI_call
 
-        LCR       #||CPUTimer_setEmulationMode|| ; [CPU_ALU] |790| 
-        ; call occurs [#||CPUTimer_setEmulationMode||] ; [] |790| 
+        LCR       #||CPUTimer_setEmulationMode|| ; [CPU_ALU] |795| 
+        ; call occurs [#||CPUTimer_setEmulationMode||] ; [] |795| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 236,column 5,is_stmt,isa 0
         AND       AL,*+XAR1[4],#0x7fff  ; [CPU_ALU] |236| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cputimer.h",line 237,column 5,is_stmt,isa 0
@@ -6451,7 +6451,7 @@ $C$DW$479	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$471, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$471, DW_AT_TI_end_line(0x31c)
+	.dwattr $C$DW$471, DW_AT_TI_end_line(0x321)
 	.dwattr $C$DW$471, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$471
@@ -6467,10 +6467,10 @@ $C$DW$480	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$480, DW_AT_linkage_name("HAL_setupCMPSS_DACValue")
 	.dwattr $C$DW$480, DW_AT_external
 	.dwattr $C$DW$480, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$480, DW_AT_decl_line(0x2c0)
+	.dwattr $C$DW$480, DW_AT_decl_line(0x2c5)
 	.dwattr $C$DW$480, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$480, DW_AT_TI_max_frame_size(-2)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 706,column 1,is_stmt,address ||HAL_setupCMPSS_DACValue||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 711,column 1,is_stmt,address ||HAL_setupCMPSS_DACValue||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupCMPSS_DACValue||
 $C$DW$481	.dwtag  DW_TAG_formal_parameter
@@ -6521,16 +6521,16 @@ $C$DW$486	.dwtag  DW_TAG_variable
 	.dwcfi	save_reg_to_mem, 26, 0
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 591,column 1,is_stmt,isa 0
         MOVL      XAR5,*+XAR4[6]        ; [CPU_ALU] |591| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 706,column 1,is_stmt,isa 0
-        MOVZ      AR6,AH                ; [CPU_ALU] |706| 
-        MOVZ      AR7,AL                ; [CPU_ALU] |706| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 711,column 1,is_stmt,isa 0
+        MOVZ      AR6,AH                ; [CPU_ALU] |711| 
+        MOVZ      AR7,AL                ; [CPU_ALU] |711| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 591,column 1,is_stmt,isa 0
         MOV       *+XAR5[6],AL          ; [CPU_ALU] |591| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 621,column 1,is_stmt,isa 0
         MOVB      ACC,#18               ; [CPU_ALU] |621| 
         ADDL      ACC,*+XAR4[6]         ; [CPU_ALU] |621| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 706,column 1,is_stmt,isa 0
-        MOVL      XAR5,ACC              ; [CPU_ALU] |706| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 711,column 1,is_stmt,isa 0
+        MOVL      XAR5,ACC              ; [CPU_ALU] |711| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 591,column 1,is_stmt,isa 0
         MOVB      XAR0,#8               ; [CPU_ALU] |591| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 621,column 1,is_stmt,isa 0
@@ -6567,7 +6567,7 @@ $C$DW$487	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$480, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$480, DW_AT_TI_end_line(0x2d2)
+	.dwattr $C$DW$480, DW_AT_TI_end_line(0x2d7)
 	.dwattr $C$DW$480, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$480
@@ -6583,10 +6583,10 @@ $C$DW$488	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$488, DW_AT_linkage_name("HAL_setupCMPSS")
 	.dwattr $C$DW$488, DW_AT_external
 	.dwattr $C$DW$488, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$488, DW_AT_decl_line(0x275)
+	.dwattr $C$DW$488, DW_AT_decl_line(0x27a)
 	.dwattr $C$DW$488, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$488, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 630,column 1,is_stmt,address ||HAL_setupCMPSS||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 635,column 1,is_stmt,address ||HAL_setupCMPSS||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupCMPSS||
 $C$DW$489	.dwtag  DW_TAG_formal_parameter
@@ -6688,7 +6688,7 @@ $C$DW$501	.dwtag  DW_TAG_variable
 	.dwcfi	cfa_offset, -6
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -8
-        MOVL      XAR1,XAR4             ; [CPU_ALU] |630| 
+        MOVL      XAR1,XAR4             ; [CPU_ALU] |635| 
         MOVB      XAR2,#2               ; [CPU_ALU] 
         ADDB      XAR1,#6               ; [CPU_ALU] 
 ||$C$L39||:    
@@ -6755,21 +6755,21 @@ $C$DW$501	.dwtag  DW_TAG_variable
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 631,column 5,is_stmt,isa 0
         ADDL      ACC,*+XAR1[0]         ; [CPU_ALU] |631| 
         MOVL      XAR4,ACC              ; [CPU_ALU] |631| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 673,column 9,is_stmt,isa 0
-        MOVB      XAR5,#30              ; [CPU_ALU] |673| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 678,column 9,is_stmt,isa 0
+        MOVB      XAR5,#30              ; [CPU_ALU] |678| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 631,column 5,is_stmt,isa 0
         MOV       *+XAR4[0],#1024       ; [CPU_ALU] |631| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 673,column 9,is_stmt,isa 0
-        MOVB      XAR4,#20              ; [CPU_ALU] |673| 
-        MOVB      *-SP[1],#18,UNC       ; [CPU_ALU] |673| 
-        MOVL      ACC,*+XAR1[0]         ; [CPU_ALU] |673| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 678,column 9,is_stmt,isa 0
+        MOVB      XAR4,#20              ; [CPU_ALU] |678| 
+        MOVB      *-SP[1],#18,UNC       ; [CPU_ALU] |678| 
+        MOVL      ACC,*+XAR1[0]         ; [CPU_ALU] |678| 
 $C$DW$502	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$502, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$502, DW_AT_name("CMPSS_configFilterHigh")
 	.dwattr $C$DW$502, DW_AT_TI_call
 
-        LCR       #||CMPSS_configFilterHigh|| ; [CPU_ALU] |673| 
-        ; call occurs [#||CMPSS_configFilterHigh||] ; [] |673| 
+        LCR       #||CMPSS_configFilterHigh|| ; [CPU_ALU] |678| 
+        ; call occurs [#||CMPSS_configFilterHigh||] ; [] |678| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 651,column 1,is_stmt,isa 0
         MOVL      XAR4,*+XAR1[0]        ; [CPU_ALU] |651| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 660,column 5,is_stmt,isa 0
@@ -6779,18 +6779,18 @@ $C$DW$502	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[0],#0x8000     ; [CPU_ALU] |662| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 664,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |664| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 680,column 9,is_stmt,isa 0
-        MOVB      *-SP[1],#18,UNC       ; [CPU_ALU] |680| 
-        MOVB      XAR5,#30              ; [CPU_ALU] |680| 
-        MOVB      XAR4,#20              ; [CPU_ALU] |680| 
-        MOVL      ACC,*+XAR1[0]         ; [CPU_ALU] |680| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 685,column 9,is_stmt,isa 0
+        MOVB      *-SP[1],#18,UNC       ; [CPU_ALU] |685| 
+        MOVB      XAR5,#30              ; [CPU_ALU] |685| 
+        MOVB      XAR4,#20              ; [CPU_ALU] |685| 
+        MOVL      ACC,*+XAR1[0]         ; [CPU_ALU] |685| 
 $C$DW$503	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$503, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$503, DW_AT_name("CMPSS_configFilterLow")
 	.dwattr $C$DW$503, DW_AT_TI_call
 
-        LCR       #||CMPSS_configFilterLow|| ; [CPU_ALU] |680| 
-        ; call occurs [#||CMPSS_configFilterLow||] ; [] |680| 
+        LCR       #||CMPSS_configFilterLow|| ; [CPU_ALU] |685| 
+        ; call occurs [#||CMPSS_configFilterLow||] ; [] |685| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 684,column 1,is_stmt,isa 0
         MOVL      XAR4,*+XAR1[0]        ; [CPU_ALU] |684| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 693,column 5,is_stmt,isa 0
@@ -6824,18 +6824,18 @@ $C$DW$503	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[0],#0x8000     ; [CPU_ALU] |265| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cmpss.h",line 267,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |267| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 635,column 18,is_stmt,isa 0
-        BANZ      ||$C$L39||,AR2--      ; [CPU_ALU] |635| 
-        ; branchcc occurs ; [] |635| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 691,column 5,is_stmt,isa 0
-        MOV       ACC,#19998            ; [CPU_ALU] |691| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 640,column 18,is_stmt,isa 0
+        BANZ      ||$C$L39||,AR2--      ; [CPU_ALU] |640| 
+        ; branchcc occurs ; [] |640| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 696,column 5,is_stmt,isa 0
+        MOV       ACC,#19998            ; [CPU_ALU] |696| 
 $C$DW$504	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$504, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$504, DW_AT_name("SysCtl_delay")
 	.dwattr $C$DW$504, DW_AT_TI_call
 
-        LCR       #||SysCtl_delay||     ; [CPU_ALU] |691| 
-        ; call occurs [#||SysCtl_delay||] ; [] |691| 
+        LCR       #||SysCtl_delay||     ; [CPU_ALU] |696| 
+        ; call occurs [#||SysCtl_delay||] ; [] |696| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -6
         MOVL      XAR2,*--SP            ; [CPU_ALU] 
@@ -6851,7 +6851,7 @@ $C$DW$505	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$488, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$488, DW_AT_TI_end_line(0x2b6)
+	.dwattr $C$DW$488, DW_AT_TI_end_line(0x2bb)
 	.dwattr $C$DW$488, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$488
@@ -6867,10 +6867,10 @@ $C$DW$506	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$506, DW_AT_linkage_name("HAL_setupCLA")
 	.dwattr $C$DW$506, DW_AT_external
 	.dwattr $C$DW$506, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$506, DW_AT_decl_line(0x224)
+	.dwattr $C$DW$506, DW_AT_decl_line(0x229)
 	.dwattr $C$DW$506, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$506, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 549,column 1,is_stmt,address ||HAL_setupCLA||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 554,column 1,is_stmt,address ||HAL_setupCLA||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupCLA||
 $C$DW$507	.dwtag  DW_TAG_formal_parameter
@@ -6960,7 +6960,7 @@ $C$DW$518	.dwtag  DW_TAG_variable
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-        MOVL      XAR1,XAR4             ; [CPU_ALU] |549| 
+        MOVL      XAR1,XAR4             ; [CPU_ALU] |554| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 2880,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |2880| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 2882,column 5,is_stmt,isa 0
@@ -6969,65 +6969,65 @@ $C$DW$518	.dwtag  DW_TAG_variable
         MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |2882| 
 	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 2888,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |2888| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 573,column 5,is_stmt,isa 0
-        MOV       AL,#4                 ; [CPU_ALU] |573| 
-        MOV       AH,#768               ; [CPU_ALU] |573| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 578,column 5,is_stmt,isa 0
+        MOV       AL,#4                 ; [CPU_ALU] |578| 
+        MOV       AH,#768               ; [CPU_ALU] |578| 
 $C$DW$519	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$519, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$519, DW_AT_name("MemCfg_initSections")
 	.dwattr $C$DW$519, DW_AT_TI_call
 
-        LCR       #||MemCfg_initSections|| ; [CPU_ALU] |573| 
-        ; call occurs [#||MemCfg_initSections||] ; [] |573| 
+        LCR       #||MemCfg_initSections|| ; [CPU_ALU] |578| 
+        ; call occurs [#||MemCfg_initSections||] ; [] |578| 
 ||$C$L40||:    
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 574,column 11,is_stmt,isa 0
-        MOV       AL,#4                 ; [CPU_ALU] |574| 
-        MOV       AH,#768               ; [CPU_ALU] |574| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 579,column 11,is_stmt,isa 0
+        MOV       AL,#4                 ; [CPU_ALU] |579| 
+        MOV       AH,#768               ; [CPU_ALU] |579| 
 $C$DW$520	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$520, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$520, DW_AT_name("MemCfg_getInitStatus")
 	.dwattr $C$DW$520, DW_AT_TI_call
 
-        LCR       #||MemCfg_getInitStatus|| ; [CPU_ALU] |574| 
-        ; call occurs [#||MemCfg_getInitStatus||] ; [] |574| 
-        CMPB      AL,#1                 ; [CPU_ALU] |574| 
-        B         ||$C$L40||,NEQ        ; [CPU_ALU] |574| 
-        ; branchcc occurs ; [] |574| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 577,column 5,is_stmt,isa 0
-        MOV       AL,#2                 ; [CPU_ALU] |577| 
-        MOV       AH,#768               ; [CPU_ALU] |577| 
+        LCR       #||MemCfg_getInitStatus|| ; [CPU_ALU] |579| 
+        ; call occurs [#||MemCfg_getInitStatus||] ; [] |579| 
+        CMPB      AL,#1                 ; [CPU_ALU] |579| 
+        B         ||$C$L40||,NEQ        ; [CPU_ALU] |579| 
+        ; branchcc occurs ; [] |579| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 582,column 5,is_stmt,isa 0
+        MOV       AL,#2                 ; [CPU_ALU] |582| 
+        MOV       AH,#768               ; [CPU_ALU] |582| 
 $C$DW$521	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$521, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$521, DW_AT_name("MemCfg_initSections")
 	.dwattr $C$DW$521, DW_AT_TI_call
 
-        LCR       #||MemCfg_initSections|| ; [CPU_ALU] |577| 
-        ; call occurs [#||MemCfg_initSections||] ; [] |577| 
+        LCR       #||MemCfg_initSections|| ; [CPU_ALU] |582| 
+        ; call occurs [#||MemCfg_initSections||] ; [] |582| 
 ||$C$L41||:    
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 578,column 11,is_stmt,isa 0
-        MOV       AL,#2                 ; [CPU_ALU] |578| 
-        MOV       AH,#768               ; [CPU_ALU] |578| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 583,column 11,is_stmt,isa 0
+        MOV       AL,#2                 ; [CPU_ALU] |583| 
+        MOV       AH,#768               ; [CPU_ALU] |583| 
 $C$DW$522	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$522, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$522, DW_AT_name("MemCfg_getInitStatus")
 	.dwattr $C$DW$522, DW_AT_TI_call
 
-        LCR       #||MemCfg_getInitStatus|| ; [CPU_ALU] |578| 
-        ; call occurs [#||MemCfg_getInitStatus||] ; [] |578| 
-        CMPB      AL,#1                 ; [CPU_ALU] |578| 
-        B         ||$C$L41||,NEQ        ; [CPU_ALU] |578| 
-        ; branchcc occurs ; [] |578| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 582,column 5,is_stmt,isa 0
-        MOV       AL,#16                ; [CPU_ALU] |582| 
-        MOV       AH,#256               ; [CPU_ALU] |582| 
-        MOVB      XAR4,#1               ; [CPU_ALU] |582| 
+        LCR       #||MemCfg_getInitStatus|| ; [CPU_ALU] |583| 
+        ; call occurs [#||MemCfg_getInitStatus||] ; [] |583| 
+        CMPB      AL,#1                 ; [CPU_ALU] |583| 
+        B         ||$C$L41||,NEQ        ; [CPU_ALU] |583| 
+        ; branchcc occurs ; [] |583| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 587,column 5,is_stmt,isa 0
+        MOV       AL,#16                ; [CPU_ALU] |587| 
+        MOV       AH,#256               ; [CPU_ALU] |587| 
+        MOVB      XAR4,#1               ; [CPU_ALU] |587| 
 $C$DW$523	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$523, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$523, DW_AT_name("MemCfg_setLSRAMControllerSel")
 	.dwattr $C$DW$523, DW_AT_TI_call
 
-        LCR       #||MemCfg_setLSRAMControllerSel|| ; [CPU_ALU] |582| 
-        ; call occurs [#||MemCfg_setLSRAMControllerSel||] ; [] |582| 
+        LCR       #||MemCfg_setLSRAMControllerSel|| ; [CPU_ALU] |587| 
+        ; call occurs [#||MemCfg_setLSRAMControllerSel||] ; [] |587| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 331,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |331| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 338,column 9,is_stmt,isa 0
@@ -7036,17 +7036,17 @@ $C$DW$523	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[1],#256        ; [CPU_ALU] |338| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 348,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |348| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 585,column 5,is_stmt,isa 0
-        MOV       AL,#32                ; [CPU_ALU] |585| 
-        MOV       AH,#256               ; [CPU_ALU] |585| 
-        MOVB      XAR4,#1               ; [CPU_ALU] |585| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 590,column 5,is_stmt,isa 0
+        MOV       AL,#32                ; [CPU_ALU] |590| 
+        MOV       AH,#256               ; [CPU_ALU] |590| 
+        MOVB      XAR4,#1               ; [CPU_ALU] |590| 
 $C$DW$524	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$524, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$524, DW_AT_name("MemCfg_setLSRAMControllerSel")
 	.dwattr $C$DW$524, DW_AT_TI_call
 
-        LCR       #||MemCfg_setLSRAMControllerSel|| ; [CPU_ALU] |585| 
-        ; call occurs [#||MemCfg_setLSRAMControllerSel||] ; [] |585| 
+        LCR       #||MemCfg_setLSRAMControllerSel|| ; [CPU_ALU] |590| 
+        ; call occurs [#||MemCfg_setLSRAMControllerSel||] ; [] |590| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 331,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |331| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 338,column 9,is_stmt,isa 0
@@ -7055,17 +7055,17 @@ $C$DW$524	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[1],#256        ; [CPU_ALU] |338| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 348,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |348| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 590,column 5,is_stmt,isa 0
-        MOV       AL,#4                 ; [CPU_ALU] |590| 
-        MOV       AH,#256               ; [CPU_ALU] |590| 
-        MOVB      XAR4,#1               ; [CPU_ALU] |590| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 595,column 5,is_stmt,isa 0
+        MOV       AL,#4                 ; [CPU_ALU] |595| 
+        MOV       AH,#256               ; [CPU_ALU] |595| 
+        MOVB      XAR4,#1               ; [CPU_ALU] |595| 
 $C$DW$525	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$525, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$525, DW_AT_name("MemCfg_setLSRAMControllerSel")
 	.dwattr $C$DW$525, DW_AT_TI_call
 
-        LCR       #||MemCfg_setLSRAMControllerSel|| ; [CPU_ALU] |590| 
-        ; call occurs [#||MemCfg_setLSRAMControllerSel||] ; [] |590| 
+        LCR       #||MemCfg_setLSRAMControllerSel|| ; [CPU_ALU] |595| 
+        ; call occurs [#||MemCfg_setLSRAMControllerSel||] ; [] |595| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 331,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |331| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 345,column 9,is_stmt,isa 0
@@ -7074,17 +7074,17 @@ $C$DW$525	.dwtag  DW_TAG_TI_branch
         AND       *+XAR4[1],#65279      ; [CPU_ALU] |345| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 348,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |348| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 593,column 5,is_stmt,isa 0
-        MOV       AL,#8                 ; [CPU_ALU] |593| 
-        MOV       AH,#256               ; [CPU_ALU] |593| 
-        MOVB      XAR4,#1               ; [CPU_ALU] |593| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 598,column 5,is_stmt,isa 0
+        MOV       AL,#8                 ; [CPU_ALU] |598| 
+        MOV       AH,#256               ; [CPU_ALU] |598| 
+        MOVB      XAR4,#1               ; [CPU_ALU] |598| 
 $C$DW$526	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$526, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$526, DW_AT_name("MemCfg_setLSRAMControllerSel")
 	.dwattr $C$DW$526, DW_AT_TI_call
 
-        LCR       #||MemCfg_setLSRAMControllerSel|| ; [CPU_ALU] |593| 
-        ; call occurs [#||MemCfg_setLSRAMControllerSel||] ; [] |593| 
+        LCR       #||MemCfg_setLSRAMControllerSel|| ; [CPU_ALU] |598| 
+        ; call occurs [#||MemCfg_setLSRAMControllerSel||] ; [] |598| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 331,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |331| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/memcfg.h",line 345,column 9,is_stmt,isa 0
@@ -7183,26 +7183,26 @@ $C$DW$526	.dwtag  DW_TAG_TI_branch
         OR        *+XAR4[0],#0x00ff     ; [CPU_ALU] |684| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/cla.h",line 686,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |686| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 615,column 5,is_stmt,isa 0
-        MOVB      AL,#0                 ; [CPU_ALU] |615| 
-        MOVB      AH,#36                ; [CPU_ALU] |615| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 620,column 5,is_stmt,isa 0
+        MOVB      AL,#0                 ; [CPU_ALU] |620| 
+        MOVB      AH,#36                ; [CPU_ALU] |620| 
 $C$DW$527	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$527, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$527, DW_AT_name("CLA_setTriggerSource")
 	.dwattr $C$DW$527, DW_AT_TI_call
 
-        LCR       #||CLA_setTriggerSource|| ; [CPU_ALU] |615| 
-        ; call occurs [#||CLA_setTriggerSource||] ; [] |615| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 618,column 5,is_stmt,isa 0
-        MOVB      AL,#4                 ; [CPU_ALU] |618| 
-        MOVB      AH,#39                ; [CPU_ALU] |618| 
+        LCR       #||CLA_setTriggerSource|| ; [CPU_ALU] |620| 
+        ; call occurs [#||CLA_setTriggerSource||] ; [] |620| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 623,column 5,is_stmt,isa 0
+        MOVB      AL,#4                 ; [CPU_ALU] |623| 
+        MOVB      AH,#39                ; [CPU_ALU] |623| 
 $C$DW$528	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$528, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$528, DW_AT_name("CLA_setTriggerSource")
 	.dwattr $C$DW$528, DW_AT_TI_call
 
-        LCR       #||CLA_setTriggerSource|| ; [CPU_ALU] |618| 
-        ; call occurs [#||CLA_setTriggerSource||] ; [] |618| 
+        LCR       #||CLA_setTriggerSource|| ; [CPU_ALU] |623| 
+        ; call occurs [#||CLA_setTriggerSource||] ; [] |623| 
         MOVL      XAR1,*--SP            ; [CPU_ALU] 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	restore_reg, 7
@@ -7213,7 +7213,7 @@ $C$DW$529	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$506, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$506, DW_AT_TI_end_line(0x26d)
+	.dwattr $C$DW$506, DW_AT_TI_end_line(0x272)
 	.dwattr $C$DW$506, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$506
@@ -7229,10 +7229,10 @@ $C$DW$530	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$530, DW_AT_linkage_name("HAL_setupADCs")
 	.dwattr $C$DW$530, DW_AT_external
 	.dwattr $C$DW$530, DW_AT_decl_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$530, DW_AT_decl_line(0x18b)
+	.dwattr $C$DW$530, DW_AT_decl_line(0x190)
 	.dwattr $C$DW$530, DW_AT_decl_column(0x06)
 	.dwattr $C$DW$530, DW_AT_TI_max_frame_size(-6)
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 396,column 1,is_stmt,address ||HAL_setupADCs||,isa 0
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 401,column 1,is_stmt,address ||HAL_setupADCs||,isa 0
 
 	.dwfde $C$DW$CIE, ||HAL_setupADCs||
 $C$DW$531	.dwtag  DW_TAG_formal_parameter
@@ -7287,24 +7287,24 @@ $C$DW$536	.dwtag  DW_TAG_variable
         MOVL      *SP++,XAR1            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 7, 2
 	.dwcfi	cfa_offset, -4
-        MOVL      XAR1,XAR4             ; [CPU_ALU] |396| 
+        MOVL      XAR1,XAR4             ; [CPU_ALU] |401| 
         MOVL      *SP++,XAR2            ; [CPU_ALU] 
 	.dwcfi	save_reg_to_mem, 9, 4
 	.dwcfi	cfa_offset, -6
         MOVB      XAR2,#3               ; [CPU_ALU] 
         ADDB      XAR1,#18              ; [CPU_ALU] 
 ||$C$L42||:    
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 409,column 9,is_stmt,isa 0
-        MOVL      ACC,*+XAR1[0]         ; [CPU_ALU] |409| 
-        MOVB      XAR4,#0               ; [CPU_ALU] |409| 
-        MOVB      XAR5,#0               ; [CPU_ALU] |409| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 414,column 9,is_stmt,isa 0
+        MOVL      ACC,*+XAR1[0]         ; [CPU_ALU] |414| 
+        MOVB      XAR4,#0               ; [CPU_ALU] |414| 
+        MOVB      XAR5,#0               ; [CPU_ALU] |414| 
 $C$DW$537	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$537, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$537, DW_AT_name("ADC_setMode")
 	.dwattr $C$DW$537, DW_AT_TI_call
 
-        LCR       #||ADC_setMode||      ; [CPU_ALU] |409| 
-        ; call occurs [#||ADC_setMode||] ; [] |409| 
+        LCR       #||ADC_setMode||      ; [CPU_ALU] |414| 
+        ; call occurs [#||ADC_setMode||] ; [] |414| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 461,column 1,is_stmt,isa 0
         MOVL      XAR4,*+XAR1[0]        ; [CPU_ALU] |461| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 470,column 5,is_stmt,isa 0
@@ -7343,19 +7343,19 @@ $C$DW$537	.dwtag  DW_TAG_TI_branch
         MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1099| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 1103,column 5,is_stmt,isa 0
         EDIS      ; [CPU_ALU] |1103| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 404,column 18,is_stmt,isa 0
-        BANZ      ||$C$L42||,AR2--      ; [CPU_ALU] |404| 
-        ; branchcc occurs ; [] |404| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 409,column 18,is_stmt,isa 0
+        BANZ      ||$C$L42||,AR2--      ; [CPU_ALU] |409| 
+        ; branchcc occurs ; [] |409| 
         CLRC      SXM                   ; [CPU_ALU] 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 427,column 5,is_stmt,isa 0
-        MOV       ACC,#59998            ; [CPU_ALU] |427| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 432,column 5,is_stmt,isa 0
+        MOV       ACC,#59998            ; [CPU_ALU] |432| 
 $C$DW$538	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$538, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$538, DW_AT_name("SysCtl_delay")
 	.dwattr $C$DW$538, DW_AT_TI_call
 
-        LCR       #||SysCtl_delay||     ; [CPU_ALU] |427| 
-        ; call occurs [#||SysCtl_delay||] ; [] |427| 
+        LCR       #||SysCtl_delay||     ; [CPU_ALU] |432| 
+        ; call occurs [#||SysCtl_delay||] ; [] |432| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 536,column 5,is_stmt,isa 0
         EALLOW    ; [CPU_ALU] |536| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/adc.h",line 538,column 5,is_stmt,isa 0
@@ -7497,7 +7497,7 @@ $C$DW$539	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$530, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$530, DW_AT_TI_end_line(0x21c)
+	.dwattr $C$DW$530, DW_AT_TI_end_line(0x221)
 	.dwattr $C$DW$530, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$530
@@ -7567,81 +7567,90 @@ $C$DW$543	.dwtag  DW_TAG_TI_branch
 
         LCR       #||Device_initGPIO||  ; [CPU_ALU] |340| 
         ; call occurs [#||Device_initGPIO||] ; [] |340| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 345,column 5,is_stmt,isa 0
-        MOVL      XAR4,XAR1             ; [CPU_ALU] |345| 
+	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 990,column 5,is_stmt,isa 0
+        EALLOW    ; [CPU_ALU] |990| 
+	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 995,column 5,is_stmt,isa 0
+        MOVB      ACC,#1                ; [CPU_ALU] |995| 
+        MOVL      XAR4,#381730          ; [CPU_ARAU] |995| 
+        OR        *+XAR4[0],AL          ; [CPU_ALU] |995| 
+        OR        *+XAR4[1],AH          ; [CPU_ALU] |995| 
+	.dwpsn	file "C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\f2837xd\driverlib\sysctl.h",line 996,column 5,is_stmt,isa 0
+        EDIS      ; [CPU_ALU] |996| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 350,column 5,is_stmt,isa 0
+        MOVL      XAR4,XAR1             ; [CPU_ALU] |350| 
 $C$DW$544	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$544, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$544, DW_AT_name("HAL_setupCLA")
 	.dwattr $C$DW$544, DW_AT_TI_call
 
-        LCR       #||HAL_setupCLA||     ; [CPU_ALU] |345| 
-        ; call occurs [#||HAL_setupCLA||] ; [] |345| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 351,column 5,is_stmt,isa 0
+        LCR       #||HAL_setupCLA||     ; [CPU_ALU] |350| 
+        ; call occurs [#||HAL_setupCLA||] ; [] |350| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 356,column 5,is_stmt,isa 0
 $C$DW$545	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$545, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$545, DW_AT_name("Interrupt_initModule")
 	.dwattr $C$DW$545, DW_AT_TI_call
 
-        LCR       #||Interrupt_initModule|| ; [CPU_ALU] |351| 
-        ; call occurs [#||Interrupt_initModule||] ; [] |351| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 359,column 5,is_stmt,isa 0
+        LCR       #||Interrupt_initModule|| ; [CPU_ALU] |356| 
+        ; call occurs [#||Interrupt_initModule||] ; [] |356| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 364,column 5,is_stmt,isa 0
 $C$DW$546	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$546, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$546, DW_AT_name("Interrupt_initVectorTable")
 	.dwattr $C$DW$546, DW_AT_TI_call
 
-        LCR       #||Interrupt_initVectorTable|| ; [CPU_ALU] |359| 
-        ; call occurs [#||Interrupt_initVectorTable||] ; [] |359| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 364,column 5,is_stmt,isa 0
-        MOVL      XAR4,#10000           ; [CPU_ARAU] |364| 
-        MOVL      *-SP[2],XAR4          ; [CPU_ALU] |364| 
-        MOVL      ACC,*+XAR1[2]         ; [CPU_ALU] |364| 
+        LCR       #||Interrupt_initVectorTable|| ; [CPU_ALU] |364| 
+        ; call occurs [#||Interrupt_initVectorTable||] ; [] |364| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 369,column 5,is_stmt,isa 0
+        MOVL      XAR4,#10000           ; [CPU_ARAU] |369| 
+        MOVL      *-SP[2],XAR4          ; [CPU_ALU] |369| 
+        MOVL      ACC,*+XAR1[2]         ; [CPU_ALU] |369| 
 $C$DW$547	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$547, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$547, DW_AT_name("HAL_setupCpuTimer")
 	.dwattr $C$DW$547, DW_AT_TI_call
 
-        LCR       #||HAL_setupCpuTimer|| ; [CPU_ALU] |364| 
-        ; call occurs [#||HAL_setupCpuTimer||] ; [] |364| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 365,column 5,is_stmt,isa 0
-        MOVL      XAR4,#20000           ; [CPU_ARAU] |365| 
-        MOVL      *-SP[2],XAR4          ; [CPU_ALU] |365| 
-        MOVL      ACC,*+XAR1[4]         ; [CPU_ALU] |365| 
+        LCR       #||HAL_setupCpuTimer|| ; [CPU_ALU] |369| 
+        ; call occurs [#||HAL_setupCpuTimer||] ; [] |369| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 370,column 5,is_stmt,isa 0
+        MOVL      XAR4,#20000           ; [CPU_ARAU] |370| 
+        MOVL      *-SP[2],XAR4          ; [CPU_ALU] |370| 
+        MOVL      ACC,*+XAR1[4]         ; [CPU_ALU] |370| 
 $C$DW$548	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$548, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$548, DW_AT_name("HAL_setupCpuTimer")
 	.dwattr $C$DW$548, DW_AT_TI_call
 
-        LCR       #||HAL_setupCpuTimer|| ; [CPU_ALU] |365| 
-        ; call occurs [#||HAL_setupCpuTimer||] ; [] |365| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 366,column 5,is_stmt,isa 0
-        MOVL      XAR4,#30000           ; [CPU_ARAU] |366| 
-        MOVL      *-SP[2],XAR4          ; [CPU_ALU] |366| 
-        MOVL      ACC,*+XAR1[6]         ; [CPU_ALU] |366| 
+        LCR       #||HAL_setupCpuTimer|| ; [CPU_ALU] |370| 
+        ; call occurs [#||HAL_setupCpuTimer||] ; [] |370| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 371,column 5,is_stmt,isa 0
+        MOVL      XAR4,#30000           ; [CPU_ARAU] |371| 
+        MOVL      *-SP[2],XAR4          ; [CPU_ALU] |371| 
+        MOVL      ACC,*+XAR1[6]         ; [CPU_ALU] |371| 
 $C$DW$549	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$549, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$549, DW_AT_name("HAL_setupCpuTimer")
 	.dwattr $C$DW$549, DW_AT_TI_call
 
-        LCR       #||HAL_setupCpuTimer|| ; [CPU_ALU] |366| 
-        ; call occurs [#||HAL_setupCpuTimer||] ; [] |366| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 371,column 5,is_stmt,isa 0
+        LCR       #||HAL_setupCpuTimer|| ; [CPU_ALU] |371| 
+        ; call occurs [#||HAL_setupCpuTimer||] ; [] |371| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 376,column 5,is_stmt,isa 0
 $C$DW$550	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$550, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$550, DW_AT_name("HAL_setupGPIOs")
 	.dwattr $C$DW$550, DW_AT_TI_call
 
-        LCR       #||HAL_setupGPIOs||   ; [CPU_ALU] |371| 
-        ; call occurs [#||HAL_setupGPIOs||] ; [] |371| 
-	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 383,column 5,is_stmt,isa 0
-        MOVL      XAR4,XAR1             ; [CPU_ALU] |383| 
+        LCR       #||HAL_setupGPIOs||   ; [CPU_ALU] |376| 
+        ; call occurs [#||HAL_setupGPIOs||] ; [] |376| 
+	.dwpsn	file "../sources/dual_axis_servo_drive_hal.c",line 388,column 5,is_stmt,isa 0
+        MOVL      XAR4,XAR1             ; [CPU_ALU] |388| 
 $C$DW$551	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$551, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$551, DW_AT_name("HAL_setupADCs")
 	.dwattr $C$DW$551, DW_AT_TI_call
 
-        LCR       #||HAL_setupADCs||    ; [CPU_ALU] |383| 
-        ; call occurs [#||HAL_setupADCs||] ; [] |383| 
+        LCR       #||HAL_setupADCs||    ; [CPU_ALU] |388| 
+        ; call occurs [#||HAL_setupADCs||] ; [] |388| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -4
         MOVL      XAR1,*--SP            ; [CPU_ALU] 
@@ -7654,7 +7663,7 @@ $C$DW$552	.dwtag  DW_TAG_TI_branch
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$540, DW_AT_TI_end_file("../sources/dual_axis_servo_drive_hal.c")
-	.dwattr $C$DW$540, DW_AT_TI_end_line(0x182)
+	.dwattr $C$DW$540, DW_AT_TI_end_line(0x187)
 	.dwattr $C$DW$540, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$540
