@@ -6,7 +6,70 @@
 
 ## 一、今日更改记录
 
-### 2026-03-10：FCL_LEVEL3 调试成功，电机正常运行
+### 2026-03-10（下午）：FCL_LEVEL4 调试成功，速度环闭环运行
+
+#### 背景
+
+FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器），是从开环调试迈向完整闭环控制的关键一步。  
+按照 LEVEL1/2/3 相同的思路跳过故障检测后，**PWM 指示灯闪一下就灭，电机无任何输出**，经历了以下三轮排查才彻底解决。
+
+---
+
+#### 问题一：栅极"闪一下"后被禁用（`dual_axis_servo_drive.c`）
+
+**现象**：PWM 指示灯上电后瞬间闪一下，然后 GPIO0（EPWM1A，U 相上桥臂）无输出。
+
+**根因**：LEVEL4 init 块中提前设置了 `motorVars[0/1].runMotor = MOTOR_RUN`，同时末尾调用 `GPIO_writePin(drvEnableGateGPIO, 0)` 显式启用了驱动栅极。但之后 **line 619** 无条件执行 `GPIO_writePin(drvEnableGateGPIO, 1)` 将栅极**重新禁用**。`runMotorControl` 中重新启用栅极的逻辑依赖检测到 `runMotor` 从 `MOTOR_STOP` 跳变为 `MOTOR_RUN`，由于 LEVEL4 init 已把 `runMotor` 预设为 `MOTOR_RUN`，这个跳变永远不会再发生，驱动栅极因此永远保持禁用。
+
+**修复**（`dual_axis_servo_drive.c`，LEVEL4 init 块）：
+- 移除 `motorVars[0/1].runMotor = MOTOR_RUN` 的预置，只保留 `ctrlState = CTRL_RUN`
+- 移除 LEVEL4 init 末尾的 `GPIO_writePin(drvEnableGateGPIO, 0)` 显式栅极启用
+- 让 `runMotorControl` 在主循环第一次执行时检测到 `MOTOR_STOP→MOTOR_RUN` 的转换，由它统一负责启用栅极（时序在 line 619 禁用之后）
+
+---
+
+#### 问题二：CMPSS 持续误触发重锁 PWM（`dual_axis_servo_drive.c`）
+
+**现象**：栅极问题修复后，PWM 仍然间歇性消失。
+
+**根因**：`runMotorControl` 每 ~50 μs（A1 任务周期）清除一次 TripZone 标志，但 CMPSS 的 DCAEVT1/CBC 信号源仍然使能，在两次清除之间 CMPSS 会再次触发 OST，将 PWM 锁定。
+
+**修复**（`dual_axis_servo_drive.c`，main 初始化段，参考 LEVEL2 的成功做法）：
+- 在 `#if(BUILDLEVEL == FCL_LEVEL4)` 块中调用 `EPWM_disableTripZoneSignals(DCAEVT1)` 和 `EPWM_disableTripZoneSignals(CBC6)`，将两路 Trip 信号源彻底断开，根除 CMPSS 在调试阶段的误触发来源
+
+---
+
+#### 问题三：TZ 动作配置为 LOW 导致首次 OST 直接锁死 EPWM1A（`dual_axis_servo_drive_hal.c`）
+
+**现象**：即使问题一和二都修复后，上电后 GPIO0（EPWM1A，U 相上桥臂）一直为低，其他五路 PWM 正常，表现为 "U 相上管没有输出"。
+
+**根因**：`HAL_setupMotorFaultProtection` 函数中，LEVEL1~LEVEL3 的 TripZone 动作设置为 `DISABLE`（trip 发生时不强制输出），而 LEVEL4（被归入 `#else` 分支）设置为 `EPWM_TZ_ACTION_LOW`。ADC 偏移校准运行之前，CMPSS 比较器输出基于未校准的 ADC 基准，极易误触发 OST 锁存。一旦 OST 锁存置位且 TZ 动作为 LOW，**EPWM1A 被立即强制拉低并锁死**，后续再清 TripZone 标志也无法恢复，因为在 CMPSS 输出仍有效期间 `clearTripZoneFlag` 对 OST 无效。
+
+**修复**（`dual_axis_servo_drive_hal.c`，`HAL_setupMotorFaultProtection`）：
+- `#if` 条件从 `(LEVEL1 || LEVEL2 || LEVEL3)` 扩展为 `(LEVEL1 || LEVEL2 || LEVEL3 || LEVEL4)`
+- LEVEL4 的 TZA/TZB/DCAEVT1/DCAEVT2 动作全部设置为 `DISABLE`，与前三个级别保持一致
+- 原 `#else` 分支改为从 LEVEL5 开始生效，LEVEL5+ 正式启用 `EPWM_TZ_ACTION_LOW` 硬件过流保护
+
+---
+
+#### 修改文件汇总
+
+| 文件 | 修改位置 | 问题编号 |
+|------|----------|----------|
+| `sources/dual_axis_servo_drive.c` | LEVEL4 init 块（约 370 行） | 问题一 |
+| `sources/dual_axis_servo_drive.c` | `#if(BUILDLEVEL == FCL_LEVEL4)` TZ 禁用块（约 460 行） | 问题二 |
+| `sources/dual_axis_servo_drive_hal.c` | `HAL_setupMotorFaultProtection` TZ 动作条件（约 1491 行） | 问题三 |
+
+#### 当前状态
+
+- **构建级别**：FCL_LEVEL4（速度闭环 + 电流闭环）
+- **控制模式**：PI_CNTLR（PI 控制器）
+- **编码器**：QEP，自动寻找索引脉冲，校准后闭合速度环
+- **电机状态**：双轴正常运行，可响应 `speedRef` 速度指令
+
+---
+
+### 2026-03-10（上午）：FCL_LEVEL3 调试成功，电机正常运行
 
 - **主要成果**：
   - FCL_LEVEL3 构建级别调试成功，电机能够正常旋转

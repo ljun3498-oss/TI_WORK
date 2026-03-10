@@ -1488,9 +1488,11 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
         // TZA事件可以强制EPWMxA
         // TZB事件可以强制EPWMxB
 
-#if((BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2) || (BUILDLEVEL == FCL_LEVEL3))
-        // LEVEL1/LEVEL2/LEVEL3 调试：设置为 DISABLE，TZ事件不影响PWM输出
-        // 因为ADC偏移校准未完成时CMPSS会误触发
+#if((BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2) || (BUILDLEVEL == FCL_LEVEL3) || (BUILDLEVEL == FCL_LEVEL4))
+        // LEVEL1~LEVEL4 调试：设置为 DISABLE，TZ事件不影响PWM输出
+        // LEVEL4 的 CMPSS 阈值基于偏移校准前的 ADC 值，此时误触发 OST 会将
+        // EPWM1A(GPIO0,U相上桥臂) 锁低，导致 "闪一下就没输出" 的现象
+        // 通过禁用 TZ 动作（不是禁用信号源），确保即使 OST 锁存置位也不强制输出
         EPWM_setTripZoneAction(obj->pwmHandle[cnt],
                                EPWM_TZ_ACTION_EVENT_TZA,
                                EPWM_TZ_ACTION_DISABLE);
@@ -1508,7 +1510,7 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
                                EPWM_TZ_ACTION_EVENT_DCAEVT2,
                                EPWM_TZ_ACTION_DISABLE);
 #else
-        // LEVEL4+ 正常运行：TZ事件强制PWM输出低电平，提供硬件过流保护
+        // LEVEL5+ 正常运行：TZ事件强制PWM输出低电平，提供硬件过流保护
         EPWM_setTripZoneAction(obj->pwmHandle[cnt],
                                EPWM_TZ_ACTION_EVENT_TZA,
                                EPWM_TZ_ACTION_LOW);

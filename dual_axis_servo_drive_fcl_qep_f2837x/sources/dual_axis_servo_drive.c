@@ -374,9 +374,10 @@ void main(void)
     flagSyncRun = true;
     ctrlState = CTRL_RUN;
     runMotor = MOTOR_RUN;
-    motorVars[0].runMotor = MOTOR_RUN;
+    // 注意：不提前设置 motorVars[0/1].runMotor = MOTOR_RUN
+    // 让 runMotorControl 检测到 MOTOR_STOP→MOTOR_RUN 的转换来启用栅极
+    // （line 619 会无条件禁用栅极，若此处预设 MOTOR_RUN，runMotorControl 永远不会重新启用栅极）
     motorVars[0].ctrlState = CTRL_RUN;
-    motorVars[1].runMotor = MOTOR_RUN;
     motorVars[1].ctrlState = CTRL_RUN;
     speedRef = 0.02;
     motorVars[0].speedRef = speedRef;
@@ -384,17 +385,16 @@ void main(void)
     motorVars[0].isrTicker = 1;
     motorVars[1].isrTicker = 1;
 
-    // LEVEL4：强制清除可能残留的故障标志 + 启用驱动栅极
+    // LEVEL4：强制清除可能残留的故障标志
     // 注意：不要设置clearTripFlagDMC=1，否则runMotorControl会将ctrlState设为STOP
     motorVars[0].tripFlagDMC = 0;
     motorVars[1].tripFlagDMC = 0;
-    // clearTripFlagDMC保持为0，避免runMotorControl中的故障清除逻辑将ctrlState设为STOP
-    
+
     // 初始化编码器状态机为对齐状态（lsw默认是ENC_IDLE=0，需要设置为ENC_ALIGNMENT=1）
     motorVars[0].ptrFCL->lsw = ENC_ALIGNMENT;
     motorVars[1].ptrFCL->lsw = ENC_ALIGNMENT;
-    
-    // 手动清除TripZone标志和CMPSS锁存，避免依赖runMotorControl中的清除逻辑
+
+    // 手动清除TripZone标志和CMPSS锁存
     {
         uint16_t i;
         for(i = 0; i < 3; i++)
@@ -412,10 +412,6 @@ void main(void)
         CMPSS_clearFilterLatchHigh(halMtr[1].cmpssHandle[1]);
         CMPSS_clearFilterLatchHigh(halMtr[1].cmpssHandle[2]);
     }
-    
-    // 直接启用驱动栅极（因为runMotorControl中的逻辑需要runMotor从STOP变为RUN才会启用）
-    GPIO_writePin(motorVars[0].drvEnableGateGPIO, 0);
-    GPIO_writePin(motorVars[1].drvEnableGateGPIO, 0);
 #endif
 
     // 清除电机1的任何虚假OST和DCAEVT1故障标志
@@ -433,6 +429,29 @@ void main(void)
     motorVars[1].clearTripFlagDMC = 1;
     
     // 禁用TripZone信号源，防止CMPSS误触发
+    {
+        uint16_t i;
+        for(i = 0; i < 3; i++)
+        {
+            EPWM_disableTripZoneSignals(halMtr[0].pwmHandle[i],
+                                        EPWM_TZ_SIGNAL_DCAEVT1);
+            EPWM_disableTripZoneSignals(halMtr[1].pwmHandle[i],
+                                        EPWM_TZ_SIGNAL_DCAEVT1);
+            EPWM_disableTripZoneSignals(halMtr[0].pwmHandle[i],
+                                        EPWM_TZ_SIGNAL_CBC6);
+            EPWM_disableTripZoneSignals(halMtr[1].pwmHandle[i],
+                                        EPWM_TZ_SIGNAL_CBC6);
+            EPWM_clearTripZoneFlag(halMtr[0].pwmHandle[i],
+                                   (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
+            EPWM_clearTripZoneFlag(halMtr[1].pwmHandle[i],
+                                   (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
+        }
+    }
+#endif
+
+#if(BUILDLEVEL == FCL_LEVEL4)
+    // LEVEL4：同样禁用 DCAEVT1 和 CBC TripZone 信号源，防止 CMPSS 误触发锁住 PWM
+    // runMotorControl 每 A1 周期（~50μs）清除 TZ 标志，但不禁用信号源无法阻止 CMPSS 再触发
     {
         uint16_t i;
         for(i = 0; i < 3; i++)
