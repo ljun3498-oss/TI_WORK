@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.2                     
 ******************************************************************************
->> Linked Sun Mar  8 20:48:35 2026
+>> Linked Tue Mar 10 21:21:26 2026
 
 OUTPUT FILE NAME:   <dual_axis_servo_drive_fcl_qep_f2837x.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -100,8 +100,8 @@ MEMORY CONFIGURATION
   RAMD0                 0000b000   00000800  00000000  00000800  RWIX
   RAMD1                 0000b800   00000800  00000000  00000800  RWIX
   RAMGS0                0000c000   00001000  00001000  00000000  RWIX
-  RAMGS1                0000d000   00001000  00000fff  00000001  RWIX
-  RAMGS2                0000e000   00001000  000006ab  00000955  RWIX
+  RAMGS1                0000d000   00001000  00001000  00000000  RWIX
+  RAMGS2                0000e000   00001000  000008e8  00000718  RWIX
   RAMGS3                0000f000   00001000  00000000  00001000  RWIX
   RAMGS4                00010000   00001000  00000000  00001000  RWIX
   RAMGS5                00011000   00001000  00000000  00001000  RWIX
@@ -218,123 +218,123 @@ Cla1Prog   0    0000a000    00000384
 
 .text.1    0    0000c000    00001000     
                   0000c000    000003fa     dual_axis_servo_drive_hal.obj (.text:HAL_setupGPIOs)
-                  0000c3fa    00000296     dual_axis_servo_drive_user.obj (.text:initMotorParameters)
-                  0000c690    00000246     dual_axis_servo_drive.obj (.text:motor1ControlISR)
-                  0000c8d6    00000235     dual_axis_servo_drive.obj (.text:main)
-                  0000cb0b    00000001     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
-                  0000cb0c    00000222     dual_axis_servo_drive.obj (.text:motor2ControlISR)
-                  0000cd2e    000001cd     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
-                  0000cefb    000000e5     dual_axis_servo_drive_hal.obj (.text:HAL_setupADCs)
+                  0000c3fa    00000344     dual_axis_servo_drive.obj (.text:motor2ControlISR)
+                  0000c73e    00000306     dual_axis_servo_drive.obj (.text:motor1ControlISR)
+                  0000ca44    0000029f     dual_axis_servo_drive.obj (.text:main)
+                  0000cce3    00000296     dual_axis_servo_drive_user.obj (.text:initMotorParameters)
+                  0000cf79    00000067     dual_axis_servo_drive_hal.obj (.text:HAL_setupCMPSS)
                   0000cfe0    00000020     device.obj (.text:Device_enableUnbondedGPIOPullups)
 
-.text.2    0    0000d000    00000fff     
-                  0000d000    000001c9     dual_axis_servo_drive_user.obj (.text:runOffsetsCalculation)
-                  0000d1c9    00000158     dual_axis_servo_drive_user.obj (.text:initControlVars)
-                  0000d321    0000012e     dual_axis_servo_drive_hal.obj (.text:HAL_setupMotorPWMs)
-                  0000d44f    0000011e     dual_axis_servo_drive.obj (.text:runMotorControl)
-                  0000d56d    00000001     rts2800_fpu32_eabi.lib : startup.c.obj (.text)
-                  0000d56e    00000116     dual_axis_servo_drive_hal.obj (.text:HAL_setupMotorFaultProtection)
-                  0000d684    000000de     device.obj (.text:Device_enableAllPeripherals)
-                  0000d762    000000b1     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTAL)
-                  0000d813    0000009e     dual_axis_servo_drive_hal.obj (.text:HAL_setupCLA)
-                  0000d8b1    00000088     rts2800_fpu32_eabi.lib : fs_div28.asm.obj (.text)
-                  0000d939    00000067     dual_axis_servo_drive_hal.obj (.text:HAL_setupCMPSS)
-                  0000d9a0    00000063     dlog_4ch_f.obj (.text:DLOG_4CH_F_FUNC)
-                  0000da03    0000005d     dual_axis_servo_drive_hal.obj (.text:HAL_setupQEP)
-                  0000da60    0000005c     driverlib_eabi.lib : adc.obj (.text:ADC_setINLTrim)
-                  0000dabc    00000059     dual_axis_servo_drive.obj (.text:runSyncControl)
-                  0000db15    00000058     dual_axis_servo_drive_hal.obj (.text:HAL_setupInterrupts)
-                  0000db6d    00000053     dual_axis_servo_drive_hal.obj (.text:HAL_init)
-                  0000dbc0    00000053     driverlib_eabi.lib : memcfg.obj (.text:MemCfg_getInitStatus)
-                  0000dc13    00000049     dual_axis_servo_drive_hal.obj (.text:HAL_MTR_init)
-                  0000dc5c    00000044     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_getDeviceParametric)
-                  0000dca0    00000043                        : memcfg.obj (.text:MemCfg_initSections)
-                  0000dce3    00000041                        : interrupt.obj (.text:Interrupt_initModule)
-                  0000dd24    0000003f                        : gpio.obj (.text:GPIO_setPadConfig)
-                  0000dd63    0000003d                        : adc.obj (.text:ADC_setOffsetTrim)
-                  0000dda0    0000003d     device.obj (.text:Device_init)
-                  0000dddd    0000003a     dual_axis_servo_drive_user.obj (.text:resetControlVars)
-                  0000de17    00000036     dual_axis_servo_drive_hal.obj (.text:HAL_setParams)
-                  0000de4d    00000036     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_enable)
-                  0000de83    00000033     device.obj (.text:Device_configureTMXAnalogTrim)
-                  0000deb6    00000030     driverlib_eabi.lib : gpio.obj (.text:GPIO_setPinConfig)
-                  0000dee6    0000002e     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
-                  0000df14    0000002b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectOscSource)
-                  0000df3f    0000002b                        : xbar.obj (.text:XBAR_setEPWMMuxConfig)
-                  0000df6a    0000002b     rts2800_fpu32_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
-                  0000df95    00000029                            : exit.c.obj (.text)
-                  0000dfbe    00000027     fcl_cpu_code_dm.obj (.text:FCL_initADC_3I)
-                  0000dfe5    0000001a     dual_axis_servo_drive.obj (.text:A0)
+.text.2    0    0000d000    00001000     
+                  0000d000    000001cd     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
+                  0000d1cd    000001c9     dual_axis_servo_drive_user.obj (.text:runOffsetsCalculation)
+                  0000d396    00000158     dual_axis_servo_drive_user.obj (.text:initControlVars)
+                  0000d4ee    0000012e     dual_axis_servo_drive_hal.obj (.text:HAL_setupMotorPWMs)
+                  0000d61c    0000011e     dual_axis_servo_drive.obj (.text:runMotorControl)
+                  0000d73a    00000108     dual_axis_servo_drive_hal.obj (.text:HAL_setupMotorFaultProtection)
+                  0000d842    000000e5     dual_axis_servo_drive_hal.obj (.text:HAL_setupADCs)
+                  0000d927    000000de     device.obj (.text:Device_enableAllPeripherals)
+                  0000da05    000000b1     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTAL)
+                  0000dab6    0000009e     dual_axis_servo_drive_hal.obj (.text:HAL_setupCLA)
+                  0000db54    00000088     rts2800_fpu32_eabi.lib : fs_div28.asm.obj (.text)
+                  0000dbdc    00000063     dlog_4ch_f.obj (.text:DLOG_4CH_F_FUNC)
+                  0000dc3f    0000005d     dual_axis_servo_drive_hal.obj (.text:HAL_setupQEP)
+                  0000dc9c    0000005c     driverlib_eabi.lib : adc.obj (.text:ADC_setINLTrim)
+                  0000dcf8    00000059     dual_axis_servo_drive.obj (.text:runSyncControl)
+                  0000dd51    00000058     dual_axis_servo_drive_hal.obj (.text:HAL_setupInterrupts)
+                  0000dda9    00000053     dual_axis_servo_drive_hal.obj (.text:HAL_init)
+                  0000ddfc    00000053     driverlib_eabi.lib : memcfg.obj (.text:MemCfg_getInitStatus)
+                  0000de4f    00000049     dual_axis_servo_drive_hal.obj (.text:HAL_MTR_init)
+                  0000de98    00000044     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_getDeviceParametric)
+                  0000dedc    00000043                        : memcfg.obj (.text:MemCfg_initSections)
+                  0000df1f    00000041                        : interrupt.obj (.text:Interrupt_initModule)
+                  0000df60    0000003f                        : gpio.obj (.text:GPIO_setPadConfig)
+                  0000df9f    0000003d                        : adc.obj (.text:ADC_setOffsetTrim)
+                  0000dfdc    00000022                        : gpio.obj (.text:GPIO_setControllerCore)
+                  0000dffe    00000002     fcl_cpu_code_dm.obj (.text:FCL_getSwVersion)
 
-.text.3    0    0000e000    0000030b     
-                  0000e000    00000025     driverlib_eabi.lib : memcfg.obj (.text:MemCfg_setLSRAMControllerSel)
-                  0000e025    00000022                        : gpio.obj (.text:GPIO_setControllerCore)
-                  0000e047    00000022                        : gpio.obj (.text:GPIO_setQualificationMode)
-                  0000e069    00000020                        : gpio.obj (.text:GPIO_setDirectionMode)
-                  0000e089    0000001f     dlog_4ch_f.obj (.text:DLOG_4CH_F_init)
-                  0000e0a8    0000001e     device.obj (.text:Device_initGPIO)
-                  0000e0c6    0000001d     device.obj (.text:Device_enableUnbondedGPIOPullupsFor100Pin)
-                  0000e0e3    0000001c     driverlib_eabi.lib : cla.obj (.text:CLA_setTriggerSource)
-                  0000e0ff    0000001c     fcl_cpu_code_dm.obj (.text:FCL_initPWM)
-                  0000e11b    0000001c     dual_axis_servo_drive.obj (.text:ramper)
-                  0000e137    0000001c     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
-                  0000e153    0000001a     dual_axis_servo_drive_hal.obj (.text:HAL_setupCpuTimer)
-                  0000e16d    00000019     driverlib_eabi.lib : cmpss.obj (.text:CMPSS_configFilterHigh)
-                  0000e186    00000019                        : cmpss.obj (.text:CMPSS_configFilterLow)
-                  0000e19f    00000019     dual_axis_servo_drive_hal.obj (.text:HAL_setupCMPSS_DACValue)
-                  0000e1b8    00000018     dual_axis_servo_drive_hal.obj (.text:HAL_enableInterrupts)
-                  0000e1d0    00000017     dual_axis_servo_drive.obj (.text:B0)
-                  0000e1e7    00000017     dual_axis_servo_drive.obj (.text:C0)
-                  0000e1fe    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
-                  0000e215    00000015     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_initVectorTable)
-                  0000e22a    00000012     dual_axis_servo_drive.obj (.text:C1)
-                  0000e23c    00000011     driverlib_eabi.lib : adc.obj (.text:ADC_setMode)
-                  0000e24d    00000010     dual_axis_servo_drive.obj (.text:A3)
-                  0000e25d    0000000f     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_pollCpuTimer)
-                  0000e26c    0000000d     dual_axis_servo_drive.obj (.text:A1)
-                  0000e279    0000000d     dual_axis_servo_drive.obj (.text:A2)
-                  0000e286    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
-                  0000e293    0000000c     dual_axis_servo_drive_hal.obj (.text:HAL_setMotorParams)
-                  0000e29f    0000000c     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_defaultHandler)
-                  0000e2ab    0000000c     rts2800_fpu32_eabi.lib : args_main.c.obj (.text)
-                  0000e2b7    0000000a     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_illegalOperationHandler)
-                  0000e2c1    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
-                  0000e2cb    00000008     F2837xD_CodeStartBranch.obj (.text)
-                  0000e2d3    00000008     fcl_cpu_code_dm.obj (.text:FCL_initQEP)
-                  0000e2db    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
-                  0000e2e3    00000006     dual_axis_servo_drive.obj (.text:B1)
-                  0000e2e9    00000006     dual_axis_servo_drive.obj (.text:B2)
-                  0000e2ef    00000006     dual_axis_servo_drive.obj (.text:B3)
-                  0000e2f5    00000006     dual_axis_servo_drive.obj (.text:C2)
-                  0000e2fb    00000006     dual_axis_servo_drive.obj (.text:C3)
-                  0000e301    00000006     driverlib_eabi.lib : cputimer.obj (.text:CPUTimer_setEmulationMode)
-                  0000e307    00000002     fcl_cpu_code_dm.obj (.text:FCL_getSwVersion)
-                  0000e309    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+.text.3    0    0000e000    00000548     
+                  0000e000    0000003d     device.obj (.text:Device_init)
+                  0000e03d    0000003a     dual_axis_servo_drive_user.obj (.text:resetControlVars)
+                  0000e077    00000036     dual_axis_servo_drive_hal.obj (.text:HAL_setParams)
+                  0000e0ad    00000036     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_enable)
+                  0000e0e3    00000033     device.obj (.text:Device_configureTMXAnalogTrim)
+                  0000e116    00000030     driverlib_eabi.lib : gpio.obj (.text:GPIO_setPinConfig)
+                  0000e146    0000002e     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  0000e174    0000002b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectOscSource)
+                  0000e19f    0000002b                        : xbar.obj (.text:XBAR_setEPWMMuxConfig)
+                  0000e1ca    0000002b     rts2800_fpu32_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  0000e1f5    00000029                            : exit.c.obj (.text)
+                  0000e21e    00000027     fcl_cpu_code_dm.obj (.text:FCL_initADC_3I)
+                  0000e245    00000025     driverlib_eabi.lib : memcfg.obj (.text:MemCfg_setLSRAMControllerSel)
+                  0000e26a    00000022                        : gpio.obj (.text:GPIO_setQualificationMode)
+                  0000e28c    00000020                        : gpio.obj (.text:GPIO_setDirectionMode)
+                  0000e2ac    0000001f     dlog_4ch_f.obj (.text:DLOG_4CH_F_init)
+                  0000e2cb    0000001e     device.obj (.text:Device_initGPIO)
+                  0000e2e9    0000001d     device.obj (.text:Device_enableUnbondedGPIOPullupsFor100Pin)
+                  0000e306    0000001c     driverlib_eabi.lib : cla.obj (.text:CLA_setTriggerSource)
+                  0000e322    0000001c     fcl_cpu_code_dm.obj (.text:FCL_initPWM)
+                  0000e33e    0000001c     dual_axis_servo_drive.obj (.text:ramper)
+                  0000e35a    0000001c     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
+                  0000e376    0000001a     dual_axis_servo_drive.obj (.text:A0)
+                  0000e390    0000001a     dual_axis_servo_drive_hal.obj (.text:HAL_setupCpuTimer)
+                  0000e3aa    00000019     driverlib_eabi.lib : cmpss.obj (.text:CMPSS_configFilterHigh)
+                  0000e3c3    00000019                        : cmpss.obj (.text:CMPSS_configFilterLow)
+                  0000e3dc    00000019     dual_axis_servo_drive_hal.obj (.text:HAL_setupCMPSS_DACValue)
+                  0000e3f5    00000018     dual_axis_servo_drive_hal.obj (.text:HAL_enableInterrupts)
+                  0000e40d    00000017     dual_axis_servo_drive.obj (.text:B0)
+                  0000e424    00000017     dual_axis_servo_drive.obj (.text:C0)
+                  0000e43b    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
+                  0000e452    00000015     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_initVectorTable)
+                  0000e467    00000012     dual_axis_servo_drive.obj (.text:C1)
+                  0000e479    00000011     driverlib_eabi.lib : adc.obj (.text:ADC_setMode)
+                  0000e48a    00000010     dual_axis_servo_drive.obj (.text:A3)
+                  0000e49a    0000000f     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_pollCpuTimer)
+                  0000e4a9    0000000d     dual_axis_servo_drive.obj (.text:A1)
+                  0000e4b6    0000000d     dual_axis_servo_drive.obj (.text:A2)
+                  0000e4c3    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  0000e4d0    0000000c     dual_axis_servo_drive_hal.obj (.text:HAL_setMotorParams)
+                  0000e4dc    0000000c     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_defaultHandler)
+                  0000e4e8    0000000c     rts2800_fpu32_eabi.lib : args_main.c.obj (.text)
+                  0000e4f4    0000000a     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_illegalOperationHandler)
+                  0000e4fe    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
+                  0000e508    00000008     F2837xD_CodeStartBranch.obj (.text)
+                  0000e510    00000008     fcl_cpu_code_dm.obj (.text:FCL_initQEP)
+                  0000e518    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  0000e520    00000006     dual_axis_servo_drive.obj (.text:B1)
+                  0000e526    00000006     dual_axis_servo_drive.obj (.text:B2)
+                  0000e52c    00000006     dual_axis_servo_drive.obj (.text:B3)
+                  0000e532    00000006     dual_axis_servo_drive.obj (.text:C2)
+                  0000e538    00000006     dual_axis_servo_drive.obj (.text:C3)
+                  0000e53e    00000006     driverlib_eabi.lib : cputimer.obj (.text:CPUTimer_setEmulationMode)
+                  0000e544    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  0000e546    00000001                            : _lock.c.obj (.text)
+                  0000e547    00000001                            : startup.c.obj (.text)
 
 .TI.ramfunc 
-*          0    0000e310    000003a0     
-                  0000e310    000000e5     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrlWrap_M1)
-                  0000e3f5    00000001     --HOLE-- [fill = 0]
-                  0000e3f6    000000da     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrlWrap_M2)
-                  0000e4d0    000000d7     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrl_M1)
-                  0000e5a7    00000001     --HOLE-- [fill = 0]
-                  0000e5a8    000000d3     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrl_M2)
-                  0000e67b    00000031     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_resetController)
-                  0000e6ac    00000004     driverlib_eabi.lib : sysctl.obj (.TI.ramfunc)
+*          0    0000e548    000003a0     
+                  0000e548    000000e5     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrlWrap_M1)
+                  0000e62d    00000001     --HOLE-- [fill = 0]
+                  0000e62e    000000da     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrlWrap_M2)
+                  0000e708    000000d7     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrl_M1)
+                  0000e7df    00000001     --HOLE-- [fill = 0]
+                  0000e7e0    000000d3     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_runPICtrl_M2)
+                  0000e8b3    00000031     fcl_cpu_code_dm.obj (.TI.ramfunc:FCL_resetController)
+                  0000e8e4    00000004     driverlib_eabi.lib : sysctl.obj (.TI.ramfunc)
 
 MODULE SUMMARY
 
        Module                           code    ro data   rw data
        ------                           ----    -------   -------
     .\sources\
-       dual_axis_servo_drive.obj        2258    0         2450   
-       dual_axis_servo_drive_hal.obj    2566    0         0      
+       dual_axis_servo_drive.obj        2846    0         2450   
+       dual_axis_servo_drive_hal.obj    2552    0         0      
        dual_axis_servo_drive_user.obj   1521    0         1      
        fcl_cpu_code_dm.obj              999     0         164    
        fcl_cla_code_dm.obj              900     0         0      
        dlog_4ch_f.obj                   130     0         0      
     +--+--------------------------------+-------+---------+---------+
-       Total:                           8374    0         2615   
+       Total:                           8948    0         2615   
                                                                  
     .\src_device\
        device.obj                       425     0         6      
@@ -375,7 +375,7 @@ MODULE SUMMARY
        Stack:                           0       0         896    
        Linker Generated:                0       166       0      
     +--+--------------------------------+-------+---------+---------+
-       Grand Total:                     10798   166       3551   
+       Grand Total:                     11372   166       3551   
 
 
 LINKER GENERATED COPY TABLES
@@ -466,30 +466,30 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 
 page  address   name                                     
 ----  -------   ----                                     
-0     0000dfe5  A0                                       
-0     0000e26c  A1                                       
-0     0000e279  A2                                       
-0     0000e24d  A3                                       
-0     0000da60  ADC_setINLTrim                           
-0     0000e23c  ADC_setMode                              
-0     0000dd63  ADC_setOffsetTrim                        
+0     0000e376  A0                                       
+0     0000e4a9  A1                                       
+0     0000e4b6  A2                                       
+0     0000e48a  A3                                       
+0     0000dc9c  ADC_setINLTrim                           
+0     0000e479  ADC_setMode                              
+0     0000df9f  ADC_setOffsetTrim                        
 0     00008682  A_Task_Ptr                               
 0     00008680  Alpha_State_Ptr                          
-0     0000e1d0  B0                                       
-0     0000e2e3  B1                                       
-0     0000e2e9  B2                                       
-0     0000e2ef  B3                                       
+0     0000e40d  B0                                       
+0     0000e520  B1                                       
+0     0000e526  B2                                       
+0     0000e52c  B3                                       
 0     00008684  B_Task_Ptr                               
-0     0000df95  C$$EXIT                                  
-0     0000e1e7  C0                                       
-0     0000e22a  C1                                       
-0     0000e2f5  C2                                       
-0     0000e2fb  C3                                       
+0     0000e1f5  C$$EXIT                                  
+0     0000e424  C0                                       
+0     0000e467  C1                                       
+0     0000e532  C2                                       
+0     0000e538  C3                                       
 abs   00000100  CLA_SCRATCHPAD_SIZE                      
-0     0000e0e3  CLA_setTriggerSource                     
-0     0000e16d  CMPSS_configFilterHigh                   
-0     0000e186  CMPSS_configFilterLow                    
-0     0000e301  CPUTimer_setEmulationMode                
+0     0000e306  CLA_setTriggerSource                     
+0     0000e3aa  CMPSS_configFilterHigh                   
+0     0000e3c3  CMPSS_configFilterLow                    
+0     0000e53e  CPUTimer_setEmulationMode                
 0     00008686  C_Task_Ptr                               
 0     0000a0d4  Cla1Task1                                
 0     0000a324  Cla1Task2                                
@@ -503,67 +503,67 @@ abs   00000100  CLA_SCRATCHPAD_SIZE
 0     00008190  DBUFF_4CH2                               
 0     00008320  DBUFF_4CH3                               
 0     000084b0  DBUFF_4CH4                               
-0     0000d9a0  DLOG_4CH_F_FUNC                          
-0     0000e089  DLOG_4CH_F_init                          
-0     0000de83  Device_configureTMXAnalogTrim            
-0     0000d684  Device_enableAllPeripherals              
+0     0000dbdc  DLOG_4CH_F_FUNC                          
+0     0000e2ac  DLOG_4CH_F_init                          
+0     0000e0e3  Device_configureTMXAnalogTrim            
+0     0000d927  Device_enableAllPeripherals              
 0     0000cfe0  Device_enableUnbondedGPIOPullups         
-0     0000e0c6  Device_enableUnbondedGPIOPullupsFor100Pin
-0     0000dda0  Device_init                              
-0     0000e0a8  Device_initGPIO                          
+0     0000e2e9  Device_enableUnbondedGPIOPullupsFor100Pin
+0     0000e000  Device_init                              
+0     0000e2cb  Device_initGPIO                          
 0     00008666  Example_Fail                             
 0     00008664  Example_PassCount                        
 0     00008662  Example_Result                           
 0     0000870a  FCL_cycleCount                           
-0     0000e307  FCL_getSwVersion                         
-0     0000dfbe  FCL_initADC_3I                           
-0     0000e0ff  FCL_initPWM                              
-0     0000e2d3  FCL_initQEP                              
-0     0000e67b  FCL_resetController                      
-0     0000e310  FCL_runPICtrlWrap_M1                     
-0     0000e3f6  FCL_runPICtrlWrap_M2                     
-0     0000e4d0  FCL_runPICtrl_M1                         
-0     0000e5a8  FCL_runPICtrl_M2                         
-0     0000e025  GPIO_setControllerCore                   
-0     0000e069  GPIO_setDirectionMode                    
-0     0000dd24  GPIO_setPadConfig                        
-0     0000deb6  GPIO_setPinConfig                        
-0     0000e047  GPIO_setQualificationMode                
-0     0000dc13  HAL_MTR_init                             
-0     0000e1b8  HAL_enableInterrupts                     
-0     0000db6d  HAL_init                                 
-0     0000e293  HAL_setMotorParams                       
-0     0000de17  HAL_setParams                            
-0     0000cefb  HAL_setupADCs                            
-0     0000d813  HAL_setupCLA                             
-0     0000d939  HAL_setupCMPSS                           
-0     0000e19f  HAL_setupCMPSS_DACValue                  
-0     0000e153  HAL_setupCpuTimer                        
+0     0000dffe  FCL_getSwVersion                         
+0     0000e21e  FCL_initADC_3I                           
+0     0000e322  FCL_initPWM                              
+0     0000e510  FCL_initQEP                              
+0     0000e8b3  FCL_resetController                      
+0     0000e548  FCL_runPICtrlWrap_M1                     
+0     0000e62e  FCL_runPICtrlWrap_M2                     
+0     0000e708  FCL_runPICtrl_M1                         
+0     0000e7e0  FCL_runPICtrl_M2                         
+0     0000dfdc  GPIO_setControllerCore                   
+0     0000e28c  GPIO_setDirectionMode                    
+0     0000df60  GPIO_setPadConfig                        
+0     0000e116  GPIO_setPinConfig                        
+0     0000e26a  GPIO_setQualificationMode                
+0     0000de4f  HAL_MTR_init                             
+0     0000e3f5  HAL_enableInterrupts                     
+0     0000dda9  HAL_init                                 
+0     0000e4d0  HAL_setMotorParams                       
+0     0000e077  HAL_setParams                            
+0     0000d842  HAL_setupADCs                            
+0     0000dab6  HAL_setupCLA                             
+0     0000cf79  HAL_setupCMPSS                           
+0     0000e3dc  HAL_setupCMPSS_DACValue                  
+0     0000e390  HAL_setupCpuTimer                        
 0     0000c000  HAL_setupGPIOs                           
-0     0000db15  HAL_setupInterrupts                      
-0     0000d56e  HAL_setupMotorFaultProtection            
-0     0000d321  HAL_setupMotorPWMs                       
-0     0000da03  HAL_setupQEP                             
+0     0000dd51  HAL_setupInterrupts                      
+0     0000d73a  HAL_setupMotorFaultProtection            
+0     0000d4ee  HAL_setupMotorPWMs                       
+0     0000dc3f  HAL_setupQEP                             
 0     0000865c  IdRef                                    
-0     0000e29f  Interrupt_defaultHandler                 
-0     0000de4d  Interrupt_enable                         
-0     0000e2b7  Interrupt_illegalOperationHandler        
-0     0000dce3  Interrupt_initModule                     
-0     0000e215  Interrupt_initVectorTable                
-0     0000e2c1  Interrupt_nmiHandler                     
+0     0000e4dc  Interrupt_defaultHandler                 
+0     0000e0ad  Interrupt_enable                         
+0     0000e4f4  Interrupt_illegalOperationHandler        
+0     0000df1f  Interrupt_initModule                     
+0     0000e452  Interrupt_initVectorTable                
+0     0000e4fe  Interrupt_nmiHandler                     
 0     0000865e  IqRef                                    
-0     0000dbc0  MemCfg_getInitStatus                     
-0     0000dca0  MemCfg_initSections                      
-0     0000e000  MemCfg_setLSRAMControllerSel             
+0     0000ddfc  MemCfg_getInitStatus                     
+0     0000dedc  MemCfg_initSections                      
+0     0000e245  MemCfg_setLSRAMControllerSel             
 0     00000ce0  PieCtrlRegs                              
-0     0000e6ac  SysCtl_delay                             
-0     0000dc5c  SysCtl_getDeviceParametric               
-0     0000df14  SysCtl_selectOscSource                   
-0     0000d762  SysCtl_selectXTAL                        
-0     0000cd2e  SysCtl_setClock                          
+0     0000e8e4  SysCtl_delay                             
+0     0000de98  SysCtl_getDeviceParametric               
+0     0000e174  SysCtl_selectOscSource                   
+0     0000da05  SysCtl_selectXTAL                        
+0     0000d000  SysCtl_setClock                          
 0     0000864c  VdTesting                                
 0     0000864e  VqTesting                                
-0     0000df3f  XBAR_setEPWMMuxConfig                    
+0     0000e19f  XBAR_setEPWMMuxConfig                    
 0     000001be  __TI_CINIT_Base                          
 0     000001ca  __TI_CINIT_Limit                         
 0     000001ca  __TI_CINIT_Warm                          
@@ -571,26 +571,26 @@ abs   00000100  CLA_SCRATCHPAD_SIZE
 0     000001ba  __TI_Handler_Table_Limit                 
 0     00000780  __TI_STACK_END                           
 abs   00000380  __TI_STACK_SIZE                          
-0     0000df6a  __TI_auto_init_nobinit_nopinit           
+0     0000e1ca  __TI_auto_init_nobinit_nopinit           
 0     0000866a  __TI_cleanup_ptr                         
-0     0000dee6  __TI_decompress_lzss                     
-0     0000e2db  __TI_decompress_none                     
+0     0000e146  __TI_decompress_lzss                     
+0     0000e518  __TI_decompress_none                     
 0     0000866c  __TI_dtors_ptr                           
 0     00008668  __TI_enable_exit_profile_output          
 abs   ffffffff  __TI_pprof_out_hndl                      
 abs   ffffffff  __TI_prof_data_size                      
 abs   ffffffff  __TI_prof_data_start                     
-0     0000e286  __TI_zero_init_nomemset                  
-0     0000d8b1  __c28xabi_divf                           
+0     0000e4c3  __TI_zero_init_nomemset                  
+0     0000db54  __c28xabi_divf                           
 n/a   UNDEFED   __c_args__                               
 0     00000400  __stack                                  
-0     0000e2ab  _args_main                               
-0     0000e1fe  _c_int00                                 
+0     0000e4e8  _args_main                               
+0     0000e43b  _c_int00                                 
 0     0000867a  _lock                                    
-0     0000cb0b  _nop                                     
-0     0000d56d  _system_post_cinit                       
-0     0000e309  _system_pre_init                         
-0     0000df95  abort                                    
+0     0000e546  _nop                                     
+0     0000e547  _system_post_cinit                       
+0     0000e544  _system_pre_init                         
+0     0000e1f5  abort                                    
 0     00008645  backTicker                               
 0     00008641  clkPrescale                              
 0     00000000  code_start                               
@@ -601,31 +601,31 @@ n/a   UNDEFED   __c_args__
 0     00008658  dlogCh4                                  
 0     0000868a  dlog_4ch1                                
 0     00008644  enableFlag                               
-0     0000df97  exit                                     
+0     0000e1f7  exit                                     
 0     00009a98  fclVars                                  
 0     0000864a  flagSyncRun                              
 0     000086c0  hal                                      
 0     00008688  halHandle                                
 0     000086e2  halMtr                                   
 0     00008706  halMtrHandle                             
-0     0000d1c9  initControlVars                          
-0     0000c3fa  initMotorParameters                      
+0     0000d396  initControlVars                          
+0     0000cce3  initMotorParameters                      
 0     00008646  led1Cnt                                  
 0     00008647  led2Cnt                                  
-0     0000c8d6  main                                     
-0     0000e137  memcpy                                   
-0     0000c690  motor1ControlISR                         
-0     0000cb0c  motor2ControlISR                         
+0     0000ca44  main                                     
+0     0000e35a  memcpy                                   
+0     0000c73e  motor1ControlISR                         
+0     0000c3fa  motor2ControlISR                         
 0     00009800  motorVars                                
 0     0000867c  offsetCalCounter                         
 0     00008650  posPtrMax                                
 0     00008660  rampDelayMax                             
-0     0000e11b  ramper                                   
-0     0000dddd  resetControlVars                         
+0     0000e33e  ramper                                   
+0     0000e03d  resetControlVars                         
 0     00008648  runMotor                                 
-0     0000d44f  runMotorControl                          
-0     0000d000  runOffsetsCalculation                    
-0     0000dabc  runSyncControl                           
+0     0000d61c  runMotorControl                          
+0     0000d1cd  runOffsetsCalculation                    
+0     0000dcf8  runSyncControl                           
 0     00008642  sampWin                                  
 0     00008640  serialCommsTimer                         
 0     0000865a  speedRef                                 
@@ -706,100 +706,100 @@ page  address   name
 0     0000a348  Cla1Task7                                
 0     0000a36a  Cla1Task6                                
 0     0000c000  HAL_setupGPIOs                           
-0     0000c3fa  initMotorParameters                      
-0     0000c690  motor1ControlISR                         
-0     0000c8d6  main                                     
-0     0000cb0b  _nop                                     
-0     0000cb0c  motor2ControlISR                         
-0     0000cd2e  SysCtl_setClock                          
-0     0000cefb  HAL_setupADCs                            
+0     0000c3fa  motor2ControlISR                         
+0     0000c73e  motor1ControlISR                         
+0     0000ca44  main                                     
+0     0000cce3  initMotorParameters                      
+0     0000cf79  HAL_setupCMPSS                           
 0     0000cfe0  Device_enableUnbondedGPIOPullups         
-0     0000d000  runOffsetsCalculation                    
-0     0000d1c9  initControlVars                          
-0     0000d321  HAL_setupMotorPWMs                       
-0     0000d44f  runMotorControl                          
-0     0000d56d  _system_post_cinit                       
-0     0000d56e  HAL_setupMotorFaultProtection            
-0     0000d684  Device_enableAllPeripherals              
-0     0000d762  SysCtl_selectXTAL                        
-0     0000d813  HAL_setupCLA                             
-0     0000d8b1  __c28xabi_divf                           
-0     0000d939  HAL_setupCMPSS                           
-0     0000d9a0  DLOG_4CH_F_FUNC                          
-0     0000da03  HAL_setupQEP                             
-0     0000da60  ADC_setINLTrim                           
-0     0000dabc  runSyncControl                           
-0     0000db15  HAL_setupInterrupts                      
-0     0000db6d  HAL_init                                 
-0     0000dbc0  MemCfg_getInitStatus                     
-0     0000dc13  HAL_MTR_init                             
-0     0000dc5c  SysCtl_getDeviceParametric               
-0     0000dca0  MemCfg_initSections                      
-0     0000dce3  Interrupt_initModule                     
-0     0000dd24  GPIO_setPadConfig                        
-0     0000dd63  ADC_setOffsetTrim                        
-0     0000dda0  Device_init                              
-0     0000dddd  resetControlVars                         
-0     0000de17  HAL_setParams                            
-0     0000de4d  Interrupt_enable                         
-0     0000de83  Device_configureTMXAnalogTrim            
-0     0000deb6  GPIO_setPinConfig                        
-0     0000dee6  __TI_decompress_lzss                     
-0     0000df14  SysCtl_selectOscSource                   
-0     0000df3f  XBAR_setEPWMMuxConfig                    
-0     0000df6a  __TI_auto_init_nobinit_nopinit           
-0     0000df95  C$$EXIT                                  
-0     0000df95  abort                                    
-0     0000df97  exit                                     
-0     0000dfbe  FCL_initADC_3I                           
-0     0000dfe5  A0                                       
-0     0000e000  MemCfg_setLSRAMControllerSel             
-0     0000e025  GPIO_setControllerCore                   
-0     0000e047  GPIO_setQualificationMode                
-0     0000e069  GPIO_setDirectionMode                    
-0     0000e089  DLOG_4CH_F_init                          
-0     0000e0a8  Device_initGPIO                          
-0     0000e0c6  Device_enableUnbondedGPIOPullupsFor100Pin
-0     0000e0e3  CLA_setTriggerSource                     
-0     0000e0ff  FCL_initPWM                              
-0     0000e11b  ramper                                   
-0     0000e137  memcpy                                   
-0     0000e153  HAL_setupCpuTimer                        
-0     0000e16d  CMPSS_configFilterHigh                   
-0     0000e186  CMPSS_configFilterLow                    
-0     0000e19f  HAL_setupCMPSS_DACValue                  
-0     0000e1b8  HAL_enableInterrupts                     
-0     0000e1d0  B0                                       
-0     0000e1e7  C0                                       
-0     0000e1fe  _c_int00                                 
-0     0000e215  Interrupt_initVectorTable                
-0     0000e22a  C1                                       
-0     0000e23c  ADC_setMode                              
-0     0000e24d  A3                                       
-0     0000e26c  A1                                       
-0     0000e279  A2                                       
-0     0000e286  __TI_zero_init_nomemset                  
-0     0000e293  HAL_setMotorParams                       
-0     0000e29f  Interrupt_defaultHandler                 
-0     0000e2ab  _args_main                               
-0     0000e2b7  Interrupt_illegalOperationHandler        
-0     0000e2c1  Interrupt_nmiHandler                     
-0     0000e2d3  FCL_initQEP                              
-0     0000e2db  __TI_decompress_none                     
-0     0000e2e3  B1                                       
-0     0000e2e9  B2                                       
-0     0000e2ef  B3                                       
-0     0000e2f5  C2                                       
-0     0000e2fb  C3                                       
-0     0000e301  CPUTimer_setEmulationMode                
-0     0000e307  FCL_getSwVersion                         
-0     0000e309  _system_pre_init                         
-0     0000e310  FCL_runPICtrlWrap_M1                     
-0     0000e3f6  FCL_runPICtrlWrap_M2                     
-0     0000e4d0  FCL_runPICtrl_M1                         
-0     0000e5a8  FCL_runPICtrl_M2                         
-0     0000e67b  FCL_resetController                      
-0     0000e6ac  SysCtl_delay                             
+0     0000d000  SysCtl_setClock                          
+0     0000d1cd  runOffsetsCalculation                    
+0     0000d396  initControlVars                          
+0     0000d4ee  HAL_setupMotorPWMs                       
+0     0000d61c  runMotorControl                          
+0     0000d73a  HAL_setupMotorFaultProtection            
+0     0000d842  HAL_setupADCs                            
+0     0000d927  Device_enableAllPeripherals              
+0     0000da05  SysCtl_selectXTAL                        
+0     0000dab6  HAL_setupCLA                             
+0     0000db54  __c28xabi_divf                           
+0     0000dbdc  DLOG_4CH_F_FUNC                          
+0     0000dc3f  HAL_setupQEP                             
+0     0000dc9c  ADC_setINLTrim                           
+0     0000dcf8  runSyncControl                           
+0     0000dd51  HAL_setupInterrupts                      
+0     0000dda9  HAL_init                                 
+0     0000ddfc  MemCfg_getInitStatus                     
+0     0000de4f  HAL_MTR_init                             
+0     0000de98  SysCtl_getDeviceParametric               
+0     0000dedc  MemCfg_initSections                      
+0     0000df1f  Interrupt_initModule                     
+0     0000df60  GPIO_setPadConfig                        
+0     0000df9f  ADC_setOffsetTrim                        
+0     0000dfdc  GPIO_setControllerCore                   
+0     0000dffe  FCL_getSwVersion                         
+0     0000e000  Device_init                              
+0     0000e03d  resetControlVars                         
+0     0000e077  HAL_setParams                            
+0     0000e0ad  Interrupt_enable                         
+0     0000e0e3  Device_configureTMXAnalogTrim            
+0     0000e116  GPIO_setPinConfig                        
+0     0000e146  __TI_decompress_lzss                     
+0     0000e174  SysCtl_selectOscSource                   
+0     0000e19f  XBAR_setEPWMMuxConfig                    
+0     0000e1ca  __TI_auto_init_nobinit_nopinit           
+0     0000e1f5  C$$EXIT                                  
+0     0000e1f5  abort                                    
+0     0000e1f7  exit                                     
+0     0000e21e  FCL_initADC_3I                           
+0     0000e245  MemCfg_setLSRAMControllerSel             
+0     0000e26a  GPIO_setQualificationMode                
+0     0000e28c  GPIO_setDirectionMode                    
+0     0000e2ac  DLOG_4CH_F_init                          
+0     0000e2cb  Device_initGPIO                          
+0     0000e2e9  Device_enableUnbondedGPIOPullupsFor100Pin
+0     0000e306  CLA_setTriggerSource                     
+0     0000e322  FCL_initPWM                              
+0     0000e33e  ramper                                   
+0     0000e35a  memcpy                                   
+0     0000e376  A0                                       
+0     0000e390  HAL_setupCpuTimer                        
+0     0000e3aa  CMPSS_configFilterHigh                   
+0     0000e3c3  CMPSS_configFilterLow                    
+0     0000e3dc  HAL_setupCMPSS_DACValue                  
+0     0000e3f5  HAL_enableInterrupts                     
+0     0000e40d  B0                                       
+0     0000e424  C0                                       
+0     0000e43b  _c_int00                                 
+0     0000e452  Interrupt_initVectorTable                
+0     0000e467  C1                                       
+0     0000e479  ADC_setMode                              
+0     0000e48a  A3                                       
+0     0000e4a9  A1                                       
+0     0000e4b6  A2                                       
+0     0000e4c3  __TI_zero_init_nomemset                  
+0     0000e4d0  HAL_setMotorParams                       
+0     0000e4dc  Interrupt_defaultHandler                 
+0     0000e4e8  _args_main                               
+0     0000e4f4  Interrupt_illegalOperationHandler        
+0     0000e4fe  Interrupt_nmiHandler                     
+0     0000e510  FCL_initQEP                              
+0     0000e518  __TI_decompress_none                     
+0     0000e520  B1                                       
+0     0000e526  B2                                       
+0     0000e52c  B3                                       
+0     0000e532  C2                                       
+0     0000e538  C3                                       
+0     0000e53e  CPUTimer_setEmulationMode                
+0     0000e544  _system_pre_init                         
+0     0000e546  _nop                                     
+0     0000e547  _system_post_cinit                       
+0     0000e548  FCL_runPICtrlWrap_M1                     
+0     0000e62e  FCL_runPICtrlWrap_M2                     
+0     0000e708  FCL_runPICtrl_M1                         
+0     0000e7e0  FCL_runPICtrl_M2                         
+0     0000e8b3  FCL_resetController                      
+0     0000e8e4  SysCtl_delay                             
 abs   00000100  CLA_SCRATCHPAD_SIZE                      
 abs   00000380  __TI_STACK_SIZE                          
 abs   ffffffff  __TI_pprof_out_hndl                      

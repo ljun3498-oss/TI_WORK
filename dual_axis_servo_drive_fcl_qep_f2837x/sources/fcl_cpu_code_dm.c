@@ -508,7 +508,7 @@ void FCL_runPICtrl_M1(MOTOR_Vars_t *pMotor)
     //
     Cla1ForceTask2();
 
-    FCL_PI_MACRO(pMotor->pi_id)             // Id回路 - PI控制器 - CPU
+    FCL_PI_MACRO(pMotor->pi_id)             // Id回路 - PI控制器 - CPU，这是id的，iq的在cla1_2中计算
 
     register float32_t  piidc, piids;
 
@@ -544,7 +544,17 @@ void FCL_runPICtrl_M1(MOTOR_Vars_t *pMotor)
 }
 
 //
-//  函数：用户应用程序在PI控制模式下快速电流环完成时调用的包装函数
+//  函数：FCL PI控制器包装函数 - 执行电流环后处理和参数更新
+//
+//  功能说明：
+//    本函数在FCL_runPICtrl_M1()之后调用，负责：
+//    1. 触发CLA Task4处理QEP编码器标志（索引检测、低速计算）
+//    2. 根据实时母线电压更新PI控制器增益（自适应调整）
+//    3. 计算反电动势前馈补偿（提高动态响应）
+//    4. 更新电流反馈值到用户可见变量
+//    5. 同步CPU与CLA状态，清除中断标志
+//
+//  注意：本函数与FCL_runPICtrl_M1()配合使用，完成完整的FCL电流环控制
 //
 #pragma CODE_ALIGN(FCL_runPICtrlWrap_M1, 2)
 #pragma FUNCTION_OPTIONS(FCL_runPICtrlWrap_M1, "--auto_inline")
