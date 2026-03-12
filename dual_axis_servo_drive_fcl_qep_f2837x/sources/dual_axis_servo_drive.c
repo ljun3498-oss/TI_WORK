@@ -216,7 +216,7 @@ HAL_MTR_Obj    halMtr[2];         // 电机控制硬件抽象层对象数组
 volatile uint16_t FCL_cycleCount[2];  // FCL（场定向控制库）执行时间计数器，用于两个电机
 
 // 同时控制双电机以相同的速度和加速度运行
-float32_t speedRef = 0.02;  // 速度参考值（启动阶段降低，便于起转）
+float32_t speedRef = 0.5;  // 速度参考值
 float32_t IdRef = 0.0;  // d轴电流参考值
 float32_t IqRef = 0.10;  // q轴电流参考值
 uint32_t rampDelayMax = 0;  // 斜坡延迟最大值
@@ -287,13 +287,6 @@ void main(void)
     // 设置电机2的电流限制为9A
     motorVars[1].currentLimit = 9.0;        // 9A
 
-#if(BUILDLEVEL == FCL_LEVEL2)
-    // LEVEL2临时：放宽电流阈值以避免CMPSS误触发
-    // 原因：ADC零点偏移较大，2048基准的阈值计算不准确
-    motorVars[0].currentLimit = 15.0;
-    motorVars[1].currentLimit = 15.0;
-#endif
-
     // 为电机1设置故障保护
     HAL_setupMotorFaultProtection(halMtrHandle[MTR_1],
                                   motorVars[MTR_1].currentLimit);
@@ -315,113 +308,12 @@ void main(void)
     // 重置电机2的控制变量
     resetControlVars(&motorVars[1]);
 
-#if(BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2) || (BUILDLEVEL == FCL_LEVEL3) || (BUILDLEVEL == FCL_LEVEL4)
-    // =====================================================================
-    // LEVEL1/2/3/4 初始化：设置控制状态为运行
-    // =====================================================================
-    flagSyncRun = true;
-    ctrlState = CTRL_RUN;
-    runMotor = MOTOR_RUN;
-    // 注意：不提前设置 motorVars[0/1].runMotor = MOTOR_RUN
-    // 让 runMotorControl 检测到 MOTOR_STOP→MOTOR_RUN 的转换来启用栅极
-    // （line 619 会无条件禁用栅极，若此处预设 MOTOR_RUN，runMotorControl 永远不会重新启用栅极）
-    motorVars[0].ctrlState = CTRL_RUN;
-    motorVars[1].ctrlState = CTRL_RUN;
-
-#if(BUILDLEVEL == FCL_LEVEL4)
-    speedRef = 0.5;
-#elif(BUILDLEVEL == FCL_LEVEL1)
-    speedRef = 0.1;
-#else
-    speedRef = 0.02;
-#endif
-
-    motorVars[0].speedRef = speedRef;
-    motorVars[1].speedRef = speedRef;
-    motorVars[0].isrTicker = 1;
-    motorVars[1].isrTicker = 1;
-
-    // 强制清除可能残留的故障标志
-    // 注意：不要设置clearTripFlagDMC=1，否则runMotorControl会将ctrlState设为STOP
-    motorVars[0].tripFlagDMC = 0;
-    motorVars[1].tripFlagDMC = 0;
-
-#if(BUILDLEVEL == FCL_LEVEL3) || (BUILDLEVEL == FCL_LEVEL4)
-    // 初始化编码器状态机为对齐状态（lsw默认是ENC_IDLE=0，需要设置为ENC_ALIGNMENT=1）
-    motorVars[0].ptrFCL->lsw = ENC_ALIGNMENT;
-    motorVars[1].ptrFCL->lsw = ENC_ALIGNMENT;
-#endif
-
-    // 手动清除TripZone标志和CMPSS锁存
-    {
-        uint16_t i;
-        for(i = 0; i < 3; i++)
-        {
-            EPWM_clearTripZoneFlag(halMtr[0].pwmHandle[i],
-                                   (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
-            EPWM_clearTripZoneFlag(halMtr[1].pwmHandle[i],
-                                   (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
-        }
-        // 清除CMPSS滤波器锁存
-        CMPSS_clearFilterLatchHigh(halMtr[0].cmpssHandle[0]);
-        CMPSS_clearFilterLatchHigh(halMtr[0].cmpssHandle[1]);
-        CMPSS_clearFilterLatchHigh(halMtr[0].cmpssHandle[2]);
-        CMPSS_clearFilterLatchHigh(halMtr[1].cmpssHandle[0]);
-        CMPSS_clearFilterLatchHigh(halMtr[1].cmpssHandle[1]);
-        CMPSS_clearFilterLatchHigh(halMtr[1].cmpssHandle[2]);
-    }
-#endif
 
     // 清除电机1的任何虚假OST和DCAEVT1故障标志
     HAL_clearTZFlag(halMtrHandle[MTR_1]);
 
     // 清除电机2的任何虚假OST和DCAEVT1故障标志
     HAL_clearTZFlag(halMtrHandle[MTR_2]);
-
-    // 所有构建级别（LEVEL1~4）：清除故障标志 + 禁用TripZone信号源，防止CMPSS误触发
-    // 注意：不要设置clearTripFlagDMC=1，否则runMotorControl会将ctrlState设为STOP
-    motorVars[0].tripFlagDMC = 0;
-    motorVars[1].tripFlagDMC = 0;
-
-    {
-        uint16_t i;
-        for(i = 0; i < 3; i++)
-        {
-            // 禁用DCAEVT1和CBC6信号源
-            EPWM_disableTripZoneSignals(halMtr[0].pwmHandle[i],
-                                        EPWM_TZ_SIGNAL_DCAEVT1);
-            EPWM_disableTripZoneSignals(halMtr[1].pwmHandle[i],
-                                        EPWM_TZ_SIGNAL_DCAEVT1);
-            EPWM_disableTripZoneSignals(halMtr[0].pwmHandle[i],
-                                        EPWM_TZ_SIGNAL_CBC6);
-            EPWM_disableTripZoneSignals(halMtr[1].pwmHandle[i],
-                                        EPWM_TZ_SIGNAL_CBC6);
-
-#if(BUILDLEVEL == FCL_LEVEL1)
-            // LEVEL1额外：所有TZ动作设为DISABLE，防止PWM被硬件锁低
-            EALLOW;
-            HWREGH(halMtr[0].pwmHandle[i] + EPWM_O_TZCTL) = 0x00FFU;
-            HWREGH(halMtr[1].pwmHandle[i] + EPWM_O_TZCTL) = 0x00FFU;
-            EDIS;
-#endif
-
-            // 清除所有TZ标志
-            EPWM_clearTripZoneFlag(halMtr[0].pwmHandle[i],
-                                   (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
-            EPWM_clearTripZoneFlag(halMtr[1].pwmHandle[i],
-                                   (EPWM_TZ_FLAG_OST | EPWM_TZ_FLAG_DCAEVT1 | EPWM_TZ_FLAG_CBC));
-        }
-
-#if(BUILDLEVEL == FCL_LEVEL1)
-        // LEVEL1额外：清除EPWM1A软件强制输出
-        EPWM_setActionQualifierContSWForceAction(halMtr[0].pwmHandle[0],
-                                                  EPWM_AQ_OUTPUT_A,
-                                                  EPWM_AQ_SW_DISABLED);
-        EPWM_setActionQualifierContSWForceAction(halMtr[0].pwmHandle[0],
-                                                  EPWM_AQ_OUTPUT_B,
-                                                  EPWM_AQ_SW_DISABLED);
-#endif
-    }
 
     // *************** SFRA & SFRA_GUI COMM INIT CODE START *******************
 #if BUILDLEVEL == FCL_LEVEL6
@@ -460,8 +352,8 @@ void main(void)
     // 电机1参数设置
     motorVars[0].IdRef_start = 0.2;        // d轴初始参考电流（标幺值）
     motorVars[0].IqRef = 0.1;               // q轴参考电流（标幺值）
-    motorVars[0].speedRef = 0.02;            // 速度参考值（标幺值）- 降低以减少功率
-    motorVars[0].lsw1Speed = 0.02;          // 低速参考值（标幺值）
+    motorVars[0].speedRef = 0.5;            // 速度参考值（标幺值）
+    motorVars[0].lsw1Speed = 0.5;           // 低速参考值（标幺值）
 
     motorVars[0].posPtr = 0;                // 位置指针初始值，用于位置轨迹控制
     motorVars[0].posPtrMax = posPtrMax;     // 位置指针最大值（对应posArray数组长度）
@@ -472,8 +364,8 @@ void main(void)
     // 电机2参数设置
     motorVars[1].IdRef_start = 0.2;        // d轴初始参考电流（标幺值）
     motorVars[1].IqRef = 0.1;               // q轴参考电流（标幺值）
-    motorVars[1].speedRef = 0.02;            // 速度参考值（标幺值）- 降低以减少功率
-    motorVars[1].lsw1Speed = 0.02;          // 低速参考值（标幺值）
+    motorVars[1].speedRef = 0.5;            // 速度参考值（标幺值）
+    motorVars[1].lsw1Speed = 0.5;           // 低速参考值（标幺值）
 
     motorVars[1].posPtr = 0;                // 位置指针初始值，用于位置轨迹控制
     motorVars[1].posPtrMax = posPtrMax;     // 位置指针最大值（对应posArray数组长度）
@@ -501,12 +393,8 @@ void main(void)
 // FLASH模式下的初始化设置
 #ifdef _FLASH
     enableFlag = true;            // 设置使能标志为真，自动启动系统
-
     flagSyncRun = true;           // 启用双电机同步运行功能
-    // 对于已显式配置自动运行的构建级别(LEVEL1/2/3/4)，避免这里覆盖为STOP
-#if (BUILDLEVEL != FCL_LEVEL1) && (BUILDLEVEL != FCL_LEVEL2) && (BUILDLEVEL != FCL_LEVEL3) && (BUILDLEVEL != FCL_LEVEL4)
-    ctrlState = CTRL_STOP;        // 初始控制状态设置为停止，避免意外启动
-#endif
+    ctrlState = CTRL_STOP;
 #endif
 
     // 等待使能标志设置
@@ -533,7 +421,6 @@ void main(void)
     // 电机2的电流反馈偏移校准（电机2未接驱动板，跳过）
     // runOffsetsCalculation(&motorVars[1]);
 
-
     // 为电机1启用中断
     HAL_enableInterrupts(halMtrHandle[MTR_1]);  // 启用电机1的中断系统
 
@@ -542,11 +429,10 @@ void main(void)
 
     // 清除闩锁标志
     // 对于LEVEL1/2/3/4自动运行调试，避免启动时触发clearTrip流程把ctrlState拉回STOP
-#if (BUILDLEVEL != FCL_LEVEL1) && (BUILDLEVEL != FCL_LEVEL2) && (BUILDLEVEL != FCL_LEVEL3) 
 
     motorVars[0].clearTripFlagDMC = 1;
     motorVars[1].clearTripFlagDMC = 1;
-#endif
+
 
     // 禁用驱动栅极（安全模式，待运行时由runMotorControl启用）
     GPIO_writePin(motorVars[0].drvEnableGateGPIO, 1);
@@ -556,6 +442,17 @@ void main(void)
     EINT;          // 启用全局中断INTM
 
     ERTM;          // 启用全局实时中断DBGM
+#if(BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2) || (BUILDLEVEL == FCL_LEVEL3) || (BUILDLEVEL == FCL_LEVEL4)
+    // =====================================================================
+    // LEVEL1/2/3/4 初始化：设置控制状态为运行
+    // =====================================================================
+    flagSyncRun = true;
+    ctrlState = CTRL_RUN;
+    runMotor = MOTOR_RUN;
+
+#endif
+
+
 
     //
     // 初始化完成
@@ -2624,7 +2521,7 @@ void runMotorControl(MOTOR_Vars_t *pMotor, HAL_MTR_Handle mtrHandle)
     }
 #endif
 
-    // 所有构建级别：TZ过流检测（init中已禁用DCAEVT1/CBC6信号源，CMPSS不会误触发）
+    // 所有构建级别：TZ过流检测（上电阶段暂时屏蔽DCAEVT1，校准后自动恢复）
     // 检查PWM过流故障
     if((EPWM_getTripZoneFlagStatus(obj->pwmHandle[0]) & EPWM_TZ_FLAG_OST) ||  // 检查U相PWM过流标志
        (EPWM_getTripZoneFlagStatus(obj->pwmHandle[1]) & EPWM_TZ_FLAG_OST) ||  // 检查V相PWM过流标志
@@ -2736,7 +2633,7 @@ void runSyncControl(void)
             motorVars[1].speedRef = speedRef;
 #endif
 
-#if(BUILDLEVEL == FCL_LEVEL3) || (BUILDLEVEL == FCL_LEVEL4)
+#if(BUILDLEVEL == FCL_LEVEL3) 
             motorVars[0].IdRef_run = IdRef;
             motorVars[1].IdRef_run = IdRef;
 

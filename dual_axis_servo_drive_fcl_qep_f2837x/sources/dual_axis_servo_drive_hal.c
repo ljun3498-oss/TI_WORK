@@ -47,6 +47,11 @@
 #include "dual_axis_servo_drive_settings.h"
 #include "dual_axis_servo_drive_hal.h"
 
+// CMPSS数字滤波参数来自主控制文件，便于在线调参
+extern uint16_t clkPrescale;
+extern uint16_t sampWin;
+extern uint16_t thresh;
+
 #include "dual_axis_servo_drive.h"
 
 #include "stdbool.h"
@@ -675,14 +680,16 @@ void HAL_setupCMPSS(HAL_MTR_Handle handle)
         // 设置采样之间的时间，最大值：1023，窗口中的采样数，
         // 最大值：31，推荐值：阈值 > 采样窗口/2
         // 初始化采样为滤波器输入值
-        CMPSS_configFilterHigh(obj->cmpssHandle[cnt], 20, 30, 18);
+        CMPSS_configFilterHigh(obj->cmpssHandle[cnt],
+                       clkPrescale, sampWin, thresh);
         CMPSS_initFilterHigh(obj->cmpssHandle[cnt]);
 
         // 数字滤波器设置 - 低侧
         // 设置采样之间的时间，最大值：1023，窗口中的采样数，
         // 最大值：31，推荐值：阈值 > 采样窗口/2
         // 初始化采样为滤波器输入值
-        CMPSS_configFilterLow(obj->cmpssHandle[cnt], 20, 30, 18);
+        CMPSS_configFilterLow(obj->cmpssHandle[cnt],
+                      clkPrescale, sampWin, thresh);
         CMPSS_initFilterLow(obj->cmpssHandle[cnt]);
 
         // 清除锁存比较器事件的状态寄存器
@@ -1402,15 +1409,12 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
         //cmpss6 - tripH或tripL
         XBAR_setEPWMMuxConfig(XBAR_TRIP4, XBAR_EPWM_MUX10_CMPSS6_CTRIPH_OR_L);
 
-        //inputxbar2触发
-        XBAR_setEPWMMuxConfig(XBAR_TRIP4, XBAR_EPWM_MUX01_INPUTXBAR1);
-
         // 首先禁用所有muxes
         XBAR_disableEPWMMux(XBAR_TRIP4, 0xFFFF);
 
-        // 启用Mux 0 或 Mux 4以生成TRIP4
+        // 仅使用CMPSS作为TRIP4源，避免外部INPUTXBAR悬空引起误触发
         XBAR_enableEPWMMux(XBAR_TRIP4, XBAR_MUX00 | XBAR_MUX04 | XBAR_MUX10 |
-                                       XBAR_MUX01);
+                           0);
     }
     else if(handle == &halMtr[MTR_2])
     {
@@ -1438,15 +1442,12 @@ void HAL_setupMotorFaultProtection(HAL_MTR_Handle handle,
         //cmpss2 - tripH或tripL
         XBAR_setEPWMMuxConfig(XBAR_TRIP5, XBAR_EPWM_MUX02_CMPSS2_CTRIPH_OR_L);
 
-        //inputxbar2触发
-        XBAR_setEPWMMuxConfig(XBAR_TRIP5, XBAR_EPWM_MUX03_INPUTXBAR2);
-
         // 首先禁用所有muxes
         XBAR_disableEPWMMux(XBAR_TRIP5, 0xFFFF);
 
-        // 启用Mux 0 或 Mux 4以生成TRIP5
+        // 仅使用CMPSS作为TRIP5源，避免外部INPUTXBAR悬空引起误触发
         XBAR_enableEPWMMux(XBAR_TRIP5, XBAR_MUX08 | XBAR_MUX08 | XBAR_MUX02 |
-                                       XBAR_MUX03);
+                           0);
     }
 
     //

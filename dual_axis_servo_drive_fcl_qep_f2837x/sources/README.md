@@ -1,110 +1,35 @@
 # 双轴伺服驱动项目文档
 
-**最后更新**: 2026-03-11
+**最后更新**: 2026-03-12
 
 ---
 
 ## 一、更改记录
 
-### 2026-03-11：电机2隔离 + 故障检测统一 + 代码合并
+### 2026-03-12：双电机场景澄清 + TZ误触发根因修复 + 日志纠偏
 
-#### 背景
+#### 1) 硬件场景确认
 
-当前硬件只有一块 BOOSTXL-3PhGaNInv 驱动板，接在电机1上。电机2没有驱动板，其 ADC 读到的母线电压和电流均为异常值，导致故障标志被持续触发，并通过 `runSyncControl()` 的双轴联锁机制连带停止了电机1。
+- 当前仅电机1接入驱动板。
+- 电机2未接驱动板，调试时不应作为联锁停机条件。
 
-#### 问题：电机2无驱动板导致电机1被连带停机
+#### 2) TZ误触发根因
 
-**现象**：电机1 `tripFlagDMC=0`（无故障），但 `runMotor=MOTOR_STOP`，电机无法运行。
+- HAL 中过热/外部故障相关 GPIO（OT_M1/OT_M2）未实际接入外部有效信号。
+- 这些外部口通过 INPUTXBAR 参与 Trip 合成时，在当前硬件条件下可能出现悬空误触发，导致 TZ 保护链被误拉起。
 
-**根因**：
-- 电机2 未接驱动板 → ADC 读到的 Vdcbus 不在 15~30V 范围 → `tripFlagDMC = 0x0002`（电压越限）
-- `runSyncControl()` 中的条件 `(motorVars[0].tripFlagDMC == 0) && (motorVars[1].tripFlagDMC == 0)` 失败
-- 两轴都被强制设为 `CTRL_STOP`，`speedRef = 0`
+#### 3) 本次有效更改（保留过流保护）
 
-**修改**（`dual_axis_servo_drive.c`）：
+- Trip 合成源改为仅使用 CMPSS 路径：
+	- M1: TRIP4 仅保留 CMPSS mux
+	- M2: TRIP5 仅保留 CMPSS mux
+- 不再启用 INPUTXBAR1/2 作为 Trip 触发源。
+- 结果：初始化阶段无需再依赖“先禁用保护”也可正常起转，同时 CMPSS 过流保护链保持可用。
 
-1. **`runSyncControl()` 故障联锁**：注释掉 `motorVars[1].tripFlagDMC == 0` 条件，仅检查电机1
-2. **`runSyncControl()` 运行判断**：仅检查 `motorVars[0].runMotor == MOTOR_RUN`，不再要求电机2
-3. **A2 任务**：注释掉 `runMotorControl(&motorVars[1], halMtrHandle[1])` 调用
-4. **偏移校准**：注释掉 `runOffsetsCalculation(&motorVars[1])` 调用
+#### 4) 日志清理说明
 
-#### 代码合并：故障检测和初始化统一
-
-在修复电机2问题的同时，将原先各构建级别（LEVEL1~4）分散的重复代码进行了合并：
-
-**Init 块合并**（原先 LEVEL1/2/3/4 各有独立 init 块，现合并为一个）：
-- 公共部分：`flagSyncRun=true`, `ctrlState=CTRL_RUN`, `runMotor=MOTOR_RUN`, `motorVars[x].ctrlState=CTRL_RUN`, 清除 tripFlagDMC/TZ/CMPSS
-- 不预设 `motorVars[x].runMotor=MOTOR_RUN`（所有级别统一，防止栅极时序问题）
-- `speedRef` 通过 `#if` 区分：LEVEL4=0.5, LEVEL1=0.1, LEVEL2/3=0.02
-- `lsw=ENC_ALIGNMENT` 仅 LEVEL3/4（使用编码器的级别）
-
-**TZ 信号源禁用块合并**（原先 LEVEL1/2/3/4 各有独立 `#if` 块）：
-- 公共部分：禁用 DCAEVT1 + CBC6 信号源，清除 TZ 标志
-- LEVEL1 额外：写 `TZCTL=0x00FF`（所有 TZ 动作设为 DISABLE）+ 清除软件强制输出
-
-**故障检测统一**（`runMotorControl()` 中）：
-- **电压监控**：所有级别启用（`#if 1`），不再按级别跳过
-- **TZ OST 过流检测**：移除 LEVEL 分支，所有级别统一走 TZ OST 检测代码
-- 注：init 中已禁用 DCAEVT1/CBC6 信号源，CMPSS 不会误触发 OST
-
-#### 当前保护状态（所有构建级别一致）
-
-| 保护类型 | 状态 | 说明 |
-|----------|------|------|
-| 母线电压范围检测 (0x0002) | 软件生效 | Vdcbus 超出 15~30V 触发 |
-| TZ OST 过流检测 (0x0001) | 软件检查生效 | 读 TZ 标志并停机 |
-| CMPSS 硬件过流信号源 | 已禁用 | init 中断开 DCAEVT1/CBC6，防止调试阶段误触发 |
-
----
-
-### 2026-03-10（下午）：FCL_LEVEL4 调试成功
-
-#### 背景
-
-FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器）。  
-按照 LEVEL1/2/3 相同的思路跳过故障检测后，**PWM 指示灯闪一下就灭**，经历三轮排查解决。
-
-#### 问题一：栅极启用时序
-
-**现象**：PWM 闪一下就灭。  
-**根因**：init 预设 `runMotor=MOTOR_RUN` → line 619 无条件禁用栅极 → `runMotorControl` 永远检测不到 `STOP→RUN` 跳变。  
-**修复**：不预设 `runMotor=MOTOR_RUN`，让 `runMotorControl` 统一负责启用栅极。
-
-#### 问题二：CMPSS 误触发锁 PWM
-
-**现象**：PWM 间歇性消失。  
-**根因**：`runMotorControl` 每 ~50μs 清 TZ 标志，但 CMPSS 信号源仍使能，两次清除之间 CMPSS 再触发 OST。  
-**修复**：init 中调用 `EPWM_disableTripZoneSignals(DCAEVT1/CBC6)` 断开信号源。
-
-#### 问题三：TZ 动作 LOW 锁死 EPWM1A（`dual_axis_servo_drive_hal.c`）
-
-**现象**：U 相上管始终无输出。  
-**根因**：`HAL_setupMotorFaultProtection` 中 LEVEL4 的 TZ 动作为 `EPWM_TZ_ACTION_LOW`，ADC 未校准时 CMPSS 误触发 OST 直接锁死。  
-**修复**：将 LEVEL4 的 TZ 动作改为 `DISABLE`（与 LEVEL1~3 一致），LEVEL5+ 再启用 LOW。
-
----
-
-### 2026-03-10（上午）：FCL_LEVEL3 调试成功
-
-- 编码器索引脉冲检测正常，电流环和速度环工作稳定
-- 恢复母线电压检测代码（之前注释掉导致 `tripFlagDMC` 电压故障位无法清除）
-- 完善 `FCL_runPICtrlWrap_M1()` 注释
-
----
-
-### 2026-03-09：FCL_LEVEL2 调试 + 代码对比
-
-- LEVEL2 电流限制从 9A 放宽到 15A（防 CMPSS 误触发）
-- 添加 LEVEL2/3 的 TripZone 禁用配置
-- 添加 LEVEL3 完整初始化代码
-
----
-
-### 2026-03-08：硬件适配 + 注释
-
-- **`dual_axis_servo_drive_hal.c`**：GPIO23 替换 GPIO99 作为 QEP1I（编码器索引引脚，匹配实际硬件）；修正 GPIO156 配置错误
-- **`dual_axis_servo_drive_user.c`**：添加 EPWM 中断等待超时保护
-- 全部源文件添加中文注释
+- 已删除此前与当前实现不一致的错误调试记录（尤其是“长期禁用 DCAEVT1/CBC6 作为最终方案”等结论）。
+- 本文档后续以本节为准。
 
 ---
 
@@ -119,12 +44,12 @@ origin 路径：`origin/origin_dual_axis_servo_drive.c`
 | **全局变量** | `enableFlag=false`, `VdTesting=0`, `VqTesting=0.10`, `speedRef=0.1` | `enableFlag=true`(自动启动), `VdTesting=0.01`, `VqTesting=0.05`, `speedRef=0.02` |
 | **LEVEL1~4 init** | 各级别分散的独立 init 块；LEVEL3 无 init 代码 | 合并为统一 init 块，speedRef 按级别区分 |
 | **runMotor 预设** | LEVEL4 init 预设 `motorVars[x].runMotor=MOTOR_RUN`（有栅极时序 bug） | 所有级别不预设，由 `runMotorControl` 检测跳变统一启用 |
-| **TZ 信号源禁用** | 仅 LEVEL1 有 TZ 禁用块 | 所有级别统一禁用 DCAEVT1/CBC6 |
+| **TZ/Trip 保护策略** | 保留外部 INPUTXBAR + CMPSS 共同参与 Trip | Trip4/Trip5 仅保留 CMPSS，移除未接外部 INPUTXBAR 源 |
 | **电压监控** | 仅 LEVEL4+ 启用 | 所有级别启用 |
 | **TZ OST 检测** | LEVEL1 写 `TZCTL` + 清标志；LEVEL2/3 仅清标志不检测 | 所有级别走 OST 检测并触发停机 |
-| **clearTripFlagDMC** | 无条件 `=1`（周期性清除） | LEVEL1~4 不设 `=1`，保留故障锁存 |
+| **clearTripFlagDMC** | 无条件 `=1`（周期性清除） | 当前版本同样在初始化置 `=1`（与 origin 一致） |
 | **_FLASH 模式** | 无条件 `ctrlState=CTRL_STOP` | LEVEL1~4 跳过，不覆盖自动运行 |
-| **LEVEL2 电流限** | 9.0A | 15.0A（防 CMPSS 误触发） |
+| **LEVEL2 电流限** | 9.0A | 当前版本为 9.0A（与 origin 一致） |
 | **电机2** | 正常参与故障联锁和控制 | 完全隔离（runSyncControl/A2 task/offset cal） |
 | **Motor2 状态变量** | 无 | 新增 `motor2_runMotor` / `motor2_ctrlState` 用于 Watch 窗口观察 |
 | **buildLevel3_M2 bug** | `getVdc(&motorVars[0])`（错误，应为 motorVars[1]） | 已修复为 `getVdc(&motorVars[1])` |
@@ -151,6 +76,15 @@ origin 路径：`origin/origin_dual_axis_servo_drive.c`
 - [ ] `M1_MAXIMUM_SCALE_VOLATGE` 从 66.3 改为 ~64.4（补偿 3% 增益 + 1.1V 偏移）
 - [ ] 电机2重新接入驱动板后，恢复双轴联锁和 motor2 控制
 - [ ] LEVEL5+ 的 CMPSS 硬件过流保护正式启用
+
+### 2.5 2026-03-12 再次对比 Origin 复核结论
+
+- 本次复核范围：`dual_axis_servo_drive.c`、`dual_axis_servo_drive_hal.c`、`dual_axis_servo_drive_user.c`、`fcl_cpu_code_dm.c` 与 origin 对应文件逐一比对。
+- 功能性差异仍集中在主流程与保护链：
+	- `dual_axis_servo_drive.c`：运行参数、电机2隔离策略、状态机/故障处理逻辑有实质改动。
+	- `dual_axis_servo_drive_hal.c`：QEP1I 引脚、TZ 动作分级策略、Trip 源配置（CMPSS-only）有实质改动。
+- `dual_axis_servo_drive_user.c` 与 `fcl_cpu_code_dm.c`：以注释、可读性和调试观测增强为主；核心 FCL 算法主链未发现与 origin 相冲突的结构性改写。
+- 结论：当前与 origin 的关键偏离点已可追溯到“单板场景 + TZ误触发规避 + 电机2隔离”三条主线。
 
 ---
 
@@ -296,6 +230,184 @@ origin 路径：`origin/origin_dual_axis_servo_drive.c`
 ### 6.3 DAC输出（可选）
 - DAC-A：旋转变压器载波激励
 - DAC-B/C：通用调试输出
+
+---
+
+## 七、系统 I/O 与 TZ 映射总表（防遗漏）
+
+### 7.1 关键输入（与控制/保护直接相关）
+
+| 类别 | 资源 | 方向 | 用途 | 所在文件/函数 |
+|------|------|------|------|---------------|
+| 编码器 M1 | GPIO20/21/23 -> EQEP1A/B/I | 输入 | 电机1位置速度反馈 | dual_axis_servo_drive_hal.c / `HAL_setupGPIOs()` |
+| 编码器 M2 | GPIO54/55/57 -> EQEP2A/B/I | 输入 | 电机2位置速度反馈 | dual_axis_servo_drive_hal.c / `HAL_setupGPIOs()` |
+| 过热输入 | GPIO24(OT_M1), GPIO14(OT_M2) | 输入 | 外部过热信号（当前硬件未接） | dual_axis_servo_drive_hal.c / `HAL_setupGPIOs()` |
+| 驱动故障输入 | GPIO19(nFault_M1), GPIO139(nFault_M2) | 输入 | 驱动器故障状态采样 | dual_axis_servo_drive_hal.c / `HAL_setupGPIOs()` |
+| 相电流采样 | CMPSS1/3/6(M1), CMPSS5/2(M2) | 模拟比较链 | 过流比较与 Trip 触发源 | dual_axis_servo_drive_hal.c / `HAL_setupMotorFaultProtection()` |
+| 母线电压/电流ADC | ADCA/B/C/D + PPB | 模拟输入 | 电流环/限幅/监控 | dual_axis_servo_drive_user.c / `initMotorParameters()` |
+
+### 7.2 关键输出（与执行/使能直接相关）
+
+| 类别 | 资源 | 方向 | 用途 | 所在文件/函数 |
+|------|------|------|------|---------------|
+| PWM M1 | GPIO0~5 -> EPWM1~3 A/B | 输出 | 电机1三相上下桥驱动 | dual_axis_servo_drive_hal.c / `HAL_setupGPIOs()` |
+| PWM M2 | GPIO6~11 -> EPWM4~6 A/B | 输出 | 电机2三相上下桥驱动 | dual_axis_servo_drive_hal.c / `HAL_setupGPIOs()` |
+| 栅极使能 | GPIO124(EN_GATE_M1), GPIO26(EN_GATE_M2) | 输出 | 驱动器使能/关闭 | dual_axis_servo_drive_hal.c / `HAL_setupGPIOs()` |
+| 调试指示 | GPIO31/34 LED, GPIO157~160 EPWM7/8 | 输出 | 心跳灯与DAC调试 | dual_axis_servo_drive_hal.c / `HAL_setupGPIOs()` |
+
+### 7.3 TZ/Trip 映射（当前生效路径）
+
+| 电机 | Trip 通道 | 生效源（已启用 Mux） | ePWM 事件路径 | 说明 |
+|------|-----------|----------------------|---------------|------|
+| M1 | TRIP4 | CMPSS1/3/6 | DCAH -> DCAEVT1 + CBC6 | 已移除外部 INPUTXBAR 触发源 |
+| M2 | TRIP5 | CMPSS5/2 | DCAH -> DCAEVT1 + CBC6 | 已移除外部 INPUTXBAR 触发源 |
+
+### 7.4 防遗漏检查清单（每次改保护都要过一遍）
+
+1. 检查 `XBAR_enableEPWMMux()` 实际使能了哪些 Mux，是否误把未接外部源并入 Trip。
+2. 检查 OT/nFault 相关 GPIO 是否真实接线；未接时必须有上拉/下拉策略，或不并入 Trip 生效链。
+3. 检查 `EPWM_enableTripZoneSignals()` 与 `EPWM_setTripZoneAction()` 组合是否符合当前 BUILDLEVEL 目标。
+4. 每次改完保护链都清标志并复测：`HAL_clearTZFlag()` + 启停测试 + 过流注入测试。
+
+---
+
+## 八、初始化流程图（含函数与文件）
+
+```mermaid
+flowchart TD
+	A[main<br/>dual_axis_servo_drive.c] --> B[Device_init<br/>dual_axis_servo_drive.c]
+	B --> C[HAL_init + HAL_MTR_init(M1/M2)<br/>dual_axis_servo_drive_hal.c]
+	C --> D[HAL_setParams<br/>dual_axis_servo_drive_hal.c]
+	D --> D1[HAL_setupCLA<br/>dual_axis_servo_drive_hal.c]
+	D1 --> D2[CLA_mapTaskVector<br/>dual_axis_servo_drive_hal.c]
+	D2 --> D3[CLA_setTriggerSource<br/>dual_axis_servo_drive_hal.c]
+	D3 --> E[HAL_setMotorParams(M1/M2)<br/>dual_axis_servo_drive_hal.c]
+	E --> E1[HAL_setupMotorPWMs<br/>dual_axis_servo_drive_hal.c]
+	E1 --> E2[HAL_setupCMPSS<br/>dual_axis_servo_drive_hal.c]
+	E2 --> E3[HAL_setupQEP<br/>dual_axis_servo_drive_hal.c]
+	E3 --> F[initMotorParameters(M1/M2)<br/>dual_axis_servo_drive_user.c]
+	F --> F1[FCL_initPWM + FCL_initADC_3I<br/>fcl_cpu_code_dm.c]
+	F1 --> F2[FCL_initQEP<br/>fcl_cpu_code_dm.c]
+	F2 --> G[initControlVars + resetControlVars<br/>dual_axis_servo_drive_user.c]
+	G --> G1[PI控制器参数初始化<br/>dual_axis_servo_drive_user.c]
+	G1 --> H[HAL_setupMotorFaultProtection(M1/M2)<br/>dual_axis_servo_drive_hal.c]
+	H --> H1[CMPSS过流保护配置<br/>dual_axis_servo_drive_hal.c]
+	H1 --> I[HAL_clearTZFlag(M1/M2)<br/>dual_axis_servo_drive_hal.c]
+	I --> J[HAL_setupInterrupts<br/>dual_axis_servo_drive_hal.c]
+	J --> J1[EPWM中断配置<br/>dual_axis_servo_drive_hal.c]
+	J1 --> K[runOffsetsCalculation(M1)<br/>dual_axis_servo_drive_user.c]
+	K --> L[HAL_enableInterrupts<br/>dual_axis_servo_drive_hal.c]
+	L --> M[设置clearTripFlagDMC=1<br/>dual_axis_servo_drive.c]
+	M --> N[GPIO_writePin禁用栅极<br/>dual_axis_servo_drive.c]
+	N --> O[EINT/ERTM<br/>dual_axis_servo_drive.c]
+	O --> P[LEVEL1/2/3/4初始化<br/>dual_axis_servo_drive.c]
+	P --> Q[进入for(;;)循环<br/>dual_axis_servo_drive.c]
+	Q --> R[Alpha_State_Ptr调度 A0/B0/C0<br/>dual_axis_servo_drive.c]
+```
+
+---
+
+## 九、控制流程图（FCL 工作流，含函数与文件）
+
+### 9.1 快环中断流程（50μs周期）
+
+```mermaid
+flowchart TD
+	A[EPWM1计数器归零<br/>TBCTR=0] --> B[EPWM1INT触发<br/>dual_axis_servo_drive_hal.c]
+	B --> C[CLA Task1自动触发<br/>fcl_cla_code_dm.cla]
+	C --> C1[QEP角度计算<br/>Cla1Task1]
+	C1 --> D[motor1ControlISR<br/>dual_axis_servo_drive.c]
+	D --> E[按BUILDLEVEL进入<br/>buildLevel1/2/3/46/5_M1]
+	E --> F{FCL控制类型}
+	F -->|PI| G[FCL_runPICtrl_M1<br/>fcl_cpu_code_dm.c]
+	F -->|Complex| H[FCL_runComplexCtrl_M1<br/>fcl_cpu_code_dm.c]
+	G --> G1[FCL_CLARKE变换<br/>fcl_cpu_code_dm.c]
+	G1 --> G2[FCL_PARK变换<br/>fcl_cpu_code_dm.c]
+	G2 --> G3[Cla1ForceTask2<br/>fcl_cpu_code_dm.c]
+	G3 --> G4[Iq PI控制<br/>Cla1Task2]
+	G4 --> G5[Cla1ForceTask4<br/>fcl_cpu_code_dm.c]
+	G5 --> G6[QEP标志管理<br/>Cla1Task4]
+	H --> H1[FCL_CLARKE变换<br/>fcl_cpu_code_dm.c]
+	H1 --> H2[FCL_PARK变换<br/>fcl_cpu_code_dm.c]
+	H2 --> H3[Cla1ForceTask3<br/>fcl_cpu_code_dm.c]
+	H3 --> H4[Iq复杂控制<br/>Cla1Task3]
+	H4 --> H5[Cla1ForceTask4<br/>fcl_cpu_code_dm.c]
+	H5 --> H6[QEP标志管理<br/>Cla1Task4]
+	G6 --> I[FCL_runPICtrlWrap_M1<br/>fcl_cpu_code_dm.c]
+	H6 --> J[FCL_runComplexCtrlWrap_M1<br/>fcl_cpu_code_dm.c]
+	I --> K[FCL_inversePark<br/>fcl_cpu_code_dm.c]
+	J --> K
+	K --> L[SVGEN_DQ<br/>dual_axis_servo_drive.c]
+	L --> M[PWM占空比更新<br/>dual_axis_servo_drive.c]
+	M --> N[HAL_ackInt_M1<br/>dual_axis_servo_drive.c]
+	N --> O[isrTicker++<br/>dual_axis_servo_drive.c]
+```
+
+### 9.2 QEP角度计算流程（CLA后台自动执行）
+
+```mermaid
+flowchart TD
+	A[EPWM1INT触发] --> B[CLA Task1执行<br/>Cla1Task1]
+	B --> C{lsw状态}
+	C -->|ENC_CALIBRATION_DONE| D[从QPOSLAT读机械角<br/>fcl_cla_code_dm.cla]
+	D --> E[计算电角度<br/>ElecTheta=PolePairs*MechTheta]
+	C -->|ENC_WAIT_FOR_INDEX| F[检测索引脉冲<br/>QFLG.IEL]
+	F --> G[更新QPOSINIT<br/>fcl_cla_code_dm.cla]
+	G --> H[设置lsw=CALIBRATION_DONE]
+	C -->|ENC_ALIGNMENT| I[复位QPOSCNT=0<br/>fcl_cla_code_dm.cla]
+	I --> J[清除IEL标志]
+	E --> K[等待FCL_runQEPWrap_M1<br/>fcl_cla_dm.h]
+	H --> K
+	J --> K
+	K --> L[等待Task1完成<br/>poll INT11.1]
+	L --> M[强制Task4<br/>Cla1ForceTask4]
+	M --> N[等待Task4完成<br/>poll INT11.4]
+	N --> O[清除INT11.1/11.4标志]
+```
+
+### 9.3 慢环状态机流程（主循环）
+
+```mermaid
+flowchart TD
+	A[主循环for(;;)] --> B[Alpha_State_Ptr调度<br/>dual_axis_servo_drive.c]
+	B --> C[A0: 50μs周期]
+	B --> D[B0: 100μs周期]
+	B --> E[C0: 150μs周期]
+	
+	C --> C1[A1: 电机1电流环<br/>50μs周期]
+	C --> C2[A2: 电机2电流环<br/>50μs周期]
+	C --> C3[A3: 系统状态管理]
+	
+	D --> D1[B1: 电机1速度环<br/>100μs周期]
+	D --> D2[B2: 电机2速度环<br/>100μs周期]
+	D --> D3[B3: 故障检测处理]
+	
+	E --> E1[C1: 电机1位置环<br/>150μs周期]
+	E --> E2[C2: 电机2位置环<br/>150μs周期]
+	E --> E3[C3: 通信与监控]
+	
+	C1 --> F[与ISR快环并行]
+	C2 --> F
+	D1 --> F
+	D2 --> F
+	E1 --> F
+	E2 --> F
+```
+
+### 9.4 CLA任务分配表
+
+| 任务 | 电机 | 触发源 | 功能 | 执行周期 |
+|------|------|--------|------|----------|
+| **Task1** | M1 | EPWM1INT自动触发 | QEP角度计算 | 50μs |
+| **Task2** | M1 | CPU强制触发(Cla1ForceTask2) | Iq PI控制 | 50μs |
+| **Task3** | M1 | CPU强制触发(Cla1ForceTask3) | Iq复杂控制 | 50μs |
+| **Task4** | M1 | CPU强制触发(Cla1ForceTask4) | QEP标志管理 | 50μs |
+| **Task5** | M2 | EPWM4INT自动触发 | QEP角度计算 | 50μs |
+| **Task6** | M2 | CPU强制触发(Cla1ForceTask6) | Iq PI控制 | 50μs |
+| **Task7** | M2 | CPU强制触发(Cla1ForceTask7) | Iq复杂控制 | 50μs |
+| **Task8** | M2 | CPU强制触发(Cla1ForceTask8) | QEP标志管理 | 50μs |
+
+> 说明：电机2路径与电机1同构，对应函数为 `motor2ControlISR`、`buildLevel*_M2`、`FCL_run*_*_M2`、`Cla1ForceTask5/6/7/8`。
 
 ---
 
