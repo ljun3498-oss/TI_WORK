@@ -1,317 +1,160 @@
 # 双轴伺服驱动项目文档
 
-**最后更新**: 2026-03-10
+**最后更新**: 2026-03-11
 
 ---
 
-## 一、今日更改记录
+## 一、更改记录
 
-### 2026-03-10（下午）：FCL_LEVEL4 调试成功，速度环闭环运行
+### 2026-03-11：电机2隔离 + 故障检测统一 + 代码合并
 
 #### 背景
 
-FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器），是从开环调试迈向完整闭环控制的关键一步。  
-按照 LEVEL1/2/3 相同的思路跳过故障检测后，**PWM 指示灯闪一下就灭，电机无任何输出**，经历了以下三轮排查才彻底解决。
+当前硬件只有一块 BOOSTXL-3PhGaNInv 驱动板，接在电机1上。电机2没有驱动板，其 ADC 读到的母线电压和电流均为异常值，导致故障标志被持续触发，并通过 `runSyncControl()` 的双轴联锁机制连带停止了电机1。
+
+#### 问题：电机2无驱动板导致电机1被连带停机
+
+**现象**：电机1 `tripFlagDMC=0`（无故障），但 `runMotor=MOTOR_STOP`，电机无法运行。
+
+**根因**：
+- 电机2 未接驱动板 → ADC 读到的 Vdcbus 不在 15~30V 范围 → `tripFlagDMC = 0x0002`（电压越限）
+- `runSyncControl()` 中的条件 `(motorVars[0].tripFlagDMC == 0) && (motorVars[1].tripFlagDMC == 0)` 失败
+- 两轴都被强制设为 `CTRL_STOP`，`speedRef = 0`
+
+**修改**（`dual_axis_servo_drive.c`）：
+
+1. **`runSyncControl()` 故障联锁**：注释掉 `motorVars[1].tripFlagDMC == 0` 条件，仅检查电机1
+2. **`runSyncControl()` 运行判断**：仅检查 `motorVars[0].runMotor == MOTOR_RUN`，不再要求电机2
+3. **A2 任务**：注释掉 `runMotorControl(&motorVars[1], halMtrHandle[1])` 调用
+4. **偏移校准**：注释掉 `runOffsetsCalculation(&motorVars[1])` 调用
+
+#### 代码合并：故障检测和初始化统一
+
+在修复电机2问题的同时，将原先各构建级别（LEVEL1~4）分散的重复代码进行了合并：
+
+**Init 块合并**（原先 LEVEL1/2/3/4 各有独立 init 块，现合并为一个）：
+- 公共部分：`flagSyncRun=true`, `ctrlState=CTRL_RUN`, `runMotor=MOTOR_RUN`, `motorVars[x].ctrlState=CTRL_RUN`, 清除 tripFlagDMC/TZ/CMPSS
+- 不预设 `motorVars[x].runMotor=MOTOR_RUN`（所有级别统一，防止栅极时序问题）
+- `speedRef` 通过 `#if` 区分：LEVEL4=0.5, LEVEL1=0.1, LEVEL2/3=0.02
+- `lsw=ENC_ALIGNMENT` 仅 LEVEL3/4（使用编码器的级别）
+
+**TZ 信号源禁用块合并**（原先 LEVEL1/2/3/4 各有独立 `#if` 块）：
+- 公共部分：禁用 DCAEVT1 + CBC6 信号源，清除 TZ 标志
+- LEVEL1 额外：写 `TZCTL=0x00FF`（所有 TZ 动作设为 DISABLE）+ 清除软件强制输出
+
+**故障检测统一**（`runMotorControl()` 中）：
+- **电压监控**：所有级别启用（`#if 1`），不再按级别跳过
+- **TZ OST 过流检测**：移除 LEVEL 分支，所有级别统一走 TZ OST 检测代码
+- 注：init 中已禁用 DCAEVT1/CBC6 信号源，CMPSS 不会误触发 OST
+
+#### 当前保护状态（所有构建级别一致）
+
+| 保护类型 | 状态 | 说明 |
+|----------|------|------|
+| 母线电压范围检测 (0x0002) | 软件生效 | Vdcbus 超出 15~30V 触发 |
+| TZ OST 过流检测 (0x0001) | 软件检查生效 | 读 TZ 标志并停机 |
+| CMPSS 硬件过流信号源 | 已禁用 | init 中断开 DCAEVT1/CBC6，防止调试阶段误触发 |
 
 ---
 
-#### 问题一：栅极"闪一下"后被禁用（`dual_axis_servo_drive.c`）
+### 2026-03-10（下午）：FCL_LEVEL4 调试成功
 
-**现象**：PWM 指示灯上电后瞬间闪一下，然后 GPIO0（EPWM1A，U 相上桥臂）无输出。
+#### 背景
 
-**根因**：LEVEL4 init 块中提前设置了 `motorVars[0/1].runMotor = MOTOR_RUN`，同时末尾调用 `GPIO_writePin(drvEnableGateGPIO, 0)` 显式启用了驱动栅极。但之后 **line 619** 无条件执行 `GPIO_writePin(drvEnableGateGPIO, 1)` 将栅极**重新禁用**。`runMotorControl` 中重新启用栅极的逻辑依赖检测到 `runMotor` 从 `MOTOR_STOP` 跳变为 `MOTOR_RUN`，由于 LEVEL4 init 已把 `runMotor` 预设为 `MOTOR_RUN`，这个跳变永远不会再发生，驱动栅极因此永远保持禁用。
+FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器）。  
+按照 LEVEL1/2/3 相同的思路跳过故障检测后，**PWM 指示灯闪一下就灭**，经历三轮排查解决。
 
-**修复**（`dual_axis_servo_drive.c`，LEVEL4 init 块）：
-- 移除 `motorVars[0/1].runMotor = MOTOR_RUN` 的预置，只保留 `ctrlState = CTRL_RUN`
-- 移除 LEVEL4 init 末尾的 `GPIO_writePin(drvEnableGateGPIO, 0)` 显式栅极启用
-- 让 `runMotorControl` 在主循环第一次执行时检测到 `MOTOR_STOP→MOTOR_RUN` 的转换，由它统一负责启用栅极（时序在 line 619 禁用之后）
+#### 问题一：栅极启用时序
 
----
+**现象**：PWM 闪一下就灭。  
+**根因**：init 预设 `runMotor=MOTOR_RUN` → line 619 无条件禁用栅极 → `runMotorControl` 永远检测不到 `STOP→RUN` 跳变。  
+**修复**：不预设 `runMotor=MOTOR_RUN`，让 `runMotorControl` 统一负责启用栅极。
 
-#### 问题二：CMPSS 持续误触发重锁 PWM（`dual_axis_servo_drive.c`）
+#### 问题二：CMPSS 误触发锁 PWM
 
-**现象**：栅极问题修复后，PWM 仍然间歇性消失。
+**现象**：PWM 间歇性消失。  
+**根因**：`runMotorControl` 每 ~50μs 清 TZ 标志，但 CMPSS 信号源仍使能，两次清除之间 CMPSS 再触发 OST。  
+**修复**：init 中调用 `EPWM_disableTripZoneSignals(DCAEVT1/CBC6)` 断开信号源。
 
-**根因**：`runMotorControl` 每 ~50 μs（A1 任务周期）清除一次 TripZone 标志，但 CMPSS 的 DCAEVT1/CBC 信号源仍然使能，在两次清除之间 CMPSS 会再次触发 OST，将 PWM 锁定。
+#### 问题三：TZ 动作 LOW 锁死 EPWM1A（`dual_axis_servo_drive_hal.c`）
 
-**修复**（`dual_axis_servo_drive.c`，main 初始化段，参考 LEVEL2 的成功做法）：
-- 在 `#if(BUILDLEVEL == FCL_LEVEL4)` 块中调用 `EPWM_disableTripZoneSignals(DCAEVT1)` 和 `EPWM_disableTripZoneSignals(CBC6)`，将两路 Trip 信号源彻底断开，根除 CMPSS 在调试阶段的误触发来源
-
----
-
-#### 问题三：TZ 动作配置为 LOW 导致首次 OST 直接锁死 EPWM1A（`dual_axis_servo_drive_hal.c`）
-
-**现象**：即使问题一和二都修复后，上电后 GPIO0（EPWM1A，U 相上桥臂）一直为低，其他五路 PWM 正常，表现为 "U 相上管没有输出"。
-
-**根因**：`HAL_setupMotorFaultProtection` 函数中，LEVEL1~LEVEL3 的 TripZone 动作设置为 `DISABLE`（trip 发生时不强制输出），而 LEVEL4（被归入 `#else` 分支）设置为 `EPWM_TZ_ACTION_LOW`。ADC 偏移校准运行之前，CMPSS 比较器输出基于未校准的 ADC 基准，极易误触发 OST 锁存。一旦 OST 锁存置位且 TZ 动作为 LOW，**EPWM1A 被立即强制拉低并锁死**，后续再清 TripZone 标志也无法恢复，因为在 CMPSS 输出仍有效期间 `clearTripZoneFlag` 对 OST 无效。
-
-**修复**（`dual_axis_servo_drive_hal.c`，`HAL_setupMotorFaultProtection`）：
-- `#if` 条件从 `(LEVEL1 || LEVEL2 || LEVEL3)` 扩展为 `(LEVEL1 || LEVEL2 || LEVEL3 || LEVEL4)`
-- LEVEL4 的 TZA/TZB/DCAEVT1/DCAEVT2 动作全部设置为 `DISABLE`，与前三个级别保持一致
-- 原 `#else` 分支改为从 LEVEL5 开始生效，LEVEL5+ 正式启用 `EPWM_TZ_ACTION_LOW` 硬件过流保护
+**现象**：U 相上管始终无输出。  
+**根因**：`HAL_setupMotorFaultProtection` 中 LEVEL4 的 TZ 动作为 `EPWM_TZ_ACTION_LOW`，ADC 未校准时 CMPSS 误触发 OST 直接锁死。  
+**修复**：将 LEVEL4 的 TZ 动作改为 `DISABLE`（与 LEVEL1~3 一致），LEVEL5+ 再启用 LOW。
 
 ---
 
-#### 修改文件汇总
+### 2026-03-10（上午）：FCL_LEVEL3 调试成功
 
-| 文件 | 修改位置 | 问题编号 |
-|------|----------|----------|
-| `sources/dual_axis_servo_drive.c` | LEVEL4 init 块（约 370 行） | 问题一 |
-| `sources/dual_axis_servo_drive.c` | `#if(BUILDLEVEL == FCL_LEVEL4)` TZ 禁用块（约 460 行） | 问题二 |
-| `sources/dual_axis_servo_drive_hal.c` | `HAL_setupMotorFaultProtection` TZ 动作条件（约 1491 行） | 问题三 |
-
-#### 当前状态
-
-- **构建级别**：FCL_LEVEL4（速度闭环 + 电流闭环）
-- **控制模式**：PI_CNTLR（PI 控制器）
-- **编码器**：QEP，自动寻找索引脉冲，校准后闭合速度环
-- **电机状态**：双轴正常运行，可响应 `speedRef` 速度指令
+- 编码器索引脉冲检测正常，电流环和速度环工作稳定
+- 恢复母线电压检测代码（之前注释掉导致 `tripFlagDMC` 电压故障位无法清除）
+- 完善 `FCL_runPICtrlWrap_M1()` 注释
 
 ---
 
-### 2026-03-10（上午）：FCL_LEVEL3 调试成功，电机正常运行
+### 2026-03-09：FCL_LEVEL2 调试 + 代码对比
 
-- **主要成果**：
-  - FCL_LEVEL3 构建级别调试成功，电机能够正常旋转
-  - 编码器索引脉冲检测正常，位置反馈准确
-  - 电流环和速度环工作稳定
-
-- **关键修复**：
-  1. **电压检测代码恢复**：
-     - 文件：`dual_axis_servo_drive.c` 第2621-2633行
-     - 问题：之前注释掉了母线电压检测代码，导致 `tripFlagDMC` 电压故障位无法清除
-     - 修复：恢复 `#if(BUILDLEVEL != FCL_LEVEL1) && ...` 条件编译块，确保电压监控正常工作
-
-  2. **FCL函数注释完善**：
-     - 文件：`fcl_cpu_code_dm.c` 第545-552行
-     - 添加 `FCL_runPICtrlWrap_M1()` 详细功能说明，包括：
-       - 触发CLA Task4处理QEP编码器标志
-       - 根据实时母线电压更新PI控制器增益
-       - 计算反电动势前馈补偿
-       - 更新电流反馈值到用户可见变量
-       - 同步CPU与CLA状态，清除中断标志
-
-  3. **FCL调用处注释完善**：
-     - 文件：`dual_axis_servo_drive.c` 第1349-1355行
-     - 添加 `FCL_runPICtrlWrap_M1()` 调用处的详细说明
-     - 说明与 `FCL_runPICtrl_M1()` 的配合关系
-
-- **技术理解深化**：
-  - 理解了 `FCL_runPICtrl_M1()` 和 `FCL_runPICtrlWrap_M1()` 的分工协作关系
-  - 掌握了 CLA Task1/Task2/Task4 的任务分配：
-    - Task1：QEP位置计算（电机1）
-    - Task2：PI控制器Q轴计算（电机1）
-    - Task4：QEP标志处理和低速计算（电机1）
-  - 理解了编码器自动找索引流程：
-    - ENC_ALIGNMENT：施加直流电流锁定转子
-    - ENC_WAIT_FOR_INDEX：自动旋转寻找索引脉冲
-    - ENC_CALIBRATION_DONE：校准完成，正常运行
-
-- **当前状态**：
-  - 构建级别：FCL_LEVEL3（电流环+速度环控制）
-  - 控制模式：PI_CNTLR（PI控制器）
-  - 电机状态：正常运行，可响应速度指令
+- LEVEL2 电流限制从 9A 放宽到 15A（防 CMPSS 误触发）
+- 添加 LEVEL2/3 的 TripZone 禁用配置
+- 添加 LEVEL3 完整初始化代码
 
 ---
 
-### 2026-03-09：与原始文件 `origin_dual_axis_servo_drive.c` 详细对比
+### 2026-03-08：硬件适配 + 注释
 
-- **对比文件路径**：
-  - 修改后：`c:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f2837x\sources\dual_axis_servo_drive.c`
-  - 原始版：`c:\Users\JUNLI\workspace_ccstheia\origin\origin_dual_axis_servo_drive.c`
-
-- **主要差异点**：
-
-  1. **FCL_LEVEL3 初始化代码**：
-     - 原始版：完全缺少 FCL_LEVEL3 的初始化代码块
-     - 修改版：新增 FCL_LEVEL3 初始化代码，显式设置 `flagSyncRun=true`、`ctrlState=CTRL_RUN`、双电机 `runMotor/ctrlState` 为运行态
-
-  2. **TripZone 配置**：
-     - 原始版：缺少 FCL_LEVEL3 的 TripZone 配置
-     - 修改版：为 FCL_LEVEL3 添加完整的 TripZone 禁用配置，包括禁用信号源、设置动作为 DISABLE、清除标志
-
-  3. **全局变量调整**：
-     - `enableFlag`：由 `false` 改为 `true`，实现自动启动
-     - `VdTesting`：由 `0.0` 改为 `0.01`，降低功率
-     - `VqTesting`：由 `0.10` 改为 `0.05`，降低功率
-     - `speedRef`：由 `0.1` 改为 `0.02`，降低启动速度
-
-  4. **IdRef_start 调整**：
-     - 原始版：`0.2`（标幺值）
-     - 修改版：保留 `0.2`，但在运行时使用 `0.05` 降低功率
-
-  5. **中文注释添加**：
-     - 原始版：英文注释
-     - 修改版：大量添加中文注释，包括函数说明、参数解释、流程说明等
-
-  6. **状态机函数注释**：
-     - 原始版：无详细注释
-     - 修改版：为状态机函数添加详细的中文注释，包括功能描述、参数说明、返回值等
-
-  7. **构建级别处理**：
-     - 原始版：仅处理 FCL_LEVEL1 和 FCL_LEVEL2
-     - 修改版：完善 FCL_LEVEL3 的处理，包括初始化、TripZone 配置、运行状态管理
-
-  8. **_FLASH 模式初始化逻辑**：
-     - 原始版：无条件设置 `ctrlState = CTRL_STOP`
-     - 修改版：仅在非 FCL_LEVEL1/2/3 下才设置 `ctrlState = CTRL_STOP`，避免覆盖自动运行配置
-
-  9. **clearTripFlagDMC 设置逻辑**：
-     - 原始版：无条件设置 `clearTripFlagDMC = 1`
-     - 修改版：仅在非 FCL_LEVEL1/2/3 下才设置，避免启动时触发清故障流程
-
-  10. **FCL_LEVEL2 TripZone 配置**：
-      - 原始版：缺少 FCL_LEVEL2 的 TripZone 配置
-      - 修改版：为 FCL_LEVEL2 添加 TripZone 禁用配置，与 FCL_LEVEL1 保持一致
-
-  11. **FCL_LEVEL2 电流限制调整**：
-      - 原始版：电流限制为 9.0A
-      - 修改版：临时放宽到 15.0A，避免 CMPSS 误触发
-
-  12. **FCL_LEVEL2 buildLevel2 函数修改**：
-      - 原始版：缺少 `else` 分支处理 `ENC_WAIT_FOR_INDEX` 状态
-      - 修改版：添加 `else` 分支，在该状态下保持电压设置
-
-  13. **FCL_LEVEL3 buildLevel3 函数修改**：
-      - 原始版：电机2 在 `ENC_ALIGNMENT` 状态下设置 `motorVars[1].state` 标志
-      - 修改版：移除了 `motorVars[1].state` 标志设置，简化逻辑
-
-  14. **DAC 宏定义**：
-      - 原始版：`#define  DAC_MACRO_PU(A)  ((1.0f + A) * 2048)`
-      - 修改版：添加 `#define DACOUT_EN 1` 宏定义
-
-  15. **函数原型注释**：
-      - 原始版：简单的英文注释
-      - 修改版：详细的中文注释，说明函数功能
-
-  16. **变量注释**：
-      - 原始版：简单的英文注释
-      - 修改版：详细的中文注释，说明变量用途
-
-  17. **SFRA 注释**：
-      - 原始版：英文注释
-      - 修改版：详细的中文注释，说明 SFRA 功能
-
-  18. **状态机函数注释**：
-      - 原始版：无详细注释
-      - 修改版：为每个状态机函数添加详细的中文注释，包括功能描述、参数说明、返回值等
-
-  19. **构建级别注释**：
-      - 原始版：英文注释
-      - 修改版：详细的中文注释，说明每个构建级别的功能
-
-  20. **函数内部注释**：
-      - 原始版：简单的英文注释
-      - 修改版：详细的中文注释，说明每个代码块的功能
-
-- **功能相关改动（影响运行行为）**：
-  1. **FCL_LEVEL3 启动流程**：添加完整的初始化代码，确保电机能够进入运行状态
-  2. **功率优化**：降低 `VdTesting`、`VqTesting` 和 `speedRef`，减少启动功率
-  3. **TripZone 保护**：为 FCL_LEVEL3 添加与 FCL_LEVEL1/2 一致的 TripZone 配置，避免误触发
-  4. **自动启动**：设置 `enableFlag=true`，实现系统自动启动
-  5. **状态管理优化**：优化 `_FLASH` 模式下的初始化逻辑，避免覆盖自动运行配置
-  6. **故障处理优化**：优化 `clearTripFlagDMC` 设置逻辑，避免启动时触发清故障流程
-
-- **非功能改动（可读性/维护性）**：
-  1. **中文注释**：将英文注释改为中文，并补充详细说明
-  2. **函数文档**：为关键函数添加详细的函数文档，包括功能、参数、返回值等
-  3. **代码结构**：优化代码结构，提高可读性
-  4. **注释完整性**：为所有函数、变量、代码块添加详细的中文注释
-
-- **修复的问题**：
-  1. **编码器不计数**：通过添加 FCL_LEVEL3 初始化代码，解决编码器 QPOSCNT 停止计数的问题
-  2. **TripZone 故障**：通过禁用 TripZone 信号源和设置动作为 DISABLE，解决 TripZone 故障问题
-  3. **runMotor 保持 STOP**：通过同时设置全局和 per-motor 的 `runMotor` 和 `ctrlState`，解决状态被覆盖的问题
-  4. **功率过高**：通过降低电压和速度参考值，解决启动功率过高的问题
-  5. **FCL_LEVEL3 无法启动**：通过添加完整的初始化代码，解决 FCL_LEVEL3 无法进入运行状态的问题
-  6. **状态被覆盖**：通过优化 `_FLASH` 模式下的初始化逻辑，避免自动运行配置被覆盖
-
-- **代码统计**：
-  - 总行数变化：约 1166 行新增，904 行删除
-  - 主要增加：中文注释、FCL_LEVEL3 初始化代码、TripZone 配置
-  - 主要删除：英文注释、冗余代码
-
-- **总结**：
-  本次修改主要针对 FCL_LEVEL3 的启动问题和功率优化，通过添加完整的初始化代码、优化 TripZone 配置、降低电压和速度参考值，成功解决了编码器不计数、TripZone 故障、runMotor 保持 STOP、功率过高等问题。同时，通过添加详细的中文注释，提高了代码的可读性和可维护性。
-
-### 2026-03-08：与原始文件 `origin_dual_axis_servo_drive_user.c` 对比
-
-- **对比文件路径**：
-  - 修改后：`c:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f2837x\sources\dual_axis_servo_drive_user.c`
-  - 原始版：`c:\Users\JUNLI\workspace_ccstheia\origin\origin_dual_axis_servo_drive_user.c`
-
-- **主要差异点**：
-
-  1. **全局变量注释改进**：
-     - 原始版：简单的英文注释
-     - 修改版：添加详细的中文注释，使用 Doxygen 风格的函数文档
-
-  2. **函数注释改进**：
-     - 原始版：简单的英文注释
-     - 修改版：为所有主要函数添加详细的中文注释，包括功能描述、参数说明、返回值说明
-
-  3. **代码内注释改进**：
-     - 原始版：简单的英文注释
-     - 修改版：为所有代码行添加详细的中文注释
-
-  4. **EPWM 中断等待超时保护**：
-     - 原始版：无超时保护，可能死循环
-     - 修改版：添加超时机制，防止死循环
-
-- **功能相关改动（影响运行行为）**：
-  1. **EPWM 中断等待超时保护**：添加超时机制，防止死循环
-
-- **非功能改动（可读性/维护性）**：
-  1. **中文注释**：将英文注释改为中文，并补充详细说明
-  2. **函数文档**：为关键函数添加详细的函数文档，包括功能、参数、返回值等
-  3. **注释完整性**：为所有函数、变量、代码块添加详细的中文注释
-
-- **总结**：
-  本次修改主要针对代码可读性和可维护性的改进，添加了详细的中文注释和函数文档。同时，为 EPWM 中断等待添加了超时保护机制，提高了系统的可靠性。
-
-### 2026-03-08：与原始文件 `origin_dual_axis_servo_drive_hal.c` 对比
-
-- **对比文件路径**：
-  - 修改后：`c:\Users\JUNLI\workspace_ccstheia\dual_axis_servo_drive_fcl_qep_f2837x\sources\dual_axis_servo_drive_hal.c`
-  - 原始版：`c:\Users\JUNLI\workspace_ccstheia\origin\origin_dual_axis_servo_drive_hal.c`
-
-- **主要差异点**：
-
-  1. **全局变量注释改进**：
-     - 原始版：简单的英文注释
-     - 修改版：添加详细的中文注释，说明变量的用途和含义
-
-  2. **函数注释改进**：
-     - 原始版：简单的英文注释
-     - 修改版：为所有主要函数添加详细的中文注释，包括功能描述、参数说明、返回值说明，使用 Doxygen 风格
-
-  3. **代码内注释改进**：
-     - 原始版：简单的英文注释
-     - 修改版：为所有代码行添加详细的中文注释，说明每个步骤的功能
-
-  4. **GPIO23 编码器索引引脚配置**：
-     - 原始版：使用 GPIO99 作为 QEP1I（电机1的编码器索引相）
-     - 修改版：改为 GPIO23 作为 QEP1I，与实际硬件连接一致
-
-  5. **GPIO156 配置修正**：
-     - 原始版：GPIO156 的配置错误，使用了 GPIO139 的配置
-     - 修改版：修正为正确的 GPIO156 配置
-
-- **功能相关改动（影响运行行为）**：
-  1. **GPIO23 编码器索引引脚**：将电机1的编码器索引引脚从 GPIO99 改为 GPIO23，确保与硬件连接一致
-  2. **GPIO156 配置修正**：修正 GPIO156 的配置错误，避免引脚冲突
-
-- **非功能改动（可读性/维护性）**：
-  1. **中文注释**：将英文注释改为中文，并补充详细说明
-  2. **函数文档**：为关键函数添加详细的函数文档，包括功能、参数、返回值等
-  3. **注释完整性**：为所有函数、变量、代码块添加详细的中文注释
-
-- **总结**：
-  本次修改主要针对代码可读性和可维护性的改进，添加了详细的中文注释和函数文档。同时，修正了 GPIO23（编码器索引引脚）和 GPIO156 的配置，确保与实际硬件连接一致。
+- **`dual_axis_servo_drive_hal.c`**：GPIO23 替换 GPIO99 作为 QEP1I（编码器索引引脚，匹配实际硬件）；修正 GPIO156 配置错误
+- **`dual_axis_servo_drive_user.c`**：添加 EPWM 中断等待超时保护
+- 全部源文件添加中文注释
 
 ---
 
-## 二、Sources文件夹文件说明
+## 二、与 Origin 版本差异总结
+
+origin 路径：`origin/origin_dual_axis_servo_drive.c`
+
+### 2.1 dual_axis_servo_drive.c 功能差异
+
+| 类别 | Origin | 当前版本 |
+|------|--------|----------|
+| **全局变量** | `enableFlag=false`, `VdTesting=0`, `VqTesting=0.10`, `speedRef=0.1` | `enableFlag=true`(自动启动), `VdTesting=0.01`, `VqTesting=0.05`, `speedRef=0.02` |
+| **LEVEL1~4 init** | 各级别分散的独立 init 块；LEVEL3 无 init 代码 | 合并为统一 init 块，speedRef 按级别区分 |
+| **runMotor 预设** | LEVEL4 init 预设 `motorVars[x].runMotor=MOTOR_RUN`（有栅极时序 bug） | 所有级别不预设，由 `runMotorControl` 检测跳变统一启用 |
+| **TZ 信号源禁用** | 仅 LEVEL1 有 TZ 禁用块 | 所有级别统一禁用 DCAEVT1/CBC6 |
+| **电压监控** | 仅 LEVEL4+ 启用 | 所有级别启用 |
+| **TZ OST 检测** | LEVEL1 写 `TZCTL` + 清标志；LEVEL2/3 仅清标志不检测 | 所有级别走 OST 检测并触发停机 |
+| **clearTripFlagDMC** | 无条件 `=1`（周期性清除） | LEVEL1~4 不设 `=1`，保留故障锁存 |
+| **_FLASH 模式** | 无条件 `ctrlState=CTRL_STOP` | LEVEL1~4 跳过，不覆盖自动运行 |
+| **LEVEL2 电流限** | 9.0A | 15.0A（防 CMPSS 误触发） |
+| **电机2** | 正常参与故障联锁和控制 | 完全隔离（runSyncControl/A2 task/offset cal） |
+| **Motor2 状态变量** | 无 | 新增 `motor2_runMotor` / `motor2_ctrlState` 用于 Watch 窗口观察 |
+| **buildLevel3_M2 bug** | `getVdc(&motorVars[0])`（错误，应为 motorVars[1]） | 已修复为 `getVdc(&motorVars[1])` |
+| **中文注释** | 无 | 全文添加详细中文注释 |
+
+### 2.2 dual_axis_servo_drive_hal.c 功能差异
+
+| 类别 | Origin | 当前版本 |
+|------|--------|----------|
+| **QEP1 索引引脚** | GPIO99 | GPIO23（匹配实际硬件） |
+| **GPIO156** | 配置错误（使用了 GPIO139 配置） | 已修正 |
+| **TZ 动作** | LEVEL4 在 `#else` 分支，TZ 动作为 LOW | LEVEL4 加入 DISABLE 分支，LEVEL5+ 才用 LOW |
+| **中文注释** | 无 | 全文添加 |
+
+### 2.3 dual_axis_servo_drive_user.c 功能差异
+
+| 类别 | Origin | 当前版本 |
+|------|--------|----------|
+| **EPWM 中断等待** | 无超时保护，可能死循环 | 添加超时机制 |
+| **中文注释** | 无 | 全文添加 |
+
+### 2.4 待完成项
+
+- [ ] `M1_MAXIMUM_SCALE_VOLATGE` 从 66.3 改为 ~64.4（补偿 3% 增益 + 1.1V 偏移）
+- [ ] 电机2重新接入驱动板后，恢复双轴联锁和 motor2 控制
+- [ ] LEVEL5+ 的 CMPSS 硬件过流保护正式启用
+
+---
+
+## 三、Sources文件夹文件说明
 
 ### 核心文件
 
@@ -344,23 +187,23 @@ FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器），
 
 ---
 
-## 三、FOC（磁场定向控制）架构
+## 四、FOC（磁场定向控制）架构
 
-### 3.1 系统架构
+### 4.1 系统架构
 
 - 双电机独立运行，共享同一套 CPU 调度与监控框架。
 - 电流环由 CLA 执行，负责高速采样、变换、电流调节与 PWM 更新。
 - 速度环、位置环、通信、保护与调试由 CPU 执行。
 - 整体结构是"CLA 做快环，CPU 做慢环与系统管理"。
 
-### 3.2 FCL（快速电流环）逻辑
+### 4.2 FCL（快速电流环）逻辑
 
 - 速度环输出 Iq_ref，Id_ref 一般为 0 或弱磁参考。
 - CLA 完成采样、Clark/Park 变换、电流 PI、反变换与 SVPWM 更新。
 - PWM 驱动逆变器，逆变器驱动电机，电流反馈回到 ADC 构成闭环。
 - 该链路是整个系统实时性要求最高的部分。
 
-### 3.3 控制层级
+### 4.3 控制层级
 
 | 层级 | 执行单元 | 控制周期 | 功能 |
 |------|----------|----------|------|
@@ -369,30 +212,30 @@ FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器），
 | **位置环** | CPU | 1ms (1KHz) | 位置PI控制、轨迹规划 |
 | **通信/监控** | CPU | 10-100ms | SCI通信、数据记录、故障诊断 |
 
-### 3.4 关键算法模块
+### 4.4 关键算法模块
 
-#### 3.4.1 电流采样与处理
+#### 4.4.1 电流采样与处理
 - **ADC配置**：4个ADC模块（A/B/C/D），12位分辨率
 - **采样触发**：EPWM SOCA事件触发
 - **PPB（峰值保持）**：用于消除偏移量计算
 - **采样相**：双电阻或三电阻采样（Iu, Iv, Iw）
 
-#### 3.4.2 坐标变换
+#### 4.4.2 坐标变换
 - **Clark变换**：三相静止坐标系 → 两相静止坐标系 (α, β)
 - **Park变换**：两相静止坐标系 → 两相旋转坐标系 (d, q)
 - **反Park变换**：旋转坐标系 → 静止坐标系
 
-#### 3.4.3 PI控制器
+#### 4.4.3 PI控制器
 - **电流环PI**：Kp = LS × BW, Ki = RS × BW
 - **速度环PID**：Kp, Ki, Kd可调
 - **位置环PI**：Kp, Ki可调
 
-#### 3.4.4 SVPWM（空间矢量脉宽调制）
+#### 4.4.4 SVPWM（空间矢量脉宽调制）
 - 七段式SVPWM
 - 调制指数限制：考虑死区时间和FCL计算时间
 - 载波频率：10KHz
 
-### 3.5 硬件资源分配
+### 4.5 硬件资源分配
 
 #### 电机1资源
 | 资源类型 | 具体分配 |
@@ -414,7 +257,7 @@ FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器），
 | **GPIO** | GPIO6-11 (PWM), GPIO14/26/27 (控制) |
 | **中断** | EPWM4_INT (电流环) |
 
-### 3.6 保护机制
+### 4.6 保护机制
 
 | 保护类型 | 实现方式 | 动作 |
 |----------|----------|------|
@@ -426,7 +269,7 @@ FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器），
 
 ---
 
-## 四、文件依赖关系
+## 五、文件依赖关系
 
 - dual_axis_servo_drive.c：主流程、状态机、ISR 调度入口。
 - dual_axis_servo_drive_hal.c：外设初始化与硬件抽象层。
@@ -437,20 +280,20 @@ FCL_LEVEL4 在 LEVEL3 基础上新增了速度闭环（PID 速度调节器），
 
 ---
 
-## 五、调试与监控
+## 六、调试与监控
 
-### 5.1 数据记录通道（DLOG）
+### 6.1 数据记录通道（DLOG）
 - 通道1：Id电流
 - 通道2：Iq电流
 - 通道3：速度反馈
 - 通道4：位置反馈
 
-### 5.2 SFRA（软件频率响应分析）
+### 6.2 SFRA（软件频率响应分析）
 - 用于测量系统开环/闭环频率响应
 - 支持速度环、电流环调试
 - 通过SCI与GUI通信
 
-### 5.3 DAC输出（可选）
+### 6.3 DAC输出（可选）
 - DAC-A：旋转变压器载波激励
 - DAC-B/C：通用调试输出
 
