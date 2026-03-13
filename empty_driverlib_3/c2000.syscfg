@@ -1,7 +1,0 @@
-/**
- * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
- * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
- * @cliArgs --device "F2837xD" --part "F2837xD_100PTP" --package "F2837xD_100PTP" --context "CPU1" --product "C2000WARE@6.00.01.00"
- * @v2CliArgs --device "TMS320F28375D" --package "100PTP" --context "CPU1" --product "C2000WARE@6.00.01.00"
- * @versions {"tool":"1.25.0+4268"}
- */

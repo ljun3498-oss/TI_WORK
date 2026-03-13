@@ -1,0 +1,32 @@
+[
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded\" -DDEBUG -DCPU1 -DC2K_GEN2_DEVICES -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM/syscfg\"",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device/F2837xD_CodeStartBranch.asm"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded\" -DDEBUG -DCPU1 -DC2K_GEN2_DEVICES -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM/syscfg\" -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device/device.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded\" -DDEBUG -DCPU1 -DC2K_GEN2_DEVICES -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM/syscfg\" -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/lab_main.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded\" -DDEBUG -DCPU1 -DC2K_GEN2_DEVICES -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM/syscfg\" -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM/syscfg/excluded/board.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded\" -DDEBUG -DCPU1 -DC2K_GEN2_DEVICES -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM/syscfg\" -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded/board.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device\" -I\"C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded\" -DDEBUG -DCPU1 -DC2K_GEN2_DEVICES -I\"C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM/syscfg\" -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/CPU1_RAM/excluded/board.c"
+   }
+]

@@ -93,10 +93,9 @@ volatile float motor_rpm = 0.0f;                 // 电机转速
 int32_t encoder_continuous_pos = 0;              // 连续编码器位置（无重置）
 float encoder_angle_elec_continuous = 0.0f;      // 连续电气角度（弧度）
 static int32_t last_encoder_raw_pos = 0;         // 上一次原始编码器位置
-static int32_t last_encoder_continuous_pos = 0;  // 上一次连续编码器位置
+
 
 // M/T混合法变量
-static uint32_t last_time_tick = 0;              // 上一次时间戳（控制周期计数）
 static uint32_t last_edge_time = 0;              // 上一次编码器跳变时间
 static int32_t last_encoder_pos = 0;             // 上一次编码器位置
 static float motor_speed_filtered = 0.0f;        // 滤波后的速度
@@ -519,7 +518,7 @@ void Encoder_init(void)
     encoder_raw_pos = (int32_t)EQEP_getPosition(EQEP1_BASE);
     last_encoder_raw_pos = encoder_raw_pos;
     encoder_continuous_pos = 0;
-    last_encoder_continuous_pos = 0;
+
 }
 
 // 更新编码器数据
@@ -624,8 +623,7 @@ void Encoder_update(void)
             // 可以在这里添加状态机相关的零速处理
         }
         
-        // 更新时间戳
-        last_time_tick = current_time_tick;
+
     }
     
     // 更新上一次原始编码器位置
@@ -933,9 +931,6 @@ interrupt void adc_isr(void)
             // 包装角度到 [0, 2π)
             while (theta < 0.0f) theta += 2.0f * M_PI_F;
             while (theta >= 2.0f * M_PI_F) theta -= 2.0f * M_PI_F;
-            
-            // 弱磁控制
-            float Vmax = TARGET_VMAX;
             
             // 执行FOC算法
             float alpha, beta;
