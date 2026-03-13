@@ -12,6 +12,7 @@ PAGE 0 :
    RAMLS2           : origin = 0x009000, length = 0x000800
    RAMLS3           : origin = 0x009800, length = 0x000800
    RAMLS4           : origin = 0x00A000, length = 0x000800
+   RAMGS0_P0        : origin = 0x00C000, length = 0x001000
    RESET            : origin = 0x3FFFC0, length = 0x000002
 
   /* Flash sectors */
@@ -77,7 +78,7 @@ PAGE 1 :
 SECTIONS
 {
    codestart        : > BEGIN,     PAGE = 0
-   .text            : >> RAMD0 |  RAMLS0 | RAMLS1 | RAMLS2 | RAMLS3 | RAMLS4,   PAGE = 0
+   .text            : >> RAMD0 |  RAMLS0 | RAMLS1 | RAMLS2 | RAMLS3 | RAMLS4 | RAMGS0_P0,   PAGE = 0
    .cinit           : > RAMM0,     PAGE = 0
    .switch          : > RAMM0,     PAGE = 0
    .reset           : > RESET,     PAGE = 0, TYPE = DSECT /* not used, */
@@ -87,17 +88,17 @@ SECTIONS
    .bss             : > RAMLS5,    PAGE = 1
    .bss:output      : > RAMLS3,    PAGE = 0
    .init_array      : > RAMM0,     PAGE = 0
-   .const           : > RAMLS5,    PAGE = 1
-   .data            : > RAMLS5,    PAGE = 1
-   .sysmem          : > RAMLS5,    PAGE = 1
+   .const           : > RAMGS2,    PAGE = 1
+   .data            : > RAMGS3,    PAGE = 1
+   .sysmem          : > RAMGS4,    PAGE = 1
 #else
    .pinit           : > RAMM0,     PAGE = 0
    .ebss            : > RAMLS5,    PAGE = 1
-   .econst          : > RAMLS5,    PAGE = 1
-   .esysmem         : > RAMLS5,    PAGE = 1
+   .econst          : > RAMGS2,    PAGE = 1
+   .esysmem         : > RAMGS3,    PAGE = 1
 #endif
 
-   Filter_RegsFile  : > RAMGS0,    PAGE = 1
+   Filter_RegsFile  : > RAMGS5,    PAGE = 1
 
 
    ramgs0           : > RAMGS0,    PAGE = 1

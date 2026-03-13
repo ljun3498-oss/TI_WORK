@@ -90,6 +90,9 @@ lab_main.obj: C:/TI/C2000Ware_6_00_01_00/driverlib/f2837xd/driverlib/driver_incl
 lab_main.obj: C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device/device.h
 lab_main.obj: C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded/board.h
 lab_main.obj: C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device/device.h
+lab_main.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h
+lab_main.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h
+lab_main.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h
 
 ../lab_main.c:
 
@@ -270,4 +273,10 @@ C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device/device.h:
 C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/excluded/board.h:
 
 C:/Users/JUNLI/workspace_ccstheia/sci_cc_f2837xd/device/device.h:
+
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h:
+
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h:
+
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h:
 
