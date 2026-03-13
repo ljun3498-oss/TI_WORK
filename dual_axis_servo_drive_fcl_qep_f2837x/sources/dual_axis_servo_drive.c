@@ -59,8 +59,67 @@
 #include "dual_axis_servo_drive_user.h"      // 双轴伺服驱动器用户头文件，包含用户自定义函数和变量
 #include "dual_axis_servo_drive_hal.h"       // 双轴伺服驱动器硬件抽象层头文件，包含硬件操作函数
 #include "dual_axis_servo_drive.h"           // 双轴伺服驱动器主头文件，包含核心功能定义
+#include "motorboard.h"
 
 #include "sfra_settings.h"                    // 系统频率响应分析设置头文件，用于控制环路分析
+// ============================================================================
+// JustFloat / vofa+ 三相电流实时可视化
+// 使用 SCIB (GPIO54/55, 临时复用电机2 QEP 引脚)
+// 帧格式: [ch0:4B][ch1:4B][ch2:4B][ch3:4B][00 00 80 7F]
+// ch0=Iu, ch1=Iv(clarke.As), ch2=Iw(clarke.Bs), ch3=保留通道
+// ============================================================================
+#define VOFA_SCI_BASE    SCIB_BASE
+#define VOFA_TEST_PATTERN 1  // 1:发送1/2/3/4测试帧, 0:发送真实UVW电流
+
+static void justFloatSendFloat(float val)
+{
+    union { float f; uint32_t u32; } c;
+    uint16_t b0, b1, b2, b3;
+    c.f = val;
+
+    // 按协议固定发送小端字节序: byte0, byte1, byte2, byte3
+    b0 = (uint16_t)( c.u32         & 0x000000FFu);
+    b1 = (uint16_t)((c.u32 >> 8u)  & 0x000000FFu);
+    b2 = (uint16_t)((c.u32 >> 16u) & 0x000000FFu);
+    b3 = (uint16_t)((c.u32 >> 24u) & 0x000000FFu);
+
+    SCI_writeCharBlockingNonFIFO(VOFA_SCI_BASE, b0);
+    SCI_writeCharBlockingNonFIFO(VOFA_SCI_BASE, b1);
+    SCI_writeCharBlockingNonFIFO(VOFA_SCI_BASE, b2);
+    SCI_writeCharBlockingNonFIFO(VOFA_SCI_BASE, b3);
+}
+
+static void sendWaveformData(void)
+{
+#if VOFA_TEST_PATTERN
+    float ch[4] = {1.0f, 2.0f, 3.0f, 4.0f};
+#else
+    float Iv = motorVars[0].clarke.As;   // V相电流（ADC采样）
+    float Iw = motorVars[0].clarke.Bs;   // W相电流（ADC采样）
+    float Iu = -(Iv + Iw);               // U相（基尔霍夫电流定律）
+    float ch[4];                         // 严格按ch0/ch1/ch2/ch3顺序打包
+#endif
+    const uint16_t tail0 = 0x00u;
+    const uint16_t tail1 = 0x00u;
+    const uint16_t tail2 = 0x80u;
+    const uint16_t tail3 = 0x7Fu;
+
+#if !VOFA_TEST_PATTERN
+    ch[0] = Iu;     // ch0
+    ch[1] = Iv;     // ch1
+    ch[2] = Iw;     // ch2
+    ch[3] = 0.0f;   // ch3: 保留
+#endif
+
+    justFloatSendFloat(ch[0]);
+    justFloatSendFloat(ch[1]);
+    justFloatSendFloat(ch[2]);
+    justFloatSendFloat(ch[3]);
+    SCI_writeCharBlockingNonFIFO(VOFA_SCI_BASE, tail0);
+    SCI_writeCharBlockingNonFIFO(VOFA_SCI_BASE, tail1);
+    SCI_writeCharBlockingNonFIFO(VOFA_SCI_BASE, tail2);
+    SCI_writeCharBlockingNonFIFO(VOFA_SCI_BASE, tail3);
+}
 
 //
 // 仪表代码，用于时序验证
@@ -438,13 +497,17 @@ void main(void)
     GPIO_writePin(motorVars[0].drvEnableGateGPIO, 1);
     GPIO_writePin(motorVars[1].drvEnableGateGPIO, 1);
 
+    // ---- 与 lab_main 同风格的 SCIB 初始化流程 ----
+    MotorBoard_init();
+    // ------------------------------------------
+
     // 启用全局中断
     EINT;          // 启用全局中断INTM
 
     ERTM;          // 启用全局实时中断DBGM
-#if(BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2) || (BUILDLEVEL == FCL_LEVEL3) || (BUILDLEVEL == FCL_LEVEL4)
+#if(BUILDLEVEL == FCL_LEVEL1) || (BUILDLEVEL == FCL_LEVEL2) || (BUILDLEVEL == FCL_LEVEL3) || (BUILDLEVEL == FCL_LEVEL4) || (BUILDLEVEL == FCL_LEVEL5)
     // =====================================================================
-    // LEVEL1/2/3/4 初始化：设置控制状态为运行
+    // LEVEL1/2/3/4/5 初始化：设置控制状态为运行
     // =====================================================================
     flagSyncRun = true;
     ctrlState = CTRL_RUN;
@@ -715,8 +778,17 @@ void C2(void) // SPARE
  * @param 无
  * @return 无
  */
-void C3(void) // SPARE
+void C3(void) // JustFloat vofa+ 三相电流输出
 {
+    // 每4次调用(4×450µs=1.8ms)发送一帧，约555Hz
+    // 115200 baud下20字节需约1.74ms < 1.8ms，FIFO不会积压
+    static uint16_t vofa_cnt = 0u;
+    vofa_cnt++;
+    if(vofa_cnt >= 4u)
+    {
+        vofa_cnt = 0u;
+        sendWaveformData();
+    }
 
     //-----------------
     // 下次CPUTimer2计数器达到周期值时跳转到C1任务

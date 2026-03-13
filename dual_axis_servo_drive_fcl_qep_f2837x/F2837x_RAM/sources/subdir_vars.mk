@@ -15,6 +15,7 @@ C_SRCS += \
 ../sources/dual_axis_servo_drive_hal.c \
 ../sources/dual_axis_servo_drive_user.c \
 ../sources/fcl_cpu_code_dm.c \
+../sources/motorboard.c \
 ../sources/sfra_gui.c \
 ../sources/sfra_gui_scicomms_driverlib.c 
 
@@ -28,6 +29,7 @@ C_DEPS += \
 ./sources/dual_axis_servo_drive_hal.d \
 ./sources/dual_axis_servo_drive_user.d \
 ./sources/fcl_cpu_code_dm.d \
+./sources/motorboard.d \
 ./sources/sfra_gui.d \
 ./sources/sfra_gui_scicomms_driverlib.d 
 
@@ -39,6 +41,7 @@ OBJS += \
 ./sources/dual_axis_servo_drive_user.obj \
 ./sources/fcl_cla_code_dm.obj \
 ./sources/fcl_cpu_code_dm.obj \
+./sources/motorboard.obj \
 ./sources/sfra_gui.obj \
 ./sources/sfra_gui_scicomms_driverlib.obj 
 
@@ -50,6 +53,7 @@ OBJS__QUOTED += \
 "sources\dual_axis_servo_drive_user.obj" \
 "sources\fcl_cla_code_dm.obj" \
 "sources\fcl_cpu_code_dm.obj" \
+"sources\motorboard.obj" \
 "sources\sfra_gui.obj" \
 "sources\sfra_gui_scicomms_driverlib.obj" 
 
@@ -59,6 +63,7 @@ C_DEPS__QUOTED += \
 "sources\dual_axis_servo_drive_hal.d" \
 "sources\dual_axis_servo_drive_user.d" \
 "sources\fcl_cpu_code_dm.d" \
+"sources\motorboard.d" \
 "sources\sfra_gui.d" \
 "sources\sfra_gui_scicomms_driverlib.d" 
 
@@ -72,6 +77,7 @@ C_SRCS__QUOTED += \
 "../sources/dual_axis_servo_drive_hal.c" \
 "../sources/dual_axis_servo_drive_user.c" \
 "../sources/fcl_cpu_code_dm.c" \
+"../sources/motorboard.c" \
 "../sources/sfra_gui.c" \
 "../sources/sfra_gui_scicomms_driverlib.c" 
 

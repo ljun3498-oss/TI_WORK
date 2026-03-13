@@ -1057,20 +1057,8 @@ void HAL_setupGPIOs(HAL_Handle handle)
     GPIO_setDirectionMode(43, GPIO_DIR_MODE_IN);    // 设置GPIO43为输入模式
     GPIO_setPadConfig(43, GPIO_PIN_TYPE_STD);    // 设置GPIO43的引脚类型为标准类型
 
-    // 电机2的QEP（正交编码器）引脚配置
-    // GPIO54->EQEP2A_M2（电机2的编码器A相）
-    GPIO_setMasterCore(54, GPIO_CORE_CPU1);    // 设置GPIO54的主核为CPU1
-    GPIO_setPinConfig(GPIO_54_EQEP2A);    // 配置GPIO54为EQEP2A功能
-    GPIO_setDirectionMode(54, GPIO_DIR_MODE_IN);    // 设置GPIO54为输入模式
-    GPIO_setPadConfig(54, GPIO_PIN_TYPE_STD);    // 设置GPIO54的引脚类型为标准类型
-    GPIO_setQualificationMode(54, GPIO_QUAL_3SAMPLE);    // 设置GPIO54的资格模式为3采样
-
-    // GPIO55->EQEP2B_M2（电机2的编码器B相）
-    GPIO_setMasterCore(55, GPIO_CORE_CPU1);    // 设置GPIO55的主核为CPU1
-    GPIO_setPinConfig(GPIO_55_EQEP2B);    // 配置GPIO55为EQEP2B功能
-    GPIO_setDirectionMode(55, GPIO_DIR_MODE_IN);    // 设置GPIO55为输入模式
-    GPIO_setPadConfig(55, GPIO_PIN_TYPE_STD);    // 设置GPIO55的引脚类型为标准类型
-    GPIO_setQualificationMode(55, GPIO_QUAL_3SAMPLE);    // 设置GPIO55的资格模式为3采样
+    // GPIO54/GPIO55 的 SCIB 复用与初始化由 motorboard 模块统一管理
+    // 这里不再重复配置，避免双处初始化带来的歧义
 
     // SCI（串口）引脚配置
     // GPIO56->SCITXDC（SCI C发送引脚）

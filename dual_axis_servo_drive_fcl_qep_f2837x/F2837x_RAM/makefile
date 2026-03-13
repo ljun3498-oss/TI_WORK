@@ -17,6 +17,7 @@ ORDERED_OBJS += \
 "./sources/dual_axis_servo_drive_user.obj" \
 "./sources/fcl_cla_code_dm.obj" \
 "./sources/fcl_cpu_code_dm.obj" \
+"./sources/motorboard.obj" \
 "./sources/sfra_gui.obj" \
 "./sources/sfra_gui_scicomms_driverlib.obj" \
 "./src_device/F2837xD_CodeStartBranch.obj" \
@@ -159,10 +160,10 @@ dual_axis_servo_drive_fcl_qep_f2837x.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "sources/dlog_4ch_f.lst" "sources/dual_axis_servo_drive.lst" "sources/dual_axis_servo_drive_cla_tasks.lst" "sources/dual_axis_servo_drive_hal.lst" "sources/dual_axis_servo_drive_user.lst" "sources/fcl_cla_code_dm.lst" "sources/fcl_cpu_code_dm.lst" "sources/sfra_gui.lst" "sources/sfra_gui_scicomms_driverlib.lst" "src_device/F2837xD_CodeStartBranch.lst" "src_device/F2837xD_GlobalVariableDefs.lst" "src_device/device.lst" 
-	-$(RM) "sources\dlog_4ch_f.obj" "sources\dual_axis_servo_drive.obj" "sources\dual_axis_servo_drive_cla_tasks.obj" "sources\dual_axis_servo_drive_hal.obj" "sources\dual_axis_servo_drive_user.obj" "sources\fcl_cla_code_dm.obj" "sources\fcl_cpu_code_dm.obj" "sources\sfra_gui.obj" "sources\sfra_gui_scicomms_driverlib.obj" "src_device\F2837xD_CodeStartBranch.obj" "src_device\F2837xD_GlobalVariableDefs.obj" "src_device\device.obj" 
-	-$(RM) "sources\dlog_4ch_f.d" "sources\dual_axis_servo_drive.d" "sources\dual_axis_servo_drive_hal.d" "sources\dual_axis_servo_drive_user.d" "sources\fcl_cpu_code_dm.d" "sources\sfra_gui.d" "sources\sfra_gui_scicomms_driverlib.d" "src_device\F2837xD_GlobalVariableDefs.d" "src_device\device.d" 
-	-$(RM) "sources/dlog_4ch_f.asm" "sources/dual_axis_servo_drive.asm" "sources/dual_axis_servo_drive_cla_tasks.asm" "sources/dual_axis_servo_drive_hal.asm" "sources/dual_axis_servo_drive_user.asm" "sources/fcl_cla_code_dm.asm" "sources/fcl_cpu_code_dm.asm" "sources/sfra_gui.asm" "sources/sfra_gui_scicomms_driverlib.asm" "src_device/F2837xD_CodeStartBranch.asm" "src_device/F2837xD_GlobalVariableDefs.asm" "src_device/device.asm" 
+	-$(RM) "sources/dlog_4ch_f.lst" "sources/dual_axis_servo_drive.lst" "sources/dual_axis_servo_drive_cla_tasks.lst" "sources/dual_axis_servo_drive_hal.lst" "sources/dual_axis_servo_drive_user.lst" "sources/fcl_cla_code_dm.lst" "sources/fcl_cpu_code_dm.lst" "sources/motorboard.lst" "sources/sfra_gui.lst" "sources/sfra_gui_scicomms_driverlib.lst" "src_device/F2837xD_CodeStartBranch.lst" "src_device/F2837xD_GlobalVariableDefs.lst" "src_device/device.lst" 
+	-$(RM) "sources\dlog_4ch_f.obj" "sources\dual_axis_servo_drive.obj" "sources\dual_axis_servo_drive_cla_tasks.obj" "sources\dual_axis_servo_drive_hal.obj" "sources\dual_axis_servo_drive_user.obj" "sources\fcl_cla_code_dm.obj" "sources\fcl_cpu_code_dm.obj" "sources\motorboard.obj" "sources\sfra_gui.obj" "sources\sfra_gui_scicomms_driverlib.obj" "src_device\F2837xD_CodeStartBranch.obj" "src_device\F2837xD_GlobalVariableDefs.obj" "src_device\device.obj" 
+	-$(RM) "sources\dlog_4ch_f.d" "sources\dual_axis_servo_drive.d" "sources\dual_axis_servo_drive_hal.d" "sources\dual_axis_servo_drive_user.d" "sources\fcl_cpu_code_dm.d" "sources\motorboard.d" "sources\sfra_gui.d" "sources\sfra_gui_scicomms_driverlib.d" "src_device\F2837xD_GlobalVariableDefs.d" "src_device\device.d" 
+	-$(RM) "sources/dlog_4ch_f.asm" "sources/dual_axis_servo_drive.asm" "sources/dual_axis_servo_drive_cla_tasks.asm" "sources/dual_axis_servo_drive_hal.asm" "sources/dual_axis_servo_drive_user.asm" "sources/fcl_cla_code_dm.asm" "sources/fcl_cpu_code_dm.asm" "sources/motorboard.asm" "sources/sfra_gui.asm" "sources/sfra_gui_scicomms_driverlib.asm" "src_device/F2837xD_CodeStartBranch.asm" "src_device/F2837xD_GlobalVariableDefs.asm" "src_device/device.asm" 
 	-$(RM) "sources\dual_axis_servo_drive_cla_tasks.d" "sources\fcl_cla_code_dm.d" 
 	-$(RM) "src_device\F2837xD_CodeStartBranch.d" 
 	-@echo 'Finished clean'

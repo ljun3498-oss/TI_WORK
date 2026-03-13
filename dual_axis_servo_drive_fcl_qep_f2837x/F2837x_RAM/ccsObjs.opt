@@ -5,6 +5,7 @@
 "./sources/dual_axis_servo_drive_user.obj"
 "./sources/fcl_cla_code_dm.obj"
 "./sources/fcl_cpu_code_dm.obj"
+"./sources/motorboard.obj"
 "./sources/sfra_gui.obj"
 "./sources/sfra_gui_scicomms_driverlib.obj"
 "./src_device/F2837xD_CodeStartBranch.obj"
