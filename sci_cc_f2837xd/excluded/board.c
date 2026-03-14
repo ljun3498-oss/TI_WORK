@@ -126,10 +126,15 @@ void myBoardLED0_GPIO_init(){
 //*****************************************************************************
 void INTERRUPT_init(){
 	
-	// Interrupt Settings for INT_myCPUTIMER0
+	// Interrupt Settings for INT_mySCIB_RX
 	// ISR need to be defined for the registered interrupts
-	Interrupt_register(INT_myCPUTIMER0, &INT_myCPUTIMER0_ISR);
-	Interrupt_enable(INT_myCPUTIMER0);
+	Interrupt_register(INT_mySCIB_RX, &INT_mySCIB_RX_ISR);
+	Interrupt_enable(INT_mySCIB_RX);
+	
+	// Interrupt Settings for INT_mySCIB_TX
+	// ISR need to be defined for the registered interrupts
+	Interrupt_register(INT_mySCIB_TX, &INT_mySCIB_TX_ISR);
+	Interrupt_enable(INT_mySCIB_TX);
 }
 //*****************************************************************************
 //
@@ -141,16 +146,46 @@ void SCI_init(){
 }
 
 void mySCIB_init(){
+	// Clear all interrupts
 	SCI_clearInterruptStatus(mySCIB_BASE, SCI_INT_RXFF | SCI_INT_TXFF | SCI_INT_FE | SCI_INT_OE | SCI_INT_PE | SCI_INT_RXERR | SCI_INT_RXRDY_BRKDT | SCI_INT_TXRDY);
 	SCI_clearOverflowStatus(mySCIB_BASE);
+	
+	// Reset FIFOs and channels
 	SCI_resetTxFIFO(mySCIB_BASE);
 	SCI_resetRxFIFO(mySCIB_BASE);
 	SCI_resetChannels(mySCIB_BASE);
+	
+	// Set baud rate and configuration
 	SCI_setConfig(mySCIB_BASE, DEVICE_LSPCLK_FREQ, mySCIB_BAUDRATE, (SCI_CONFIG_WLEN_8|SCI_CONFIG_STOP_ONE|SCI_CONFIG_PAR_NONE));
 	SCI_disableLoopback(mySCIB_BASE);
+	
+	// Software reset
 	SCI_performSoftwareReset(mySCIB_BASE);
-	SCI_setFIFOInterruptLevel(mySCIB_BASE, SCI_FIFO_TX0, SCI_FIFO_RX0);
+	
+	// Add longer delay after software reset
+	uint32_t k;
+	for(k= 0; k < 10000; k++) {
+		NOP;
+	}
+	
+	// Configure FIFO interrupt levels
+    SCI_setFIFOInterruptLevel(mySCIB_BASE, SCI_FIFO_TX0, SCI_FIFO_RX1);
+	
+	// Enable FIFO and module
 	SCI_enableFIFO(mySCIB_BASE);
 	SCI_enableModule(mySCIB_BASE);
+	
+	// Add delay after enabling FIFO
+	for(k= 0; k < 5000; k++) {
+		NOP;
+	}
+	
+	// Enable only RXRDY_BRKDT interrupt for RX, and TXFF interrupt for TX
+    SCI_enableInterrupt(mySCIB_BASE, SCI_INT_RXFF);
+    SCI_enableInterrupt(mySCIB_BASE, SCI_INT_TXFF);
+	
+	// Add final delay
+	for(k= 0; k < 5000; k++) {
+		NOP;
+	}
 }
-

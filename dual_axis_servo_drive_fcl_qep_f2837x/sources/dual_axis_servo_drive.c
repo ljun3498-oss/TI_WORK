@@ -778,18 +778,8 @@ void C2(void) // SPARE
  * @param 无
  * @return 无
  */
-void C3(void) // JustFloat vofa+ 三相电流输出
+void C3(void) // SPARE
 {
-    // 每4次调用(4×450µs=1.8ms)发送一帧，约555Hz
-    // 115200 baud下20字节需约1.74ms < 1.8ms，FIFO不会积压
-    static uint16_t vofa_cnt = 0u;
-    vofa_cnt++;
-    if(vofa_cnt >= 4u)
-    {
-        vofa_cnt = 0u;
-        sendWaveformData();
-    }
-
     //-----------------
     // 下次CPUTimer2计数器达到周期值时跳转到C1任务
     C_Task_Ptr = &C1;
@@ -1552,8 +1542,7 @@ static inline void buildLevel3_M2(void)
 #pragma FUNC_ALWAYS_INLINE(buildLevel46_M1)
 
 static inline void buildLevel46_M1(void)
-{
-
+{ 
 #if(FCL_CNTLR ==  PI_CNTLR)
     FCL_runPICtrl_M1(&motorVars[0]);  // 运行PI控制器，用于电机1的电流环控制
 #endif
@@ -2315,6 +2304,8 @@ static inline void buildLevel5_M2(void)
 // 功能：根据当前构建级别调用相应的电机1控制函数，并进行数据记录和中断确认
 __interrupt void motor1ControlISR(void)
 {
+    // 开始测量中断总执行时间
+    GPIO_writePin(18, 1);  // SETGPIO18_HIGH
 
 #if(BUILDLEVEL == FCL_LEVEL1)  // FCL_LEVEL1：基础电流环控制
     buildLevel1_M1();  // 调用电机1的FCL_LEVEL1控制函数
@@ -2454,6 +2445,9 @@ __interrupt void motor1ControlISR(void)
     HAL_ackInt_M1(halMtrHandle[MTR_1]);  // 确认电机1的中断
 
     motorVars[0].isrTicker++;  // 增加电机1的中断计数器
+        // 结束测量中断总执行时间
+    GPIO_writePin(18, 0);  // SETGPIO18_LOW
+
 
 } // motor1ControlISR 结束
 
@@ -2463,6 +2457,7 @@ __interrupt void motor1ControlISR(void)
 // 功能：根据当前构建级别调用相应的电机2控制函数，并进行中断确认
 __interrupt void motor2ControlISR(void)
 {
+   GPIO_writePin(18, 1);  // SETGPIO18_HIGH
 
 #if(BUILDLEVEL == FCL_LEVEL1)
     buildLevel1_M2();
@@ -2488,6 +2483,9 @@ __interrupt void motor2ControlISR(void)
     HAL_ackInt_M2(halMtrHandle[MTR_2]);
 
     motorVars[1].isrTicker++;
+        // 结束测量中断总执行时间
+    GPIO_writePin(18, 0);  // SETGPIO18_LOW
+
 } // motor1ControlISR Ends Here
 
 //

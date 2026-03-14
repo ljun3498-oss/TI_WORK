@@ -111,6 +111,12 @@ extern __interrupt void INT_myCPUTIMER0_ISR(void);
 #define INT_mySCIB_RX_INTERRUPT_ACK_GROUP INTERRUPT_ACK_GROUP9
 extern __interrupt void INT_mySCIB_RX_ISR(void);
 
+// Interrupt Settings for INT_mySCIB_TX
+// ISR need to be defined for the registered interrupts
+#define INT_mySCIB_TX INT_SCIB_TX
+#define INT_mySCIB_TX_INTERRUPT_ACK_GROUP INTERRUPT_ACK_GROUP9
+extern __interrupt void INT_mySCIB_TX_ISR(void);
+
 //*****************************************************************************
 //
 // SCI Configurations
