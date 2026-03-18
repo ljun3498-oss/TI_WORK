@@ -1542,52 +1542,45 @@ void HAL_setupQEP(HAL_MTR_Handle handle)
 {
     HAL_MTR_Obj *obj = (HAL_MTR_Obj *)handle;    // 将HAL电机句柄转换为具体对象指针
 
-    // 配置解码器为正交计数模式，计数上升和下降沿（即2倍分辨率）
-    EQEP_setDecoderConfig(obj->qepHandle, (EQEP_CONFIG_2X_RESOLUTION |
-                                           EQEP_CONFIG_QUADRATURE |
-                                           EQEP_CONFIG_NO_SWAP) );
-
-    EQEP_setEmulationMode(obj->qepHandle, EQEP_EMULATIONMODE_RUNFREE);    // 设置仿真模式为自由运行
-
-    // 配置位置计数器在单位超时和索引脉冲上升沿时锁存
-    EQEP_setLatchMode(obj->qepHandle, (EQEP_LATCH_RISING_INDEX |
-                                       EQEP_LATCH_UNIT_TIME_OUT) );
-
-    // 配置位置计数器在最大位置时重置
+    // 只为电机1初始化QEP模块，电机2的QEP模块不初始化（避免与SCI冲突）
     if(handle == &halMtr[MTR_1])
     {
+        // 配置解码器为正交计数模式，计数上升和下降沿（即2倍分辨率）
+        EQEP_setDecoderConfig(obj->qepHandle, (EQEP_CONFIG_2X_RESOLUTION |
+                                               EQEP_CONFIG_QUADRATURE |
+                                               EQEP_CONFIG_NO_SWAP) );
+
+        EQEP_setEmulationMode(obj->qepHandle, EQEP_EMULATIONMODE_RUNFREE);    // 设置仿真模式为自由运行
+
+        // 配置位置计数器在单位超时和索引脉冲上升沿时锁存
+        EQEP_setLatchMode(obj->qepHandle, (EQEP_LATCH_RISING_INDEX |
+                                           EQEP_LATCH_UNIT_TIME_OUT) );
+
+        // 配置位置计数器在最大位置时重置
         EQEP_setPositionCounterConfig(obj->qepHandle,
                                       EQEP_POSITION_RESET_MAX_POS,
                                       ((4 * M1_ENCODER_LINES) - 1) );
 
         // 启用单位定时器，设置频率为10KHz
         EQEP_enableUnitTimer(obj->qepHandle, M1_QEP_UNIT_TIMER_TICKS - 1);
+
+        // 禁用eQEP模块位置比较单元
+        EQEP_disableCompare(obj->qepHandle);
+
+        // 配置并启用边缘捕获单元。捕获时钟分频器为SYSCLKOUT/128。单位位置事件分频器为QCLK/32。
+        EQEP_setCaptureConfig(obj->qepHandle, EQEP_CAPTURE_CLK_DIV_128,
+                                              EQEP_UNIT_POS_EVNT_DIV_32);
+
+        // 启用QEP边缘捕获单元
+        EQEP_enableCapture(obj->qepHandle);
+
+        // 在QEP上启用UTO
+        EQEP_enableInterrupt(obj->qepHandle, EQEP_INT_UNIT_TIME_OUT);
+
+        // 启用eQEP模块
+        EQEP_enableModule(obj->qepHandle);
     }
-    else if(handle == &halMtr[MTR_2])
-    {
-        EQEP_setPositionCounterConfig(obj->qepHandle,
-                                      EQEP_POSITION_RESET_MAX_POS,
-                                      ((4 * M2_ENCODER_LINES) - 1) );
-
-        // 启用单位定时器，设置频率为10KHz
-        EQEP_enableUnitTimer(obj->qepHandle, M2_QEP_UNIT_TIMER_TICKS - 1);
-    }
-
-    // 禁用eQEP模块位置比较单元
-    EQEP_disableCompare(obj->qepHandle);
-
-    // 配置并启用边缘捕获单元。捕获时钟分频器为SYSCLKOUT/128。单位位置事件分频器为QCLK/32。
-    EQEP_setCaptureConfig(obj->qepHandle, EQEP_CAPTURE_CLK_DIV_128,
-                                          EQEP_UNIT_POS_EVNT_DIV_32);
-
-    // 启用QEP边缘捕获单元
-    EQEP_enableCapture(obj->qepHandle);
-
-    // 在QEP上启用UTO
-    EQEP_enableInterrupt(obj->qepHandle, EQEP_INT_UNIT_TIME_OUT);
-
-    // 启用eQEP模块
-    EQEP_enableModule(obj->qepHandle);
+    // 电机2的QEP模块不初始化，避免与SCI冲突
 
     return;
 }

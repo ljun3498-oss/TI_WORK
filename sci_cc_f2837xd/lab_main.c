@@ -77,61 +77,86 @@ float samplingRate = 100.0;  // Sampling rate (Hz)
 float dt;                   // Time step
 
 // Serial communication
-uint16_t sciRxBuffer[64];    // SCI receive buffer
-uint16_t sciRxIndex = 0;     // Receive buffer index
-uint16_t sciRxFlag = 0;      // Receive complete flag
+// Double buffer for SCI transmission
+uint16_t sciTxBuffer[64];    // SCI transmit buffer (for sending)
+uint16_t sciPrepBuffer[64]; // Preparation buffer (for preparing next frame)
+uint16_t sciTxIndex = 0;    // Current transmit index
+uint16_t sciTxCount = 0;    // Total bytes to transmit
+uint16_t sciPrepCount = 0;  // Prepared data count
+uint16_t sciTxBusy = 0;     // Transmit busy flag
+uint16_t sciDataReady = 0;  // Data prepared flag (for double buffering)
 
-// SCI transmit buffer and state
-uint16_t sciTxBuffer[64];    // SCI transmit buffer
-uint16_t sciTxIndex = 0;     // Current transmit index
-uint16_t sciTxCount = 0;     // Total bytes to transmit
-uint16_t sciTxBusy = 0;      // Transmit busy flag
 
-//
-// Function Prototypes
-//
-__interrupt void INT_mySCIB_RX_ISR(void);
-__interrupt void INT_mySCIB_TX_ISR(void);
-void generateWaveforms(float *ch0, float *ch1, float *ch2, float *ch3);
-void sendWaveformData(void);
-void processSerialCommand(void);
-void sciStartTransmit(uint16_t *data, uint16_t count);
+
+
+
 
 //*****************************************************************************
-// sciWriteInt16 - 将有符号16位整数通过SCI输出（避免sprintf %f）
+//
+// generateWaveforms - Generate 3-phase waveforms with 120 degree phase shift
+//
 //*****************************************************************************
-static void sciWriteInt16(int16_t val)
+void generateWaveforms(float *ch0, float *ch1, float *ch2)
 {
-    char buf[8];
-    uint16_t pos = 7u;
-    uint16_t neg = 0u;
-    buf[pos] = '\0';
-    if(val < 0) { neg = 1u; val = -val; }
-    if(val == 0) { buf[--pos] = '0'; }
-    else { while(val > 0) { buf[--pos] = '0' + (val % 10); val /= 10; } }
-    if(neg) buf[--pos] = '-';
-    SCI_writeCharArray(mySCIB_BASE, (uint16_t*)&buf[pos], 7u - pos);
+    float omega = 2.0f * 3.14159265f / period;
+
+    *ch0 = amplitude * sinf(omega * t);
+    *ch1 = amplitude * sinf(omega * t + 2.0f * 3.14159265f / 3.0f);  // 120 degrees
+    *ch2 = amplitude * sinf(omega * t + 4.0f * 3.14159265f / 3.0f);  // 240 degrees
+
+    t += dt;
+    if(t >= period) { t = 0.0f; }
 }
 
 //*****************************************************************************
-// parseFloat - 简易浮点解析，替代atof，不支持科学计数法
+//
+// sendWaveformData - JustFloat协议发送3通道波形数据
+// 帧格式: [float ch0][float ch1][float ch2][00 00 80 7F]
+// 使用双缓冲区：当 SCI 忙时在 prepBuffer 中准备数据
+//
 //*****************************************************************************
-static float parseFloat(const char *s)
+void sendWaveformData(void)
 {
-    float val  = 0.0f;
-    float frac = 1.0f;
-    uint16_t hasDot = 0u;
-    while(*s && *s != '\r' && *s != '\n')
-    {
-        if(*s == '.') { hasDot = 1u; }
-        else if(*s >= '0' && *s <= '9')
-        {
-            if(hasDot) { frac *= 0.1f; val += (*s - '0') * frac; }
-            else        { val  = val * 10.0f + (*s - '0'); }
-        }
-        s++;
-    }
-    return val;
+    float ch0, ch1, ch2;
+    // 帧尾: IEEE 754 +Inf = 0x7F800000 (小端: 00 00 80 7F)
+    uint16_t tail[4] = {0x00u, 0x00u, 0x80u, 0x7Fu};
+
+    generateWaveforms(&ch0, &ch1, &ch2);
+
+    // Prepare data in prep buffer (double buffering)
+    union { float f; uint16_t u[2]; } c;
+    uint16_t pos = 0;
+
+    // Convert ch0
+    c.f = ch0;
+    sciPrepBuffer[pos++] = c.u[0] & 0x00FFu;
+    sciPrepBuffer[pos++] = (c.u[0] >> 8u) & 0x00FFu;
+    sciPrepBuffer[pos++] = c.u[1] & 0x00FFu;
+    sciPrepBuffer[pos++] = (c.u[1] >> 8u) & 0x00FFu;
+
+    // Convert ch1
+    c.f = ch1;
+    sciPrepBuffer[pos++] = c.u[0] & 0x00FFu;
+    sciPrepBuffer[pos++] = (c.u[0] >> 8u) & 0x00FFu;
+    sciPrepBuffer[pos++] = c.u[1] & 0x00FFu;
+    sciPrepBuffer[pos++] = (c.u[1] >> 8u) & 0x00FFu;
+
+    // Convert ch2
+    c.f = ch2;
+    sciPrepBuffer[pos++] = c.u[0] & 0x00FFu;
+    sciPrepBuffer[pos++] = (c.u[0] >> 8u) & 0x00FFu;
+    sciPrepBuffer[pos++] = c.u[1] & 0x00FFu;
+    sciPrepBuffer[pos++] = (c.u[1] >> 8u) & 0x00FFu;
+
+    // Add tail
+    sciPrepBuffer[pos++] = tail[0];
+    sciPrepBuffer[pos++] = tail[1];
+    sciPrepBuffer[pos++] = tail[2];
+    sciPrepBuffer[pos++] = tail[3];
+
+    // Mark data as ready
+    sciPrepCount = pos;
+    sciDataReady = 1;
 }
 
 //
@@ -143,8 +168,8 @@ void main(void)
     // CPU Initialization
     //
     Device_init();
-    Interrupt_initModule();
-    Interrupt_initVectorTable();
+    // Interrupt_initModule();
+    // Interrupt_initVectorTable();
 
     //
     // Configure GPIO pins
@@ -154,7 +179,7 @@ void main(void)
     //
     // Initialize the SCI and Timer Modules
     //
-    Board_init();
+    Bard_init();
 
     //
     // Enable global interrupts and real-time debug
@@ -175,388 +200,75 @@ void main(void)
         NOP;
     }
 
-    //
-    // Define local variables
-    //
-    char* msg;                // Message sent through terminal window
-
-    //
-    // Send starting message with small delays between each message
-    //
-    msg = "SCI Waveform Generator\r\n";
-    for(j = 0; j < 22; j++) {
-        SCI_writeCharBlockingFIFO(mySCIB_BASE, msg[j]);
-    }
-    
-    // Small delay between messages
-    for(j = 0; j < 10000; j++) {
-        NOP;
-    }
-    
-    msg = "Sending 3-phase waveforms with 120 degree phase shift\r\n";
-    for(j = 0; j < 49; j++) {
-        SCI_writeCharBlockingFIFO(mySCIB_BASE, msg[j]);
-    }
-    
-    // Small delay between messages
-    for(j = 0; j < 10000; j++) {
-        NOP;
-    }
-    
-    msg = "Commands:\r\n";
-    for(j = 0; j < 12; j++) {
-        SCI_writeCharBlockingFIFO(mySCIB_BASE, msg[j]);
-    }
-    
-    // Small delay between messages
-    for(j = 0; j < 10000; j++) {
-        NOP;
-    }
-    
-    msg = "  A<value>: Set amplitude (default: 1.0)\r\n";
-    for(j = 0; j < 36; j++) {
-        SCI_writeCharBlockingFIFO(mySCIB_BASE, msg[j]);
-    }
-    
-    // Small delay between messages
-    for(j = 0; j < 10000; j++) {
-        NOP;
-    }
-    
-    msg = "  P<value>: Set period (default: 1.0s)\r\n";
-    for(j = 0; j < 34; j++) {
-        SCI_writeCharBlockingFIFO(mySCIB_BASE, msg[j]);
-    }
-    
-    // Small delay between messages
-    for(j = 0; j < 10000; j++) {
-        NOP;
-    }
-    
-    msg = "  R<value>: Set sampling rate (default: 100Hz)\r\n";
-    for(j = 0; j < 39; j++) {
-        SCI_writeCharBlockingFIFO(mySCIB_BASE, msg[j]);
-    }
-    
-    // Final delay before entering main loop
-    for(j = 0; j < 50000; j++) {
-        NOP;
-    }
-    
-    // Additional delay to ensure all data is sent
-    for(j = 0; j < 50000; j++) {
-        NOP;
+    // Test: Send data immediately after init
+    for(j = 0; j < 16; j++) {
+        uint16_t testData[16] = {0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88,
+                                  0x99, 0xAA, 0xBB, 0xCC, 0x00, 0x00, 0x80, 0x7F};
+        SCI_writeCharNonBlocking(mySCIB_BASE, testData[j]);
     }
 
     for(;;)
         {
             //
-            // Check for serial commands
+            // When SCI is not busy, either prepare data or send data
             //
-            if(sciRxFlag)
-            {
-                processSerialCommand();
-                sciRxFlag = 0;
-            }
+        //     if(!sciTxBusy)
+        //     {
+        //         //
+        //         // If no data prepared, prepare waveform data
+        //         //
+        //         if(!sciDataReady)
+        //         {
+        //             sendWaveformData();
+        //         }
+        //         //
+        //         // If data is ready, check if TX is idle and start transmission
+        //         //
+        //         else if(!SCI_isTransmitterBusy(mySCIB_BASE))
+        //         {
+        //             //
+        //             // Copy prepared data to txBuffer and start transmission
+        //             //
+        //             uint16_t i;
+        //             for(i = 0; i < sciPrepCount; i++)
+        //             {
+        //                 sciTxBuffer[i] = sciPrepBuffer[i];
+        //             }
+        //             sciTxIndex = 0;
+        //             sciTxCount = sciPrepCount;
+        //             sciTxBusy = 1;
+        //             sciDataReady = 0;
+        //         }
+        //     }
 
-            //
-            // Generate and send waveform data
-            //
-            sendWaveformData();
+        //     //
+        //     // Poll for transmission - write data when TX shift register is empty
+        //     //
+        //     if(sciTxBusy)
+        //     {
+        //         //
+        //         // Check if TX shift register is empty
+        //         //
+        //         if(!SCI_isTransmitterBusy(mySCIB_BASE))
+        //         {
+        //             //
+        //             // TX is empty, write up to 16 bytes (FIFO depth)
+        //             //
+        //             while(sciTxIndex < sciTxCount && SCI_getTxFIFOStatus(mySCIB_BASE) < SCI_FIFO_TX16)
+        //             {
+        //                 SCI_writeCharNonBlocking(mySCIB_BASE, sciTxBuffer[sciTxIndex++]);
+        //             }
 
-            //
-            // Delay to achieve desired sampling rate
-            //
-            DEVICE_DELAY_US((uint32_t)(dt * 1000000.0));
+        //             //
+        //             // Check if all data sent
+        //             //
+        //             if(sciTxIndex >= sciTxCount)
+        //             {
+        //                 sciTxBusy = 0;
+        //             }
+        //         }
+        //     }
         }
-}
-
-
-
-//*****************************************************************************
-//
-// ISR for SCIB RX interrupt
-//
-//*****************************************************************************
-__interrupt void INT_mySCIB_RX_ISR(void)
-{
-    uint16_t status = SCI_getInterruptStatus(mySCIB_BASE);
-    uint32_t rxStatus = SCI_getRxStatus(mySCIB_BASE);
-
-    if((rxStatus & SCI_RXSTATUS_ERROR) != 0U)
-    {
-        SCI_clearOverflowStatus(mySCIB_BASE);
-        SCI_performSoftwareReset(mySCIB_BASE);
-    }
-    
-    if(status & SCI_INT_RXFF)
-    {
-        //
-        // Read all available characters from the FIFO
-        //
-        while(SCI_getRxFIFOStatus(mySCIB_BASE) > 0)
-        {
-            uint16_t data = SCI_readCharNonBlocking(mySCIB_BASE);
-            
-            //
-            // Store in buffer
-            //
-            if(sciRxIndex < 63)
-            {
-                sciRxBuffer[sciRxIndex++] = data;
-                
-                //
-                // Check for end of command (newline or carriage return)
-                //
-                if(data == '\r' || data == '\n')
-                {
-                    sciRxFlag = 1;
-                }
-                else if((sciRxIndex == 1U) && (data >= '0') && (data <= '9'))
-                {
-                    sciRxFlag = 1;
-                }
-            }
-            else
-            {
-                //
-                // Buffer full, reset
-                //
-                sciRxIndex = 0;
-                break;
-            }
-        }
-    }
-    
-    //
-    // Clear interrupt flag
-    //
-    SCI_clearInterruptStatus(mySCIB_BASE, SCI_INT_RXFF | SCI_INT_RXERR | SCI_INT_OE);
-    Interrupt_clearACKGroup(INT_mySCIB_RX_INTERRUPT_ACK_GROUP);
-}
-
-//*****************************************************************************
-//
-// ISR for SCIB TX interrupt - Triggered when TX FIFO is empty
-//
-//*****************************************************************************
-__interrupt void INT_mySCIB_TX_ISR(void)
-{
-    uint16_t status = SCI_getInterruptStatus(mySCIB_BASE);
-    
-    if(status & SCI_INT_TXFF)
-    {
-        // Continue sending remaining data
-        while(sciTxIndex < sciTxCount)
-        {
-            // Check if TX FIFO has space
-            if(SCI_getTxFIFOStatus(mySCIB_BASE) < SCI_FIFO_TX16)
-            {
-                SCI_writeCharNonBlocking(mySCIB_BASE, sciTxBuffer[sciTxIndex++]);
-            }
-            else
-            {
-                break;  // FIFO is full, wait for next interrupt
-            }
-        }
-        
-        // Check if all data sent
-        if(sciTxIndex >= sciTxCount)
-        {
-            sciTxBusy = 0;
-            // Disable TX FIFO interrupt until next transmission
-            SCI_disableInterrupt(mySCIB_BASE, SCI_INT_TXFF);
-        }
-    }
-    
-    // Clear interrupt flag
-    SCI_clearInterruptStatus(mySCIB_BASE, SCI_INT_TXFF);
-    Interrupt_clearACKGroup(INT_mySCIB_TX_INTERRUPT_ACK_GROUP);
-}
-
-//*****************************************************************************
-//
-// sciStartTransmit - Start SCI transmission using FIFO
-//
-//*****************************************************************************
-void sciStartTransmit(uint16_t *data, uint16_t count)
-{
-    if(sciTxBusy)
-        return;  // Already transmitting
-    
-    // Copy data to transmit buffer
-    uint32_t j;
-    for(j = 0; j < count; j++)
-    {
-        if(j < 64)  // Buffer size limit
-            sciTxBuffer[j] = data[j];
-    }
-    
-    sciTxIndex = 0;
-    sciTxCount = count;
-    sciTxBusy = 1;
-    
-    // Start sending data
-    while(sciTxIndex < sciTxCount)
-    {
-        // Check if TX FIFO is full
-        if(SCI_getTxFIFOStatus(mySCIB_BASE) < SCI_FIFO_TX16)
-        {
-            SCI_writeCharNonBlocking(mySCIB_BASE, sciTxBuffer[sciTxIndex++]);
-        }
-        else
-        {
-            break;  // FIFO is full, wait for interrupt
-        }
-    }
-    
-    // Enable TX FIFO interrupt to continue sending
-    SCI_enableInterrupt(mySCIB_BASE, SCI_INT_TXFF);
-}
-
-//*****************************************************************************
-//
-// generateWaveforms - Generate 3-phase waveforms with 120 degree phase shift
-//
-//*****************************************************************************
-void generateWaveforms(float *ch0, float *ch1, float *ch2, float *ch3)
-{
-    float omega = 2.0f * 3.14159265f / period;
-
-    *ch0 = amplitude * sinf(omega * t);
-    *ch1 = amplitude * sinf(omega * t + 2.0f * 3.14159265f / 3.0f);  // 120 degrees
-    *ch2 = amplitude * sinf(omega * t + 4.0f * 3.14159265f / 3.0f);  // 240 degrees
-    *ch3 = amplitude * sinf(omega * t + 3.14159265f);                // 180 degrees
-
-    t += dt;
-    if(t >= period) { t = 0.0f; }
-}
-
-//*****************************************************************************
-//
-// justFloatSendFloat - JustFloat协议：将一个float拆成4字节通过SCI发送
-// C28x SCI 8位模式：每个uint16_t只发低8位
-//
-//*****************************************************************************
-static void justFloatSendFloat(float val)
-{
-    union { float f; uint16_t u[2]; } c;
-    uint16_t b[4];
-    c.f  = val;
-    b[0] =  c.u[0]        & 0x00FFu;  // 字节0：低字低8位
-    b[1] = (c.u[0] >> 8u) & 0x00FFu;  // 字节1：低字高8位
-    b[2] =  c.u[1]        & 0x00FFu;  // 字节2：高字低8位
-    b[3] = (c.u[1] >> 8u) & 0x00FFu;  // 字节3：高字高8位
-    SCI_writeCharArray(mySCIB_BASE, b, 4u);
-}
-
-//*****************************************************************************
-//
-// sendWaveformData - JustFloat协议发送4通道波形数据
-// 帧格式: [float ch0][float ch1][float ch2][float ch3][00 00 80 7F]
-//
-//*****************************************************************************
-void sendWaveformData(void)
-{
-    float ch0, ch1, ch2, ch3;
-    // 帧尾: IEEE 754 +Inf = 0x7F800000 (小端: 00 00 80 7F)
-    uint16_t tail[4] = {0x00u, 0x00u, 0x80u, 0x7Fu};
-
-    generateWaveforms(&ch0, &ch1, &ch2, &ch3);
-
-    // 使用非阻塞式发送
-    union { float f; uint16_t u[2]; } c;
-    uint16_t waveformData[20]; // 4 channels * 4 bytes + 4 byte tail
-    uint16_t pos = 0;
-
-    // Convert ch0
-    c.f = ch0;
-    waveformData[pos++] = c.u[0] & 0x00FFu;
-    waveformData[pos++] = (c.u[0] >> 8u) & 0x00FFu;
-    waveformData[pos++] = c.u[1] & 0x00FFu;
-    waveformData[pos++] = (c.u[1] >> 8u) & 0x00FFu;
-
-    // Convert ch1
-    c.f = ch1;
-    waveformData[pos++] = c.u[0] & 0x00FFu;
-    waveformData[pos++] = (c.u[0] >> 8u) & 0x00FFu;
-    waveformData[pos++] = c.u[1] & 0x00FFu;
-    waveformData[pos++] = (c.u[1] >> 8u) & 0x00FFu;
-
-    // Convert ch2
-    c.f = ch2;
-    waveformData[pos++] = c.u[0] & 0x00FFu;
-    waveformData[pos++] = (c.u[0] >> 8u) & 0x00FFu;
-    waveformData[pos++] = c.u[1] & 0x00FFu;
-    waveformData[pos++] = (c.u[1] >> 8u) & 0x00FFu;
-
-    // Convert ch3
-    c.f = ch3;
-    waveformData[pos++] = c.u[0] & 0x00FFu;
-    waveformData[pos++] = (c.u[0] >> 8u) & 0x00FFu;
-    waveformData[pos++] = c.u[1] & 0x00FFu;
-    waveformData[pos++] = (c.u[1] >> 8u) & 0x00FFu;
-
-    // Add tail
-    waveformData[pos++] = tail[0];
-    waveformData[pos++] = tail[1];
-    waveformData[pos++] = tail[2];
-    waveformData[pos++] = tail[3];
-
-    // Send all data at once
-    sciStartTransmit(waveformData, pos);
-}
-
-//*****************************************************************************
-//
-// processSerialCommand - Process serial commands to change waveform parameters
-//
-//*****************************************************************************
-void processSerialCommand(void)
-{
-    char cmdBuffer[64];
-    uint16_t i;
-
-    for(i = 0; i < sciRxIndex && i < 63u; i++)
-        cmdBuffer[i] = (char)sciRxBuffer[i];
-    cmdBuffer[i] = '\0';
-
-    // Debug: check what's received
-    if(cmdBuffer[0] == 'A')         // 设置幅值
-    {
-        float value = parseFloat(&cmdBuffer[1]);
-        if(value > 0.0f)
-        {
-            amplitude = value;
-        }
-    }
-    else if(cmdBuffer[0] == 'P')    // 设置周期
-    {
-        float value = parseFloat(&cmdBuffer[1]);
-        if(value > 0.0f)
-        {
-            period = value;
-        }
-    }
-    else if(cmdBuffer[0] == 'R')    // 设置采样率
-    {
-        float value = parseFloat(&cmdBuffer[1]);
-        if(value > 0.0f)
-        {
-            samplingRate = value;
-            dt = 1.0f / samplingRate;
-        }
-    }
-    else if(cmdBuffer[0] >= '0' && cmdBuffer[0] <= '9')    // 直接输入数字，设置幅值
-    {
-        float value = parseFloat(cmdBuffer);
-        if(value > 0.0f)
-        {
-            amplitude = value;
-        }
-    }
-
-    sciRxIndex = 0;
 }
 
 //

@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Fri Mar 13 21:30:20 2026                 *
+;* Date/Time created: Wed Mar 18 21:54:18 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -14,8 +14,8 @@ $C$DW$CU	.dwtag  DW_TAG_compile_unit
 ;**************************************************************
 ;* FUNCTION SYNONYMS                                          *
 ;**************************************************************
-	.global	||MotorBoard_SCI_init||
-||MotorBoard_SCI_init||	.set ||MotorBoard_SCIB_init||
+	.global	||SCI_init||
+||SCI_init||	.set ||mySCIB_init||
 
 $C$DW$1	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$1, DW_AT_name("GPIO_setPinConfig")
@@ -26,7 +26,7 @@ $C$DW$1	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$1, DW_AT_decl_line(0x405)
 	.dwattr $C$DW$1, DW_AT_decl_column(0x01)
 $C$DW$2	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$2, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$2, DW_AT_type(*$C$DW$T$26)
 
 	.dwendtag $C$DW$1
 
@@ -40,10 +40,10 @@ $C$DW$3	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$3, DW_AT_decl_line(0x36f)
 	.dwattr $C$DW$3, DW_AT_decl_column(0x01)
 $C$DW$4	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$4, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$4, DW_AT_type(*$C$DW$T$26)
 
 $C$DW$5	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$5, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$5, DW_AT_type(*$C$DW$T$26)
 
 	.dwendtag $C$DW$3
 
@@ -57,7 +57,7 @@ $C$DW$6	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$6, DW_AT_decl_line(0x396)
 	.dwattr $C$DW$6, DW_AT_decl_column(0x01)
 $C$DW$7	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$7, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$7, DW_AT_type(*$C$DW$T$26)
 
 $C$DW$8	.dwtag  DW_TAG_formal_parameter
 	.dwattr $C$DW$8, DW_AT_type(*$C$DW$T$20)
@@ -74,10 +74,10 @@ $C$DW$9	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$9, DW_AT_decl_line(0x636)
 	.dwattr $C$DW$9, DW_AT_decl_column(0x01)
 $C$DW$10	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$10, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$10, DW_AT_type(*$C$DW$T$26)
 
 $C$DW$11	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$11, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$11, DW_AT_type(*$C$DW$T$26)
 
 	.dwendtag $C$DW$9
 
@@ -91,16 +91,16 @@ $C$DW$12	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$12, DW_AT_decl_line(0x5b6)
 	.dwattr $C$DW$12, DW_AT_decl_column(0x01)
 $C$DW$13	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$13, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$13, DW_AT_type(*$C$DW$T$26)
 
 $C$DW$14	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$14, DW_AT_type(*$C$DW$T$26)
 
 $C$DW$15	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$15, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$15, DW_AT_type(*$C$DW$T$26)
 
 $C$DW$16	.dwtag  DW_TAG_formal_parameter
-	.dwattr $C$DW$16, DW_AT_type(*$C$DW$T$28)
+	.dwattr $C$DW$16, DW_AT_type(*$C$DW$T$26)
 
 	.dwendtag $C$DW$12
 
@@ -120,136 +120,28 @@ $C$DW$18	.dwtag  DW_TAG_subprogram
 	.dwattr $C$DW$18, DW_AT_external
 	.dwendtag $C$DW$18
 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{A74F5315-CB20-492F-82B9-22C1281421D0} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{AAC47273-B4D2-4F22-B3D8-173DBC87BB63} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{24D0E3BF-48F1-43CF-A38B-E5DD4B74564C} 
-	.sect	".text:MotorBoard_PinMux_init"
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{72988F85-CDDE-4F2B-9E85-6311D6CD29C0} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{08CA8B88-574C-42F5-8DA9-51411CE3F933} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{05A056E6-58E5-496A-83F3-41913516097E} 
+	.sect	".text:mySCIB_init"
 	.clink
-	.global	||MotorBoard_PinMux_init||
+	.global	||mySCIB_init||
 
 $C$DW$19	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$19, DW_AT_name("MotorBoard_PinMux_init")
-	.dwattr $C$DW$19, DW_AT_low_pc(||MotorBoard_PinMux_init||)
+	.dwattr $C$DW$19, DW_AT_name("mySCIB_init")
+	.dwattr $C$DW$19, DW_AT_low_pc(||mySCIB_init||)
 	.dwattr $C$DW$19, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$19, DW_AT_linkage_name("MotorBoard_PinMux_init")
+	.dwattr $C$DW$19, DW_AT_linkage_name("mySCIB_init")
 	.dwattr $C$DW$19, DW_AT_external
 	.dwattr $C$DW$19, DW_AT_decl_file("../sources/motorboard.c")
-	.dwattr $C$DW$19, DW_AT_decl_line(0x0d)
+	.dwattr $C$DW$19, DW_AT_decl_line(0x8b)
 	.dwattr $C$DW$19, DW_AT_decl_column(0x06)
-	.dwattr $C$DW$19, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/motorboard.c",line 14,column 1,is_stmt,address ||MotorBoard_PinMux_init||,isa 0
+	.dwattr $C$DW$19, DW_AT_TI_max_frame_size(-8)
+	.dwpsn	file "../sources/motorboard.c",line 139,column 19,is_stmt,address ||mySCIB_init||,isa 0
 
-	.dwfde $C$DW$CIE, ||MotorBoard_PinMux_init||
-
-;***************************************************************
-;* FNAME: MotorBoard_PinMux_init        FR SIZE:   2           *
-;*                                                             *
-;* FUNCTION ENVIRONMENT                                        *
-;*                                                             *
-;* FUNCTION PROPERTIES                                         *
-;*                            2 Parameter,  0 Auto,  0 SOE     *
-;***************************************************************
-
-||MotorBoard_PinMux_init||:
-	.dwcfi	cfa_offset, -2
-	.dwcfi	save_reg_to_mem, 26, 0
-        ADDB      SP,#2                 ; [CPU_ARAU] 
-	.dwcfi	cfa_offset, -4
-	.dwpsn	file "../sources/motorboard.c",line 15,column 5,is_stmt,isa 0
-        MOV       AL,#3590              ; [CPU_ALU] |15| 
-        MOV       AH,#72                ; [CPU_ALU] |15| 
-$C$DW$20	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$20, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$20, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$20, DW_AT_TI_call
-
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |15| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |15| 
-	.dwpsn	file "../sources/motorboard.c",line 16,column 5,is_stmt,isa 0
-        MOVB      ACC,#1                ; [CPU_ALU] |16| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |16| 
-        MOVB      ACC,#55               ; [CPU_ALU] |16| 
-$C$DW$21	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$21, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$21, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$21, DW_AT_TI_call
-
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |16| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |16| 
-	.dwpsn	file "../sources/motorboard.c",line 18,column 5,is_stmt,isa 0
-        MOVB      XAR4,#3               ; [CPU_ALU] |18| 
-        MOVB      ACC,#55               ; [CPU_ALU] |18| 
-$C$DW$22	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$22, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$22, DW_AT_name("GPIO_setQualificationMode")
-	.dwattr $C$DW$22, DW_AT_TI_call
-
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |18| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |18| 
-	.dwpsn	file "../sources/motorboard.c",line 20,column 5,is_stmt,isa 0
-        MOV       AL,#3078              ; [CPU_ALU] |20| 
-        MOV       AH,#72                ; [CPU_ALU] |20| 
-$C$DW$23	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$23, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$23, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$23, DW_AT_TI_call
-
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |20| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |20| 
-	.dwpsn	file "../sources/motorboard.c",line 21,column 5,is_stmt,isa 0
-        MOVB      ACC,#1                ; [CPU_ALU] |21| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |21| 
-        MOVB      ACC,#54               ; [CPU_ALU] |21| 
-$C$DW$24	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$24, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$24, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$24, DW_AT_TI_call
-
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |21| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |21| 
-	.dwpsn	file "../sources/motorboard.c",line 23,column 5,is_stmt,isa 0
-        MOVB      XAR4,#3               ; [CPU_ALU] |23| 
-        MOVB      ACC,#54               ; [CPU_ALU] |23| 
-$C$DW$25	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$25, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$25, DW_AT_name("GPIO_setQualificationMode")
-	.dwattr $C$DW$25, DW_AT_TI_call
-
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |23| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |23| 
-        SUBB      SP,#2                 ; [CPU_ARAU] 
-	.dwcfi	cfa_offset, -2
-$C$DW$26	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$26, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$26, DW_AT_TI_return
-
-        LRETR     ; [CPU_ALU] 
-        ; return occurs ; [] 
-	.dwattr $C$DW$19, DW_AT_TI_end_file("../sources/motorboard.c")
-	.dwattr $C$DW$19, DW_AT_TI_end_line(0x18)
-	.dwattr $C$DW$19, DW_AT_TI_end_column(0x01)
-	.dwendentry
-	.dwendtag $C$DW$19
-
-	.sect	".text:MotorBoard_SCIB_init"
-	.clink
-	.global	||MotorBoard_SCIB_init||
-
-$C$DW$27	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$27, DW_AT_name("MotorBoard_SCIB_init")
-	.dwattr $C$DW$27, DW_AT_low_pc(||MotorBoard_SCIB_init||)
-	.dwattr $C$DW$27, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$27, DW_AT_linkage_name("MotorBoard_SCIB_init")
-	.dwattr $C$DW$27, DW_AT_external
-	.dwattr $C$DW$27, DW_AT_decl_file("../sources/motorboard.c")
-	.dwattr $C$DW$27, DW_AT_decl_line(0x1f)
-	.dwattr $C$DW$27, DW_AT_decl_column(0x06)
-	.dwattr $C$DW$27, DW_AT_TI_max_frame_size(-8)
-	.dwpsn	file "../sources/motorboard.c",line 32,column 1,is_stmt,address ||MotorBoard_SCIB_init||,isa 0
-
-	.dwfde $C$DW$CIE, ||MotorBoard_SCIB_init||
+	.dwfde $C$DW$CIE, ||mySCIB_init||
 
 ;***************************************************************
-;* FNAME: MotorBoard_SCIB_init          FR SIZE:   6           *
+;* FNAME: mySCIB_init                   FR SIZE:   6           *
 ;*                                                             *
 ;* FUNCTION ENVIRONMENT                                        *
 ;*                                                             *
@@ -257,22 +149,25 @@ $C$DW$27	.dwtag  DW_TAG_subprogram
 ;*                            6 Parameter,  0 Auto,  0 SOE     *
 ;***************************************************************
 
-||MotorBoard_SCIB_init||:
+||mySCIB_init||:
+;* AR6   assigned to $O$L1
+;* AR6   assigned to $O$L2
+;* AR6   assigned to $O$L3
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         ADDB      SP,#6                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -8
-	.dwpsn	file "../sources/motorboard.c",line 33,column 5,is_stmt,isa 0
-        MOVB      ACC,#255              ; [CPU_ALU] |33| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |33| 
-        MOV       ACC,#29200            ; [CPU_ALU] |33| 
-$C$DW$28	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$28, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$28, DW_AT_name("SCI_clearInterruptStatus")
-	.dwattr $C$DW$28, DW_AT_TI_call
+	.dwpsn	file "../sources/motorboard.c",line 140,column 2,is_stmt,isa 0
+        MOVB      ACC,#255              ; [CPU_ALU] |140| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |140| 
+        MOV       ACC,#29200            ; [CPU_ALU] |140| 
+$C$DW$20	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$20, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$20, DW_AT_name("SCI_clearInterruptStatus")
+	.dwattr $C$DW$20, DW_AT_TI_call
 
-        LCR       #||SCI_clearInterruptStatus|| ; [CPU_ALU] |33| 
-        ; call occurs [#||SCI_clearInterruptStatus||] ; [] |33| 
+        LCR       #||SCI_clearInterruptStatus|| ; [CPU_ALU] |140| 
+        ; call occurs [#||SCI_clearInterruptStatus||] ; [] |140| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1417,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x721b)        ; [CPU_ALU] |1417| 
         OR        AL,#0x4000            ; [CPU_ALU] |1417| 
@@ -296,35 +191,36 @@ $C$DW$28	.dwtag  DW_TAG_TI_branch
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 870,column 5,is_stmt,isa 0
         MOV       AR6,*(0:0x721a)       ; [CPU_ALU] |870| 
         AND       AR6,#0x7fff           ; [CPU_ALU] |870| 
-	.dwpsn	file "../sources/motorboard.c",line 41,column 5,is_stmt,isa 0
-        MOV       AH,#762               ; [CPU_ALU] |41| 
-        MOV       AL,#61568             ; [CPU_ALU] |41| 
+	.dwpsn	file "../sources/motorboard.c",line 147,column 2,is_stmt,isa 0
+        MOV       AH,#762               ; [CPU_ALU] |147| 
+        MOV       AL,#61568             ; [CPU_ALU] |147| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 870,column 5,is_stmt,isa 0
         MOV       *(0:0x721a),AR6       ; [CPU_ALU] |870| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 871,column 5,is_stmt,isa 0
         MOV       AR7,*(0:0x721a)       ; [CPU_ALU] |871| 
-	.dwpsn	file "../sources/motorboard.c",line 41,column 5,is_stmt,isa 0
-        MOVB      XAR6,#7               ; [CPU_ALU] |41| 
-        MOVL      XAR4,#115200          ; [CPU_ARAU] |41| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |41| 
+	.dwpsn	file "../sources/motorboard.c",line 147,column 2,is_stmt,isa 0
+        MOVB      XAR6,#7               ; [CPU_ALU] |147| 
+        MOVL      XAR4,#9600            ; [CPU_ARAU] |147| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |147| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 871,column 5,is_stmt,isa 0
         OR        AR7,#0x8000           ; [CPU_ALU] |871| 
-	.dwpsn	file "../sources/motorboard.c",line 41,column 5,is_stmt,isa 0
-        MOVL      *-SP[4],XAR4          ; [CPU_ALU] |41| 
-        MOV       ACC,#29200            ; [CPU_ALU] |41| 
-        MOVL      *-SP[6],XAR6          ; [CPU_ALU] |41| 
+	.dwpsn	file "../sources/motorboard.c",line 147,column 2,is_stmt,isa 0
+        MOVL      *-SP[4],XAR4          ; [CPU_ALU] |147| 
+        MOV       ACC,#29200            ; [CPU_ALU] |147| 
+        MOVL      *-SP[6],XAR6          ; [CPU_ALU] |147| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 871,column 5,is_stmt,isa 0
         MOV       *(0:0x721a),AR7       ; [CPU_ALU] |871| 
-	.dwpsn	file "../sources/motorboard.c",line 41,column 5,is_stmt,isa 0
-$C$DW$29	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$29, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$29, DW_AT_name("SCI_setConfig")
-	.dwattr $C$DW$29, DW_AT_TI_call
+	.dwpsn	file "../sources/motorboard.c",line 147,column 2,is_stmt,isa 0
+$C$DW$21	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$21, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$21, DW_AT_name("SCI_setConfig")
+	.dwattr $C$DW$21, DW_AT_TI_call
 
-        LCR       #||SCI_setConfig||    ; [CPU_ALU] |41| 
-        ; call occurs [#||SCI_setConfig||] ; [] |41| 
+        LCR       #||SCI_setConfig||    ; [CPU_ALU] |147| 
+        ; call occurs [#||SCI_setConfig||] ; [] |147| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1366,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x7210)        ; [CPU_ALU] |1366| 
+        MOVL      XAR6,#9999            ; [CPU_ALU] 
         AND       AL,#0xffef            ; [CPU_ALU] |1366| 
         MOV       *(0:0x7210),AL        ; [CPU_ALU] |1366| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 1313,column 5,is_stmt,isa 0
@@ -335,13 +231,20 @@ $C$DW$29	.dwtag  DW_TAG_TI_branch
         MOV       AL,*(0:0x7211)        ; [CPU_ALU] |1314| 
         ORB       AL,#0x20              ; [CPU_ALU] |1314| 
         MOV       *(0:0x7211),AL        ; [CPU_ALU] |1314| 
+||$C$L1||:    
+ NOP
+	.dwpsn	file "../sources/motorboard.c",line 153,column 12,is_stmt,isa 0
+        BANZ      ||$C$L1||,AR6--       ; [CPU_ALU] |153| 
+        ; branchcc occurs ; [] |153| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 412,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x721a)        ; [CPU_ALU] |412| 
         AND       AL,#0xffe0            ; [CPU_ALU] |412| 
         MOV       *(0:0x721a),AL        ; [CPU_ALU] |412| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 414,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x721b)        ; [CPU_ALU] |414| 
-        AND       AL,#0xffe0            ; [CPU_ALU] |414| 
+        MOVL      XAR6,#4999            ; [CPU_ALU] 
+        AND       AL,AL,#0xffe0         ; [CPU_ALU] |414| 
+        ORB       AL,#0x01              ; [CPU_ALU] |414| 
         MOV       *(0:0x721b),AL        ; [CPU_ALU] |414| 
 	.dwpsn	file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h",line 738,column 5,is_stmt,isa 0
         MOV       AL,*(0:0x721a)        ; [CPU_ALU] |738| 
@@ -359,40 +262,52 @@ $C$DW$29	.dwtag  DW_TAG_TI_branch
         MOV       AL,*(0:0x7211)        ; [CPU_ALU] |527| 
         ORB       AL,#0x23              ; [CPU_ALU] |527| 
         MOV       *(0:0x7211),AL        ; [CPU_ALU] |527| 
+||$C$L2||:    
+ NOP
+	.dwpsn	file "../sources/motorboard.c",line 162,column 12,is_stmt,isa 0
+        BANZ      ||$C$L2||,AR6--       ; [CPU_ALU] |162| 
+        ; branchcc occurs ; [] |162| 
+        MOVL      XAR6,#4999            ; [CPU_ALU] 
+||$C$L3||:    
+ NOP
+	.dwpsn	file "../sources/motorboard.c",line 169,column 12,is_stmt,isa 0
+        BANZ      ||$C$L3||,AR6--       ; [CPU_ALU] |169| 
+        ; branchcc occurs ; [] |169| 
         SUBB      SP,#6                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
-$C$DW$30	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$30, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$30, DW_AT_TI_return
+        SPM       #0                    ; [CPU_ALU] 
+$C$DW$22	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$22, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$22, DW_AT_TI_return
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
-	.dwattr $C$DW$27, DW_AT_TI_end_file("../sources/motorboard.c")
-	.dwattr $C$DW$27, DW_AT_TI_end_line(0x33)
-	.dwattr $C$DW$27, DW_AT_TI_end_column(0x01)
+	.dwattr $C$DW$19, DW_AT_TI_end_file("../sources/motorboard.c")
+	.dwattr $C$DW$19, DW_AT_TI_end_line(0xac)
+	.dwattr $C$DW$19, DW_AT_TI_end_column(0x01)
 	.dwendentry
-	.dwendtag $C$DW$27
+	.dwendtag $C$DW$19
 
-	.sect	".text:MotorBoard_init"
+	.sect	".text:PinMux_init"
 	.clink
-	.global	||MotorBoard_init||
+	.global	||PinMux_init||
 
-$C$DW$31	.dwtag  DW_TAG_subprogram
-	.dwattr $C$DW$31, DW_AT_name("MotorBoard_init")
-	.dwattr $C$DW$31, DW_AT_low_pc(||MotorBoard_init||)
-	.dwattr $C$DW$31, DW_AT_high_pc(0x00)
-	.dwattr $C$DW$31, DW_AT_linkage_name("MotorBoard_init")
-	.dwattr $C$DW$31, DW_AT_external
-	.dwattr $C$DW$31, DW_AT_decl_file("../sources/motorboard.c")
-	.dwattr $C$DW$31, DW_AT_decl_line(0x03)
-	.dwattr $C$DW$31, DW_AT_decl_column(0x06)
-	.dwattr $C$DW$31, DW_AT_TI_max_frame_size(-4)
-	.dwpsn	file "../sources/motorboard.c",line 4,column 1,is_stmt,address ||MotorBoard_init||,isa 0
+$C$DW$23	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$23, DW_AT_name("PinMux_init")
+	.dwattr $C$DW$23, DW_AT_low_pc(||PinMux_init||)
+	.dwattr $C$DW$23, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$23, DW_AT_linkage_name("PinMux_init")
+	.dwattr $C$DW$23, DW_AT_external
+	.dwattr $C$DW$23, DW_AT_decl_file("../sources/motorboard.c")
+	.dwattr $C$DW$23, DW_AT_decl_line(0x40)
+	.dwattr $C$DW$23, DW_AT_decl_column(0x06)
+	.dwattr $C$DW$23, DW_AT_TI_max_frame_size(-4)
+	.dwpsn	file "../sources/motorboard.c",line 65,column 1,is_stmt,address ||PinMux_init||,isa 0
 
-	.dwfde $C$DW$CIE, ||MotorBoard_init||
+	.dwfde $C$DW$CIE, ||PinMux_init||
 
 ;***************************************************************
-;* FNAME: MotorBoard_init               FR SIZE:   2           *
+;* FNAME: PinMux_init                   FR SIZE:   2           *
 ;*                                                             *
 ;* FUNCTION ENVIRONMENT                                        *
 ;*                                                             *
@@ -400,98 +315,290 @@ $C$DW$31	.dwtag  DW_TAG_subprogram
 ;*                            2 Parameter,  0 Auto,  0 SOE     *
 ;***************************************************************
 
-||MotorBoard_init||:
+||PinMux_init||:
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
         ADDB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -4
-	.dwpsn	file "../sources/motorboard.c",line 5,column 5,is_stmt,isa 0
-        EALLOW    ; [CPU_ALU] |5| 
-	.dwpsn	file "../sources/motorboard.c",line 15,column 5,is_stmt,isa 0
-        MOV       AL,#3590              ; [CPU_ALU] |15| 
-        MOV       AH,#72                ; [CPU_ALU] |15| 
-$C$DW$32	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$32, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$32, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$32, DW_AT_TI_call
+	.dwpsn	file "../sources/motorboard.c",line 75,column 2,is_stmt,isa 0
+        MOV       AL,#3590              ; [CPU_ALU] |75| 
+        MOV       AH,#72                ; [CPU_ALU] |75| 
+$C$DW$24	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$24, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$24, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$24, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |15| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |15| 
-	.dwpsn	file "../sources/motorboard.c",line 16,column 5,is_stmt,isa 0
-        MOVB      ACC,#1                ; [CPU_ALU] |16| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |16| 
-        MOVB      ACC,#55               ; [CPU_ALU] |16| 
-$C$DW$33	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$33, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$33, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$33, DW_AT_TI_call
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |75| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |75| 
+	.dwpsn	file "../sources/motorboard.c",line 76,column 2,is_stmt,isa 0
+        MOVB      ACC,#1                ; [CPU_ALU] |76| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |76| 
+        MOVB      ACC,#55               ; [CPU_ALU] |76| 
+$C$DW$25	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$25, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$25, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$25, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |16| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |16| 
-	.dwpsn	file "../sources/motorboard.c",line 18,column 5,is_stmt,isa 0
-        MOVB      XAR4,#3               ; [CPU_ALU] |18| 
-        MOVB      ACC,#55               ; [CPU_ALU] |18| 
-$C$DW$34	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$34, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$34, DW_AT_name("GPIO_setQualificationMode")
-	.dwattr $C$DW$34, DW_AT_TI_call
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |76| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |76| 
+	.dwpsn	file "../sources/motorboard.c",line 77,column 2,is_stmt,isa 0
+        MOVB      XAR4,#3               ; [CPU_ALU] |77| 
+        MOVB      ACC,#55               ; [CPU_ALU] |77| 
+$C$DW$26	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$26, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$26, DW_AT_name("GPIO_setQualificationMode")
+	.dwattr $C$DW$26, DW_AT_TI_call
 
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |18| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |18| 
-	.dwpsn	file "../sources/motorboard.c",line 20,column 5,is_stmt,isa 0
-        MOV       AL,#3078              ; [CPU_ALU] |20| 
-        MOV       AH,#72                ; [CPU_ALU] |20| 
-$C$DW$35	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$35, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$35, DW_AT_name("GPIO_setPinConfig")
-	.dwattr $C$DW$35, DW_AT_TI_call
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |77| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |77| 
+	.dwpsn	file "../sources/motorboard.c",line 79,column 2,is_stmt,isa 0
+        MOV       AL,#3078              ; [CPU_ALU] |79| 
+        MOV       AH,#72                ; [CPU_ALU] |79| 
+$C$DW$27	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$27, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$27, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$27, DW_AT_TI_call
 
-        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |20| 
-        ; call occurs [#||GPIO_setPinConfig||] ; [] |20| 
-	.dwpsn	file "../sources/motorboard.c",line 21,column 5,is_stmt,isa 0
-        MOVB      ACC,#1                ; [CPU_ALU] |21| 
-        MOVL      *-SP[2],ACC           ; [CPU_ALU] |21| 
-        MOVB      ACC,#54               ; [CPU_ALU] |21| 
-$C$DW$36	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$36, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$36, DW_AT_name("GPIO_setPadConfig")
-	.dwattr $C$DW$36, DW_AT_TI_call
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |79| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |79| 
+	.dwpsn	file "../sources/motorboard.c",line 80,column 2,is_stmt,isa 0
+        MOVB      ACC,#1                ; [CPU_ALU] |80| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |80| 
+        MOVB      ACC,#54               ; [CPU_ALU] |80| 
+$C$DW$28	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$28, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$28, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$28, DW_AT_TI_call
 
-        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |21| 
-        ; call occurs [#||GPIO_setPadConfig||] ; [] |21| 
-	.dwpsn	file "../sources/motorboard.c",line 23,column 5,is_stmt,isa 0
-        MOVB      XAR4,#3               ; [CPU_ALU] |23| 
-        MOVB      ACC,#54               ; [CPU_ALU] |23| 
-$C$DW$37	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$37, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$37, DW_AT_name("GPIO_setQualificationMode")
-	.dwattr $C$DW$37, DW_AT_TI_call
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |80| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |80| 
+	.dwpsn	file "../sources/motorboard.c",line 81,column 2,is_stmt,isa 0
+        MOVB      XAR4,#3               ; [CPU_ALU] |81| 
+        MOVB      ACC,#54               ; [CPU_ALU] |81| 
+$C$DW$29	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$29, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$29, DW_AT_name("GPIO_setQualificationMode")
+	.dwattr $C$DW$29, DW_AT_TI_call
 
-        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |23| 
-        ; call occurs [#||GPIO_setQualificationMode||] ; [] |23| 
-	.dwpsn	file "../sources/motorboard.c",line 28,column 5,is_stmt,isa 0
-$C$DW$38	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$38, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$38, DW_AT_name("MotorBoard_SCIB_init")
-	.dwattr $C$DW$38, DW_AT_TI_call
-
-        LCR       #||MotorBoard_SCIB_init|| ; [CPU_ALU] |28| 
-        ; call occurs [#||MotorBoard_SCIB_init||] ; [] |28| 
-	.dwpsn	file "../sources/motorboard.c",line 10,column 5,is_stmt,isa 0
-        EDIS      ; [CPU_ALU] |10| 
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |81| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |81| 
         SUBB      SP,#2                 ; [CPU_ARAU] 
 	.dwcfi	cfa_offset, -2
-$C$DW$39	.dwtag  DW_TAG_TI_branch
-	.dwattr $C$DW$39, DW_AT_low_pc(0x00)
-	.dwattr $C$DW$39, DW_AT_TI_return
+$C$DW$30	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$30, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$30, DW_AT_TI_return
+
+        LRETR     ; [CPU_ALU] 
+        ; return occurs ; [] 
+	.dwattr $C$DW$23, DW_AT_TI_end_file("../sources/motorboard.c")
+	.dwattr $C$DW$23, DW_AT_TI_end_line(0x54)
+	.dwattr $C$DW$23, DW_AT_TI_end_column(0x01)
+	.dwendentry
+	.dwendtag $C$DW$23
+
+	.sect	".text:INTERRUPT_init"
+	.clink
+	.global	||INTERRUPT_init||
+
+$C$DW$31	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$31, DW_AT_name("INTERRUPT_init")
+	.dwattr $C$DW$31, DW_AT_low_pc(||INTERRUPT_init||)
+	.dwattr $C$DW$31, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$31, DW_AT_linkage_name("INTERRUPT_init")
+	.dwattr $C$DW$31, DW_AT_external
+	.dwattr $C$DW$31, DW_AT_decl_file("../sources/motorboard.c")
+	.dwattr $C$DW$31, DW_AT_decl_line(0x7f)
+	.dwattr $C$DW$31, DW_AT_decl_column(0x06)
+	.dwattr $C$DW$31, DW_AT_TI_max_frame_size(-2)
+	.dwpsn	file "../sources/motorboard.c",line 127,column 22,is_stmt,address ||INTERRUPT_init||,isa 0
+
+	.dwfde $C$DW$CIE, ||INTERRUPT_init||
+
+;***************************************************************
+;* FNAME: INTERRUPT_init                FR SIZE:   0           *
+;*                                                             *
+;* FUNCTION ENVIRONMENT                                        *
+;*                                                             *
+;* FUNCTION PROPERTIES                                         *
+;*                            0 Parameter,  0 Auto,  0 SOE     *
+;***************************************************************
+
+||INTERRUPT_init||:
+	.dwcfi	cfa_offset, -2
+	.dwcfi	save_reg_to_mem, 26, 0
+$C$DW$32	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$32, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$32, DW_AT_TI_return
 
         LRETR     ; [CPU_ALU] 
         ; return occurs ; [] 
 	.dwattr $C$DW$31, DW_AT_TI_end_file("../sources/motorboard.c")
-	.dwattr $C$DW$31, DW_AT_TI_end_line(0x0b)
+	.dwattr $C$DW$31, DW_AT_TI_end_line(0x81)
 	.dwattr $C$DW$31, DW_AT_TI_end_column(0x01)
 	.dwendentry
 	.dwendtag $C$DW$31
+
+	.sect	".text:GPIO_init"
+	.clink
+	.global	||GPIO_init||
+
+$C$DW$33	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$33, DW_AT_name("GPIO_init")
+	.dwattr $C$DW$33, DW_AT_low_pc(||GPIO_init||)
+	.dwattr $C$DW$33, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$33, DW_AT_linkage_name("GPIO_init")
+	.dwattr $C$DW$33, DW_AT_external
+	.dwattr $C$DW$33, DW_AT_decl_file("../sources/motorboard.c")
+	.dwattr $C$DW$33, DW_AT_decl_line(0x6f)
+	.dwattr $C$DW$33, DW_AT_decl_column(0x06)
+	.dwattr $C$DW$33, DW_AT_TI_max_frame_size(-2)
+	.dwpsn	file "../sources/motorboard.c",line 111,column 17,is_stmt,address ||GPIO_init||,isa 0
+
+	.dwfde $C$DW$CIE, ||GPIO_init||
+
+;***************************************************************
+;* FNAME: GPIO_init                     FR SIZE:   0           *
+;*                                                             *
+;* FUNCTION ENVIRONMENT                                        *
+;*                                                             *
+;* FUNCTION PROPERTIES                                         *
+;*                            0 Parameter,  0 Auto,  0 SOE     *
+;***************************************************************
+
+||GPIO_init||:
+	.dwcfi	cfa_offset, -2
+	.dwcfi	save_reg_to_mem, 26, 0
+$C$DW$34	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$34, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$34, DW_AT_TI_return
+
+        LRETR     ; [CPU_ALU] 
+        ; return occurs ; [] 
+	.dwattr $C$DW$33, DW_AT_TI_end_file("../sources/motorboard.c")
+	.dwattr $C$DW$33, DW_AT_TI_end_line(0x71)
+	.dwattr $C$DW$33, DW_AT_TI_end_column(0x01)
+	.dwendentry
+	.dwendtag $C$DW$33
+
+	.sect	".text:Board_init"
+	.clink
+	.global	||Board_init||
+
+$C$DW$35	.dwtag  DW_TAG_subprogram
+	.dwattr $C$DW$35, DW_AT_name("Board_init")
+	.dwattr $C$DW$35, DW_AT_low_pc(||Board_init||)
+	.dwattr $C$DW$35, DW_AT_high_pc(0x00)
+	.dwattr $C$DW$35, DW_AT_linkage_name("Board_init")
+	.dwattr $C$DW$35, DW_AT_external
+	.dwattr $C$DW$35, DW_AT_decl_file("../sources/motorboard.c")
+	.dwattr $C$DW$35, DW_AT_decl_line(0x2e)
+	.dwattr $C$DW$35, DW_AT_decl_column(0x06)
+	.dwattr $C$DW$35, DW_AT_TI_max_frame_size(-4)
+	.dwpsn	file "../sources/motorboard.c",line 47,column 1,is_stmt,address ||Board_init||,isa 0
+
+	.dwfde $C$DW$CIE, ||Board_init||
+
+;***************************************************************
+;* FNAME: Board_init                    FR SIZE:   2           *
+;*                                                             *
+;* FUNCTION ENVIRONMENT                                        *
+;*                                                             *
+;* FUNCTION PROPERTIES                                         *
+;*                            2 Parameter,  0 Auto,  0 SOE     *
+;***************************************************************
+
+||Board_init||:
+	.dwcfi	cfa_offset, -2
+	.dwcfi	save_reg_to_mem, 26, 0
+        ADDB      SP,#2                 ; [CPU_ARAU] 
+	.dwcfi	cfa_offset, -4
+	.dwpsn	file "../sources/motorboard.c",line 48,column 2,is_stmt,isa 0
+        EALLOW    ; [CPU_ALU] |48| 
+	.dwpsn	file "../sources/motorboard.c",line 75,column 2,is_stmt,isa 0
+        MOV       AL,#3590              ; [CPU_ALU] |75| 
+        MOV       AH,#72                ; [CPU_ALU] |75| 
+$C$DW$36	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$36, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$36, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$36, DW_AT_TI_call
+
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |75| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |75| 
+	.dwpsn	file "../sources/motorboard.c",line 76,column 2,is_stmt,isa 0
+        MOVB      ACC,#1                ; [CPU_ALU] |76| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |76| 
+        MOVB      ACC,#55               ; [CPU_ALU] |76| 
+$C$DW$37	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$37, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$37, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$37, DW_AT_TI_call
+
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |76| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |76| 
+	.dwpsn	file "../sources/motorboard.c",line 77,column 2,is_stmt,isa 0
+        MOVB      XAR4,#3               ; [CPU_ALU] |77| 
+        MOVB      ACC,#55               ; [CPU_ALU] |77| 
+$C$DW$38	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$38, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$38, DW_AT_name("GPIO_setQualificationMode")
+	.dwattr $C$DW$38, DW_AT_TI_call
+
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |77| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |77| 
+	.dwpsn	file "../sources/motorboard.c",line 79,column 2,is_stmt,isa 0
+        MOV       AL,#3078              ; [CPU_ALU] |79| 
+        MOV       AH,#72                ; [CPU_ALU] |79| 
+$C$DW$39	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$39, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$39, DW_AT_name("GPIO_setPinConfig")
+	.dwattr $C$DW$39, DW_AT_TI_call
+
+        LCR       #||GPIO_setPinConfig|| ; [CPU_ALU] |79| 
+        ; call occurs [#||GPIO_setPinConfig||] ; [] |79| 
+	.dwpsn	file "../sources/motorboard.c",line 80,column 2,is_stmt,isa 0
+        MOVB      ACC,#1                ; [CPU_ALU] |80| 
+        MOVL      *-SP[2],ACC           ; [CPU_ALU] |80| 
+        MOVB      ACC,#54               ; [CPU_ALU] |80| 
+$C$DW$40	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$40, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$40, DW_AT_name("GPIO_setPadConfig")
+	.dwattr $C$DW$40, DW_AT_TI_call
+
+        LCR       #||GPIO_setPadConfig|| ; [CPU_ALU] |80| 
+        ; call occurs [#||GPIO_setPadConfig||] ; [] |80| 
+	.dwpsn	file "../sources/motorboard.c",line 81,column 2,is_stmt,isa 0
+        MOVB      XAR4,#3               ; [CPU_ALU] |81| 
+        MOVB      ACC,#54               ; [CPU_ALU] |81| 
+$C$DW$41	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$41, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$41, DW_AT_name("GPIO_setQualificationMode")
+	.dwattr $C$DW$41, DW_AT_TI_call
+
+        LCR       #||GPIO_setQualificationMode|| ; [CPU_ALU] |81| 
+        ; call occurs [#||GPIO_setQualificationMode||] ; [] |81| 
+	.dwpsn	file "../sources/motorboard.c",line 136,column 2,is_stmt,isa 0
+$C$DW$42	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$42, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$42, DW_AT_name("mySCIB_init")
+	.dwattr $C$DW$42, DW_AT_TI_call
+
+        LCR       #||mySCIB_init||      ; [CPU_ALU] |136| 
+        ; call occurs [#||mySCIB_init||] ; [] |136| 
+	.dwpsn	file "../sources/motorboard.c",line 56,column 2,is_stmt,isa 0
+        EDIS      ; [CPU_ALU] |56| 
+        SUBB      SP,#2                 ; [CPU_ARAU] 
+	.dwcfi	cfa_offset, -2
+$C$DW$43	.dwtag  DW_TAG_TI_branch
+	.dwattr $C$DW$43, DW_AT_low_pc(0x00)
+	.dwattr $C$DW$43, DW_AT_TI_return
+
+        LRETR     ; [CPU_ALU] 
+        ; return occurs ; [] 
+	.dwattr $C$DW$35, DW_AT_TI_end_file("../sources/motorboard.c")
+	.dwattr $C$DW$35, DW_AT_TI_end_line(0x39)
+	.dwattr $C$DW$35, DW_AT_TI_end_column(0x01)
+	.dwendentry
+	.dwendtag $C$DW$35
 
 ;**************************************************************
 ;* UNDEFINED EXTERNAL REFERENCES                              *
@@ -540,33 +647,33 @@ $C$DW$TU$19	.dwtag  DW_TAG_type_unit
 
 $C$DW$T$19	.dwtag  DW_TAG_enumeration_type
 	.dwattr $C$DW$T$19, DW_AT_byte_size(0x01)
-$C$DW$40	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$40, DW_AT_name("GPIO_QUAL_SYNC")
-	.dwattr $C$DW$40, DW_AT_const_value(0x00)
-	.dwattr $C$DW$40, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
-	.dwattr $C$DW$40, DW_AT_decl_line(0x97)
-	.dwattr $C$DW$40, DW_AT_decl_column(0x05)
+$C$DW$44	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$44, DW_AT_name("GPIO_QUAL_SYNC")
+	.dwattr $C$DW$44, DW_AT_const_value(0x00)
+	.dwattr $C$DW$44, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
+	.dwattr $C$DW$44, DW_AT_decl_line(0x97)
+	.dwattr $C$DW$44, DW_AT_decl_column(0x05)
 
-$C$DW$41	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$41, DW_AT_name("GPIO_QUAL_3SAMPLE")
-	.dwattr $C$DW$41, DW_AT_const_value(0x01)
-	.dwattr $C$DW$41, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
-	.dwattr $C$DW$41, DW_AT_decl_line(0x98)
-	.dwattr $C$DW$41, DW_AT_decl_column(0x05)
+$C$DW$45	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$45, DW_AT_name("GPIO_QUAL_3SAMPLE")
+	.dwattr $C$DW$45, DW_AT_const_value(0x01)
+	.dwattr $C$DW$45, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
+	.dwattr $C$DW$45, DW_AT_decl_line(0x98)
+	.dwattr $C$DW$45, DW_AT_decl_column(0x05)
 
-$C$DW$42	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$42, DW_AT_name("GPIO_QUAL_6SAMPLE")
-	.dwattr $C$DW$42, DW_AT_const_value(0x02)
-	.dwattr $C$DW$42, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
-	.dwattr $C$DW$42, DW_AT_decl_line(0x99)
-	.dwattr $C$DW$42, DW_AT_decl_column(0x05)
+$C$DW$46	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$46, DW_AT_name("GPIO_QUAL_6SAMPLE")
+	.dwattr $C$DW$46, DW_AT_const_value(0x02)
+	.dwattr $C$DW$46, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
+	.dwattr $C$DW$46, DW_AT_decl_line(0x99)
+	.dwattr $C$DW$46, DW_AT_decl_column(0x05)
 
-$C$DW$43	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$43, DW_AT_name("GPIO_QUAL_ASYNC")
-	.dwattr $C$DW$43, DW_AT_const_value(0x03)
-	.dwattr $C$DW$43, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
-	.dwattr $C$DW$43, DW_AT_decl_line(0x9a)
-	.dwattr $C$DW$43, DW_AT_decl_column(0x05)
+$C$DW$47	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$47, DW_AT_name("GPIO_QUAL_ASYNC")
+	.dwattr $C$DW$47, DW_AT_const_value(0x03)
+	.dwattr $C$DW$47, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
+	.dwattr $C$DW$47, DW_AT_decl_line(0x9a)
+	.dwattr $C$DW$47, DW_AT_decl_column(0x05)
 
 	.dwattr $C$DW$T$19, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/gpio.h")
 	.dwattr $C$DW$T$19, DW_AT_decl_line(0x96)
@@ -593,124 +700,124 @@ $C$DW$TU$21	.dwtag  DW_TAG_type_unit
 
 $C$DW$T$21	.dwtag  DW_TAG_enumeration_type
 	.dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
-$C$DW$44	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$44, DW_AT_name("SCI_FIFO_TX0")
-	.dwattr $C$DW$44, DW_AT_const_value(0x00)
-	.dwattr $C$DW$44, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$44, DW_AT_decl_line(0x84)
-	.dwattr $C$DW$44, DW_AT_decl_column(0x05)
-
-$C$DW$45	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$45, DW_AT_name("SCI_FIFO_TX1")
-	.dwattr $C$DW$45, DW_AT_const_value(0x01)
-	.dwattr $C$DW$45, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$45, DW_AT_decl_line(0x85)
-	.dwattr $C$DW$45, DW_AT_decl_column(0x05)
-
-$C$DW$46	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$46, DW_AT_name("SCI_FIFO_TX2")
-	.dwattr $C$DW$46, DW_AT_const_value(0x02)
-	.dwattr $C$DW$46, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$46, DW_AT_decl_line(0x86)
-	.dwattr $C$DW$46, DW_AT_decl_column(0x05)
-
-$C$DW$47	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$47, DW_AT_name("SCI_FIFO_TX3")
-	.dwattr $C$DW$47, DW_AT_const_value(0x03)
-	.dwattr $C$DW$47, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$47, DW_AT_decl_line(0x87)
-	.dwattr $C$DW$47, DW_AT_decl_column(0x05)
-
 $C$DW$48	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$48, DW_AT_name("SCI_FIFO_TX4")
-	.dwattr $C$DW$48, DW_AT_const_value(0x04)
+	.dwattr $C$DW$48, DW_AT_name("SCI_FIFO_TX0")
+	.dwattr $C$DW$48, DW_AT_const_value(0x00)
 	.dwattr $C$DW$48, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$48, DW_AT_decl_line(0x88)
+	.dwattr $C$DW$48, DW_AT_decl_line(0x84)
 	.dwattr $C$DW$48, DW_AT_decl_column(0x05)
 
 $C$DW$49	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$49, DW_AT_name("SCI_FIFO_TX5")
-	.dwattr $C$DW$49, DW_AT_const_value(0x05)
+	.dwattr $C$DW$49, DW_AT_name("SCI_FIFO_TX1")
+	.dwattr $C$DW$49, DW_AT_const_value(0x01)
 	.dwattr $C$DW$49, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$49, DW_AT_decl_line(0x89)
+	.dwattr $C$DW$49, DW_AT_decl_line(0x85)
 	.dwattr $C$DW$49, DW_AT_decl_column(0x05)
 
 $C$DW$50	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$50, DW_AT_name("SCI_FIFO_TX6")
-	.dwattr $C$DW$50, DW_AT_const_value(0x06)
+	.dwattr $C$DW$50, DW_AT_name("SCI_FIFO_TX2")
+	.dwattr $C$DW$50, DW_AT_const_value(0x02)
 	.dwattr $C$DW$50, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$50, DW_AT_decl_line(0x8a)
+	.dwattr $C$DW$50, DW_AT_decl_line(0x86)
 	.dwattr $C$DW$50, DW_AT_decl_column(0x05)
 
 $C$DW$51	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$51, DW_AT_name("SCI_FIFO_TX7")
-	.dwattr $C$DW$51, DW_AT_const_value(0x07)
+	.dwattr $C$DW$51, DW_AT_name("SCI_FIFO_TX3")
+	.dwattr $C$DW$51, DW_AT_const_value(0x03)
 	.dwattr $C$DW$51, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$51, DW_AT_decl_line(0x8b)
+	.dwattr $C$DW$51, DW_AT_decl_line(0x87)
 	.dwattr $C$DW$51, DW_AT_decl_column(0x05)
 
 $C$DW$52	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$52, DW_AT_name("SCI_FIFO_TX8")
-	.dwattr $C$DW$52, DW_AT_const_value(0x08)
+	.dwattr $C$DW$52, DW_AT_name("SCI_FIFO_TX4")
+	.dwattr $C$DW$52, DW_AT_const_value(0x04)
 	.dwattr $C$DW$52, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$52, DW_AT_decl_line(0x8c)
+	.dwattr $C$DW$52, DW_AT_decl_line(0x88)
 	.dwattr $C$DW$52, DW_AT_decl_column(0x05)
 
 $C$DW$53	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$53, DW_AT_name("SCI_FIFO_TX9")
-	.dwattr $C$DW$53, DW_AT_const_value(0x09)
+	.dwattr $C$DW$53, DW_AT_name("SCI_FIFO_TX5")
+	.dwattr $C$DW$53, DW_AT_const_value(0x05)
 	.dwattr $C$DW$53, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$53, DW_AT_decl_line(0x8d)
+	.dwattr $C$DW$53, DW_AT_decl_line(0x89)
 	.dwattr $C$DW$53, DW_AT_decl_column(0x05)
 
 $C$DW$54	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$54, DW_AT_name("SCI_FIFO_TX10")
-	.dwattr $C$DW$54, DW_AT_const_value(0x0a)
+	.dwattr $C$DW$54, DW_AT_name("SCI_FIFO_TX6")
+	.dwattr $C$DW$54, DW_AT_const_value(0x06)
 	.dwattr $C$DW$54, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$54, DW_AT_decl_line(0x8e)
+	.dwattr $C$DW$54, DW_AT_decl_line(0x8a)
 	.dwattr $C$DW$54, DW_AT_decl_column(0x05)
 
 $C$DW$55	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$55, DW_AT_name("SCI_FIFO_TX11")
-	.dwattr $C$DW$55, DW_AT_const_value(0x0b)
+	.dwattr $C$DW$55, DW_AT_name("SCI_FIFO_TX7")
+	.dwattr $C$DW$55, DW_AT_const_value(0x07)
 	.dwattr $C$DW$55, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$55, DW_AT_decl_line(0x8f)
+	.dwattr $C$DW$55, DW_AT_decl_line(0x8b)
 	.dwattr $C$DW$55, DW_AT_decl_column(0x05)
 
 $C$DW$56	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$56, DW_AT_name("SCI_FIFO_TX12")
-	.dwattr $C$DW$56, DW_AT_const_value(0x0c)
+	.dwattr $C$DW$56, DW_AT_name("SCI_FIFO_TX8")
+	.dwattr $C$DW$56, DW_AT_const_value(0x08)
 	.dwattr $C$DW$56, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$56, DW_AT_decl_line(0x90)
+	.dwattr $C$DW$56, DW_AT_decl_line(0x8c)
 	.dwattr $C$DW$56, DW_AT_decl_column(0x05)
 
 $C$DW$57	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$57, DW_AT_name("SCI_FIFO_TX13")
-	.dwattr $C$DW$57, DW_AT_const_value(0x0d)
+	.dwattr $C$DW$57, DW_AT_name("SCI_FIFO_TX9")
+	.dwattr $C$DW$57, DW_AT_const_value(0x09)
 	.dwattr $C$DW$57, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$57, DW_AT_decl_line(0x91)
+	.dwattr $C$DW$57, DW_AT_decl_line(0x8d)
 	.dwattr $C$DW$57, DW_AT_decl_column(0x05)
 
 $C$DW$58	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$58, DW_AT_name("SCI_FIFO_TX14")
-	.dwattr $C$DW$58, DW_AT_const_value(0x0e)
+	.dwattr $C$DW$58, DW_AT_name("SCI_FIFO_TX10")
+	.dwattr $C$DW$58, DW_AT_const_value(0x0a)
 	.dwattr $C$DW$58, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$58, DW_AT_decl_line(0x92)
+	.dwattr $C$DW$58, DW_AT_decl_line(0x8e)
 	.dwattr $C$DW$58, DW_AT_decl_column(0x05)
 
 $C$DW$59	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$59, DW_AT_name("SCI_FIFO_TX15")
-	.dwattr $C$DW$59, DW_AT_const_value(0x0f)
+	.dwattr $C$DW$59, DW_AT_name("SCI_FIFO_TX11")
+	.dwattr $C$DW$59, DW_AT_const_value(0x0b)
 	.dwattr $C$DW$59, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$59, DW_AT_decl_line(0x93)
+	.dwattr $C$DW$59, DW_AT_decl_line(0x8f)
 	.dwattr $C$DW$59, DW_AT_decl_column(0x05)
 
 $C$DW$60	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$60, DW_AT_name("SCI_FIFO_TX16")
-	.dwattr $C$DW$60, DW_AT_const_value(0x10)
+	.dwattr $C$DW$60, DW_AT_name("SCI_FIFO_TX12")
+	.dwattr $C$DW$60, DW_AT_const_value(0x0c)
 	.dwattr $C$DW$60, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$60, DW_AT_decl_line(0x94)
+	.dwattr $C$DW$60, DW_AT_decl_line(0x90)
 	.dwattr $C$DW$60, DW_AT_decl_column(0x05)
+
+$C$DW$61	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$61, DW_AT_name("SCI_FIFO_TX13")
+	.dwattr $C$DW$61, DW_AT_const_value(0x0d)
+	.dwattr $C$DW$61, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
+	.dwattr $C$DW$61, DW_AT_decl_line(0x91)
+	.dwattr $C$DW$61, DW_AT_decl_column(0x05)
+
+$C$DW$62	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$62, DW_AT_name("SCI_FIFO_TX14")
+	.dwattr $C$DW$62, DW_AT_const_value(0x0e)
+	.dwattr $C$DW$62, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
+	.dwattr $C$DW$62, DW_AT_decl_line(0x92)
+	.dwattr $C$DW$62, DW_AT_decl_column(0x05)
+
+$C$DW$63	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$63, DW_AT_name("SCI_FIFO_TX15")
+	.dwattr $C$DW$63, DW_AT_const_value(0x0f)
+	.dwattr $C$DW$63, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
+	.dwattr $C$DW$63, DW_AT_decl_line(0x93)
+	.dwattr $C$DW$63, DW_AT_decl_column(0x05)
+
+$C$DW$64	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$64, DW_AT_name("SCI_FIFO_TX16")
+	.dwattr $C$DW$64, DW_AT_const_value(0x10)
+	.dwattr $C$DW$64, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
+	.dwattr $C$DW$64, DW_AT_decl_line(0x94)
+	.dwattr $C$DW$64, DW_AT_decl_column(0x05)
 
 	.dwattr $C$DW$T$21, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
 	.dwattr $C$DW$T$21, DW_AT_decl_line(0x83)
@@ -737,124 +844,124 @@ $C$DW$TU$23	.dwtag  DW_TAG_type_unit
 
 $C$DW$T$23	.dwtag  DW_TAG_enumeration_type
 	.dwattr $C$DW$T$23, DW_AT_byte_size(0x01)
-$C$DW$61	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$61, DW_AT_name("SCI_FIFO_RX0")
-	.dwattr $C$DW$61, DW_AT_const_value(0x00)
-	.dwattr $C$DW$61, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$61, DW_AT_decl_line(0xa0)
-	.dwattr $C$DW$61, DW_AT_decl_column(0x05)
-
-$C$DW$62	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$62, DW_AT_name("SCI_FIFO_RX1")
-	.dwattr $C$DW$62, DW_AT_const_value(0x01)
-	.dwattr $C$DW$62, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$62, DW_AT_decl_line(0xa1)
-	.dwattr $C$DW$62, DW_AT_decl_column(0x05)
-
-$C$DW$63	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$63, DW_AT_name("SCI_FIFO_RX2")
-	.dwattr $C$DW$63, DW_AT_const_value(0x02)
-	.dwattr $C$DW$63, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$63, DW_AT_decl_line(0xa2)
-	.dwattr $C$DW$63, DW_AT_decl_column(0x05)
-
-$C$DW$64	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$64, DW_AT_name("SCI_FIFO_RX3")
-	.dwattr $C$DW$64, DW_AT_const_value(0x03)
-	.dwattr $C$DW$64, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$64, DW_AT_decl_line(0xa3)
-	.dwattr $C$DW$64, DW_AT_decl_column(0x05)
-
 $C$DW$65	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$65, DW_AT_name("SCI_FIFO_RX4")
-	.dwattr $C$DW$65, DW_AT_const_value(0x04)
+	.dwattr $C$DW$65, DW_AT_name("SCI_FIFO_RX0")
+	.dwattr $C$DW$65, DW_AT_const_value(0x00)
 	.dwattr $C$DW$65, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$65, DW_AT_decl_line(0xa4)
+	.dwattr $C$DW$65, DW_AT_decl_line(0xa0)
 	.dwattr $C$DW$65, DW_AT_decl_column(0x05)
 
 $C$DW$66	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$66, DW_AT_name("SCI_FIFO_RX5")
-	.dwattr $C$DW$66, DW_AT_const_value(0x05)
+	.dwattr $C$DW$66, DW_AT_name("SCI_FIFO_RX1")
+	.dwattr $C$DW$66, DW_AT_const_value(0x01)
 	.dwattr $C$DW$66, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$66, DW_AT_decl_line(0xa5)
+	.dwattr $C$DW$66, DW_AT_decl_line(0xa1)
 	.dwattr $C$DW$66, DW_AT_decl_column(0x05)
 
 $C$DW$67	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$67, DW_AT_name("SCI_FIFO_RX6")
-	.dwattr $C$DW$67, DW_AT_const_value(0x06)
+	.dwattr $C$DW$67, DW_AT_name("SCI_FIFO_RX2")
+	.dwattr $C$DW$67, DW_AT_const_value(0x02)
 	.dwattr $C$DW$67, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$67, DW_AT_decl_line(0xa6)
+	.dwattr $C$DW$67, DW_AT_decl_line(0xa2)
 	.dwattr $C$DW$67, DW_AT_decl_column(0x05)
 
 $C$DW$68	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$68, DW_AT_name("SCI_FIFO_RX7")
-	.dwattr $C$DW$68, DW_AT_const_value(0x07)
+	.dwattr $C$DW$68, DW_AT_name("SCI_FIFO_RX3")
+	.dwattr $C$DW$68, DW_AT_const_value(0x03)
 	.dwattr $C$DW$68, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$68, DW_AT_decl_line(0xa7)
+	.dwattr $C$DW$68, DW_AT_decl_line(0xa3)
 	.dwattr $C$DW$68, DW_AT_decl_column(0x05)
 
 $C$DW$69	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$69, DW_AT_name("SCI_FIFO_RX8")
-	.dwattr $C$DW$69, DW_AT_const_value(0x08)
+	.dwattr $C$DW$69, DW_AT_name("SCI_FIFO_RX4")
+	.dwattr $C$DW$69, DW_AT_const_value(0x04)
 	.dwattr $C$DW$69, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$69, DW_AT_decl_line(0xa8)
+	.dwattr $C$DW$69, DW_AT_decl_line(0xa4)
 	.dwattr $C$DW$69, DW_AT_decl_column(0x05)
 
 $C$DW$70	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$70, DW_AT_name("SCI_FIFO_RX9")
-	.dwattr $C$DW$70, DW_AT_const_value(0x09)
+	.dwattr $C$DW$70, DW_AT_name("SCI_FIFO_RX5")
+	.dwattr $C$DW$70, DW_AT_const_value(0x05)
 	.dwattr $C$DW$70, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$70, DW_AT_decl_line(0xa9)
+	.dwattr $C$DW$70, DW_AT_decl_line(0xa5)
 	.dwattr $C$DW$70, DW_AT_decl_column(0x05)
 
 $C$DW$71	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$71, DW_AT_name("SCI_FIFO_RX10")
-	.dwattr $C$DW$71, DW_AT_const_value(0x0a)
+	.dwattr $C$DW$71, DW_AT_name("SCI_FIFO_RX6")
+	.dwattr $C$DW$71, DW_AT_const_value(0x06)
 	.dwattr $C$DW$71, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$71, DW_AT_decl_line(0xaa)
+	.dwattr $C$DW$71, DW_AT_decl_line(0xa6)
 	.dwattr $C$DW$71, DW_AT_decl_column(0x05)
 
 $C$DW$72	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$72, DW_AT_name("SCI_FIFO_RX11")
-	.dwattr $C$DW$72, DW_AT_const_value(0x0b)
+	.dwattr $C$DW$72, DW_AT_name("SCI_FIFO_RX7")
+	.dwattr $C$DW$72, DW_AT_const_value(0x07)
 	.dwattr $C$DW$72, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$72, DW_AT_decl_line(0xab)
+	.dwattr $C$DW$72, DW_AT_decl_line(0xa7)
 	.dwattr $C$DW$72, DW_AT_decl_column(0x05)
 
 $C$DW$73	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$73, DW_AT_name("SCI_FIFO_RX12")
-	.dwattr $C$DW$73, DW_AT_const_value(0x0c)
+	.dwattr $C$DW$73, DW_AT_name("SCI_FIFO_RX8")
+	.dwattr $C$DW$73, DW_AT_const_value(0x08)
 	.dwattr $C$DW$73, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$73, DW_AT_decl_line(0xac)
+	.dwattr $C$DW$73, DW_AT_decl_line(0xa8)
 	.dwattr $C$DW$73, DW_AT_decl_column(0x05)
 
 $C$DW$74	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$74, DW_AT_name("SCI_FIFO_RX13")
-	.dwattr $C$DW$74, DW_AT_const_value(0x0d)
+	.dwattr $C$DW$74, DW_AT_name("SCI_FIFO_RX9")
+	.dwattr $C$DW$74, DW_AT_const_value(0x09)
 	.dwattr $C$DW$74, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$74, DW_AT_decl_line(0xad)
+	.dwattr $C$DW$74, DW_AT_decl_line(0xa9)
 	.dwattr $C$DW$74, DW_AT_decl_column(0x05)
 
 $C$DW$75	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$75, DW_AT_name("SCI_FIFO_RX14")
-	.dwattr $C$DW$75, DW_AT_const_value(0x0e)
+	.dwattr $C$DW$75, DW_AT_name("SCI_FIFO_RX10")
+	.dwattr $C$DW$75, DW_AT_const_value(0x0a)
 	.dwattr $C$DW$75, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$75, DW_AT_decl_line(0xae)
+	.dwattr $C$DW$75, DW_AT_decl_line(0xaa)
 	.dwattr $C$DW$75, DW_AT_decl_column(0x05)
 
 $C$DW$76	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$76, DW_AT_name("SCI_FIFO_RX15")
-	.dwattr $C$DW$76, DW_AT_const_value(0x0f)
+	.dwattr $C$DW$76, DW_AT_name("SCI_FIFO_RX11")
+	.dwattr $C$DW$76, DW_AT_const_value(0x0b)
 	.dwattr $C$DW$76, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$76, DW_AT_decl_line(0xaf)
+	.dwattr $C$DW$76, DW_AT_decl_line(0xab)
 	.dwattr $C$DW$76, DW_AT_decl_column(0x05)
 
 $C$DW$77	.dwtag  DW_TAG_enumerator
-	.dwattr $C$DW$77, DW_AT_name("SCI_FIFO_RX16")
-	.dwattr $C$DW$77, DW_AT_const_value(0x10)
+	.dwattr $C$DW$77, DW_AT_name("SCI_FIFO_RX12")
+	.dwattr $C$DW$77, DW_AT_const_value(0x0c)
 	.dwattr $C$DW$77, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
-	.dwattr $C$DW$77, DW_AT_decl_line(0xb0)
+	.dwattr $C$DW$77, DW_AT_decl_line(0xac)
 	.dwattr $C$DW$77, DW_AT_decl_column(0x05)
+
+$C$DW$78	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$78, DW_AT_name("SCI_FIFO_RX13")
+	.dwattr $C$DW$78, DW_AT_const_value(0x0d)
+	.dwattr $C$DW$78, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
+	.dwattr $C$DW$78, DW_AT_decl_line(0xad)
+	.dwattr $C$DW$78, DW_AT_decl_column(0x05)
+
+$C$DW$79	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$79, DW_AT_name("SCI_FIFO_RX14")
+	.dwattr $C$DW$79, DW_AT_const_value(0x0e)
+	.dwattr $C$DW$79, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
+	.dwattr $C$DW$79, DW_AT_decl_line(0xae)
+	.dwattr $C$DW$79, DW_AT_decl_column(0x05)
+
+$C$DW$80	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$80, DW_AT_name("SCI_FIFO_RX15")
+	.dwattr $C$DW$80, DW_AT_const_value(0x0f)
+	.dwattr $C$DW$80, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
+	.dwattr $C$DW$80, DW_AT_decl_line(0xaf)
+	.dwattr $C$DW$80, DW_AT_decl_column(0x05)
+
+$C$DW$81	.dwtag  DW_TAG_enumerator
+	.dwattr $C$DW$81, DW_AT_name("SCI_FIFO_RX16")
+	.dwattr $C$DW$81, DW_AT_const_value(0x10)
+	.dwattr $C$DW$81, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
+	.dwattr $C$DW$81, DW_AT_decl_line(0xb0)
+	.dwattr $C$DW$81, DW_AT_decl_column(0x05)
 
 	.dwattr $C$DW$T$23, DW_AT_decl_file("C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h")
 	.dwattr $C$DW$T$23, DW_AT_decl_line(0x9f)
@@ -964,28 +1071,28 @@ $C$DW$T$11	.dwtag  DW_TAG_base_type
 	.dwendtag $C$DW$TU$11
 
 
+$C$DW$TU$40	.dwtag  DW_TAG_type_unit
+	.dwmtype  $C$DW$T$40
+$C$DW$T$40	.dwtag  DW_TAG_typedef
+	.dwattr $C$DW$T$40, DW_AT_name("__uint16_t")
+	.dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$11)
+	.dwattr $C$DW$T$40, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h")
+	.dwattr $C$DW$T$40, DW_AT_decl_line(0x41)
+	.dwattr $C$DW$T$40, DW_AT_decl_column(0x1c)
+
+	.dwendtag $C$DW$TU$40
+
+
 $C$DW$TU$41	.dwtag  DW_TAG_type_unit
 	.dwmtype  $C$DW$T$41
 $C$DW$T$41	.dwtag  DW_TAG_typedef
-	.dwattr $C$DW$T$41, DW_AT_name("__uint16_t")
-	.dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$11)
-	.dwattr $C$DW$T$41, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h")
+	.dwattr $C$DW$T$41, DW_AT_name("uint16_t")
+	.dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$40)
+	.dwattr $C$DW$T$41, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h")
 	.dwattr $C$DW$T$41, DW_AT_decl_line(0x41)
-	.dwattr $C$DW$T$41, DW_AT_decl_column(0x1c)
+	.dwattr $C$DW$T$41, DW_AT_decl_column(0x15)
 
 	.dwendtag $C$DW$TU$41
-
-
-$C$DW$TU$42	.dwtag  DW_TAG_type_unit
-	.dwmtype  $C$DW$T$42
-$C$DW$T$42	.dwtag  DW_TAG_typedef
-	.dwattr $C$DW$T$42, DW_AT_name("uint16_t")
-	.dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$41)
-	.dwattr $C$DW$T$42, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h")
-	.dwattr $C$DW$T$42, DW_AT_decl_line(0x41)
-	.dwattr $C$DW$T$42, DW_AT_decl_column(0x15)
-
-	.dwendtag $C$DW$TU$42
 
 
 $C$DW$TU$12	.dwtag  DW_TAG_type_unit
@@ -1008,28 +1115,28 @@ $C$DW$T$13	.dwtag  DW_TAG_base_type
 	.dwendtag $C$DW$TU$13
 
 
-$C$DW$TU$27	.dwtag  DW_TAG_type_unit
-	.dwmtype  $C$DW$T$27
-$C$DW$T$27	.dwtag  DW_TAG_typedef
-	.dwattr $C$DW$T$27, DW_AT_name("__uint32_t")
-	.dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$13)
-	.dwattr $C$DW$T$27, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h")
-	.dwattr $C$DW$T$27, DW_AT_decl_line(0x43)
-	.dwattr $C$DW$T$27, DW_AT_decl_column(0x1c)
+$C$DW$TU$25	.dwtag  DW_TAG_type_unit
+	.dwmtype  $C$DW$T$25
+$C$DW$T$25	.dwtag  DW_TAG_typedef
+	.dwattr $C$DW$T$25, DW_AT_name("__uint32_t")
+	.dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$13)
+	.dwattr $C$DW$T$25, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_types.h")
+	.dwattr $C$DW$T$25, DW_AT_decl_line(0x43)
+	.dwattr $C$DW$T$25, DW_AT_decl_column(0x1c)
 
-	.dwendtag $C$DW$TU$27
+	.dwendtag $C$DW$TU$25
 
 
-$C$DW$TU$28	.dwtag  DW_TAG_type_unit
-	.dwmtype  $C$DW$T$28
-$C$DW$T$28	.dwtag  DW_TAG_typedef
-	.dwattr $C$DW$T$28, DW_AT_name("uint32_t")
-	.dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$27)
-	.dwattr $C$DW$T$28, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h")
-	.dwattr $C$DW$T$28, DW_AT_decl_line(0x46)
-	.dwattr $C$DW$T$28, DW_AT_decl_column(0x15)
+$C$DW$TU$26	.dwtag  DW_TAG_type_unit
+	.dwmtype  $C$DW$T$26
+$C$DW$T$26	.dwtag  DW_TAG_typedef
+	.dwattr $C$DW$T$26, DW_AT_name("uint32_t")
+	.dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+	.dwattr $C$DW$T$26, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/sys/_stdint.h")
+	.dwattr $C$DW$T$26, DW_AT_decl_line(0x46)
+	.dwattr $C$DW$T$26, DW_AT_decl_column(0x15)
 
-	.dwendtag $C$DW$TU$28
+	.dwendtag $C$DW$TU$26
 
 
 $C$DW$TU$14	.dwtag  DW_TAG_type_unit

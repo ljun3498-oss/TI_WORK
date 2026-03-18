@@ -169,6 +169,26 @@ origin 路径：`origin/origin_dual_axis_servo_drive.c`
 - 调制指数限制：考虑死区时间和FCL计算时间
 - 载波频率：10KHz
 
+#### 4.4.5 FCL_LEVEL5 位置表
+- **位置表定义**：
+  ```c
+  float32_t posArray[8] = {2.5, -2.5, 3.5, -3.5, 5.0, -5.0, 8.0, -8.0};  // 位置参考数组
+  float32_t posPtrMax = 4;  // 位置指针最大值
+  ```
+- **使用逻辑**：
+  - 通过 `posPtr` 索引访问 `posArray` 中的位置值
+  - 使用 `ramper` 函数实现位置的平滑过渡
+  - 当达到目标位置后，`posCntr` 递增
+  - 当 `posCntr > posCntrMax` 时，`posPtr` 递增
+  - 当 `posPtr >= posPtrMax` 时，重置为0，循环使用位置表
+- **配置参数**：
+  - **位置值**：可以根据需要修改 `posArray` 中的值
+  - **循环长度**：可以修改 `posPtrMax` 来控制使用多少个位置值
+  - **停留时间**：通过 `posCntrMax` 控制每个位置的停留时间
+  - **过渡速度**：通过 `posSlewRate` 控制位置过渡的平滑程度
+- **使用场景**：
+  在 FCL_LEVEL5（位置环+速度电流环控制）模式下，电机按照位置表中的值循环运行，实现预设的位置轨迹控制。
+
 ### 4.5 硬件资源分配
 
 #### 电机1资源
@@ -268,6 +288,59 @@ origin 路径：`origin/origin_dual_axis_servo_drive.c`
 2. 检查 OT/nFault 相关 GPIO 是否真实接线；未接时必须有上拉/下拉策略，或不并入 Trip 生效链。
 3. 检查 `EPWM_enableTripZoneSignals()` 与 `EPWM_setTripZoneAction()` 组合是否符合当前 BUILDLEVEL 目标。
 4. 每次改完保护链都清标志并复测：`HAL_clearTZFlag()` + 启停测试 + 过流注入测试。
+
+---
+
+## 八、CCS 预编译相关设置
+
+### 8.1 Include Paths（包含路径）
+- **作用**：指定编译器搜索头文件的路径
+- **设置位置**：**Properties** → **Build** → **C2000 Compiler** → **Include Options** → **Include search path (-I)**
+- **使用场景**：当项目中有多个目录的头文件时，需要添加这些目录路径
+
+### 8.2 Preprocessor Options（预处理器选项）
+- **作用**：控制预处理器的行为
+- **设置位置**：**Properties** → **Build** → **C2000 Compiler** → **Preprocessor**
+- **常见选项**：
+  - **Keep preprocessed files**：保留预编译后的文件，用于调试
+  - **Preprocessor diagnostic level**：控制预处理器的诊断级别
+
+### 8.3 Compiler Options（编译器选项）
+- **作用**：影响编译过程，包括预编译阶段
+- **设置位置**：**Properties** → **Build** → **C2000 Compiler** → **Advanced Options**
+- **相关选项**：
+  - **Language standard**：选择 C/C++ 标准版本
+  - **Enable C++ exceptions**：启用 C++ 异常处理
+  - **Enable runtime type information**：启用运行时类型信息
+
+### 8.4 Conditional Compilation（条件编译指令）
+- **作用**：在代码中使用 `#ifdef`、`#ifndef`、`#if` 等指令进行条件编译
+- **使用场景**：
+  ```c
+  #ifdef _LAUNCHXL_F28379D
+      // LaunchPad 特定代码
+  #else
+      // 其他平台代码
+  #endif
+  ```
+
+### 8.5 Build Configurations（构建配置）
+- **作用**：为不同场景创建不同的构建配置
+- **设置位置**：**Project** → **Build Configurations** → **Manage**
+- **使用场景**：可以为调试和发布版本创建不同的配置，每个配置可以有不同的预定义符号
+
+### 8.6 Command File Preprocessing（命令文件预处理）
+- **作用**：对链接器命令文件（.cmd）进行预处理
+- **设置位置**：**Properties** → **Build** → **C2000 Linker** → **Advanced Options** → **Command File Preprocessing**
+- **使用场景**：在命令文件中使用条件编译指令
+
+### 8.7 实际应用
+例如，在一个项目中：
+- **Predefined Symbols**：定义 `DEBUG` 宏用于调试
+- **Include Paths**：添加 `src/include` 目录
+- **Build Configurations**：创建 `Debug` 和 `Release` 两个配置，`Debug` 配置定义 `DEBUG` 宏
+
+这样可以实现代码的条件编译和模块化管理。
 
 ---
 

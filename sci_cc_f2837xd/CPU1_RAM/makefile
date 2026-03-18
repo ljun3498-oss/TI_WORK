@@ -142,7 +142,7 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 sci_cc_f2837xd.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -Ooff --define=DEBUG --define=CPU1 --define=C2K_GEN2_DEVICES --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"sci_cc_f2837xd.map" --stack_size=0x100 --warn_sections -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="sci_cc_f2837xd_linkInfo.xml" --entry_point=code_start --rom_model -o "sci_cc_f2837xd.out" $(ORDERED_OBJS)
+	"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu0 -O3 --define=DEBUG --define=CPU1 --define=C2K_GEN2_DEVICES --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"sci_cc_f2837xd.map" --stack_size=0x100 --warn_sections -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="sci_cc_f2837xd_linkInfo.xml" --entry_point=code_start --rom_model -o "sci_cc_f2837xd.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 

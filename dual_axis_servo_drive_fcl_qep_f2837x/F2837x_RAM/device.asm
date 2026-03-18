@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Fri Mar 13 19:45:56 2026                 *
+;* Date/Time created: Wed Mar 18 21:08:55 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -176,8 +176,8 @@ $C$DW$20	.dwtag  DW_TAG_subprogram
 	.dwendtag $C$DW$20
 
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{65F22446-86CD-4D02-84D7-3101886AFA3E} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{A2C12BCF-549E-4E4E-87F1-D5C1569AEAA9} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{50D89E64-6854-4087-9984-8EBD1A4EB252} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{F6741B77-B6BA-4FF6-A1FA-7C01B9E4978C} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{C08A4A4D-A217-4ED0-8D31-A98C3D2D561B} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{D327317B-3809-44A3-B890-0D640B245FCC} 
 	.sect	".text:__error__"
 	.clink
 	.global	||__error__||
@@ -1071,7 +1071,7 @@ $C$DW$48	.dwtag  DW_TAG_TI_branch
         ; call occurs [#||Device_configureTMXAnalogTrim||] ; [] |109| 
 ||$C$L4||:    
 	.dwpsn	file "../src_device/device.c",line 115,column 5,is_stmt,isa 0
-        MOV       AL,#168               ; [CPU_ALU] |115| 
+        MOV       AL,#148               ; [CPU_ALU] |115| 
         MOV       AH,#32769             ; [CPU_ALU] |115| 
 $C$DW$49	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$49, DW_AT_low_pc(0x00)

@@ -31,8 +31,8 @@
  *
  */
 
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef MOTORBOARD_H
+#define MOTORBOARD_H
 
 //*****************************************************************************
 //
@@ -105,11 +105,7 @@ void myBoardLED0_GPIO_init();
 #define INT_myCPUTIMER0_INTERRUPT_ACK_GROUP INTERRUPT_ACK_GROUP1
 extern __interrupt void INT_myCPUTIMER0_ISR(void);
 
-// Interrupt Settings for INT_mySCIB_RX
-// ISR need to be defined for the registered interrupts
-#define INT_mySCIB_RX INT_SCIB_RX
-#define INT_mySCIB_RX_INTERRUPT_ACK_GROUP INTERRUPT_ACK_GROUP9
-extern __interrupt void INT_mySCIB_RX_ISR(void);
+
 
 // Interrupt Settings for INT_mySCIB_TX
 // ISR need to be defined for the registered interrupts
@@ -136,7 +132,7 @@ void mySCIB_init();
 // Board Configurations
 //
 //*****************************************************************************
-void	Board_init();
+void	Bard_init();
 void	CPUTIMER_init();
 void	GPIO_init();
 void	INTERRUPT_init();

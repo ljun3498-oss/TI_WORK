@@ -43,15 +43,12 @@
 // Board_init use the individual Module_inits
 //
 //*****************************************************************************
-void Board_init()
+void Bard_init()
 {
 	EALLOW;
 
 	PinMux_init();
-	CPUTIMER_init();
-	GPIO_init();
 	SCI_init();
-	INTERRUPT_init();
 
 	EDIS;
 }
@@ -67,8 +64,7 @@ void PinMux_init()
 	// PinMux for modules assigned to CPU1
 	//
 	
-	// GPIO0 -> myBoardLED0_GPIO Pinmux
-	GPIO_setPinConfig(GPIO_0_GPIO0);
+
 	//
 	// SCIB -> mySCIB Pinmux
 	//
@@ -84,58 +80,7 @@ void PinMux_init()
 }
 
 
-//*****************************************************************************
-//
-// CPUTIMER Configurations
-//
-//*****************************************************************************
-void CPUTIMER_init(){
-	myCPUTIMER0_init();
-}
 
-void myCPUTIMER0_init(){
-	CPUTimer_setEmulationMode(myCPUTIMER0_BASE, CPUTIMER_EMULATIONMODE_STOPAFTERNEXTDECREMENT);
-	CPUTimer_setPreScaler(myCPUTIMER0_BASE, 1U);
-	CPUTimer_setPeriod(myCPUTIMER0_BASE, 200000000U);
-	CPUTimer_enableInterrupt(myCPUTIMER0_BASE);
-	CPUTimer_stopTimer(myCPUTIMER0_BASE);
-
-	CPUTimer_reloadTimerCounter(myCPUTIMER0_BASE);
-}
-
-//*****************************************************************************
-//
-// GPIO Configurations
-//
-//*****************************************************************************
-void GPIO_init(){
-	myBoardLED0_GPIO_init();
-}
-
-void myBoardLED0_GPIO_init(){
-	GPIO_setPadConfig(myBoardLED0_GPIO, GPIO_PIN_TYPE_STD);
-	GPIO_setQualificationMode(myBoardLED0_GPIO, GPIO_QUAL_SYNC);
-	GPIO_setDirectionMode(myBoardLED0_GPIO, GPIO_DIR_MODE_OUT);
-	GPIO_setControllerCore(myBoardLED0_GPIO, GPIO_CORE_CPU1);
-}
-
-//*****************************************************************************
-//
-// INTERRUPT Configurations
-//
-//*****************************************************************************
-void INTERRUPT_init(){
-	
-	// Interrupt Settings for INT_mySCIB_RX
-	// ISR need to be defined for the registered interrupts
-	Interrupt_register(INT_mySCIB_RX, &INT_mySCIB_RX_ISR);
-	Interrupt_enable(INT_mySCIB_RX);
-	
-	// Interrupt Settings for INT_mySCIB_TX
-	// ISR need to be defined for the registered interrupts
-	Interrupt_register(INT_mySCIB_TX, &INT_mySCIB_TX_ISR);
-	Interrupt_enable(INT_mySCIB_TX);
-}
 //*****************************************************************************
 //
 // SCI Configurations
@@ -180,9 +125,7 @@ void mySCIB_init(){
 		NOP;
 	}
 	
-	// Enable only RXRDY_BRKDT interrupt for RX, and TXFF interrupt for TX
-    SCI_enableInterrupt(mySCIB_BASE, SCI_INT_RXFF);
-    SCI_enableInterrupt(mySCIB_BASE, SCI_INT_TXFF);
+	SCI_enableInterrupt(mySCIB_BASE, SCI_INT_RXFF);
 	
 	// Add final delay
 	for(k= 0; k < 5000; k++) {
