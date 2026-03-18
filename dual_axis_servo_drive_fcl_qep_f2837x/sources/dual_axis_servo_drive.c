@@ -2834,19 +2834,15 @@ void sendWaveformData(void)
 
 //*****************************************************************************
 //
-// generateWaveforms - Generate 3-phase waveforms using actual current values
+// generateWaveforms - Get actual 3-phase current values
 //
 //*****************************************************************************
 void generateWaveforms(float *ch0, float *ch1, float *ch2)
 {
-    float omega = 2.0f * 3.14159265f / period;
-
-    *ch0 = amplitude * sinf(omega * t);
-    *ch1 = amplitude * sinf(omega * t + 2.0f * 3.14159265f / 3.0f);  // 120 degrees
-    *ch2 = amplitude * sinf(omega * t + 4.0f * 3.14159265f / 3.0f);  // 240 degrees
-
-    t += dt;
-    if(t >= period) { t = 0.0f; }
+    // Get actual ABC phase current values from motor 1
+    *ch0 = (float32_t)((int16_t)(HWREGH(motorVars[0].curA_PPBRESULT))) * motorVars[0].FCL_params.adcScale;  // Phase A current
+    *ch1 = (float32_t)((int16_t)(HWREGH(motorVars[0].curB_PPBRESULT))) * motorVars[0].FCL_params.adcScale;  // Phase B current
+    *ch2 = -(*ch0 + *ch1);  // Phase C current (calculated from A and B)
 }
 
 //
