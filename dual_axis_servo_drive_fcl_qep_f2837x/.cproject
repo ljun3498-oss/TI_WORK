@@ -129,7 +129,7 @@
                         </toolChain>
                     </folderInfo>
                     <sourceEntries>
-                        <entry excluding="src_device/dual_axis_f2837x_flash_lnk_cpu1.cmd|src_driver/xbar.c|src_driver/sysctl.c|src_driver/sdfm.c|src_driver/spi.c|src_driver/sci.c|src_driver/memcfg.c|src_driver/interrupt.c|src_driver/gpio.c|src_driver/flash.c|src_driver/eqep.c|src_driver/cputimer.c|src_driver/cmpss.c|src_driver/cla.c|src_driver/adc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="sources/cpu2.c|src_device/dual_axis_f2837x_flash_lnk_cpu1.cmd|src_driver/xbar.c|src_driver/sysctl.c|src_driver/sdfm.c|src_driver/spi.c|src_driver/sci.c|src_driver/memcfg.c|src_driver/interrupt.c|src_driver/gpio.c|src_driver/flash.c|src_driver/eqep.c|src_driver/cputimer.c|src_driver/cmpss.c|src_driver/cla.c|src_driver/adc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                     </sourceEntries>
                 </configuration>
             </storageModule>
@@ -168,7 +168,7 @@
                             </option>
                             <option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.2134662692" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="22.6.2.LTS" valueType="string"/>
                             <targetPlatform id="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.targetPlatformDebug.1354930803" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.targetPlatformDebug"/>
-                            <builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.builderDebug.882296466" name="GNU Make.F2837x_FLASH" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.builderDebug"/>
+                            <builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.builderDebug.882296466" keepEnvironmentInBuildfile="false" name="GNU Make" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.builderDebug"/>
                             <tool id="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.compilerDebug.1088905353" name="C2000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.compilerDebug">
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.LARGE_MEMORY_MODEL.1047737906" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.LARGE_MEMORY_MODEL" value="true" valueType="boolean"/>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.UNIFIED_MEMORY.1849220083" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.UNIFIED_MEMORY" value="true" valueType="boolean"/>
@@ -211,7 +211,6 @@
                                     <listOptionValue value="_DUAL_HEADERS"/>
                                     <listOptionValue value="TEST_ENABLE"/>
                                     <listOptionValue value="F2837x_DEVICE"/>
-                                    <listOptionValue value="_LAUNCHXL_F28379D"/>
                                     <listOptionValue value="_BOOSTXL_3PHGANINV"/>
                                 </option>
                                 <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DEBUGGING_MODEL.922570298" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
@@ -263,7 +262,7 @@
                         </toolChain>
                     </folderInfo>
                     <sourceEntries>
-                        <entry excluding="src_driver/xbar.c|src_driver/sysctl.c|src_driver/sdfm.c|src_driver/spi.c|src_driver/sci.c|src_driver/memcfg.c|src_driver/interrupt.c|src_driver/gpio.c|src_driver/flash.c|src_driver/eqep.c|src_driver/cputimer.c|src_driver/cmpss.c|src_driver/cla.c|src_driver/adc.c|src_device/dual_axis_f2837x_ram_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="sources/cpu2.c|src_driver/xbar.c|src_driver/sysctl.c|src_driver/sdfm.c|src_driver/spi.c|src_driver/sci.c|src_driver/memcfg.c|src_driver/interrupt.c|src_driver/gpio.c|src_driver/flash.c|src_driver/eqep.c|src_driver/cputimer.c|src_driver/cmpss.c|src_driver/cla.c|src_driver/adc.c|src_device/dual_axis_f2837x_ram_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                     </sourceEntries>
                 </configuration>
             </storageModule>

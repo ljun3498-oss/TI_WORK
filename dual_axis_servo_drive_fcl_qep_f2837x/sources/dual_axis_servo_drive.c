@@ -437,7 +437,7 @@ void main(void)
 #ifdef _FLASH
     enableFlag = true;            // 设置使能标志为真，自动启动系
     flagSyncRun = true;           // 启用双电机同步运行功
-    ctrlState = CTRL_STOP;
+    ctrlState = CTRL_RUN;
 #endif
 
     // 等待使能标志设置
@@ -2839,10 +2839,10 @@ void sendWaveformData(void)
 //*****************************************************************************
 void generateWaveforms(float *ch0, float *ch1, float *ch2)
 {
-    // Get actual motor values from motor 1
-    *ch0 = motorVars[0].pi_id.out;  // Id current value
-    *ch1 = motorVars[0].ptrFCL->pi_iq.out;  // Iq current value
-    *ch2 = motorVars[0].speed.Speed;  // Speed value
+    // Get actual ABC phase current values from motor 1
+    *ch0 = (float32_t)((int16_t)(HWREGH(motorVars[0].curA_PPBRESULT))) * motorVars[0].FCL_params.adcScale;  // Phase A current
+    *ch1 = (float32_t)((int16_t)(HWREGH(motorVars[0].curB_PPBRESULT))) * motorVars[0].FCL_params.adcScale;  // Phase B current
+    *ch2 = -(*ch0 + *ch1);  // Phase C current (calculated from A and B)
 }
 
 //

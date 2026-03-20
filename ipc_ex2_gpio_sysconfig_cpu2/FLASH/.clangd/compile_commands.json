@@ -1,0 +1,32 @@
+[
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU2 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg\" -DF2837xD=1 -DCMDTOOL -DCMD0",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device/F2837xD_CodeStartBranch.asm"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU2 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg\" -DF2837xD=1 -DCMDTOOL -DCMD0 -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device/device.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU2 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg\" -DF2837xD=1 -DCMDTOOL -DCMD0 -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/ipc_ex2_gpio_sysconfig_cpu2.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU2 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg\" -DF2837xD=1 -DCMDTOOL -DCMD0 -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg/board.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU2 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg\" -DF2837xD=1 -DCMDTOOL -DCMD0 -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg/c2000ware_libraries.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU2 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg\" -DF2837xD=1 -DCMDTOOL -DCMD0 -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/FLASH/syscfg/device_cmd.c"
+   }
+]

@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../Desktop/C_work/CCS_Work/two/vacuum-valve-control-system-master"
 		}
 	]
 }

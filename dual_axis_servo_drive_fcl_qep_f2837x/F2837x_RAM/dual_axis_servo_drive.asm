@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Wed Mar 18 22:25:11 2026                 *
+;* Date/Time created: Fri Mar 20 14:59:48 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -1678,8 +1678,8 @@ $C$DW$106	.dwtag  DW_TAG_variable
 
 	.sblock	".bss"
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{4C7E4BAB-A299-4E44-9DA3-1E38A5B8E8EB} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{6BADD4DD-0B33-4F34-9F2D-60198E60975D} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{EEADDD06-F609-4E3E-9C45-E6DB444B9FDD} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{298E727C-E2AF-4CA1-9B52-0087B221EB64} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{EFCF4640-5162-4A3C-81C0-09D34D23FF52} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{BC456EEC-3BD6-4EC1-936E-6A7F31A24BA1} 
 	.sect	".text:generateWaveforms"
 	.clink
 	.global	||generateWaveforms||
@@ -1723,6 +1723,7 @@ $C$DW$110	.dwtag  DW_TAG_formal_parameter
 ;***************************************************************
 
 ||generateWaveforms||:
+;* R0    assigned to $O$C1
 ;* AR4   assigned to ch0
 $C$DW$111	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$111, DW_AT_name("ch0")
@@ -1735,30 +1736,40 @@ $C$DW$112	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$112, DW_AT_type(*$C$DW$T$215)
 	.dwattr $C$DW$112, DW_AT_location[DW_OP_reg14]
 
-;* AR6   assigned to ch2
+;* AR7   assigned to ch2
 $C$DW$113	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$113, DW_AT_name("ch2")
 	.dwattr $C$DW$113, DW_AT_type(*$C$DW$T$215)
-	.dwattr $C$DW$113, DW_AT_location[DW_OP_reg16]
+	.dwattr $C$DW$113, DW_AT_location[DW_OP_reg18]
 
 	.dwcfi	cfa_offset, -2
 	.dwcfi	save_reg_to_mem, 26, 0
-        MOVW      DP,#||motorVars||+170 ; [CPU_ARAU] 
-        MOVL      XAR6,*-SP[4]          ; [CPU_ALU] |2841| 
+        MOVW      DP,#||motorVars||+66  ; [CPU_ARAU] 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2843,column 5,is_stmt,isa 0
-        MOVL      ACC,@||motorVars||+170 ; [CPU_ALU] |2843| 
-        MOVW      DP,#||motorVars||+280 ; [CPU_ARAU] 
-        MOVL      *+XAR4[0],ACC         ; [CPU_ALU] |2843| 
+        MOVL      XAR6,@||motorVars||+66 ; [CPU_ALU] |2843| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2841,column 1,is_stmt,isa 0
+        MOVL      XAR7,*-SP[4]          ; [CPU_ALU] |2841| 
+        MOVW      DP,#||motorVars||+252 ; [CPU_ARAU] 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2843,column 5,is_stmt,isa 0
+        I16TOF32  R0H,*+XAR6[0]         ; [CPU_FPU] |2843| 
+        MOV32     R1H,@||motorVars||+252 ; [CPU_FPU] |2843| 
+        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |2843| 
+        MOVW      DP,#||motorVars||+68  ; [CPU_ARAU] 
+        MOV32     *+XAR4[0],R0H         ; [CPU_FPU] |2843| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2844,column 5,is_stmt,isa 0
-        MOVB      ACC,#38               ; [CPU_ALU] |2844| 
-        ADDL      ACC,@||motorVars||+280 ; [CPU_ALU] |2844| 
-        MOVL      XAR4,ACC              ; [CPU_ALU] |2844| 
-        MOVW      DP,#||motorVars||+150 ; [CPU_ARAU] 
-        MOVL      ACC,*+XAR4[0]         ; [CPU_ALU] |2844| 
-        MOVL      *+XAR5[0],ACC         ; [CPU_ALU] |2844| 
+        MOVL      XAR6,@||motorVars||+68 ; [CPU_ALU] |2844| 
+        MOVW      DP,#||motorVars||+252 ; [CPU_ARAU] 
+        I16TOF32  R0H,*+XAR6[0]         ; [CPU_FPU] |2844| 
+        MOV32     R1H,@||motorVars||+252 ; [CPU_FPU] |2844| 
+        MPYF32    R0H,R1H,R0H           ; [CPU_FPU] |2844| 
+        NOP       ; [CPU_ALU] 
+        MOV32     *+XAR5[0],R0H         ; [CPU_FPU] |2844| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2845,column 5,is_stmt,isa 0
-        MOVL      ACC,@||motorVars||+150 ; [CPU_ALU] |2845| 
-        MOVL      *+XAR6[0],ACC         ; [CPU_ALU] |2845| 
+        MOV32     R1H,*+XAR4[0]         ; [CPU_FPU] |2845| 
+        ADDF32    R0H,R0H,R1H           ; [CPU_FPU] |2845| 
+        NOP       ; [CPU_ALU] 
+        NEGF32    R0H,R0H               ; [CPU_FPU] |2845| 
+        MOV32     *+XAR7[0],R0H         ; [CPU_FPU] |2845| 
 $C$DW$114	.dwtag  DW_TAG_TI_branch
 	.dwattr $C$DW$114, DW_AT_low_pc(0x00)
 	.dwattr $C$DW$114, DW_AT_TI_return
@@ -1849,21 +1860,22 @@ $C$DW$120	.dwtag  DW_TAG_TI_branch
         MOVB      XAR0,#12              ; [CPU_ALU] |2825| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2827,column 5,is_stmt,isa 0
         MOVB      XAR1,#14              ; [CPU_ALU] |2827| 
-	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2805,column 5,is_stmt,isa 0
-        MOVL      XAR4,#||sciPrepBuffer|| ; [CPU_ARAU] |2805| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2804,column 5,is_stmt,isa 0
         MOVL      ACC,*-SP[4]           ; [CPU_ALU] |2804| 
         MOVW      DP,#||sciPrepCount||  ; [CPU_ARAU] 
-	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2825,column 5,is_stmt,isa 0
-        MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |2825| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2805,column 5,is_stmt,isa 0
+        MOVL      XAR4,#||sciPrepBuffer|| ; [CPU_ARAU] |2805| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2804,column 5,is_stmt,isa 0
         MOVL      *-SP[10],ACC          ; [CPU_ALU] |2804| 
-	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2826,column 5,is_stmt,isa 0
-        MOVB      XAR0,#13              ; [CPU_ALU] |2826| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2825,column 5,is_stmt,isa 0
+        MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |2825| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2811,column 5,is_stmt,isa 0
         MOVL      XAR6,*-SP[6]          ; [CPU_ALU] |2811| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2805,column 5,is_stmt,isa 0
         MOV       AL,*-SP[10]           ; [CPU_ALU] |2805| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2826,column 5,is_stmt,isa 0
+        MOVB      XAR0,#13              ; [CPU_ALU] |2826| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2805,column 5,is_stmt,isa 0
         ANDB      AL,#0xff              ; [CPU_ALU] |2805| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2826,column 5,is_stmt,isa 0
         MOV       *+XAR4[AR0],#0        ; [CPU_ALU] |2826| 
@@ -1875,12 +1887,13 @@ $C$DW$120	.dwtag  DW_TAG_TI_branch
         MOVB      @||sciPrepCount||,#16,UNC ; [CPU_ALU] |2831| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2832,column 5,is_stmt,isa 0
         MOVB      @||sciDataReady||,#1,UNC ; [CPU_ALU] |2832| 
+	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2806,column 5,is_stmt,isa 0
+        LSR       AL,8                  ; [CPU_ALU] |2806| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2827,column 5,is_stmt,isa 0
         MOVB      *+XAR4[AR1],#128,UNC  ; [CPU_ALU] |2827| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2819,column 5,is_stmt,isa 0
         MOVB      XAR0,#8               ; [CPU_ALU] |2819| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2806,column 5,is_stmt,isa 0
-        LSR       AL,8                  ; [CPU_ALU] |2806| 
         MOV       *+XAR4[1],AL          ; [CPU_ALU] |2806| 
 	.dwpsn	file "../sources/dual_axis_servo_drive.c",line 2807,column 5,is_stmt,isa 0
         MOV       AL,*-SP[9]            ; [CPU_ALU] |2807| 

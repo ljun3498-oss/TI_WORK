@@ -1,0 +1,17 @@
+[
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU1 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/FLASH/syscfg\"",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device/F2837xD_CodeStartBranch.asm"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU1 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/FLASH/syscfg\" -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device/device.c"
+   },
+   {
+      "directory" : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/FLASH",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1\" -I\"C:/TI/C2000Ware_26_00_00_00\" -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -D_FLASH -DCPU1 -I\"C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/FLASH/syscfg\" -xc",
+      "file"      : "C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/ipc_ex2_gpio_sysconfig_cpu1.c"
+   }
+]
