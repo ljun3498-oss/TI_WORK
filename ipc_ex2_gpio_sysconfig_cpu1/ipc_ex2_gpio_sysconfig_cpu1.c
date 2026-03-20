@@ -131,6 +131,13 @@ void main(void)
     GPIO_setDirectionMode(0, GPIO_DIR_MODE_OUT);
 
     //
+    // 手动拉低GPIO2，排查硬件浮空问题
+    //
+    GPIO_setPadConfig(2, GPIO_PIN_TYPE_STD);
+    GPIO_setDirectionMode(2, GPIO_DIR_MODE_OUT);
+    GPIO_writePin(2, 0);
+
+    //
     // 把 GPIO1 的控制权交给 CPU2（只有 CPU1 能做这个操作）
     //
     GPIO_setPadConfig(1, GPIO_PIN_TYPE_STD);
