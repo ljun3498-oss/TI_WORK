@@ -2,27 +2,13 @@
 //
 // FILE:   ipc_ex2_sysconfig_cpu2.c
 //
-// TITLE: SysConfig IPC GPIO Toggle for F2837xD CPU2.
+// TITLE: IPC Waveform Generator for F2837xD CPU2.
 //
-// This example shows GPIO input on the local CPU triggering an output on the
-// remote CPU. A GPIO input change on CPU01 causes an output change on CPU02
-// and vice versa.
-// CPU1 has control of GPIO31 , GPIO15 and GPIO14.
-// CPU2 has control of GPIO34 , GPIO10 and GPIO11.
-//
-// The IPC is used to signal a change on the CPU's input pin.
-//
-// \b Hardware \b Connections
-//   - connect GPIO15 to GPIO11
-//   - connect GPIO14 to GPIO10
+// This CPU2 generates 3-phase sine waveforms and writes them to shared
+// memory (CPU2TOCPU1RAM). CPU1 reads from shared memory and sends via SCI.
 //
 // \b Watch \b Pins
-//   - GPIO34 - output on CPU2
-//   - GPIO11 - input on CPU2
-//   - GPIO31 - output on CPU1
-//   - GPIO14 - input on CPU1
-//   - GPIO10 - square wave output on CPU02
-//   - GPIO15 - square wave output on CPU01
+//   - GPIO34 - LED output on CPU2 (heartbeat)
 //
 //#############################################################################
 // $TI Release: $
@@ -66,14 +52,53 @@
 #include "driverlib.h"
 #include "device.h"
 #include "board.h"
+#include <math.h>
+
+//
+// 共享内存结构体 (放在 CPU2TOCPU1RAM 段)
+// 帧格式遵循 JustFloat 协议:
+// [float ch0][float ch1][float ch2][00 00 80 7F]
+// 共 16 字节 (4 channels × 4 bytes)
+//
+#pragma DATA_SECTION(sharedWaveform, "MSGRAM_CPU2_TO_CPU1")
+volatile struct {
+    float ch0;
+    float ch1;
+    float ch2;
+    uint32_t tail;  // 帧尾 0x7F800000 (JustFloat +Inf)
+} sharedWaveform;
+
+//
+// 波形参数
+//
+float t = 0.0f;             // 时间变量
+float amplitude = 9.0f;     // 波形幅值
+float period = 1.0f;        // 波形周期 (秒)
+float samplingRate = 100.0f; // 采样率 (Hz)
+float dt;                    // 时间步长
+
+//**************************************************************************
+//
+// generateWaveforms - 生成三相正弦波，相位差120度
+//
+//**************************************************************************
+void generateWaveforms(void)
+{
+    float omega = 2.0f * 3.14159265f / period;
+
+    sharedWaveform.ch0 = amplitude * sinf(omega * t);
+    sharedWaveform.ch1 = amplitude * sinf(omega * t + 2.0f * 3.14159265f / 3.0f);  // 120度
+    sharedWaveform.ch2 = amplitude * sinf(omega * t + 4.0f * 3.14159265f / 3.0f);  // 240度
+
+    t += dt;
+    if(t >= period) { t = 0.0f; }
+}
 
 //
 // Main
 //
 void main(void)
 {
-    uint32_t count;
-    uint16_t state;
 
     //
     // Initialize device clock and peripherals
@@ -103,17 +128,34 @@ void main(void)
     ERTM;
 
     //
-    // Sync the CPUs
+    // 初始化共享内存中的帧尾 (JustFloat +Inf = 0x7F800000)
     //
-    // IPC_sync(IPC_CPU2_L_CPU1_R, IPC_FLAG31);
+    sharedWaveform.tail = 0x7F800000UL;
+
+    //
+    // 计算时间步长
+    //
+    dt = 1.0f / samplingRate;
 
     //
     // GPIO1 控制权已由 CPU1 转交，直接使用
     //
     while(1)
     {
-        DEVICE_DELAY_US(300000);
+        //
+        // 生成三相波形并写入共享内存
+        //
+        generateWaveforms();
+
+        //
+        // LED 心跳闪烁 (GPIO1)
+        //
         GPIO_togglePin(1);
+
+        //
+        // 延时控制采样率 (100Hz = 10ms)
+        //
+        DEVICE_DELAY_US(10000);  // 10ms
     }
 }
 

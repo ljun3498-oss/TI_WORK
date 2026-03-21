@@ -139,7 +139,17 @@
                 "coresToLoadForProjectLaunch": [
                     "C28xx_CPU2"
                 ]
-            }
+            },
+            "groupInfo": [
+                {
+                    "name": "group_0",
+                    "syncMode": false,
+                    "cores": [
+                        "Texas Instruments XDS100v3 USB Debug Probe_0/C28xx_CPU2",
+                        "Texas Instruments XDS100v3 USB Debug Probe_0/C28xx_CPU1"
+                    ]
+                }
+            ]
         },
         {
             "name": "ipc_ex2_gpio_sysconfig_cpu1",
