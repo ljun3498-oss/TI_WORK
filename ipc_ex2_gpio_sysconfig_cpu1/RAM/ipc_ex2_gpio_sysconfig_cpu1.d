@@ -90,6 +90,7 @@ ipc_ex2_gpio_sysconfig_cpu1.obj: C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/d
 ipc_ex2_gpio_sysconfig_cpu1.obj: C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device/device.h
 ipc_ex2_gpio_sysconfig_cpu1.obj: syscfg/board.h
 ipc_ex2_gpio_sysconfig_cpu1.obj: C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device/device.h
+ipc_ex2_gpio_sysconfig_cpu1.obj: ../device/driverlib/inc/hw_memmap.h
 
 ../ipc_ex2_gpio_sysconfig_cpu1.c:
 
@@ -270,4 +271,6 @@ C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device/device.h:
 syscfg/board.h:
 
 C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu1/device/device.h:
+
+../device/driverlib/inc/hw_memmap.h:
 

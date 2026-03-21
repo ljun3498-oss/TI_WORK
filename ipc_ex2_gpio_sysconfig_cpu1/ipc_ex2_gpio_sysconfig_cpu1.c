@@ -55,6 +55,9 @@
 #include "board.h"
 #include <stdint.h>
 
+// CPU1 -> CPU2 message RAM base (word0: amplitude(float), word1: period(float))
+#include "device/driverlib/inc/hw_memmap.h"
+
 
 //
 // Main
@@ -151,8 +154,19 @@ void main(void)
     SCI_enableFIFO(SCIB_BASE);
     SCI_enableModule(SCIB_BASE);
 
-    // frame buffer
-    uint16_t txBuf[16];
+    // frame buffer (persistent across iterations) and transmit index
+    static uint16_t txBuf[16];
+    static int txIndex = 0; // next byte to send in current frame (0..16)
+    uint8_t frameReady = 0;
+
+    // pointer to CPU1->CPU2 shared RAM (store amplitude & period)
+    volatile uint32_t *cpu1to2 = (volatile uint32_t *)CPU1_TO_CPU2_MSG_RAM_BASE;
+
+    // simple RX parser state
+    uint8_t rxBuf[6];
+    int rxPos = 0;
+    uint8_t expectedEnd = 0;
+    union { uint32_t u; float f; } conv;
 
     while(1)
     {
@@ -183,12 +197,46 @@ void main(void)
         txBuf[14] = (uint16_t)((tail >> 16) & 0x00FFu);
         txBuf[15] = (uint16_t)((tail >> 24) & 0x00FFu);
 
-        // Write bytes non-blocking when transmitter not busy
-        uint16_t i;
-        for(i = 0; i < 16; i++)
+        // Prepare txBuf if starting a new frame
+        if(txIndex == 0)
         {
-            while(SCI_isTransmitterBusy(SCIB_BASE));
-            SCI_writeCharNonBlocking(SCIB_BASE, txBuf[i]);
+            txBuf[0] = (uint16_t)(w0 & 0x00FFu);
+            txBuf[1] = (uint16_t)((w0 >> 8) & 0x00FFu);
+            txBuf[2] = (uint16_t)((w0 >> 16) & 0x00FFu);
+            txBuf[3] = (uint16_t)((w0 >> 24) & 0x00FFu);
+
+            txBuf[4] = (uint16_t)(w1 & 0x00FFu);
+            txBuf[5] = (uint16_t)((w1 >> 8) & 0x00FFu);
+            txBuf[6] = (uint16_t)((w1 >> 16) & 0x00FFu);
+            txBuf[7] = (uint16_t)((w1 >> 24) & 0x00FFu);
+
+            txBuf[8] = (uint16_t)(w2 & 0x00FFu);
+            txBuf[9] = (uint16_t)((w2 >> 8) & 0x00FFu);
+            txBuf[10] = (uint16_t)((w2 >> 16) & 0x00FFu);
+            txBuf[11] = (uint16_t)((w2 >> 24) & 0x00FFu);
+
+            txBuf[12] = (uint16_t)(tail & 0x00FFu);
+            txBuf[13] = (uint16_t)((tail >> 8) & 0x00FFu);
+            txBuf[14] = (uint16_t)((tail >> 16) & 0x00FFu);
+            txBuf[15] = (uint16_t)((tail >> 24) & 0x00FFu);
+
+            frameReady = 1;
+        }
+
+        // Non-blocking: write as many bytes as TX FIFO has space for
+        if(frameReady)
+        {
+            while(txIndex < 16 && SCI_getTxFIFOStatus(SCIB_BASE) != SCI_FIFO_TX16)
+            {
+                SCI_writeCharNonBlocking(SCIB_BASE, txBuf[txIndex]);
+                txIndex++;
+            }
+
+            if(txIndex >= 16)
+            {
+                // frame fully queued
+                txIndex = 0;
+            }
         }
 
         // Heartbeat LED
@@ -196,6 +244,61 @@ void main(void)
 
         // Delay to match sampling (10ms)
         DEVICE_DELAY_US(10000);
+
+        // Process any received bytes (non-blocking). Frame format:
+        // Amp frame:  0x01 [b0 b1 b2 b3] 0x10  (4 bytes little-endian float)
+        // Period frame:0x10 [b0 b1 b2 b3] 0x01
+        while(SCI_getRxFIFOStatus(SCIB_BASE) > 0)
+        {
+            uint16_t ch = SCI_readCharNonBlocking(SCIB_BASE);
+            uint8_t b = (uint8_t)(ch & 0xFFu);
+
+            if(rxPos == 0)
+            {
+                if(b == 0x01u)
+                {
+                    expectedEnd = 0x10u;
+                    rxBuf[rxPos++] = b;
+                }
+                else if(b == 0x10u)
+                {
+                    expectedEnd = 0x01u;
+                    rxBuf[rxPos++] = b;
+                }
+                else
+                {
+                    // ignore
+                }
+            }
+            else
+            {
+                rxBuf[rxPos++] = b;
+                if(rxPos >= 6)
+                {
+                    // validate end byte
+                    if(rxBuf[5] == expectedEnd)
+                    {
+                        // assemble little-endian word from rxBuf[1..4]
+                        uint32_t w = ((uint32_t)rxBuf[1]) | ((uint32_t)rxBuf[2] << 8) |
+                                     ((uint32_t)rxBuf[3] << 16) | ((uint32_t)rxBuf[4] << 24);
+                        conv.u = w;
+                        if(rxBuf[0] == 0x01u)
+                        {
+                            // amplitude
+                            cpu1to2[0] = conv.u;
+                        }
+                        else if(rxBuf[0] == 0x10u)
+                        {
+                            // period
+                            cpu1to2[1] = conv.u;
+                        }
+                    }
+                    // reset parser
+                    rxPos = 0;
+                    expectedEnd = 0;
+                }
+            }
+        }
     }
 }
 

@@ -53,6 +53,8 @@
 #include "device.h"
 #include "board.h"
 #include <math.h>
+#include <stdint.h>
+#include "device/driverlib/inc/hw_memmap.h"
 
 //
 // 共享内存结构体 (放在 CPU2TOCPU1RAM 段)
@@ -76,6 +78,9 @@ float amplitude = 9.0f;     // 波形幅值
 float period = 1.0f;        // 波形周期 (秒)
 float samplingRate = 100.0f; // 采样率 (Hz)
 float dt;                    // 时间步长
+// previous raw words from CPU1->CPU2 MSGRAM for change detection
+static uint32_t prev_cpu1_u0 = 0u;
+static uint32_t prev_cpu1_u1 = 0u;
 
 //**************************************************************************
 //
@@ -84,6 +89,33 @@ float dt;                    // 时间步长
 //**************************************************************************
 void generateWaveforms(void)
 {
+
+    // Read amplitude and period from CPU1->CPU2 MSGRAM and detect changes
+    volatile uint32_t *cpu1to2 = (volatile uint32_t *)CPU1_TO_CPU2_MSG_RAM_BASE;
+    union { uint32_t u; float f; } conv;
+
+    uint32_t cpu_u0 = cpu1to2[0];
+    uint32_t cpu_u1 = cpu1to2[1];
+
+    // If amplitude changed, update and reset phase (so change is visible immediately)
+    if(cpu_u0 != prev_cpu1_u0)
+    {
+        prev_cpu1_u0 = cpu_u0;
+        conv.u = cpu_u0; // allow zero value
+        amplitude = conv.f;
+        // reset phase/time so new waveform starts immediately
+        t = 0.0f;
+    }
+
+    // If period changed, update and reset phase as well
+    if(cpu_u1 != prev_cpu1_u1)
+    {
+        prev_cpu1_u1 = cpu_u1;
+        conv.u = cpu_u1; // allow zero value
+        period = conv.f;
+        t = 0.0f;
+    }
+
     float omega = 2.0f * 3.14159265f / period;
 
     sharedWaveform.ch0 = amplitude * sinf(omega * t);
