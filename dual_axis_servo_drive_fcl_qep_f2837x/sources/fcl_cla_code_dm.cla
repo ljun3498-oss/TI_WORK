@@ -30,53 +30,44 @@
 // ============================================================================
 static inline float32_t Get_UVW_Init_Angle_M1(void)
 {
-    float32_t init_angle = 0.0f; // 声明并初始化角度变量
+    float32_t init_angle = 0.0f; 
 
-    // 1. 读取霍尔引脚状态 (严格按照 U=16, V=17, W=18 的硬件接线)
+    // 1. 读取霍尔引脚状态 (硬件接线 U=16, V=17, W=18)
     uint16_t u = GPIO_readPin(16);
     uint16_t v = GPIO_readPin(17);
     uint16_t w = GPIO_readPin(18);
     
-    // 2. 拼接成 3 位状态码 (0~7)
+    // 2. 原始状态码拼接
     uint16_t uvw_state = (u << 2) | (v << 1) | w;
     
-    // 3. 查表获取无误差的初始电角度 (基于实测 1890 脉冲绝对零点推导)
+    // 3. 基于 Z相=U相起点 实测的新映射表
     switch(uvw_state)
     {
-        case 5: // 101
-            init_angle = 0.8393f;
+        case 5: // 101 -> 30°
+            init_angle = 0.0833f;
             break;
-        case 1: // 001
-            init_angle = 0.0060f;
+        case 4: // 100 -> 90°
+            init_angle = 0.2500f;
             break;
-        case 3: // 011
-            init_angle = 0.1727f;
+        case 6: // 110 -> 150°
+            init_angle = 0.4167f;
             break;
-        case 2: // 010
-            init_angle = 0.3394f;
+        case 2: // 010 -> 210°
+            init_angle = 0.5833f;
             break;
-        case 6: // 110
-            init_angle = 0.5061f;
+        case 3: // 011 -> 270°
+            init_angle = 0.7500f;
             break;
-        case 4: // 100
-            init_angle = 0.6728f;
+        case 1: // 001 -> 330°
+            init_angle = 0.9167f;
             break;
         default:
-            init_angle = 0.0f; // 发生故障 (引脚全高或全低)，给默认值防飞车
+            init_angle = 0.0f; // 故障状态防飞车
             break;
     }
-    
-    // ==========================================================
-    // ⚠️ 180度反转补丁 (对应你那句增加 0.5 的注释)
-    // 如果电机直启瞬间出现反向拉扯，说明 D/Q 轴正方向与霍尔定义相反。
-    // 此时请解除下面两行代码的注释，将磁场强行翻转 180 度：
-    // ==========================================================
-    // init_angle = init_angle + 0.5f;
-    // if(init_angle >= 1.0f) { init_angle -= 1.0f; } 
 
     return init_angle;
 }
-
 //#############################################################################
 
 

@@ -1643,37 +1643,37 @@ static inline void buildLevel46_M1(void)
             if(uvwStateMachine[0] == UVW_SM_IDLE)
              {
                 uvwStateMachine[0] = UVW_SM_INIT_ANGLE;
-                motorVars[0].alignCntr = 0; // 【关键新增】：借用对齐计数器作为安全缓冲计时器
-             }
+            //     motorVars[0].alignCntr = 0; // 【关键新增】：借用对齐计数器作为安全缓冲计时器
+            //  }
 
             
 
 
-            // ====================================================================
-            // 【致命 Bug 修复】：消除微分突变导致的过流跳闸
-            // 给系统 10 毫秒 (100 次 PWM 周期) 的“静默期”来消化测速尖峰。
-            // ====================================================================
-            if (motorVars[0].alignCntr < 100) 
-            {
-                motorVars[0].alignCntr++;
-                motorVars[0].IdRef = 0.0f;               
-                motorVars[0].rc.TargetValue = 0.0f;      
+            // // ====================================================================
+            // // 【致命 Bug 修复】：消除微分突变导致的过流跳闸
+            // // 给系统 10 毫秒 (100 次 PWM 周期) 的“静默期”来消化测速尖峰。
+            // // ====================================================================
+            // if (motorVars[0].alignCntr < 100) 
+            // {
+            //     motorVars[0].alignCntr++;
+            //     motorVars[0].IdRef = 0.0f;               
+            //     motorVars[0].rc.TargetValue = 0.0f;      
                 
-                // 1. 按住电流环 (清空 PI 积分)
-                FCL_resetController(&motorVars[0]); 
+            //     // 1. 按住电流环 (清空 PI 积分)
+            //     FCL_resetController(&motorVars[0]); 
 
-                // 2. 【核心修复】：死死按住速度环 PID，防止它算出天大的 IqRef 导致跳闸！
-                motorVars[0].pid_spd.data.d1 = 0;
-                motorVars[0].pid_spd.data.d2 = 0;
-                motorVars[0].pid_spd.data.i1 = 0;
-                motorVars[0].pid_spd.data.ud = 0;
-                motorVars[0].pid_spd.data.ui = 0;
-                motorVars[0].pid_spd.data.up = 0;
-                motorVars[0].pid_spd.term.Out = 0; 
+            //     // 2. 【核心修复】：死死按住速度环 PID，防止它算出天大的 IqRef 导致跳闸！
+            //     motorVars[0].pid_spd.data.d1 = 0;
+            //     motorVars[0].pid_spd.data.d2 = 0;
+            //     motorVars[0].pid_spd.data.i1 = 0;
+            //     motorVars[0].pid_spd.data.ud = 0;
+            //     motorVars[0].pid_spd.data.ui = 0;
+            //     motorVars[0].pid_spd.data.up = 0;
+            //     motorVars[0].pid_spd.term.Out = 0; 
 
-            }
-            else
-            {
+            // }
+            // else
+            // {
                 // 10ms 后，测速滤波器的尖峰已经完全平息，正式下发指令，平滑带载起步！
                 motorVars[0].IdRef = motorVars[0].IdRef_run;          
                 motorVars[0].rc.TargetValue = motorVars[0].speedRef;  
