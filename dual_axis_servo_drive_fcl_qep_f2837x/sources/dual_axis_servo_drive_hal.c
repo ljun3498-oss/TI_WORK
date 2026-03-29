@@ -54,6 +54,8 @@ extern uint16_t thresh;
 
 #include "dual_axis_servo_drive.h"
 
+#include "uvw.h"    // 定义 uvw_u/uvw_v/uvw_w
+
 #include "stdbool.h"
 #include "stdint.h"
 
@@ -63,6 +65,11 @@ extern uint16_t thresh;
 //
 uint16_t hlt = 0x7FFF;    // 高电平阈值
 uint16_t llt = 0x0;        // 低电平阈值
+
+// UVW 调试输入定义（在 uvw.h 中声明为 extern）
+volatile uint8_t uvw_u = 0U; // U 相调试输入（GPIO16）
+volatile uint8_t uvw_v = 0U; // V 相调试输入（GPIO17）
+volatile uint8_t uvw_w = 0U; // W 相调试输入（GPIO18）
 
 //
 // 这些由链接器文件定义
@@ -946,25 +953,43 @@ void HAL_setupGPIOs(HAL_Handle handle)
     GPIO_setDirectionMode(15, GPIO_DIR_MODE_IN);    // 设置GPIO15为输入模式
     GPIO_setPadConfig(15, GPIO_PIN_TYPE_STD);    // 设置GPIO15的引脚类型为标准类型
 
-    // GPIO16 - Reserve for debug（预留用于调试）
+    // // GPIO16 - Reserve for debug（预留用于调试）
+    // GPIO_setMasterCore(16, GPIO_CORE_CPU1);    // 设置GPIO16的主核为CPU1
+    // GPIO_setPinConfig(GPIO_16_GPIO16);    // 配置GPIO16为GPIO功能
+    // GPIO_setDirectionMode(16, GPIO_DIR_MODE_IN);    // 设置GPIO16为输入模式
+    // GPIO_setPadConfig(16, GPIO_PIN_TYPE_STD);    // 设置GPIO16的引脚类型为标准类型
+
+    // // CAN总线引脚配置
+    // // GPIO17 - CANRXB（CAN总线接收引脚）
+    // GPIO_setMasterCore(17, GPIO_CORE_CPU1);    // 设置GPIO17的主核为CPU1
+    // GPIO_setPinConfig(GPIO_17_CANRXB);    // 配置GPIO17为CANRXB功能
+    // GPIO_setDirectionMode(17, GPIO_DIR_MODE_IN);    // 设置GPIO17为输入模式
+    // GPIO_setPadConfig(17, GPIO_PIN_TYPE_STD);    // 设置GPIO17的引脚类型为标准类型
+
+    // // 调试预留引脚
+    // // GPIO18 reserve for debug（预留用于调试）
+    // GPIO_setMasterCore(18, GPIO_CORE_CPU1);    // 设置GPIO18的主核为CPU1
+    // GPIO_setPinConfig(GPIO_18_GPIO18);    // 配置GPIO18为GPIO功能
+    // GPIO_setPadConfig(18, GPIO_PIN_TYPE_STD);    // 设置GPIO18的引脚类型为标准类型
+    // GPIO_setDirectionMode(18, GPIO_DIR_MODE_OUT);    // 设置GPIO18为输出模式
+
+        // GPIO16 - Reserve for debug（预留用于调试）
     GPIO_setMasterCore(16, GPIO_CORE_CPU1);    // 设置GPIO16的主核为CPU1
     GPIO_setPinConfig(GPIO_16_GPIO16);    // 配置GPIO16为GPIO功能
-    GPIO_setDirectionMode(16, GPIO_DIR_MODE_IN);    // 设置GPIO16为输入模式
+    GPIO_setDirectionMode(16, GPIO_DIR_MODE_IN);    // 设置GPIO16为输入模式（UVW_U）
     GPIO_setPadConfig(16, GPIO_PIN_TYPE_STD);    // 设置GPIO16的引脚类型为标准类型
 
-    // CAN总线引脚配置
-    // GPIO17 - CANRXB（CAN总线接收引脚）
+    // GPIO17 - Reserve for debug / UVW_V（原示例为 CANRXB，已改为 GPIO）
     GPIO_setMasterCore(17, GPIO_CORE_CPU1);    // 设置GPIO17的主核为CPU1
-    GPIO_setPinConfig(GPIO_17_CANRXB);    // 配置GPIO17为CANRXB功能
-    GPIO_setDirectionMode(17, GPIO_DIR_MODE_IN);    // 设置GPIO17为输入模式
+    GPIO_setPinConfig(GPIO_17_GPIO17);    // 配置GPIO17为GPIO功能（用于 UVW_V）
+    GPIO_setDirectionMode(17, GPIO_DIR_MODE_IN);    // 设置GPIO17为输入模式（UVW_V）
     GPIO_setPadConfig(17, GPIO_PIN_TYPE_STD);    // 设置GPIO17的引脚类型为标准类型
 
-    // 调试预留引脚
-    // GPIO18 reserve for debug（预留用于调试）
+    // GPIO18 - Reserve for debug（用于 UVW_W）
     GPIO_setMasterCore(18, GPIO_CORE_CPU1);    // 设置GPIO18的主核为CPU1
-    GPIO_setPinConfig(GPIO_18_GPIO18);    // 配置GPIO18为GPIO功能
+    GPIO_setPinConfig(GPIO_18_GPIO18);    // 配置GPIO18为GPIO功能（用于 UVW_W）
     GPIO_setPadConfig(18, GPIO_PIN_TYPE_STD);    // 设置GPIO18的引脚类型为标准类型
-    GPIO_setDirectionMode(18, GPIO_DIR_MODE_OUT);    // 设置GPIO18为输出模式
+    GPIO_setDirectionMode(18, GPIO_DIR_MODE_IN);    // 设置GPIO18为输入模式（UVW_W）
 
     // 故障检测引脚配置
     // GPIO19 - Input->nFault_M1（电机1的故障输入引脚）
@@ -1545,7 +1570,9 @@ void HAL_setupQEP(HAL_MTR_Handle handle)
     // 只为电机1初始化QEP模块，电机2的QEP模块不初始化（避免与SCI冲突）
     if(handle == &halMtr[MTR_1])
     {
-        // 配置解码器为正交计数模式，计数上升和下降沿（即2倍分辨率）
+        // 配置解码器为正交计数模式，计数上升和下降沿。
+        // 注意：与 EQEP_CONFIG_QUADRATURE 一起使用时，
+        // 上/下沿计数等效于每脉冲 4 个边沿（即 4× 分辨率），与 QPOSMAX = (4*lines)-1 一致。
         EQEP_setDecoderConfig(obj->qepHandle, (EQEP_CONFIG_2X_RESOLUTION |
                                                EQEP_CONFIG_QUADRATURE |
                                                EQEP_CONFIG_NO_SWAP) );

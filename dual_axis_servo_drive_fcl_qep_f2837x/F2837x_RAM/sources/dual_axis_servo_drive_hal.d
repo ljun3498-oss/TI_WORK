@@ -179,6 +179,7 @@ sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_
 sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/include/f28x_bmsk.h
 sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/CLA_v1.0/RAMP_GEN_CLA.h
 sources/dual_axis_servo_drive_hal.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h
+sources/dual_axis_servo_drive_hal.obj: ../sources/uvw.h
 
 ../sources/dual_axis_servo_drive_hal.c:
 
@@ -537,4 +538,6 @@ C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/include/f28x_bmsk.h:
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/CLA_v1.0/RAMP_GEN_CLA.h:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h:
+
+../sources/uvw.h:
 

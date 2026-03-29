@@ -179,6 +179,7 @@ sources/dual_axis_servo_drive.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/l
 sources/dual_axis_servo_drive.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/include/f28x_bmsk.h
 sources/dual_axis_servo_drive.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/CLA_v1.0/RAMP_GEN_CLA.h
 sources/dual_axis_servo_drive.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h
+sources/dual_axis_servo_drive.obj: ../sources/uvw.h
 sources/dual_axis_servo_drive.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/sfra_settings.h
 sources/dual_axis_servo_drive.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/include/sfra_f32.h
 sources/dual_axis_servo_drive.obj: C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/gui/include/sfra_gui_scicomms_driverlib.h
@@ -543,6 +544,8 @@ C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/fcl/include/f28x_bmsk.h:
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/CLA_v1.0/RAMP_GEN_CLA.h:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/utilities/math_blocks/include/v4.3/rmp_cntl.h:
+
+../sources/uvw.h:
 
 C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/solutions/boostxl_3phganinv/f2837x/include/sfra_settings.h:
 

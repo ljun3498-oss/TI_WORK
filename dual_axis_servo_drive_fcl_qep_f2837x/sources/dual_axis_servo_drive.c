@@ -59,9 +59,30 @@
 #include "dual_axis_servo_drive_user.h"      // 双轴伺服驱动器用户头文件，包含用户自定义函数和变
 #include "dual_axis_servo_drive_hal.h"       // 双轴伺服驱动器硬件抽象层头文件，包含硬件操作函数
 #include "dual_axis_servo_drive.h"           // 双轴伺服驱动器主头文件，包含核心功能定
+#include "uvw.h"                             // UVW 调试输入声明（GPIO16/17/18）
 #include "sfra_settings.h"                    // 系统频率响应分析设置头文件，用于控制环路分析
 #include "motorboard.h"                          // 板级配置头文件，包含系统级配置和初始化函数
              
+
+//--------------------------------------------------------------
+//uvw编码器测试
+// ============================================================================
+// 实例化 UVW 独立状态机变量，并分配给 CLA 共享内存
+// ============================================================================
+volatile uint16_t startModel = STARTMODE_UVW;  // 全局模式开关
+volatile uint16_t uvwStateMachine[2] = {UVW_SM_IDLE, UVW_SM_IDLE};
+
+// 这里填入你之前通过通直流电实验测出来的 Z 相绝对物理偏移量 (脉冲数)
+uint32_t cal_Z_Offset_Count_M1 = 0; // 必须替换为你的真实标定值！
+uint32_t cal_Z_Offset_Count_M2 = 0; // 必须替换为你的真实标定值！
+
+// 告诉链接器把这几个变量放在 CLA 也能读写的地方
+#pragma DATA_SECTION(startModel, "ClaData");
+#pragma DATA_SECTION(uvwStateMachine, "ClaData");
+#pragma DATA_SECTION(cal_Z_Offset_Count_M1, "ClaData");
+#pragma DATA_SECTION(cal_Z_Offset_Count_M2, "ClaData");
+//--------------------------------------------------------------
+
 
 //
 // 仪表代码，用于时序验
@@ -508,7 +529,13 @@ void main(void)
         (*Alpha_State_Ptr)();   // 跳转到Alpha状态（A0,B0,...
         //===========================================================
 
-         runSyncControl();  // 运行双电机同步控
+        // 读取 UVW 调试引脚（GPIO16/17/18），用于外部开关/传感器调试
+        // 变量在 uvw.h 中以 extern 声明（volatile uint8_t uvw_u/uvw_v/uvw_w）
+        uvw_u = (uint8_t)GPIO_readPin(16);
+        uvw_v = (uint8_t)GPIO_readPin(17);
+        uvw_w = (uint8_t)GPIO_readPin(18);
+
+        runSyncControl();  // 运行双电机同步控
     }
 } //END MAIN CODE
 
@@ -1304,58 +1331,88 @@ static inline void buildLevel3_M1(void)
 #endif
 
 // ----------------------------------------------------------------------------
-// 对齐例程：此例程将电机对齐到零电角度
-// 对于QEP，还会找到索引位置并初始化相对于索引位置的角
+// 对齐例程：此例程将电机对齐到零电角度 (加入 UVW 零等待直启支持)
 // ----------------------------------------------------------------------------
-    if(motorVars[0].runMotor == MOTOR_STOP)
+    if (startModel == STARTMODE_UVW)
     {
-        // 电机停止时，设置为编码器对齐状
-        motorVars[0].ptrFCL->lsw = ENC_ALIGNMENT;
-        motorVars[0].pi_id.ref = 0;
-        motorVars[0].IdRef = 0;
-        FCL_resetController(&motorVars[0]);
-    }
-    else if(motorVars[0].ptrFCL->lsw == ENC_ALIGNMENT)
-    {
-        // 设置对齐电流
-        motorVars[0].IdRef = motorVars[0].IdRef_start;  // 通常.1
-
-        // 设置对齐和保持时间，使轴稳定
-        if(motorVars[0].pi_id.ref >= motorVars[0].IdRef)
+        // ====================================================================
+        // UVW 极简直启逻辑 (纯电流环)
+        // ====================================================================
+        if (motorVars[0].runMotor == MOTOR_RUN)
         {
-            motorVars[0].alignCntr++;
+            // 1. 欺骗官方库，跳过找零，直接进入闭环
+            motorVars[0].ptrFCL->lsw = ENC_CALIBRATION_DONE;
 
-            if(motorVars[0].alignCntr >= motorVars[0].alignCnt)
+            // 2. 触发我们在 CLA 里的独立 UVW 状态机获取初始物理角度 (仅触发一次)
+            if (uvwStateMachine[0] == UVW_SM_IDLE)
             {
-                motorVars[0].alignCntr  = 0;
-
-                // 对于QEP，旋转电机以找到索引脉冲
-                motorVars[0].ptrFCL->lsw = ENC_WAIT_FOR_INDEX;
+                uvwStateMachine[0] = UVW_SM_INIT_ANGLE;
             }
+
+            // 3. 赋值运行电流 (由于 Level3 没有速度 PID 捣乱，直接给推力！)
+            motorVars[0].IdRef = motorVars[0].IdRef_run;
+            
+            // 4. 让斜坡发生器转起来 (在 Level 3 仅仅为了观测，不参与实际扭矩控制)
+            motorVars[0].rc.TargetValue = motorVars[0].speedRef;
         }
-
-    } // end else if(lsw == ENC_ALIGNMENT)
-    else if(motorVars[0].ptrFCL->lsw == ENC_CALIBRATION_DONE)
-    {
-        // 校准完成后，设置运行时的Id参考
-        motorVars[0].IdRef = motorVars[0].IdRef_run;
-    }
-
-// ----------------------------------------------------------------------------
-// 连接RMP模块的输入并调用斜坡控制模块
-// ----------------------------------------------------------------------------
-    if(motorVars[0].ptrFCL->lsw == ENC_ALIGNMENT)
-    {
-        // 对齐状态下，速度目标值为0
-        motorVars[0].rc.TargetValue = 0;
-        motorVars[0].rc.SetpointValue = 0;
+        else
+        {
+            // 停机逻辑：重置所有状态，防止下次启动冲压
+            motorVars[0].ptrFCL->lsw = ENC_ALIGNMENT;
+            uvwStateMachine[0] = UVW_SM_IDLE; 
+            
+            motorVars[0].IdRef = 0;
+            motorVars[0].pi_id.ref = 0;
+            motorVars[0].rc.TargetValue = 0;
+            motorVars[0].rc.SetpointValue = 0;
+            FCL_resetController(&motorVars[0]);
+        }
     }
     else
     {
-        // 非对齐状态下，速度目标值为参考速度
-        motorVars[0].rc.TargetValue = motorVars[0].speedRef;
-    }
+        // ====================================================================
+        // 原版的 ABZ 找零逻辑 (当 startModel == STARTMODE_ABZ 时运行)
+        // ====================================================================
+        if(motorVars[0].runMotor == MOTOR_STOP)
+        {
+            motorVars[0].ptrFCL->lsw = ENC_ALIGNMENT;
+            motorVars[0].pi_id.ref = 0;
+            motorVars[0].IdRef = 0;
+            FCL_resetController(&motorVars[0]);
+        }
+        else if(motorVars[0].ptrFCL->lsw == ENC_ALIGNMENT)
+        {
+            motorVars[0].IdRef = motorVars[0].IdRef_start;
 
+            if(motorVars[0].pi_id.ref >= motorVars[0].IdRef)
+            {
+                motorVars[0].alignCntr++;
+
+                if(motorVars[0].alignCntr >= motorVars[0].alignCnt)
+                {
+                    motorVars[0].alignCntr  = 0;
+                    motorVars[0].ptrFCL->lsw = ENC_WAIT_FOR_INDEX;
+                }
+            }
+        } 
+        else if(motorVars[0].ptrFCL->lsw == ENC_CALIBRATION_DONE)
+        {
+            motorVars[0].IdRef = motorVars[0].IdRef_run;
+        }
+
+        // --------------------------------------------------------------------
+        // 连接RMP模块的输入并调用斜坡控制模块 (原版逻辑)
+        // --------------------------------------------------------------------
+        if(motorVars[0].ptrFCL->lsw == ENC_ALIGNMENT)
+        {
+            motorVars[0].rc.TargetValue = 0;
+            motorVars[0].rc.SetpointValue = 0;
+        }
+        else
+        {
+            motorVars[0].rc.TargetValue = motorVars[0].speedRef;
+        }
+    }
     // 执行斜坡控制
     fclRampControl(&motorVars[0].rc);
 
@@ -1567,6 +1624,78 @@ static inline void buildLevel46_M1(void)
     FCL_runComplexCtrlWrap_M1(&motorVars[0]);  // 运行复数控制器包装器，用于电的快速电流环控制
 #endif
 
+
+
+
+
+
+    if(startModel == STARTMODE_UVW)
+    {
+        // ========================================================================
+        // 全新：UVW 模式主 CPU 极简控制逻辑 (甩手掌柜模式)
+        // ========================================================================
+        if(motorVars[0].runMotor == MOTOR_RUN)
+        {
+            // 1. 【核心欺骗】：强制告诉 TI 官方库“校准已完成”，逼着它立刻开始闭环跑 FOC！
+            motorVars[0].ptrFCL->lsw = ENC_CALIBRATION_DONE; 
+
+            // 2. 给我们自己的独立状态机发送启动指令 (只在空闲时发一次)
+            if(uvwStateMachine[0] == UVW_SM_IDLE)
+             {
+                uvwStateMachine[0] = UVW_SM_INIT_ANGLE;
+                motorVars[0].alignCntr = 0; // 【关键新增】：借用对齐计数器作为安全缓冲计时器
+             }
+
+            
+
+
+            // ====================================================================
+            // 【致命 Bug 修复】：消除微分突变导致的过流跳闸
+            // 给系统 10 毫秒 (100 次 PWM 周期) 的“静默期”来消化测速尖峰。
+            // ====================================================================
+            if (motorVars[0].alignCntr < 100) 
+            {
+                motorVars[0].alignCntr++;
+                motorVars[0].IdRef = 0.0f;               
+                motorVars[0].rc.TargetValue = 0.0f;      
+                
+                // 1. 按住电流环 (清空 PI 积分)
+                FCL_resetController(&motorVars[0]); 
+
+                // 2. 【核心修复】：死死按住速度环 PID，防止它算出天大的 IqRef 导致跳闸！
+                motorVars[0].pid_spd.data.d1 = 0;
+                motorVars[0].pid_spd.data.d2 = 0;
+                motorVars[0].pid_spd.data.i1 = 0;
+                motorVars[0].pid_spd.data.ud = 0;
+                motorVars[0].pid_spd.data.ui = 0;
+                motorVars[0].pid_spd.data.up = 0;
+                motorVars[0].pid_spd.term.Out = 0; 
+
+            }
+            else
+            {
+                // 10ms 后，测速滤波器的尖峰已经完全平息，正式下发指令，平滑带载起步！
+                motorVars[0].IdRef = motorVars[0].IdRef_run;          
+                motorVars[0].rc.TargetValue = motorVars[0].speedRef;  
+            }
+        }
+        else
+        {
+            // 停机逻辑
+            motorVars[0].IdRef = 0;               
+            motorVars[0].tempIdRef = motorVars[0].IdRef; 
+            motorVars[0].rc.TargetValue = 0;      
+            FCL_resetController(&motorVars[0]);   
+
+            // 【极其重要】：停机时，复位我们自己的独立状态机
+            uvwStateMachine[0] = UVW_SM_IDLE; 
+            
+            // 为了安全，也把 TI 的底层状态复位，防止其乱跑
+            motorVars[0].ptrFCL->lsw = ENC_ALIGNMENT; 
+        }
+    }
+    else
+    {
     // ------------------------------------------------------------------------
     // 编码器对齐程序：此程序将电机对齐到零电角度，
     // 对于QEP编码器，还会找到索引位置并相对于索引位置初始化角
@@ -1622,7 +1751,7 @@ static inline void buildLevel46_M1(void)
 
         FCL_resetController(&motorVars[0]);  // 重置控制
     }
-
+    }
     //
     //  连接RMP模块的输入并调用斜坡控制模块
     //

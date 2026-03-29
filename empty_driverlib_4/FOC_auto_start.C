@@ -155,6 +155,10 @@ uint8_t monitor_buffer_index = 0;                    // 缓冲区索引
 
 float theta_offset = M_PI_F*0/12;              // 电角度偏置（90度，用于调试）
 float theta_align_offset = 0.0f;                  // 对齐时记录的编码器零位偏移
+// UVW 调试输入（GPIO 15/16/25）
+volatile uint8_t uvw_u = 0U; // GPIO15
+volatile uint8_t uvw_v = 0U; // GPIO16
+volatile uint8_t uvw_w = 0U; // GPIO25
 
 
 
@@ -798,6 +802,16 @@ void InitPeripherals(void)
     // 初始化编码器
     Encoder_init();
 
+
+
+    GPIO_setPadConfig(16, GPIO_PIN_TYPE_STD);
+    GPIO_setPadConfig(17, GPIO_PIN_TYPE_STD);
+    GPIO_setPadConfig(18, GPIO_PIN_TYPE_STD);
+
+    GPIO_setDirectionMode(16, GPIO_DIR_MODE_IN);
+    GPIO_setDirectionMode(17, GPIO_DIR_MODE_IN);
+    GPIO_setDirectionMode(18, GPIO_DIR_MODE_IN);
+
     // 注册ADC中断
     Interrupt_register(INT_ADCA1, &adc_isr);
     Interrupt_enable(INT_ADCA1);
@@ -811,6 +825,10 @@ interrupt void adc_isr(void)
     
     // 读取ADC电流值
     ADC_Read_Current();
+    // 读取 UVW 调试输入（GPIO16/17/18） 使用 driverlib API
+    uvw_u = (uint8_t)GPIO_readPin(16);
+    uvw_v = (uint8_t)GPIO_readPin(17);
+    uvw_w = (uint8_t)GPIO_readPin(18);
     
     // 状态机控制
     switch(g_control_state) {
@@ -822,7 +840,7 @@ interrupt void adc_isr(void)
             float align_angle = 0.0f;
             
             // 电压模式：固定vd，vq=0
-            float vd = 0.05f * BUS_VOLTAGE; // 极小对齐电压，避免过大电流
+            float vd = 0.025f * BUS_VOLTAGE; // 极小对齐电压，避免过大电流
             float vq = 0.0f;
             
             // 电压限幅
@@ -857,7 +875,7 @@ interrupt void adc_isr(void)
                 g_previous_open_loop_angle = 0.0f;
                 g_open_loop_turns = 0.0f;
 
-                SwitchControlState(STATE_CLOSED_LOOP);
+                // SwitchControlState(STATE_CLOSED_LOOP);
             }
             
             break;

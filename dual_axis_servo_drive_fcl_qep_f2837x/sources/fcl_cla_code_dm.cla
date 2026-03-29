@@ -21,6 +21,64 @@
 // 包含文件
 //
 #include "cpu_cla_shared_dm.h"
+#include "uvw.h"    // UVW 调试输入声明（在主CPU中定义）
+#include "gpio.h"
+
+//#############################################################################
+// ============================================================================
+// 获取电机 1 的 UVW 初始电角度 (记得根据你的实际硬件原理图修改 GPIO 编号)
+// ============================================================================
+static inline float32_t Get_UVW_Init_Angle_M1(void)
+{
+    float32_t init_angle = 0.0f; // 声明并初始化角度变量
+
+    // 1. 读取霍尔引脚状态 (严格按照 U=16, V=17, W=18 的硬件接线)
+    uint16_t u = GPIO_readPin(16);
+    uint16_t v = GPIO_readPin(17);
+    uint16_t w = GPIO_readPin(18);
+    
+    // 2. 拼接成 3 位状态码 (0~7)
+    uint16_t uvw_state = (u << 2) | (v << 1) | w;
+    
+    // 3. 查表获取无误差的初始电角度 (基于实测 1890 脉冲绝对零点推导)
+    switch(uvw_state)
+    {
+        case 5: // 101
+            init_angle = 0.8393f;
+            break;
+        case 1: // 001
+            init_angle = 0.0060f;
+            break;
+        case 3: // 011
+            init_angle = 0.1727f;
+            break;
+        case 2: // 010
+            init_angle = 0.3394f;
+            break;
+        case 6: // 110
+            init_angle = 0.5061f;
+            break;
+        case 4: // 100
+            init_angle = 0.6728f;
+            break;
+        default:
+            init_angle = 0.0f; // 发生故障 (引脚全高或全低)，给默认值防飞车
+            break;
+    }
+    
+    // ==========================================================
+    // ⚠️ 180度反转补丁 (对应你那句增加 0.5 的注释)
+    // 如果电机直启瞬间出现反向拉扯，说明 D/Q 轴正方向与霍尔定义相反。
+    // 此时请解除下面两行代码的注释，将磁场强行翻转 180 度：
+    // ==========================================================
+    // init_angle = init_angle + 0.5f;
+    // if(init_angle >= 1.0f) { init_angle -= 1.0f; } 
+
+    return init_angle;
+}
+
+//#############################################################################
+
 
 /* pointers to access the peripherals indirectly on the CLA
  * Note that the pointer on CLA side is 16bits hence the same pointers from CPU
@@ -81,6 +139,71 @@ __interrupt void Cla1Task1(void)
 //  __mdebugstop();
 //  __meallow();
 
+
+    if(startModel == STARTMODE_UVW)
+    {
+        // ========================================================================
+        // 独立 UVW 状态机接管底层硬件逻辑 (完全不污染官方的 lsw)
+        // ========================================================================
+        if(uvwStateMachine[0] == UVW_SM_DONE)
+        {
+            // 状态 3：完美闭环 (Z相已纠偏完成)
+            fclVars[0].qep.MechTheta = (fclVars[0].qep.MechScaler * fclVars[0].ptrQEP->QPOSLAT);
+            fclVars[0].qep.ElecTheta = (fclVars[0].qep.PolePairs * fclVars[0].qep.MechTheta);
+            fclVars[0].qep.ElecTheta -= ((float32_t)((int32)(fclVars[0].qep.ElecTheta)));
+            fclVars[0].pangle  = fclVars[0].qep.ElecTheta;
+        }
+        else if(uvwStateMachine[0] == UVW_SM_WAIT_Z)
+        {
+            // 状态 2：带着初始误差闭环，死死盯住 Z 相标志位
+            __meallow();
+            if(fclVars[0].ptrQEP->QFLG.all & CLA_QEP_FLAG_IEL_EVENT)
+            {
+                // 【核心修改】：碰到 Z 相！立刻推翻之前的误差估计！
+                // 【绝对基因坐标 1890】强行覆盖计数器！
+                fclVars[0].ptrQEP->QPOSINIT = 1890;
+                fclVars[0].ptrQEP->QEPCTL.all |= IEI_RISING;
+                fclVars[0].ptrQEP->QCLR.all = CLA_QEP_FLAG_IEL_EVENT;
+                
+                // 内部状态机跃迁到 DONE！纠偏彻底完成！
+                uvwStateMachine[0] = UVW_SM_DONE; 
+            }
+
+            // 在碰到 Z 相之前，使用带有误差的初值继续维持闭环运转
+            fclVars[0].qep.MechTheta = (fclVars[0].qep.MechScaler * fclVars[0].ptrQEP->QPOSLAT);
+            fclVars[0].qep.ElecTheta = (fclVars[0].qep.PolePairs * fclVars[0].qep.MechTheta);
+            fclVars[0].qep.ElecTheta -= ((float32_t)((int32)(fclVars[0].qep.ElecTheta)));
+            fclVars[0].pangle = fclVars[0].qep.ElecTheta; 
+        }
+        else if(uvwStateMachine[0] == UVW_SM_INIT_ANGLE)
+        {
+            // 状态 1：上电瞬间，抓取引脚赋初值 (仅执行一次)
+            __meallow();
+            
+            // 1. 读 GPIO 算电角度
+            float32_t init_elec_theta = Get_UVW_Init_Angle_M1();
+            
+            // 2. 换算成机械脉冲并硬塞进硬件计数器
+            float32_t init_mech_theta = init_elec_theta / fclVars[0].qep.PolePairs;
+            uint32_t init_count = (uint32_t)(init_mech_theta * (4.0f * fclVars[0].qep.LineEncoder)); 
+            
+            fclVars[0].ptrQEP->QPOSCNT = init_count;
+            fclVars[0].ptrQEP->QCLR.all = CLA_QEP_FLAG_IEL_EVENT;
+            fclVars[0].ptrQEP->QEPCTL.bit.IEI = 0x0; 
+            
+            fclVars[0].pangle = init_elec_theta;
+            
+            // 3. 秒切状态，下一个控制周期就去等 Z 相
+            uvwStateMachine[0] = UVW_SM_WAIT_Z;
+        }
+        else // UVW_SM_IDLE
+        {
+            // 状态 0：停机空闲状态
+            fclVars[0].pangle = 0.0f;
+        }
+    }
+    else
+    {
     if(fclVars[0].lsw == ENC_CALIBRATION_DONE)
     {
         //
@@ -203,6 +326,7 @@ __interrupt void Cla1Task1(void)
 
         fclVars[0].pangle  = 0;
     }
+    }
 
 #if CLA_DEBUG   // only for debugging (仅用于调试)
     SETGPIOTEST1_LOW; // set LOW (设置测试引脚为低电平)
@@ -279,6 +403,18 @@ __interrupt void Cla1Task4 ( void )
     SETGPIOTEST1_HIGH; // set LOW (设置测试引脚为高电平)
 #endif
 
+    bool allow_iel_clear = false; // 默认锁死，不准清理 Z 相标志
+    
+    if (startModel == STARTMODE_UVW) {
+        // 在 UVW 模式下：
+        // 只有当 Task 1 成功用完了 Z 相，并且把状态改成了 DONE 之后
+        // 才允许 Task 4 介入清理。
+        // 如果还在 WAIT_Z 等待阶段，Task 4 必须停手！
+        if (uvwStateMachine[0] == UVW_SM_DONE) {
+            allow_iel_clear = true; 
+        }
+    } else {
+        // 如果是传统的 ABZ 模式，完全照搬你原先的逻辑：
     if(fclVars[0].lsw != ENC_ALIGNMENT)
     {
         //
@@ -328,6 +464,18 @@ __interrupt void Cla1Task4 ( void )
                 //
                 fclVars[0].qep.QepPeriod = fclVars[0].ptrQEP->QCPRDLAT;
             }
+        }
+    }
+    }
+
+    // 只有拿到许可，才能执行原先的清理动作
+    if(allow_iel_clear)
+    {
+        if(fclVars[0].ptrQEP->QFLG.all & CLA_QEP_FLAG_IEL_EVENT)
+        {
+            fclVars[0].qep.IndexSyncFlag = 0x00F0; 
+            fclVars[0].qep.QepCountIndex = fclVars[0].ptrQEP->QPOSILAT;
+            fclVars[0].ptrQEP->QCLR.all = CLA_QEP_FLAG_IEL_EVENT;
         }
     }
 
