@@ -57,42 +57,6 @@ extern "C"
 // PinMux Configurations
 //
 //*****************************************************************************
-//
-// GPIO31 - GPIO Settings
-//
-#define CPU1_LED_GPIO_PIN_CONFIG GPIO_31_GPIO31
-//
-// GPIO34 - GPIO Settings
-//
-#define CPU2_LED_GPIO_PIN_CONFIG GPIO_34_GPIO34
-//
-// GPIO10 - GPIO Settings
-//
-#define myGPIO10_GPIO_PIN_CONFIG GPIO_10_GPIO10
-//
-// GPIO11 - GPIO Settings
-//
-#define myGPIO11_GPIO_PIN_CONFIG GPIO_11_GPIO11
-//
-// GPIO14 - GPIO Settings
-//
-#define myGPIO14_GPIO_PIN_CONFIG GPIO_14_GPIO14
-//
-// GPIO15 - GPIO Settings
-//
-#define myGPIO15_GPIO_PIN_CONFIG GPIO_15_GPIO15
-
-//*****************************************************************************
-//
-// GPIO Configurations
-//
-//*****************************************************************************
-#define CPU1_LED 31
-#define CPU2_LED 34
-#define myGPIO10 10
-#define myGPIO11 11
-#define myGPIO14 14
-#define myGPIO15 15
 
 //*****************************************************************************
 //

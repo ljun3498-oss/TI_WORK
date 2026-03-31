@@ -134,11 +134,11 @@ EXE_OUTPUTS__QUOTED += \
 
 
 # All Target
-all: $(OBJS) $(LIB_SRCS) $(GEN_CMDS)
+all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@$(MAKE) --no-print-directory -Onone "ipc_ex2_gpio_sysconfig_cpu1.out"
 
 # Tool invocations
-ipc_ex2_gpio_sysconfig_cpu1.out: $(OBJS) $(LIB_SRCS) $(GEN_CMDS)
+ipc_ex2_gpio_sysconfig_cpu1.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
 	"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -Ooff --define=CPU1 --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ipc_ex2_gpio_sysconfig_cpu1.map" --stack_size=0x100 --warn_sections -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="ipc_ex2_gpio_sysconfig_cpu1_linkInfo.xml" --entry_point=code_start --rom_model -o "ipc_ex2_gpio_sysconfig_cpu1.out" $(ORDERED_OBJS)

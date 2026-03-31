@@ -288,7 +288,7 @@ void initMotorParameters(MOTOR_Vars_t *pMotor, HAL_MTR_Handle mtrHandle)
 void initControlVars(MOTOR_Vars_t *pMotor)
 {
     // 设置斜坡控制的最大延迟率
-    pMotor->rc.RampDelayMax = 10;    // 斜坡控制最大延迟
+    pMotor->rc.RampDelayMax = 5;    // 斜坡控制最大延迟
 
     // PI控制器配置
     // 初始化位置PI控制器

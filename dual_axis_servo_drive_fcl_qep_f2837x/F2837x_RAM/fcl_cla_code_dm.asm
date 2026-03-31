@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320x280xx Control Law Accelerator G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Sun Mar 29 19:58:33 2026                 *
+;* Date/Time created: Tue Mar 31 21:09:25 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 
@@ -39,8 +39,8 @@ $C$DW$3	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$3, DW_AT_decl_line(0x15)
 	.dwattr $C$DW$3, DW_AT_decl_column(0x1a)
 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\optcla.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{FA60516C-285D-4FB6-A73C-56C4ED1A08F3} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{4AA383B5-4897-4E24-9FCF-EE1E980D29AC} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\aciacla.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{D6679130-6669-46FD-9530-213709B0FC7D} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\optcla.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{AFB8F84C-3872-4F4F-A458-65D2381AD1FD} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{10C6CAF0-2FED-4E49-9A64-04F1B2E5D207} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\aciacla.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{BB831202-2168-4EAE-B514-58512F05B255} 
 	.sect	"Cla1Prog:Cla1Task8"
 	.align	 2
 	.clink
@@ -1276,40 +1276,40 @@ $C$L18:
 $C$L19:    
         MBCNDD    $C$L25,UNC            ; [CPU_FPU] |69| 
         MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR0,#16085            ; [CPU_FPU] |69| 
-        MMOVXI    MR0,#22964            ; [CPU_FPU] |69| 
+        MMOVIZ    MR0,#16064            ; [CPU_FPU] |69| 
+        MMOVXI    MR0,#26844            ; [CPU_FPU] |69| 
         ; branch occurs ; [] |69| 
 $C$L20:    
         MBCNDD    $C$L25,UNC            ; [CPU_FPU] |69| 
         MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR0,#15786            ; [CPU_FPU] |69| 
-        MMOVXI    MR0,#39217            ; [CPU_FPU] |69| 
+        MMOVIZ    MR0,#16181            ; [CPU_FPU] |69| 
+        MMOVXI    MR0,#36386            ; [CPU_FPU] |69| 
         ; branch occurs ; [] |69| 
 $C$L21:    
         MBCNDD    $C$L25,UNC            ; [CPU_FPU] |69| 
         MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR0,#16000            ; [CPU_FPU] |69| 
+        MMOVIZ    MR0,#16138            ; [CPU_FPU] |69| 
+        MMOVXI    MR0,#57672            ; [CPU_FPU] |69| 
         ; branch occurs ; [] |69| 
 $C$L22:    
         MBCNDD    $C$L25,UNC            ; [CPU_FPU] |69| 
         MNOP      ; [CPU_FPU] 
-        MNOP      ; [CPU_FPU] 
-        MMOVIZ    MR0,#16192            ; [CPU_FPU] |69| 
+        MMOVIZ    MR0,#15661            ; [CPU_FPU] |69| 
+        MMOVXI    MR0,#43935            ; [CPU_FPU] |69| 
         ; branch occurs ; [] |69| 
 $C$L23:    
 	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 57,column 13,is_stmt,isa 0
         MBCNDD    $C$L25,UNC            ; [CPU_FPU] |57| 
         MNOP      ; [CPU_FPU] 
 	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 56,column 13,is_stmt,isa 0
-        MMOVIZ    MR0,#16149            ; [CPU_FPU] |56| 
-        MMOVXI    MR0,#21286            ; [CPU_FPU] |56| 
+        MMOVIZ    MR0,#15958            ; [CPU_FPU] |56| 
+        MMOVXI    MR0,#7759             ; [CPU_FPU] |56| 
 	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 57,column 13,is_stmt,isa 0
         ; branch occurs ; [] |57| 
 $C$L24:    
-	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 62,column 13,is_stmt,isa 0
-        MMOVIZ    MR0,#16234            ; [CPU_FPU] |62| 
-        MMOVXI    MR0,#44250            ; [CPU_FPU] |62| 
+	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 50,column 13,is_stmt,isa 0
+        MMOVIZ    MR0,#16224            ; [CPU_FPU] |50| 
+        MMOVXI    MR0,#11744            ; [CPU_FPU] |50| 
 $C$L25:    
 	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 181,column 13,is_stmt,isa 0
         MUI16TOF32 MR1,@fclVars+67      ; [CPU_FPU] |181| 
@@ -1368,7 +1368,7 @@ $C$L26:
         ; branchcc occurs ; [] |151| 
 	.dwpsn	file "../sources/fcl_cla_code_dm.cla",line 155,column 17,is_stmt,isa 0
         MMOVIZ    MR0,#0                ; [CPU_FPU] |155| 
-        MMOVXI    MR0,#1890             ; [CPU_FPU] |155| 
+        MMOVXI    MR0,#1981             ; [CPU_FPU] |155| 
         MMOV32    *MAR0+[#2],MR0        ; [CPU_FPU] |155| 
         MNOP      ; [CPU_FPU] 
         MNOP      ; [CPU_FPU] 

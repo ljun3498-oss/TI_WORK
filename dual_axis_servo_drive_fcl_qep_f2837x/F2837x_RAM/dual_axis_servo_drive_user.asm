@@ -1,6 +1,6 @@
 ;***************************************************************
 ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-;* Date/Time created: Sun Mar 29 17:38:38 2026                 *
+;* Date/Time created: Tue Mar 31 21:09:25 2026                 *
 ;***************************************************************
 	.compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --mem_model:code=flat --mem_model:data=large --object_format=elf --quiet --silicon_errata_fpu1_workaround=off --silicon_version=28 --symdebug:dwarf --symdebug:dwarf_version=4 --tmu_support=tmu0 --vcu_support=vcu2 
 	.asg	XAR2, FP
@@ -168,8 +168,8 @@ $C$DW$23	.dwtag  DW_TAG_variable
 	.dwattr $C$DW$23, DW_AT_decl_column(0x15)
 
 	.sblock	".data"
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{5BAD246B-62A4-4200-BB17-DFF28CE841E7} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{AD0E35B6-B7A4-4400-9033-5355B5CC0972} 
-;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{E093A921-BE6A-4889-9896-899A929132AE} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\opt2000.exe C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{01C1FE01-FAB8-4145-8275-C9DEB29DD850} C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{80EF56B7-CEF6-478F-8C6E-F0CEB0CDB05A} 
+;	D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Local\\Temp\\{2C8CA43B-7114-43EA-B0ED-73681F914204} 
 	.sect	".text:runOffsetsCalculation"
 	.clink
 	.global	||runOffsetsCalculation||
@@ -1728,7 +1728,7 @@ $C$DW$46	.dwtag  DW_TAG_variable
         NOP       ; [CPU_ALU] 
         NOP       ; [CPU_ALU] 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 291,column 5,is_stmt,isa 0
-        MOVB      ACC,#10               ; [CPU_ALU] |291| 
+        MOVB      ACC,#5                ; [CPU_ALU] |291| 
 	.dwpsn	file "../sources/dual_axis_servo_drive_user.c",line 323,column 5,is_stmt,isa 0
         MOVB      XAR0,#156             ; [CPU_ALU] |323| 
         MOV32     *+XAR4[AR0],R0H       ; [CPU_FPU] |323| 

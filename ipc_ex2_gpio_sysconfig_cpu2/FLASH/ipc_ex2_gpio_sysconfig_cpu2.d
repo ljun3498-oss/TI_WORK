@@ -91,6 +91,10 @@ ipc_ex2_gpio_sysconfig_cpu2.obj: C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_
 ipc_ex2_gpio_sysconfig_cpu2.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stddef.h
 ipc_ex2_gpio_sysconfig_cpu2.obj: syscfg/board.h
 ipc_ex2_gpio_sysconfig_cpu2.obj: C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device/device.h
+ipc_ex2_gpio_sysconfig_cpu2.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h
+ipc_ex2_gpio_sysconfig_cpu2.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h
+ipc_ex2_gpio_sysconfig_cpu2.obj: D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h
+ipc_ex2_gpio_sysconfig_cpu2.obj: ../device/driverlib/inc/hw_memmap.h
 
 ../ipc_ex2_gpio_sysconfig_cpu2.c:
 
@@ -273,4 +277,12 @@ D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/stddef.h:
 syscfg/board.h:
 
 C:/Users/JUNLI/workspace_ccstheia/ipc_ex2_gpio_sysconfig_cpu2/device/device.h:
+
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h:
+
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h:
+
+D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/machine/_limits.h:
+
+../device/driverlib/inc/hw_memmap.h:
 

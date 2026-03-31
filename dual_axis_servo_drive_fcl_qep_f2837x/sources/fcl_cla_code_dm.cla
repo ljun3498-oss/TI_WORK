@@ -32,7 +32,7 @@ static inline float32_t Get_UVW_Init_Angle_M1(void)
 {
     float32_t init_angle = 0.0f; 
 
-    // 1. 读取霍尔引脚状态 (硬件接线 U=16, V=17, W=18)
+    // 1. 读取霍尔引脚状态 (硬件接线保持原始状态，无需对调)
     uint16_t u = GPIO_readPin(16);
     uint16_t v = GPIO_readPin(17);
     uint16_t w = GPIO_readPin(18);
@@ -40,26 +40,26 @@ static inline float32_t Get_UVW_Init_Angle_M1(void)
     // 2. 原始状态码拼接
     uint16_t uvw_state = (u << 2) | (v << 1) | w;
     
-    // 3. 基于 Z相=U相起点 实测的新映射表
+    // 3. 完美叠加了 1981 脉冲偏置的终极真理表
     switch(uvw_state)
     {
-        case 5: // 101 -> 30°
-            init_angle = 0.0833f;
+        case 5: // 101
+            init_angle = 0.7092f;
             break;
-        case 4: // 100 -> 90°
-            init_angle = 0.2500f;
+        case 1: // 001
+            init_angle = 0.8757f;
             break;
-        case 6: // 110 -> 150°
-            init_angle = 0.4167f;
+        case 3: // 011
+            init_angle = 0.0424f;
             break;
-        case 2: // 010 -> 210°
-            init_angle = 0.5833f;
+        case 2: // 010
+            init_angle = 0.2091f;
             break;
-        case 3: // 011 -> 270°
-            init_angle = 0.7500f;
+        case 6: // 110
+            init_angle = 0.3758f;
             break;
-        case 1: // 001 -> 330°
-            init_angle = 0.9167f;
+        case 4: // 100
+            init_angle = 0.5425f;
             break;
         default:
             init_angle = 0.0f; // 故障状态防飞车
@@ -152,7 +152,7 @@ __interrupt void Cla1Task1(void)
             {
                 // 【核心修改】：碰到 Z 相！立刻推翻之前的误差估计！
                 // 【绝对基因坐标 1890】强行覆盖计数器！
-                fclVars[0].ptrQEP->QPOSINIT = 1890;
+                fclVars[0].ptrQEP->QPOSINIT = 1981;
                 fclVars[0].ptrQEP->QEPCTL.all |= IEI_RISING;
                 fclVars[0].ptrQEP->QCLR.all = CLA_QEP_FLAG_IEL_EVENT;
                 
