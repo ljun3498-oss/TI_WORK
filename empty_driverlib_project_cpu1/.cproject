@@ -82,6 +82,14 @@
                             <tool id="com.ti.ccstudio.buildDefinitions.C2000_22.6.hex.489565224" name="C2000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.hex"/>
                         </toolChain>
                     </folderInfo>
+                    <fileInfo id="com.ti.ccstudio.buildDefinitions.C2000.Default.1411651515.empty_driverlib_main_cpu1.c" name="empty_driverlib_main_cpu1.c" rcbsApplicability="disable" resourcePath="empty_driverlib_main_cpu1.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.compilerDebug.1884049497.528973347">
+                        <tool id="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.compilerDebug.1884049497.528973347" name="C2000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.exe.compilerDebug.1884049497">
+                            <option id="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DEFINE.929086026" superClass="com.ti.ccstudio.buildDefinitions.C2000_22.6.compilerID.DEFINE" valueType="definedSymbols">
+                                <listOptionValue value="${COM_TI_C2000WARE_SYMBOLS}"/>
+                                <listOptionValue value="CPU1"/>
+                            </option>
+                        </tool>
+                    </fileInfo>
                     <sourceEntries>
                         <entry excluding="device/driverlib|2837xD_FLASH_lnk_cpu1.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                     </sourceEntries>

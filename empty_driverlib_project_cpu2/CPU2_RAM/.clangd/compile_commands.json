@@ -1,17 +1,17 @@
 [
    {
       "directory" : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/CPU2_RAM",
-      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DDEBUG -DCPU1",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DDEBUG -DCPU2",
       "file"      : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/device/F2837xD_CodeStartBranch.asm"
    },
    {
       "directory" : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/CPU2_RAM",
-      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DDEBUG -DCPU1 -xc",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DDEBUG -DCPU2 -xc",
       "file"      : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/device/device.c"
    },
    {
       "directory" : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/CPU2_RAM",
-      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DDEBUG -DCPU1 -xc",
+      "command"   : "clang++ -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2\" -I\"C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/device\" -I\"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib/\" -I\"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DCPU2 -xc",
       "file"      : "C:/Users/JUNLI/workspace_ccstheia/empty_driverlib_project_cpu2/empty_driverlib_main_cpu2.c"
    }
 ]

@@ -26,7 +26,4 @@ OBJS__QUOTED += \
 C_DEPS__QUOTED += \
 "empty_driverlib_main_cpu2.d" 
 
-C_SRCS__QUOTED += \
-"../empty_driverlib_main_cpu2.c" 
-
 
