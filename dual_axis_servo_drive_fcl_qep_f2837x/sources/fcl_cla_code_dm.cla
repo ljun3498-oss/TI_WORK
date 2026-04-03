@@ -40,7 +40,7 @@ static inline float32_t Get_UVW_Init_Angle_M1(void)
     // 2. 原始状态码拼接
     uint16_t uvw_state = (u << 2) | (v << 1) | w;
     
-    // 3. 完美叠加了 1981 脉冲偏置的终极真理表
+    // 3. 叠加了 1981 脉冲偏置的终极真理表（uvw和abz是反的）
     switch(uvw_state)
     {
         case 5: // 101
@@ -62,7 +62,7 @@ static inline float32_t Get_UVW_Init_Angle_M1(void)
             init_angle = 0.5425f;
             break;
         default:
-            init_angle = 0.0f; // 故障状态防飞车
+            init_angle = 0.0f; // 故障状态
             break;
     }
 

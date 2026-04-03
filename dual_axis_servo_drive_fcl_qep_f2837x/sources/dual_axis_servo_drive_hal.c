@@ -979,6 +979,10 @@ void HAL_setupGPIOs(HAL_Handle handle)
     GPIO_setDirectionMode(16, GPIO_DIR_MODE_IN);    // 设置GPIO16为输入模式（UVW_U）
     GPIO_setPadConfig(16, GPIO_PIN_TYPE_STD);    // 设置GPIO16的引脚类型为标准类型
 
+
+
+
+    
     // GPIO17 - Reserve for debug / UVW_V（原示例为 CANRXB，已改为 GPIO）
     GPIO_setMasterCore(17, GPIO_CORE_CPU1);    // 设置GPIO17的主核为CPU1
     GPIO_setPinConfig(GPIO_17_GPIO17);    // 配置GPIO17为GPIO功能（用于 UVW_V）

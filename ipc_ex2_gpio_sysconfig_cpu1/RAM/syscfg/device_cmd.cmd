@@ -9,7 +9,6 @@
 MEMORY
 {
 
-    RAMM0_BEGIN               : origin = 0x000000, length = 0x000002
     RAMM0                     : origin = 0x000123, length = 0x0002DD
     RAMM1                     : origin = 0x000400, length = 0x0003F8
     CLATOCPU_MSGRAM           : origin = 0x001480, length = 0x000080
@@ -64,7 +63,7 @@ SECTIONS
     // C28x Sections
     //
     .reset               : >  RESET, TYPE = DSECT /* not used, */
-    codestart            : >  0x000000
+    codestart            : >  0x080000
     .text                : >> FLASHB | FLASHC | FLASHD | FLASHE,
                               ALIGN(8)
 /* 

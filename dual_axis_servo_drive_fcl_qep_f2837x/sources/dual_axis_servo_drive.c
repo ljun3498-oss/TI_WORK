@@ -1340,7 +1340,7 @@ static inline void buildLevel3_M1(void)
         // ====================================================================
         if (motorVars[0].runMotor == MOTOR_RUN)
         {
-            // 1. 欺骗官方库，跳过找零，直接进入闭环
+            // 1. 跳过找零，直接进入闭环
             motorVars[0].ptrFCL->lsw = ENC_CALIBRATION_DONE;
 
             // 2. 触发我们在 CLA 里的独立 UVW 状态机获取初始物理角度 (仅触发一次)
