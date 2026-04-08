@@ -54,6 +54,7 @@
 #include "board.h"
 #include <math.h>
 #include <stdint.h>
+#include "ipc.h"
 #include "device/driverlib/inc/hw_memmap.h"
 
 //
@@ -158,6 +159,11 @@ void main(void)
     //
     EINT;
     ERTM;
+
+    //
+    // Sync the CPUs
+    //
+    IPC_sync(IPC_CPU2_L_CPU1_R, IPC_FLAG31);
 
     //
     // 初始化共享内存中的帧尾 (JustFloat +Inf = 0x7F800000)

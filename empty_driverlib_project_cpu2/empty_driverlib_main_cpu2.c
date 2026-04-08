@@ -66,6 +66,9 @@ void main(void)
 	// 初始化 IPC（本核为 CPU2 local）
 	IPC_init(IPC_CPU2_L_CPU1_R);
 
+	// 双核调试同步：先等待 CPU1 完成初始化并进入同步点
+	IPC_sync(IPC_CPU2_L_CPU1_R, IPC_FLAG31);
+
 	// 向 CPU1 请求释放 GPIO1
 	IPC_setFlagLtoR(IPC_CPU2_L_CPU1_R, IPC_FLAG0);
 
