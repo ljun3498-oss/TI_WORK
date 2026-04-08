@@ -78,6 +78,9 @@ void main(void)
 	// 初始化 IPC（本核为 CPU1 local）
 	IPC_init(IPC_CPU1_L_CPU2_R);
 
+	// 双核调试同步：等待 CPU2 也完成初始化后再继续
+	IPC_sync(IPC_CPU1_L_CPU2_R, IPC_FLAG31);
+
 	// 简单忙等延时计数（根据 CPU 频率可适当调整）
 	volatile uint32_t delayCount0 = 10000000U; // 近似 5 秒，用于 GPIO0
 	volatile uint32_t delayCount1 = 2000000U;  // 近似 1 秒，用于 GPIO1（初始由 CPU1 驱动）

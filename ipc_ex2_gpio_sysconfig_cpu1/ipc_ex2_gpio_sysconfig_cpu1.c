@@ -106,7 +106,7 @@ void main(void)
     //
     // Sync the CPUs
     //
-    // IPC_sync(IPC_CPU1_L_CPU2_R, IPC_FLAG31);
+    IPC_sync(IPC_CPU1_L_CPU2_R, IPC_FLAG31);
 
     //
     // Configure GPIO0 as output
