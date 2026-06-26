@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVariant value="50:Theia-based"/>
+	<ccsVersion value="70.3.0"/>
+	<deviceFamily value="C2000"/>
+	<executableActions value=""/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=ipc_ex2_gpio_sysconfig.projectspec.ipc_ex2_gpio_sysconfig_multi"/>
+	<origin value="C:/Users/JUNLI/Downloads/亮灯/ipc_ex2_gpio_sysconfig_multi"/>
+	<filesToOpen value="system.xml"/>
+</projectOptions>

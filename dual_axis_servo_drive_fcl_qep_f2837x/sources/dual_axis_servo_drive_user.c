@@ -125,6 +125,10 @@ void initMotorParameters(MOTOR_Vars_t *pMotor, HAL_MTR_Handle mtrHandle)
         // 设置电机极对数
         pMotor->ptrFCL->qep.PolePairs = M1_POLES / 2;        // 极对数 = 极数 / 2
         pMotor->ptrFCL->qep.CalibratedAngle = 0;             // 校准角度初始化为0
+        
+        // 设置基频和极数（用于速度计算）
+        pMotor->baseFreq = M1_BASE_FREQ;
+        pMotor->poles = M1_POLES;
 
         // 初始化速度计算模块
         pMotor->speed.K1 = 1 / (M1_BASE_FREQ * pMotor->Ts);    // 速度计算系数K1
@@ -216,6 +220,10 @@ void initMotorParameters(MOTOR_Vars_t *pMotor, HAL_MTR_Handle mtrHandle)
         // 设置电机极对数
         pMotor->ptrFCL->qep.PolePairs = M2_POLES / 2;        // 极对数 = 极数 / 2
         pMotor->ptrFCL->qep.CalibratedAngle = 0;             // 校准角度初始化为0
+        
+        // 设置基频和极数（用于速度计算）
+        pMotor->baseFreq = M2_BASE_FREQ;
+        pMotor->poles = M2_POLES;
 
         // 初始化速度计算模块
         pMotor->speed.K1 = 1 / (M2_BASE_FREQ * pMotor->Ts);    // 速度计算系数K1
@@ -288,30 +296,31 @@ void initMotorParameters(MOTOR_Vars_t *pMotor, HAL_MTR_Handle mtrHandle)
 void initControlVars(MOTOR_Vars_t *pMotor)
 {
     // 设置斜坡控制的最大延迟率
-    pMotor->rc.RampDelayMax = 10;    // 斜坡控制最大延迟
+    pMotor->rc.RampDelayMax = 2;    // 斜坡控制最大延迟
 
     // PI控制器配置
     // 初始化位置PI控制器
-    pMotor->pi_pos.Kp = 0.5;             // 比例增益
-    pMotor->pi_pos.Ki = 0.001;           // 积分增益
-    pMotor->pi_pos.Umax = 1.0;           // 输出上限
+    pMotor->pi_pos.Kp = 0.87;              // 比例增益（增大以提高响应速度）
+    pMotor->pi_pos.Ki = 0.0006;           // 积分增益（添加积分以消除静差）
+    pMotor->pi_pos.Umax = 1.0;           // 输出上限（增大以允许更高速度）
     pMotor->pi_pos.Umin = -1.0;          // 输出下限
 
     // 初始化速度PID控制器
-    pMotor->pid_spd.param.Kp   = 0.5;     // 比例增益
-    pMotor->pid_spd.param.Ki   = 0.001;   // 积分增益
+    // 速度环低速PI参数（低速参数：Kp=0.6, Ki=0.03）
+    pMotor->pid_spd.param.Kp   = 0.05;    // 比例增益 (低速阶段)
+    pMotor->pid_spd.param.Ki   = 0.02;  // 积分增益
     pMotor->pid_spd.param.Kd   = 0.0;     // 微分增益
-    pMotor->pid_spd.param.Kr   = 1.0;     // 参考增益
-    pMotor->pid_spd.param.Umax = 0.95;    // 输出上限
-    pMotor->pid_spd.param.Umin = -0.95;   // 输出下限
+    pMotor->pid_spd.param.Kr   = 1.0f;     // 参考增益
+    pMotor->pid_spd.param.Umax = 1.0;    // 输出上限
+    pMotor->pid_spd.param.Umin = -1.0;   // 输出下限
 
-    // 初始化Id回路PI控制器
+    // 初始化Id电流PI控制器
     pMotor->pi_id.Kp = 1.0;         // 比例增益 (LS * CUR_LOOP_BW)
     pMotor->pi_id.Ki = pMotor->Ts / 0.04;      // 积分增益 ((RS * T) * CUR_LOOP_BW)
     pMotor->pi_id.Kerr = (pMotor->pi_id.Ki * 0.5) + pMotor->pi_id.Kp;    // 误差增益
     pMotor->pi_id.KerrOld = (pMotor->pi_id.Ki * 0.5) - pMotor->pi_id.Kp; // 旧误差增益
-    pMotor->pi_id.Umax = 0.5 * pMotor->maxModIndex;    // 输出上限
-    pMotor->pi_id.Umin = -0.5 * pMotor->maxModIndex;   // 输出下限
+    pMotor->pi_id.Umax = 1.0;    // 输出上限
+    pMotor->pi_id.Umin = -1.0;   // 输出下限
     pMotor->pi_id.ref = 0;    // 参考值
     pMotor->pi_id.err = 0;    // 误差值
     pMotor->pi_id.out = 0;    // 输出值
@@ -333,8 +342,8 @@ void initControlVars(MOTOR_Vars_t *pMotor)
     pMotor->ptrFCL->pi_iq.KerrOld = 
             (pMotor->ptrFCL->pi_iq.Ki * 0.5) - pMotor->ptrFCL->pi_iq.Kp;    // 旧误差增益
 
-    pMotor->ptrFCL->pi_iq.Umax = 0.8 * pMotor->maxModIndex;    // 输出上限
-    pMotor->ptrFCL->pi_iq.Umin = -0.8 * pMotor->maxModIndex;   // 输出下限
+        pMotor->ptrFCL->pi_iq.Umax = 2*pMotor->maxModIndex;    // 输出上限
+        pMotor->ptrFCL->pi_iq.Umin = -2*pMotor->maxModIndex;   // 输出下限
     pMotor->ptrFCL->pi_iq.ref = 0;    // 参考值
     pMotor->ptrFCL->pi_iq.err = 0;    // 误差值
     pMotor->ptrFCL->pi_iq.out = 0;    // 输出值

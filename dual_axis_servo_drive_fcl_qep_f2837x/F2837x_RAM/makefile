@@ -10,6 +10,7 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./sources/HAL_sci_init.obj" \
 "./sources/dlog_4ch_f.obj" \
 "./sources/dual_axis_servo_drive.obj" \
 "./sources/dual_axis_servo_drive_cla_tasks.obj" \
@@ -23,7 +24,6 @@ ORDERED_OBJS += \
 "./src_device/F2837xD_GlobalVariableDefs.obj" \
 "./src_device/device.obj" \
 "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/ccs/Release/driverlib.lib" \
-"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/libraries/sfra/lib/sfra.lib" \
 "../src_device/F2837xD_Headers_nonBIOS_cpu1_eabi.cmd" \
 "../src_device/dual_axis_f2837x_ram_lnk_cpu1.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -152,17 +152,17 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 dual_axis_servo_drive_fcl_qep_f2837x.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=5 --fp_mode=relaxed --define=_DEBUG --define=LARGE_MODEL --define=CPU1 --define=DAC128S_ENABLE --define=DAC128S_SPIA --define=_DUAL_HEADERS --define=TEST_ENABLE --define=F2837x_DEVICE --define=_LAUNCHXL_F28379D --define=_BOOSTXL_3PHGANINV -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --quiet --gen_func_subsections=on --abi=eabi -k --asm_listing -z -m"dual_axis_servo_drive_fcl_qep_f2837x.map" --stack_size=0x380 --warn_sections -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/libraries/dsp/VCU/c28/lib" -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --define=CLA_C --diag_wrap=off --display_error_number --xml_link_info="dual_axis_servo_drive_fcl_qep_f2837x_linkInfo.xml" --entry_point=code_start --rom_model -o "dual_axis_servo_drive_fcl_qep_f2837x.out" $(ORDERED_OBJS)
+	"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla1 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcu2 -O4 --opt_for_speed=5 --fp_mode=relaxed --define=_DEBUG --define=LARGE_MODEL --define=CPU1 --define=DAC128S_ENABLE --define=DAC128S_SPIA --define=_DUAL_HEADERS --define=TEST_ENABLE --define=F2837x_DEVICE --define=_BOOSTXL_3PHGANINV -g --diag_suppress=10063 --diag_warning=225 --diag_wrap=off --display_error_number --quiet --gen_func_subsections=on --abi=eabi -k --asm_listing -z -m"dual_axis_servo_drive_fcl_qep_f2837x.map" --stack_size=0x380 --warn_sections -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/lib" -i"C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/libraries/dsp/VCU/c28/lib" -i"D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include" --reread_libs --define=CLA_C --diag_wrap=off --display_error_number --xml_link_info="dual_axis_servo_drive_fcl_qep_f2837x_linkInfo.xml" --entry_point=code_start --rom_model -o "dual_axis_servo_drive_fcl_qep_f2837x.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "sources/dlog_4ch_f.lst" "sources/dual_axis_servo_drive.lst" "sources/dual_axis_servo_drive_cla_tasks.lst" "sources/dual_axis_servo_drive_hal.lst" "sources/dual_axis_servo_drive_user.lst" "sources/fcl_cla_code_dm.lst" "sources/fcl_cpu_code_dm.lst" "sources/sfra_gui.lst" "sources/sfra_gui_scicomms_driverlib.lst" "src_device/F2837xD_CodeStartBranch.lst" "src_device/F2837xD_GlobalVariableDefs.lst" "src_device/device.lst" 
-	-$(RM) "sources\dlog_4ch_f.obj" "sources\dual_axis_servo_drive.obj" "sources\dual_axis_servo_drive_cla_tasks.obj" "sources\dual_axis_servo_drive_hal.obj" "sources\dual_axis_servo_drive_user.obj" "sources\fcl_cla_code_dm.obj" "sources\fcl_cpu_code_dm.obj" "sources\sfra_gui.obj" "sources\sfra_gui_scicomms_driverlib.obj" "src_device\F2837xD_CodeStartBranch.obj" "src_device\F2837xD_GlobalVariableDefs.obj" "src_device\device.obj" 
-	-$(RM) "sources\dlog_4ch_f.d" "sources\dual_axis_servo_drive.d" "sources\dual_axis_servo_drive_hal.d" "sources\dual_axis_servo_drive_user.d" "sources\fcl_cpu_code_dm.d" "sources\sfra_gui.d" "sources\sfra_gui_scicomms_driverlib.d" "src_device\F2837xD_GlobalVariableDefs.d" "src_device\device.d" 
-	-$(RM) "sources/dlog_4ch_f.asm" "sources/dual_axis_servo_drive.asm" "sources/dual_axis_servo_drive_cla_tasks.asm" "sources/dual_axis_servo_drive_hal.asm" "sources/dual_axis_servo_drive_user.asm" "sources/fcl_cla_code_dm.asm" "sources/fcl_cpu_code_dm.asm" "sources/sfra_gui.asm" "sources/sfra_gui_scicomms_driverlib.asm" "src_device/F2837xD_CodeStartBranch.asm" "src_device/F2837xD_GlobalVariableDefs.asm" "src_device/device.asm" 
+	-$(RM) "sources/HAL_sci_init.lst" "sources/dlog_4ch_f.lst" "sources/dual_axis_servo_drive.lst" "sources/dual_axis_servo_drive_cla_tasks.lst" "sources/dual_axis_servo_drive_hal.lst" "sources/dual_axis_servo_drive_user.lst" "sources/fcl_cla_code_dm.lst" "sources/fcl_cpu_code_dm.lst" "sources/sfra_gui.lst" "sources/sfra_gui_scicomms_driverlib.lst" "src_device/F2837xD_CodeStartBranch.lst" "src_device/F2837xD_GlobalVariableDefs.lst" "src_device/device.lst" 
+	-$(RM) "sources\HAL_sci_init.obj" "sources\dlog_4ch_f.obj" "sources\dual_axis_servo_drive.obj" "sources\dual_axis_servo_drive_cla_tasks.obj" "sources\dual_axis_servo_drive_hal.obj" "sources\dual_axis_servo_drive_user.obj" "sources\fcl_cla_code_dm.obj" "sources\fcl_cpu_code_dm.obj" "sources\sfra_gui.obj" "sources\sfra_gui_scicomms_driverlib.obj" "src_device\F2837xD_CodeStartBranch.obj" "src_device\F2837xD_GlobalVariableDefs.obj" "src_device\device.obj" 
+	-$(RM) "sources\HAL_sci_init.d" "sources\dlog_4ch_f.d" "sources\dual_axis_servo_drive.d" "sources\dual_axis_servo_drive_hal.d" "sources\dual_axis_servo_drive_user.d" "sources\fcl_cpu_code_dm.d" "sources\sfra_gui.d" "sources\sfra_gui_scicomms_driverlib.d" "src_device\F2837xD_GlobalVariableDefs.d" "src_device\device.d" 
+	-$(RM) "sources/HAL_sci_init.asm" "sources/dlog_4ch_f.asm" "sources/dual_axis_servo_drive.asm" "sources/dual_axis_servo_drive_cla_tasks.asm" "sources/dual_axis_servo_drive_hal.asm" "sources/dual_axis_servo_drive_user.asm" "sources/fcl_cla_code_dm.asm" "sources/fcl_cpu_code_dm.asm" "sources/sfra_gui.asm" "sources/sfra_gui_scicomms_driverlib.asm" "src_device/F2837xD_CodeStartBranch.asm" "src_device/F2837xD_GlobalVariableDefs.asm" "src_device/device.asm" 
 	-$(RM) "sources\dual_axis_servo_drive_cla_tasks.d" "sources\fcl_cla_code_dm.d" 
 	-$(RM) "src_device\F2837xD_CodeStartBranch.d" 
 	-@echo 'Finished clean'

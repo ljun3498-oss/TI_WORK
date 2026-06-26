@@ -1,11 +1,11 @@
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    1
 
        1              ;***************************************************************
        2              ;* TMS320C2000 G3 C/C++ Codegen                               PC v22.6.2.LTS *
-       3              ;* Date/Time created: Thu Mar 12 19:05:17 2026                 *
+       3              ;* Date/Time created: Mon Jun 22 15:24:34 2026                 *
        4              ;***************************************************************
        5                      .compiler_opts --abi=eabi --cla_support=cla1 --diag_wrap=off --float_support=fpu32 --hll_source=on --
        6                      .asg    XAR2, FP
@@ -58,7 +58,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    1
       53              $C$DW$6 .dwtag  DW_TAG_subprogram
       54                      .dwattr $C$DW$6, DW_AT_name("SCI_setConfig")
       55                      .dwattr $C$DW$6, DW_AT_linkage_name("SCI_setConfig")
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    2
@@ -118,7 +118,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    2
      108              
      109              
      110              $C$DW$17        .dwtag  DW_TAG_subprogram
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    3
@@ -178,7 +178,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    3
      163 00000003               .bss    ||SFRA_GUI_sendTaskPtr||,1,1,0
      164              $C$DW$23        .dwtag  DW_TAG_variable
      165                      .dwattr $C$DW$23, DW_AT_name("SFRA_GUI_sendTaskPtr")
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    4
@@ -238,7 +238,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    4
      218                      .dwattr $C$DW$27, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
      219                      .dwattr $C$DW$27, DW_AT_decl_line(0x53)
      220                      .dwattr $C$DW$27, DW_AT_decl_column(0x0a)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    5
@@ -298,7 +298,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    5
      273                      .dwattr $C$DW$32, DW_AT_name("SFRA_GUI_memGetPtr")
      274                      .dwattr $C$DW$32, DW_AT_linkage_name("SFRA_GUI_memGetPtr")
      275                      .dwattr $C$DW$32, DW_AT_location[DW_OP_addr ||SFRA_GUI_memGetPtr||]
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    6
@@ -358,7 +358,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    6
      328                      .dwattr $C$DW$36, DW_AT_decl_column(0x0a)
      329              
      330                      .global ||SFRA_GUI_sweep_start||
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    7
@@ -418,7 +418,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    7
      383                      .dwattr $C$DW$41, DW_AT_location[DW_OP_addr ||SFRA_GUI_memDataPtr16||]
      384                      .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$64)
      385                      .dwattr $C$DW$41, DW_AT_external
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    8
@@ -478,7 +478,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    8
      438                      .global ||SFRA_GUI_cmdPacket||
      439 00000000       ||SFRA_GUI_cmdPacket||: .usect  ".bss:SFRA_GUI_cmdPacket",6,0,0
      440              $C$DW$46        .dwtag  DW_TAG_variable
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE    9
@@ -538,7 +538,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE    9
      493                      .dwattr $C$DW$50, DW_AT_external
      494                      .dwattr $C$DW$50, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
      495                      .dwattr $C$DW$50, DW_AT_decl_line(0x42)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   10
@@ -598,7 +598,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   10
      548              ;       D:\TI\ccs\ccs\tools\compiler\ti-cgt-c2000_22.6.2.LTS\bin\acia2000.exe -@C:\\Users\\JUNLI\\AppData\\Lo
      549 00000000               .sect   ".text:__signbitl"
      550                      .clink
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   11
@@ -658,7 +658,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   11
          0000000a 0000 
      602 0000000b 9000          ANDB      AL,#0                 ; [CPU_ALU] |368| 
      603 0000000c 18A8          AND       AH,#32768             ; [CPU_ALU] |368| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   12
@@ -718,7 +718,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   12
      653              ;***************************************************************
      654              ;* FNAME: __signbitf                    FR SIZE:   0           *
      655              ;*                                                             *
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   13
@@ -778,7 +778,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   13
      705                      .dwattr $C$DW$64, DW_AT_TI_max_frame_size(-6)
      706                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h",line 364,column 1
      707              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   14
@@ -838,7 +838,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   14
          00000013 01A8 
      756 00000014 92A8          MOV       AL,AH                 ; [CPU_ALU] |364| 
      757 00000015 FE84          SUBB      SP,#4                 ; [CPU_ARAU] 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   15
@@ -898,7 +898,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   15
      810              
      811                      .dwcfi  cfa_offset, -2
      812                      .dwcfi  save_reg_to_mem, 26, 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   16
@@ -958,7 +958,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   16
      864              ;* R0    assigned to x
      865              $C$DW$75        .dwtag  DW_TAG_variable
      866                      .dwattr $C$DW$75, DW_AT_name("x")
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   17
@@ -1018,7 +1018,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   17
      917              
      918              
      919              ;***************************************************************
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   18
@@ -1078,7 +1078,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   18
      967              
      968 00000000               .sect   ".text:__relaxed_fminf"
      969                      .clink
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   19
@@ -1138,7 +1138,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   19
     1021 00000002 0006          LRETR     ; [CPU_ALU] 
     1022                      ; return occurs ; [] 
     1023                      .dwattr $C$DW$83, DW_AT_TI_end_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/mat
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   20
@@ -1198,7 +1198,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   20
     1076                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h",line 234,column 5,
     1077 00000000 E696          MAXF32    R0H,R1H               ; [CPU_FPU] |234| 
          00000001 0008 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   21
@@ -1258,7 +1258,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   21
     1130                      .dwcfi  cfa_offset, -2
     1131                      .dwcfi  save_reg_to_mem, 26, 0
     1132                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h",line 271,column 5,
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   22
@@ -1318,7 +1318,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   22
     1183              ||__relaxed_atanf||:
     1184              ;* R0    assigned to x
     1185              $C$DW$99        .dwtag  DW_TAG_variable
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   23
@@ -1378,7 +1378,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   23
     1233                      .dwattr $C$DW$101, DW_AT_decl_column(0x10)
     1234                      .dwattr $C$DW$101, DW_AT_TI_max_frame_size(-2)
     1235                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/math.h",line 280,column 1,
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   24
@@ -1438,7 +1438,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   24
     1285 0000000e 7700          NOP       ; [CPU_ALU] 
     1286 0000000f E270          MPY2PIF32 R0H,R0H               ; [CPU_FPU] |281| 
          00000010 0000 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   25
@@ -1498,7 +1498,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   25
     1339                      .dwattr $C$DW$109, DW_AT_type(*$C$DW$T$104)
     1340                      .dwattr $C$DW$109, DW_AT_location[DW_OP_reg12]
     1341              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   26
@@ -1558,7 +1558,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   26
     1386                      .dwattr $C$DW$111, DW_AT_low_pc(0x00)
     1387                      .dwattr $C$DW$111, DW_AT_TI_return
     1388              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   27
@@ -1618,7 +1618,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   27
     1441                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h",line 356,column 3
     1442 00000000 BFAB          MOV32     P,R0H                 ; [CPU_FPU] |356| 
          00000001 0F12 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   28
@@ -1678,7 +1678,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   28
     1491              
     1492              
     1493              ;***************************************************************
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   29
@@ -1738,7 +1738,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   29
     1542 00000018 A8A9          MOVL      ACC,XAR4              ; [CPU_ALU] |352| 
     1543 00000019 28AC          MOV       T,#48                 ; [CPU_ALU] |352| 
          0000001a 0030 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   30
@@ -1798,7 +1798,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   30
     1593              ;* FUNCTION ENVIRONMENT                                        *
     1594              ;*                                                             *
     1595              ;* FUNCTION PROPERTIES                                         *
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   31
@@ -1858,7 +1858,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   31
          0000001e 0000 
     1642                      ; call occurs [#||__c28xabi_cmpull||] ; [] |348| 
     1643 0000001f 5200          CMPB      AL,#0                 ; [CPU_ALU] |348| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   32
@@ -1918,7 +1918,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   32
     1695              ;* PL    assigned to $O$K3
     1696              ;* AR6   assigned to $O$S1
     1697              ;* R0    assigned to f
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   33
@@ -1978,7 +1978,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   33
     1746                      .dwattr $C$DW$130, DW_AT_TI_max_frame_size(-6)
     1747                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h",line 342,column 1
     1748              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   34
@@ -2038,7 +2038,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   34
     1797 00000016 18AB          AND       PL,#65535             ; [CPU_ALU] |342| 
          00000017 FFFF 
     1798 00000018 18AA          AND       PH,#65535             ; [CPU_ALU] |342| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   35
@@ -2098,7 +2098,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   35
     1848                      .dwattr $C$DW$136, DW_AT_location[DW_OP_reg12]
     1849              
     1850              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   36
@@ -2158,7 +2158,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   36
     1897              $C$DW$138       .dwtag  DW_TAG_TI_branch
     1898                      .dwattr $C$DW$138, DW_AT_low_pc(0x00)
     1899                      .dwattr $C$DW$138, DW_AT_name("__c28xabi_cmpull")
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   37
@@ -2218,7 +2218,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   37
     1950              ;*                                                             *
     1951              ;* FUNCTION PROPERTIES                                         *
     1952              ;*                            0 Parameter,  0 Auto,  0 SOE     *
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   38
@@ -2278,7 +2278,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   38
     2001                      .dwattr $C$DW$144, DW_AT_linkage_name("__isinf")
     2002                      .dwattr $C$DW$144, DW_AT_external
     2003                      .dwattr $C$DW$144, DW_AT_type(*$C$DW$T$10)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   39
@@ -2338,7 +2338,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   39
     2053 00000010 06A6          MOVL      ACC,XAR6              ; [CPU_ALU] |377| 
     2054 00000011 A3A7          MOVL      P,XAR7                ; [CPU_ALU] |377| 
     2055 00000012 BE00          MOVB      XAR6,#0               ; [CPU_ALU] |377| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   40
@@ -2398,7 +2398,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   40
     2103                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h",line 339,column 1
     2104              
     2105                      .dwfde $C$DW$CIE, ||__isfinitel||
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   41
@@ -2458,7 +2458,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   41
     2154 00000000               .sect   ".text:__isfinitef"
     2155                      .clink
     2156                      .global ||__isfinitef||
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   42
@@ -2518,7 +2518,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   42
     2205              $C$DW$156       .dwtag  DW_TAG_TI_branch
     2206                      .dwattr $C$DW$156, DW_AT_low_pc(0x00)
     2207                      .dwattr $C$DW$156, DW_AT_TI_return
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   43
@@ -2578,7 +2578,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   43
     2260 00000000 A3C4          MOVL      P,*+XAR4[0]           ; [CPU_ALU] |335| 
     2261 00000001 06D4          MOVL      ACC,*+XAR4[2]         ; [CPU_ALU] |335| 
     2262 00000002 28AC          MOV       T,#48                 ; [CPU_ALU] |335| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   44
@@ -2638,7 +2638,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   44
     2311              ;*                                                             *
     2312              ;* FUNCTION PROPERTIES                                         *
     2313              ;*                            4 Parameter,  4 Auto,  0 SOE     *
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   45
@@ -2698,7 +2698,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   45
     2360 0000001f 910F          ANDB      AH,#15                ; [CPU_ALU] |436| 
     2361              $C$DW$165       .dwtag  DW_TAG_TI_branch
     2362                      .dwattr $C$DW$165, DW_AT_low_pc(0x00)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   46
@@ -2758,7 +2758,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   46
     2409 00000042 18A9          AND       AL,#65535             ; [CPU_ALU] |436| 
          00000043 FFFF 
     2410 00000044 910F          ANDB      AH,#15                ; [CPU_ALU] |436| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   47
@@ -2818,7 +2818,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   47
     2459                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h",line 397,column 1
     2460              
     2461                      .dwfde $C$DW$CIE, ||__fpclassifyf||
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   48
@@ -2878,7 +2878,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   48
     2511                      .dwcfi  remember_state
     2512 0000000f 9A01          MOVB      AL,#1                 ; [CPU_ALU] |402| 
     2513              $C$DW$173       .dwtag  DW_TAG_TI_branch
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   49
@@ -2938,7 +2938,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   49
     2563                      .dwendtag $C$DW$169
     2564              
     2565 00000000               .sect   ".text:__fpclassify"
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   50
@@ -2998,7 +2998,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   50
     2618 00000004 C246          MOVL      *-SP[6],XAR6          ; [CPU_ALU] |414| 
     2619                      .dwpsn  file "D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/_defs.h",line 415,column 5
     2620 00000005 8348          MOVL      XAR5,*-SP[8]          ; [CPU_ALU] |415| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   51
@@ -3058,7 +3058,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   51
     2665 0000002d C244          MOVL      *-SP[4],XAR6          ; [CPU_ALU] |419| 
     2666 0000002e 2B42          MOV       *-SP[2],#0            ; [CPU_ALU] |419| 
     2667 0000002f 565B          LSR64     ACC:P,T               ; [CPU_ALU] |419| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   52
@@ -3118,7 +3118,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   52
     2711 00000052       ||$C$L23||:    
     2712 00000052 FE88          SUBB      SP,#8                 ; [CPU_ARAU] 
     2713                      .dwcfi  cfa_offset, -2
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   53
@@ -3178,7 +3178,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   53
     2764                      ; return occurs ; [] 
     2765                      .dwattr $C$DW$185, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
     2766                      .dwattr $C$DW$185, DW_AT_TI_end_line(0x2fa)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   54
@@ -3238,7 +3238,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   54
          0000000f 0100 
     2814              $C$DW$188       .dwtag  DW_TAG_TI_branch
     2815                      .dwattr $C$DW$188, DW_AT_low_pc(0x00)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   55
@@ -3298,7 +3298,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   55
     2864 0000000a 92D5          MOV       AL,*+XAR5[2]          ; [CPU_ALU] |665| 
     2865 0000000b 761F!         MOVW      DP,#||SFRA_GUI_taskDoneFlag|| ; [CPU_ARAU] 
          0000000c 0000 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   56
@@ -3358,7 +3358,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   56
     2916                      ; branchcc occurs ; [] |731| 
     2917 00000004 5201          CMPB      AL,#1                 ; [CPU_ALU] |731| 
     2918 00000005 6023          B         ||$C$L26||,NEQ        ; [CPU_ALU] |731| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   57
@@ -3418,7 +3418,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   57
     2960                      .dwattr $C$DW$192, DW_AT_low_pc(0x00)
     2961                      .dwattr $C$DW$192, DW_AT_TI_return
     2962              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   58
@@ -3478,7 +3478,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   58
          0000000c 0000 
     3011 0000000d 96C4          MOV       *+XAR4[0],AL          ; [CPU_ALU] |652| 
     3012                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 657,column 5,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   59
@@ -3538,7 +3538,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   59
     3064              ;* AL    assigned to $O$R13
     3065              ;* AL    assigned to $O$R16
     3066              ;* AR4   assigned to base
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   60
@@ -3598,7 +3598,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   60
     3119              
     3120              ;* AR4   assigned to base
     3121              $C$DW$205       .dwtag  DW_TAG_variable
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   61
@@ -3658,7 +3658,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   61
     3174                      .dwcfi  cfa_offset, -2
     3175                      .dwcfi  save_reg_to_mem, 26, 0
     3176                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 771,column 9,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   62
@@ -3718,7 +3718,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   62
     3225                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 819,column 9,is_stmt,isa 0
     3226 0000001b 8F40!         MOVL      XAR5,#||SFRA_GUI_arrayGetList|| ; [CPU_ARAU] |819| 
          0000001c 0000 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   63
@@ -3778,7 +3778,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   63
     3273 0000003f       ||$C$L32||:    
     3274                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h
     3275 0000003f 47E4          TBIT      *+XAR4[4],#7          ; [CPU_ALU] |919| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   64
@@ -3838,7 +3838,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   64
     3324 00000061 761F!         MOVW      DP,#||SFRA_GUI_sendTaskPtr|| ; [CPU_ARAU] 
          00000062 0000 
     3325 00000063 9694          MOV       *+XAR4[AR0],AL        ; [CPU_ALU] |1114| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   65
@@ -3898,7 +3898,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   65
     3372                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h
     3373 00000084 D00A          MOVB      XAR0,#10              ; [CPU_ALU] |792| 
     3374 00000085 4E94          TBIT      *+XAR4[AR0],#14       ; [CPU_ALU] |792| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   66
@@ -3958,7 +3958,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   66
     3423                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 871,column 17,is_stmt,isa 0
     3424 000000a6 6F5A          B         ||$C$L55||,UNC        ; [CPU_ALU] |871| 
     3425                      ; branch occurs ; [] |871| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   67
@@ -4018,7 +4018,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   67
     3472 000000c4 D00A          MOVB      XAR0,#10              ; [CPU_ALU] |792| 
     3473 000000c5 4E94          TBIT      *+XAR4[AR0],#14       ; [CPU_ALU] |792| 
     3474 000000c6 6D06          B         ||$C$L48||,TC         ; [CPU_ALU] |792| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   68
@@ -4078,7 +4078,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   68
     3522 000000e8 6F08          B         ||$C$L53||,UNC        ; [CPU_ALU] |1037| 
     3523                      ; branch occurs ; [] |1037| 
     3524 000000e9       ||$C$L52||:    
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   69
@@ -4138,7 +4138,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   69
     3573 00000104       ||$C$L56||:    
     3574                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 795,column 17,is_stmt,isa 0
     3575 00000104 2B00!         MOV       @||SFRA_GUI_sendTaskPtr||,#0 ; [CPU_ALU] |795| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   70
@@ -4198,7 +4198,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   70
     3627              $C$DW$221       .dwtag  DW_TAG_variable
     3628                      .dwattr $C$DW$221, DW_AT_name("base")
     3629                      .dwattr $C$DW$221, DW_AT_type(*$C$DW$T$34)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   71
@@ -4258,7 +4258,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   71
          0000001a 0000 
     3679 0000001b 761F!         MOVW      DP,#||SFRA_GUI_rcvTaskPointer|| ; [CPU_ARAU] 
          0000001c 0000 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   72
@@ -4318,7 +4318,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   72
     3732              ;* AR4   assigned to base
     3733              $C$DW$226       .dwtag  DW_TAG_variable
     3734                      .dwattr $C$DW$226, DW_AT_name("base")
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   73
@@ -4378,7 +4378,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   73
     3782                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h
     3783 00000017 90FF          ANDB      AL,#0xff              ; [CPU_ALU] |1257| 
     3784                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 484,column 9,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   74
@@ -4438,7 +4438,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   74
     3836 00000000       ||SFRA_GUI_packWord||:
     3837                      .dwcfi  cfa_offset, -2
     3838                      .dwcfi  save_reg_to_mem, 26, 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   75
@@ -4498,7 +4498,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   75
     3885              
     3886 00000019 7640!         LCR       #||SFRA_GUI_getDataByte|| ; [CPU_ALU] |539| 
          0000001a 0000 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   76
@@ -4558,7 +4558,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   76
     3939                      .dwattr $C$DW$236, DW_AT_location[DW_OP_reg12]
     3940              
     3941              ;* AL    assigned to data
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   77
@@ -4618,7 +4618,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   77
          0000001d 0000 
     3990                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 466,column 9,is_stmt,isa 0
     3991 0000001e 2B00!         MOV       @||SFRA_GUI_serialCommsTimer||,#0 ; [CPU_ALU] |466| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   78
@@ -4678,7 +4678,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   78
     4043                      .dwattr $C$DW$240, DW_AT_name("base")
     4044                      .dwattr $C$DW$240, DW_AT_type(*$C$DW$T$34)
     4045                      .dwattr $C$DW$240, DW_AT_location[DW_OP_reg12]
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   79
@@ -4738,7 +4738,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   79
          00000014 0000 
     4095                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 424,column 9,is_stmt,isa 0
     4096 00000015 8F00!         MOVL      XAR4,#||SFRA_GUI_echoSizeByte|| ; [CPU_ARAU] |424| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   80
@@ -4798,7 +4798,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   80
     4147              ;* FUNCTION PROPERTIES                                         *
     4148              ;*                            0 Parameter,  0 Auto,  0 SOE     *
     4149              ;***************************************************************
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   81
@@ -4858,7 +4858,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   81
     4199                      ; branchcc occurs ; [] |392| 
     4200                      .dwpsn  file "C:/TI/C2000Ware_MotorControl_SDK_5_04_00_00/c2000ware/driverlib/f2837xd/driverlib/sci.h
     4201 00000014 8A00!         MOVL      XAR4,@||SFRA_GUI_sci_base_addr|| ; [CPU_ALU] |1098| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   82
@@ -4918,7 +4918,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   82
     4251              
     4252                      .dwfde $C$DW$CIE, ||SFRA_GUI_getData||
     4253              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   83
@@ -4978,7 +4978,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   83
     4301                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 713,column 13,is_stmt,isa 0
     4302 00000017 9200!         MOV       AL,@||SFRA_GUI_taskDoneFlag|| ; [CPU_ALU] |713| 
     4303 00000018 5201          CMPB      AL,#1                 ; [CPU_ALU] |713| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   84
@@ -5038,7 +5038,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   84
     4350                      .dwattr $C$DW$254, DW_AT_low_pc(||SFRA_GUI_lifePulseTsk||)
     4351                      .dwattr $C$DW$254, DW_AT_high_pc(0x00)
     4352                      .dwattr $C$DW$254, DW_AT_linkage_name("SFRA_GUI_lifePulseTsk")
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   85
@@ -5098,7 +5098,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   85
     4403 00000007 92D4          MOV       AL,*+XAR4[2]          ; [CPU_ALU] |609| 
     4404 00000008 6013          B         ||$C$L79||,NEQ        ; [CPU_ALU] |609| 
     4405                      ; branchcc occurs ; [] |609| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   86
@@ -5158,7 +5158,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   86
     4455 00000032 8F00!         MOVL      XAR4,#||SFRA_GUI_cmdPacket|| ; [CPU_ARAU] |623| 
          00000033 0000 
     4456 00000034 92D4          MOV       AL,*+XAR4[2]          ; [CPU_ALU] |623| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   87
@@ -5218,7 +5218,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   87
     4506                      .dwattr $C$DW$259, DW_AT_high_pc(0x00)
     4507                      .dwattr $C$DW$259, DW_AT_linkage_name("SFRA_GUI_getCmdByte")
     4508                      .dwattr $C$DW$259, DW_AT_external
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   88
@@ -5278,7 +5278,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   88
     4561 00000000 FE02          ADDB      SP,#2                 ; [CPU_ARAU] 
     4562                      .dwcfi  cfa_offset, -4
     4563 00000001 761F!         MOVW      DP,#||SFRA_GUI_sci_base_addr|| ; [CPU_ARAU] 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   89
@@ -5338,7 +5338,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   89
     4608                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 376,column 9,is_stmt,isa 0
     4609 0000001f 8F00!         MOVL      XAR4,#||SFRA_GUI_getCmdByte|| ; [CPU_ARAU] |376| 
          00000020 0000 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   90
@@ -5398,7 +5398,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   90
     4659                      .dwattr $C$DW$259, DW_AT_TI_end_file("../sources/sfra_gui_scicomms_driverlib.c")
     4660                      .dwattr $C$DW$259, DW_AT_TI_end_line(0x17e)
     4661                      .dwattr $C$DW$259, DW_AT_TI_end_column(0x01)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   91
@@ -5458,7 +5458,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   91
     4709                      .dwattr $C$DW$269, DW_AT_TI_call
     4710                      .dwattr $C$DW$269, DW_AT_TI_indirect
     4711              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   92
@@ -5518,7 +5518,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   92
     4760                      .dwattr $C$DW$271, DW_AT_decl_file("../sources/sfra_gui_scicomms_driverlib.c")
     4761                      .dwattr $C$DW$271, DW_AT_decl_line(0x133)
     4762                      .dwattr $C$DW$271, DW_AT_decl_column(0x06)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   93
@@ -5578,7 +5578,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   93
     4813 0000000b 761F!         MOVW      DP,#||SFRA_GUI_serialCommsTimer|| ; [CPU_ARAU] 
          0000000c 0000 
     4814                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 319,column 5,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   94
@@ -5638,7 +5638,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   94
     4867                      .dwattr $C$DW$281, DW_AT_type(*$C$DW$T$34)
     4868                      .dwattr $C$DW$281, DW_AT_location[DW_OP_breg20 -36]
     4869              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   95
@@ -5698,7 +5698,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   95
     4922              ;* AR5   assigned to $O$C2
     4923              ;* AR6   assigned to $O$C3
     4924              ;* AR7   assigned to $O$C4
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   96
@@ -5758,7 +5758,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   96
     4977                      .dwattr $C$DW$298, DW_AT_name("led_gpio_pin")
     4978                      .dwattr $C$DW$298, DW_AT_type(*$C$DW$T$75)
     4979                      .dwattr $C$DW$298, DW_AT_location[DW_OP_reg10]
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   97
@@ -5818,7 +5818,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   97
     5032 00000008 7D4B          MOV       *-SP[11],AR5          ; [CPU_ALU] |125| 
     5033 00000009 5B6A          MOVZ      AR3,*-SP[42]          ; [CPU_ALU] |125| 
     5034 0000000a C254          MOVL      *-SP[20],XAR6         ; [CPU_ALU] |125| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   98
@@ -5878,7 +5878,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   98
     5083                      ; call occurs [#||GPIO_setQualificationMode||] ; [] |135| 
     5084 00000024 064E          MOVL      ACC,*-SP[14]          ; [CPU_ALU] |135| 
     5085                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 145,column 5,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE   99
@@ -5938,7 +5938,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE   99
     5132                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 163,column 5,is_stmt,isa 0
     5133 00000041 28C4          MOV       *+XAR4[0],#32832      ; [CPU_ALU] |163| 
          00000042 8040 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  100
@@ -5998,7 +5998,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  100
     5182                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 248,column 5,is_stmt,isa 0
     5183 00000063 76C0!         MOVL      XAR7,#||SFRA_GUI_dataSetList|| ; [CPU_ARAU] |248| 
          00000064 0000 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  101
@@ -6058,7 +6058,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  101
     5231 00000086 0200          MOVB      ACC,#0                ; [CPU_ALU] |205| 
     5232                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 211,column 5,is_stmt,isa 0
     5233 00000087 C200!         MOVL      @||SFRA_GUI_sci_base_addr||,XAR6 ; [CPU_ALU] |211| 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  102
@@ -6118,7 +6118,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  102
     5276                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 198,column 5,is_stmt,isa 0
     5277 000000ab 2B00!         MOV       @||SFRA_GUI_delayer||,#0 ; [CPU_FPU] |198| 
     5278                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 200,column 5,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  103
@@ -6178,7 +6178,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  103
     5329 000000cb 8F40!         MOVL      XAR5,#||SFRA_GUI_arrayGetList|| ; [CPU_ARAU] |260| 
          000000cc 0000 
     5330                      .dwpsn  file "../sources/sfra_gui_scicomms_driverlib.c",line 263,column 9,is_stmt,isa 0
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  104
@@ -6238,7 +6238,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  104
     5382              
     5383 000000e6 7640!         LCR       #||GPIO_setDirectionMode|| ; [CPU_ALU] |287| 
          000000e7 0000 
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  105
@@ -6298,7 +6298,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  105
     5432              
     5433              ;**************************************************************
     5434              ;* UNDEFINED EXTERNAL REFERENCES                              *
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  106
@@ -6358,7 +6358,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  106
     5487                      .endgroup
     5488                      .group    "__isnormall", 1
     5489                      .gmember  ".text:__isnormall"
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  107
@@ -6418,7 +6418,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  107
     5542                      .dwcfi  same_value, 7
     5543                      .dwcfi  same_value, 8
     5544                      .dwcfi  same_value, 9
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  108
@@ -6478,7 +6478,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  108
     5597              
     5598              $C$DW$TU$26     .dwtag  DW_TAG_type_unit
     5599                      .dwmtype  $C$DW$T$26
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  109
@@ -6538,7 +6538,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  109
     5652                      .dwmtype  $C$DW$T$23
     5653              
     5654              $C$DW$T$23      .dwtag  DW_TAG_structure_type
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  110
@@ -6598,7 +6598,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  110
     5707                      .dwattr $C$DW$327, DW_AT_decl_column(0x10)
     5708              
     5709              $C$DW$328       .dwtag  DW_TAG_member
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  111
@@ -6658,7 +6658,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  111
     5762              
     5763              $C$DW$334       .dwtag  DW_TAG_member
     5764                      .dwattr $C$DW$334, DW_AT_type(*$C$DW$T$22)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  112
@@ -6718,7 +6718,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  112
     5817              $C$DW$340       .dwtag  DW_TAG_member
     5818                      .dwattr $C$DW$340, DW_AT_type(*$C$DW$T$22)
     5819                      .dwattr $C$DW$340, DW_AT_name("storeCL")
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  113
@@ -6778,7 +6778,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  113
     5872                      .dwendtag $C$DW$TU$30
     5873              
     5874              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  114
@@ -6838,7 +6838,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  114
     5927              $C$DW$T$5       .dwtag  DW_TAG_base_type
     5928                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
     5929                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  115
@@ -6898,7 +6898,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  115
     5982                      .dwendtag $C$DW$TU$10
     5983              
     5984              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  116
@@ -6958,7 +6958,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  116
     6037              
     6038              $C$DW$TU$67     .dwtag  DW_TAG_type_unit
     6039                      .dwmtype  $C$DW$T$67
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  117
@@ -7018,7 +7018,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  117
     6092              $C$DW$346       .dwtag  DW_TAG_subrange_type
     6093                      .dwattr $C$DW$346, DW_AT_upper_bound(0x05)
     6094              
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  118
@@ -7078,7 +7078,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  118
     6147              $C$DW$T$84      .dwtag  DW_TAG_pointer_type
     6148                      .dwattr $C$DW$T$84, DW_AT_type(*$C$DW$T$83)
     6149                      .dwattr $C$DW$T$84, DW_AT_address_class(0x20)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  119
@@ -7138,7 +7138,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  119
     6202                      .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$13)
     6203                      .dwattr $C$DW$T$33, DW_AT_decl_file("D:/TI/ccs/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include/mac
     6204                      .dwattr $C$DW$T$33, DW_AT_decl_line(0x43)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  120
@@ -7198,7 +7198,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  120
     6257                      .dwmtype  $C$DW$T$96
     6258              $C$DW$352       .dwtag  DW_TAG_TI_far_type
     6259                      .dwattr $C$DW$352, DW_AT_type(*$C$DW$T$34)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  121
@@ -7258,7 +7258,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  121
     6312                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$16)
     6313                      .dwattr $C$DW$T$19, DW_AT_decl_file("C:\TI\C2000Ware_MotorControl_SDK_5_04_00_00\c2000ware\driverlib\
     6314                      .dwattr $C$DW$T$19, DW_AT_decl_line(0x66)
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  122
@@ -7318,7 +7318,7 @@ sfra_gui_scicomms_driverlib.asm                                      PAGE  122
     6367              
     6368              
     6369              $C$DW$TU$103    .dwtag  DW_TAG_type_unit
-TMS320C2000 Assembler PC v22.6.2 Thu Mar 12 19:05:19 2026
+TMS320C2000 Assembler PC v22.6.2 Mon Jun 22 15:24:36 2026
 
 Copyright (c) 1996-2018 Texas Instruments Incorporated
 sfra_gui_scicomms_driverlib.asm                                      PAGE  123

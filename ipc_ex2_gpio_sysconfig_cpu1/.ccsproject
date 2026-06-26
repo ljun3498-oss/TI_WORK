@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVariant value="50:Theia-based"/>
+	<ccsVersion value="70.3.0"/>
+	<deviceFamily value="C2000"/>
+	<executableActions value=""/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=ipc_ex2_gpio_sysconfig.projectspec.ipc_ex2_gpio_sysconfig_cpu1"/>
+	<origin value="C:/Users/JUNLI/Downloads/亮灯/ipc_ex2_gpio_sysconfig_cpu1"/>
+	<filesToOpen value=""/>
+	<connection value="common/targetdb/connections/TIXDS100v3_Dot7_Connection.xml"/>
+	<isTargetConfigurationManual value="false"/>
+	<activeTargetConfiguration value="targetConfigs/TMS320F28377D.ccxml"/>
+</projectOptions>

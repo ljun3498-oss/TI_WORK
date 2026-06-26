@@ -55,6 +55,67 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "led_project_cpu1",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "led_project_cpu1",
+                "resourceId": "/led_project_cpu1"
+            },
+            "groupInfo": [
+                {
+                    "name": "group_0",
+                    "syncMode": false,
+                    "cores": [
+                        "Texas Instruments XDS100v3 USB Debug Probe_0/C28xx_CPU1",
+                        "Texas Instruments XDS100v3 USB Debug Probe_0/C28xx_CPU2"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ipc_ex2_gpio_sysconfig_cpu1",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "ipc_ex2_gpio_sysconfig_cpu1",
+                "resourceId": "/ipc_ex2_gpio_sysconfig_cpu1"
+            },
+            "launchSettings": {
+                "coresToLoadForProjectLaunch": [
+                    "C28xx_CPU1"
+                ]
+            },
+            "groupInfo": [
+                {
+                    "name": "group_0",
+                    "syncMode": false,
+                    "cores": [
+                        "Texas Instruments XDS100v3 USB Debug Probe_0/C28xx_CPU2",
+                        "Texas Instruments XDS100v3 USB Debug Probe_0/C28xx_CPU1"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "empty_driverlib_project_cpu2",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "empty_driverlib_project_cpu2",
+                "resourceId": "/empty_driverlib_project_cpu2"
+            }
+        },
+        {
+            "name": "empty_driverlib_project_cpu1",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "empty_driverlib_project_cpu1",
+                "resourceId": "/empty_driverlib_project_cpu1"
+            }
         }
     ]
 }

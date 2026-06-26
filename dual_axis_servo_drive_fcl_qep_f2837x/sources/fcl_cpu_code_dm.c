@@ -448,7 +448,8 @@ void complexCtrl_M1(MOTOR_Vars_t *pMotor)
                           fclVars[0].Q_cla.iqErr * pMotor->D_cpu.sinWTs) +
                           pMotor->D_cpu.carryOver ;
 
-    CLAMP_MACRO(pMotor->pi_id);
+    // 极限测试：CLAMP_MACRO限幅已禁用
+    // CLAMP_MACRO(pMotor->pi_id);
 
     // SETGPIO18_LOW; // 仅用于调试
 
@@ -464,7 +465,8 @@ void complexCtrl_M2(MOTOR_Vars_t *pMotor)
                           fclVars[1].Q_cla.iqErr * pMotor->D_cpu.sinWTs) +
                           pMotor->D_cpu.carryOver ;
 
-    CLAMP_MACRO(pMotor->pi_id);
+    // 极限测试：CLAMP_MACRO限幅已禁用
+    // CLAMP_MACRO(pMotor->pi_id);
 
     // SETGPIO18_LOW; // 仅用于调试
 
@@ -580,11 +582,8 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
     //
     // 更新PI ID参数
     //
-    pMotor->pi_id.Kp = pMotor->FCL_params.Ld * invZbase *
-            pMotor->FCL_params.wccD;
-
-    pMotor->pi_id.Ki = pMotor->FCL_params.Rd * invZbase *
-            pMotor->FCL_params.wccD * pMotor->FCL_params.tSamp;
+    pMotor->pi_id.Kp = (pMotor->FCL_params.Ld * invZbase * pMotor->FCL_params.wccD)*0.1F;
+    pMotor->pi_id.Ki =(pMotor->FCL_params.Rd * invZbase * pMotor->FCL_params.wccD * pMotor->FCL_params.tSamp)*0.1F;
 
     pMotor->pi_id.Kerr = (pMotor->pi_id.Ki * 0.5F) + pMotor->pi_id.Kp;
     pMotor->pi_id.KerrOld = (pMotor->pi_id.Ki * 0.5F) - pMotor->pi_id.Kp;
@@ -593,18 +592,14 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
     //
     // 更新PI IQ参数
     //
-    fclVars[0].pi_iq.Kp = pMotor->FCL_params.Lq * invZbase *
-            pMotor->FCL_params.wccQ;
-    fclVars[0].pi_iq.Ki = pMotor->FCL_params.Rq * invZbase *
-            pMotor->FCL_params.wccQ * pMotor->FCL_params.tSamp;
+    fclVars[0].pi_iq.Kp = pMotor->FCL_params.Lq * invZbase * pMotor->FCL_params.wccQ;
+    fclVars[0].pi_iq.Ki = pMotor->FCL_params.Rq * invZbase * pMotor->FCL_params.wccQ * pMotor->FCL_params.tSamp;
 
-    fclVars[0].pi_iq.Kerr = (fclVars[0].pi_iq.Ki * 0.5) +
-            fclVars[0].pi_iq.Kp;
+    fclVars[0].pi_iq.Kerr = (fclVars[0].pi_iq.Ki * 0.5) +fclVars[0].pi_iq.Kp;
 
-    fclVars[0].pi_iq.KerrOld = (fclVars[0].pi_iq.Ki * 0.5) -
-            fclVars[0].pi_iq.Kp;
+    fclVars[0].pi_iq.KerrOld = (fclVars[0].pi_iq.Ki * 0.5) -fclVars[0].pi_iq.Kp;
 
-    fclVars[0].pi_iq.carryOver = (fclVars[0].pi_iq.err *
+    fclVars[0].pi_iq.carryOver =(fclVars[0].pi_iq.err *
             fclVars[0].pi_iq.KerrOld) +
                    ( pMotor->FCL_params.BemfK *
                            (pMotor->speed.Speed - fclVars[0].speedWePrev));
@@ -616,9 +611,8 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
     // 在包装函数中更新它们
     //
     pMotor->pi_id.fbk = pMotor->pi_id.ref - pMotor->pi_id.err;
-
-    fclVars[0].pi_iq.fbk = fclVars[0].pi_iq.ref -
-            fclVars[0].pi_iq.err;
+    
+    fclVars[0].pi_iq.fbk = fclVars[0].pi_iq.ref -fclVars[0].pi_iq.err;
 
     //
     // 在清除INTx4之前给足够的时间让CLA任务4完成
@@ -633,7 +627,6 @@ void FCL_runPICtrlWrap_M1(MOTOR_Vars_t *pMotor)
                                             PIE_IFR11_INTX4 );
     return;
 }
-
 //
 // The functions for motor_1, task 1, 2, 3, and 4 for motor_1
 //
@@ -680,9 +673,10 @@ void FCL_runComplexCtrl_M1(MOTOR_Vars_t *pMotor)
     pMotor->pi_id.out += pMotor->D_cpu.kDirect *
                          (fclVars[0].Q_cla.idErr * pMotor->D_cpu.cosWTs -
                           fclVars[0].Q_cla.iqErr * pMotor->D_cpu.sinWTs) +
-                          pMotor->D_cpu.carryOver;
+                          pMotor->D_cpu.carryOver ;
 
-    CLAMP_MACRO(pMotor->pi_id);
+    // 极限测试：CLAMP_MACRO限幅已禁用
+    // CLAMP_MACRO(pMotor->pi_id);
 
     piidc = pMotor->pi_id.out * park1Cosine;
     piids = pMotor->pi_id.out * park1Sine;
@@ -907,14 +901,12 @@ void FCL_runPICtrlWrap_M2(MOTOR_Vars_t *pMotor)
     //
     Cla1ForceTask8();
 
+
     //
     // 更新PI ID参数
     //
-    pMotor->pi_id.Kp = pMotor->FCL_params.Ld * invZbase *
-            pMotor->FCL_params.wccD;
-
-    pMotor->pi_id.Ki = pMotor->FCL_params.Rd * invZbase *
-            pMotor->FCL_params.wccD * pMotor->FCL_params.tSamp;
+    pMotor->pi_id.Kp = (pMotor->FCL_params.Ld * invZbase * pMotor->FCL_params.wccD)*0.1F;
+    pMotor->pi_id.Ki =(pMotor->FCL_params.Rd * invZbase * pMotor->FCL_params.wccD * pMotor->FCL_params.tSamp)*0.1F;
 
     pMotor->pi_id.Kerr = (pMotor->pi_id.Ki * 0.5F) + pMotor->pi_id.Kp;
     pMotor->pi_id.KerrOld = (pMotor->pi_id.Ki * 0.5F) - pMotor->pi_id.Kp;
@@ -1014,7 +1006,8 @@ void FCL_runComplexCtrl_M2(MOTOR_Vars_t *pMotor)
                           fclVars[1].Q_cla.iqErr * pMotor->D_cpu.sinWTs) +
                           pMotor->D_cpu.carryOver ;
 
-    CLAMP_MACRO(pMotor->pi_id);
+    // 极限测试：CLAMP_MACRO限幅已禁用
+    // CLAMP_MACRO(pMotor->pi_id);
 
     piidc = pMotor->pi_id.out * park1Cosine;
     piids = pMotor->pi_id.out * park1Sine;

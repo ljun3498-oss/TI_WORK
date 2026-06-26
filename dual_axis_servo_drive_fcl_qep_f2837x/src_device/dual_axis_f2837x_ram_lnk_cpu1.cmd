@@ -129,7 +129,7 @@ SECTIONS
    .bss:output      : > RAMLS0 | RAMLS1
    .init_array      : > RAMM0
    .const           : > RAMLS0 | RAMLS1, ALIGN(4)
-   .data            : > RAMLS0 | RAMLS1
+   .data            : >> RAMLS0 | RAMLS1
    .sysmem          : > RAMLS0 | RAMLS1
 #else
    .pinit           : >> RAMGS0 | RAMGS1 | RAMGS2 | RAMGS3, ALIGN(4)

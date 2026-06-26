@@ -10,6 +10,7 @@ CLA_SRCS += \
 ../sources/fcl_cla_code_dm.cla 
 
 C_SRCS += \
+../sources/HAL_sci_init.c \
 ../sources/dlog_4ch_f.c \
 ../sources/dual_axis_servo_drive.c \
 ../sources/dual_axis_servo_drive_hal.c \
@@ -23,6 +24,7 @@ CLA_DEPS += \
 ./sources/fcl_cla_code_dm.d 
 
 C_DEPS += \
+./sources/HAL_sci_init.d \
 ./sources/dlog_4ch_f.d \
 ./sources/dual_axis_servo_drive.d \
 ./sources/dual_axis_servo_drive_hal.d \
@@ -32,6 +34,7 @@ C_DEPS += \
 ./sources/sfra_gui_scicomms_driverlib.d 
 
 OBJS += \
+./sources/HAL_sci_init.obj \
 ./sources/dlog_4ch_f.obj \
 ./sources/dual_axis_servo_drive.obj \
 ./sources/dual_axis_servo_drive_cla_tasks.obj \
@@ -43,6 +46,7 @@ OBJS += \
 ./sources/sfra_gui_scicomms_driverlib.obj 
 
 OBJS__QUOTED += \
+"sources\HAL_sci_init.obj" \
 "sources\dlog_4ch_f.obj" \
 "sources\dual_axis_servo_drive.obj" \
 "sources\dual_axis_servo_drive_cla_tasks.obj" \
@@ -54,6 +58,7 @@ OBJS__QUOTED += \
 "sources\sfra_gui_scicomms_driverlib.obj" 
 
 C_DEPS__QUOTED += \
+"sources\HAL_sci_init.d" \
 "sources\dlog_4ch_f.d" \
 "sources\dual_axis_servo_drive.d" \
 "sources\dual_axis_servo_drive_hal.d" \
@@ -67,6 +72,7 @@ CLA_DEPS__QUOTED += \
 "sources\fcl_cla_code_dm.d" 
 
 C_SRCS__QUOTED += \
+"../sources/HAL_sci_init.c" \
 "../sources/dlog_4ch_f.c" \
 "../sources/dual_axis_servo_drive.c" \
 "../sources/dual_axis_servo_drive_hal.c" \

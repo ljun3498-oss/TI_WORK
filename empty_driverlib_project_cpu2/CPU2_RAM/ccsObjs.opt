@@ -1,0 +1,13 @@
+"./device/F2837xD_CodeStartBranch.obj"
+"./device/device.obj"
+"./source_cpu2/HAL_sci_init.obj"
+"./source_cpu2/dlog_4ch_f_cpu2.obj"
+"./source_cpu2/dual_axis_servo_drive_cla_tasks_cpu2.obj"
+"./source_cpu2/dual_axis_servo_drive_cpu2.obj"
+"./source_cpu2/dual_axis_servo_drive_hal_cpu2.obj"
+"./source_cpu2/dual_axis_servo_drive_user_cpu2.obj"
+"./source_cpu2/fcl_cla_code_dm_cpu2.obj"
+"./source_cpu2/fcl_cpu_code_dm_cpu2.obj"
+"../2837xD_RAM_lnk_cpu2.cmd"
+"C:/TI/C2000Ware_26_00_00_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib.lib"
+-llibc.a

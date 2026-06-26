@@ -988,33 +988,67 @@ void HAL_setupGPIOs(HAL_Handle handle)
     GPIO_setPadConfig(21, GPIO_PIN_TYPE_STD);    // 设置GPIO21的引脚类型为标准类型
     GPIO_setQualificationMode(21, GPIO_QUAL_3SAMPLE);    // 设置GPIO21的资格模式为3采样
 
-    // 故障检测引脚配置
+    // 电机1的QEP（正交编码器）索引引脚配置
+    // GPIO23->QEP1I（电机1的编码器索引相）
+    GPIO_setMasterCore(23, GPIO_CORE_CPU1);    // 设置GPIO23的主核为CPU1
+    GPIO_setPinConfig(GPIO_23_EQEP1I);    // 配置GPIO23为EQEP1I功能
+    GPIO_setDirectionMode(23, GPIO_DIR_MODE_IN);    // 设置GPIO23为输入模式
+    GPIO_setPadConfig(23, GPIO_PIN_TYPE_STD);    // 设置GPIO23的引脚类型为标准类型
+    GPIO_setQualificationMode(23, GPIO_QUAL_3SAMPLE);    // 设置GPIO23的资格模式为3采样
+
+
+    // 电机2的QEP（正交编码器）引脚配置 - GPIO24/25/26
+    // GPIO24->EQEP2A_M2（电机2的编码器A相）
+    GPIO_setMasterCore(24, GPIO_CORE_CPU1);
+    GPIO_setPinConfig(GPIO_24_EQEP2A);
+    GPIO_setDirectionMode(24, GPIO_DIR_MODE_IN);
+    GPIO_setPadConfig(24, GPIO_PIN_TYPE_STD);
+    GPIO_setQualificationMode(24, GPIO_QUAL_3SAMPLE);
+
+    // GPIO25->EQEP2B_M2（电机2的编码器B相）
+    GPIO_setMasterCore(25, GPIO_CORE_CPU1);
+    GPIO_setPinConfig(GPIO_25_EQEP2B);
+    GPIO_setDirectionMode(25, GPIO_DIR_MODE_IN);
+    GPIO_setPadConfig(25, GPIO_PIN_TYPE_STD);
+    GPIO_setQualificationMode(25, GPIO_QUAL_3SAMPLE);
+
+    // GPIO26->EQEP2I_M2（电机2的编码器索引相）
+    GPIO_setMasterCore(26, GPIO_CORE_CPU1);
+    GPIO_setPinConfig(GPIO_26_EQEP2I);
+    GPIO_setDirectionMode(26, GPIO_DIR_MODE_IN);
+    GPIO_setPadConfig(26, GPIO_PIN_TYPE_STD);
+    GPIO_setQualificationMode(26, GPIO_QUAL_3SAMPLE);
+
+    // 注意：GPIO24/25/26原功能已禁用（过热检测/调试预留/栅极使能）
+    // 如需恢复，请注释上方EQEP2配置，取消下方注释
+
+    // 故障检测引脚配置 (已禁用)
     // GPIO24 - OT_M1（电机1的过热检测引脚）
-    GPIO_setMasterCore(24, GPIO_CORE_CPU1);    // 设置GPIO24的主核为CPU1
-    GPIO_setPinConfig(GPIO_24_GPIO24);    // 配置GPIO24为GPIO功能
-    GPIO_setDirectionMode(24, GPIO_DIR_MODE_IN);    // 设置GPIO24为输入模式
-    GPIO_setPadConfig(24, GPIO_PIN_TYPE_INVERT);    // 设置GPIO24的引脚类型为反相输入
+    // GPIO_setMasterCore(24, GPIO_CORE_CPU1);
+    // GPIO_setPinConfig(GPIO_24_GPIO24);
+    // GPIO_setDirectionMode(24, GPIO_DIR_MODE_IN);
+    // GPIO_setPadConfig(24, GPIO_PIN_TYPE_INVERT);
 
-    // 调试预留引脚
+    // 调试预留引脚 (已禁用)
     // GPIO25 - Reserve for debug（预留用于调试）
-    GPIO_setMasterCore(25, GPIO_CORE_CPU1);    // 设置GPIO25的主核为CPU1
-    GPIO_setPinConfig(GPIO_25_GPIO25);    // 配置GPIO25为GPIO功能
-    GPIO_setDirectionMode(25, GPIO_DIR_MODE_IN);    // 设置GPIO25为输入模式
-    GPIO_setPadConfig(25, GPIO_PIN_TYPE_STD);    // 设置GPIO25的引脚类型为标准类型
+    // GPIO_setMasterCore(25, GPIO_CORE_CPU1);
+    // GPIO_setPinConfig(GPIO_25_GPIO25);
+    // GPIO_setDirectionMode(25, GPIO_DIR_MODE_IN);
+    // GPIO_setPadConfig(25, GPIO_PIN_TYPE_STD);
 
-    // 电机控制引脚配置
+    // 电机控制引脚配置 (已禁用)
     // GPIO26 - EN_GATE_M2（电机2的栅极使能引脚）
-    GPIO_setMasterCore(26, GPIO_CORE_CPU1);    // 设置GPIO26的主核为CPU1
-    GPIO_setPinConfig(GPIO_26_GPIO26);    // 配置GPIO26为GPIO功能
-    GPIO_writePin(26, 1);    // 设置GPIO26的输出为高电平（启用栅极）
-    GPIO_setDirectionMode(26, GPIO_DIR_MODE_OUT);    // 设置GPIO26为输出模式
-    GPIO_setPadConfig(26, GPIO_PIN_TYPE_PULLUP);    // 设置GPIO26的引脚类型为上拉类型
+    // GPIO_setMasterCore(26, GPIO_CORE_CPU1);
+    // GPIO_setPinConfig(GPIO_26_GPIO26);
+    // GPIO_writePin(26, 1);
+    // GPIO_setDirectionMode(26, GPIO_DIR_MODE_OUT);
+    // GPIO_setPadConfig(26, GPIO_PIN_TYPE_PULLUP);
 
     // GPIO27 - WAKE_M2（电机2的唤醒引脚）
-    GPIO_setMasterCore(27, GPIO_CORE_CPU1);    // 设置GPIO27的主核为CPU1
-    GPIO_setPinConfig(GPIO_27_GPIO27);    // 配置GPIO27为GPIO功能
-    GPIO_setDirectionMode(27, GPIO_DIR_MODE_IN);    // 设置GPIO27为输入模式
-    GPIO_setPadConfig(27, GPIO_PIN_TYPE_STD);    // 设置GPIO27的引脚类型为标准类型
+    GPIO_setMasterCore(27, GPIO_CORE_CPU1);
+    GPIO_setPinConfig(GPIO_27_GPIO27);
+    GPIO_setDirectionMode(27, GPIO_DIR_MODE_IN);
+    GPIO_setPadConfig(27, GPIO_PIN_TYPE_STD);
 
     // LED指示灯引脚配置
     // GPIO31->LED（LED指示灯）
@@ -1057,20 +1091,21 @@ void HAL_setupGPIOs(HAL_Handle handle)
     GPIO_setDirectionMode(43, GPIO_DIR_MODE_IN);    // 设置GPIO43为输入模式
     GPIO_setPadConfig(43, GPIO_PIN_TYPE_STD);    // 设置GPIO43的引脚类型为标准类型
 
-    // 电机2的QEP（正交编码器）引脚配置
+    // 注意：GPIO54/55/57原EQEP2配置已禁用（现使用GPIO24/25/26）
+    // 电机2的QEP（正交编码器）引脚配置 (已禁用)
     // GPIO54->EQEP2A_M2（电机2的编码器A相）
-    GPIO_setMasterCore(54, GPIO_CORE_CPU1);    // 设置GPIO54的主核为CPU1
-    GPIO_setPinConfig(GPIO_54_EQEP2A);    // 配置GPIO54为EQEP2A功能
-    GPIO_setDirectionMode(54, GPIO_DIR_MODE_IN);    // 设置GPIO54为输入模式
-    GPIO_setPadConfig(54, GPIO_PIN_TYPE_STD);    // 设置GPIO54的引脚类型为标准类型
-    GPIO_setQualificationMode(54, GPIO_QUAL_3SAMPLE);    // 设置GPIO54的资格模式为3采样
+    // GPIO_setMasterCore(54, GPIO_CORE_CPU1);
+    // GPIO_setPinConfig(GPIO_54_EQEP2A);
+    // GPIO_setDirectionMode(54, GPIO_DIR_MODE_IN);
+    // GPIO_setPadConfig(54, GPIO_PIN_TYPE_STD);
+    // GPIO_setQualificationMode(54, GPIO_QUAL_3SAMPLE);
 
     // GPIO55->EQEP2B_M2（电机2的编码器B相）
-    GPIO_setMasterCore(55, GPIO_CORE_CPU1);    // 设置GPIO55的主核为CPU1
-    GPIO_setPinConfig(GPIO_55_EQEP2B);    // 配置GPIO55为EQEP2B功能
-    GPIO_setDirectionMode(55, GPIO_DIR_MODE_IN);    // 设置GPIO55为输入模式
-    GPIO_setPadConfig(55, GPIO_PIN_TYPE_STD);    // 设置GPIO55的引脚类型为标准类型
-    GPIO_setQualificationMode(55, GPIO_QUAL_3SAMPLE);    // 设置GPIO55的资格模式为3采样
+    // GPIO_setMasterCore(55, GPIO_CORE_CPU1);
+    // GPIO_setPinConfig(GPIO_55_EQEP2B);
+    // GPIO_setDirectionMode(55, GPIO_DIR_MODE_IN);
+    // GPIO_setPadConfig(55, GPIO_PIN_TYPE_STD);
+    // GPIO_setQualificationMode(55, GPIO_QUAL_3SAMPLE);
 
     // SCI（串口）引脚配置
     // GPIO56->SCITXDC（SCI C发送引脚）
@@ -1079,13 +1114,13 @@ void HAL_setupGPIOs(HAL_Handle handle)
     GPIO_setDirectionMode(56, GPIO_DIR_MODE_OUT);    // 设置GPIO56为输出模式
     GPIO_setPadConfig(56, GPIO_PIN_TYPE_STD);    // 设置GPIO56的引脚类型为标准类型
 
-    // 电机2的QEP（正交编码器）索引引脚配置
+    // 电机2的QEP（正交编码器）索引引脚配置 (已禁用)
     // GPIO57->EQEP2I_M2（电机2的编码器索引相）
-    GPIO_setMasterCore(57, GPIO_CORE_CPU1);    // 设置GPIO57的主核为CPU1
-    GPIO_setPinConfig(GPIO_57_EQEP2I);    // 配置GPIO57为EQEP2I功能
-    GPIO_setDirectionMode(57, GPIO_DIR_MODE_IN);    // 设置GPIO57为输入模式
-    GPIO_setPadConfig(57, GPIO_PIN_TYPE_STD);    // 设置GPIO57的引脚类型为标准类型
-    GPIO_setQualificationMode(57, GPIO_QUAL_3SAMPLE);    // 设置GPIO57的资格模式为3采样
+    // GPIO_setMasterCore(57, GPIO_CORE_CPU1);
+    // GPIO_setPinConfig(GPIO_57_EQEP2I);
+    // GPIO_setDirectionMode(57, GPIO_DIR_MODE_IN);
+    // GPIO_setPadConfig(57, GPIO_PIN_TYPE_STD);
+    // GPIO_setQualificationMode(57, GPIO_QUAL_3SAMPLE);
 
     // 电机1的SPI引脚配置
     // GPIO58->SPISIMOA_M1（电机1的SPI发送引脚）
@@ -1144,13 +1179,6 @@ void HAL_setupGPIOs(HAL_Handle handle)
     GPIO_setDirectionMode(94, GPIO_DIR_MODE_IN);    // 设置GPIO94为输入模式
     GPIO_setPadConfig(94, GPIO_PIN_TYPE_STD);    // 设置GPIO94的引脚类型为标准类型
 
-    // 电机1的QEP（正交编码器）索引引脚配置
-    // GPIO23->QEP1I（电机1的编码器索引相）
-    GPIO_setMasterCore(23, GPIO_CORE_CPU1);    // 设置GPIO23的主核为CPU1
-    GPIO_setPinConfig(GPIO_23_EQEP1I);    // 配置GPIO23为EQEP1I功能
-    GPIO_setDirectionMode(23, GPIO_DIR_MODE_IN);    // 设置GPIO23为输入模式
-    GPIO_setPadConfig(23, GPIO_PIN_TYPE_STD);    // 设置GPIO23的引脚类型为标准类型
-    GPIO_setQualificationMode(23, GPIO_QUAL_3SAMPLE);    // 设置GPIO23的资格模式为3采样
 
     // 参考电压引脚配置
     // GPIO111->Vref（参考电压输入）
